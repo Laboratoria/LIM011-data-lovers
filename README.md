@@ -9,9 +9,7 @@
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
 * [6. Hacker edition](#6-hacker-edition)
 * [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Evaluación](#8-evaluación)
-* [9. Pistas, tips y lecturas complementarias](#9-pistas-tips-y-lecturas-complementarias)
-* [10. Checklist](#10-checklist)
+* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
 
 ***
 
@@ -66,14 +64,6 @@ Estos son datos que te proponemos:
   juego League of Legends (LoL), puedes revisar la documentación de su API en
   este [link](https://developer.riotgames.com/api-methods/).
 
-<!---
-¡Too much information para comenzar (Diego)!
-Una opción serían cálculos estadísticos como el promedio, el máximo o el mínimo,
-por ejemplo, si tenemos una colección que representa a un grupo de personas,
-y cada persona está representada como un _objeto_ con una _propiedad_ `altura`,
-podríamos elegir calcular la altura promedio en el grupo entre otras cosas.
---->
-
 Algunos sets de datos tiene una identidad gráfica que deberás utilizar en la
 interfaz. La identidad gráfica, también conocida como guía de estilos en
 diseño, de estos sets la podrás encontrar en el siguiente
@@ -85,25 +75,57 @@ El objetivo principal de este proyecto es que aprendas a diseñar y construir un
 interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
 usuario necesita.
 
-Dicho en palabras sencillas, aprenderás a:
+Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto.
 
-* Aplicar y profundizar todo lo que aprendiste en el proyecto anterior.
-* Pensar en las **necesidades de los usuarios** para crear historias de usuario.
-* Escribir y trabajar con **historias de usuario**, sus definiciones de
+### UX
+
+- [ ] Diseñar la aplicación pensando y entendiendo al usuario.
+- [ ] Crear prototipos para obtener feedback e iterar.
+- [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).
+- [ ] Planear y ejecutar tests de usabilidad.
+
+### HTML y CSS
+
+- [ ] Uso correcto de HTML semántico.
+- [ ] Uso de selectores de CSS.
+- [ ] Uso de flexbox básico.
+- [ ] Construir tu aplicación respetando el diseño realizado (maquetación).
+
+### DOM
+
+- [ ] Uso de selectores del DOM (querySelector).
+- [ ] Manejo de eventos del DOM.
+- [ ] Manipulación dinámica del DOM.
+
+### Javascript
+
+- [ ] Manipulación de arrays (filter | map | sort).
+- [ ] Manipulación de objects (key | value).
+- [ ] Uso de condicionales (if-else | switch).
+- [ ] Uso de bucles (for | do-while).
+- [ ] Uso de funciones (parámetros | argumentos | valor de retorno).
+- [ ] Declaración correcta de variables (const & let).
+- [ ] Uso de ES Modules (import | export).
+
+### Testing
+- [ ] Testeo de tus funciones.
+
+### Git y GitHub
+- [ ] Comandos de git (add | commit | pull | status | push).
+- [ ] Manejo de repositorios de GitHub (clone | fork | gh-pages).
+- [ ] Colaboración en Github (pull requests)
+
+### Buenas prácticas de desarrollo
+- [ ] Organizar y dividir el código en módulos (Modularización).
+- [ ] Uso de identificadores descriptivos (Nomenclatura | Semántica).
+- [ ] Uso de linter para seguir buenas prácticas (ESLINT).
+
+<!-- Diego * Escribir y trabajar con **historias de usuario**, sus definiciones de
   terminado (_definition of done_) y Criterios de Aceptación como herramienta
-  central de la organización y planificación de tu trabajo.
-* Definir qué data y de qué forma mostrarla en el producto, basándote en
-  tu **entendimiento del usuario**.
-* Crear productos que sigan los **principios básicos de diseño visual** y
-  las **heurísticas de usabilidad**.
-* Iterar el diseño del producto, basándote en los resultados de los
-  **tests de usabilidad**.
-* Manipular **_arreglos_ (_arrays_) y _objetos_ (_objects_)**.
-* **Manipular el DOM** (agregar elementos dinámicamente basados en la data).
-* **Manejar eventos del DOM** para permitir interacción con el usuario
-  (filtrado, ordenado, ...).
-* Entender los beneficios y complejidades de **trabajar en equipo** en un
-  ambiente de incertidumbre.
+  central de la organización y planificación de tu trabajo. -->
+
+<!-- * Entender los beneficios y complejidades de **trabajar en equipo** en un
+  ambiente de incertidumbre. -->
 
 ## 4. Consideraciones generales
 
@@ -114,7 +136,9 @@ Dicho en palabras sencillas, aprenderás a:
 
 ## 5. Criterios de aceptación mínimos del proyecto
 
-Los criterios para considerar que has completado este proyecto son:
+<!-- Diego! No sé si dejar esto, siento que es evaluador y no va con la autoreflexión. Creo que debería ir más de su lado.  
+ Los criterios para considerar que has completado este proyecto son: -->
+ Los criterios que deberás considerar para saber si has completado este proyecto son:
 
 ### Definición del producto
 
@@ -334,64 +358,7 @@ asíncrona con [`fetch()`](https://developer.mozilla.org/es/docs/Web/API/Fetch_A
 Tendrás también que completar las pruebas unitarias de las funciones
 implementadas en el archivo `data.js`.
 
-## 8. Evaluación
-
-NOTA: Esta sección incluye una lista de habilidades que se podrán tener en
-cuenta a la hora de evaluar el proyecto. Los niveles esperados son _sugerencias_
-así como _guías_ en el diseño curricular, pero no reglas absolutas.
-
-Te aconsejamos revisar [nuestra rúbrica](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vRktPN4ilZtkRN5tUb3DVhgeihwlzk63_-JI3moA-bXpKDbHDioAK2H3qbrwWNb0Ql4wX22Tgv7-PDv/pubhtml)
-para ver la descripción detallada de cada _habilidad_ y cada _nivel_. Te
-recomendamos también que trates de aplicarte la rúbrica a tí misma y/o a los
-proyectos de tus compañeras a lo largo del Bootcamp para ir viendo tu evolución.
-
-### Habilidades Blandas (Soft Skills)
-
-| Habilidad                                       | Nivel esperado |
-|-------------------------------------------------|----------------|
-| Planificación, organización y manejo del tiempo | 2              |
-| Autoaprendizaje                                 | 2              |
-| Presentaciones                                  | 2              |
-| Adaptabilidad                                   | 2              |
-| Solución de problemas                           | 2              |
-| Trabajo en equipo                               | 2              |
-| Responsabilidad                                 | 2              |
-| Dar y recibir feedback                          | 2              |
-| Comunicación eficaz                             | 2              |
-
-### Habilidades Técnicas (Front-end)
-
-| Habilidad                               | Nivel esperado |
-|-----------------------------------------|----------------|
-| **Computer Science (CS)**                                |
-| Lógica / Algoritmia                     | 1              |
-| Arquitectura                            | 2              |
-| **Source Code Management (SCM)**                            |
-| Git                                     | 2              |
-| GitHub                                  | 2              |
-| **JavaScript**                          |
-| Estilo (linter js)                      | 2              |
-| Nomenclatura / semántica                | 3              |
-| Uso de funciones / modularidad          | 2              |
-| Estructuras de datos                    | 2              |
-| Tests                                   | 2              |
-| **HTML/CSS**                                             |
-| Correctitud / Validación                | 3              |
-| Estilo (linter html)                    | 3              |
-| Semántica / Arquitectura de información | 2              |
-| DRY (CSS)                               | 3              |
-| Responsive Web Design                   | 2              |
-
-### Habilidades Técnicas (UX)
-
-| Habilidad       | Nivel esperado |
-|-----------------|----------------|
-| User Centricity | 3              |
-| Visual Design   | 2              |
-
-***
-
-## 9. Pistas, tips y lecturas complementarias
+## 8. Pistas, tips y lecturas complementarias
 
 ### Primeros pasos
 
@@ -520,25 +487,3 @@ compañera:
 * [Guía para Data Lovers](https://docs.google.com/presentation/d/e/2PACX-1vQhx9D36NjpH-Daea-ITPUDUzNL8ZiNAprq_7b5PSUrfutk45tEtaOLz2lmd8f54_5jX1hypDM8f8SM/pub?start=false&loop=false&delayms=60000)
 
 ***
-
-## 10. Checklist
-
-* [ ] Usa VanillaJS.
-* [ ] No hace uso de `this`.
-* [ ] Pasa linter (`npm run pretest`)
-* [ ] Pasa tests (`npm test`)
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
-  lines y branches.
-* [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
-* [ ] Incluye historias de usuario en `README.md`.
-* [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
-  `README.md`.
-* [ ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
-  en `README.md`.
-* [ ] Incluye link a Zeplin en `README.md`.
-* [ ] Incluye el listado de problemas que detectaste a través de tests de
-  usabilidad en el `README.md`.
-* [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
-* [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
-* [ ] UI: Permite filtrar data en base a una condición.
-* [ ] UI: Es _responsive_.
