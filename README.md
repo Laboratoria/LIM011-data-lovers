@@ -61,7 +61,7 @@ Estos son datos que te proponemos:
   En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
   y Johto, junto con sus respectivas estadísticas usadas en el juego
   [Pokémon GO](http://pokemongolive.com).
-  * [Investigación](/pokemon)
+  * [Investigación con jugadores de Pokémon Go](/pokemon)
 * [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
   Este set de datos muestra la lista de jugadores en una liga del
   juego League of Legends (LoL), puedes revisar la documentación de su API en

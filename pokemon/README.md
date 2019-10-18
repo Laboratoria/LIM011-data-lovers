@@ -6,13 +6,13 @@ Game Developers Choice Awards y ""la mejor aplicación del año"" por TechCrunch
 (tomado de Google Play). Los usuarios del juego se convierten en "Maestros/
 entrenadores de pokémon" y pueden:
 
-- DESCUBRIR EL MUNDO DE POKÉMON: explorar y descubrir nuevos Pokémon allá
+- **Descubrir el mundo Pokémon:** explorar y descubrir nuevos Pokémon allá
   donde vayan.
-- ATRAPAR distintos Pokémon para completar su Pokédex.
-- PELEAR contra Pokemon de otros entrenadores y conquistar un gimnasio.
-- COMPETIR en épicos combates contra otros entrenadores.
-- HACER EQUIPO con otros entrenadores para atrapar poderosos Pokémon durante
-  las incursiones.
+- **Atrapar** distintos Pokémon para completar su Pokédex.
+- **Pelear** contra Pokemon de otros entrenadores y conquistar un gimnasio.
+- **Competir** en épicos combates contra otros entrenadores.
+- ** Hacer equipo** con otros entrenadores para atrapar poderosos Pokémon
+  durante las incursiones.
 
 Para entender mejor qué necesidades complementarias a la app tienen los usuarios, hicimos una rápida investigación (research) y estos son algunos de los hallazgos.
 
