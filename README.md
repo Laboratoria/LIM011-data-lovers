@@ -58,29 +58,13 @@ le ayude a interactuar y entender mejor esos datos.
 
 Estos son datos que te proponemos:
 
-* [Indicadores de desarrollo del Banco Mundial](src/data/worldbank/worldbank.json)
-  de algunos países (Brasil, Chile, México y Perú). Estos datos incluyen
-  indicadores demográficos, económicos y comerciales.
 * [Pokémon](src/data/pokemon/pokemon.json):
   En este set encontrarás una lista con los 151 Pokémon de la región de Kanto,
   junto con sus respectivas estadísticas usadas en el juego [Pokémon GO](http://pokemongolive.com).
-* [Steam noticias](src/data/steam/steam.json):
-  Lista noticias relacionadas a los videojuegos presentes en la
-  plataforma de [Steam](https://store.steampowered.com/).
 * [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
   Este set de datos muestra la lista de jugadores en una liga del
   juego League of Legends (LoL), puedes revisar la documentación de su API en
   este [link](https://developer.riotgames.com/api-methods/).
-* [Personas heridas por medio de transporte en EEUU](src/data/injuries/injuries.json).
-  Este set nos muestra el número de personas heridas en accidentes de
-  transporte, con data anual desde 1960 y categorizada por tipo de transporte
-  (aire, barco, automóvil, moto, bicicleta, ...).
-* [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
-  Este set nos proporciona la lista de los personajes de la serie Rick and
-  Morty. Puedes revisar la documentación de su API en este [link](https://rickandmortyapi.com).
-* [Pacientes en EEUU](src/data/patient/patient.json).
-  Este set nos proporciona una lista de pacientes de EEUU. Puedes revisar la
-  documentación de su API en este [link](https://r2.smarthealthit.org/Patient).
 
 <!---
 ¡Too much information para comenzar (Diego)!
@@ -265,7 +249,7 @@ como toda la configuración de dependencias:
 └── test
    └── data.spec.js
 
-directory: 10 file: 22
+directory: 5 file: 12
 ```
 
 ### `src/index.html`
