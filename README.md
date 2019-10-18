@@ -38,46 +38,34 @@ y la interfaz construida en este [link](https://app.talento.laboratoria.la/profi
 ## 2. Resumen del proyecto
 
 En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
-necesita.
+_conjunto (set) de datos_** que se adecúe a lo que tu usuario necesita.
 
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y hacer algún cálculo agregado**. Con cálculo agregado
-nos referimos a distintos cálculos que puedes hacer con la data para mostrar
-información aún más relevante para los usuarios (promedio, el valor máximo
-o mínimo, etc).
+Como entregable final tendrás una página web que permita a los usuarios realizar
+acciones como **visualizar, filtrar y ordenar** datos relevantes en sus
+distintos momentos de uso.
 
 Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que
 explores y decidas con qué temática te interesa trabajar. Hemos elegido
 específicamente estos sets de datos porque creemos que se adecúan bien a esta
-etapa de tu aprendizaje.
+etapa de tu aprendizaje. Adicionalmente, cada set viene con una lista de
+necesidades de usuarios que provienen de una investigación hecha por el equipo
+de Laboratoria.
 
-Una vez que definas tu área de interés, buscar entender quién es tu usuario
-y qué necesita saber o ver exactamente; luego podrás construir la interfaz que
-le ayude a interactuar y entender mejor esos datos.
+Una vez que definas tu área de interés, revisa qué es lo que necesita el usuario
+del tema que elegiste: qué necesita ver, filtrar, ordenar, etc. e intenta
+ofrecerle la mejor experiencia posible para ayudarle a conseguir sus metas.
 
 Estos son datos que te proponemos:
 
 * [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 151 Pokémon de la región de Kanto,
-  junto con sus respectivas estadísticas usadas en el juego [Pokémon GO](http://pokemongolive.com).
+  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
+  y Johto, junto con sus respectivas estadísticas usadas en el juego
+  [Pokémon GO](http://pokemongolive.com).
+  * [Investigación](/pokemon)
 * [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
   Este set de datos muestra la lista de jugadores en una liga del
   juego League of Legends (LoL), puedes revisar la documentación de su API en
   este [link](https://developer.riotgames.com/api-methods/).
-
-<!---
-¡Too much information para comenzar (Diego)!
-Una opción serían cálculos estadísticos como el promedio, el máximo o el mínimo,
-por ejemplo, si tenemos una colección que representa a un grupo de personas,
-y cada persona está representada como un _objeto_ con una _propiedad_ `altura`,
-podríamos elegir calcular la altura promedio en el grupo entre otras cosas.
---->
-
-Algunos sets de datos tiene una identidad gráfica que deberás utilizar en la
-interfaz. La identidad gráfica, también conocida como guía de estilos en
-diseño, de estos sets la podrás encontrar en el siguiente
-[link](https://drive.google.com/open?id=1eeWFqrWpy-OYOH4EHDckFGunyrm9iNeE).
 
 ## 3. Objetivos de aprendizaje
 
@@ -127,13 +115,14 @@ el problema (o problemas) que tiene tu usuario.
 Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias
 de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
 todo lo que el usuario necesita hacer/ver. Las **Historias de Usuario** deben
-ser el resultado de tu proceso de investigación o _research_ de tus usuarios.
+ser el resultado de tu proceso de entendimiento de tus usuarios.
 
 Asegúrate de incluir la definición de terminado (_definition of done_) y los
 Criterios de Aceptación para cada una.
 
-En la medida de lo posible, termina una historia de usuario antes de pasar
-a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
+En la medida de lo posible, termina de construir una historia de usuario antes
+de pasar a la siguiente (Cumple con Definición de Terminado + Criterios de
+Aceptación).
 
 ### Diseño de la Interfaz de Usuario
 
@@ -151,8 +140,9 @@ _User Interface_). Para eso debes aprender a utilizar alguna herramienta de
 diseño visual. Nosotros te recomendamos [Figma](https://www.figma.com/) que es
 una herramienta que funciona en el navegador y, además, puedes crear una cuenta
 gratis. Sin embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc. Recuerda utilizar la identidad
-gráfica correspondiente a cada set de datos que elijas.
+Illustrator, Photoshop, PowerPoint, Keynote, etc. Recuerda utilizar la 
+[identidad gráfica](https://drive.google.com/open?id=1eeWFqrWpy-OYOH4EHDckFGunyrm9iNeE)
+correspondiente a cada set de datos que elijas.
 
 El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
 desearías implementar si tuvieras tiempo ilimitado para hackear. Además, tu
@@ -178,14 +168,9 @@ Como mínimo, tu implementación debe:
 
 1. Mostrar la data en una interfaz: puede ser un card, una tabla, una lista, etc.
 2. Permitir al usuario filtrar y ordenar la data.
-3. Calcular estadísticas de la colección (o subcolección) como media aritmética,
-   máximo y/o mínimo de algún atributo numérico, o contar cuántas veces aparece
-   un determinado valor, por ejemplo.
-4. Ser _responsive_, es decir, debe visualizarse sin problemas desde distintos
+3. Ser _responsive_, es decir, debe visualizarse sin problemas desde distintos
    tamaños de pantallas: móviles, tablets y desktops.
-
-Es importante que tu interfaz, a pesar de ser una versión mínima de tu ideal,
-siga los fundamentos de _visual design_.
+4. Que la interfaz siga los fundamentos de _visual design_.
 
 ### Pruebas unitarias
 
@@ -214,7 +199,7 @@ Features/características extra sugeridas:
 * Agregarle a tu interfaz de usuario implementada visualizaciones gráficas. Para
   ello te recomendamos explorar librerías de gráficas como [Chart.js](https://www.chartjs.org/)
   o [Google Charts](https://developers.google.com/chart/).
-* 100% Coverage
+* 100% Coverage en los tests
 
 ## 7. Consideraciones técnicas
 
@@ -334,64 +319,9 @@ asíncrona con [`fetch()`](https://developer.mozilla.org/es/docs/Web/API/Fetch_A
 Tendrás también que completar las pruebas unitarias de las funciones
 implementadas en el archivo `data.js`.
 
-## 8. Evaluación
-
-NOTA: Esta sección incluye una lista de habilidades que se podrán tener en
-cuenta a la hora de evaluar el proyecto. Los niveles esperados son _sugerencias_
-así como _guías_ en el diseño curricular, pero no reglas absolutas.
-
-Te aconsejamos revisar [nuestra rúbrica](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vRktPN4ilZtkRN5tUb3DVhgeihwlzk63_-JI3moA-bXpKDbHDioAK2H3qbrwWNb0Ql4wX22Tgv7-PDv/pubhtml)
-para ver la descripción detallada de cada _habilidad_ y cada _nivel_. Te
-recomendamos también que trates de aplicarte la rúbrica a tí misma y/o a los
-proyectos de tus compañeras a lo largo del Bootcamp para ir viendo tu evolución.
-
-### Habilidades Blandas (Soft Skills)
-
-| Habilidad                                       | Nivel esperado |
-|-------------------------------------------------|----------------|
-| Planificación, organización y manejo del tiempo | 2              |
-| Autoaprendizaje                                 | 2              |
-| Presentaciones                                  | 2              |
-| Adaptabilidad                                   | 2              |
-| Solución de problemas                           | 2              |
-| Trabajo en equipo                               | 2              |
-| Responsabilidad                                 | 2              |
-| Dar y recibir feedback                          | 2              |
-| Comunicación eficaz                             | 2              |
-
-### Habilidades Técnicas (Front-end)
-
-| Habilidad                               | Nivel esperado |
-|-----------------------------------------|----------------|
-| **Computer Science (CS)**                                |
-| Lógica / Algoritmia                     | 1              |
-| Arquitectura                            | 2              |
-| **Source Code Management (SCM)**                            |
-| Git                                     | 2              |
-| GitHub                                  | 2              |
-| **JavaScript**                          |
-| Estilo (linter js)                      | 2              |
-| Nomenclatura / semántica                | 3              |
-| Uso de funciones / modularidad          | 2              |
-| Estructuras de datos                    | 2              |
-| Tests                                   | 2              |
-| **HTML/CSS**                                             |
-| Correctitud / Validación                | 3              |
-| Estilo (linter html)                    | 3              |
-| Semántica / Arquitectura de información | 2              |
-| DRY (CSS)                               | 3              |
-| Responsive Web Design                   | 2              |
-
-### Habilidades Técnicas (UX)
-
-| Habilidad       | Nivel esperado |
-|-----------------|----------------|
-| User Centricity | 3              |
-| Visual Design   | 2              |
-
 ***
 
-## 9. Pistas, tips y lecturas complementarias
+## 8. Pistas, tips y lecturas complementarias
 
 ### Primeros pasos
 
@@ -427,54 +357,6 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
   `npm start` para arrancar el servidor web y dirígete a
   `http://localhost:5000` en tu navegador.
 6. A codear se ha dicho! :rocket:
-
-<!--
-En este proyecto deberás trabajar colaborativamente. Para ello, una de las
-integrantes del equipo deberá forkear el repositorio del cohort y la otra
-integrante **deberá hacer un fork del repositorio de su compañera**. Luego de
-esto, deberás
-[configurar](https://help.github.com/articles/configuring-a-remote-for-a-fork/)
-un `remote` hacia el repositorio del cual hiciste el fork.
-
-Para mandar cambios desde un repositorio forkeado al original debes crear un
-[pull request](https://goo.gl/4bYnuh)
-y el propietario del repositorio original recibirá una notificación para
-[revisar el pull request](https://goo.gl/XSFcT5)
-y [aceptar los cambios](https://goo.gl/HLJtqN).
-
-Aquí algunas recomendaciones para que organices mejor el trabajo con tu
-compañera:
-
-* En lugar de trabajar en una sola rama o _branch_, puedes organizar el flujo de
-  trabajo con dos ramas principales:
-  - `master`: rama que contiene las funcionalidades terminadas y sin errores.
-  - `develop`: rama dónde integrarás las funcionalidades conforme las vayas
-    desarrollando.
-
-* Además de tener las dos ramas anteriores, puedes trabajar cada nueva
-  funcionalidad en una rama individual (_feature branches_), estas ramas en
-  lugar de crearse a partir de `master`, tienen a `develop` como su rama de
-  origen. Cuando una funcionalidad es terminada se integra de nuevo a `develop`.
-  Las _feature branches_ no se deben integrar directamente a `master`.
-
-* Por último, te sugerimos codear usando la técnica de
-  [pair programming](https://goo.gl/uAMBX2).
-
-¿Quieres saber más forks y pull requests?
-
-* Un [fork](https://help.github.com/articles/fork-a-repo/) es una copia de un
-  repositorio en el que puedes experimentar sin afectar al repositorio original.
-  Generalmente se usa para proponer cambios al proyecto de alguien más o para
-  usar el proyecto de otra persona como punto de partida para una idea que
-  quieras realizar.
-
-* Un [pull request](https://help.github.com/articles/about-pull-requests/) (PR)
-  te permite solicitar la inclusión de cambios al repositorio original (tu punto
-  de partida) en GitHub. Cuando un PR es abierto, este permite solicitar,
-  discutir y revisar los cambios realizados con todos los colaboradores y
-  agregar otros commits antes de que los cambios sean incluidos al repositorio
-  original.
--->
 
 ***
 
@@ -521,7 +403,7 @@ compañera:
 
 ***
 
-## 10. Checklist
+## 9. Checklist
 
 * [ ] Usa VanillaJS.
 * [ ] No hace uso de `this`.
