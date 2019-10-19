@@ -59,11 +59,16 @@ Estos son datos que te proponemos:
   En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
   y Johto, junto con sus respectivas estadísticas usadas en el juego
   [Pokémon GO](http://pokemongolive.com).
-  * [Investigación con jugadores de Pokémon Go](/pokemon)
+  * [Investigación con jugadores de Pokémon Go](/pokemon/README.md)
 * [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
   Este set de datos muestra la lista de jugadores en una liga del
   juego League of Legends (LoL), puedes revisar la documentación de su API en
   este [link](https://developer.riotgames.com/api-methods/).
+* [Harry Potter](src/data/potter/potter.json):
+  Este set de datos muestra la lista de los personajes del mundo de Harry Potter,
+  junto con sus respectivas características mencionadas en la serie de novelas 
+  de Harry Potter escrita por la autora británica J.K.Rowling. [Página oficial](https://www.wizardingworld.com)
+  * [Investigación con fans del mundo de Harry Potter](/potter/README.md)
 
 ## 3. Objetivos de aprendizaje
 
@@ -82,39 +87,40 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ### HTML y CSS
 
-- [ ] Uso correcto de HTML semántico.
-- [ ] Uso de selectores de CSS.
-- [ ] Uso de flexbox básico.
+- [ ] Entender y reconocer porque es importante el HTML semántico.
+- [ ] Identificar y entender tipos de selectores en CSS.
+- [ ] CSS `flexbox`.
 - [ ] Construir tu aplicación respetando el diseño realizado (maquetación).
 
 ### DOM
 
-- [ ] Uso de selectores del DOM (querySelector).
-- [ ] Manejo de eventos del DOM.
-- [ ] Manipulación dinámica del DOM.
+- [ ] Entender y reconocer los selectores del DOM (querySelector | querySelectorAll).
+- [ ] Manejar eventos del DOM. (addEventListener)
+- [ ] Manipular dinámicamente el DOM.
 
 ### Javascript
 
-- [ ] Manipulación de arrays (filter | map | sort).
-- [ ] Manipulación de objects (key | value).
-- [ ] Uso de condicionales (if-else | switch).
-- [ ] Uso de bucles (for | do-while).
-- [ ] Uso de funciones (parámetros | argumentos | valor de retorno).
-- [ ] Declaración correcta de variables (const & let).
-- [ ] Uso de ES Modules (import | export).
+- [ ] Manipular arrays (filter | map | sort | reduce).
+- [ ] Manipular objects (key | value).
+- [ ] Entender el uso condicionales (if-else | switch).
+- [ ] Entender el uso de bucles (for | forEach).
+- [ ] Entender la diferencia entre expression y statements.
+- [ ] Utilizar funciones (parámetros | argumentos | valor de retorno).
+- [ ] Entender la diferencia entre tipos de datos atómicos y estructurados.
+- [ ] Utilizar ES Modules (import | export).
 
 ### Testing
-- [ ] Testeo de tus funciones.
+- [ ] Testear funciones (funciones puras).
 
 ### Git y GitHub
-- [ ] Comandos de git (add | commit | pull | status | push).
-- [ ] Manejo de repositorios de GitHub (clone | fork | gh-pages).
-- [ ] Colaboración en Github (pull requests)
+- [ ] Ejecutar comandos de git (add | commit | pull | status | push).
+- [ ] Utilizar los repositorios de GitHub (clone | fork | gh-pages).
+- [ ] Colaborar en Github (pull requests)
 
 ### Buenas prácticas de desarrollo
 - [ ] Organizar y dividir el código en módulos (Modularización).
-- [ ] Uso de identificadores descriptivos (Nomenclatura | Semántica).
-- [ ] Uso de linter para seguir buenas prácticas (ESLINT).
+- [ ] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
+- [ ] Utilizar linter para seguir buenas prácticas (ESLINT).
 
 <!-- Diego * Escribir y trabajar con **historias de usuario**, sus definiciones de
   terminado (_definition of done_) y Criterios de Aceptación como herramienta
@@ -132,9 +138,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ## 5. Criterios de aceptación mínimos del proyecto
 
-<!-- Diego! No sé si dejar esto, siento que es evaluador y no va con la autoreflexión. Creo que debería ir más de su lado.  
- Los criterios para considerar que has completado este proyecto son: -->
- Los criterios que deberás considerar para saber si has completado este proyecto son:
+Los criterios que deberás considerar para saber si has completado este proyecto son:
 
 ### Definición del producto
 
@@ -231,7 +235,7 @@ Features/características extra sugeridas:
 * Agregarle a tu interfaz de usuario implementada visualizaciones gráficas. Para
   ello te recomendamos explorar librerías de gráficas como [Chart.js](https://www.chartjs.org/)
   o [Google Charts](https://developers.google.com/chart/).
-* 100% Coverage en los tests
+* 100% Coverage
 
 ## 7. Consideraciones técnicas
 
@@ -248,9 +252,12 @@ como toda la configuración de dependencias:
 
 ```text
 .
-├── EXTRA.md
-├── README.md
-├── package.json
+├── pokemon
+|  ├── README.md
+├── potter
+|  ├── README.md
+├── lol
+|  ├── README.md
 ├── src
 |  ├── data (según con qué data trabajes)
 |  |  ├── lol
@@ -259,48 +266,62 @@ como toda la configuración de dependencias:
 |  |  ├── pokemon
 |  |  |  ├── pokemon.js
 |  |  |  └── pokemon.json
+|  |  ├── potter
+|  |  |  ├── potter.js
+|  |  |  └── potter.json
 |  ├── data.js
 |  ├── index.html
 |  ├── main.js
 |  └── style.css
-└── test
-   └── data.spec.js
+├── test
+|  ├── data.spec.js
+├── README.md
+└── package.json
 
-directory: 5 file: 12
+directory: 9 file: 16
 ```
 
 ### `src/index.html`
 
 Como en el proyecto anterior, existe un archivo `index.html`. Como ya sabes,
 acá va la página que se mostrará al usuario. También nos sirve para indicar
-qué scripts se usarán y unir todo lo que hemos hecho.
+qué script se usará y unir todo lo que hemos hecho.
 
-En este archivo encontrarás una serie de _etiquetas_ (_tags_) `<script>`
+Encontrarás 1 etiqueta inicial, la cual si deseas puedes borrar y empezar de cero:
+
+```
+ <div id="root"></div>
+```
+
+### `src/main.js`
+
+Acá escribirás todo el código que tenga que ver con la interacción del DOM
+(seleccionar, actualizar y manipular elementos del DOM y eventos). Es decir, 
+en este archivo deberás invocar a tus funciones exportadas en el boilerplate, 
+según sea necesario para realizar operaciones como creación de nodos, 
+registro de manejadores de eventos (_event listeners_ o _event handlers_), ....
+
+En este archivo encontrarás una serie de _sentencias_ `import`
 _comentadas_. Para _cargar_ las diferentes fuentes de datos tendrás que
-_descomentar_ estas _etiquetas_. Cada uno estos scripts asignará una variable
-global con la data correspondiente a esa fuente de datos.
+_descomentar_ estas _sentencias_. Cada una de estas sentencias importará un 
+objeto, el cual ya se encuentra exportado en el boilerplate. Este objeto
+contiene la data correspondiente a esa fuente de datos.
 
 Por ejemplo, si "descomentamos" la siguiente línea:
 
-```html
-<!-- <script src="./data/worldbank/worldbank.js"></script> -->
+```
+ /**
+ import LOL from './data/lol/lol.js'
+ */
 ```
 
 La línea quedaría así:
 
-```html
-<script src="./data/worldbank/worldbank.js"></script>
+```
+import LOL from './data/lol/lol.js'
 ```
 
-Y ahora tendríamos la variable global `WORLDBANK` disponible en nuestros otros
-scripts (como `src/data.js` o `src/main.js`).
-
-### `src/main.js`
-
-Recomendamos usar `src/main.js` para todo tu código que tenga que ver con
-mostrar los datos en la pantalla. Con esto nos referimos básicamente a la
-interacción con el DOM. Operaciones como creación de nodos, registro de
-manejadores de eventos (_event listeners_ o _event handlers_), ....
+Y ahora tendríamos el objeto `LOL` disponible en nuestro archivo (`src/main.js`).
 
 Esta no es la única forma de dividir tu código, puedes usar más archivos y
 carpetas, siempre y cuando la estructura sea clara para tus compañeras.
@@ -310,7 +331,7 @@ carpetas, siempre y cuando la estructura sea clara para tus compañeras.
 El corazón de este proyecto es la manipulación de datos a través de arreglos
 y objetos.
 
-Te reomendamos que este archivo contenga toda la funcionalidad que corresponda
+Te recomendamos que este archivo contenga toda la funcionalidad que corresponda
 a obtener, procesar y manipular datos (tus funciones):
 
 * `filterData(data, condition)`: esta función `filter` o filtrar recibiría la
@@ -332,16 +353,16 @@ Estos nombres de funciones y de parámetros son solamente referenciales, lo que
 decidas depende de tu propia implementación.
 
 Estas funciones deben ser [_puras_](https://medium.com/laboratoria-developers/introducci%C3%B3n-a-la-programaci%C3%B3n-funcional-en-javascript-parte-2-funciones-puras-b99e08c2895d)
-e independientes del DOM. Estas funciones serán después usadas desde el archivo
-`src/main.js`, al cargar la página, y cada vez que el usuario interactúe (click,
-filtrado, ordenado, ...).
+e independientes del DOM. Estas funciones serán exportadas en el boilerplate, para 
+después ser usadas desde el archivo `src/main.js`, al cargar la página, y cada vez 
+que el usuario interactúe (click, filtrado, ordenado, ...).
 
 ### `src/data`
 
 En esta carpeta están los datos de las diferentes fuentes. Encontrarás una
 carpeta por cada fuente, y dentro de cada carpeta dos archivos: uno con la
 extensión `.js` y otro `.json`. Ambos archivos contienen la misma data; la
-diferencia es que el `.js` lo usaremos a través de una etiqueta `<script>`,
+diferencia es que el `.js` lo importaremos como un objeto al archivo main.js,
 mientras que el `.json` está ahí para opcionalmente cargar la data de forma
 asíncrona con [`fetch()`](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)
 (ver sección de [_Parte Opcional_](#6-hacker-edition)).
@@ -350,8 +371,6 @@ asíncrona con [`fetch()`](https://developer.mozilla.org/es/docs/Web/API/Fetch_A
 
 Tendrás también que completar las pruebas unitarias de las funciones
 implementadas en el archivo `data.js`.
-
-***
 
 ## 8. Pistas, tips y lecturas complementarias
 
@@ -390,6 +409,54 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
   `http://localhost:5000` en tu navegador.
 6. A codear se ha dicho! :rocket:
 
+<!--
+En este proyecto deberás trabajar colaborativamente. Para ello, una de las
+integrantes del equipo deberá forkear el repositorio del cohort y la otra
+integrante **deberá hacer un fork del repositorio de su compañera**. Luego de
+esto, deberás
+[configurar](https://help.github.com/articles/configuring-a-remote-for-a-fork/)
+un `remote` hacia el repositorio del cual hiciste el fork.
+
+Para mandar cambios desde un repositorio forkeado al original debes crear un
+[pull request](https://goo.gl/4bYnuh)
+y el propietario del repositorio original recibirá una notificación para
+[revisar el pull request](https://goo.gl/XSFcT5)
+y [aceptar los cambios](https://goo.gl/HLJtqN).
+
+Aquí algunas recomendaciones para que organices mejor el trabajo con tu
+compañera:
+
+* En lugar de trabajar en una sola rama o _branch_, puedes organizar el flujo de
+  trabajo con dos ramas principales:
+  - `master`: rama que contiene las funcionalidades terminadas y sin errores.
+  - `develop`: rama dónde integrarás las funcionalidades conforme las vayas
+    desarrollando.
+
+* Además de tener las dos ramas anteriores, puedes trabajar cada nueva
+  funcionalidad en una rama individual (_feature branches_), estas ramas en
+  lugar de crearse a partir de `master`, tienen a `develop` como su rama de
+  origen. Cuando una funcionalidad es terminada se integra de nuevo a `develop`.
+  Las _feature branches_ no se deben integrar directamente a `master`.
+
+* Por último, te sugerimos codear usando la técnica de
+  [pair programming](https://goo.gl/uAMBX2).
+
+¿Quieres saber más forks y pull requests?
+
+* Un [fork](https://help.github.com/articles/fork-a-repo/) es una copia de un
+  repositorio en el que puedes experimentar sin afectar al repositorio original.
+  Generalmente se usa para proponer cambios al proyecto de alguien más o para
+  usar el proyecto de otra persona como punto de partida para una idea que
+  quieras realizar.
+
+* Un [pull request](https://help.github.com/articles/about-pull-requests/) (PR)
+  te permite solicitar la inclusión de cambios al repositorio original (tu punto
+  de partida) en GitHub. Cuando un PR es abierto, este permite solicitar,
+  discutir y revisar los cambios realizados con todos los colaboradores y
+  agregar otros commits antes de que los cambios sean incluidos al repositorio
+  original.
+-->
+
 ***
 
 ### Contenido de referencia
@@ -416,6 +483,8 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
 * [Object.entries en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/entries)
 * [Fetch API en MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 * [json.org](https://json.org/json-es.html)
+* [Modulos: Export](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/export)
+* [Modulos: Import](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import)
 
 #### Herramientas
 
@@ -434,25 +503,3 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
 * [Guía para Data Lovers](https://docs.google.com/presentation/d/e/2PACX-1vQhx9D36NjpH-Daea-ITPUDUzNL8ZiNAprq_7b5PSUrfutk45tEtaOLz2lmd8f54_5jX1hypDM8f8SM/pub?start=false&loop=false&delayms=60000)
 
 ***
-
-## 9. Checklist
-
-* [ ] Usa VanillaJS.
-* [ ] No hace uso de `this`.
-* [ ] Pasa linter (`npm run pretest`)
-* [ ] Pasa tests (`npm test`)
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
-  lines y branches.
-* [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
-* [ ] Incluye historias de usuario en `README.md`.
-* [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
-  `README.md`.
-* [ ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
-  en `README.md`.
-* [ ] Incluye link a Zeplin en `README.md`.
-* [ ] Incluye el listado de problemas que detectaste a través de tests de
-  usabilidad en el `README.md`.
-* [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
-* [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
-* [ ] UI: Permite filtrar data en base a una condición.
-* [ ] UI: Es _responsive_.
