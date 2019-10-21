@@ -21,12 +21,12 @@ Cada día generamos 2.5 millones de terabytes de datos, una cifra sin precedente
 
 No obstante, los datos por sí mismos son de poca utilidad. Para que esas
 grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
+los usuarios, necesitamos entender, procesar y mostrar estos datos. Una manera
+simple de hacerlo es creando _interfaces_ y _visualizaciones_.
 
 En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por el usuario
-al lado derecho.
+izquierda se puede construir (a la derecha) una interfaz amigable y comprensible
+para el usuario.
 
 ![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
 
@@ -38,60 +38,63 @@ y la interfaz construida en este [link](https://app.talento.laboratoria.la/profi
 En este proyecto **construirás una _página web_ para visualizar un
 _conjunto (set) de datos_** que se adecúe a lo que tu usuario necesita.
 
-Como entregable final tendrás una página web que permita a los usuarios realizar
-acciones como **visualizar, filtrar y ordenar** datos relevantes en sus
-distintos momentos de uso.
+Como entregable final tendrás una página web que permita a los usuarios
+**visualizar, filtrar, ordenar, etc.**.
 
-Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que
-explores y decidas con qué temática te interesa trabajar. Hemos elegido
-específicamente estos sets de datos porque creemos que se adecúan bien a esta
-etapa de tu aprendizaje. Adicionalmente, cada set viene con una lista de
-necesidades de usuarios que provienen de una investigación hecha por el equipo
-de Laboratoria.
+Te proponemos una serie de datos de diferentes _temáticas_ para que los
+explores y decidas con cuál te interesa trabajar. Cada _set_ de datos viene con
+con información básica sobre los datos y su estructura, y una lista de las
+necesidades de los usuarios que proviene de una investigación (_research_)
+hecha por el equipo de Laboratoria.
 
-Una vez que definas tu área de interés, revisa qué es lo que necesita el usuario
-del tema que elegiste: qué necesita ver, filtrar, ordenar, etc. e intenta
-ofrecerle la mejor experiencia posible para ayudarle a conseguir sus metas.
+Una vez que elijas, diseña tu proyecto intentando ofrecerle la mejor experiencia
+posible para ayudarle a satisfacer sus necesidades.
 
-Estos son datos que te proponemos:
+### Estos son datos que te proponemos:
 
 * [Pokémon](src/data/pokemon/pokemon.json):
   En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
   y Johto, junto con sus respectivas estadísticas usadas en el juego
   [Pokémon GO](http://pokemongolive.com).
   * [Investigación con jugadores de Pokémon Go](/pokemon/README.md)
+
+
 * [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
   Este set de datos muestra la lista de jugadores en una liga del
   juego League of Legends (LoL), puedes revisar la documentación de su API en
   este [link](https://developer.riotgames.com/api-methods/).
+
 * [Harry Potter](src/data/potter/potter.json):
-  Este set de datos muestra la lista de los personajes del mundo de 
-  [Harry Potter: Wizards Unite](https://www.wizardingworld.com), junto con sus 
-  respectivas características mencionadas en la serie de novelas de Harry Potter 
+  Este set de datos muestra la lista de los personajes del mundo de
+  [Harry Potter: Wizards Unite](https://www.wizardingworld.com), junto con sus
+  respectivas características mencionadas en la serie de novelas de Harry Potter
   escrita por la autora británica J.K.Rowling.
   * [Investigación con jugadores de Harry Potter: Wizards Unite](/potter/README.md)
 
+
 ## 3. Objetivos de aprendizaje
 
-El objetivo principal de este proyecto es que aprendas a diseñar y construir una
-interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
-usuario necesita.
+El objetivo principal de este proyecto es que, entendiendo las necesidades de
+tus usuarios, aprendas a diseñar y construir una interfaz web donde se pueda
+visualizar y manipular data.
 
-Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto.
+Revisa la lista y reflexiona sobre los objetivos que conseguiste en el
+proyecto anterior. Piensa en eso al decidir tu estrategia de trabajo individual
+y de equipo.
 
 ### UX
 
 - [ ] Diseñar la aplicación pensando y entendiendo al usuario.
-- [ ] Crear prototipos para obtener feedback e iterar.
+- [ ] Crear prototipos para obtener _feedback_ e iterar.
 - [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).
-- [ ] Planear y ejecutar tests de usabilidad.
+- [ ] Planear y ejecutar _tests_ de usabilidad.
 
 ### HTML y CSS
 
-- [ ] Entender y reconocer porque es importante el HTML semántico.
+- [ ] Entender y reconocer por qué es importante el HTML semántico.
 - [ ] Identificar y entender tipos de selectores en CSS.
 - [ ] CSS `flexbox`.
-- [ ] Construir tu aplicación respetando el diseño realizado (maquetación).
+- [ ] Construir tu aplicación respetando el diseño planeado (maquetación).
 
 ### DOM
 
@@ -110,13 +113,13 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 - [ ] Entender la diferencia entre tipos de datos atómicos y estructurados.
 - [ ] Utilizar ES Modules (import | export).
 
-### Testing
+### Pruebas Unitarias (_testing_)
 - [ ] Testear funciones (funciones puras).
 
 ### Git y GitHub
 - [ ] Ejecutar comandos de git (add | commit | pull | status | push).
 - [ ] Utilizar los repositorios de GitHub (clone | fork | gh-pages).
-- [ ] Colaborar en Github (pull requests)
+- [ ] Colaborar en Github (pull requests).
 
 ### Buenas prácticas de desarrollo
 - [ ] Organizar y dividir el código en módulos (Modularización).
@@ -135,7 +138,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 * Este proyecto se debe resolver en duplas.
 * El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
   interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
-* Tiempo para completarlo: Toma como referencia 3 semanas.
+* Tiempo: toma como referencia 3 semanas.
 
 ## 5. Criterios de aceptación mínimos del proyecto
 
@@ -165,9 +168,9 @@ Aceptación).
 
 #### Prototipo de baja fidelidad
 
-Durante tu trabajo deberás haber hecho e iterado sketches (bocetos) de tu
+Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_) de tu
 solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que hagas, las subas a tu repositorio, y las menciones en tu
+iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
 `README.md`.
 
 #### Prototipo de alta fidelidad
@@ -177,66 +180,63 @@ _User Interface_). Para eso debes aprender a utilizar alguna herramienta de
 diseño visual. Nosotros te recomendamos [Figma](https://www.figma.com/) que es
 una herramienta que funciona en el navegador y, además, puedes crear una cuenta
 gratis. Sin embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc. Recuerda utilizar la 
+Illustrator, Photoshop, PowerPoint, Keynote, etc. Recuerda utilizar la
 [identidad gráfica](https://drive.google.com/open?id=1eeWFqrWpy-OYOH4EHDckFGunyrm9iNeE)
 correspondiente a cada set de datos que elijas.
 
 El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para hackear. Además, tu
+desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
 diseño debe seguir los fundamentos de _visual design_. También, deberás exportar
 tu diseño a [Zeplin](https://zeplin.io/) y utilizar las especificaciones de
 estilo que te dé Zeplin al momento de implementar tus diseños en código.
 
 #### Testeos de usabilidad
 
-Durante el reto deberás realizar tests de usabilidad con distintos usuarios, y
-en base a los resultados de esos tests, deberás iterar tus diseños. Cuéntanos
-qué problemas de usabilidad detectaste a través de los tests y cómo los
+Durante el reto deberás hacer _tests_ de usabilidad con distintos usuarios, y
+en base a los resultados, deberás iterar tus diseños. Cuéntanos
+qué problemas de usabilidad detectaste a través de los _tests_ y cómo los
 mejoraste en tu propuesta final.
 
 ### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
 Luego de diseñar tu interfaz de usuario deberás trabajar en su implementación.
-Como mencionamos, **no** es necesario que construyas la interfaz exactamente
-como la diseñaste. Tendrás un tiempo limitado para hackear, así es que deberás
-priorizar.
+**No** es necesario que construyas la interfaz exactamente como la diseñaste.
+No tienes tiempo ilimitado para trabajar, así es que deberás priorizar.
 
 Como mínimo, tu implementación debe:
 
 1. Mostrar la data en una interfaz: puede ser un card, una tabla, una lista, etc.
-2. Permitir al usuario filtrar y ordenar la data.
+2. Permitir al usuario interactuar para obtener la infomación que necesita. <!--filtrar y ordenar la data.-->
 3. Ser _responsive_, es decir, debe visualizarse sin problemas desde distintos
    tamaños de pantallas: móviles, tablets y desktops.
 4. Que la interfaz siga los fundamentos de _visual design_.
 
 ### Pruebas unitarias
 
-El _boilerplate_ de este proyecto no incluye Pruebas Unitarias (tests), así es
-que  tendrás que escribir tu propias pruebas unitarias para las funciones
-encargadas de _procesar_, _filtrar_ y _ordenar_ la data, así como _calcular_
-estadísticas.
+El _boilerplate_ de este proyecto no incluye Pruebas Unitarias (_tests_), así es
+que  tendrás que escribirlas tú para las funciones que tenga tu código. <!--encargadas de  _procesar_, _filtrar_ y _ordenar_ la data, así como _calcular_
+estadísticas.-->
 
 Tus _pruebas unitarias_ deben dar una cobertura del 70% de _statements_
 (_sentencias_), _functions_ (_funciones_), _lines_ (_líneas_), y _branches_
 (_ramas_) del archivo `src/data.js` que contenga tus funciones y está detallado
 en la sección de [Consideraciones técnicas](#srcdatajs).
 
-## 6. Hacker edition  
+## 6. Parte adicional-opcional (extensión)
 
-Las secciones llamadas _Hacker Edition_ son **opcionales**. Si **terminaste**
-con todo lo anterior y te queda tiempo, intenta completarlas. Así podrás
-profundizar y/o ejercitar más sobre los objetivos de aprendizaje del proyecto.
-
-Features/características extra sugeridas:
+Si **terminaste** con todo lo anterior y te queda tiempo, intenta explorar y
+completar parte o todo de lo siguiente:
 
 * En lugar de consumir la data estática brindada en este repositorio, puedes
   consumir la data de forma dinámica, cargando un archivo JSON por medio de
   `fetch`. La carpeta `src/data` contiene una versión `.js` y una `.json` de
   de cada set datos.
+
 * Agregarle a tu interfaz de usuario implementada visualizaciones gráficas. Para
   ello te recomendamos explorar librerías de gráficas como [Chart.js](https://www.chartjs.org/)
   o [Google Charts](https://developers.google.com/chart/).
-* 100% Coverage
+
+* 100% Coverage de pruebas unitarias.
 
 ## 7. Consideraciones técnicas
 
@@ -297,14 +297,14 @@ Encontrarás 1 etiqueta inicial, la cual si deseas puedes borrar y empezar de ce
 ### `src/main.js`
 
 Acá escribirás todo el código que tenga que ver con la interacción del DOM
-(seleccionar, actualizar y manipular elementos del DOM y eventos). Es decir, 
-en este archivo deberás invocar a tus funciones exportadas en el boilerplate, 
-según sea necesario para realizar operaciones como creación de nodos, 
+(seleccionar, actualizar y manipular elementos del DOM y eventos). Es decir,
+en este archivo deberás invocar a tus funciones exportadas en el boilerplate,
+según sea necesario para realizar operaciones como creación de nodos,
 registro de manejadores de eventos (_event listeners_ o _event handlers_), ....
 
 En este archivo encontrarás una serie de _sentencias_ `import`
 _comentadas_. Para _cargar_ las diferentes fuentes de datos tendrás que
-_descomentar_ estas _sentencias_. Cada una de estas sentencias importará un 
+_descomentar_ estas _sentencias_. Cada una de estas sentencias importará un
 objeto, el cual ya se encuentra exportado en el boilerplate. Este objeto
 contiene la data correspondiente a esa fuente de datos.
 
@@ -333,7 +333,7 @@ El corazón de este proyecto es la manipulación de datos a través de arreglos
 y objetos.
 
 Te recomendamos que este archivo contenga toda la funcionalidad que corresponda
-a obtener, procesar y manipular datos (tus funciones):
+a obtener, procesar y manipular datos (tus funciones). Por ejemplo:
 
 * `filterData(data, condition)`: esta función `filter` o filtrar recibiría la
   data, y nos retornaría aquellos datos que sí cumplan con la condición.
@@ -346,16 +346,17 @@ a obtener, procesar y manipular datos (tus funciones):
   El tercer parámetro, `sortOrder`, indica si se quiere ordenar de manera
   ascendente o descendente.
 
-* `computeStats(data)`: la función `compute` o calcular, nos permitirá hacer
+* Y así sucesivamente, según tu proyecto en particular.
+<!--* `computeStats(data)`: la función `compute` o calcular, nos permitirá hacer
   cálculos estadísticos básicos para ser mostrados de acuerdo a la data
-  proporcionada.
+  proporcionada.-->
 
 Estos nombres de funciones y de parámetros son solamente referenciales, lo que
 decidas depende de tu propia implementación.
 
 Estas funciones deben ser [_puras_](https://medium.com/laboratoria-developers/introducci%C3%B3n-a-la-programaci%C3%B3n-funcional-en-javascript-parte-2-funciones-puras-b99e08c2895d)
-e independientes del DOM. Estas funciones serán exportadas en el boilerplate, para 
-después ser usadas desde el archivo `src/main.js`, al cargar la página, y cada vez 
+e independientes del DOM. Estas funciones serán exportadas en el boilerplate, para
+después ser usadas desde el archivo `src/main.js`, al cargar la página, y cada vez
 que el usuario interactúe (click, filtrado, ordenado, ...).
 
 ### `src/data`
