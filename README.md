@@ -65,10 +65,11 @@ Estos son datos que te proponemos:
   juego League of Legends (LoL), puedes revisar la documentación de su API en
   este [link](https://developer.riotgames.com/api-methods/).
 * [Harry Potter](src/data/potter/potter.json):
-  Este set de datos muestra la lista de los personajes del mundo de Harry Potter,
-  junto con sus respectivas características mencionadas en la serie de novelas 
-  de Harry Potter escrita por la autora británica J.K.Rowling. [Página oficial](https://www.wizardingworld.com)
-  * [Investigación con fans del mundo de Harry Potter](/potter/README.md)
+  Este set de datos muestra la lista de los personajes del mundo de 
+  [Harry Potter: Wizards Unite](https://www.wizardingworld.com), junto con sus 
+  respectivas características mencionadas en la serie de novelas de Harry Potter 
+  escrita por la autora británica J.K.Rowling.
+  * [Investigación con jugadores de Harry Potter: Wizards Unite](/potter/README.md)
 
 ## 3. Objetivos de aprendizaje
 
@@ -102,7 +103,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 - [ ] Manipular arrays (filter | map | sort | reduce).
 - [ ] Manipular objects (key | value).
-- [ ] Entender el uso condicionales (if-else | switch).
+- [ ] Entender el uso de condicionales (if-else | switch).
 - [ ] Entender el uso de bucles (for | forEach).
 - [ ] Entender la diferencia entre expression y statements.
 - [ ] Utilizar funciones (parámetros | argumentos | valor de retorno).
