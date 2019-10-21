@@ -58,12 +58,12 @@ posible para ayudarle a satisfacer sus necesidades.
   [Pokémon GO](http://pokemongolive.com).
   * [Investigación con jugadores de Pokémon Go](/pokemon/README.md)
 
-
 * [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
   Este set de datos muestra la lista de jugadores en una liga del
   juego League of Legends (LoL), puedes revisar la documentación de su API en
   este [link](https://developer.riotgames.com/api-methods/).
   * [Investigación con jugadores de LOL](/lol/README.md)
+  
 * [Harry Potter](src/data/potter/potter.json):
   Este set de datos muestra la lista de los personajes del mundo de
   [Harry Potter: Wizards Unite](https://www.wizardingworld.com), junto con sus
@@ -179,9 +179,7 @@ correspondiente a cada set de datos que elijas.
 
 El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
 desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
-diseño debe seguir los fundamentos de _visual design_. También, deberás exportar
-tu diseño a [Zeplin](https://zeplin.io/) y utilizar las especificaciones de
-estilo que te dé Zeplin al momento de implementar tus diseños en código.
+diseño debe seguir los fundamentos de _visual design_.
 
 #### Testeos de usabilidad
 
