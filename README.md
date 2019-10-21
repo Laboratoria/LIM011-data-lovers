@@ -63,7 +63,7 @@ posible para ayudarle a satisfacer sus necesidades.
   Este set de datos muestra la lista de jugadores en una liga del
   juego League of Legends (LoL), puedes revisar la documentación de su API en
   este [link](https://developer.riotgames.com/api-methods/).
-  * [Investigación con jugadores de LOL](/league_of_legends/README.md)
+  * [Investigación con jugadores de LOL](/lol/README.md)
 * [Harry Potter](src/data/potter/potter.json):
   Este set de datos muestra la lista de los personajes del mundo de
   [Harry Potter: Wizards Unite](https://www.wizardingworld.com), junto con sus
@@ -305,17 +305,17 @@ Por ejemplo, si "descomentamos" la siguiente línea:
 
 ```
  /**
- import LOL from './data/lol/lol.js'
+ import LoL from './data/lol/lol.js'
  */
 ```
 
 La línea quedaría así:
 
 ```
-import LOL from './data/lol/lol.js'
+import LoL from './data/lol/lol.js'
 ```
 
-Y ahora tendríamos el objeto `LOL` disponible en nuestro archivo (`src/main.js`).
+Y ahora tendríamos el objeto `LoL` disponible en nuestro archivo (`src/main.js`).
 
 Esta no es la única forma de dividir tu código, puedes usar más archivos y
 carpetas, siempre y cuando la estructura sea clara para tus compañeras.
@@ -340,9 +340,6 @@ a obtener, procesar y manipular datos (tus funciones). Por ejemplo:
   ascendente o descendente.
 
 * Y así sucesivamente, según tu proyecto en particular.
-<!--* `computeStats(data)`: la función `compute` o calcular, nos permitirá hacer
-  cálculos estadísticos básicos para ser mostrados de acuerdo a la data
-  proporcionada.-->
 
 Estos nombres de funciones y de parámetros son solamente referenciales, lo que
 decidas depende de tu propia implementación.
@@ -403,54 +400,6 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
   `npm start` para arrancar el servidor web y dirígete a
   `http://localhost:5000` en tu navegador.
 6. A codear se ha dicho! :rocket:
-
-<!--
-En este proyecto deberás trabajar colaborativamente. Para ello, una de las
-integrantes del equipo deberá forkear el repositorio del cohort y la otra
-integrante **deberá hacer un fork del repositorio de su compañera**. Luego de
-esto, deberás
-[configurar](https://help.github.com/articles/configuring-a-remote-for-a-fork/)
-un `remote` hacia el repositorio del cual hiciste el fork.
-
-Para mandar cambios desde un repositorio forkeado al original debes crear un
-[pull request](https://goo.gl/4bYnuh)
-y el propietario del repositorio original recibirá una notificación para
-[revisar el pull request](https://goo.gl/XSFcT5)
-y [aceptar los cambios](https://goo.gl/HLJtqN).
-
-Aquí algunas recomendaciones para que organices mejor el trabajo con tu
-compañera:
-
-* En lugar de trabajar en una sola rama o _branch_, puedes organizar el flujo de
-  trabajo con dos ramas principales:
-  - `master`: rama que contiene las funcionalidades terminadas y sin errores.
-  - `develop`: rama dónde integrarás las funcionalidades conforme las vayas
-    desarrollando.
-
-* Además de tener las dos ramas anteriores, puedes trabajar cada nueva
-  funcionalidad en una rama individual (_feature branches_), estas ramas en
-  lugar de crearse a partir de `master`, tienen a `develop` como su rama de
-  origen. Cuando una funcionalidad es terminada se integra de nuevo a `develop`.
-  Las _feature branches_ no se deben integrar directamente a `master`.
-
-* Por último, te sugerimos codear usando la técnica de
-  [pair programming](https://goo.gl/uAMBX2).
-
-¿Quieres saber más forks y pull requests?
-
-* Un [fork](https://help.github.com/articles/fork-a-repo/) es una copia de un
-  repositorio en el que puedes experimentar sin afectar al repositorio original.
-  Generalmente se usa para proponer cambios al proyecto de alguien más o para
-  usar el proyecto de otra persona como punto de partida para una idea que
-  quieras realizar.
-
-* Un [pull request](https://help.github.com/articles/about-pull-requests/) (PR)
-  te permite solicitar la inclusión de cambios al repositorio original (tu punto
-  de partida) en GitHub. Cuando un PR es abierto, este permite solicitar,
-  discutir y revisar los cambios realizados con todos los colaboradores y
-  agregar otros commits antes de que los cambios sean incluidos al repositorio
-  original.
--->
 
 ***
 
