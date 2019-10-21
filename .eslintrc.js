@@ -1,4 +1,3 @@
- 
 module.exports = {
   env: {
     browser: true,
@@ -10,7 +9,9 @@ module.exports = {
   ],
   globals: {
     Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',},
+    SharedArrayBuffer: 'readonly',
+    firebase: 'readonly',
+  },
   plugins: ['jest'],
   parserOptions: {
     ecmaVersion: 2018,
