@@ -1,16 +1,18 @@
 # League of Legends
 
 League of Legends es un juego de estrategia que se juega en línea y que es
-multijugador. Tiene millones de jugadores en todo el mundo. Y, es, ahora, uno
-esports de referencia y que más público atraen.
+multijugador. Tiene millones de jugadores en todo el mundo y, por ahora es uno de
+los _esports_ de referencia y que más público atraen.
 Durante el juego, los equipos trabajan juntos para lograr una
-condición de victoria, que sucede al destruir la estructura central en la base
-del equipo enemigo. En todos los modos de juego, los jugadores controlan
-personajes llamados «campeones», elegidos o asignados en cada partida, que
-tienen un conjunto de habilidades únicas, con los cuales jugarán toda la
-partida. Para entender un poco más del juego puedes entrar a este [link](https://www.redbull.com/es-es/5-consejos-empezar-jugar-league-of-legends#targetText=Lo%20primero%20que%20tienes%20que,donde%20lucha%20cinco%20contra%20cinco).
+condición de victoria que sucede al destruir la estructura central en la base
+del equipo enemigo.
 
-Algunos datos de como se juega:
+En todos los modos de juego, los jugadores controlan
+personajes llamados «campeones», que son elegidos o asignados en cada partida, 
+y que tienen un conjunto de habilidades únicas. Es con esos «campeones» con los que 
+se juega toda la partida. Para entender un poco más del juego puedes entrar a este [link](https://www.redbull.com/es-es/5-consejos-empezar-jugar-league-of-legends#targetText=Lo%20primero%20que%20tienes%20que,donde%20lucha%20cinco%20contra%20cinco).
+
+Algunos datos de cómo se juega:
 
 - Para jugar tienes que elegir a _campeones_ que son los personajes que estarán
   en tu equipo y que lucharán contra el enemigo.
@@ -18,13 +20,13 @@ Algunos datos de como se juega:
   (básicas/principales) a ellos y otras (pasivas/secundarias) que pueden ser
   adquiridas. En ambos casos, estas habilidades pueden ir desarrollándose hasta
   alcanzar su máximo nivel.
-- Los campeones tienen distintos roles en los cuáles se desempeñan:
+- Los campeones tienen distintos roles en los que se desempeñan:
   - Luchador: Especializado en combate cercano. Combinan objetos de daño con
-    objetos de aguante. También se los conoce como "offtanks"
+    objetos de aguante. También se los conoce como "offtanks".
   - Tirador: Especializado en ataque a distancia. Popularmente conocido como
-    "AD Carry" del inglés attack damage carry o carreador de daño de ataque.
+    "AD Carry" del inglés _attack damage carry_ o carreador de daño de ataque.
   - Mago o Hechicero: Especializado en habilidades y daño mágico. Popularmente
-    conocido como "AP Carry" del inglés ability power carry o carreador de poder
+    conocido como "AP Carry" del inglés _ability power carry_ o carreador de poder
     de habilidad.
   - Asesino: Especializado en emboscar al enemigo, atacando por sorpresa y
     retirándose rápidamente. Su misión es eliminar al jugador más importante del
