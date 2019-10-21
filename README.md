@@ -64,6 +64,7 @@ Estos son datos que te proponemos:
   Este set de datos muestra la lista de jugadores en una liga del
   juego League of Legends (LoL), puedes revisar la documentación de su API en
   este [link](https://developer.riotgames.com/api-methods/).
+  * [Investigación con jugadores de LOL](/league_of_legends/README.md)
 * [Harry Potter](src/data/potter/potter.json):
   Este set de datos muestra la lista de los personajes del mundo de 
   [Harry Potter: Wizards Unite](https://www.wizardingworld.com), junto con sus 
