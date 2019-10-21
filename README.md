@@ -7,7 +7,7 @@
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
 * [4. Consideraciones generales](#4-consideraciones-generales)
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
+* [6. Parte adicional-opcional (extensión)](#6-parte-adicional-opcional-extensión)
 * [7. Consideraciones técnicas](#7-consideraciones-técnicas)
 * [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
 
@@ -100,7 +100,7 @@ y de equipo.
 
 - [ ] Entender y reconocer los selectores del DOM (querySelector | querySelectorAll).
 - [ ] Manejar eventos del DOM. (addEventListener)
-- [ ] Manipular dinámicamente el DOM.
+- [ ] Manipular dinámicamente el DOM. (createElement, appendchild, innerHTML, value)
 
 ### Javascript
 
@@ -478,6 +478,9 @@ compañera:
 * [Object.entries en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/entries)
 * [Fetch API en MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 * [json.org](https://json.org/json-es.html)
+* [expressions-vs-statements](https://2ality.com/2012/09/expressions-vs-statements.html)
+* [expresión vs sentencia](https://openclassrooms.com/en/courses/4309531-descubre-las-funciones-en-javascript/5108986-diferencia-entre-expresion-y-sentencia)
+* [datos atomicos vs datos estructurados](https://www.todojs.com/tipos-datos-javascript-es6/)
 * [Modulos: Export](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/export)
 * [Modulos: Import](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import)
 
