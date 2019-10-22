@@ -18,20 +18,16 @@ Para entender mejor qué necesidades complementarias a la app tienen los usuario
 hicimos una rápida investigación (research) y estos son algunos de los hallazgos.
 
 - Los Pokémon tienen características únicas que determinan las decisiones que
-  toma el usuario (niveles de ataque, defensa, salud, etc.)
-- Durante una batalla contra otro maestro Pokémon los usuarios tienen que:
-  saber el nivel de resistencia de un Pokémon ante ciertos tipos de ataque para
-  poder elegir el más adecuado para combatir. Por ejemplo, hay Pokémon que
-  son débiles ante ataques de fuego y otros que resisten más este tipo de
-  ataques.
-- Los Pokémon tienen distintos niveles de ataque, defensa y salud. Estas
+  toma el usuario (tipo, debilidad, peso, multiplicador, etc.)
+- Un maestro Pokémon antes de salir a casar los Pokémon tienen que:
+  saber el top 10 de frecuencia de aparición de los Pokémon.
+- Los Pokémon tienen distintos tipos y debilidades de combate. Estas
   características son importantes cuando un maestro Pokémon elige al Pokémon
   más adecuado para su batalla. Hay veces que tiene que elegir a los que
-  tienen más fuerza de ataque, a veces a los que tienen mejores capacidades de
-  defensa y otras a los que tienen mejor salud en su momento. Por ello, es
-  importante para un maestro Pokémon poder ordenarlos por estas 3
+  tienen menos cantidad de debilidades y saber de que tipo son. Por ello, es
+  importante para un maestro Pokémon poder ordenarlos por estas 2
   características.
-- Los Pokémon tienen distintos poderes de combate y es importante para un
-  maestro Pokémon saber quiénes son los más fuertes.
+- Los Pokémon evolucionan y es importante para un
+  maestro Pokémon saber cuántas y cuáles son las evoluciones que tienen antes y después.
 - Los Pokémon se alimentan de caramelos y un maestro Pokémon necesita saber
   cuáles tienen caramelos más cercanos para poder enfocarse en conseguirlos.
