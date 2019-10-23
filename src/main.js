@@ -23,9 +23,9 @@ console.log(example);
     let almacenar = '';
     for (let i = 0; i < data.length; i++) {
            let item = `
-           <div class="personajes__flex" name="jalar" id="${data[i].id}">
+           <div class="personajes" name="id" id="${data[i].id}">
            <img class="img" src='${data[i].splash}'/>
-           <p class="decorado">${data[i].name}</p>
+           <p class="name">${data[i].name}</p>
          </div>`;
       almacenar += item;
     }
