@@ -30,4 +30,4 @@ hicimos una rápida investigación (research) y estos son algunos de los hallazg
 - Los Pokémon evolucionan y es importante para un
   maestro Pokémon saber cuántas y cuáles son las evoluciones que tienen antes y después.
 - Los Pokémon se alimentan de caramelos y un maestro Pokémon necesita saber
-  cuáles tienen caramelos más cercanos para poder enfocarse en conseguirlos.
+  cuántos caramelos necesita un Pokémon para evolucionar.
