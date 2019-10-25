@@ -83,8 +83,8 @@ y de equipo.
 
 ### UX
 
-- [ ] Diseñar la aplicación pensando y entendiendo al usuario.
-- [ ] Crear prototipos para obtener _feedback_ e iterar.
+- [X] Diseñar la aplicación pensando y entendiendo al usuario.
+- [X] Crear prototipos para obtener _feedback_ e iterar.
 - [X] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).
 - [ ] Planear y ejecutar _tests_ de usabilidad.
 
@@ -93,13 +93,13 @@ y de equipo.
 - [X] Entender y reconocer por qué es importante el HTML semántico.
 - [X] Identificar y entender tipos de selectores en CSS.
 - [ ] Entender como funciona `flexbox` en CSS.
-- [ ] Construir tu aplicación respetando el diseño planeado (maquetación).
+- [X] Construir tu aplicación respetando el diseño planeado (maquetación).
 
 ### DOM
 
-- [ ] Entender y reconocer los selectores del DOM (querySelector | querySelectorAll).
-- [ ] Manejar eventos del DOM. (addEventListener)
-- [ ] Manipular dinámicamente el DOM. (createElement, appendchild, innerHTML, value)
+- [X] Entender y reconocer los selectores del DOM (querySelector | querySelectorAll).
+- [X] Manejar eventos del DOM. (addEventListener)
+- [X] Manipular dinámicamente el DOM. (createElement, appendchild, innerHTML, value)
 
 ### Javascript
 
