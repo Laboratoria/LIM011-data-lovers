@@ -108,7 +108,7 @@ y de equipo.
 - [X] Entender el uso de condicionales (`if-else` | `switch`).
 - [X] Entender el uso de bucles (`for` | `forEach`).
 - [ ] Entender la diferencia entre expression y statements.
-- [ ] Utilizar funciones (parámetros | argumentos | valor de retorno).
+- [X] Utilizar funciones (parámetros | argumentos | valor de retorno).
 - [ ] Entender la diferencia entre tipos de datos atómicos y estructurados.
 - [ ] Utilizar ES Modules (`import` | `export`).
 
@@ -116,8 +116,8 @@ y de equipo.
 - [ ] Testear funciones (funciones puras).
 
 ### Git y GitHub
-- [ ] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
-- [ ] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
+- [X] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
+- [X] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
 - [ ] Colaborar en Github (pull requests).
 
 ### Buenas prácticas de desarrollo
