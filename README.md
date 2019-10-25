@@ -19,12 +19,9 @@ Harry poter nueva data
 proyecto
 Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
 el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin precedentes.
+Cada día generamos 2.5 millones de terabytes de datos, una cifra sin **precedentes**.
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender, procesar y mostrar estos datos. Una manera
-simple de hacerlo es creando _interfaces_ y _visualizaciones_.
+proyecto data
 
 En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
 izquierda se puede construir (a la derecha) una interfaz amigable y comprensible
