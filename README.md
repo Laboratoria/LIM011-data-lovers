@@ -19,12 +19,9 @@ Harry poter nueva data
 proyecto
 Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
 el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin precedentes.
+Cada día generamos 2.5 millones de terabytes de datos, una cifra sin **precedentes**.
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender, procesar y mostrar estos datos. Una manera
-simple de hacerlo es creando _interfaces_ y _visualizaciones_.
+proyecto data
 
 En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
 izquierda se puede construir (a la derecha) una interfaz amigable y comprensible
@@ -88,19 +85,19 @@ y de equipo.
 - [ ] Diseñar la aplicación pensando y entendiendo al usuario.
 - [ ] Crear prototipos para obtener _feedback_ e iterar.
 - [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).
-- [ ] Planear y ejecutar _tests_ de usabilidad.
+- [x] Planear y ejecutar _tests_ de usabilidad.
 
 ### HTML y CSS
 
 - [ ] Entender y reconocer por qué es importante el HTML semántico.
 - [ ] Identificar y entender tipos de selectores en CSS.
-- [ ] Entender como funciona `flexbox` en CSS.
+- [x] Entender como funciona `flexbox` en CSS.
 - [ ] Construir tu aplicación respetando el diseño planeado (maquetación).
 
 ### DOM
 
 - [ ] Entender y reconocer los selectores del DOM (querySelector | querySelectorAll).
-- [ ] Manejar eventos del DOM. (addEventListener)
+- [x] Manejar eventos del DOM. (addEventListener)
 - [ ] Manipular dinámicamente el DOM. (createElement, appendchild, innerHTML, value)
 
 ### Javascript
@@ -111,7 +108,7 @@ y de equipo.
 - [ ] Entender el uso de bucles (`for` | `forEach`).
 - [ ] Entender la diferencia entre expression y statements.
 - [ ] Utilizar funciones (parámetros | argumentos | valor de retorno).
-- [ ] Entender la diferencia entre tipos de datos atómicos y estructurados.
+- [x] Entender la diferencia entre tipos de datos atómicos y estructurados.
 - [ ] Utilizar ES Modules (`import` | `export`).
 
 ### Pruebas Unitarias (_testing_)
@@ -119,11 +116,11 @@ y de equipo.
 
 ### Git y GitHub
 - [ ] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
-- [ ] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
+- [x] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
 - [ ] Colaborar en Github (pull requests).
 
 ### Buenas prácticas de desarrollo
-- [ ] Organizar y dividir el código en módulos (Modularización).
+- [x] Organizar y dividir el código en módulos (Modularización).
 - [ ] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
 - [ ] Utilizar linter para seguir buenas prácticas (ESLINT).
 
