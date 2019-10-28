@@ -3,13 +3,27 @@
  * import LoL from './data/lol/lol.js'
  * import POTTER from './data/potter/potter.js'
  */
+import POTTER from './data/potter/potter.js'
+console.log(POTTER);
 
-import { example } from './data.js';
+ 
+import { showCharacters } from './data.js';
+const contentCharacter = document.getElementById('contentCharacter');
+let templatePotter = '';
+for(let i=0; i<POTTER.length;i++){
+    templatePotter += `
+    <img src=${POTTER[i].image}>
+    <div>${POTTER[i].name}</div>
+    `
+    contentCharacter.innerHTML = templatePotter;
+}
 
-console.log(example);
+
+
+console.log(showCharacters);
 
 /*
  * console.log(POKEMON);
  * console.log(LoL);
  * console.log(POTTER)
-*/
+*/  

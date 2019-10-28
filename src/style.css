@@ -1,0 +1,21 @@
+*{
+    margin:0;
+    padding: 0;
+    border: 0px;
+}
+
+body{
+    background-image: url("img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+ 
+}
+
+.alignRight{
+    display: flex;
+    text-align: center;
+    top: 10px;
+    margin: auto;
+    position: relative;
+}
