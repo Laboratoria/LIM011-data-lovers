@@ -85,8 +85,8 @@ y de equipo.
 
 - [ ] Diseñar la aplicación pensando y entendiendo al usuario.
 - [ ] Crear prototipos para obtener _feedback_ e iterar.
-- [x] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).
-- [x] Planear y ejecutar _tests_ de usabilidad.
+- [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).
+- [ ] Planear y ejecutar _tests_ de usabilidad.
 
 ### HTML y CSS
 
@@ -97,9 +97,9 @@ y de equipo.
 
 ### DOM
 
-- [x] Entender y reconocer los selectores del DOM (querySelector | querySelectorAll).
-- [x] Manejar eventos del DOM. (addEventListener)
-- [x] Manipular dinámicamente el DOM. (createElement, appendchild, innerHTML, value)
+- [ ] Entender y reconocer los selectores del DOM (querySelector | querySelectorAll).
+- [ ] Manejar eventos del DOM. (addEventListener)
+- [ ] Manipular dinámicamente el DOM. (createElement, appendchild, innerHTML, value)
 
 ### Javascript
 
@@ -113,17 +113,17 @@ y de equipo.
 - [ ] Utilizar ES Modules (`import` | `export`).
 
 ### Pruebas Unitarias (_testing_)
-- [x] Testear funciones (funciones puras).
+- [ ] Testear funciones (funciones puras).
 
 ### Git y GitHub
-- [x] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
-- [x] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
+- [ ] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
+- [ ] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
 - [ ] Colaborar en Github (pull requests).
 
 ### Buenas prácticas de desarrollo
 - [ ] Organizar y dividir el código en módulos (Modularización).
 - [ ] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
-- [x] Utilizar linter para seguir buenas prácticas (ESLINT).
+- [ ] Utilizar linter para seguir buenas prácticas (ESLINT).
 
 ## 4. Consideraciones generales
 
