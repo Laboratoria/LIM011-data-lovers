@@ -83,9 +83,9 @@ y de equipo.
 
 ### UX
 
-- [X] Diseñar la aplicación pensando y entendiendo al usuario.
-- [X] Crear prototipos para obtener _feedback_ e iterar.
-- [X] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).
+- [x] Diseñar la aplicación pensando y entendiendo al usuario.
+- [x] Crear prototipos para obtener _feedback_ e iterar.
+- [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).
 - [ ] Planear y ejecutar _tests_ de usabilidad.
 
 ### HTML y CSS
@@ -93,7 +93,7 @@ y de equipo.
 - [ ] Entender y reconocer por qué es importante el HTML semántico.
 - [X] Identificar y entender tipos de selectores en CSS.
 - [ ] Entender como funciona `flexbox` en CSS.
-- [X] Construir tu aplicación respetando el diseño planeado (maquetación).
+- [x] Construir tu aplicación respetando el diseño planeado (maquetación).
 
 ### DOM
 
@@ -116,13 +116,13 @@ y de equipo.
 - [ ] Testear funciones (funciones puras).
 
 ### Git y GitHub
-- [X] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
+- [x] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
 - [ ] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
 - [ ] Colaborar en Github (pull requests).
 
 ### Buenas prácticas de desarrollo
 - [ ] Organizar y dividir el código en módulos (Modularización).
-- [X] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
+- [ ] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
 - [x] Utilizar linter para seguir buenas prácticas (ESLINT).
 
 ## 4. Consideraciones generales
