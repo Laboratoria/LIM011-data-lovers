@@ -12,9 +12,11 @@ const contentCharacter = document.getElementById('contentCharacter');
 let templatePotter = '';
 for(let i=0; i<POTTER.length;i++){
     templatePotter += `
-    <div class=column>
+    <div class=content>
+    <div class=styleCharacter>
     <img class=imageCharacter src=${POTTER[i].image}>
-    <div>${POTTER[i].name}</div>
+    <div class=name>${POTTER[i].name}</div>
+    </div>
     </div>
     `
     contentCharacter.innerHTML = templatePotter;
