@@ -1,14 +1,13 @@
-import POTTER from './data/potter/potter.js'
-import { example } from './data.js';
+import POTTER from './data/potter/potter.js';
 
-const baseDatosPotter = POTTER 
+import {mostrarPersonajes} from './data.js';
 
-const personaje = baseDatosPotter[1]
-const ver = personaje.name 
-console.log(example);
-console.log(POTTER);
-console.log(baseDatosPotter.slice(0,1));
-const fullNames = baseDatosPotter.map(personaje => `${personaje.name}, ${personaje.gender}`)
-
-console.log(fullNames);
-
+const dataPotter = POTTER;
+const soloG = dataPotter.filter(g => (g.house === 'Gryffindor'));
+const soloH = dataPotter.filter(h => (h.house === 'Hufflepuff'));
+const soloR = dataPotter.filter(r => (r.house === 'Ravenclaw'));
+const soloS = dataPotter.filter(s => (s.house === 'Slytherin'));
+document.querySelector('#soloG').innerHTML = `<h1>Gryffindor</h1>`+ mostrarPersonajes(soloG);
+document.querySelector('#soloH').innerHTML = `<h1>Hufflepuff</h1>`+ mostrarPersonajes(soloH);
+document.querySelector('#soloR').innerHTML = `<h1>Ravenclaw</h1>`+ mostrarPersonajes(soloR);
+document.querySelector('#soloS').innerHTML = `<h1>Slytherin</h1>`+ mostrarPersonajes(soloS);
