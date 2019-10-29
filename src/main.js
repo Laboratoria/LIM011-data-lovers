@@ -4,7 +4,7 @@
 import LoL from './data/lol/lol.js'
 
 
-import { example } from './data.js';
+const name = document.getElementById('name')
 
 // import lol from './data/lol/lol.js';
 
