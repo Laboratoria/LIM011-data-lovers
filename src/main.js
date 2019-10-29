@@ -1,14 +1,9 @@
-import POTTER from './data/potter/potter.js'
-import { example } from './data.js';
+import POTTER from './data/potter/potter.js';
+import { mostrarHp } from './data.js';
 
-const baseDatosPotter = POTTER 
+document.getElementById('show').innerHTML = mostrarHp(POTTER);
 
-const personaje = baseDatosPotter[1]
-const ver = personaje.name 
-console.log(example);
-console.log(POTTER);
-console.log(baseDatosPotter.slice(0,1));
-const fullNames = baseDatosPotter.map(personaje => `${personaje.name}, ${personaje.gender}`)
+// const dataPotter = POTTER;
+// const personaje = dataPotter[0];
 
-console.log(fullNames);
-
+// document.getElementById('show').innerHTML = personaje.name + personaje.image;

@@ -1,0 +1,45 @@
+/* .mostrar{
+    display: block;
+}
+
+
+.logo{
+    width: 10%;
+    height: 10%;
+}
+
+header {
+    background: #fff;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    margin: 0;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+main{
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.logo-footer{
+    width: 30px;
+    height: 30px;
+}
+
+footer{
+    display: flex;
+    margin-right: 20px;
+    background: orange;
+    margin: 0;
+    padding: 0%;
+} */
+
+*{
+    
+}

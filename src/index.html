@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <title>El mundo de Harry Potter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <header>
-      <figure>
-        <img src="imagenes/logoWizardingWorld.png">
-      </figure>
-      <nav class="menu">
-        <ul>
-          <li>Casas</li>
-        </ul>
-      </nav>  
-    </header>
-    <main>
-      <section>
-        <header>
-          <select name="seleccionar-casas-filtrar">
-            <option value="" hidden selected>Selecciona una casa</option>
-            <option value="casa1">Gryffindor</option>
-            <option value="casa2">Hufflepuff</option>
-            <option value="casa3">Ravenclaw</option>
-            <option value="casa4">Slytherin</option>
-          </select>
-          <input type="search" name="busqueda-por-nombre" id="busqueda">
-        </header>
-      </section>
-    </main>
-    <footer>
-      <img src="imagenes/logoWarnerBros.png">
-      <img src="imagenes/logoWizardsUnite.png">
-      <h1>© El Mundo de Harry Potter 2019</h1>
-      <img src="imagenes/logosRedesSociales.png">
-    </footer>
-    <script type ="module" src="main.js"></script>
-  </body>
-</html> 
+<head>
+  <meta charset="UTF-8">
+  <title>El mundo de Harry Potter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="fuentes/fonts.css" />
+</head>
 
+<body>
+  <header>
+    <img src="imagenes/logoWizardingWorld.png" class="logo">
+    <nav class="menu">
+      <a href="#">Personajes</a>
+      <a href="#">Rol</a>
+      <a href="#">Casas</a>
+      <input type="checkbox" class="menu-nav">
+      <label for="menu-nav" class="icon-menu"></label>
+    </nav>
+  </header>
+  <main>
+    <section id="casas">
+      <div id="filtros">
+      <select name="seleccionar-casas-filtrar">
+        <option value="" hidden selected>Selecciona una casa</option>
+        <option value="casa1">Gryffindor</option>
+        <option value="casa2">Hufflepuff</option>
+        <option value="casa3">Ravenclaw</option>
+        <option value="casa4">Slytherin</option>
+      </select>
+        <input type="search" name="busqueda-por-nombre" id="busqueda"><br><br>
+        <div id="show"></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <img src="imagenes/Warner_Bros._Games_Print.png" class="logo-footer">
+    <img src="images/logo-wz.png" class="logo-footer">
+    <p>&copy; El Mundo de Harry Potter 2019</p>
+    <p><span class="icon-facebook"></span>
+      <span class="icon-youtube"></span>
+      <span class="icon-twitter"></span></p>
+  </footer>
+  <script type="module" src="main.js"></script>
+</body>
 
-
+</html>

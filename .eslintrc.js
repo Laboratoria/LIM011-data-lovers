@@ -13,8 +13,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2018,
   },
-  rules: { 
+  rules: {
   "linebreak-style":0,
   "semi":["error", "always"],
   "import/extensions":['error', 'always', {ignorePackages: true} ]
-}}
+  },
+};
