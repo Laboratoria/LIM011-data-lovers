@@ -27,6 +27,7 @@ ul, ol {
     font-family: 'Roboto Slab', serif;
 }
 .nav li b {
+    margin-top: 25px;
     background-color: rgba(253, 190, 52, 1);
     color: #333333;
     text-decoration: none;
@@ -47,6 +48,7 @@ ul, ol {
 }
 .nav > li{
     float: inline-end;
+    
     }
 .nav li a:hover{
     background-color: rgb(123, 161, 238);
@@ -59,9 +61,18 @@ ul, ol {
     display: block;
 }
 .icono{
-line-height: 5px;
-margin: 5px;
+    line-height: 5px;
+    margin: 5px;
 }
-.card-group{
-display: flex;
+.contenedor{
+    position: relative;
+    margin: 5px;
+    margin-top: 45px;
+    background-color: rgb(222, 225, 231);
+    padding: 1px;
+    width: 260px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    float: right;
+    align-content: space-between;
 }
