@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <title>Leangue of legend</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Data Lovers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <input type="checkbox" class="checkbox" id="check">
+  <label class="menu__label"for="check">|||</label>
+  <div class="left__panel">
+  <nav class="nav" id="nav">
+    <ul class="nav__menu">
+      <li id="inicio"><a href="#" class="btn">INICIO</a></li>
+      <li id="campeones"><a href="#" class="btn">CAMPEONES</a></li>
+      <li><a class="btn" href="https://lan.leagueoflegends.com/es/game-info/items/">OBJETOS</a></li>
+      <li><a class="btn" href="https://lan.leagueoflegends.com/es/game-info/summoners/spells/">INVOCADORES</a></li>
+    </ul>
+  </nav>
+</div>
+  <main>
+    <div class="parrafo">
+      <img class="img__header flex" src="img/logoab.png" alt="Imagen-lol">
+      <h1>campiones de las legendas</h1>
+      <h2>empieza ya!</h2>
+    </div>
+    <div class="filtrar">
+      <select class="orden" id="tipo">
+        <option>TIPO</option>
+        <option value="Assassin">Asesinos</option>
+        <option value="Fighter">Luchadores</option>
+        <option value="Mage">Magos</option>
+        <option value="Marksman">Tiradores</option>
+        <option value="Support">Apoyo</option>
+        <option value="Tank">Tanques</option>
+      </select>
+      <select class="orden" id="ataque">
+        <option>FUERZA RELEVANTE</option>
+        <option value="0">Menor</option>
+        <option value="1">Mayor</option>
+      </select>
+    </div>
+    <div class="contenedor__root" id="root"></div>
     <script type="module" src="main.js"></script>
-  </body>
+  </main>
+  <footer>
+    <div class="txt__footer">
+      <p> Created by AlelizSanchez® & Natalia® </p>
+      <div class="icon-social">
+        <a href="#" class="icon-facebook2"></a>
+        <a href="#" class="icon-instagram"></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
