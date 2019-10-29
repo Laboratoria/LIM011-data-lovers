@@ -1,22 +1,14 @@
-/* Manejo de data */
-
-// esta es una función de ejemplo
-
-export const example = () => {
-return 'example';
+export const example = () =>{
+  return 'example';
 };
-
-export const mostrarTodosPersonajes = (dataPotter) => {
+export const mostrarPersonajes = (dataPorCasa) => {
   let templatePotter = '';
-  dataPotter.map(extrae =>{
+  dataPorCasa.map(extrae => {
     templatePotter += `
-          <div>
-            <div id= "${extrae.name}" name = "potter">
+            <div id="imagenes">
               <img class="imagen" src= "${extrae.image}"/>
-            </div>
-            <p>${extrae.name}</p>
-            <p>${extrae.house}</p>
-          </div>`;
+              <p>${extrae.name}</p>
+            </div>`;
   });
   return templatePotter;
 };
