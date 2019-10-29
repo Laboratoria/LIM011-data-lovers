@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    margin:20px 70px 20px;
+    background-image: url(fondo.jpg) ;
+    background-size: cover; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+
+header{
+    text-align: center;
+    margin: 10px 10px 30px;
+   
+}
+.contenedor-pokemon{
+    width: 120;
+    height: 120;
+}
+
+
+
+
