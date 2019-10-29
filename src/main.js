@@ -22,9 +22,13 @@ for(let i=0; i<POTTER.length;i++){
     contentCharacter.innerHTML = templatePotter;
 }
 
-
-
 console.log(showCharacters);
+
+const btnToggle = document.querySelector('.toggle-btn');
+
+btnToggle.addEventListener('click', function () {
+    document.getElementById('sideBar').classList.toggle('active');
+});
 
 /*
  * console.log(POKEMON);
