@@ -1,10 +1,10 @@
 
 import POKEMON from './data/pokemon/pokemon.js';
 
-// import { datosPokemon } from './data.js';
+import { mostrarListaPokemon } from './data.js';
 // import pokemon from './data/pokemon/pokemon.js'
 
-let i = 0;
+/* let i = 0;
 for (i = 0; i < POKEMON.length; i += 1) {
   const newDiv = document.createElement('div');
   const newDiv2 = document.createElement('div');
@@ -16,8 +16,27 @@ for (i = 0; i < POKEMON.length; i += 1) {
   newDiv2.appendChild(newContent); // añade texto al div creado.
   newDiv.appendChild(newDiv2);
   newDiv.appendChild(imagen);
-  document.body.appendChild(newDiv);
-}
+  const poke = document.querySelector('#poke');
+  poke.appendChild(newDiv);
+} */
 
-// añade la imagen al div creado
-// document.body.appendChild(newDiv); // añade los div y su contenido a la pagina
+const datosPokemon = (datos) => {
+  datos.forEach((listado) => {
+    const newDiv = document.createElement('div');
+    const newDiv2 = document.createElement('div');
+    const imagen = document.createElement('img');
+    imagen.setAttribute('src', listado.img);
+    const newContent = document.createTextNode(listado.num + ' ' + listado.name);
+    newDiv2.appendChild(newContent); // añade texto al div creado.
+    newDiv.appendChild(newDiv2);
+    newDiv.appendChild(imagen);// añade la imagen al div creado
+    const poke = document.querySelector('#poke');
+    poke.appendChild(newDiv);// añade los div y su contenido a la pagina
+  });
+  return datosPokemon;
+};
+
+datosPokemon(POKEMON);
+
+podedatos = [];
+pokedatos.push = mostrarListaPokemon(POKEMON);
