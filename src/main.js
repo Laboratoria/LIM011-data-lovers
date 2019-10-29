@@ -1,42 +1,48 @@
 
 import POKEMON from './data/pokemon/pokemon.js';
 
-import { mostrarListaPokemon } from './data.js';
-// import pokemon from './data/pokemon/pokemon.js'
-
-/* let i = 0;
-for (i = 0; i < POKEMON.length; i += 1) {
-  const newDiv = document.createElement('div');
-  const newDiv2 = document.createElement('div');
-  const imagen = document.createElement('img');
-  newDiv.setAttribute('id', 'contenedor-pokemon');
-  newDiv2.setAttribute('id', 'datos-pokemon');
-  imagen.setAttribute('src', POKEMON[i].img);
-  const newContent = document.createTextNode(POKEMON[i].num + ' ' + POKEMON[i].name);
-  newDiv2.appendChild(newContent); // añade texto al div creado.
-  newDiv.appendChild(newDiv2);
-  newDiv.appendChild(imagen);
-  const poke = document.querySelector('#poke');
-  poke.appendChild(newDiv);
-} */
+// import { mostrarListaPokemon } from './data.js';
 
 const datosPokemon = (datos) => {
-  datos.forEach((listado) => {
-    const newDiv = document.createElement('div');
-    const newDiv2 = document.createElement('div');
-    const imagen = document.createElement('img');
-    imagen.setAttribute('src', listado.img);
-    const newContent = document.createTextNode(listado.num + ' ' + listado.name);
-    newDiv2.appendChild(newContent); // añade texto al div creado.
-    newDiv.appendChild(newDiv2);
-    newDiv.appendChild(imagen);// añade la imagen al div creado
-    const poke = document.querySelector('#poke');
-    poke.appendChild(newDiv);// añade los div y su contenido a la pagina
+  datos.forEach((poke) => {
+    // Creando la vista adelante del Pokemon(numero, nombre e imagen)
+    const tarjetaGeneralPokemon = document.createElement('div');
+    tarjetaGeneralPokemon.setAttribute('id', 'datos-generales-pokemon');
+    const divNumeroPokemon = document.createElement('h4');
+    const numeroPokemon = document.createTextNode(poke.num);
+    divNumeroPokemon.appendChild(numeroPokemon);
+    const divNombrePokemon = document.createElement('div');
+    divNombrePokemon.setAttribute('id', 'nombrePokemon');
+    const nombrePokemon = document.createTextNode(poke.name);
+    divNombrePokemon.appendChild(nombrePokemon);
+    const imagenPokemon = document.createElement('img');
+    imagenPokemon.setAttribute('src', poke.img);
+    const contenedorDatosGenerales = document.querySelector('#vista-adelante-pokemon');
+    tarjetaGeneralPokemon.appendChild(divNumeroPokemon);
+    tarjetaGeneralPokemon.appendChild(divNombrePokemon);
+    tarjetaGeneralPokemon.appendChild(imagenPokemon);
+    contenedorDatosGenerales.appendChild(tarjetaGeneralPokemon);
+
+    // Creando la vista atras del Pokemon(caracteristicas)
+    const tarjetaCaracteristicasPokemon = document.createElement('div');
+    tarjetaCaracteristicasPokemon.setAttribute('id', 'contenedorAtras');
+    const etiquetaNombrePokemon = document.createElement('h4');
+    const nombrePokemonAtras = document.createTextNode(poke.name);
+    etiquetaNombrePokemon.appendChild(nombrePokemonAtras);
+    tarjetaCaracteristicasPokemon.appendChild(etiquetaNombrePokemon);
+    const parrafoCaracteristicasPokemon = document.createElement('p');
+    const arrayCaracteristicas = [`Tipo: ${poke.type}`, `Peso: ${poke.weight}`, `Tamaño: ${poke.height}`, `Debilidades: ${poke.weaknesses}`];
+    const contenedorCaracteristicasGenerales = document.querySelector('#vista-detras-pokemon');
+    for (let a = 0; a < arrayCaracteristicas.length; a += 1) {
+      const saltoLinea = document.createElement('br');
+      const caracteristica = document.createTextNode(arrayCaracteristicas[a]);
+      parrafoCaracteristicasPokemon.appendChild(saltoLinea);
+      parrafoCaracteristicasPokemon.appendChild(caracteristica);
+    }
+    tarjetaCaracteristicasPokemon.appendChild(parrafoCaracteristicasPokemon);
+    contenedorCaracteristicasGenerales.appendChild(tarjetaCaracteristicasPokemon);
   });
   return datosPokemon;
 };
 
 datosPokemon(POKEMON);
-
-podedatos = [];
-pokedatos.push = mostrarListaPokemon(POKEMON);
