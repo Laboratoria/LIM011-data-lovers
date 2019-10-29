@@ -6,7 +6,7 @@ export const pintaPokemones = (data) => {
     catalogoImagenes += `
     <div align="center">
     <img src = "${traeme.img}"/>
-    <p>  ${traeme.name}</p>
+    <p> ${traeme.id} ${traeme.name}</p>
     </div>
     `;
   });
