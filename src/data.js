@@ -1,6 +1,8 @@
 export const example = () =>{
   return 'example';
 };
+
+
 export const mostrarPersonajes = (dataPorCasa) => {
   let templatePotter = '';
   dataPorCasa.map(extrae => {
