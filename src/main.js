@@ -47,14 +47,14 @@ seleccionar.addEventListener('change', (evento) => {
     const buscar = document.querySelector('#busqueda');
     const boton = document.querySelector('#clickbu');
 
-    const pbusq =()=>{
-      // console.log(buscar.value);
-      // const texto = buscar.value.toLowerCase()
-      // for(let i=0; i<POTTER.length; i+=1){
-      //   const todosNombres = POTTER[i].name.toLowerCase;
-      // }
-    }
-    boton.addEventListener('click', pbusq);
-    const todosNombres = POTTER[0].name
-    const minusculas = todosNombres.toLowerCase
-    console.log(typeof(POTTER[0].name))
+    // const pbusq =()=>{
+    //   // console.log(buscar.value);
+    //   // const texto = buscar.value.toLowerCase()
+    //   // for(let i=0; i<POTTER.length; i+=1){
+    //   //   const todosNombres = POTTER[i].name.toLowerCase;
+    //   // }
+    // }
+    // boton.addEventListener('click', pbusq);
+    // const todosNombres = POTTER[0].name
+    // const minusculas = todosNombres.toLowerCase
+    // console.log(typeof(POTTER[0].name))
