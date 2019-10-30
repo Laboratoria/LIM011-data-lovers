@@ -38,23 +38,12 @@ const miArrImagenes = document.getElementById('arrPotter');
  miArrImagenes.innerHTML = pintaImagen;
   });
 
-// const pintarCaracteristicas = document.getElementById('atras-contenedor');
-//  let mostrarCaracteristicas = '';
-//   POTTER.forEach(caracteristicas => {
-//   mostrarCaracteristicas += `
-//    <div class="container-caracteristicas">
-//    <img class="mi-imagen" src = "${caracteristicas.image}" />
-//    </div>
-//    <p>Especie: ${caracteristicas.species}</p>
-//    <p>Género: ${caracteristicas.gender}</p>
-//    <p>Ansestro: ${caracteristicas.ancestry}</p>
-//    <p>Varita: ${caracteristicas.wand.wood}, ${caracteristicas.wand.core}, ${caracteristicas.wand.length}</p>
-//    <p>Patronus: ${caracteristicas.patronus}</p>
-//    <p>Actor: ${caracteristicas.actor}</p>
-//    <p>Vivo: ${caracteristicas.alive}</p>
-//   `;
-//   pintarCaracteristicas.innerHTML = mostrarCaracteristicas;
-//   })
+// for
+// const miFunsión = (datitos) => {
+//   let = guardameee = '';
+//   for()
+
+// }
 
 
 
