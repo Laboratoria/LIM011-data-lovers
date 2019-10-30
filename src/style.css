@@ -1,7 +1,253 @@
-.imagen{
-    width: 20%;
-    height: 20%;
+/* GENERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
-/* .mostrar{
-    display:block;
-} */
+/* HEADER */
+.logo{ /*logo del header */
+    width: 80px;
+    height: 60px;
+    float: left;
+    margin-left: 10px;
+}
+header{
+    background: #FFFFFF;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+#menu-flotante {
+    width: 98%;
+    margin: auto;
+}
+header #menu-flotante {
+    display: table;
+}
+/* MENU DE NAVEGACION */
+#menu-nav{
+    display: none;
+}
+header label { /* esto es el icono de menu */
+    float: right;
+    font-size: 28px;
+    margin: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    color: #6B6B6B;
+}
+.menu {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    width: 100%;
+    height: 22,5vh;
+    background: #333;
+    /* Movimiento del menu de navegación */
+    transition: all 0.5s;
+    transform: translateX(100%);
+}
+.menu a {
+    display: block;
+    color: #fff;
+    height: 50px;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom: 1px solid hsla(0, 0%, 50%, 0.5);
+}
+.menu a:hover{
+    background: rgba(255, 255, 255, 0.3);
+}
+/* transformación del menu de navegacion */
+#menu-nav:checked ~ .menu{
+    transform: translateX(0%);
+}
+/* CUERPO */
+#nubes{ /*div de vistas */
+    margin-top: 60px;
+    width: 100%;
+    /* fondo de nubes */
+    background-image: url(images/background-e.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#filtros{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: flex-end;
+    width: auto;
+    padding: 20px 0px;
+}
+/* SELECT */
+#select select{
+    border: 1px solid #fff;
+    padding: 5px;
+    background: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-weight: 300;
+    cursor: pointer;
+    -webkit-appearance: none;
+    width: 150px;
+}
+#select{
+    overflow: hidden;
+    position: relative;
+}
+#select:before{ /* icono del select*/
+    content: "\e921";
+    font-family: 'iconos' !important;
+    color: #fff;
+    position: absolute;
+    top: 15%;
+    bottom: 0;
+    right: 8px;
+    pointer-events: none;
+}
+select{
+    outline: none;
+    box-shadow: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+#select select option {
+    color: #333;
+    font-weight: 300;
+    font-size: 10pt;
+}
+/* FILTRO BUSCAR */
+#buscar{
+    position: relative;
+}
+.buscar{
+    border: 1px solid #fff;
+    padding: 5px;
+    background: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    content: 'e903';
+    outline: none;
+    font-weight: 300;
+}
+::placeholder{
+    color: #fff;
+    font-weight: 300;
+    font-style: italic;
+}
+.icon-search{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
+    color: #fff;
+}
+/* CUERPO DATA HP */
+#soloG, #soloH, #soloR, #soloS{ /*div de contenido de todos los personajes */
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    color: #fff;
+    font-weight: 400;
+}
+.imagen { /imagenes/
+    width: 50%;
+    box-shadow: 5px 5px 10px rgba(77, 77, 77, 0.3);
+    margin-bottom: 10px;
+}
+.casas-card{ /*div card de cada imagen */
+    /* background: rgba(24, 110, 121, 0.521); */
+    padding: 5px;
+    margin: 5px;
+    width: 30%;
+    justify-content: center;
+    text-align: center;
+}
+/* FOOTER */
+footer{
+    padding-bottom: 20px;
+    border-top: 2px solid #6B6B6B;
+    padding: 10px;
+    margin: 10px 10%;
+}
+footer #footer{ /*div padre */
+    display: flex;
+    flex-wrap: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+ /div hijos/
+#footer #ftr{
+    margin: 3px 3px;
+}
+.logo-footer{
+    width: 35px;
+    height: 30px;
+    /poner color #6B6B6B/
+}
+#footer .copy{
+    font-size: 15px;
+    color: #6B6B6B;
+}
+#footer .icon{
+    color: #6B6B6B;
+    margin: 2px;
+}
+/* RESPONSIVE menu*/
+@media (min-width:1024px){
+    #menu-flotante{
+        width: 1100px;
+    }
+    .menu{
+        position: static;
+        width: auto;
+        height: 0;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+        margin-right: 20px;
+        margin: 5px 15px;
+    }
+    .menu a{
+        border: none;
+        background: none;
+        color: #333;
+    }
+    .menu a:hover{
+        background: none;
+        font-weight: bold;
+    }
+    header label{
+        display: none;
+    }
+    /* FILTROS */
+    #filtros{
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        align-content: flex-end;
+    }
+    #select{
+        margin: 0px 30px;
+    }
+    /* RESPONSIVE FOOTER */
+    footer #footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    }
