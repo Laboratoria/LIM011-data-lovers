@@ -99,6 +99,7 @@ nav li:hover > ul {
   background-color: transparent;
   text-align: center;
   margin-top: 25px;
+  outline: none;
 }
 
 .mi-imagen {
@@ -173,6 +174,7 @@ nav li:hover > ul {
     color: rgb(231, 222, 222);
     width: 80%;
     font-size: 12px;
+    outline: none;
   }
   .mi-imagen {
     width: 84px;
