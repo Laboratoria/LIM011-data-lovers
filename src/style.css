@@ -3,12 +3,14 @@
     margin: 0;
 }
 body{
-    margin:10pt;
+    
+    margin:1%;
     background-image: url(fondo.jpg) ;
     background-size: cover; 
     }
 
 header{
+    position: relative;
     text-align: center;
     margin-top: 10px;
     width: 100%;
@@ -19,8 +21,14 @@ header{
    
 .logo
 {
+    float: left;
     display: flex;
-}
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    
+
+    }
 
 #contenedor-pokemon
 
@@ -39,35 +47,60 @@ header{
 {
     position: relative;
     margin: 10pt;
-    width: 220pt;
-    height: 220pt;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 200pt;
+    height: 200pt;
+    transition: transform 1s;
+    transform-style: preserve-3d; 
+    box-shadow: 18px 18px 12px 2px rgba(0,0,0,0.5);
+    border-radius: 40pt;
 }
 
 #caja:hover #tarjeta-principal-pokemon{
-transform: rotateY(180deg);
+transform: rotateX(180deg);
 }
 
 #tarjeta-datos-Pokemon, #tarjeta-caracteristicas-pokemon{
+    background-color: white;
+    color:black;
     position: absolute;
-    width: 220px;
-    height: 220pt;
+    width: 100%;
+    height: 100%;
     backface-visibility: hidden;
     display: flex;
     flex-direction: column;
+    flex-wrap:wrap;
     justify-content: space-around;
+    align-items: center;
+    border-radius: 40pt;
 }
 
 #tarjeta-caracteristicas-pokemon
 {
     background-color: white;
     color:black;
-    transform: rotateY(180deg);
+    transform: rotateX(180deg);
 }
 
 .hidden{
     display: none;
 }
 
+@font-face {
+    font-family: pokemonBlanco;
+    src: url(letrapokemon1.ttf);
+}  
+
+@font-face {
+    font-family: pokemonNegro;
+    src: url(letrapokemon2.ttf);
+}  
+
+h2, h4{
+    font-family: pokemonBlanco;
+    font-size: 15pt;
+}
+
+#nombre-Pokemon{
+    font-family: pokemonNegro;
+    font-size: 15pt;
+}

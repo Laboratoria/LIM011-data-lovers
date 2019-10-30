@@ -16,7 +16,7 @@ const datosPokemon = (datos) => {
     const numeroPokemon = document.createTextNode(poke.num);
     divNumeroPokemon.appendChild(numeroPokemon);
     const divNombrePokemon = document.createElement('div');
-    divNombrePokemon.setAttribute('id', 'nombrePokemon');
+    divNombrePokemon.setAttribute('id', 'nombre-Pokemon');
     const nombrePokemon = document.createTextNode(poke.name);
     divNombrePokemon.appendChild(nombrePokemon);
     const imagenPokemon = document.createElement('img');
@@ -28,7 +28,7 @@ const datosPokemon = (datos) => {
     // Creando la vista atras del Pokemon(caracteristicas)
     const tarjetaCaracteristicasPokemon = document.createElement('div');
     tarjetaCaracteristicasPokemon.setAttribute('id', 'tarjeta-caracteristicas-pokemon');
-    const etiquetaNombrePokemon = document.createElement('h4');
+    const etiquetaNombrePokemon = document.createElement('h2');
     const nombrePokemonAtras = document.createTextNode(poke.name);
     etiquetaNombrePokemon.appendChild(nombrePokemonAtras);
     tarjetaCaracteristicasPokemon.appendChild(etiquetaNombrePokemon);
