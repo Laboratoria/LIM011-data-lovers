@@ -4,47 +4,45 @@
  * import POTTER from './data/potter/potter.js'
  */
 import POTTER from './data/potter/potter.js';
-import { showCharacters } from './data.js';
+// Ejemplo funciona
+// eslint-disable-next-line import/named
+import { showCharacters, ascendente } from './data.js';
 
+document.querySelector('#contentCharacter').innerHTML = showCharacters(POTTER);
+
+document.querySelector('#contentCharacter').innerHTML = ascendente(POTTER);
+
+// Ejemplo funciona
+// const result = showCharacters();
+// console.log(`result: ${result}`);
 // console.log(POTTER);
 
-const contentCharacter = document.getElementById('contentCharacter');
-let templatePotter = '';
-// eslint-disable-next-line no-plusplus
-for (let i = 0; i < POTTER.length; i++) {
-  templatePotter += `
-    <div class=content id="content">
-    <div class=styleCharacter>
-    <img class=imageCharacter src=${POTTER[i].image}>
-    <div class=name>${POTTER[i].name}</div>
-    </div>
-    </div>
-    `;
-  contentCharacter.innerHTML = templatePotter;
-}
-
-console.log(showCharacters);
+// console.log(showCharacters);
 
 // Barra Lateral
 
 const btnToggle = document.querySelector('.toggle-btn');
-
 btnToggle.addEventListener('click', () => {
   document.getElementById('sideBar').classList.toggle('active');
 });
-
 // fin BarraLateral
 
 // ordenar AZ
+
+// const hola = document.getElementById('hola');
+// hola.addEventListener('click', (ascendente)=>{
+
+// });
+
 // const ascendant = document.querySelector('#ascendant');
-// ascendant.addEventListener('click', (event) => {
-//     if (event.target.value === '0') {
-//         contentCharacter.innerHTML = mostrarPoke(ordenarPoke(pokeData));
-//     }
+// ascendant.addEventListener('click', () => {
+//   const numero = showCharacters();
+//   console.log(`result: ${numero}`);
 // });
 
 /*
- * console.log(POKEMON);
- * console.log(LoL);
  * console.log(POTTER)
 */
+// if (event.target.value === '0') {
+//     // contentCharacter.innerHTML = mostrarPoke(ordenarPoke(pokeData));
+//   }
