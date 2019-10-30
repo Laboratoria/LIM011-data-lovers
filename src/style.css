@@ -5,8 +5,11 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-body{
-  background: linear-gradient(to right, #973433, #5d2727, #ae706d);
+body {
+  /* background: linear-gradient(to right, #973433, #5d2727, #ae706d); */
+  background-image: url(../src/image/harryfondo.jpg);
+  background-repeat: no no-repeat;
+  
 }
  nav img {
   display: inline-block;
@@ -71,12 +74,13 @@ nav li a:hover {
 nav li:hover > ul {
   display:block;
 }
-.container{
+.container>.mi-imagen {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
-.container p{
+.container {
   color: #f9d5bb;
   box-shadow: inset 0 0 0 3px #880eda;
   height: 40px;
@@ -98,4 +102,32 @@ nav li:hover > ul {
 .mi-imagen{
   width: 100px;
   height: 100px;
+} 
+
+
+/* DE ELIANAAAAAAAAA*/
+
+nav li a {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px #d61233;
+  border-radius: 10px;
+  width: 110px;
+  color:rgb(20, 5, 104);
+  text-decoration:none;
+  padding:10px 12px;
+  display:block;
+  display: inline-flex;
+  -webkit-transition:all 500ms ease;
+  -o-transition:all 500ms ease;
+  transition: all 500ms ease;
+  margin-top: 18px;
 }
+header nav {
+  background: linear-gradient(to right, #23cf2c, #473a66, #181725);
+  z-index: 1000;
+  max-width: 1000px;
+  width: 95%;
+  margin: 20px auto;
+  justify-content: space-around;
+  height: 74px;
+} 
