@@ -28,15 +28,15 @@ seleccionar.addEventListener('change', (evento) => {
     divS.innerHTML='';
     switch(opcionSeleccionada){
         case 'Gryffindor':
-          divG.innerHTML=mostrarPersonajes(soloG);
+          divG.innerHTML=`<h1>Gryffindor</h1>`+mostrarPersonajes(soloG);
           break;
         case 'Hufflepuff':
-          divH.innerHTML=mostrarPersonajes(soloH);
+          divH.innerHTML=`<h1>Hufflepuff</h1>`+mostrarPersonajes(soloH);
           break;
         case 'Ravenclaw':
-          divR.innerHTML=mostrarPersonajes(soloR);
+          divR.innerHTML=`<h1>Ravenclaw</h1>`+mostrarPersonajes(soloR);
           break;
         case 'Slytherin':
-          divS.innerHTML=mostrarPersonajes(soloS);
+          divS.innerHTML=`<h1>Slytherin</h1>`+mostrarPersonajes(soloS);
     }
     });
