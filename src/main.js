@@ -8,11 +8,10 @@ const soloG = POTTER.filter(g => (g.house === 'Gryffindor'));
 const soloH = POTTER.filter(h => (h.house === 'Hufflepuff'));
 const soloR = POTTER.filter(r => (r.house === 'Ravenclaw'));
 const soloS = POTTER.filter(s => (s.house === 'Slytherin'));
-document.querySelector('#soloG').innerHTML =  mostrarPersonajes(soloG);
-document.querySelector('#soloH').innerHTML =  mostrarPersonajes(soloH);
-document.querySelector('#soloR').innerHTML =  mostrarPersonajes(soloR);
-document.querySelector('#soloS').innerHTML =  mostrarPersonajes(soloS);
 
+document.querySelector('#todos').innerHTML = mostrarPersonajes(POTTER);
+
+const divTodos = document.getElementById('todos');
 const divG = document.getElementById('soloG');
 const divH = document.getElementById('soloH');
 const divR = document.getElementById('soloR');
@@ -22,6 +21,8 @@ const divS = document.getElementById('soloS');
 const seleccionar =document.querySelector('.filtrar-casas');
 seleccionar.addEventListener('change', (evento) => {
     const opcionSeleccionada = evento.target.value
+    
+    divTodos.innerHTML='';
     divG.innerHTML='';
     divH.innerHTML='';
     divR.innerHTML='';
