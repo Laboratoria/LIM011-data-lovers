@@ -1,18 +1,19 @@
 export const pintarPersonajes = (datos) => {
   let pintaImagen = '';
   datos.forEach(pintar => {
+    console.log(pintar)
     pintaImagen += `
     <div class = "container">
     <img class="mi-imagen" src = "${pintar.image}"/>
     <p> ${pintar.name} </p>
     </div>
-    `;
+     `;
   });
   return pintaImagen;
 };
 
 
-//   arrPotter.forEach((pintar) => {
+//   arrPotter.forEach((pintar) => { 
 //     imagenes.innerHTML += `
 //     <div class = "pintando">
 //     <img src = "${pintar.image}">
@@ -21,10 +22,10 @@ export const pintarPersonajes = (datos) => {
 //     `;
 //     return imagenes;
 //   });
-// };
+
 // pintarPersonajes(arrPotter);
 
-/* Manejo de data */
+// /* Manejo de data */
 
 // esta es una función de ejemplo
 

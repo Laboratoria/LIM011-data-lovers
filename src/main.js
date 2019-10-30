@@ -6,8 +6,14 @@
  
 
 import { pintarPersonajes } from './data.js';
+const pintar = document.getElementById ('arrPotter');
 
-document.getElementById('arrPotter').innerHTML = pintarPersonajes(POTTER);
+// creando una función para pintar mis imagenes (const nombreFuncion = (parametro) => )
+const funcionHarry = () => {
+
+}
+
+// document.getElementById('arrPotter').innerHTML = pintarPersonajes(POTTER);
 
 /*
  * console.log(POKEMON);
