@@ -8,10 +8,10 @@ const soloG = POTTER.filter(g => (g.house === 'Gryffindor'));
 const soloH = POTTER.filter(h => (h.house === 'Hufflepuff'));
 const soloR = POTTER.filter(r => (r.house === 'Ravenclaw'));
 const soloS = POTTER.filter(s => (s.house === 'Slytherin'));
-document.querySelector('#soloG').innerHTML = `<h1>Gryffindor</h1>`+ mostrarPersonajes(soloG);
-document.querySelector('#soloH').innerHTML = `<h1>Hufflepuff</h1>`+ mostrarPersonajes(soloH);
-document.querySelector('#soloR').innerHTML = `<h1>Ravenclaw</h1>`+ mostrarPersonajes(soloR);
-document.querySelector('#soloS').innerHTML = `<h1>Slytherin</h1>`+ mostrarPersonajes(soloS);
+document.querySelector('#soloG').innerHTML =  mostrarPersonajes(soloG);
+document.querySelector('#soloH').innerHTML =  mostrarPersonajes(soloH);
+document.querySelector('#soloR').innerHTML =  mostrarPersonajes(soloR);
+document.querySelector('#soloS').innerHTML =  mostrarPersonajes(soloS);
 
 const divG = document.getElementById('soloG');
 const divH = document.getElementById('soloH');
@@ -28,15 +28,15 @@ seleccionar.addEventListener('change', (evento) => {
     divS.innerHTML='';
     switch(opcionSeleccionada){
         case 'Gryffindor':
-          divG.innerHTML=`<h1>Gryffindor</h1>`+mostrarPersonajes(soloG);
+          divG.innerHTML=`<h1 class="titulos">Gryffindor</h1>`+mostrarPersonajes(soloG);
           break;
         case 'Hufflepuff':
-          divH.innerHTML=`<h1>Hufflepuff</h1>`+mostrarPersonajes(soloH);
+          divH.innerHTML=`<h1 class="titulos">Hufflepuff</h1>`+mostrarPersonajes(soloH);
           break;
         case 'Ravenclaw':
-          divR.innerHTML=`<h1>Ravenclaw</h1>`+mostrarPersonajes(soloR);
+          divR.innerHTML=`<h1 class="titulos">Ravenclaw</h1>`+mostrarPersonajes(soloR);
           break;
         case 'Slytherin':
-          divS.innerHTML=`<h1>Slytherin</h1>`+mostrarPersonajes(soloS);
+          divS.innerHTML=`<h1 class="titulos">Slytherin</h1>`+mostrarPersonajes(soloS);
     }
     });
