@@ -12,6 +12,7 @@ const soloS = POTTER.filter(s => (s.house === 'Slytherin'));
 
 document.querySelector('#todos').innerHTML = mostrarPersonajes(POTTER);
 
+
 const divG = document.getElementById('soloG');
 const divH = document.getElementById('soloH');
 const divR = document.getElementById('soloR');
@@ -29,16 +30,16 @@ seleccionar.addEventListener('change', (evento) => {
     divS.innerHTML='';
     switch(opcionSeleccionada){
         case 'Gryffindor':
-          divG.innerHTML=`<h1>Gryffindor</h1>`+mostrarPersonajes(soloG);
+          divG.innerHTML=`<h1 class="titulos">Gryffindor</h1>`+mostrarPersonajes(soloG);
           break;
         case 'Hufflepuff':
-          divH.innerHTML=`<h1>Hufflepuff</h1>`+mostrarPersonajes(soloH);
+          divH.innerHTML=`<h1 class="titulos">Hufflepuff</h1>`+mostrarPersonajes(soloH);
           break;
         case 'Ravenclaw':
-          divR.innerHTML=`<h1>Ravenclaw</h1>`+mostrarPersonajes(soloR);
+          divR.innerHTML=`<h1 class="titulos">Ravenclaw</h1>`+mostrarPersonajes(soloR);
           break;
         case 'Slytherin':
-          divS.innerHTML=`<h1>Slytherin</h1>`+mostrarPersonajes(soloS);
+          divS.innerHTML=`<h1 class="titulos">Slytherin</h1>`+mostrarPersonajes(soloS);
     }
     });
     // const buscar= document.querySelector('#busqueda').value;
