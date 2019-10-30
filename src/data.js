@@ -2,7 +2,20 @@
 
 // esta es una función de ejemplo
 
-export const showCharacters = (contentCharacter) => {
+export const showCharacters = () => {
 
-  return 'contentCharacter';
+  return '';
 };
+
+
+// const ordenAZ = (data) => {
+//   return data.sort((a, b) => {
+//     if (a.name > b.name) {
+//       return 1
+//     } else {
+//     return -1
+//     }
+//   });
+// }
+
+// console.log(ordenAZ);
