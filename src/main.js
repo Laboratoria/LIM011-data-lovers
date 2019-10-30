@@ -1,8 +1,9 @@
 import POKEMON from './data/pokemon/pokemon.js';
 
-const pintandoPokemon = document.getElementById('pintame');
+console.log(POKEMON);
+
 let misPokemones = '';
-POKEMON.forEach(pintar => {
+POKEMON.forEach((pintar) => {
   misPokemones += `
         
         <div class = "contenedor">
@@ -15,7 +16,14 @@ POKEMON.forEach(pintar => {
         <p>Debilidades:<br>${pintar.weaknesses}</p>
         </div>
         `;
-  pintandoPokemon.innerHTML = misPokemones;
+  document.querySelector('#pintame').innerHTML = misPokemones;
 });
+/*
+const steel = document.getElementById('steel'); 
+steel.addEventListener('clic', () => {
 
-console.log(POKEMON);
+const filtroSteel = POKEMON.filter(type => {
+
+
+document.querySelector('#steel').innerHTML = filtroSteel;
+}); */
