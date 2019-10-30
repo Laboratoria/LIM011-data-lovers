@@ -13,9 +13,14 @@ export const pintaPokemones = (data) => {
   return catalogoImagenes;
 };
 
-export const ordenaPokemones = (data) =>{ 
+export const pokemonAsc= (data) =>{ 
   data.sort((p1, p2) => (p1.name < p2.name) ? -1 : 1);
   return data;
-}
+};
+
+export const pokemonDesc = (data) =>{ 
+  data.sort((p1, p2) => (p1.name > p2.name) ? -1 : 1);
+  return data;
+};
 
 

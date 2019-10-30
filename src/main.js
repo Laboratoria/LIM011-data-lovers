@@ -1,29 +1,29 @@
+
 import POKEMON from './data/pokemon/pokemon.js';
-// console.log(POKEMON);
-/**
- * import POKEMON from './data/pokemon/pokemon.js'
- * import LoL from './data/lol/lol.js'
- * import POTTER from './data/potter/potter.js'
- */
+const pokemons=document.getElementById('pokemons');
 
-// const catalogo=document.getElementById("pokemons");
-import { pintaPokemones, ordenaPokemones } from './data.js';
+import { pintaPokemones, pokemonAsc, pokemonDesc } from './data.js';
 document.querySelector('#pokemons').innerHTML = pintaPokemones(POKEMON);
-//Guarda el array ordenado en una variable para luego pasarla a la funcion pintaPokemones y de 
-//esta manera poder reutilizar el codigo del pintado de datos
-const ordeasc=ordenaPokemones(POKEMON);
-//Aqui exactamente es donde paso el array ordenado para que muestre el arreglo ordenado
-document.querySelector('#a-z').innerHTML = pintaPokemones(ordeasc);
-console.log(ordenaPokemones(POKEMON));
-//document.querySelector('#BotonBuscar').innerHTML = ordenaPokemones(POKEMON);
 
-// import { misPokemones } from './data.js';
-// document.querySelector('#pokemons').innerHTML = misPokemones(POKEMON);
+const abc=document.getElementById('abc');
+const cba=document.getElementById('cba');
 
-// import { buscaPokemones } from './data.js';
-
-const botonBusca=document.getElementById('botonBuscar');
-
+const ascendente=document.getElementById("orAsc");
+ascendente.addEventListener ('click', () => {
+    let asc= document.querySelector('input[name="ordena"]:checked');
+    const ordeAsc=pokemonAsc(POKEMON);
+    //pokemons.classList.add('hide');
+    //Aqui exactamente es donde paso el array ordenado para que muestre el arreglo ordenado
+    document.querySelector('#abc').innerHTML = pintaPokemones(ordeAsc);
+    console.log(pokemonAsc(POKEMON)); 
+});
+const descendente=document.getElementById("orDesc");
+descendente.addEventListener ('click', () => {
+    let asc= document.querySelector('input[name="ordena"]:checked');
+    const ordeDesc=pokemonDesc(POKEMON)
+    document.querySelector('#cba').innerHTML = pintaPokemones(ordeDesc);
+    console.log(pokemonDesc(POKEMON));
+});
 // botonBusca.addEventListener('click', () => {
 //      const buscarPokemon=document.getElementById('buscar');
 //      // document.querySelector("#buscar").value=buscaPokemones(POKEMON,buscarPokemon);
