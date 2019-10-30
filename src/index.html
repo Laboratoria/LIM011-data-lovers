@@ -8,41 +8,60 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="fuentes/fonts.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <img src="imagenes/logoWizardingWorld.png" class="logo">
-    <nav class="menu">
-      <a href="#">Personajes</a>
-      <a href="#">Rol</a>
-      <a href="#">Casas</a>
-      <input type="checkbox" class="menu-nav">
+    <div= id="menu-flotante">
+      <img src="imagenes/ww-g.png" class="logo">
+      <input type="checkbox" id="menu-nav">
       <label for="menu-nav" class="icon-menu"></label>
-    </nav>
+      <nav class="menu">
+        <!-- <a href="#">Personajes</a>
+        <a href="#">Rol</a> -->
+        <a href="#">CASAS</a>
+      </nav>
+    </div>
   </header>
   <main>
-    <section id="casas">
+    <section>
+      <div id="nubes">
+      <div id="menu-flotante">
       <div id="filtros">
-      <select name="seleccionar-casas-filtrar">
-        <option value="" hidden selected>Selecciona una casa</option>
+      <div id="select">
+       <select>
+        <option value="" hidden select>Filtrar</option>
         <option value="casa1">Gryffindor</option>
         <option value="casa2">Hufflepuff</option>
         <option value="casa3">Ravenclaw</option>
         <option value="casa4">Slytherin</option>
       </select>
-        <input type="search" name="busqueda-por-nombre" id="busqueda"><br><br>
-        <div id="show"></div>
+      </div>
+      <div id="buscar">
+        <input type="search" name="busqueda-por-nombre" id="busqueda" class="buscar" placeholder="Buscador">
+        <i class="icon-search"></i>
+      </div>
+      </div>
+      </div>
+      <div id="soloG" class="mostrar"></div>
+      <div id="soloH" class="mostrar"></div>
+      <div id="soloR" class="mostrar"></div>
+      <div id="soloS" class="mostrar"></div>
       </div>
     </section>
   </main>
   <footer>
-    <img src="imagenes/Warner_Bros._Games_Print.png" class="logo-footer">
-    <img src="images/logo-wz.png" class="logo-footer">
-    <p>&copy; El Mundo de Harry Potter 2019</p>
-    <p><span class="icon-facebook"></span>
-      <span class="icon-youtube"></span>
-      <span class="icon-twitter"></span></p>
+    <div id="footer">
+    <div id="ftr">
+      <img src="imagenes/wb-g.png" class="logo-footer">
+    <img src="images/logo-wz-g.png" class="logo-footer">
+    </div>
+    <div id="ftr"><p class="copy">&copy; El Mundo de Harry Potter 2019</p></div>
+    <div id="ftr"><span class="icon-facebook icon"></span>
+      <span class="icon-youtube icon"></span>
+      <span class="icon-twitter icon"></span></div>
+    </div>
   </footer>
   <script type="module" src="main.js"></script>
 </body>

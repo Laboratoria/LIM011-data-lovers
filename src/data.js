@@ -1,20 +1,13 @@
-import { mostrarHp } from "url";
-
-/* Manejo de data */
-
-// esta es una función de ejemplo
-
-export const mostrarHp = (data) => {
-    let templatePotter = '';
-    data.map(obj => {
-        templatePotter += `
-        <div>
-        <div id="${obj.id}" name='potter'>
-            <img src="${obj.img}"/>
-        </div>
-        <p >${obj.name}</p>
-        </div>`;
-    });
-
-    return templatePotter;
+export const example = () =>{
+  return 'example';
+};
+export const mostrarPersonajes = (dataPorCasa) => {
+  let templatePotter = '';
+  dataPorCasa.map(extrae => {
+    templatePotter +=`<div id="imagenes" class="casas-card">
+              <img class="imagen" src= "${extrae.image}"/>
+              <p>${extrae.name}</p>
+            </div>`;
+  });
+  return templatePotter;
 };
