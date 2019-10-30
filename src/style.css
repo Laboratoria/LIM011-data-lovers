@@ -1,8 +1,7 @@
-/* GENERAL */
+
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
 /* HEADER */
@@ -12,10 +11,12 @@
     float: left;
     margin-left: 10px;
 }
+
 header{
-    background: #FFFFFF;
+    background: #ffffff;
     width: 100%;
     height: 60px;
+
     position: fixed;
     top: 0;
     left: 0;
@@ -25,9 +26,11 @@ header{
     width: 98%;
     margin: auto;
 }
+
 header #menu-flotante {
     display: table;
 }
+
 /* MENU DE NAVEGACION */
 #menu-nav{
     display: none;
@@ -38,8 +41,9 @@ header label { /* esto es el icono de menu */
     margin: 10px;
     margin-top: 15px;
     cursor: pointer;
-    color: #6B6B6B;
+    color: #6b6b6b;
 }
+
 .menu {
     position: absolute;
     top: 60px;
@@ -59,14 +63,19 @@ header label { /* esto es el icono de menu */
     padding: 15px;
     border-bottom: 1px solid hsla(0, 0%, 50%, 0.5);
 }
+
 .menu a:hover{
     background: rgba(255, 255, 255, 0.3);
 }
+
 /* transformación del menu de navegacion */
 #menu-nav:checked ~ .menu{
     transform: translateX(0%);
 }
+
+
 /* CUERPO */
+
 #nubes{ /*div de vistas */
     margin-top: 60px;
     width: 100%;
@@ -84,7 +93,9 @@ header label { /* esto es el icono de menu */
     width: auto;
     padding: 20px 0px;
 }
+
 /* SELECT */
+
 #select select{
     border: 1px solid #fff;
     padding: 5px;
@@ -162,7 +173,8 @@ select{
     color: #fff;
     font-weight: 400;
 }
-.imagen { /imagenes/
+
+.imagen { /*imagenes*/
     width: 50%;
     box-shadow: 5px 5px 10px rgba(77, 77, 77, 0.3);
     margin-bottom: 10px;
@@ -175,13 +187,15 @@ select{
     justify-content: center;
     text-align: center;
 }
+
 /* FOOTER */
 footer{
     padding-bottom: 20px;
-    border-top: 2px solid #6B6B6B;
+    border-top: 2px solid #6b6b6b;
     padding: 10px;
     margin: 10px 10%;
 }
+
 footer #footer{ /*div padre */
     display: flex;
     flex-wrap: row;
@@ -189,24 +203,29 @@ footer #footer{ /*div padre */
     align-items: center;
     justify-content: space-around;
 }
- /div hijos/
+
+ /*div hijos*/
 #footer #ftr{
     margin: 3px 3px;
 }
 .logo-footer{
     width: 35px;
     height: 30px;
-    /poner color #6B6B6B/
+    /*poner color #6b6b6b*/
 }
+
 #footer .copy{
     font-size: 15px;
-    color: #6B6B6B;
+    color: #6b6b6b;
 }
+
 #footer .icon{
-    color: #6B6B6B;
+    color: #6b6b6b;
     margin: 2px;
 }
+
 /* RESPONSIVE menu*/
+
 @media (min-width:1024px){
     #menu-flotante{
         width: 1100px;
@@ -230,9 +249,11 @@ footer #footer{ /*div padre */
         background: none;
         font-weight: bold;
     }
+
     header label{
         display: none;
     }
+
     /* FILTROS */
     #filtros{
         display: flex;
@@ -240,14 +261,19 @@ footer #footer{ /*div padre */
         flex-direction: row;
         align-content: flex-end;
     }
+
     #select{
         margin: 0px 30px;
     }
+
+    
+    
     /* RESPONSIVE FOOTER */
-    footer #footer{
+    footer #footer{ 
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
     }
+}
