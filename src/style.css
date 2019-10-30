@@ -66,13 +66,15 @@ ul, ol {
 }
 .contenedor{
     position: relative;
-    margin: 5px;
     margin-top: 45px;
+    margin: 10px 8px 15px;
+    margin-left: 20%;
     background-color: rgb(222, 225, 231);
     padding: 1px;
     width: 260px;
     text-align: center;
     font-family: 'Roboto Slab', serif;
-    float: right;
+    float: left;
     align-content: space-between;
+    flex-direction: row;
 }

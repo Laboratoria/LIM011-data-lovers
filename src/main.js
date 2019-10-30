@@ -1,10 +1,8 @@
 import POKEMON from './data/pokemon/pokemon.js';
 
-const pintandoPokemon = document.getElementById('pintame');
 let misPokemones = '';
 POKEMON.forEach(pintar => {
   misPokemones += `
-        
         <div class = "contenedor">
         <img src ="${pintar.img}"/>
         <p><b>${pintar.id} ${pintar.name}</b></p>
@@ -15,7 +13,6 @@ POKEMON.forEach(pintar => {
         <p>Debilidades:<br>${pintar.weaknesses}</p>
         </div>
         `;
-  pintandoPokemon.innerHTML = misPokemones;
+document.querySelector('#pintame').innerHTML = misPokemones;
 });
 
-console.log(POKEMON);
