@@ -3,28 +3,71 @@
     margin: 0;
 }
 body{
-    margin:20px 70px 20px;
+    margin:10pt;
     background-image: url(fondo.jpg) ;
     background-size: cover; 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; 
-}
+    }
 
 header{
     text-align: center;
-    margin: 10px 10px 30px;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
    
-}
-.contenedor-pokemon{
-    width: 120;
-    height: 120;
-}
-
-#divCaracteristicasPokemon
+.logo
 {
-height: 150px;
-width: 150px;
+    display: flex;
 }
 
+#contenedor-pokemon
+
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;   
+}
+
+#tarjeta-principal-pokemon
+{
+    position: relative;
+    margin: 10pt;
+    width: 220pt;
+    height: 220pt;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+#caja:hover #tarjeta-principal-pokemon{
+transform: rotateY(180deg);
+}
+
+#tarjeta-datos-Pokemon, #tarjeta-caracteristicas-pokemon{
+    position: absolute;
+    width: 220px;
+    height: 220pt;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#tarjeta-caracteristicas-pokemon
+{
+    background-color: white;
+    color:black;
+    transform: rotateY(180deg);
+}
+
+.hidden{
+    display: none;
+}
 
