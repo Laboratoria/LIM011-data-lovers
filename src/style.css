@@ -52,10 +52,10 @@ nav > li {
 
 nav li a {
   background-color: transparent;
-  box-shadow: inset 0 0 0 1px #d4870c;
+  box-shadow: inset 0 0 0 1px #9fe6e9;
   border-radius: 10px;
-  width: 110px;
-  color:rgb(212, 78, 24);
+  width: 120px;
+  color:rgb(246, 247, 238);
   text-decoration:none;
   padding: 10px 12px;
   display:block;
@@ -71,7 +71,7 @@ nav li a img {
 }
 
 nav li a:hover {
-  background-color: #f9d5bb;
+  background-color: #e08a3a;
   border-radius: 50px;
 }
 

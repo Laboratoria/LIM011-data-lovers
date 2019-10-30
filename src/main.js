@@ -23,7 +23,7 @@ const miArrImagenes = document.getElementById('arrPotter');
             <p><strong>Especie:</strong> ${pintar.species}</p>
             <p><strong>Género:</strong> ${pintar.gender}</p>
             <p><strong>Ansestro:</strong> ${pintar.ancestry}</p>
-            <p><strong>Varita:</strong> <br>
+            <p><strong>Varita:</strong> <img src="../src/image/wand.png" alt=""><br>
             <strong>Madera:</strong> ${pintar.wand.wood}<br>
             <strong>Núcleo:</strong> ${pintar.wand.core}<br>
             <strong>Longitud:</strong>${pintar.wand.length}</p>
