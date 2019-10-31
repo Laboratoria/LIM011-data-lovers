@@ -79,12 +79,24 @@ ul, ol {
     margin: 5px;
 }
 
-@media screen and (max-width:640px) {
-    /* reglas CSS */
-  }
-@media screen and (max-width:1024px) and (min-width:640px) {
-    /* reglas CSS */
-  }
-@media screen and (min-width:1024px) {
-    /* reglas CSS */
-  }
+/* Smartphones (landscape) */
+@media only screen 
+and (min-width : 321px) {
+}
+/* Smartphones (portrait) */
+@media only screen 
+and (max-width : 320px) {
+}
+/* Ordenadores de sobremesa y portátiles */
+@media only screen 
+and (min-width : 1224px) {
+}
+/* Pantallas grandes */
+@media only screen 
+and (min-width : 1824px) {
+}
+/* iPhone 4 */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+}
