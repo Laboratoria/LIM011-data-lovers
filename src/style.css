@@ -94,6 +94,10 @@ header label { /* esto es el icono de menu */
     padding: 20px 0px;
 }
 
+.titulos{
+    color: #6b6b6b;
+}
+
 /* SELECT */
 
 #select select{
@@ -156,6 +160,7 @@ select{
     color: #fff;
     font-weight: 300;
     font-style: italic;
+    -webkit-appearance: none;
 }
 .icon-search{
     position: absolute;
@@ -180,28 +185,43 @@ select{
     margin-bottom: 10px;
 }
 .casas-card{ /*div card de cada imagen */
-    /* background: rgba(24, 110, 121, 0.521); */
-    padding: 5px;
+    background: rgba(24, 110, 121, 0.521);
     margin: 5px;
+    padding: 0;
     width: 30%;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
+    flex-direction: row;
+}
+
+#soloG{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.casas-card p{ /*div card de cada imagen */
+   color: #fff;
+   font-size: 10px;
 }
 
 /* FOOTER */
 footer{
     padding-bottom: 20px;
-    border-top: 2px solid #6b6b6b;
     padding: 10px;
-    margin: 10px 10%;
+    background: #01151c;
+
 }
 
 footer #footer{ /*div padre */
+    margin: 10px 10%;
+    padding-top:10px;
     display: flex;
     flex-wrap: row;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    border-top: 1px solid #f1f1f1;
 }
 
  /*div hijos*/
@@ -211,16 +231,17 @@ footer #footer{ /*div padre */
 .logo-footer{
     width: 35px;
     height: 30px;
-    /*poner color #6b6b6b*/
+    /*poner color #f1f1f1*/
 }
 
 #footer .copy{
-    font-size: 15px;
-    color: #6b6b6b;
+    font-size: 14px;
+    color: #f1f1f1;
+    font-weight: 300;
 }
 
 #footer .icon{
-    color: #6b6b6b;
+    color: #f1f1f1;
     margin: 2px;
 }
 
@@ -267,13 +288,19 @@ footer #footer{ /*div padre */
     }
 
     
-    
     /* RESPONSIVE FOOTER */
     footer #footer{ 
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
+    }
+
+
+    #footer .copy{
+        font-size: 15px;
+        color: #f1f1f1;
+        font-weight: 400;
     }
 }
