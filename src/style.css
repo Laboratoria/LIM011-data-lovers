@@ -4,9 +4,10 @@
 }
 body{
     
-    margin:1%;
     background-image: url(fondo.jpg) ;
     background-size: cover; 
+    background-attachment: fixed;
+    background-position: center center;
     }
 
 header{
@@ -21,14 +22,16 @@ header{
    
 .logo
 {
-    float: left;
     display: flex;
     justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    
+    width: 30%;
+}
 
-    }
+#caja{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 #contenedor-pokemon
 
@@ -39,6 +42,7 @@ header{
     align-items: center;
     justify-content: center;
     text-align: center;
+    width: 90%;
     margin: 10px;
     padding: 10px;   
 }
@@ -56,7 +60,7 @@ header{
 }
 
 #caja:hover #tarjeta-principal-pokemon{
-transform: rotateX(180deg);
+transform: rotateY(180deg);
 }
 
 #tarjeta-datos-Pokemon, #tarjeta-caracteristicas-pokemon{
@@ -69,16 +73,14 @@ transform: rotateX(180deg);
     display: flex;
     flex-direction: column;
     flex-wrap:wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     border-radius: 40pt;
 }
 
 #tarjeta-caracteristicas-pokemon
 {
-    background-color: white;
-    color:black;
-    transform: rotateX(180deg);
+    transform: rotateY(180deg);
 }
 
 .hidden{
@@ -103,4 +105,30 @@ h2, h4{
 #nombre-Pokemon{
     font-family: pokemonNegro;
     font-size: 15pt;
+}
+
+@media(max-width: 670px)
+{
+    #caja{
+        width: 60%;
+        height: 120pt;
+        padding: 1%;
+    }
+
+    #tarjeta-principal-pokemon{
+        height: 100%;
+        width: 100%;
+        font-size:8pt;
+    }
+
+    img{
+        height:  40%;
+        width:  40%;
+    }
+
+    h2, h4, #nombre-Pokemon{
+        font-size:8pt;
+    }
+
+
 }

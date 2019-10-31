@@ -2,7 +2,7 @@
 import POKEMON from './data/pokemon/pokemon.js';
 
 // import { mostrarListaPokemon } from './data.js';
-document.querySelector('#contenedor-pokemon').classList.remove('hidden');
+
 const datosPokemon = (datos) => {
   datos.forEach((poke) => {
     // Creando la vista adelante del Pokemon(numero, nombre e imagen)
