@@ -12,7 +12,6 @@ const soloS = POTTER.filter(s => (s.house === 'Slytherin'));
 
 document.querySelector('#todos').innerHTML = mostrarPersonajes(POTTER);
 
-
 const divG = document.getElementById('soloG');
 const divH = document.getElementById('soloH');
 const divR = document.getElementById('soloR');
@@ -23,6 +22,7 @@ const divTodos = document.getElementById('todos');
 const seleccionar =document.querySelector('.filtrar-casas');
 seleccionar.addEventListener('change', (evento) => {
     const opcionSeleccionada = evento.target.value
+    
     divTodos.innerHTML ='';
     divG.innerHTML='';
     divH.innerHTML='';
@@ -45,6 +45,7 @@ seleccionar.addEventListener('change', (evento) => {
           divS.innerHTML=`<h1 class="titulos">Slytherin</h1>`+mostrarPersonajes(soloS);
     }
     });
+    
     // const buscar= document.querySelector('#busqueda').value;
     // console.log(buscar);
    
