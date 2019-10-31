@@ -29,6 +29,9 @@ seleccionar.addEventListener('change', (evento) => {
     divR.innerHTML='';
     divS.innerHTML='';
     switch(opcionSeleccionada){
+        case 'Todos':
+          divTodos.innerHTML=mostrarPersonajes(POTTER);
+          break;
         case 'Gryffindor':
           divG.innerHTML=`<h1 class="titulos">Gryffindor</h1>`+mostrarPersonajes(soloG);
           break;
@@ -50,13 +53,17 @@ seleccionar.addEventListener('change', (evento) => {
     // const boton = document.querySelector('#clickbu');
 
     // const pbusq =()=>{
-    //   // console.log(buscar.value);
-    //   // const texto = buscar.value.toLowerCase()
-    //   // for(let i=0; i<POTTER.length; i+=1){
-    //   //   const todosNombres = POTTER[i].name.toLowerCase;
-    //   // }
+    //   console.log(buscar.value);
+    //   const texto = buscar.value.toLowerCase()
+    //   for(let i=0; i<POTTER.length; i+=1){
+    //     const todosNombres = POTTER[i].name.toLowerCase();
+    //     if(todosNombres.indexOf(texto) !== -1){
+    //       divTodos.innerHTML +=
+    //     }
+    //   }
     // }
     // boton.addEventListener('click', pbusq);
+
     // const todosNombres = POTTER[0].name
-    // const minusculas = todosNombres.toLowerCase
-    // console.log(typeof(POTTER[0].name))
+    // const minusculas = todosNombres.value
+    // console.log(todosNombres)
