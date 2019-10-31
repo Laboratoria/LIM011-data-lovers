@@ -1,9 +1,21 @@
+const bienvenida = document.getElementById('bienvenida');
+const pintame = document.getElementById('pintame');
+const boton1 = document.getElementById('boton1');
+
+
+boton1.addEventListener('click', () => {
+  bienvenida.classList.add('hide');
+  pintame.classList.remove('hide');
+});
+
 import POKEMON from './data/pokemon/pokemon.js';
 
 console.log(POKEMON);
-/* TRAEMOS TODO LO QUE ESTÁ EN LA DATA CON LA VARIABLE*/
-import {pintado} from './data.js';
+/* TRAEMOS TODO LO QUE ESTÁ EN LA DATA CON LA VARIABLE */ /* eslint-disable import/first */
+import { pintado } from './data.js';
+
 document.querySelector('#pintame').innerHTML = pintado(POKEMON);
+
 
 // let misPokemones = '';
 // POKEMON.forEach((pintar) => {

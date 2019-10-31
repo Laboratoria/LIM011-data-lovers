@@ -3,17 +3,17 @@
 /* eslint-disable import/prefer-default-export */
 /* eslint arrow-body-style: ["error", "always"] */
 
-/*export const mostrarPokemon = () => {
+/* export const mostrarPokemon = () => {
     return 'mostrarPokemon';
-};*/
+}; */
 
-/*Se crea una variable PINTADO y nuestro parametro será dataPokemon
+/* Se crea una variable PINTADO y nuestro parametro será dataPokemon
 para que el recorrido actúe sobre toda la base */
 
-export const pintado = (dataPokemon)=>{
+export const pintado = (dataPokemon) => {
   let misPokemones = '';
-dataPokemon.forEach(pintar=> {
-  misPokemones += `
+  dataPokemon.forEach((pintar) => {
+    misPokemones += `
         <div class = "contenedor">
         <img src ="${pintar.img}"/>
         <p><b>${pintar.id} ${pintar.name}</b></p>
@@ -24,6 +24,6 @@ dataPokemon.forEach(pintar=> {
         <p>Debilidades:<br>${pintar.weaknesses}</p>
         </div>
         `;
-});
-return misPokemones;
-}
+  });
+  return misPokemones;
+};
