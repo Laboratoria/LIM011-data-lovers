@@ -71,7 +71,7 @@ nav li a img {
 }
 
 nav li a:hover {
-  background-color: #e08a3a;
+  background-color: #e7c607;
   border-radius: 50px;
 }
 
@@ -169,6 +169,13 @@ nav li:hover > ul {
 }
 
 @media screen and (max-width:764px) {
+  nav li a {
+    width: 100px;
+
+  }
+  a {
+    margin-left: 25px;
+  }
 
   .name {
     color: rgb(231, 222, 222);

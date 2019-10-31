@@ -1,16 +1,15 @@
+// import POKEMON from './data/pokemon/pokemon.js'
+// import LoL from './data/lol/lol.js'
+import POTTER from "./data/potter/potter.js";
+console.log(POTTER);
 
-  // import POKEMON from './data/pokemon/pokemon.js'
-  // import LoL from './data/lol/lol.js'
-  import POTTER from './data/potter/potter.js'
-  console.log(POTTER);
+import { mostrarCaracteristicasPotter } from "./data.js";
 
-import { mostrarPersonajesPotter } from './data.js';
-import { mostrarCaracteristicasPotter } from './data.js';
 
-const miArrImagenes = document.getElementById('arrPotter');
-  let pintaImagen = '';
-  POTTER.forEach(pintar => {
-    pintaImagen += `
+const miArrImagenes = document.getElementById("arrPotter");
+let pintaImagen = "";
+POTTER.forEach(pintar => {
+  pintaImagen += `
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="container">
@@ -19,7 +18,6 @@ const miArrImagenes = document.getElementById('arrPotter');
         </div>
         <div class="anverso">
           <div class="box">
-            
             <p><strong>Especie:</strong> ${pintar.species}</p>
             <p><strong>Género:</strong> ${pintar.gender}</p>
             <p><strong>Ansestro:</strong> ${pintar.ancestry}</p>
@@ -35,8 +33,13 @@ const miArrImagenes = document.getElementById('arrPotter');
       </div>
     </div>
     `;
- miArrImagenes.innerHTML = pintaImagen;
-  });
+  miArrImagenes.innerHTML = pintaImagen;
+});
+
+ 
+
+
+
 
 // for
 // const miFunsión = (datitos) => {
@@ -45,13 +48,8 @@ const miArrImagenes = document.getElementById('arrPotter');
 
 // }
 
-
-
-
-
-
 /*
  * console.log(POKEMON);
  * console.log(LoL);
  * console.log(POTTER)
-*/
+ */
