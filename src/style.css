@@ -1,17 +1,66 @@
-header{
-    margin: auto;
-    width: auto; 
-    display: inline-block;
-}
-.bluetrans{
+
+.bienvenida{
     background-image: url("http://getwallpapers.com/wallpaper/full/0/8/2/53557.jpg");
-    width: auto;
-    height: auto ;
-    background-repeat: repeat;
+    width: 100%;
+    height: 770px ;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 100%;
     position: relative;
     margin: 0 auto;
+    font-family: 'Roboto Slab', serif;
     display: flex;
-   
+    
+}
+.bienvenida:before{
+    content:"";
+    width: 100%;
+    height: 50%;
+    background-color: rgb(222, 225, 231);
+    background-position: center;
+    position: absolute;
+    opacity: 0.9;
+    margin-top: 15%;
+}
+.logo{
+    position: relative;
+    justify-content: flex-start;
+    margin-top: 16%;
+    text-align: left;
+    margin-left: 15%;
+}
+.texto{
+    position: relative;
+    text-align: left;
+    margin-top: 25%;
+    margin-left: -10%;   
+    font-size: 18px;
+}
+.fondoBoton{
+    width: 150px;
+    height: 45px;
+    border-radius: 15px;
+    margin-top: 20px;
+    border: 5px solid rgba(11, 64, 156, 1);
+    border-bottom: 40px;
+    background:  rgba(253, 190, 52, 1);
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+}
+.fondo2{
+    background-image: url("http://getwallpapers.com/wallpaper/full/0/8/2/53557.jpg");
+    width: 100%;
+    height: auto;
+    background-repeat: repeat;
+    position: absolute;
+}
+.fondo2:before{
+    content:"";
+    width: 120%;
+    height: 100%;
+    background-color: rgba(16, 49, 107, 0.479);
+    position: absolute;
+    opacity: 0.9;
 }
 .contenedor{
     position: relative;
@@ -23,60 +72,11 @@ header{
     background-color: rgb(222, 225, 231);
     font-family: 'Roboto Slab', serif;
     float: left;
-    
-}
-.bluetrans:before{
-    content:"";
-    width: 120%;
-    height: 100%;
-    background-color: rgba(16, 49, 107, 0.479);
-    position: absolute;
-    opacity: 0.9;
-    
+    border-radius:10px;
 }
 
-ul, ol {
-    list-style: none;
-    position: absolute;
-    font-family: 'Roboto Slab', serif;
-   
-}
-.nav li b {
-    margin-top: 5px;
-    background-color: rgba(253, 190, 52, 1);
-    color: #333333;
-    text-decoration: none;
-    padding: 8px;
-    width: 130px;
-    display: inline-block;
-    
-}
-.nav li a {
-    background-color: rgb(222, 225, 231);
-    color: #333333;
-    text-decoration: none;
-    padding: 4px;
-    width: 130px;
-    display: inline-block;
-    
-}
-.nav > li{
-    float: inline-end;
-    
-    }
-.nav li a:hover{
-    background-color: rgb(123, 161, 238);
-}
-.nav li ul {
+.hide{
     display: none;
-    position: relative;
-}
-.nav li:hover > ul {
-    display: block;
-}
-.icono{
-    line-height: 5px;
-    margin: 5px;
 }
 
 /* Smartphones (landscape) */
@@ -100,3 +100,12 @@ and (min-width : 1824px) {
 only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
 }
+@media screen and (max-width:640px) {
+    /* reglas CSS */
+  }
+@media screen and (max-width:1024px) and (min-width:640px) {
+    /* reglas CSS */
+  }
+@media screen and (min-width:1024px) {
+    /* reglas CSS */
+  }
