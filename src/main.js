@@ -1,43 +1,37 @@
-const bienvenida = document.getElementById('bienvenida');
-const pintame = document.getElementById('pintame');
-const boton1 = document.getElementById('boton1');
+import POKEMON from './data/pokemon/pokemon.js';
+import { pintado, tipoPlanta, tipoAgua, tipoBicho, tipoElectrico } from './data.js';
 
-
-boton1.addEventListener('click', () => {
-  bienvenida.classList.add('hide');
-  pintame.classList.remove('hide');
+const todos = document.querySelector('#todos');
+todos.addEventListener('click', () => {
+  document.querySelector('#resultado').innerHTML = pintado(POKEMON, todos.value);
+});
+const Grass = document.querySelector('#Grass');
+Grass.addEventListener('click', () => {
+  document.querySelector('#resultado').innerHTML = tipoPlanta(POKEMON, Grass.value);
+});
+const Water = document.querySelector('#Water');
+Water.addEventListener('click', () => {
+  document.querySelector('#resultado').innerHTML = tipoAgua(POKEMON, Water.value);
+});
+const Bug = document.querySelector('#Bug');
+Bug.addEventListener('click', () => {
+  document.querySelector('#resultado').innerHTML = tipoBicho(POKEMON, Bug.value);
+});
+const Electric = document.querySelector('#Electric');
+Electric.addEventListener('click', () => {
+  document.querySelector('#resultado').innerHTML = tipoBicho(POKEMON, Electric.value);
 });
 
-import POKEMON from './data/pokemon/pokemon.js';
+const bienvenida = document.getElementById('bienvenida');
+const boton1 = document.getElementById('boton1');
+const pagina2 = document.getElementById('pagina2');
+boton1.addEventListener('click', () => {
+  bienvenida.classList.add('hide');
+  pagina2.classList.remove('hide');
+});
 
 console.log(POKEMON);
 /* TRAEMOS TODO LO QUE ESTÁ EN LA DATA CON LA VARIABLE */ /* eslint-disable import/first */
-import { pintado } from './data.js';
-
-document.querySelector('#pintame').innerHTML = pintado(POKEMON);
 
 
-// let misPokemones = '';
-// POKEMON.forEach((pintar) => {
-//   misPokemones += `
-//         <div class = "contenedor">
-//         <img src ="${pintar.img}"/>
-//         <p><b>${pintar.id} ${pintar.name}</b></p>
-//         <p>Altura: ${pintar.height}</p>
-//         <p>Peso: ${pintar.weight}</p>
-//         <p>Caramelos: ${pintar.candy_count}</p>
-//         <p>Tiempo de Aparición: <br>${pintar.spawn_time}</p>
-//         <p>Debilidades:<br>${pintar.weaknesses}</p>
-//         </div>
-//         `;
-//   document.querySelector('#pintame').innerHTML = misPokemones;
-// });
-/*
-const steel = document.getElementById('steel'); 
-steel.addEventListener('clic', () => {
-
-const filtroSteel = POKEMON.filter(type => {
-
-
-document.querySelector('#steel').innerHTML = filtroSteel;
-}); */
+/* document.querySelector('#pintame').innerHTML = pintado(POKEMON); */
