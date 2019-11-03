@@ -1,21 +1,26 @@
 /* Manejo de data */
-const arraypokemon = POKEMON.pokemon;
-const imagenes=document.getElementById('pokemons');
-const pintarPokemons = (arraypokemon) => {
-  arraypokemon.forEach((pintar) => {  
-      imagenes.innerHTML +=  `
-      <div align="center">                
-          <img src= "${pintar.img}">
-          <p>${pintar.id} ${pintar.name}</p>       
-      </div>
-      `;
-              return imagenes;
+//const catalogoImagenes = POKEMON.pokemon;
+let catalogoImagenes = '';
+export const pintaPokemones = (data) => {  
+  data.forEach(traeme => {
+    catalogoImagenes += `
+    <div align="center">
+    <img src = "${traeme.img}"/>
+    <p> ${traeme.id} ${traeme.name}</p>
+    </div>
+    `;
   });
+  return catalogoImagenes;
 };
-pintarPokemons(arraypokemon);
 
-// esta es una función de ejemplo
+export const pokemonAsc= (data) =>{ 
+  data.sort((p1, p2) => (p1.name < p2.name) ? -1 : 1);
+  return data;
+};
 
-/*export const example = () => {
-  return 'example';
-};*/
+export const pokemonDesc = (data) =>{ 
+  data.sort((p1, p2) => (p1.name > p2.name) ? -1 : 1);
+  return data;
+};
+
+

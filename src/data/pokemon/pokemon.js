@@ -1,5 +1,4 @@
-const POKEMON = {
-  "pokemon": [{
+export default [{
   id: 1,
   num: '001',
   name: 'Bulbasaur',
@@ -4082,5 +4081,4 @@ const POKEMON = {
     'Ghost',
     'Dark',
   ],
-}],
-};
+}];
