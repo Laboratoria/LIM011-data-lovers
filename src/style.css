@@ -50,7 +50,7 @@
 .fondo2{
     background-image: url("http://getwallpapers.com/wallpaper/full/0/8/2/53557.jpg");
     width: 100%;
-    height: auto;
+    height: 170%;
     background-repeat: repeat;
     position: absolute;
 }
@@ -74,9 +74,19 @@
     float: left;
     border-radius:10px;
 }
-
 .hide{
     display: none;
+}
+.tipos{
+    position: relative;
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 15px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    background:  rgba(253, 190, 52, 1);
+    border-radius:10px;
 }
 
 /* Smartphones (landscape) */
