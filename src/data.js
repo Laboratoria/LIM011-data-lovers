@@ -87,3 +87,35 @@ export const tipoElectrico = (arr, string) => {
   });
   return electrico;
 };
+export const tipoFantasma = (arr, string) => {
+  let fantasma = [];
+  arr.forEach((obj) => {
+    obj.type.forEach((strg) => {
+      if (string === strg) {
+        fantasma += `
+        <div class = "contenedor">
+        <img src ="${obj.img}"/>
+        <p><b>${obj.num} ${obj.name}</b></p>
+        <p>Tipo: ${obj.type}</p>
+        </div>`;
+      }
+    });
+  });
+  return fantasma;
+};
+export const tipoFuego = (arr, string) => {
+  let fuego = [];
+  arr.forEach((obj) => {
+    obj.type.forEach((strg) => {
+      if (string === strg) {
+        fuego += `
+        <div class = "contenedor">
+        <img src ="${obj.img}"/>
+        <p><b>${obj.num} ${obj.name}</b></p>
+        <p>Tipo: ${obj.type}</p>
+        </div>`;
+      }
+    });
+  });
+  return fuego;
+};
