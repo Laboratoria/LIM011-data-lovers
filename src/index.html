@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>Data Lovers</title>
@@ -7,18 +8,35 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+    <div class="menu">
+        <input id="toggle" type="checkbox"/>
+          <label for="toggle" class="drop">
+            <svg width="36px" height="36px" viewBox="0 0 48 48"><path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"></path></svg> 
+          </label >
+        <nav>
+          <ul>
+            <li class="menu-superior"><a href="index.html">INICIO</a></li>
+            <li class="menu-superior"><a href="#orAsc">Ascendente</a></li>
+            <li class="menu-superior"><a href="#orDesc">Descendente</a></li>
+            <li class="menu-superior"><a href="#characters">TOP 10 Pokemons Apariciones</a></li>
+            <li class="menu-superior"><a href="#follow">TIPOS</a></li>
+          </ul>
+        </nav>
+      </div>
   <div>
     <button id="BotonBuscar">Buscar</button> <input id="buscar" type="text">
-    <label for="">Ordena</label><input type="radio" name="ordena" value="asc" id="orAsc">Ascendente 
+    <label for="">Ordena</label><input type="radio" name="ordena" value="asc" id="orAsc">Ascendente
     <input type="radio" name="ordena" value="desc" id="orDesc">Descendente
   </div>
-      <div id="pokemons" class="flex-container"></div>
-      
-      <div id="abc" class="flex-container"></div> 
-    
-      <div id="cba" class="flex-container" ></div> 
-  
+  <div id="pokemons" class="flex-container"></div>
+
+  <div id="abc" class="flex-container"></div>
+
+  <div id="cba" class="flex-container"></div>
+
   <script type="module" src="main.js"></script>
 </body>
+
 </html>
