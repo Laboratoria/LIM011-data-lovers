@@ -1,43 +1,89 @@
+import POKEMON from './data/pokemon/pokemon.js';
+import { pintado, porTipo, porDebilidades } from './data.js';
+
+const todos = document.querySelector('#todos');
+todos.addEventListener('click', () => {
+  document.querySelector('#resultado').innerHTML = pintado(POKEMON, todos.value);
+});
+const Grass = document.querySelector('#Grass');
+Grass.addEventListener('click', () => {
+  document.querySelector('#resultado').innerHTML = porTipo(POKEMON, Grass.value);
+});
+const Water = document.querySelector('#Water');
+Water.addEventListener('click', () => {
+  document.querySelector('#resultado').innerHTML = porTipo(POKEMON, Water.value);
+});
+const Bug = document.querySelector('#Bug');
+Bug.addEventListener('click', () => {
+  document.querySelector('#resultado').innerHTML = porTipo(POKEMON, Bug.value);
+});
+const Electric = document.querySelector('#Electric');
+Electric.addEventListener('click', () => {
+  document.querySelector('#resultado').innerHTML = porTipo(POKEMON, Electric.value);
+});
+const Ghost = document.querySelector('#Ghost');
+Ghost.addEventListener('click', () => {
+  document.querySelector('#resultado').innerHTML = porTipo(POKEMON, Ghost.value);
+});
+const Fire = document.querySelector('#Fire');
+Fire.addEventListener('click', () => {
+  document.querySelector('#resultado').innerHTML = porTipo(POKEMON, Fire.value);
+});
+const Poison = document.querySelector('#Poison');
+Poison.addEventListener('click', () => {
+  document.querySelector('#resultado').innerHTML = porTipo(POKEMON, Poison.value);
+});
+const Flying = document.querySelector('#Flying');
+Flying.addEventListener('click', () => {
+  document.querySelector('#resultado').innerHTML = porTipo(POKEMON, Flying.value);
+});
+const Normal = document.querySelector('#Normal');
+Normal.addEventListener('click', () => {
+  document.querySelector('#resultado').innerHTML = porTipo(POKEMON, Normal.value);
+});
+const Ground = document.querySelector('#Ground');
+Ground.addEventListener('click', () => {
+  document.querySelector('#resultado').innerHTML = porTipo(POKEMON, Ground.value);
+});
+const Fighting = document.querySelector('#Fighting');
+Fighting.addEventListener('click', () => {
+  document.querySelector('#resultado').innerHTML = porTipo(POKEMON, Fighting.value);
+});
+const Psychic = document.querySelector('#Psychic');
+Psychic.addEventListener('click', () => {
+  document.querySelector('#resultado').innerHTML = porTipo(POKEMON, Psychic.value);
+});
+const Rock = document.querySelector('#Rock');
+Rock.addEventListener('click', () => {
+  document.querySelector('#resultado').innerHTML = porTipo(POKEMON, Rock.value);
+});
+const Ice = document.querySelector('#Ice');
+Ice.addEventListener('click', () => {
+  document.querySelector('#resultado').innerHTML = porTipo(POKEMON, Ice.value);
+});
+const Iced = document.querySelector('#Iced');
+Iced.addEventListener('click', () => {
+  document.querySelector('#resultado').innerHTML = porDebilidades(POKEMON, Iced.value);
+});
+const Waterd = document.querySelector('#Waterd');
+Waterd.addEventListener('change', () => {
+  document.querySelector('#resultado').innerHTML = porDebilidades(POKEMON, Waterd.value);
+});
 const bienvenida = document.getElementById('bienvenida');
-const pintame = document.getElementById('pintame');
 const boton1 = document.getElementById('boton1');
-
-
+const pagina2 = document.getElementById('pagina2');
 boton1.addEventListener('click', () => {
   bienvenida.classList.add('hide');
-  pintame.classList.remove('hide');
+  pagina2.classList.remove('hide');
 });
-
-import POKEMON from './data/pokemon/pokemon.js';
+const atras = document.getElementById('atras');
+atras.addEventListener('click', () => {
+  bienvenida.classList.remove('hide');
+  pagina2.classList.add('hide');
+});
 
 console.log(POKEMON);
 /* TRAEMOS TODO LO QUE ESTÁ EN LA DATA CON LA VARIABLE */ /* eslint-disable import/first */
-import { pintado } from './data.js';
-
-document.querySelector('#pintame').innerHTML = pintado(POKEMON);
 
 
-// let misPokemones = '';
-// POKEMON.forEach((pintar) => {
-//   misPokemones += `
-//         <div class = "contenedor">
-//         <img src ="${pintar.img}"/>
-//         <p><b>${pintar.id} ${pintar.name}</b></p>
-//         <p>Altura: ${pintar.height}</p>
-//         <p>Peso: ${pintar.weight}</p>
-//         <p>Caramelos: ${pintar.candy_count}</p>
-//         <p>Tiempo de Aparición: <br>${pintar.spawn_time}</p>
-//         <p>Debilidades:<br>${pintar.weaknesses}</p>
-//         </div>
-//         `;
-//   document.querySelector('#pintame').innerHTML = misPokemones;
-// });
-/*
-const steel = document.getElementById('steel'); 
-steel.addEventListener('clic', () => {
-
-const filtroSteel = POKEMON.filter(type => {
-
-
-document.querySelector('#steel').innerHTML = filtroSteel;
-}); */
+/* document.querySelector('#pintame').innerHTML = pintado(POKEMON); */

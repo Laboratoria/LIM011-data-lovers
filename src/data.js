@@ -1,12 +1,6 @@
-/* Manejo de data */
-/* esta es una función de ejemplo */
+
 /* eslint-disable import/prefer-default-export */
 /* eslint arrow-body-style: ["error", "always"] */
-
-/* export const mostrarPokemon = () => {
-    return 'mostrarPokemon';
-}; */
-
 /* Se crea una variable PINTADO y nuestro parametro será dataPokemon
 para que el recorrido actúe sobre toda la base */
 
@@ -27,3 +21,38 @@ export const pintado = (dataPokemon) => {
   });
   return misPokemones;
 };
+
+export const porTipo = (arr, string) => {
+  let tipo = [];
+  arr.forEach((obj) => {
+    obj.type.forEach((strg) => {
+      if (string === strg) {
+        tipo += `
+        <div class = "contenedor">
+        <img src ="${obj.img}"/>
+        <p><b>${obj.num} ${obj.name}</b></p>
+        <p>Tipo: ${obj.type}</p>
+        </div>`;
+      }
+    });
+  });
+  return tipo;
+};
+
+export const porDebilidades = (arr, stringDeb) => {
+  let filterWeak = [];
+  arr.forEach((objWeak) => {
+    objWeak.weaknesses.forEach((strgDeb) => {
+      if (stringDeb === strgDeb) {
+        filterWeak += `
+        <div class = "contenedor">
+        <img src ="${objWeak.img}"/>
+        <p><b>${objWeak.num} ${objWeak.name}</b></p>
+        <p>Debilidades:<br>${objWeak.weaknesses}</p>
+        </div>`;
+      }
+    });
+  });
+  return filterWeak;
+};
+
