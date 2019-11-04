@@ -166,7 +166,7 @@ header label { /* esto es el icono de menu */
 }
 
 /* FILTRO BUSCAR */
-#buscar{
+#filtradoPorBusqueda{
     position: relative;
 }
 .buscar{
