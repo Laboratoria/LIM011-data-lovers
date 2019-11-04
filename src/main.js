@@ -63,11 +63,11 @@ Ice.addEventListener('click', () => {
 });
 const Iced = document.querySelector('#Iced');
 Iced.addEventListener('click', () => {
-  document.querySelector('#resultado').innerHTML = porDebilidades(POKEMON, Iced.value);
+  document.querySelector('#resultado').innerHTML = porDebilidades(POKEMON, Ice.value);
 });
-const Waterd = document.querySelector('#Waterd');
+const Waterd = document.querySelector('.Waterd');
 Waterd.addEventListener('change', () => {
-  document.querySelector('#resultado').innerHTML = porDebilidades(POKEMON, Waterd.value);
+  document.querySelector('#resultado').innerHTML = porDebilidades(POKEMON, Water.value);
 });
 const bienvenida = document.getElementById('bienvenida');
 const boton1 = document.getElementById('boton1');

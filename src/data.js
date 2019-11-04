@@ -55,4 +55,3 @@ export const porDebilidades = (arr, stringDeb) => {
   });
   return filterWeak;
 };
-
