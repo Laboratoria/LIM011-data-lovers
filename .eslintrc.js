@@ -18,13 +18,6 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-<<<<<<< HEAD
-  "linebreak-style":0,
-  "semi":["error", "always"],
-  "import/extensions":['error', 'always', {ignorePackages: true} ]
-  },
-};
-=======
     'linebreak-style': 0,
     'prefer-destructuring': 0,
     'import/extensions': 0,
@@ -36,4 +29,3 @@ module.exports = {
     'jest/valid-expect': 'error',
   },
 };
->>>>>>> 0cf3d261a4c979a2226e9699c9d58b2e21361245
