@@ -1,9 +1,9 @@
 // import POKEMON from './data/pokemon/pokemon.js'
 // import LoL from './data/lol/lol.js'
 import POTTER from "./data/potter/potter.js";
-console.log(POTTER);
+// console.log(POTTER);
 
-import { mostrarCaracteristicasPotter } from "./data.js";
+import { mostrarCaracteristicasPotter, probando } from "./data.js";
 
 
 const miArrImagenes = document.getElementById("arrPotter");
@@ -35,6 +35,37 @@ POTTER.forEach(pintar => {
     `;
   miArrImagenes.innerHTML = pintaImagen;
 });
+
+// let casas = {
+//   casa1: 'Gryffindor',
+//   cas2: 'Slythering',
+//   casa3: 'Hufflepuff',
+//   casa4: 'Revenclaw'
+// }
+
+// let students = filtrar(POTTER, 'hogwartsStudent');
+// let profesores = filtrar(POTTER, 'hogwartsStaff');
+
+// console.log(students);
+// console.log(profesores);
+
+let prueba = probando(POTTER);
+console.log(prueba);
+
+
+
+
+// const ocupacion = (POTTER => {
+//   let mostrando = '';
+//   POTTER.forEach(rol  =>{
+  
+//   })
+// })
+
+
+// const filtraPorOcupacion = POTTER.filter (ocupacion => {
+   
+// })
 
  
 
