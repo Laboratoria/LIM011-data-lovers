@@ -26,6 +26,7 @@ seleccionar.addEventListener('change', (evento) => {
   document.getElementById("valorDeBusqueda").value ="";
     
     const opcionSeleccionada = evento.target.value
+    
     divTodos.innerHTML ='';
     divG.innerHTML='';
     divH.innerHTML='';
