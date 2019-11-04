@@ -1,10 +1,11 @@
 import POTTER from './data/potter/potter.js';
 
-import {mostrarPersonajes} from './data.js';
-const soloG = POTTER.filter(g => (g.house === 'Gryffindor'));
-const soloH = POTTER.filter(h => (h.house === 'Hufflepuff'));
-const soloR = POTTER.filter(r => (r.house === 'Ravenclaw'));
-const soloS = POTTER.filter(s => (s.house === 'Slytherin'));
+import { ordenado,filtrado, mostrarPersonajes} from './data.js';
+
+// const soloG = POTTER.filter(g => (g.house === 'Gryffindor'));
+// const soloH = POTTER.filter(h => (h.house === 'Hufflepuff'));
+// const soloR = POTTER.filter(r => (r.house === 'Ravenclaw'));
+// const soloS = POTTER.filter(s => (s.house === 'Slytherin'));
 
 const divTodos = document.getElementById('todos');
 const divG = document.getElementById('soloG');
@@ -13,14 +14,14 @@ const divR = document.getElementById('soloR');
 const divS = document.getElementById('soloS');
 
 
-
-document.querySelector('#todos').innerHTML = mostrarPersonajes(POTTER);
+document.querySelector('#todos').innerHTML = mostrarPersonajes(ordenado(POTTER));
 
 const valorDeBusqueda = document.querySelector('#valorDeBusqueda');
 
 
 
 const seleccionar =document.querySelector('.filtrar-casas');
+
 seleccionar.addEventListener('change', (evento) => {
   // borra el input de busqueda al cambiar de option en el select 
   document.getElementById("valorDeBusqueda").value ="";
@@ -36,19 +37,18 @@ seleccionar.addEventListener('change', (evento) => {
     switch(opcionSeleccionada){
         case 'Todos':
           divTodos.innerHTML=mostrarPersonajes(POTTER);
-
           break;
         case 'Gryffindor':
-          divG.innerHTML=`<h1 class="titulos">Gryffindor</h1>`+mostrarPersonajes(soloG);
+          divG.innerHTML=`<h1 class="titulos">Gryffindor</h1>`+mostrarPersonajes(ordenado(filtrado(POTTER, 'G')));
          break;
         case 'Hufflepuff':
-          divH.innerHTML=`<h1 class="titulos">Hufflepuff</h1>`+mostrarPersonajes(soloH);
+          divH.innerHTML=`<h1 class="titulos">Hufflepuff</h1>`+mostrarPersonajes(ordenado(filtrado(POTTER, 'H')));
          break;
         case 'Ravenclaw':
-          divR.innerHTML=`<h1 class="titulos">Ravenclaw</h1>`+mostrarPersonajes(soloR);
+          divR.innerHTML=`<h1 class="titulos">Ravenclaw</h1>`+mostrarPersonajes(ordenado(filtrado(POTTER, 'R')));
          break;
         case 'Slytherin':
-          divS.innerHTML=`<h1 class="titulos">Slytherin</h1>`+mostrarPersonajes(soloS);
+          divS.innerHTML=`<h1 class="titulos">Slytherin</h1>`+mostrarPersonajes(ordenado(filtrado(POTTER, 'S')));
         }
     });
 
@@ -67,37 +67,31 @@ seleccionar.addEventListener('change', (evento) => {
         case 'Todos':
           dataSeleccionada =POTTER;
           divSeleccionado = divTodos;
-          console.log("todos");
           break;
           case 'Gryffindor':
               dataSeleccionada =soloG;
               divSeleccionado = divG;
-              console.log("g");
              break;
           case 'Hufflepuff':
               dataSeleccionada =soloH;
               divSeleccionado = divH;
-              console.log("h");
              break;
           case 'Ravenclaw':
               dataSeleccionada =soloR;
               divSeleccionado = divR;
-              console.log("r");
              break;
           case 'Slytherin':
               dataSeleccionada =soloS;
-              divSeleccionado = divS;
-              console.log("s");            
+              divSeleccionado = divS;       
       }
     }
-    seleccionar.addEventListener('input',filtradoSeleccionado);
+
+   seleccionar.addEventListener('input',filtradoSeleccionado);
     filtradoSeleccionado();
 
     
-export const busqueda =()=>{     
-  const divFiltrado = divSeleccionado;
-  
-  divFiltrado.innerHTML='';
+     const busqueda =()=>{       
+  divSeleccionado.innerHTML='';
   const textoBuscado = valorDeBusqueda.value.toLowerCase()
   for(let i=0; i<dataSeleccionada.length; i+=1){
     const dataSoloNombres = dataSeleccionada[i].name.toLowerCase();
@@ -106,20 +100,20 @@ export const busqueda =()=>{
     const primerNombre = dataSoloNombres.slice(0,caracterEspacio);
     const segundoNombre = dataSoloNombres.slice(caracterEspacio+1,dataSoloNombres.length);
       if(primerNombre.slice(0,longitudBusqueda)===textoBuscado){
-        divFiltrado.innerHTML += `<div id="imagenes" class="casas-card">
+        divSeleccionado.innerHTML += `<div id="imagenes" class="casas-card">
           <img class="imagen" src= "${dataSeleccionada[i].image}"/>
           <p>${dataSeleccionada[i].name}</p>
           </div>`
       }
       else if(segundoNombre.slice(0,longitudBusqueda)===textoBuscado){
-        divFiltrado.innerHTML += `<div id="imagenes" class="casas-card">
+        divSeleccionado.innerHTML += `<div id="imagenes" class="casas-card">
           <img class="imagen" src= "${dataSeleccionada[i].image}"/>
           <p>${dataSeleccionada[i].name}</p>
           </div>`
       }
     }
-  if(divFiltrado.innerHTML ===''){
-    divFiltrado.innerHTML +=`<p>No se encontró ningún personaje</p>`
+  if(divSeleccionado.innerHTML ===''){
+    divSeleccionado.innerHTML +=`<p>No se encontró ningún personaje</p>`
   }
 
 }
