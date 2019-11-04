@@ -2,10 +2,6 @@ import POTTER from './data/potter/potter.js';
 
 import { ordenado,filtrado, mostrarPersonajes} from './data.js';
 
-// const soloG = POTTER.filter(g => (g.house === 'Gryffindor'));
-// const soloH = POTTER.filter(h => (h.house === 'Hufflepuff'));
-// const soloR = POTTER.filter(r => (r.house === 'Ravenclaw'));
-// const soloS = POTTER.filter(s => (s.house === 'Slytherin'));
 
 const divTodos = document.getElementById('todos');
 const divG = document.getElementById('soloG');
