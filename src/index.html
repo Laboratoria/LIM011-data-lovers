@@ -10,62 +10,114 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900&display=swap" rel="stylesheet">
 </head>
 
+<!-- BODY -->
 <body>
   <header>
-    <div= id="menu-flotante">
+    <div class="menu-flotante"> 
       <img src="imagenes/ww-g.png" class="logo">
       <input type="checkbox" id="menu-nav">
       <label for="menu-nav" class="icon-menu"></label>
       <nav class="menu">
         <!-- <a href="#">Personajes</a>
         <a href="#">Rol</a> -->
-        <a href="#">CASAS</a>
+        <a href="#" id="menu-casas">CASAS</a>
       </nav>
-    </div>
+    </div> 
   </header>
-  <main>
-    <section>
-      <div id="nubes">
-      <div id="menu-flotante">
-      <div id="filtros"> 
-      <div id="select">
-       <select class="filtrar-casas">
-        <option value="Todos" selected>Todos</option>
-        <option value="Gryffindor">Gryffindor</option>
-        <option value="Hufflepuff">Hufflepuff</option>
-        <option value="Ravenclaw">Ravenclaw</option>
-        <option value="Slytherin">Slytherin</option>
-      </select>
-      </div>
-      <div id="filtradoPorBusqueda">
-        <input type="search"  id="valorDeBusqueda" class="buscar" placeholder="Buscador">
-        <i class="icon-search"></i>
-      </div>
-      </div>
-      </div>
-      <div id="todos"></div>
-      <div id="soloG"></div>
-      <div id="soloH"></div>
-      <div id="soloR"></div>
-      <div id="soloS"></div>
-      </div>
-    </section>
-  </main>
 
+  <!-- CONTENIDO -->
+  <main>
+    <section> <!-- section de filtros-->
+      <div id="nubes"> <!-- FONDO NUBES-->
+
+        <!-- Menu Casas -->
+        <div id="casas" class="menu-flotante">
+          <!-- class="ocultar"-->
+          <div id="filtros">
+            <div id="select">
+              <select class="filtrar-casas">
+                <option value="Todos" selected>Todos</option>
+                <option value="Gryffindor">Gryffindor</option>
+                <option value="Hufflepuff">Hufflepuff</option>
+                <option value="Ravenclaw">Ravenclaw</option>
+                <option value="Slytherin">Slytherin</option>
+              </select>
+            </div>
+            
+            <div id="filtradoPorBusqueda">
+              <input type="search"  id="valorDeBusqueda" class="buscar" placeholder="Buscador">
+              <i class="icon-search"></i>
+            </div>
+          </div> <!-- fin del filtros-->
+          <div id="todos"></div>
+          <div id="soloG"></div>
+          <div id="soloH"></div>
+          <div id="soloR"></div>
+          <div id="soloS"></div>
+        </div> <!-- fin de menu Casas-->
+
+        <!-- Menu Rol -->
+      <div id="rol" class="menu-flotante ocultar">
+          <div id="filtros">
+            <div id="select">
+              <select class="filtrar-rol">
+                <option value="" hidden selected>Filtrar</option>
+                <option value="Alumno">Alumno</option>
+                <option value="Profesor">Profesor</option>
+              </select>
+            </div>
+            <div id="buscar">
+              <input type="search" id="busqueda" class="buscar" placeholder="Buscador">
+              <i class="icon-search"></i>
+            </div>
+          </div> <!-- fin del filtros-->
+      </div>
+        <!-- fin del menu rol -->
+   
+        <!-- Menu Personajes  -->
+        <div id="personajes" class="menu-flotante ocultar">
+            <div id="filtros">
+              <div id="select">
+                <select class="filtrar-rol">
+                  <option value="" hidden selected>Género</option>
+                  <option value="Femenino">Femenino</option>
+                  <option value="Masculino">Masculino</option>
+                </select>
+              </div>
+              <div id="buscar">
+                <input type="search" id="busqueda" class="buscar" placeholder="Buscador">
+                <i class="icon-search"></i>
+              </div>
+            </div> <!-- fin del filtros-->
+        </div> <!-- fin del menu personajes-->
+      </div> <!-- fin de nubes background-->
+    </section> <!-- fin section de filtros-->
+
+    <!-- INICIO -->
+    <section class="ocultar"> <!-- section de inicio -->
+      <div id="inicio"> <!-- FONDO HIPOGRIFO-->
+        <img src="images/logo-wz-w.png" /> <!--logo wizard-->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Sapiente illo rem, dicta quidem nisi quibusdam aut, nam reprehenderit beatae,
+          velit cum? Id tempore quia in neque illo placeat blanditiis aut.</p>
+      </div>
+    </section> <!-- fin del section de inicio-->
+  </main>
 
   <footer>
     <div id="footer">
-    <div id="ftr">
-      <img src="imagenes/wb-w.png" class="logo-footer">
-    <img src="images/logo-wz-w.png" class="logo-footer">
-    </div>
-    <div id="ftr"><p class="copy">&copy; El Mundo de Harry Potter 2019</p></div>
-    <div id="ftr"><span class="icon-facebook icon"></span>
-      <span class="icon-youtube icon"></span>
-      <span class="icon-twitter icon"></span></div>
+      <div id="ftr">
+        <img src="imagenes/wb-w.png" class="logo-footer">
+        <img src="images/logo-wz-w.png" class="logo-footer">
+      </div>
+      <div id="ftr">
+        <p class="copy">&copy; El Mundo de Harry Potter 2019</p>
+      </div>
+      <div id="ftr"><span class="icon-facebook icon"></span>
+        <span class="icon-youtube icon"></span>
+        <span class="icon-twitter icon"></span></div>
     </div>
   </footer>
   <script type="module" src="main.js"></script>
 </body>
-
 </html>
