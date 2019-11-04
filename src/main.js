@@ -1,7 +1,8 @@
+/* eslint-disable no-alert */
+/* eslint-disable no-console */
 
 import POKEMON from './data/pokemon/pokemon.js';
-
-// import { mostrarListaPokemon } from './data.js';
+import { filtrartipopokemon, filtrarDebilidadPokemon, filtrarKmPokemon } from './data.js';
 
 const datosPokemon = (datos) => {
   datos.forEach((poke) => {
@@ -33,7 +34,7 @@ const datosPokemon = (datos) => {
     etiquetaNombrePokemon.appendChild(nombrePokemonAtras);
     tarjetaCaracteristicasPokemon.appendChild(etiquetaNombrePokemon);
     const parrafoCaracteristicasPokemon = document.createElement('p');
-    const arrayCaracteristicas = [`Tipo: ${poke.type}`, `Peso: ${poke.weight}`, `Tamaño: ${poke.height}`, `Debilidades: ${poke.weaknesses}`];
+    const arrayCaracteristicas = [`Tipo: ${poke.type}`, `Debilidades: ${poke.weaknesses}`, `Peso: ${poke.weight}`, `Tamaño: ${poke.height}`, `Km: ${poke.egg}`];
     for (let a = 0; a < arrayCaracteristicas.length; a += 1) {
       const saltoLinea = document.createElement('br');
       const caracteristica = document.createTextNode(arrayCaracteristicas[a]);
@@ -49,5 +50,22 @@ const datosPokemon = (datos) => {
   });
   return datosPokemon;
 };
-
 datosPokemon(POKEMON);
+
+document.querySelector('#filtrar-tipo-pokemon').addEventListener('change', () => {
+  document.querySelector('#contenedor-pokemon').innerHTML = '';
+  const seleccioneTipoPokemon = document.querySelector('#filtrar-tipo-pokemon').value;
+  datosPokemon(filtrartipopokemon(POKEMON, seleccioneTipoPokemon));
+});
+
+document.querySelector('#filtrar-debilidad-pokemon').addEventListener('change', () => {
+  document.querySelector('#contenedor-pokemon').innerHTML = '';
+  const seleccioneDebilidadPokemon = document.querySelector('#filtrar-debilidad-pokemon').value;
+  datosPokemon(filtrarDebilidadPokemon(POKEMON, seleccioneDebilidadPokemon));
+});
+
+document.querySelector('#filtrar-km-pokemon').addEventListener('change', () => {
+  document.querySelector('#contenedor-pokemon').innerHTML = '';
+  const seleccioneKmPokemon = document.querySelector('#filtrar-km-pokemon').value;
+  datosPokemon(filtrarKmPokemon(POKEMON, seleccioneKmPokemon));
+});
