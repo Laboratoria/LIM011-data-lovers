@@ -111,6 +111,9 @@
     height:45px;
     font-size: 18px;
     border-radius:10px;
+    font-family: 'Roboto Slab', serif;
+    margin-top: 10px;
+    display: block;
 }
 
 /* Smartphones (landscape) */
