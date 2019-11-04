@@ -1,4 +1,6 @@
-
+.ocultar{
+    display: none;
+}
 *{
     margin: 0;
     padding: 0;
@@ -22,12 +24,12 @@ header{
     left: 0;
     z-index: 100;
 }
-#menu-flotante {
+.menu-flotante {
     width: 98%;
     margin: auto;
 }
 
-header #menu-flotante {
+header .menu-flotante {
     display: table;
 }
 
@@ -58,7 +60,7 @@ header label { /* esto es el icono de menu */
 .menu a {
     display: block;
     color: #fff;
-    height: 50px;
+    height: 25px;
     text-decoration: none;
     padding: 15px;
     border-bottom: 1px solid hsla(0, 0%, 50%, 0.5);
@@ -79,13 +81,47 @@ header label { /* esto es el icono de menu */
 #nubes{ /*div de vistas */
     margin-top: 60px;
     width: 100%;
-    height: 734px;
+    height: 100%;
+    min-height: 800px;
     /* fondo de nubes */
     background-image: url(images/background-e.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
+
+#inicio{ /*div de vistas */
+    margin-top: 60px;
+    width: 100%;
+    height: 100%;
+    min-height: 800px;
+    /* fondo de hipogrifo */
+    background-image: url(images/hipo-e.png);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position-x: 70%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inicio img{
+    margin-top: 100px;
+    width: 50%;
+    height: 30%;
+}
+
+#inicio p {
+    margin-top: 20px;
+    padding: 5px;
+    width: 50%;
+    color: #fff;
+    text-align: justify;
+    font-weight: 300;
+}
+
 #filtros{
     display: flex;
     flex-direction: row;
@@ -93,15 +129,6 @@ header label { /* esto es el icono de menu */
     align-content: flex-end;
     width: auto;
     padding: 20px 0px;
-}
-
-.titulos{
-    color: #6b6b6b;
-}
-
-#todos{
-    display: flex;
-    flex-wrap: wrap;
 }
 
 /* SELECT */
@@ -128,25 +155,16 @@ header label { /* esto es el icono de menu */
     color: #fff;
     position: absolute;
     top: 15%;
-    bottom: 0;
     right: 8px;
     pointer-events: none;
 }
-select{
-    outline: none;
-    box-shadow: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
+
 #select select option {
     color: #333;
     font-weight: 300;
     font-size: 10pt;
 }
+
 /* FILTRO BUSCAR */
 #buscar{
     position: relative;
@@ -176,34 +194,34 @@ select{
     color: #fff;
 }
 /* CUERPO DATA HP */
-#soloG, #soloH, #soloR, #soloS{ /*div de contenido de todos los personajes */
-    justify-content: flex-start;
+#soloG, #soloH, #soloR, #soloS, #todos{ /*div de contenido de todos los personajes */
+    justify-content: space-around;
+    align-content: center;
     display: flex;
     flex-wrap: wrap;
-    padding: 10px;
-    color: #fff;
     font-weight: 400;
 }
 
 .imagen { /*imagenes*/
-    width: 50%;
+    width: 100%;
     box-shadow: 5px 5px 10px rgba(77, 77, 77, 0.3);
     margin-bottom: 10px;
 }
 .casas-card{ /*div card de cada imagen */
     background: rgba(24, 110, 121, 0.521);
     margin: 5px;
-    padding: 0;
-    width: 30%;
-    justify-content: flex-start;
+    width: 40%;
+    justify-content: center;
+    align-content: center;
     text-align: center;
+    flex-wrap: wrap;
 }
 
-
-.casas-card p{ /*div card de cada imagen */
+.casas-card p{ /*div card texto de cada imagen */
    color: #fff;
-   font-size: 10px;
+   font-size: 15px;
 }
+
 
 /* FOOTER */
 footer{
@@ -248,7 +266,7 @@ footer #footer{ /*div padre */
 /* RESPONSIVE menu*/
 
 @media (min-width:1024px){
-    #menu-flotante{
+    .menu-flotante{
         width: 1100px;
     }
     .menu{
@@ -292,6 +310,21 @@ footer #footer{ /*div padre */
         margin-top: 60px;
         width: 100%;
         height: auto;
+    }
+
+    .casas-card{ /*div card de cada imagen */
+        background: rgba(24, 110, 121, 0.521);
+        margin-top: 60px;
+        width: 20%;
+        justify-content: space-around;
+        align-content: space-between;
+        text-align: center;
+    }
+
+    .imagen { /*imagenes*/
+        width: 80%;
+        box-shadow: 5px 5px 10px rgba(77, 77, 77, 0.3);
+        margin-bottom: 10px;
     }
 
     /* RESPONSIVE FOOTER */

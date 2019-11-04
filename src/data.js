@@ -1,4 +1,5 @@
 import POTTER from './data/potter/potter.js';
+
 export const example = () =>{
   return 'example';
 };

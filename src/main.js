@@ -4,6 +4,11 @@ import {example} from './data.js';
 import {mostrarPersonajes} from './data.js';
 import {ordenado} from './data.js';
 
+// const casas = document.getElementById('casas');
+// const menuCasas = document.getElementById('menu-casas');
+// menuCasas.addEventListener('click', () => {
+//   casas.classList.add('ocultar');
+// });
 
 const soloG = POTTER.filter(g => (g.house === 'Gryffindor'));
 const soloH = POTTER.filter(h => (h.house === 'Hufflepuff'));
@@ -29,17 +34,20 @@ seleccionar.addEventListener('change', (evento) => {
     divR.innerHTML='';
     divS.innerHTML='';
     switch(opcionSeleccionada){
+        case 'Todos':
+          divTodos.innerHTML=mostrarPersonajes(POTTER);
+          break;
         case 'Gryffindor':
-          divG.innerHTML=`<h1 class="titulos">Gryffindor</h1>`+mostrarPersonajes(soloG);
+          divG.innerHTML=`<h1>Gryffindor</h1>`+mostrarPersonajes(soloG);
           break;
         case 'Hufflepuff':
-          divH.innerHTML=`<h1 class="titulos">Hufflepuff</h1>`+mostrarPersonajes(soloH);
+          divH.innerHTML=`<h1>Hufflepuff</h1>`+mostrarPersonajes(soloH);
           break;
         case 'Ravenclaw':
-          divR.innerHTML=`<h1 class="titulos">Ravenclaw</h1>`+mostrarPersonajes(soloR);
+          divR.innerHTML=`<h1>Ravenclaw</h1>`+mostrarPersonajes(soloR);
           break;
         case 'Slytherin':
-          divS.innerHTML=`<h1 class="titulos">Slytherin</h1>`+mostrarPersonajes(soloS);
+          divS.innerHTML=`<h1>Slytherin</h1>`+mostrarPersonajes(soloS);
     }
     });
     
@@ -50,13 +58,17 @@ seleccionar.addEventListener('change', (evento) => {
     // const boton = document.querySelector('#clickbu');
 
     // const pbusq =()=>{
-    //   // console.log(buscar.value);
-    //   // const texto = buscar.value.toLowerCase()
-    //   // for(let i=0; i<POTTER.length; i+=1){
-    //   //   const todosNombres = POTTER[i].name.toLowerCase;
-    //   // }
+    //   console.log(buscar.value);
+    //   const texto = buscar.value.toLowerCase()
+    //   for(let i=0; i<POTTER.length; i+=1){
+    //     const todosNombres = POTTER[i].name.toLowerCase();
+    //     if(todosNombres.indexOf(texto) !== -1){
+    //       divTodos.innerHTML +=
+    //     }
+    //   }
     // }
     // boton.addEventListener('click', pbusq);
+
     // const todosNombres = POTTER[0].name
-    // const minusculas = todosNombres.toLowerCase
-    // console.log(typeof(POTTER[0].name))
+    // const minusculas = todosNombres.value
+    // console.log(todosNombres)
