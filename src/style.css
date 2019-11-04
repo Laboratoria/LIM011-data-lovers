@@ -105,6 +105,13 @@
     border-radius:10px;
     justify-content: flex-end;
 }
+.select{
+    position: relative;
+    width: 130px;
+    height:45px;
+    font-size: 18px;
+    border-radius:10px;
+}
 
 /* Smartphones (landscape) */
 @media only screen 

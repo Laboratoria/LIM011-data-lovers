@@ -22,12 +22,12 @@ export const pintado = (dataPokemon) => {
   return misPokemones;
 };
 
-export const tipoPlanta = (arr, string) => {
-  let acero = [];
+export const porTipo = (arr, string) => {
+  let tipo = [];
   arr.forEach((obj) => {
     obj.type.forEach((strg) => {
       if (string === strg) {
-        acero += `
+        tipo += `
         <div class = "contenedor">
         <img src ="${obj.img}"/>
         <p><b>${obj.num} ${obj.name}</b></p>
@@ -36,86 +36,23 @@ export const tipoPlanta = (arr, string) => {
       }
     });
   });
-  return acero;
+  return tipo;
 };
 
-export const tipoAgua = (arr, string) => {
-  let agua = [];
-  arr.forEach((obj) => {
-    obj.type.forEach((strg) => {
-      if (string === strg) {
-        agua += `
+export const porDebilidades = (arr, stringDeb) => {
+  let filterWeak = [];
+  arr.forEach((objWeak) => {
+    objWeak.weaknesses.forEach((strgDeb) => {
+      if (stringDeb === strgDeb) {
+        filterWeak += `
         <div class = "contenedor">
-        <img src ="${obj.img}"/>
-        <p><b>${obj.num} ${obj.name}</b></p>
-        <p>Tipo: ${obj.type}</p>
+        <img src ="${objWeak.img}"/>
+        <p><b>${objWeak.num} ${objWeak.name}</b></p>
+        <p>Debilidades:<br>${objWeak.weaknesses}</p>
         </div>`;
       }
     });
   });
-  return agua;
+  return filterWeak;
 };
-export const tipoBicho = (arr, string) => {
-  let bicho = [];
-  arr.forEach((obj) => {
-    obj.type.forEach((strg) => {
-      if (string === strg) {
-        bicho += `
-        <div class = "contenedor">
-        <img src ="${obj.img}"/>
-        <p><b>${obj.num} ${obj.name}</b></p>
-        <p>Tipo: ${obj.type}</p>
-        </div>`;
-      }
-    });
-  });
-  return bicho;
-};
-export const tipoElectrico = (arr, string) => {
-  let electrico = [];
-  arr.forEach((obj) => {
-    obj.type.forEach((strg) => {
-      if (string === strg) {
-        electrico += `
-        <div class = "contenedor">
-        <img src ="${obj.img}"/>
-        <p><b>${obj.num} ${obj.name}</b></p>
-        <p>Tipo: ${obj.type}</p>
-        </div>`;
-      }
-    });
-  });
-  return electrico;
-};
-export const tipoFantasma = (arr, string) => {
-  let fantasma = [];
-  arr.forEach((obj) => {
-    obj.type.forEach((strg) => {
-      if (string === strg) {
-        fantasma += `
-        <div class = "contenedor">
-        <img src ="${obj.img}"/>
-        <p><b>${obj.num} ${obj.name}</b></p>
-        <p>Tipo: ${obj.type}</p>
-        </div>`;
-      }
-    });
-  });
-  return fantasma;
-};
-export const tipoFuego = (arr, string) => {
-  let fuego = [];
-  arr.forEach((obj) => {
-    obj.type.forEach((strg) => {
-      if (string === strg) {
-        fuego += `
-        <div class = "contenedor">
-        <img src ="${obj.img}"/>
-        <p><b>${obj.num} ${obj.name}</b></p>
-        <p>Tipo: ${obj.type}</p>
-        </div>`;
-      }
-    });
-  });
-  return fuego;
-};
+
