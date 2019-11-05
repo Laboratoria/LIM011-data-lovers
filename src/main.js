@@ -5,14 +5,24 @@ document.querySelector('#pintame').innerHTML = pintado(POKEMON);
 
 const selecte1 = document.querySelector('#select-type');
 selecte1.addEventListener('change', () => {
+  const pintame = document.getElementById('pintame');
+  pintame.classList.add('hide');
   document.querySelector('#resultado').innerHTML = porTipo(POKEMON, selecte1.value);
+});
+const all = document.querySelector('#all');
+all.addEventListener('change', () => {
+  document.querySelector('#resultado').innerHTML = pintado(POKEMON);
 });
 const selecte = document.querySelector('#select-weaknesses');
 selecte.addEventListener('change', () => {
+  const pintame = document.getElementById('pintame');
+  pintame.classList.add('hide');
   document.querySelector('#resultado').innerHTML = porDebilidades(POKEMON, selecte.value);
 });
 const selecte2 = document.querySelector('#select-candy');
 selecte2.addEventListener('change', () => {
+  const pintame = document.getElementById('pintame');
+  pintame.classList.add('hide');
   document.querySelector('#resultado').innerHTML = needCandy(POKEMON, selecte2.value);
 });
 const bienvenida = document.getElementById('bienvenida');
