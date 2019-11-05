@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body class="">
   <div id="root"></div>
   <div id= bienvenida class="bienvenida">
       <button type="button" class="fondoBoton" id="boton1">Atrápalos Ya!!!</button>
@@ -21,54 +21,66 @@
       <div class="logo" >
           <img src="https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c52f.png"></div>
      </div>
-
-    <div id="pagina2" class="fondo2 hide">
+  
+    <div id="pagina2" class="pagina2 hide">
+     
         <button id="atras" class="btnAtras">Atrás</button>
-           <div id= "pintame" class = "hide"></div>  
-        <div id= "resultado">    
+        <div class="pikachu">
+          <div id="pintame" class="pintame hide"></div> 
+        <img src="https://images.squarespace-cdn.com/content/v1/51a62706e4b053d43020738a/1514571709114-98UYUBPF03LXN6BNLVQN/ke17ZwdGBToddI8pDm48kE6My2sCT0XoRp2ihMzrjg9Zw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVGhay6eosocLN3UM7XdHCKGy1Ioo23Exu1Z0nxAYicQNB926scO3xePJoa6uVJa9B4/pokemon.png?format=1000w" >
+        </div>
+        <div id= "resultado"> 
+          </div>
+          <select id="select-weaknesses" class="select2"> 
+            <option>Debilidades</option>
+            <option  value="Water">Agua</option>
+            <option  value="Ice">Hielo</option>
+            <option  value="Steel">Acero</option>
+            <option  value="Grass">Planta</option>
+            <option  value="Poison">Veneno</option>
+            <option  value="Fire">Fuego</option>
+            <option  value="Flying">Volador</option>
+            <option  value="Bug">Bicho</option>
+            <option  value="Electric">Eléctrico</option>
+            <option  value="Ground">Tierra</option>
+            <option  value="Fighting">Luchador</option>
+            <option  value="Psychic">Psíquico</option>
+            <option  value="Rock">Roca</option>
+            <option  value="Ghost">Fantasma</option>
+            <div id= "resultado">   
+             </select>
+            </div>  
+            <select id="select-candy" class="select"> 
+                <option>Caramelos</option>
+                <option  value= "12">Necesitan 12 candies</option>
+                <option  value= "25">Necesitan 25 candies</option>
+                <option  value= "50">Necesitan 50 candies</option>
+                <option  value= "100">Necesitan 100 candies</option>
+                <option  value= "400">Necesitan 400 candies</option>
+                <div id= "resultado">   
+            </select>
             <select id="select-type" class="select"> 
-                <option>Tipos</option>
-                <option  value="Water">Agua</option>
-                <option  value="Ice">Hielo</option>
-                <option  value="Grass">Planta</option>
-                <option  value="Poison">Veneno</option>
-                <option  value="Fire">Fuego</option>
-                <option  value="Flying">Volador</option>
-                <option  value="Bug">Bicho</option>
-                <option  value="Normal">Normal</option>
-                <option  value="Electric">Eléctrico</option>
-                <option  value="Ground">Tierra</option>
-                <option  value="Fighting">Luchador</option>
-                <option  value="Psychic">Psíquico</option>
-                <option  value="Rock">Roca</option>
-                <option  value="Ghost">Fantasma</option>
-                <div id= "resultado">   
-            </select>
-
-            <select id="select-weaknesses" class="select"> 
-                <option>Debilidades</option>
-                <option  value="Water">Agua</option>
-                <option  value="Ice">Hielo</option>
-                <option  value="Steel">Acero</option>
-                <option  value="Grass">Planta</option>
-                <option  value="Poison">Veneno</option>
-                <option  value="Fire">Fuego</option>
-                <option  value="Flying">Volador</option>
-                <option  value="Bug">Bicho</option>
-                <option  value="Electric">Eléctrico</option>
-                <option  value="Ground">Tierra</option>
-                <option  value="Fighting">Luchador</option>
-                <option  value="Psychic">Psíquico</option>
-                <option  value="Rock">Roca</option>
-                <option  value="Ghost">Fantasma</option>
-                <div id= "resultado">   
-            </select>
-
-
-    </div>
+              <option id="all">Tipos</option>
+              <option  value="Water">Agua</option>
+              <option  value="Ice">Hielo</option>
+              <option  value="Grass">Planta</option>
+              <option  value="Poison">Veneno</option>
+              <option  value="Fire">Fuego</option>
+              <option  value="Flying">Volador</option>
+              <option  value="Bug">Bicho</option>
+              <option  value="Normal">Normal</option>
+              <option  value="Electric">Eléctrico</option>
+              <option  value="Ground">Tierra</option>
+              <option  value="Fighting">Luchador</option>
+              <option  value="Psychic">Psíquico</option>
+              <option  value="Rock">Roca</option>
+              <option  value="Ghost">Fantasma</option>
+              <div id= "resultado">   
+          </select>
+        </div>
+           
+          </div>
     
-
-
     <script type="module" src="main.js"></script>
   </body>
 </html>
