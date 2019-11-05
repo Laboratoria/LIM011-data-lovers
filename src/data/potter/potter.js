@@ -2,7 +2,7 @@ export default [
   {
     name: 'Harry Potter',
     species: 'human',
-    gender: 'male',
+    gender: 'male', 
     house: 'Gryffindor',
     dateOfBirth: '31-07-1980',
     yearOfBirth: 1980,
