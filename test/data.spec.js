@@ -12,17 +12,17 @@
 //   });
 // });
 
-import { ordenado } from "../src/data";
+// importamos la función `example`
+import { ordenado } from '../src/data';
 
 describe('ordenado', () => {
-
   it('debería ser una función', () => {
     expect(typeof ordenado).toBe('function');
   });
 
   describe('ordenado', () => {
     it('debería ordenar los personajes de la A-Z', () => {
-        expect(ordenado([{name: 'Harry Potter'}, {name: 'Rubeus Hagrid'}, {name: 'Hermonie Granger'}])).toBe('Argus Filch');
+      expect(ordenado([{ name: 'Harry Potter' }, { name: 'Rubeus Hagrid' }, { name: 'Hermonie Granger' }])).toBe('Harry Potter');
     });
   });
-})
+});

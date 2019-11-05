@@ -243,7 +243,7 @@ footer #footer{ /*div padre */
 }
 
  /*div hijos*/
-#footer #ftr{
+#footer .ftr{
     margin: 3px 3px;
 }
 .logo-footer{
