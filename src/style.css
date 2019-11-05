@@ -53,7 +53,8 @@
     height: auto;
     background-repeat: repeat;
     position: absolute;
-  
+
+
 }
 .pagina2:before{
     content:"";
@@ -62,11 +63,10 @@
     background-color: rgba(16, 49, 107, 0.479);
     position: absolute;
     opacity: 0.9;
-   
 }
 .pikachu{
     position: relative;
-    float: right;
+    justify-items: right;
 }
 .contenedor{
     position: relative;
@@ -134,18 +134,21 @@
     
 }
 .select2{
-    position: absolute;
+    position: relative;
     background-color:  rgba(242, 247, 255, 1);
     width: 235px;
     height:30px;
     font-size: 18px;
     font-family: 'Roboto Slab', serif;
-    margin-top: -40px;
+    margin-top: -10px;
     margin-left: 60%;
     display: block;
+ 
     
 }
 .resultado{
+    display: flex;
+    flex-wrap: wrap;
     align-content: center;
 }
 .select option {
