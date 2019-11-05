@@ -2,6 +2,52 @@
     padding: 0;
     margin: 0;
 }
+
+.hide{
+    display: none;
+}
+
+#barra-navegar{
+    position: fixed;
+    width: 200px;
+    height: 30%;
+    background:rgb(63, 188, 226,0.7);
+    justify-content: center;
+    text-align: center;
+    left: -200px;
+    transition: all 500ms linear;
+    top:20px;
+}
+
+#barra-navegar.active{
+    left: 0;
+}
+
+#barra-navegar ul li {
+    border-bottom: chartreuse 2px solid;
+    padding: 15px 10px;
+}
+
+#barra-navegar ul li:hover{
+    background: chartreuse;
+
+}
+
+#resumen span{
+    display: block;
+    width:  40px;
+    text-align: center;
+    font-size: 30px;
+    background: rgb(63, 188, 226,0.7);
+    border: rgb(63, 188, 226) solid 3px;
+}
+
+#resumen {
+    position:absolute;
+    left: 230px;
+    cursor: pointer;
+}
+
 body{
     
     background-image: url(grassweb.jpg) ;
@@ -36,6 +82,7 @@ header{
 #contenedor-pokemon
 
 {
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -113,6 +160,24 @@ p{
     font-size: 10pt;
 }
 
+#filtros-pokemon{
+text-align: center;
+justify-content: center;
+margin-top: 40px;
+}
+
+#filtros-pokemon select{
+    appearance: none;
+    cursor: pointer;
+    padding: 7px 10px;
+    border-radius: 15px;
+    background: #B1E8CD;
+}
+
+#filtros-pokemon select:hover {
+    background: yellow;
+}
+
 @media(max-width: 670px)
 {
     body
@@ -139,8 +204,4 @@ p{
     h2, h4, #nombre-Pokemon{
         font-size:8pt;
     }
-
-nav img{
-    width: 50%;
-}
 }

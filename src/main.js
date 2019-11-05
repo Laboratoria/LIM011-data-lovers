@@ -4,6 +4,7 @@
 import POKEMON from './data/pokemon/pokemon.js';
 import { filtrartipopokemon, filtrarDebilidadPokemon, filtrarKmPokemon } from './data.js';
 
+document.querySelector('#filtros-pokemon').classList.add('hide');
 const datosPokemon = (datos) => {
   datos.forEach((poke) => {
     // Creando la vista adelante del Pokemon(numero, nombre e imagen)
@@ -51,6 +52,23 @@ const datosPokemon = (datos) => {
   return datosPokemon;
 };
 datosPokemon(POKEMON);
+
+document.querySelector('#resumen').addEventListener('click', () => {
+  document.querySelector('#barra-navegar').classList.toggle('active');
+});
+
+document.querySelector('#filtro').addEventListener('click', () => {
+  document.querySelector('#filtros-pokemon').classList.remove('hide');
+});
+
+document.querySelector('#pokebola').addEventListener('click', () => {
+  document.querySelector('#contenedor-pokemon').innerHTML = '';
+  datosPokemon(POKEMON);
+  document.querySelector('#filtros-pokemon').classList.add('hide');
+  document.querySelector('#filtrar-tipo-pokemon').selectedIndex = 0;
+  document.querySelector('#filtrar-debilidad-pokemon').selectedIndex = 0;
+  document.querySelector('#filtrar-km-pokemon').selectedIndex = 0;
+});
 
 document.querySelector('#filtrar-tipo-pokemon').addEventListener('change', () => {
   document.querySelector('#contenedor-pokemon').innerHTML = '';
