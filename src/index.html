@@ -12,74 +12,76 @@
 
 <body class="">
   <div id="root"></div>
-  <div id=bienvenida class="bienvenida">
-    <button type="button" class="fondoBoton" id="boton1">Atrápalos Ya!!!</button>
-    <button type="button" class="fondoBoton" id="boton2">Frecuencia de Aparición</button>
-    <div class="texto">
-      <p>Descubre el mundo Pokémon!!! <br>
-        Aquí encontraras toda la información <br>
-        que necesitas para vencer todas tus <br>
-        batallas y ser el mejor maestro Pokémon.</p>
-    </div>
-    <div class="logo">
-      <img src="https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c52f.png"></div>
-  </div>
+  <div id= bienvenida class="bienvenida">
+      <button type="button" class="fondoBoton" id="boton1">Atrápalos Ya!!!</button>
+      <button type="button" class="fondoBoton" id="boton2">Frecuencia de Aparición</button> 
+      <div class="texto">
+          <p>Descubre el mundo Pokémon!!! <br>
+          Aquí encontraras toda la información <br>
+          que necesitas para vencer todas tus <br>
+          batallas y ser el mejor maestro Pokémon.</p></div>
+      <div class="logo" >
+          <img src="https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c52f.png"></div>
+     </div>
+  
+    <div id="pagina2" class="pagina2 hide">
+        <button id="atras" class="btnAtras">Atrás</button>
+          <div id="pintame" class="pintame hide"></div>
+          
+              <select id="select-weaknesses" class="select2"> 
+                  <option>Debilidades</option>
+                  <option  value="Water">Agua</option>
+                  <option  value="Ice">Hielo</option>
+                  <option  value="Steel">Acero</option>
+                  <option  value="Grass">Planta</option>
+                  <option  value="Poison">Veneno</option>
+                  <option  value="Fire">Fuego</option>
+                  <option  value="Flying">Volador</option>
+                  <option  value="Bug">Bicho</option>
+                  <option  value="Electric">Eléctrico</option>
+                  <option  value="Ground">Tierra</option>
+                  <option  value="Fighting">Luchador</option>
+                  <option  value="Psychic">Psíquico</option>
+                  <option  value="Rock">Roca</option>
+                  <option  value="Ghost">Fantasma</option>
+                   </select>
+                   <div id= "resultado"></div> 
+          
+              <select id="select-candy" class="select1"> 
+                  <option>Caramelos</option>
+                  <option  value= "12">Necesitan 12 candies</option>
+                  <option  value= "25">Necesitan 25 candies</option>
+                  <option  value= "50">Necesitan 50 candies</option>
+                  <option  value= "100">Necesitan 100 candies</option>
+                  <option  value= "400">Necesitan 400 candies</option>
+                 </select>
+                 <div id= "resultado"></div>  
+          
+              <select id="select-type" class="select"> 
+                  <option>Tipos</option>
+                  <option  value="Water">Agua</option>
+                  <option  value="Ice">Hielo</option>
+                  <option  value="Grass">Planta</option>
+                  <option  value="Poison">Veneno</option>
+                  <option  value="Fire">Fuego</option>
+                  <option  value="Flying">Volador</option>
+                  <option  value="Bug">Bicho</option>
+                  <option  value="Normal">Normal</option>
+                  <option  value="Electric">Eléctrico</option>
+                  <option  value="Ground">Tierra</option>
+                  <option  value="Fighting">Luchador</option>
+                  <option  value="Psychic">Psíquico</option>
+                  <option  value="Rock">Roca</option>
+                  <option  value="Ghost">Fantasma</option>   
+                 </select>
+                 <div id= "resultado"></div> 
 
-  <div id="pagina2" class="pagina2 hide">
-    <button id="atras" class="btnAtras">Atrás</button>
-    <div id="pintame" class="pintame hide"></div>
-
-    <select id="select-weaknesses" class="select2">
-      <option>Debilidades</option>
-      <option value="Water">Agua</option>
-      <option value="Ice">Hielo</option>
-      <option value="Steel">Acero</option>
-      <option value="Grass">Planta</option>
-      <option value="Poison">Veneno</option>
-      <option value="Fire">Fuego</option>
-      <option value="Flying">Volador</option>
-      <option value="Bug">Bicho</option>
-      <option value="Electric">Eléctrico</option>
-      <option value="Ground">Tierra</option>
-      <option value="Fighting">Luchador</option>
-      <option value="Psychic">Psíquico</option>
-      <option value="Rock">Roca</option>
-      <option value="Ghost">Fantasma</option>
-    </select>
-    <div id="resultado"></div>
-
-    <select id="select-candy" class="select1">
-      <option>Caramelos</option>
-      <option value="12">Necesitan 12 candies</option>
-      <option value="25">Necesitan 25 candies</option>
-      <option value="50">Necesitan 50 candies</option>
-      <option value="100">Necesitan 100 candies</option>
-      <option value="400">Necesitan 400 candies</option>
-    </select>
-    <div id="resultado"></div>
-
-
-    <select id="select-type" class="select">
-      <option>Tipos</option>
-      <option value="Water">Agua</option>
-      <option value="Ice">Hielo</option>
-      <option value="Grass">Planta</option>
-      <option value="Poison">Veneno</option>
-      <option value="Fire">Fuego</option>
-      <option value="Flying">Volador</option>
-      <option value="Bug">Bicho</option>
-      <option value="Normal">Normal</option>
-      <option value="Electric">Eléctrico</option>
-      <option value="Ground">Tierra</option>
-      <option value="Fighting">Luchador</option>
-      <option value="Psychic">Psíquico</option>
-      <option value="Rock">Roca</option>
-      <option value="Ghost">Fantasma</option>
-    </select>
-    <div id="resultado"></div>
-
-  </div>
-  <script type="module" src="main.js"></script>
-</body>
-
+                 <div class="container">
+                    <input type="text" id="formulario" class="formulario">
+                    <button class="btnBuscar" id="buscar">Buscar</button>
+                    <div id="resultado"></div> 
+                 
+    </div>   
+          <script type="module" src="main.js"></script>
+  </body>
 </html>
