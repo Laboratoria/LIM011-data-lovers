@@ -60,22 +60,6 @@ cajaGenero.addEventListener('click', (event) => {
   const generoCapturada = event.target.id;
   pintarEnPantalla(filtroPorGenero(generoCapturada, POTTER), miArrImagenes);
 })
-// let casas = {
-//   casa1: 'Gryffindor',
-//   cas2: 'Slythering',
-//   casa3: 'Hufflepuff',
-//   casa4: 'Revenclaw'
-// }
-
-
-
-
-// let prueba = probando(POTTER);
-// console.log(prueba);
-
-// let prueba2 = probando2(POTTER);
-// console.log(prueba2);
-
 
 
 // const ocupacion = (POTTER => {
