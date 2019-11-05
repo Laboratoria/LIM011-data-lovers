@@ -1,7 +1,17 @@
 /* Manejo de data */
 
-// esta es una función de ejemplo
+export const filtrartipopokemon = (datapoke, tipo) => {
+  const nuevoArrayTipo = datapoke.filter((filt) => filt.type.includes(tipo));
+  // eslint-disable-next-line no-console
+  return (nuevoArrayTipo);
+};
 
-export const example = () => {
-  return 'example';
+export const filtrarDebilidadPokemon = (datapoke, debilidad) => {
+  const nuevoArrayDebilidad = datapoke.filter((filt) => filt.weaknesses.includes(debilidad));
+  return (nuevoArrayDebilidad);
+};
+
+export const filtrarKmPokemon = (datapoke, km) => {
+  const nuevoArrayKm = datapoke.filter((filt) => filt.egg.includes(km));
+  return (nuevoArrayKm);
 };
