@@ -23,7 +23,7 @@ const pintarPokemonesEnPantalla = (plantilla, nodoDom) => {
     nodoDom.innerHTML = '';
     nodoDom.innerHTML = plantilla;
 }
-
+console.log(traerDataPokemon);
 const template = generarTemplatePokemones(traerDataPokemon(POKEMON));
 pintarPokemonesEnPantalla(template, contenedorPokemons);
 
@@ -39,5 +39,6 @@ pintarPokemonesEnPantalla(template, contenedorPokemons);
         pintarPokemonesEnPantalla(pintarArregloOrdenado, contenedorPokemons);   
     });    
 };
+
 
  
