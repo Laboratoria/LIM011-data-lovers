@@ -8,7 +8,6 @@
 
 body {
   background: linear-gradient(to right, #141E30, #243B55);
-  
   background-size: cover; 
     -moz-background-size: cover;
     -webkit-background-size: cover;
@@ -71,11 +70,7 @@ nav li a img {
 }
 
 nav li a:hover {
-<<<<<<< HEAD
-  background-color: #e7c607;
-=======
   background-color: #e08a3a;
->>>>>>> 68cbeb52e01b1f8f7f6bef2e0c7bca2590d44090
   border-radius: 50px;
 }
 
@@ -173,7 +168,6 @@ nav li:hover > ul {
 }
 
 @media screen and (max-width:764px) {
-<<<<<<< HEAD
   nav li a {
     width: 100px;
 
@@ -181,8 +175,6 @@ nav li:hover > ul {
   a {
     margin-left: 25px;
   }
-=======
->>>>>>> 68cbeb52e01b1f8f7f6bef2e0c7bca2590d44090
 
   .name {
     color: rgb(231, 222, 222);
