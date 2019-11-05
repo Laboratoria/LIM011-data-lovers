@@ -1,5 +1,5 @@
 import POKEMON from './data/pokemon/pokemon.js';
-import { pintado, porTipo, porDebilidades } from './data.js';
+import { pintado, porTipo, porDebilidades, needCandy } from './data.js';
 
 document.querySelector('#pintame').innerHTML = pintado(POKEMON);
 
@@ -11,12 +11,18 @@ const selecte = document.querySelector('#select-weaknesses');
 selecte.addEventListener('change', () => {
   document.querySelector('#resultado').innerHTML = porDebilidades(POKEMON, selecte.value);
 });
+const selecte2 = document.querySelector('#select-candy');
+selecte2.addEventListener('change', () => {
+  document.querySelector('#resultado').innerHTML = needCandy(POKEMON, selecte2.value);
+});
 const bienvenida = document.getElementById('bienvenida');
 const boton1 = document.getElementById('boton1');
 const pagina2 = document.getElementById('pagina2');
+const pintame = document.getElementById('pintame');
 boton1.addEventListener('click', () => {
   bienvenida.classList.add('hide');
   pagina2.classList.remove('hide');
+  pintame.classList.remove('hide');
 });
 const atras = document.getElementById('atras');
 atras.addEventListener('click', () => {

@@ -55,3 +55,19 @@ export const porDebilidades = (arr, stringDeb) => {
   });
   return filterWeak;
 };
+export const needCandy = (arr, string) => {
+  let candyCount = [];
+  arr.forEach((obj) => {
+    obj.candy_count.forEach((num) => {
+      if (string === num) {
+        candyCount += `
+        <div class = "contenedor">
+        <img src ="${obj.img}"/>
+        <p><b>${obj.num} ${obj.name}</b></p>
+        <p>Necesitan ${obj.candy_count} caramelos</p>
+        </div>`;
+      }
+    });
+  });
+  return candyCount;
+};
