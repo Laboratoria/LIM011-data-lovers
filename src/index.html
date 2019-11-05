@@ -18,24 +18,23 @@
         <nav>
           <ul>
             <li class="menu-superior"><a href="index.html">INICIO</a></li>
-            <li class="menu-superior"><a href="#orAsc">Ascendente</a></li>
-            <li class="menu-superior"><a href="#orDesc">Descendente</a></li>
-            <li class="menu-superior"><a href="#characters">TOP 10 Pokemons Apariciones</a></li>
-            <li class="menu-superior"><a href="#follow">TIPOS</a></li>
+            <li class="menu-superior"><a href="#top">TOP 10 Pokemons Apariciones</a></li>
+            <li class="menu-superior"><a href="#tipos">TIPOS</a></li>
           </ul>
         </nav>
       </div>
+
   <div>
-    <button id="BotonBuscar">Buscar</button> <input id="buscar" type="text">
-    <label for="">Ordena</label><input type="radio" name="ordena" value="asc" id="orAsc">Ascendente
-    <input type="radio" name="ordena" value="desc" id="orDesc">Descendente
+    <button id="BotonBuscar">Buscar</button> 
+    <input id="buscar" type="text">
+    <label for="">Ordena</label>
+    <div id="selecciona-orden">
+      <input type="radio" name="ordena" value="asc" id="orAsc">Ascendente 
+      <input type="radio" name="ordena" value="desc" id="orDesc">Descendente
+    </div>
   </div>
-  <div id="pokemons" class="flex-container"></div>
-
-  <div id="abc" class="flex-container"></div>
-
-  <div id="cba" class="flex-container"></div>
-
+      <div id="contenedor-pokemons" class="flex-container"></div>
+  
   <script type="module" src="main.js"></script>
 </body>
 
