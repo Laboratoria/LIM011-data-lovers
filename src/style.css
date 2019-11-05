@@ -64,10 +64,6 @@
     position: absolute;
     opacity: 0.9;
 }
-.pikachu{
-    position: relative;
-    justify-items: right;
-}
 .contenedor{
     position: relative;
     text-align: center;
@@ -121,31 +117,40 @@
     border-radius: 10px;
     justify-content: flex-end;
 }
-.select{
-    position: absolute;
+/* Comentario .select{
+    position: relative;
     background-color: rgba(253, 190, 52, 1);
     width: 150px;
     height:50px;
     font-size: 18px;
     font-family: 'Roboto Slab', serif;
-    margin-top: 100px;
-    margin-left: 15px;
-    display: block;
-    
+    margin-top: 30px;
+    flex-direction: initial;
+    display: flex;
 }
-.select2{
+.select1{
+    position: relative;
+    background-color: rgba(253, 190, 52, 1);
+    width: 150px;
+    height:50px;
+    font-size: 18px;
+    font-family: 'Roboto Slab', serif;
+    margin-top: 30px;
+    flex-direction: initial;
+    
+}*/
+ .select2{
     position: relative;
     background-color:  rgba(242, 247, 255, 1);
     width: 235px;
     height:30px;
     font-size: 18px;
     font-family: 'Roboto Slab', serif;
-    margin-top: -10px;
-    margin-left: 60%;
-    display: block;
- 
-    
+    flex-direction: initial;
+    justify-content: initial;
+    display: flex;
 }
+
 .resultado{
     display: flex;
     flex-wrap: wrap;
