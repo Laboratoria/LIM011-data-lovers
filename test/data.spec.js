@@ -11,3 +11,18 @@
 //     // escribe aquí tu test
 //   });
 // });
+
+import { ordenado } from "../src/data";
+
+describe('ordenado', () => {
+
+  it('debería ser una función', () => {
+    expect(typeof ordenado).toBe('function');
+  });
+
+  describe('ordenado', () => {
+    it('debería ordenar los personajes de la A-Z', () => {
+        expect(ordenado(POTTER[0])).toBe('Argus Filch');
+    });
+  });
+})

@@ -9,6 +9,16 @@ const divH = document.getElementById('soloH');
 const divR = document.getElementById('soloR');
 const divS = document.getElementById('soloS');
 
+// let templatePotter = '';
+// const mostrarPersonajes = (POTTER) => {
+//     templatePotter +=`<div id="imagenes" class="casas-card">
+//               <img class="imagen" src= "${POTTER.image}"/>
+//               <p>${POTTER.name}</p>
+//             </div>`;
+//             return templatePotter;
+//   }
+ 
+
 
 document.querySelector('#todos').innerHTML = mostrarPersonajes(ordenado(POTTER));
 
@@ -35,16 +45,16 @@ seleccionar.addEventListener('change', (evento) => {
           divTodos.innerHTML=mostrarPersonajes(POTTER);
           break;
         case 'Gryffindor':
-          divG.innerHTML=`<h1 class="titulos">Gryffindor</h1>`+mostrarPersonajes(ordenado(filtrado(POTTER, 'G')));
+          divG.innerHTML=`<h1 class="titulos">Gryffindor</h1>`+mostrarPersonajes(filtrado(POTTER, 'G'));
          break;
         case 'Hufflepuff':
-          divH.innerHTML=`<h1 class="titulos">Hufflepuff</h1>`+mostrarPersonajes(ordenado(filtrado(POTTER, 'H')));
+          divH.innerHTML=`<h1 class="titulos">Hufflepuff</h1>`+mostrarPersonajes(filtrado(POTTER, 'H'));
          break;
         case 'Ravenclaw':
-          divR.innerHTML=`<h1 class="titulos">Ravenclaw</h1>`+mostrarPersonajes(ordenado(filtrado(POTTER, 'R')));
+          divR.innerHTML=`<h1 class="titulos">Ravenclaw</h1>`+mostrarPersonajes(filtrado(POTTER, 'R'));
          break;
         case 'Slytherin':
-          divS.innerHTML=`<h1 class="titulos">Slytherin</h1>`+mostrarPersonajes(ordenado(filtrado(POTTER, 'S')));
+          divS.innerHTML=`<h1 class="titulos">Slytherin</h1>`+mostrarPersonajes(filtrado(POTTER, 'S'));
         }
     });
 
@@ -65,19 +75,19 @@ seleccionar.addEventListener('change', (evento) => {
           divSeleccionado = divTodos;
           break;
           case 'Gryffindor':
-              dataSeleccionada =soloG;
+              dataSeleccionada =filtrado(POTTER, 'G');
               divSeleccionado = divG;
              break;
           case 'Hufflepuff':
-              dataSeleccionada =soloH;
+              dataSeleccionada =filtrado(POTTER, 'H');
               divSeleccionado = divH;
              break;
           case 'Ravenclaw':
-              dataSeleccionada =soloR;
+              dataSeleccionada =filtrado(POTTER, 'R');
               divSeleccionado = divR;
              break;
           case 'Slytherin':
-              dataSeleccionada =soloS;
+              dataSeleccionada =filtrado(POTTER, 'S');
               divSeleccionado = divS;       
       }
     }

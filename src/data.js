@@ -22,21 +22,28 @@ export const filtrado =(data, opcionSeleccionada) =>{
 }
 
 
-export const mostrarPersonajes = (data) => {
-  data.forEach(extraer => (extraer.name, extraer.img))
-  return data.name, data.house, data.image 
-}
+// export const mostrarPersonajes = (data) => {
+//   data.forEach(extraer => (extraer.name, extraer.img))
+//   return data.name, data.house, data.image 
+// }
+// export const mostrar = (data) => {
+//   data.forEach(element => {
+//   console.log(element.name, element.image); 
+//   // return element.name, element.image
+   
+//  });
+// }
 
 
 
-// export const mostrarPersonajes = (dataPorCasa) => {
-//   let templatePotter = '';
-//   dataPorCasa.map(extrae => {
-//     templatePotter +=`<div id="imagenes" class="casas-card">
-//               <img class="imagen" src= "${extrae.image}"/>
-//               <p>${extrae.name}</p>
-//             </div>`;
-//   });
-//   return templatePotter;
-// };
+export const mostrarPersonajes = (dataPorCasa) => {
+  let templatePotter = '';
+  dataPorCasa.map(extrae => {
+    templatePotter +=`<div id="imagenes" class="casas-card">
+              <img class="imagen" src= "${extrae.image}"/>
+              <p>${extrae.name}</p>
+            </div>`;
+  });
+  return templatePotter;
+};
 
