@@ -149,6 +149,7 @@
     flex-direction: initial;
     justify-content: initial;
     display: flex;
+    margin-left: -300px;
 }
 
 .resultado{
