@@ -1,6 +1,6 @@
 import POTTER from './data/potter/potter.js';
 
-import { ordenado,filtrado, mostrarPersonajes} from './data.js';
+import { ordenado, filtrado, mostrarPersonajes} from './data.js';
 
 
 const divTodos = document.getElementById('todos');
@@ -14,7 +14,7 @@ document.querySelector('#todos').innerHTML = mostrarPersonajes(ordenado(POTTER))
 
 const valorDeBusqueda = document.querySelector('#valorDeBusqueda');
 
-
+console.log(mostrarPersonajes(POTTER));
 
 const seleccionar =document.querySelector('.filtrar-casas');
 

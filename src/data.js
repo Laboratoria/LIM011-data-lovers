@@ -22,10 +22,8 @@ export const filtrado =(data, opcionSeleccionada) =>{
 }
 
 
-export const mostrarPersonajes = (data, casas) => {
-  data.forEach(element => {
-    
-  });
+export const mostrarPersonajes = (data) => {
+  data.forEach(extraer => (extraer.name, extraer.img))
   return data.name, data.house, data.image 
 }
 
