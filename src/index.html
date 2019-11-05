@@ -1,36 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <title>Data Lovers</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Fuentes -->
-    <link href="https://fonts.googleapis.com/css?family=Rokkitt&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Prociono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Data Lovers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css?family=Rokkitt&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Prociono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
     <!-- title -->
     <img src="img/logo.png" class="alignRight">
     <!-- fin title -->
+  </header>
 
-    <div id="sideBar" class="active">
-      <div class="toggle-btn">
-        <span class="menu">Menu</span>
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="flex" id="flex">
+      <div class="contenidoModal">
+        <div class="modalHeader flex">
+          <h2>Caracteristicas</h2>
+          <span class="close" id="close">&times;</span>
+        </div>
+        <div class="modalBody">
+          <!-- <p>hola</p> -->
+        </div>
+        <div class="modalFooter">
+          <h2>Hola &copy;</h2>
+        </div>
       </div>
-
-      <ul>
-        <li><img src="img/logoEscudoHP.jpg" class="imageHeight"></li>
-        <li id="ascendant" value="0">A-Z</li>
-        <li id="descendent" value="1">Z-A</li>
-      </ul>
     </div>
+  </div>
+  <!-- Fin Modal -->
 
-    <!-- content Character -->
-    <div id="contentCharacter" class="ventana">
+  <!-- Barra Lateral -->
+  <nav class="filterMenu hide flex" id="filterMenu">
+    <img src="img/logoEscudoHP.jpg" class="imageHeight">
+    <p class="title">Ordenalos!!</p>
+    <select id="selectAlfab" class="selectors">
+      <option disabled="" selected="">Ordenar Alfabeticamente</option>
+      <option value="0">A-Z</option>
+      <option value="1">Z-A</option>
+    </select>
+  </nav>
+  <!-- Fin de la Barra Lateral -->
+
+  <!-- icono -->
+  <div id="icon" class="icon">
+    <div class="iconFilter">
+      <img class="imageIcon" id="imageIcon" title="Menu" src="img/menu.png" alt="">
     </div>
-    <!-- fin Character -->
-    <script type="module" src="main.js"></script>
-  </body>
+  </div>
+  <!-- Fin Icono -->
+
+  <!-- content Character -->
+  <div id="contentCharacter" class="ventana">
+  </div>
+  <!-- fin Character -->
+
+  <!-- JS -->
+  <script type="module" src="main.js"></script>
+</body>
+
 </html>
