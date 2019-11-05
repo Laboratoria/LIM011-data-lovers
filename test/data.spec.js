@@ -22,7 +22,7 @@ describe('ordenado', () => {
 
   describe('ordenado', () => {
     it('debería ordenar los personajes de la A-Z', () => {
-        expect(ordenado(POTTER[0])).toBe('Argus Filch');
+        expect(ordenado([{name: 'Harry Potter'}, {name: 'Rubeus Hagrid'}, {name: 'Hermonie Granger'}])).toBe('Argus Filch');
     });
   });
 })
