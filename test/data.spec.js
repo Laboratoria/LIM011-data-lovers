@@ -12,7 +12,7 @@
 //   });
 // });
 
-importamos la función `example`
+// importamos la función `example`
 import { ordenado } from "../src/data";
 
 describe('ordenado', () => {
@@ -23,6 +23,7 @@ describe('ordenado', () => {
 
   describe('ordenado', () => {
     it('debería ordenar los personajes de la A-Z', () => {
-        expect(ordenado(POTTER[0])).toBe('Argus Filch');
+      expect(ordenado(POTTER[0])).toBe('Argus Filch');
+    });
   });
 });
