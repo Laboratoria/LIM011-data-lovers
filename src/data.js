@@ -11,6 +11,10 @@ export const filtrado = (data, opcionSeleccionada) => {
 };
 
 
+// export const mostrarPersonajes = (data) => {
+//   data.forEach(extraer => (extraer.name, extraer.img))
+//   return data.name, data.house, data.image 
+// }
 // export const mostrar = (data) => {
 //   data.forEach(element => {
 //   console.log(element.name, element.image);

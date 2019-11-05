@@ -26,4 +26,4 @@ describe('ordenado', () => {
       expect(ordenado(POTTER[0])).toBe('Argus Filch');
     });
   });
-});
+})
