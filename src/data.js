@@ -6,6 +6,7 @@ export const ordenado = ((data) => data.sort((a, b) => {
   return -1;
 }));
 
+
 export const filtrado = (data, opcionSeleccionada) => {
   return data.filter((g) => (g.house === opcionSeleccionada));
 };
@@ -13,7 +14,7 @@ export const filtrado = (data, opcionSeleccionada) => {
 
 // export const mostrarPersonajes = (data) => {
 //   data.forEach(extraer => (extraer.name, extraer.img))
-//   return data.name, data.house, data.image 
+//   return data.name, data.house, data.image
 // }
 // export const mostrar = (data) => {
 //   data.forEach(element => {

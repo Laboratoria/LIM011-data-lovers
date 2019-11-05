@@ -41,16 +41,16 @@ seleccionar.addEventListener('change', (evento) => {
       divTodos.innerHTML = mostrarPersonajes(POTTER);
       break;
     case 'Gryffindor':
-      divG.innerHTML = `<h1 class="titulos">Gryffindor</h1>` + mostrarPersonajes(filtrado(POTTER, 'Gryffindor'));
+      divG.innerHTML = mostrarPersonajes(filtrado(POTTER, 'Gryffindor'));
       break;
     case 'Hufflepuff':
-      divH.innerHTML = `<h1 class="titulos">Hufflepuff</h1>` + mostrarPersonajes(filtrado(POTTER, 'Hufflepuf'));
+      divH.innerHTML = mostrarPersonajes(filtrado(POTTER, 'Hufflepuf'));
       break;
     case 'Ravenclaw':
-      divR.innerHTML = `<h1 class="titulos">Ravenclaw</h1>` + mostrarPersonajes(filtrado(POTTER, 'Ravenclaw'));
+      divR.innerHTML = mostrarPersonajes(filtrado(POTTER, 'Ravenclaw'));
       break;
     case 'Slytherin':
-      divS.innerHTML = '<h1 class="titulos">Slytherin</h1>' + mostrarPersonajes(filtrado(POTTER, 'Slytherin'));
+      divS.innerHTML = mostrarPersonajes(filtrado(POTTER, 'Slytherin'));
       break;
     default:
   }
