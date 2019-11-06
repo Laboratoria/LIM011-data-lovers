@@ -10,6 +10,10 @@ const miArrImagenes = document.getElementById("arrPotter");
 const cajaRoles = document.querySelector('#roles');
 const cajaCasas = document.querySelector('#casas');
 const cajaGenero = document.querySelector('#genero');
+const btnBienvenida = document.querySelector('#btn-bienvenida');
+const portada = document.querySelector('#vista-uno');
+const headerView = document.querySelector('#nav');
+
 
 
 const pintarEnPantalla = (POTTER, cajaImagenes) => {
@@ -61,6 +65,12 @@ cajaGenero.addEventListener('click', (event) => {
   pintarEnPantalla(filtroPorGenero(generoCapturada, POTTER), miArrImagenes);
 })
 
+btnBienvenida.addEventListener('click', () => {
+ portada.classList.add('hide');
+ headerView.classList.remove('hide');
+ miArrImagenes.classList.remove('hide');
+
+})
 
 // const ocupacion = (POTTER => {
 //   let mostrando = '';
