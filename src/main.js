@@ -28,7 +28,7 @@ seleccionar.addEventListener('change', (evento) => {
   // borra el input de busqueda al cambiar de option en el select
   document.getElementById('valorDeBusqueda').value = '';
 
-  const opcionSeleccionada = evento.target.value;
+  const opcionSeleccionadaSelect = evento.target.value;
 
   divTodos.innerHTML = '';
   divG.innerHTML = '';
@@ -36,20 +36,20 @@ seleccionar.addEventListener('change', (evento) => {
   divR.innerHTML = '';
   divS.innerHTML = '';
 
-  switch (opcionSeleccionada) {
+  switch (opcionSeleccionadaSelect) {
     case 'Todos':
       divTodos.innerHTML = mostrarPersonajes(POTTER);
       break;
-    case 'Gryffindor':
+    case 'gryffindor':
       divG.innerHTML = mostrarPersonajes(filtrado(POTTER, 'Gryffindor'));
       break;
-    case 'Hufflepuff':
-      divH.innerHTML = mostrarPersonajes(filtrado(POTTER, 'Hufflepuf'));
+    case 'hufflepuff':
+      divH.innerHTML = mostrarPersonajes(filtrado(POTTER, 'Hufflepuff'));
       break;
-    case 'Ravenclaw':
+    case 'ravenclaw':
       divR.innerHTML = mostrarPersonajes(filtrado(POTTER, 'Ravenclaw'));
       break;
-    case 'Slytherin':
+    case 'slytherin':
       divS.innerHTML = mostrarPersonajes(filtrado(POTTER, 'Slytherin'));
       break;
     default:

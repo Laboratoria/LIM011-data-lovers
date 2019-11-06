@@ -7,8 +7,8 @@ export const ordenado = ((data) => data.sort((a, b) => {
 }));
 
 // eslint-disable-next-line arrow-body-style
-export const filtrado = (data, opcionSeleccionada) => {
-  return data.filter((g) => (g.house === opcionSeleccionada));
+export const filtrado = (data, nombreCasa) => {
+  return data.filter((g) => (g.house === nombreCasa));
 };
 
 
