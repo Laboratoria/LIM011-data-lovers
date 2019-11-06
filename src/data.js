@@ -17,7 +17,7 @@ export const ordenarAscOdescData = (arr, string) =>{
     arr.sort((p1, p2) => (p1.name > p2.name) ? -1 : 1);
     return arr;
   }
-};
+}
 
 export const filtrarPokemones= (arr,tPokemones) => {
   const arregloFiltradoPokemones=[];
@@ -36,4 +36,8 @@ export const filtrarPokemones= (arr,tPokemones) => {
    return arregloFiltradoPokemones;
 }
 
-
+export const mostrarTop = (arr) => {
+  arr.sort((p1, p2) => (p1.spawn_chance > p2.spawn_chance) ? -1 : 1);
+  let arrTop=arr.slice(0,10) ;
+   return arrTop;
+}

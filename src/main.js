@@ -1,13 +1,22 @@
 import POKEMON from './data/pokemon/pokemon.js';
-import { traerDataPokemon, ordenarAscOdescData, filtrarPokemones } from './data.js';
+import { traerDataPokemon, ordenarAscOdescData, filtrarPokemones, mostrarTop } from './data.js';
 
 const contenedorPokemons = document.querySelector('#contenedor-pokemons');
 
 const radioInput = document.querySelectorAll('input[name=ordena]');
 
+const btnBuscar=document.getElementById('botonBuscar');
+//console.log(btnBuscar);
+btnBuscar.addEventListener('click', () => {
+  
+  const arregloMuestraTop=traerDataPokemon(mostrarTop(POKEMON));
+  const pintarArregloMuestraTop=generarTemplatePokemones(arregloMuestraTop);
+  pintarPokemonesEnPantalla(pintarArregloMuestraTop, contenedorPokemons);
+});
+
 const tipoDePokemones=document.getElementById("tipoPokemones");
  tipoDePokemones.addEventListener('change', () => {
-   const arregloFiltradoPokemones=[];
+   //const arregloFiltradoPokemones=[];
    const tPokemones=tipoDePokemones.value;
    console.log(tPokemones);
 
