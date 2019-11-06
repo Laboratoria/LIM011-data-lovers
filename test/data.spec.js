@@ -1,27 +1,13 @@
-// importamos la función `example`
-// import { example } from "../src/data";
-
-// describe('example', () => {
-
-//   it('debería ser una función', () => {
-//     expect(typeof example).toBe('function');
-//   });
-
-//   describe('example', () => {
-//     // escribe aquí tu test
-//   });
-// });
-
-// importamos la función `example`
-import { ordenado } from '../src/data';
-
+import { ordenado } from '../src/data.js';
+// import POTTER from '../src/data/potter/potter';
 describe('ordenado', () => {
   it('debería ser una función', () => {
     expect(typeof ordenado).toBe('function');
   });
-  describe('ordenado', () => {
-    it('debería ordenar los personajes de la A-Z', () => {
-      expect(ordenado([{ name: 'Harry Potter' }, { name: 'Rubeus Hagrid' }, { name: 'Hermonie Granger' }])).toBe('Harry Potter');
+    it('debería ordenar la base de datos', () => {
+      const data = [{ name: }];
+      const esperado = [{ name: 'a', house: 'b' }, { name: 'e', house: 'c' }, { name: 'f', house: 'b' }];
+      expect(ordenado(data)).toEqual(esperado);
     });
   });
 });

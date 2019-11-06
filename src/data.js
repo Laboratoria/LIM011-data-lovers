@@ -1,27 +1,27 @@
 // Ordenado por alfabeto, juntar con el inner.HTML
-export const ordenado = ((data) => data.sort((a, b) => {
+export const ordenado = (data) => data.sort((a, b) => {
   if (a.name > b.name) {
     return 1;
   }
   return -1;
-}));
+});
 
 // eslint-disable-next-line arrow-body-style
-export const filtrado = (data, opcionSeleccionada) => {
-  return data.filter((g) => (g.house === opcionSeleccionada));
+export const filtrado = (data, nombreCasa) => {
+  return data.filter((g) => (g.house === nombreCasa));
 };
 
 
-// export const mostrarPersonajes = (data) => {
-//   data.forEach(extraer => (extraer.name, extraer.img))
-//   return data.name, data.house, data.image
-// }
-// export const mostrar = (data) => {
-//   data.forEach(element => {
-//   console.log(element.name, element.image);
-//   // return element.name, element.image
-//  });
-// }
+export const mostrarPersonajes = (data) => {
+  data.forEach(extraer => (extraer.name, extraer.img))
+  return data.name, data.house, data.image
+}
+export const mostrar = (data) => {
+  data.forEach(element => {
+  console.log(element.name, element.image);
+  // return element.name, element.image
+ });
+}
 
 export const mostrarPersonajes = (dataPorCasa) => {
   let templatePotter = '';
