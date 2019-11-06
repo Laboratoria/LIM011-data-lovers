@@ -19,3 +19,21 @@ export const ordenarAscOdescData = (arr, string) =>{
   }
 };
 
+export const filtrarPokemones= (arr,tPokemones) => {
+  const arregloFiltradoPokemones=[];
+  for(let i=0; i<arr.length; i++){
+    //console.log(arr[i].type);
+    let tipoFiltrado=arr[i].type;
+    // console.log(tipoFiltrado)
+     for(let j=0; j<tipoFiltrado.length; j++){
+       if(tipoFiltrado[j] === tPokemones){
+         //console.log(POKEMON[i].name);
+         arregloFiltradoPokemones.push(arr[i]);  
+       }
+       
+     }
+   }
+   return arregloFiltradoPokemones;
+}
+
+
