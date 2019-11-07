@@ -20,6 +20,16 @@ padding: 10px 10px;
 justify-content: center;
 }
 
+.selector-filtro{
+overflow: hidden;
+padding: 15px 15px;
+}
+
+.lista-pokemon{
+overflow: hidden;
+padding: 15px 15px;
+}
+
 footer{
 width:100%;
 height: 30px;
@@ -36,13 +46,6 @@ border-radius:50px;
 font-size:14px;
 width: 300px;
 
-
-}
-
-.selector-filtro{
-padding:20px 20px;
-font-size:14px;
-
 }
 
 picture img{
@@ -51,7 +54,7 @@ background-repeat: no-repeat;
 }
 
 
-div[name="pokemon"] p:first-child {
+div[name="pokemon"] p:first-of-type {
 color: #A6AAAE;
 font-style: normal;
 font-weight: bold;
@@ -163,8 +166,6 @@ line-height:50px;
 animation: slidein 1s ease-out;
 width:250px;
 height: 210px;
-border-bottom: 1px solid lightgray;
-background: lightcoral;
 color: blanchedalmond;
 animation-direction:unset;
 color: #000000;

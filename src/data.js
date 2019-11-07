@@ -14,10 +14,10 @@ export const showPokemon = (data) => {
       <p>Debilidades: ${objeto.weaknesses.join('  /  ')}</p>
   <details id="details" class="details">
     <summary id="summary" class="summary">SABER MÁS          </summary>
-    <p>Peso: ${objeto.weight}<br>
+    <span>Peso: ${objeto.weight}<br>
     Tamaño: ${objeto.height}<br>
     Caramelos para Evolucionar: ${objeto.candy_count}<br>
-    Huevo: ${objeto.egg}<br>
+    Huevo: ${objeto.egg}<br></span>
   </details>`
 
   });
