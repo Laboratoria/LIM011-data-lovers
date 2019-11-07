@@ -29,8 +29,7 @@ export const filtrarPokemones= (arr,tPokemones) => {
        if(tipoFiltrado[j] === tPokemones){
          //console.log(POKEMON[i].name);
          arregloFiltradoPokemones.push(arr[i]);  
-       }
-       
+       } 
      }
    }
    return arregloFiltradoPokemones;
@@ -41,3 +40,11 @@ export const mostrarTop = (arr) => {
   let arrTop=arr.slice(0,10) ;
    return arrTop;
 }
+
+export const buscarPokemon = (arr, nombrePokemonBuscar) => {
+  let arrBuscaPokemon=[];
+  arrBuscaPokemon.push(arr.find(arr => arr.name === nombrePokemonBuscar));
+return arrBuscaPokemon;
+}
+
+

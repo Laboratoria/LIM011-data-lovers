@@ -1,25 +1,31 @@
 import POKEMON from './data/pokemon/pokemon.js';
-import { traerDataPokemon, ordenarAscOdescData, filtrarPokemones, mostrarTop } from './data.js';
+import { traerDataPokemon, ordenarAscOdescData, filtrarPokemones, mostrarTop, buscarPokemon } from './data.js';
 
 const contenedorPokemons = document.querySelector('#contenedor-pokemons');
 
 const radioInput = document.querySelectorAll('input[name=ordena]');
 
-const btnBuscar=document.getElementById('botonBuscar');
-//console.log(btnBuscar);
-btnBuscar.addEventListener('click', () => {
-  
+const btnBuscarTop10=document.getElementById('botonBuscar');
+btnBuscarTop10.addEventListener('click', () => {
   const arregloMuestraTop=traerDataPokemon(mostrarTop(POKEMON));
   const pintarArregloMuestraTop=generarTemplatePokemones(arregloMuestraTop);
   pintarPokemonesEnPantalla(pintarArregloMuestraTop, contenedorPokemons);
 });
 
-const tipoDePokemones=document.getElementById("tipoPokemones");
- tipoDePokemones.addEventListener('change', () => {
-   //const arregloFiltradoPokemones=[];
-   const tPokemones=tipoDePokemones.value;
-   console.log(tPokemones);
+const inputBuscaPokemon=document.getElementById('buscaPokemon');
+inputBuscaPokemon.addEventListener('click', () => {
+  let nombrePokemonBuscar = document.getElementById('buscar').value;
+  console.log(nombrePokemonBuscar)  
+  const muestraPokemon=traerDataPokemon(buscarPokemon((POKEMON),nombrePokemonBuscar));
+  console.log(muestraPokemon)
+  const pintarMuestraPokemon=generarTemplatePokemones(muestraPokemon);
+  pintarPokemonesEnPantalla(pintarMuestraPokemon, contenedorPokemons);
+});
 
+const filtrarTipoDePokemones=document.getElementById("tipoPokemones");
+filtrarTipoDePokemones.addEventListener('change', () => {
+   const tPokemones=filtrarTipoDePokemones.value;
+   console.log(tPokemones);
    const arregloFiltrado = traerDataPokemon(filtrarPokemones((POKEMON),tPokemones));
     const pintarArregloFiltrado= generarTemplatePokemones(arregloFiltrado);
     pintarPokemonesEnPantalla(pintarArregloFiltrado, contenedorPokemons);   

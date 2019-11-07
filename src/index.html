@@ -16,9 +16,12 @@
         <nav>
           <ul>
             <li class="menu-superior"><a href="index.html">INICIO</a></li>
-            <li class="menu-superior"><a href="#top">TOP 10 Pokemons Apariciones</a></li>
-            <li class="menu-superior"><a href="#tipos">TIPOS</a></li> 
-            <li class="menu-superior"><a heref="#tiposDePokemon"></a></li>
+            <li class="menu-superior" id="botonBuscar"><a href="#botonBuscar">TOP 10 Pokemons Apariciones</a></li>
+            <!-- <li class="menu-superior"><a href="#tiposDePokemon"></a>
+            <ul>
+                <li id="tipoPokemones"><a>tipoPokemones</a></li>
+            </ul>
+            </li> -->
             <select name="tiposDePokemon" id="tipoPokemones">
                 <option value="">--Elija un tipo--</option>
                 <option value="Normal">Normal </option>
@@ -36,16 +39,16 @@
                 <option value="Ice">Hielo </option>
                 <option value="Dragon">Dragón </option>
 
-              </select>
+              </select> 
           </ul>
         </nav>
       </div>
 
   <div>
-    <button id="botonBuscar">Buscar</button> 
-    <input id="buscar" type="text">
+    <button id="buscaPokemon">Buscar Pokemon</button> 
+    <input type="text" id="buscar" value="">
     <label for="">Ordena</label>
-    <div id="selecciona-orden">
+     <div id="selecciona-orden">
       <input type="radio" name="ordena" value="asc" id="orAsc">Ascendente 
       <input type="radio" name="ordena" value="desc" id="orDesc">Descendente
     </div>
