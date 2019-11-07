@@ -3,8 +3,7 @@
 // esta es una función de ejemplo
 
 export const showPokemon = (data) => {
-  let pokemon ='' 
-  ;
+  let pokemon = '';
   data.map(objeto => {
     pokemon += `
     <div id="${objeto.id}"name="pokemon">
@@ -18,14 +17,13 @@ export const showPokemon = (data) => {
     Tamaño: ${objeto.height}<br>
     Caramelos para Evolucionar: ${objeto.candy_count}<br>
     Huevo: ${objeto.egg}<br></span>
-  </details>`
-
+  </details>`;
   });
-  //console.log(plantillaPokemon);
+  // console.log(plantillaPokemon);
   return pokemon;
 };
 
-/*const valorCaramelo = (data) =>{
+/* const valorCaramelo = (data) =>{
   let cuantosCaramelos= `${objeto.candy_count}`;
   let pokemonBuscado =   console.log(cuanosCaramelos);
-};*/
+}; */
