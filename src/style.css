@@ -129,6 +129,7 @@ transform: rotateY(180deg);
     background-color: white;
     color:black;
     transform: rotateY(180deg);
+    top: 0pt;
 }
 
 .hidden{
