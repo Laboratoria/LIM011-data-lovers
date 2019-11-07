@@ -8,6 +8,8 @@ font-family: 'Montserrat', sans-serif;
 body {
 margin: 0;
 background: url(img/fondo.jpg) no-repeat center top fixed;
+width: 100%;
+height: 100%;
 }
 
 #calculate-evolution,#resultados { display : none; }
@@ -21,13 +23,21 @@ justify-content: center;
 }
 
 .selector-filtro{
-overflow: hidden;
 padding: 15px 15px;
 }
 
-.lista-pokemon{
-overflow: hidden;
-padding: 15px 15px;
+.lista-pokemon {
+border: 5px solid black;
+}
+
+.ficha-pokemon{
+border: 5px solid  red;
+height: 25%;
+width: 25%;
+flex-direction: row;
+flex-wrap: wrap; 
+
+margin: 1em;
 }
 
 footer{
@@ -72,10 +82,6 @@ display: flex;
 align-items: center;
 }
 
-header nav {
-float:right;
-line-height:15px;
-}
 
 .buttonm {
 background: #5D327C;
@@ -124,44 +130,6 @@ background: #65140C;
 border-radius:50px;
 }
 
-header .logo .filtro, .logo2{
-font-size:50px;
-line-height:200px;
-float:left;
-width: 200px;
-}
-.header2 .logo .filtro, .logo2 {
-position: fixed;
-height:100px;
-}
-
-.header2 .logo .filtro, .logo2 {
-line-height:100px;
-font-size:30px;
-width: 100px;
-}
-
-.header2 nav {
-line-height:100px;
-}
-
-@media screen and (max-width: 950px) {
-header .logo .filtro, .logo2,
-header nav {
-width:100%;
-text-align:center; /*Centramos el menu y el logotipo*/
-line-height:100px;
-}
-
-.header2 {
-height:auto;
-}
-
-.header2
-.header2 nav {
-line-height:50px;
-}
-
 .details[open] summary ~ * {
 animation: slidein 1s ease-out;
 width:250px;
@@ -178,6 +146,8 @@ line-height: 28px;
 150%  {opacity: 1; margin-bottom: 10px}
 transform: scaleY(1);
 }
+
+
 
 .summary{
 color: #000000;
