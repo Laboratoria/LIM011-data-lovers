@@ -10,7 +10,7 @@ export const pintado = (dataPokemon) => {
     misPokemones += `
         <div class = "contenedor">
         <img src ="${pintar.img}"/>
-        <p><b>${pintar.id} ${pintar.name}</b></p>
+        <p><b> ${pintar.name}</b></p>
         <p>Altura: ${pintar.height}</p>
         <p>Peso: ${pintar.weight}</p>
         <p>Caramelos: ${pintar.candy_count}</p>
@@ -32,6 +32,11 @@ export const porTipo = (arr, string) => {
         <img src ="${obj.img}"/>
         <p><b>${obj.num} ${obj.name}</b></p>
         <p>Tipo: ${obj.type}</p>
+        <p>Altura: ${obj.height}</p>
+        <p>Peso: ${obj.weight}</p>
+        <p>Huevos: ${obj.egg}</p>
+        <br>
+        <br>
         </div>`;
       }
     });
@@ -55,19 +60,23 @@ export const porDebilidades = (arr, stringDeb) => {
   });
   return filterWeak;
 };
-export const needCandy = (arr, string) => {
-  let candyCount = [];
-  arr.forEach((obj) => {
-    obj.candy_count.forEach((num) => {
-      if (string === num) {
-        candyCount += `
-        <div class = "contenedor">
-        <img src ="${obj.img}"/>
-        <p><b>${obj.num} ${obj.name}</b></p>
-        <p>Necesitan ${obj.candy_count} caramelos</p>
-        </div>`;
-      }
-    });
+
+export const traerPokemonesPorCantidadDeCaramelos = (arr, candies) => {
+  const newArray = [];
+  for (let i = 0; i < arr.length; i += 1) {
+    if (arr[i].candy_count === parseInt(candies)) {
+      newArray.push(arr[i]);
+    }
+  }
+  return newArray;
+};
+
+export const ascendente = (datos) => {
+  const ordenar = datos.sort((a, b) => {
+    if (a.name > b.name) {
+      return 1;
+    }
+    return -1;
   });
-  return candyCount;
+  return ordenar;
 };
