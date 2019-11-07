@@ -7,13 +7,19 @@ export const showPokemon = (data) => {
   ;
   data.map(objeto => {
     pokemon += `
-    <div id="${objeto.id}" name="pokemon"><p>
-    <img src="${objeto.img}"/></p>
-    <p>Nombre: ${objeto.name}</p>
-    <p>Peso: ${objeto.weight}</p>
-    <p>Tipo: ${objeto.type.join('  ')}</p>
-    </div>
-    `
+    <div id="${objeto.id}"name="pokemon">
+    <picture><img src="${objeto.img}"/></picture>
+      <p> ${objeto.name} ${objeto.num}</p>
+      <p>Tipo: ${objeto.type.join('  /  ')}</p>
+      <p>Debilidades: ${objeto.weaknesses.join('  /  ')}</p>
+  <details id="details" class="details">
+    <summary id="summary" class="summary">SABER MÁS          </summary>
+    <p>Peso: ${objeto.weight}<br>
+    Tamaño: ${objeto.height}<br>
+    Caramelos para Evolucionar: ${objeto.candy_count}<br>
+    Huevo: ${objeto.egg}<br>
+  </details>`
+
   });
   //console.log(plantillaPokemon);
   return pokemon;

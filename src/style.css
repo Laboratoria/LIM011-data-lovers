@@ -1,0 +1,188 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Montserrat', sans-serif;
+}
+
+body {
+margin: 0;
+background: url(img/fondo.jpg) no-repeat center top fixed;
+}
+
+#calculate-evolution,#resultados { display : none; }
+
+header{
+width:100%;
+overflow: hidden;
+background: url(img/fondo1.jpg);
+padding: 10px 10px;
+justify-content: center;
+}
+
+footer{
+width:100%;
+height: 30px;
+color:#fff;
+background: url(img/fondo1.jpg);
+font-weight: bold;
+font-size: 12px;
+text-align: center;
+}
+
+
+.filtro{
+border-radius:50px;
+font-size:14px;
+width: 300px;
+
+
+}
+
+.selector-filtro{
+padding:20px 20px;
+font-size:14px;
+
+}
+
+picture img{
+background: url(img/f.png);
+background-repeat: no-repeat;
+}
+
+
+div[name="pokemon"] p:first-child {
+color: #A6AAAE;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+align-items: center;
+}
+
+p{
+color: #000000;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 28px;
+display: flex;
+align-items: center;
+}
+
+header nav {
+float:right;
+line-height:15px;
+}
+
+.buttonm {
+background: #5D327C;
+border-radius:50px;
+display:inline-block;
+color:#fff;
+cursor:pointer;
+text-decoration:none;
+padding:10px 10px;
+line-height:normal;
+font-size:15px;
+-webkit-transition:all 500ms ease;
+-o-transition:all 500ms ease;
+transition:all 500ms ease;
+}
+
+.buttonm:hover {
+background: #37184E;
+border-radius:50px;
+}
+
+.candies {
+color: #A6AAAE;
+text-align: center;
+font-size: 20px;
+padding:10px 10px;
+}
+
+.buttonr {
+background: #C02616;
+border-radius:50px;
+display:inline-block;
+color:#fff;
+text-decoration:none;
+padding:10px 10px;
+line-height:normal;
+font-size:15px;
+cursor:pointer;
+-webkit-transition:all 500ms ease;
+-o-transition:all 500ms ease;
+transition:all 500ms ease;
+}
+
+.buttonr:hover {
+background: #65140C;
+border-radius:50px;
+}
+
+header .logo .filtro, .logo2{
+font-size:50px;
+line-height:200px;
+float:left;
+width: 200px;
+}
+.header2 .logo .filtro, .logo2 {
+position: fixed;
+height:100px;
+}
+
+.header2 .logo .filtro, .logo2 {
+line-height:100px;
+font-size:30px;
+width: 100px;
+}
+
+.header2 nav {
+line-height:100px;
+}
+
+@media screen and (max-width: 950px) {
+header .logo .filtro, .logo2,
+header nav {
+width:100%;
+text-align:center; /*Centramos el menu y el logotipo*/
+line-height:100px;
+}
+
+.header2 {
+height:auto;
+}
+
+.header2
+.header2 nav {
+line-height:50px;
+}
+
+.details[open] summary ~ * {
+animation: slidein 1s ease-out;
+width:250px;
+height: 210px;
+border-bottom: 1px solid lightgray;
+background: lightcoral;
+color: blanchedalmond;
+animation-direction:unset;
+color: #000000;
+font-size: 12px;
+line-height: 28px;
+}
+
+@keyframes slidein {
+0%    {opacity: 0; margin-bottom: -30px}
+150%  {opacity: 1; margin-bottom: 10px}
+transform: scaleY(1);
+}
+
+.summary{
+color: #000000;
+font-size: 12px;
+line-height: 28px;
+text-align: start;
+border-bottom: 1px solid lightblue;
+padding-bottom: .5em;
+}
