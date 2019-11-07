@@ -50,17 +50,17 @@ const abrirModal = () => {
   // eslint-disable-next-line no-restricted-globals
   // const positionCharacater = event.target.id;
   // const dataP = POTTER.map((obj)=>obj.id)
-  // const dataP = POTTER.map(a => {
-  //   return a;
-  // });
-  // console.log(dataP[0]);
+  const dataP = POTTER.map(a => {
+    return a;
+  });
+  console.log(dataP[0]);
   // eslint-disable-next-line no-restricted-globals
-  const potercito = event.target.parentElement.POTTER - 1;
-  // eslint-disable-next-line no-restricted-globals
-  if (event.target.parentElement.getAttribute('name') === 'POTTER') {
-    // eslint-disable-next-line no-undef
-    console.log(potercito );
-  }
+  // const potercito = event.target.parentElement.POTTER - 1;
+  // // eslint-disable-next-line no-restricted-globals
+  // if (event.target.parentElement.getAttribute('name') === 'POTTER') {
+  //   // eslint-disable-next-line no-undef
+  //   console.log(potercito );
+  // }
 };
 
 // openModal.addEventListener('click', () => {
