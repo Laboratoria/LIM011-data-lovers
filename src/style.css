@@ -5,11 +5,18 @@
 }
 
 body{
-    background-image: url("img/fondo.jpg");
+    background-image: url("img/fonditos.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
  
+}
+
+header{
+    /* background: #151719; */
+    width: 100%;
+    height: 120px;
+   
 }
 
 .alignRight{
