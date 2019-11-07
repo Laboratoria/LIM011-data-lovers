@@ -1,5 +1,34 @@
 import POKEMON from './data/pokemon/pokemon.js';
-import { pintado, porTipo, porDebilidades, needCandy } from './data.js';
+import { pintado, porTipo, porDebilidades, traerPokemonesPorCantidadDeCaramelos } from './data.js';
+
+const resultado = document.getElementById('resultado');
+const pintaCaramelos = (dataPokemon) => {
+  let misPokemones = '';
+  dataPokemon.forEach((pintar) => {
+    misPokemones += `
+        <div class = "contenedor">
+        <img src ="${pintar.img}"/>
+        <p><b>${pintar.num} ${pintar.name}</b></p>
+        <p><b>Necesitan ${pintar.candy_count} caramelos</b></p>
+        <p>Altura: ${pintar.height}</p>
+        <p>Peso: ${pintar.weight}</p>
+        <p>Tiempo de Aparición: <br>${pintar.spawn_time}</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        </div>
+        `;
+  });
+  resultado.innerHTML = misPokemones;
+};
+const selectCandy = document.getElementById('select-candy');
+selectCandy.addEventListener('change', () => {
+  const pintame = document.getElementById('pintame');
+  pintame.classList.add('hide');
+  const selecte = selectCandy.value;
+  pintaCaramelos(traerPokemonesPorCantidadDeCaramelos(POKEMON, selecte, 'candy_count'));
+});
 
 document.querySelector('#pintame').innerHTML = pintado(POKEMON);
 
@@ -15,12 +44,7 @@ selecte.addEventListener('change', () => {
   pintame.classList.add('hide');
   document.querySelector('#resultado').innerHTML = porDebilidades(POKEMON, selecte.value);
 });
-const selecte2 = document.querySelector('#select-candy');
-selecte2.addEventListener('change', () => {
-  const pintame = document.getElementById('pintame');
-  pintame.classList.add('hide');
-  document.querySelector('#resultado').innerHTML = needCandy(POKEMON, selecte2.value);
-});
+
 const bienvenida = document.getElementById('bienvenida');
 const boton1 = document.getElementById('boton1');
 const pagina2 = document.getElementById('pagina2');

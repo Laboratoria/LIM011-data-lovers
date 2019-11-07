@@ -1,4 +1,3 @@
-
 /* eslint-disable import/prefer-default-export */
 /* eslint arrow-body-style: ["error", "always"] */
 /* Se crea una variable PINTADO y nuestro parametro será dataPokemon
@@ -32,6 +31,12 @@ export const porTipo = (arr, string) => {
         <img src ="${obj.img}"/>
         <p><b>${obj.num} ${obj.name}</b></p>
         <p>Tipo: ${obj.type}</p>
+        <p>Altura: ${obj.height}</p>
+        <p>Peso: ${obj.weight}</p>
+        <p>Huevos: ${obj.egg}</p>
+        <br>
+        <br>
+        <br>
         </div>`;
       }
     });
@@ -55,19 +60,13 @@ export const porDebilidades = (arr, stringDeb) => {
   });
   return filterWeak;
 };
-export const needCandy = (arr, string) => {
-  let candyCount = [];
-  arr.forEach((obj) => {
-    obj.candy_count.forEach((num) => {
-      if (string === num) {
-        candyCount += `
-        <div class = "contenedor">
-        <img src ="${obj.img}"/>
-        <p><b>${obj.num} ${obj.name}</b></p>
-        <p>Necesitan ${obj.candy_count} caramelos</p>
-        </div>`;
-      }
-    });
-  });
-  return candyCount;
+
+export const traerPokemonesPorCantidadDeCaramelos = (arr, candies) => {
+  const newArray = [];
+  for (let i = 0; i < arr.length; i += 1) {
+    if (arr[i].candy_count === parseInt(candies)) {
+      newArray.push(arr[i]);
+    }
+  }
+  return newArray;
 };
