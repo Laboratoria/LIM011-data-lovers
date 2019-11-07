@@ -27,11 +27,12 @@ padding: 15px 15px;
 }
 
 .lista-pokemon {
-border: 5px solid black;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
 }
 
 .ficha-pokemon{
-border: 5px solid  red;
 height: 25%;
 width: 25%;
 flex-direction: row;
