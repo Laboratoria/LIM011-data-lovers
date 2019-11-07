@@ -37,17 +37,6 @@ const showCharacters = (dataPotter) => {
 };
 contentCharacter.innerHTML = showCharacters(POTTER);
 
-
-// for (let i = 0; i < POTTER.length; i++) {
-//   /* console.log(POTTER[i]); */
-
-//   openModal.addEventListener('click', (POTTER[i]) => {
-//     console.log(xyz);
-
-//   });
-// }
-
-
 // Modal
 const abrirModal = () => {
   // const newArray = [];
@@ -66,11 +55,11 @@ const abrirModal = () => {
   // });
   // console.log(dataP[0]);
   // eslint-disable-next-line no-restricted-globals
-  const pokecito = event.target.parentElement.POTTER - 1;
+  const potercito = event.target.parentElement.POTTER - 1;
   // eslint-disable-next-line no-restricted-globals
   if (event.target.parentElement.getAttribute('name') === 'POTTER') {
     // eslint-disable-next-line no-undef
-    console.log(pokecito);
+    console.log(potercito );
   }
 };
 
