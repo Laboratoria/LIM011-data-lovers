@@ -1,7 +1,9 @@
-//Manejo DOM
+// eslint-disable-next-line import/extensions
+import POKEMON from './data/pokemon/pokemon.js';
 
-import POKEMON from './data/pokemon/pokemon.js'
+// eslint-disable-next-line import/extensions
+import { showPokemon, filtroTipoPokemon } from './data.js';
 
-import { showPokemon } from './data.js';
-console.log(POKEMON);
-const contenedorPokemon = document.getElementById("muestrapokemon").innerHTML=showPokemon(POKEMON);
+const contenedorPokemon = document.getElementById('lista-pokemones').innerHTML = showPokemon(POKEMON);
+
+console.log(filtroTipoPokemon(POKEMON, 'Electric'));
