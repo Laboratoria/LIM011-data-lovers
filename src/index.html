@@ -3,59 +3,95 @@
   <head>
     <meta charset="UTF-8">
     <title>RockeDex</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css" />
-    
-    
-  </head>
-  <header><h1>RockeDex</h1></header>
-  <body>
-    <main id="root">
-        <section id="filtro">
-            <input class="pokemon-type" list="pokemon-type" id="selector-pokemon-type" placeholder="Tipo de Pokemón" />
-            
-            <datalist class="opciones-filtro-tipo" id="pokemon-type">
-                    <option id="Water" value="Water">
-                    <option id="Bug" value="Bug">
-                    <option id="Dragon" value="Dragon">
-                    <option id="Electric" value="Electric">
-                    <option id="Ghost" value="Ghost">
-                    <option id="Fire" value="Fire">
-                    <option id="Ice" value="Ice">
-                    <option id="Fighting" value="Fighting">
-                    <option id="Normal" value="Normal">
-                    <option id="Grass" value="Grass">
-                    <option id="Psychic" value="Psychic" category="Psychic">
-                    <option id="Rock" value="Rock">
-                    <option id="Ground" value="Ground">
-                    <option id="Poison" value="Poison">
-                    <option id"Flying" value="Flying">
-            </datalist>
-          </section>
-      <section id="muestrapokemon"><h1> POKEMONES </h1>
-        <div id="muestra-filtro"> </div>
-     <!-- <div class="pokemon-card"> 
-        <section class="pokemon-card-container" id="pokemon-card-container">
-          <details id="details" class="details">
-            <summary id="summary" class="summary">SABER MÁS </summary>
-             <div id="card-extra-info" class="container-summary">
-              <span ><br>
-               </span>
-                
-            </div>
-          </details>
-        </section>
-        </div>-->
-      </section>
-    
-      <p> Acá va la lista de pokeanimales</p>
-      <!--<div id="prueba-uno"></div>-->
-      <div id="prueba"> </div>
-      <section id="lista-pokemones">
 
+<!--Section header -->
+  </head>
+  <header class="container-header" >
+        <img id=logo class="logo" src="img/logo.png"  alt="logo" >   
+        <img id=logo2 class="logo" src="img/logo2.png"  alt="logo letra" > 
+        <nav>
+            <a class="buttonm">Tipos de Pokemón</a>
+            <a class="buttonr">Cantidad de caramelo</a>
+        </nav>
+        <input class="filtro"list="pokemon-name" id="selector-pokemon-name" placeholder="Nombre del Pokemón" />
+        <datalist id="pokemon-name">
+            <option value="Bulbasaur">
+            <option value="Ivysaur">
+            <option value="Venusaur">
+            <option value="Charmander">
+            <option value="Charmeleon">
+            <option value="Charizard">
+            <option value="Squirtle">
+            <option value="Wartortle">
+            <option value="Blastoise">
+            <option value="Caterpie">
+            <option value="Metapod">
+            <option value="Butterfree">
+            <option value="Weedle">
+            <option value="Kakuna">
+        </datalist>
+        </header>
+
+<!--Section body -->
+  <body>
+      <section class="selector-filtro" id="selector-filtro">
+          <input list="pokemon-type" class="buttonm" id="selector-pokemon-type" placeholder="Tipo de Pokemón"/>
+          
+          <datalist  id="pokemon-type">
+              <option value="Water">
+                <option value="Bug">
+                <option value="Dragon">
+                <option value="Electric">
+                <option value="Ghost">
+                <option value="Fire">
+                <option value="Ice">
+                <option value="Fighting">
+                <option value="Normal">
+                <option value="Grass">
+                <option value="Psychic">
+                <option value="Rock">
+                <option value="Ground">
+                <option value="Poison">
+                <option value="Flying">
+          </datalist>
+          <label for="az"></label>Ordenar por: </label>
+              <img src="./img/az.png" id= "az">
+              <img src="./img/za.png" id= "za">
+              <img src="./img/n.png" id= "n">
+          </section>
+
+<!--Section Calcular Evolucion -->
+          <article class="candies" id="calculate-evolution">
+                <h3>Descubre cuanto le falta a tu pokemon para evolucionar</h3> 
+                <br>
+                <form id="form" >
+                    <label  for="name-pokemon">¿Cuál es tu pokemon?</label>
+                    <input class="filtro" id="name-pokemon" type="text" placeholder="Nombre pokemon" required="required" />
+                    <label for="candy-count">¿Cuántos caramelos tienes?</label>
+                    <input class="filtro" id="candy-count" type="number" placeholder="Numero de Caramelos "  min="0" required="required" />
+                    <br>
+                    <br>
+                    <button id="btn-calculate"  class="buttonr">Descubrir</button>
+          </article>
+          
+          <article class="candies" id="resultados">
+            <button id="btn-new" type="button" class="buttonr">Otra Vez</button>
+          </article>      
+
+  
+<!--muestra pokemon-->
+      <section class="lista-pokemon"  id="muestrapokemon">
       </section>
-    </main>
+
+    <footer>
+        <div class="footer">
+            © Copyright Producto exclusivo del equipo Rocket. Todos los derechos reservados.
+        </div>
+      </footer>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="module" src="main.js"></script>
     
   </body>
