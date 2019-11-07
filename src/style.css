@@ -1,0 +1,48 @@
+/* ANIMACIÓN POKEMON CARD*/
+
+.orden {
+  padding-left: 10px;
+  padding-top: 10px;
+  
+}
+
+.pokemon-type{
+  font-size:20px;
+  color: white;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 25px;
+  background: darkmagenta;
+  margin: 5px;
+  
+}
+.pokemon-type .opciones-filtro-tipo {
+  font-size:20px;
+  text-decoration
+}
+.pokemon-card{
+  width: 250px;
+
+}
+.details[open] summary ~ * {
+  animation: sweep 1s ease-out;
+  width:250px;
+  height: 210px;
+  border-bottom: 1px solid lightgray;
+  background: lightcoral;
+  color: blanchedalmond;
+  
+}
+
+@keyframes sweep {
+  0%    {opacity: 0; margin-bottom: -30px}
+  150%  {opacity: 1; margin-bottom: 10px}
+  
+}
+  
+.summary{
+  text-align: start;
+  border-bottom: 1px solid lightblue;
+  padding-bottom: .5em;
+}
