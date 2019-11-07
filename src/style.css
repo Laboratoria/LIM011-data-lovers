@@ -162,15 +162,33 @@ p{
 .show{
     margin-top: 0;
     margin-left: 0;
-    width: 350x;
+    width: 280px;
     /* position: fixed; */
 }
 
-.imageIcon{
+/* .imageIcon{
     width: 35px;
     cursor: pointer;
     opacity: 0.4;
+} */
+
+.menu {
+    font-family: Prociono, serif;
+    font-size: 20px;
+    color: whitesmoke;
+    background: rgba(21, 24, 25);
+    cursor: pointer;
+    width: 8%;
+    height: 50px; 
+    outline: none;
+    border-radius: 5px;
+    margin-left: 20px;
 }
+
+/* .iconFilter{
+    width: 80%;
+    height: 50px; 
+} */
 
 .title {
     font-size: 20px;
