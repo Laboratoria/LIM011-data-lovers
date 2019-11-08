@@ -14,8 +14,22 @@ export const pintado = (dataPokemon) => {
         <p>Altura: ${pintar.height}</p>
         <p>Peso: ${pintar.weight}</p>
         <p>Caramelos: ${pintar.candy_count}</p>
-        <p>Tiempo de Aparición: <br>${pintar.spawn_time}</p>
+        <p>Tiempo de Aparición: <br>${pintar.spawn_chance}</p>
         <p>Debilidades:<br>${pintar.weaknesses}</p>
+        </div>
+        `;
+  });
+  return misPokemones;
+};
+
+export const muestraPokemon = (dataPokemon) => {
+  let misPokemones = '';
+  dataPokemon.forEach((pintar) => {
+    misPokemones += `
+        <div class = "contenedor2">
+        <img src ="${pintar.img}"/>
+        <p><b> ${pintar.name}</b></p>
+        <p>Tiempo de Aparición: <br>${pintar.spawn_chance}</p>
         </div>
         `;
   });
@@ -79,4 +93,10 @@ export const ascendente = (datos) => {
     return -1;
   });
   return ordenar;
+};
+
+export const mostrarTop = (arr) => {
+  arr.sort((p1, p2) => (p1.spawn_chance > p2.spawn_chance) ? -1 : 1);
+  let arrTop = arr.slice(0, 10);
+  return arrTop;
 };

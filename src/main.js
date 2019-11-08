@@ -1,5 +1,5 @@
 import POKEMON from './data/pokemon/pokemon.js';
-import { pintado, porTipo, porDebilidades, traerPokemonesPorCantidadDeCaramelos, ascendente } from './data.js';
+import { pintado, porTipo, porDebilidades, traerPokemonesPorCantidadDeCaramelos, ascendente, muestraPokemon, mostrarTop } from './data.js';
 
 /* Para mostrar el menu caramelos */
 const resultado = document.getElementById('resultado');
@@ -60,20 +60,35 @@ orden.addEventListener('change', (event) => {
   }
 });
 
+/* para mostrar opcion Top10 por aparicion */
+document.querySelector('#topTen').innerHTML = muestraPokemon(mostrarTop(POKEMON));
+
 /* para ocultar y mostrar paginas o vistas */
 const bienvenida = document.getElementById('bienvenida');
 const boton1 = document.getElementById('boton1');
 const pagina2 = document.getElementById('pagina2');
 const pintame = document.getElementById('pintame');
+const boton2 = document.getElementById('boton2');
+const pagina3 = document.getElementById('pagina3');
+const atras = document.getElementById('atras');
+const atras2 = document.getElementById('atras2');
+
 boton1.addEventListener('click', () => {
   bienvenida.classList.add('hide');
   pagina2.classList.remove('hide');
   pintame.classList.remove('hide');
 });
-const atras = document.getElementById('atras');
 atras.addEventListener('click', () => {
   bienvenida.classList.remove('hide');
   pagina2.classList.add('hide');
+});
+boton2.addEventListener('click', () => {
+  bienvenida.classList.add('hide');
+  pagina3.classList.remove('hide');
+});
+atras2.addEventListener('click', () => {
+  bienvenida.classList.remove('hide');
+  pagina3.classList.add('hide');
 });
 
 console.log(POKEMON);
