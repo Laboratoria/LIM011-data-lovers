@@ -18,7 +18,7 @@ const role = document.getElementById('role');
 const house = document.getElementById('house');
 const modal = document.getElementById('modal');
 let flex = document.getElementById('flex');
-const openModal = document.getElementById('openModal');
+const openModal = document.getElementById('abrir');
 let close = document.getElementById('close');
 
 const showCharacters = (dataPotter) => {
@@ -28,8 +28,10 @@ const showCharacters = (dataPotter) => {
     templatePotter += `
     <div class=content id="content">
     <div class=styleCharacter id="openModal">
-    <img id="name" class=imageCharacter src=${dataPotter[i].image}>
+    <img id="abrir" class=imageCharacter src=${dataPotter[i].image}>
     <div class=name>${dataPotter[i].name}</div>
+    </div>
+    <div>
     </div>
     </div>
     `;
@@ -39,9 +41,19 @@ const showCharacters = (dataPotter) => {
 contentCharacter.innerHTML = showCharacters(POTTER);
 
 // Modal
-const abrirModal = () => {
+openModal.addEventListener('click', () => {
+  modal.style.display = 'block';
+});
+close.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+window.addEventListener('click', (event) => {
+  if (event.target === flex) {
+    modal.style.display = 'none';
+  }
+});
+// Fin Modal
 
-};
 
 contentCharacter.addEventListener('click', (event) => {
   // console.log(event.target.name);
