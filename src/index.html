@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>RockeDex</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css" />
 
-<!--Section header -->
-  </head>
-  <header class="container-header" >
-        <img id=logo class="logo" src="img/logo.png"  alt="logo" >   
-        <img id=logo2 class="logo" src="img/logo2.png"  alt="logo letra" > 
-        <nav>
-            <a class="buttonm">Tipos de Pokemón</a>
-            <a class="buttonr">Cantidad de caramelo</a>
-        </nav>
-        <input class="filtro"list="pokemon-name" id="selector-pokemon-name" placeholder="Nombre del Pokemón" />
-        <datalist id="pokemon-name">
+    <!--Section header -->
+</head>
+<header class="container-header">
+    <picture>
+        <img id=logo class="logo" src="img/logo.png" alt="logo">
+        <img id=logo2 class="logo" src="img/logo2.png" alt="logo letra">
+    </picture>
+    <input class="filtro" list="pokemon-name" id="selector-pokemon-name" placeholder="Nombre del Pokemón">hola</input>
+    <datalist id="pokemon-name">
             <option value="Bulbasaur">
             <option value="Ivysaur">
             <option value="Venusaur">
@@ -33,14 +32,20 @@
             <option value="Weedle">
             <option value="Kakuna">
         </datalist>
-        </header>
+    <nav>
+        <button class="buttonm" id="boton-pantalla-filtrotipo">Tipos de Pokemón</a>
+        <button class="buttonr" id="boton-pantalla-caramelos">Cantidad de caramelo</a>
+    </nav>
+
+</header>
 
 <!--Section body -->
-  <body>
-      <section class="selector-filtro" id="selector-filtro">
-          <input list="pokemon-type" class="buttonm" id="selector-pokemon-type" placeholder="Tipo de Pokemón"/>
-          
-          <datalist  id="pokemon-type">
+
+<body>
+    <section class="selector-filtro" id="selector-filtro">
+        <input list="pokemon-type" class="buttonm" id="selector-pokemon-type" placeholder="Tipo de Pokemón" />
+
+        <datalist id="pokemon-type">
               <option value="Water">
                 <option value="Bug">
                 <option value="Dragon">
@@ -57,42 +62,45 @@
                 <option value="Poison">
                 <option value="Flying">
           </datalist>
-          <label for="az"></label>Ordenar por: </label>
-              <img src="./img/az.png" id= "az">
-              <img src="./img/za.png" id= "za">
-              <img src="./img/n.png" id= "n">
-          </section>
+        <label for="az"></label>Ordenar por: </label>
+        <img src="./img/az.png" id="az">
+        <img src="./img/za.png" id="za">
+        <img src="./img/n.png" id="n">
 
-<!--Section Calcular Evolucion -->
-          <article class="candies" id="calculate-evolution">
-                <h3>Descubre cuanto le falta a tu pokemon para evolucionar</h3> 
+        <!--muestra pokemon-->
+        <section class="lista-pokemon" id="muestrapokemon">
+        </section>
+    </section>
+
+    <!--Section Calcular Evolucion -->
+    <section class="caramelo-pantalla" id="pantallacaramelos">
+        <article class="candies" id="calculate-evolution">
+            <h3>Descubre cuanto le falta a tu pokemon para evolucionar</h3>
+            <br>
+            <form id="form">
+                <label for="name-pokemon">¿Cuál es tu pokemon?</label>
+                <input class="filtro" id="name-pokemon" type="text" placeholder="Nombre pokemon" required="required" />
+                <label for="candy-count">¿Cuántos caramelos tienes?</label>
+                <input class="filtro" id="candy-count" type="number" placeholder="Numero de Caramelos " min="0" required="required" />
                 <br>
-                <form id="form" >
-                    <label  for="name-pokemon">¿Cuál es tu pokemon?</label>
-                    <input class="filtro" id="name-pokemon" type="text" placeholder="Nombre pokemon" required="required" />
-                    <label for="candy-count">¿Cuántos caramelos tienes?</label>
-                    <input class="filtro" id="candy-count" type="number" placeholder="Numero de Caramelos "  min="0" required="required" />
-                    <br>
-                    <br>
-                    <button id="btn-calculate"  class="buttonr">Descubrir</button>
-          </article>
-          
-          <article class="candies" id="resultados">
-            <button id="btn-new" type="button" class="buttonr">Otra Vez</button>
-          </article>      
+                <br>
+                <button id="btn-calculate" class="buttonr">Descubrir</button>
+        </article>
+        <!--Section Resultado Caramelos-->
+        <article class="candies-fichas-pokemon" id="resultados-caramelos">
+            <section class="lista-pokemon" id="caramelo-muestra-pokemon">
+            </section>
+        </article>
+        <button id="btn-limpiar-caramelos" type="button" class="buttonr">Otra Vez</button>
+        </section>
 
-  
-<!--muestra pokemon-->
-      <section class="lista-pokemon"  id="muestrapokemon">
-      </section>
-
-    <footer>
-        <div class="footer">
-            © Copyright Producto exclusivo del equipo Rocket. Todos los derechos reservados.
-        </div>
-      </footer>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script type="module" src="main.js"></script>
-    
-  </body>
+        <!--Section footer-->
+        <footer class="footer">
+            <p>
+                © Copyright Producto exclusivo del equipo Rocket. Todos los derechos reservados.
+            </p>
+        </footer>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="module" src="main.js"></script>
+        </body>
 </html>
