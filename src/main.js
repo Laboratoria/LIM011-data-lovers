@@ -5,7 +5,7 @@
  */
 
 import POTTER from './data/potter/potter.js';
-import { ascendente, genero, filterRole } from './data.js';
+import { ascendente, genero, filterRole, filterRoleDos, houseUno } from './data.js';
 // console.log(POTTER);
 
 // const contentCharacter = document.getElementById('contentCharacter');
@@ -15,6 +15,7 @@ const imageIcon = document.getElementById('imageIcon');
 const selectAlfab = document.getElementById('selectAlfab');
 const gender = document.getElementById('gender');
 const role = document.getElementById('role');
+const house = document.getElementById('house');
 const modal = document.getElementById('modal');
 let flex = document.getElementById('flex');
 const openModal = document.getElementById('openModal');
@@ -50,17 +51,17 @@ const abrirModal = () => {
   // eslint-disable-next-line no-restricted-globals
   // const positionCharacater = event.target.id;
   // const dataP = POTTER.map((obj)=>obj.id)
-  // const dataP = POTTER.map(a => {
-  //   return a;
-  // });
-  // console.log(dataP[0]);
+  const dataP = POTTER.map(a => {
+    return a;
+  });
+  console.log(dataP[0]);
   // eslint-disable-next-line no-restricted-globals
-  const potercito = event.target.parentElement.POTTER - 1;
-  // eslint-disable-next-line no-restricted-globals
-  if (event.target.parentElement.getAttribute('name') === 'POTTER') {
-    // eslint-disable-next-line no-undef
-    console.log(potercito );
-  }
+  // const potercito = event.target.parentElement.POTTER - 1;
+  // // eslint-disable-next-line no-restricted-globals
+  // if (event.target.parentElement.getAttribute('name') === 'POTTER') {
+  //   // eslint-disable-next-line no-undef
+  //   console.log(potercito );
+  // }
 };
 
 // openModal.addEventListener('click', () => {
@@ -69,8 +70,9 @@ const abrirModal = () => {
 // Fin modal
 
 contentCharacter.addEventListener('click', (event) => {
-  console.log(event.target.name);
+  // console.log(event.target.name);
   abrirModal();
+  alert('Estamos en manteniento proximamente');
 });
 
 // Barra Lateral
@@ -101,7 +103,18 @@ gender.addEventListener('change', () => {
   contentCharacter.innerHTML = showCharacters(filterGender);
 });
 
-role.addEventListener('click', () => {
-  const listRole = filterRole(POTTER, role.value);
-  contentCharacter.innerHTML = showCharacters(listRole);
+
+role.addEventListener('change', (event) => {
+  const student = filterRole(POTTER);
+  const staff = filterRoleDos(POTTER);
+  if (event.target.value === 'hogwartsStudent') {
+    contentCharacter.innerHTML = showCharacters(student);
+  } else {
+    contentCharacter.innerHTML = showCharacters(staff);
+  }
+});
+
+house.addEventListener('change', () => {
+  const chooseHouse = houseUno(POTTER, house.value);
+  contentCharacter.innerHTML = showCharacters(chooseHouse);
 });

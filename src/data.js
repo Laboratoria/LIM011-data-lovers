@@ -25,12 +25,18 @@ export const genero = (datos, type) => {
 
 export const filterRole = (datos) => {
   // eslint-disable-next-line arrow-parens
-  const role = datos.filter(element => element.hogwartsStudent);
+  const role = datos.filter(element => element.hogwartsStudent === true);
   return role;
 };
 
-export const filterRoledos = (datos) => {
+export const filterRoleDos = (datos) => {
   // eslint-disable-next-line arrow-parens
-  const roleDos = datos.filter(element => element.hogwartsStudent);
+  const roleDos = datos.filter(element => element.hogwartsStaff === true);
   return roleDos;
+};
+
+export const houseUno = (datos, houseName) => {
+  // eslint-disable-next-line arrow-parens
+  const filterHouse = datos.filter(element => element.house === houseName);
+  return filterHouse;
 };
