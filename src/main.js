@@ -1,3 +1,5 @@
+/* eslint object-curly-newline: ["error", { "multiline": true }] */
+/* eslint-env es6 */
 import POKEMON from './data/pokemon/pokemon.js';
 import { pintado, porTipo, porDebilidades, traerPokemonesPorCantidadDeCaramelos, ascendente, muestraPokemon, mostrarTop } from './data.js';
 
@@ -91,8 +93,5 @@ atras2.addEventListener('click', () => {
   pagina3.classList.add('hide');
 });
 
-console.log(POKEMON);
-/* TRAEMOS TODO LO QUE ESTÁ EN LA DATA CON LA VARIABLE */ /* eslint-disable import/first */
 
-
-/* document.querySelector('#pintame').innerHTML = pintado(POKEMON); */
+/* eslint-disable import/first */
