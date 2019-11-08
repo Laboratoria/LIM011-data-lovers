@@ -4,7 +4,7 @@ export const showPokemon = (data) => {
   data.map(objeto => {
     pokemon += `
     <div id="${objeto.id}"name="pokemon" class="ficha-pokemon">
-    <picture><img src="${objeto.img}"/></picture>
+    <picture class="fondo-pokemon"><img src="${objeto.img}"/></picture>
       <p> ${objeto.name} ${objeto.num}</p>
       <p>Tipo: ${objeto.type.join('  /  ')}</p>
       <p>Debilidades: ${objeto.weaknesses.join('  /  ')}</p>
