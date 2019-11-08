@@ -5,7 +5,9 @@
  */
 
 import POTTER from './data/potter/potter.js';
-import { ascendente, genero, filterRole, filterRoleDos, houseUno } from './data.js';
+import {
+  ascendente, genero, filterRole, filterRoleDos, houseUno,
+} from './data.js';
 // console.log(POTTER);
 
 // const contentCharacter = document.getElementById('contentCharacter');
@@ -41,17 +43,17 @@ const showCharacters = (dataPotter) => {
 contentCharacter.innerHTML = showCharacters(POTTER);
 
 // Modal
-openModal.addEventListener('click', () => {
-  modal.style.display = 'block';
-});
-close.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-window.addEventListener('click', (event) => {
-  if (event.target === flex) {
-    modal.style.display = 'none';
-  }
-});
+// openModal.addEventListener('click', () => {
+//   modal.style.display = 'block';
+// });
+// close.addEventListener('click', () => {
+//   modal.style.display = 'none';
+// });
+// window.addEventListener('click', (event) => {
+//   if (event.target === flex) {
+//     modal.style.display = 'none';
+//   }
+// });
 // Fin Modal
 
 
