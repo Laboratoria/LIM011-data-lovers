@@ -5,16 +5,19 @@
  */
 
 import POTTER from './data/potter/potter.js';
-import { ascendente } from './data.js';
+import { ascendente, genero, filterRole } from './data.js';
 // console.log(POTTER);
 
-const contentCharacter = document.getElementById('contentCharacter');
+// const contentCharacter = document.getElementById('contentCharacter');
+const contentCharacter = document.querySelector('#contentCharacter');
 const filterMenu = document.getElementById('filterMenu');
 const imageIcon = document.getElementById('imageIcon');
 const selectAlfab = document.getElementById('selectAlfab');
+const gender = document.getElementById('gender');
+const role = document.getElementById('role');
 const modal = document.getElementById('modal');
 let flex = document.getElementById('flex');
-// const openModal = document.getElementById('openModal');
+const openModal = document.getElementById('openModal');
 let close = document.getElementById('close');
 
 const showCharacters = (dataPotter) => {
@@ -24,7 +27,7 @@ const showCharacters = (dataPotter) => {
     templatePotter += `
     <div class=content id="content">
     <div class=styleCharacter id="openModal">
-    <img class=imageCharacter src=${dataPotter[i].image}>
+    <img id="name" class=imageCharacter src=${dataPotter[i].image}>
     <div class=name>${dataPotter[i].name}</div>
     </div>
     </div>
@@ -38,12 +41,26 @@ contentCharacter.innerHTML = showCharacters(POTTER);
 const abrirModal = () => {
   // const newArray = [];
   // eslint-disable-next-line no-plusplus
-  for (let i = 0; i < POTTER.length; i++) {
-    // eslint-disable-next-line no-const-assign
-    // eslint-disable-next-line no-unused-expressions
-    POTTER[i];
-  }
+  // for (let i = 0; i < POTTER.length; i++) {
+  // /* console.log(POTTER[i]); */
+
+  //   console.log(POTTER[0]);
+  // }
   // console.log(newArray);
+  // eslint-disable-next-line no-restricted-globals
+  // const positionCharacater = event.target.id;
+  // const dataP = POTTER.map((obj)=>obj.id)
+  // const dataP = POTTER.map(a => {
+  //   return a;
+  // });
+  // console.log(dataP[0]);
+  // eslint-disable-next-line no-restricted-globals
+  const potercito = event.target.parentElement.POTTER - 1;
+  // eslint-disable-next-line no-restricted-globals
+  if (event.target.parentElement.getAttribute('name') === 'POTTER') {
+    // eslint-disable-next-line no-undef
+    console.log(potercito );
+  }
 };
 
 // openModal.addEventListener('click', () => {
@@ -51,7 +68,8 @@ const abrirModal = () => {
 // });
 // Fin modal
 
-contentCharacter.addEventListener('click', () => {
+contentCharacter.addEventListener('click', (event) => {
+  console.log(event.target.name);
   abrirModal();
 });
 
@@ -77,15 +95,13 @@ selectAlfab.addEventListener('change', (event) => {
     contentCharacter.innerHTML = showCharacters(ascendente(POTTER).reverse());
   }
 });
-// Fin OrdenarAZ
 
+gender.addEventListener('change', () => {
+  const filterGender = genero(POTTER, gender.value);
+  contentCharacter.innerHTML = showCharacters(filterGender);
+});
 
-// console.log(example);
-// console.log(POTTER);
-
-
-/*
- * console.log(POKEMON);
- * console.log(LoL);
- * console.log(POTTER)
-*/
+role.addEventListener('click', () => {
+  const listRole = filterRole(POTTER, role.value);
+  contentCharacter.innerHTML = showCharacters(listRole);
+});
