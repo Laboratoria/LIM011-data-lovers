@@ -9,7 +9,7 @@ export const pintado = (dataPokemon) => {
     misPokemones += `
         <div class = "contenedor">
         <img src ="${pintar.img}"/>
-        <p><b>${pintar.id} ${pintar.name}</b></p>
+        <p><b> ${pintar.name}</b></p>
         <p>Altura: ${pintar.height}</p>
         <p>Peso: ${pintar.weight}</p>
         <p>Caramelos: ${pintar.candy_count}</p>
@@ -34,7 +34,6 @@ export const porTipo = (arr, string) => {
         <p>Altura: ${obj.height}</p>
         <p>Peso: ${obj.weight}</p>
         <p>Huevos: ${obj.egg}</p>
-        <br>
         <br>
         <br>
         </div>`;
@@ -69,4 +68,14 @@ export const traerPokemonesPorCantidadDeCaramelos = (arr, candies) => {
     }
   }
   return newArray;
+};
+
+export const ascendente = (datos) => {
+  const ordenar = datos.sort((a, b) => {
+    if (a.name > b.name) {
+      return 1;
+    }
+    return -1;
+  });
+  return ordenar;
 };

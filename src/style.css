@@ -81,6 +81,10 @@
     display: inline-flex;
     flex-direction: column;
     border-radius:10px;
+  
+}
+.contenedor img{
+    margin: auto;
 }
 .contenedor img{
    margin: auto;
@@ -89,12 +93,6 @@
     display: none;
 }
 
-.buscador{
-    position: relative;
-    
-
-
-}
 .btnAtras{
     position: relative;
     width: 100px;
@@ -160,7 +158,25 @@
     margin-top: 18px;
     margin-left: 850px;
 }
-
+.ordenar{
+    position: absolute;
+    background-color: rgba(253, 190, 52, 1);
+    width: 150px;
+    height:50px;
+    font-size: 18px;
+    font-family: 'Roboto Slab', serif;
+    margin-top: 293px;
+    margin-left: 10px;
+    align-items: flex-start;
+}
+.ordenar option {
+    background-color:rgba(242, 247, 255, 1);
+    color: #333333;
+    text-decoration: none;
+    padding: 4px;
+    width: 130px;
+    display: inline-block;
+}
 .resultado{
     display: flex;
     flex-wrap: wrap;
@@ -179,6 +195,13 @@
     font-size: 18px;
     background:  rgba(253, 190, 52, 1);
     border-radius: 10px;
+}
+
+.formulario{
+    position: absolute;
+    width: 235px;
+    height:25px;
+    background-color:rgba(242, 247, 255, 1);  
 }
 
 /* Smartphones (landscape) */

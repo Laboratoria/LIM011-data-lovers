@@ -1,6 +1,7 @@
 import POKEMON from './data/pokemon/pokemon.js';
-import { pintado, porTipo, porDebilidades, traerPokemonesPorCantidadDeCaramelos } from './data.js';
+import { pintado, porTipo, porDebilidades, traerPokemonesPorCantidadDeCaramelos, ascendente } from './data.js';
 
+/* Para mostrar el menu caramelos */
 const resultado = document.getElementById('resultado');
 const pintaCaramelos = (dataPokemon) => {
   let misPokemones = '';
@@ -13,8 +14,6 @@ const pintaCaramelos = (dataPokemon) => {
         <p>Altura: ${pintar.height}</p>
         <p>Peso: ${pintar.weight}</p>
         <p>Tiempo de Aparición: <br>${pintar.spawn_time}</p>
-        <br>
-        <br>
         <br>
         <br>
         </div>
@@ -30,14 +29,18 @@ selectCandy.addEventListener('change', () => {
   pintaCaramelos(traerPokemonesPorCantidadDeCaramelos(POKEMON, selecte, 'candy_count'));
 });
 
+/* para mostrar todos los pokemones */
 document.querySelector('#pintame').innerHTML = pintado(POKEMON);
 
+/* para mostrar los pokemones por tipo */
 const selecte1 = document.querySelector('#select-type');
 selecte1.addEventListener('change', () => {
   const pintame = document.getElementById('pintame');
   pintame.classList.add('hide');
   document.querySelector('#resultado').innerHTML = porTipo(POKEMON, selecte1.value);
 });
+
+/* para mostrar los pokemones por debilidades */
 const selecte = document.querySelector('#select-weaknesses');
 selecte.addEventListener('change', () => {
   const pintame = document.getElementById('pintame');
@@ -45,6 +48,19 @@ selecte.addEventListener('change', () => {
   document.querySelector('#resultado').innerHTML = porDebilidades(POKEMON, selecte.value);
 });
 
+/* para mostrar opcion ordenar de la A-Z y Z-A */
+const orden = document.querySelector('#ordenar');
+orden.addEventListener('change', (event) => {
+  const pintame = document.getElementById('pintame');
+  pintame.classList.add('hide');
+  if (event.target.value === '0') {
+    resultado.innerHTML = pintado(ascendente(POKEMON));
+  } else {
+    resultado.innerHTML = pintado(ascendente(POKEMON).reverse());
+  }
+});
+
+/* para ocultar y mostrar paginas o vistas */
 const bienvenida = document.getElementById('bienvenida');
 const boton1 = document.getElementById('boton1');
 const pagina2 = document.getElementById('pagina2');
