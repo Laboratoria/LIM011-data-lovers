@@ -1,6 +1,12 @@
 import POKEMON from './data/pokemon/pokemon.js';
 
-import { traerDataPokemon, ordenarAscOdescData, filtrarPokemones, mostrarTop, buscarPokemon } from './data.js';
+import {
+  traerDataPokemon,
+  ordenarAscOdescData,
+  filtrarPokemones,
+  mostrarTop,
+  buscarPokemon,
+} from './data.js';
 
 const contenedorPokemons = document.querySelector('#contenedor-pokemons');
 

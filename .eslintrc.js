@@ -15,6 +15,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'no-param-reassign': 0,
     'linebreak-style': 0,
     'prefer-destructuring': 0,
     'import/extensions': 0,
