@@ -37,14 +37,17 @@ body {
     border: 4px solid yellow;
 }
 
+.selector-filtro-wrap {
+    display: none;
+}
+
 .caramelo-pantalla {
     border: 4px solid red;
+    display: none;
 }
 
 .lista-pokemon {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 }
 
 .ficha-pokemon {
@@ -121,12 +124,14 @@ p {
     background: #37184E;
     border-radius: 50px;
 }
+
 .candies {
     color: #A6AAAE;
     text-align: center;
     font-size: 20px;
     padding: 10px 10px;
 }
+
 .buttonr {
     background: #C02616;
     border-radius: 50px;
@@ -141,10 +146,12 @@ p {
     -o-transition: all 500ms ease;
     transition: all 500ms ease;
 }
+
 .buttonr:hover {
     background: #65140C;
     border-radius: 50px;
 }
+
 .details[open] summary~* {
     animation: slidein 1s ease-out;
     width: 250px;
@@ -155,6 +162,7 @@ p {
     font-size: 12px;
     line-height: 28px;
 }
+
 @keyframes slidein {
     0% {
         opacity: 0;
@@ -166,6 +174,7 @@ p {
     }
     transform: scaleY(1);
 }
+
 .summary {
     color: #000000;
     font-size: 12px;
