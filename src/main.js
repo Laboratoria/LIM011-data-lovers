@@ -40,39 +40,12 @@ contentCharacter.innerHTML = showCharacters(POTTER);
 
 // Modal
 const abrirModal = () => {
-  // const newArray = [];
-  // eslint-disable-next-line no-plusplus
-  // for (let i = 0; i < POTTER.length; i++) {
-  // /* console.log(POTTER[i]); */
 
-  //   console.log(POTTER[0]);
-  // }
-  // console.log(newArray);
-  // eslint-disable-next-line no-restricted-globals
-  // const positionCharacater = event.target.id;
-  // const dataP = POTTER.map((obj)=>obj.id)
-  const dataP = POTTER.map(a => {
-    return a;
-  });
-  console.log(dataP[0]);
-  // eslint-disable-next-line no-restricted-globals
-  // const potercito = event.target.parentElement.POTTER - 1;
-  // // eslint-disable-next-line no-restricted-globals
-  // if (event.target.parentElement.getAttribute('name') === 'POTTER') {
-  //   // eslint-disable-next-line no-undef
-  //   console.log(potercito );
-  // }
 };
-
-// openModal.addEventListener('click', () => {
-//   modal.classList.add('hide');
-// });
-// Fin modal
 
 contentCharacter.addEventListener('click', (event) => {
   // console.log(event.target.name);
   abrirModal();
-  alert('Estamos en manteniento proximamente');
 });
 
 // Barra Lateral
