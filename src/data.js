@@ -21,7 +21,6 @@ export const showPokemon = (data) => {
   return pokemon;
 };
 
-
 // Filtrado de pokemon por tipo
 export const filtroTipoPokemon = (data, tipo) => {
   // eslint-disable-next-line no-shadow
@@ -29,5 +28,29 @@ export const filtroTipoPokemon = (data, tipo) => {
   return nuevoArreglo;
 };
 
+//  Lista que muestra los pokemones(nombre y foto)
+export const showNamePicturePokemon = (data) => {
+  let pokemon = '';
+  data.map(objeto => {
+    pokemon += `
+    <div id="${objeto.id}"name="pokemon" class="ficha-pokemon">
+    <picture class="fondo-pokemon"><img src="${objeto.img}"/></picture>
+      <p> ${objeto.name}</p>
+    </div>`;
+  });
+  // console.log(plantillaPokemon);
+  return pokemon;
+};
 
-
+//  Lista que muestra los pokemones(nombre)
+export const showNamePokemon = (data) => {
+  let pokemon = '';
+  data.map(objeto => {
+    pokemon += `
+    <div id="${objeto.id}"name="pokemon" class="ficha-pokemon">
+    <p> ${objeto.name}</p>
+    </div>`;
+  });
+  // console.log(plantillaPokemon);
+  return pokemon;
+};
