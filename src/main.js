@@ -8,9 +8,7 @@ const contenedorPokemon = document.getElementById('muestrapokemon').innerHTML = 
 
 console.log(filtroTipoPokemon(POKEMON, 'Electric'));
 
-console.log(showNamePicturePokemon(POKEMON));
-
-console.log(showNamePokemon(POKEMON));
+//console.log(showNamePicturePokemon(POKEMON));
 // Botones funcionalidad de pantallas
 
 const botonDescubrir = document.getElementById('btn-calculate');
@@ -33,11 +31,10 @@ botonMostrarCaramelos.addEventListener('click', () => {
     pantallaFiltroPokemon.style.display = 'none';
 });
 
-const pantallaFiltroPokemon = document.getElementById('selector-filtro');
+const pantallaFiltroPokemon = document.getElementById('selector-filtro-wrap');
 const mostrarPantallaFiltro = document.getElementById('boton-pantalla-filtrotipo');
 
 mostrarPantallaFiltro.addEventListener('click', () => {
     pantallaFiltroPokemon.style.display = 'block';
     pantallaCaramelos.style.display = 'none';
 });
-
