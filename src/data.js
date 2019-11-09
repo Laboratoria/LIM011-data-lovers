@@ -28,7 +28,7 @@ export const muestraPokemon = (dataPokemon) => {
         <div class = "contenedor2">
         <img src ="${pintar.img}"/>
         <p><b> ${pintar.name}</b></p>
-        <p>Tiempo de Aparición: <br>${pintar.spawn_chance}</p>
+        <p>Frecuencia de Aparición: <br>${pintar.spawn_chance}</p>
         </div>
         `;
   });
@@ -77,7 +77,7 @@ export const porDebilidades = (arr, stringDeb) => {
 export const traerPokemonesPorCantidadDeCaramelos = (arr, candies) => {
   const newArray = [];
   for (let i = 0; i < arr.length; i += 1) {
-    if (arr[i].candy_count === parseInt(candies)) {
+    if (arr[i].candy_count === parseFloat(candies)) {
       newArray.push(arr[i]);
     }
   }
@@ -96,6 +96,6 @@ export const ascendente = (datos) => {
 
 export const mostrarTop = (arr) => {
   arr.sort((p1, p2) => (p1.spawn_chance > p2.spawn_chance) ? -1 : 1);
-  let arrTop = arr.slice(0, 10);
+  const arrTop = arr.slice(0, 10);
   return arrTop;
 };
