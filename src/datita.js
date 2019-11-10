@@ -8,6 +8,6 @@ export const ordenado = (data) => data.sort((a, b) => {
 
 // eslint-disable-next-line arrow-body-style
 export const filtrado = (data, propiedad, valor) => {
-  // esta es una manera de llamar a la propiedad en el objeto.
+// esta es una manera de llamar a la propiedad en el objeto.
   return data.filter((a) => (a[propiedad] === valor));
 };
