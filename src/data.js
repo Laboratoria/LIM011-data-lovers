@@ -1,79 +1,28 @@
-/* eslint-disable import/prefer-default-export */
-/* eslint arrow-body-style: ["error", "always"] */
 /* Se crea una variable PINTADO y nuestro parametro será dataPokemon
 para que el recorrido actúe sobre toda la base */
 
-export const pintado = (dataPokemon) => {
-  let misPokemones = '';
-  dataPokemon.forEach((pintar) => {
-    misPokemones += `
-        <div class = "contenedor">
-        <img src ="${pintar.img}"/>
-        <p><b> ${pintar.name}</b></p>
-        <p>Altura: ${pintar.height}</p>
-        <p>Peso: ${pintar.weight}</p>
-        <p>Tiempo de Aparición: <br>${pintar.spawn_chance}</p>
-        <p>Debilidades:<br>${pintar.weaknesses}</p>
-        <br>
-        </div>
-        `;
-  });
-  return misPokemones;
-};
-
-export const muestraPokemon = (dataPokemon) => {
-  let misPokemones = '';
-  dataPokemon.forEach((pintar) => {
-    misPokemones += `
-        <div class = "contenedor2">
-        <img src ="${pintar.img}"/>
-        <p><b> ${pintar.name}</b></p>
-        <p>Frecuencia de Aparición: <br>${pintar.spawn_chance}</p>
-        <br>
-        </div>
-        `;
-  });
-  return misPokemones;
-};
-
-export const porTipo = (arr, string) => {
-  let tipo = [];
-  arr.forEach((obj) => {
-    obj.type.forEach((strg) => {
-      if (string === strg) {
-        tipo += `
-        <div class = "contenedor">
-        <img src ="${obj.img}"/>
-        <p><b>${obj.num} ${obj.name}</b></p>
-        <p>Tipo: ${obj.type}</p>
-        <p>Altura: ${obj.height}</p>
-        <p>Peso: ${obj.weight}</p>
-        <p>Huevos: ${obj.egg}</p>
-        <br>
-        <br>
-        </div>`;
+export const filtrarPorTipo = (arr, condicion) => {
+  const pkmFiltrados = [];
+  arr.forEach((elemento) => {
+    elemento.type.forEach((strg) => {
+      if (condicion === strg) {
+        pkmFiltrados.push(elemento);
       }
     });
   });
-  return tipo;
+  return pkmFiltrados; // retorna array de objetos filtrado
 };
 
-export const porDebilidades = (arr, stringDeb) => {
-  let filterWeak = [];
-  arr.forEach((objWeak) => {
-    objWeak.weaknesses.forEach((strgDeb) => {
-      if (stringDeb === strgDeb) {
-        filterWeak += `
-        <div class = "contenedor">
-        <img src ="${objWeak.img}"/>
-        <p><b>${objWeak.num} ${objWeak.name}</b></p>
-        <p>Debilidades:<br>${objWeak.weaknesses}</p>
-        <br>
-        </div>`;
+export const porDebilidades = (arr, condicion) => {
+  const filterWeak = [];
+  arr.forEach((elemento) => {
+    elemento.weaknesses.forEach((strgDeb) => {
+      if (condicion === strgDeb) {
+        filterWeak.push(elemento);
       }
     });
   });
-  return filterWeak;
+  return filterWeak; // retorna array de objetos filtrado
 };
 
 export const traerPokemonesPorCantidadDeCaramelos = (arr, candies) => {
@@ -103,5 +52,5 @@ export const mostrarTop = (arr) => {
 };
 
 export const buscarPokemon = (array, name) => {
-  return array.filter(pintar => pintar.name.toLowerCase().startsWith (name));
-  };
+  return array.filter((pintar) => pintar.name.toLowerCase().startsWith(name));
+};

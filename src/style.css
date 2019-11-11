@@ -84,6 +84,7 @@
     margin-left: 20%;
     margin-right: -12%;
     margin-top: 50px;
+    margin-bottom: 20px;
     width: 18%;
     background-color: rgba(242, 247, 255, 1);
     font-family: 'Roboto Slab', serif;
@@ -239,34 +240,19 @@
     font-size: 45px;
     font-weight: bolder;
     text-align: center;
-    margin-top: -1120px;
+    margin-top: -1650px;
     margin-left: 110px;
     justify-content: flex-start;
     align-content: flex-start;
 }
 /* contenedor top10 de pagina 3 */
-.contenedor2{
-    position: relative;
-    text-align: center;
-    margin-right: 55px;
-    margin-left: 13%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 18%;
-    background-color: rgba(242, 247, 255, 1);
-    font-family: 'Roboto Slab', serif;
-    display: inline-flex;
-    flex-direction: column;
-    border-radius:10px;
-}
-.contenedor2 img{
-    margin: auto;
-}
+
 /* caja donde se muestra los pokemon top10 */
 .top{
-    display: inline-flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+   margin-left: 300px;
+   width: 100%;
+  
 }
 /* Buscador de Pokemones */
 .formulario{
@@ -367,12 +353,12 @@
      .pagina2{
         align-content: flex-start;
      }
-     .contenedor2{
-         width: 65%;
-         height: 8.5%;
+     .contenedor{
+         width: 60%;
+         height: 10%;
          line-height: 16px;
          margin: 8px;
-         margin-right: 55px;
+    margin-left: -90px;
           
      }
      .texto2{
@@ -388,6 +374,9 @@
       
      }
      .pagina3{
-         align-items: flex-end;
+    
+    
+         flex-flow: column;
+        
      }
    }
