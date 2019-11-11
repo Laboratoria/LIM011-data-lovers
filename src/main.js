@@ -1,34 +1,35 @@
+/* eslint-disable import/extensions */
 /* eslint object-curly-newline: ["error", { "multiline": true }] */
 /* eslint-env es6 */
 import POKEMON from './data/pokemon/pokemon.js';
-import { pintado, porTipo, porDebilidades, traerPokemonesPorCantidadDeCaramelos, ascendente, muestraPokemon, mostrarTop } from './data.js';
+import { filtrarPorTipo, porDebilidades, traerPokemonesPorCantidadDeCaramelos, ascendente, mostrarTop, buscarPokemon } from './data.js';
 
-/* Para mostrar el menu caramelos */
-const resultado = document.getElementById('resultado');
-const pintaCaramelos = (dataPokemon) => {
+const pintado = (dataPokemon) => {
   let misPokemones = '';
   dataPokemon.forEach((pintar) => {
     misPokemones += `
         <div class = "contenedor">
         <img src ="${pintar.img}"/>
-        <p><b>${pintar.num} ${pintar.name}</b></p>
+        <p><b> ${pintar.name}</b></p>
+        <p>Tipo: ${pintar.type}</p>
         <p><b>Necesitan ${pintar.candy_count} caramelos</b></p>
         <p>Altura: ${pintar.height}</p>
         <p>Peso: ${pintar.weight}</p>
-        <p>Tiempo de Aparición: <br>${pintar.spawn_time}</p>
-        <br>
+        <p>Tiempo de Aparición: <br>${pintar.spawn_chance}</p>
+        <p>Debilidades:<br>${pintar.weaknesses}</p>
         <br>
         </div>
         `;
   });
-  resultado.innerHTML = misPokemones;
+  return misPokemones;
 };
+
+/* Para mostrar el menu caramelos */
 const selectCandy = document.getElementById('select-candy');
 selectCandy.addEventListener('change', () => {
   const pintame = document.getElementById('pintame');
   pintame.classList.add('hide');
-  const selecte = selectCandy.value;
-  pintaCaramelos(traerPokemonesPorCantidadDeCaramelos(POKEMON, selecte, 'candy_count'));
+  document.querySelector('#resultado').innerHTML = pintado(traerPokemonesPorCantidadDeCaramelos(POKEMON, selectCandy.value));
 });
 
 /* para mostrar todos los pokemones */
@@ -39,7 +40,7 @@ const selecte1 = document.querySelector('#select-type');
 selecte1.addEventListener('change', () => {
   const pintame = document.getElementById('pintame');
   pintame.classList.add('hide');
-  document.querySelector('#resultado').innerHTML = porTipo(POKEMON, selecte1.value);
+  document.querySelector('#resultado').innerHTML = pintado(filtrarPorTipo(POKEMON, selecte1.value));
 });
 
 /* para mostrar los pokemones por debilidades */
@@ -47,13 +48,14 @@ const selecte = document.querySelector('#select-weaknesses');
 selecte.addEventListener('change', () => {
   const pintame = document.getElementById('pintame');
   pintame.classList.add('hide');
-  document.querySelector('#resultado').innerHTML = porDebilidades(POKEMON, selecte.value);
+  document.querySelector('#resultado').innerHTML = pintado(porDebilidades(POKEMON, selecte.value));
 });
 
 /* para mostrar opcion ordenar de la A-Z y Z-A */
 const orden = document.querySelector('#ordenar');
 orden.addEventListener('change', (event) => {
   const pintame = document.getElementById('pintame');
+  const resultado = document.getElementById('resultado');
   pintame.classList.add('hide');
   if (event.target.value === '0') {
     resultado.innerHTML = pintado(ascendente(POKEMON));
@@ -63,19 +65,18 @@ orden.addEventListener('change', (event) => {
 });
 
 /* para buscar el nombre del pokemon */
- const buscarPokemon = (array, name) => {
-   return array.filter(pintar => pintar.name.toLowerCase().startsWith (name));
-   };
-   
- const formulario = document.getElementById('formulario');
- formulario.addEventListener('input', event =>{
+const formulario = document.getElementById('formulario');
+formulario.addEventListener('input', (event) => {
+  const pintame = document.getElementById('pintame');
+  const resultado = document.getElementById('resultado');
+  pintame.classList.remove('hide');
+  resultado.classList.remove('hide');
   pintado(buscarPokemon(POKEMON, event.target.value.toLowerCase()));
   document.querySelector('#pintame').innerHTML = pintado(buscarPokemon(POKEMON, event.target.value.toLowerCase()));
-
- });
+});
 
 /* para mostrar opcion Top10 por aparicion */
-document.querySelector('#topTen').innerHTML = muestraPokemon(mostrarTop(POKEMON));
+document.querySelector('#topTen').innerHTML = pintado(mostrarTop(POKEMON));
 
 /* para ocultar y mostrar paginas o vistas */
 const bienvenida = document.getElementById('bienvenida');
