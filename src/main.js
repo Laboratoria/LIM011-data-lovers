@@ -38,20 +38,3 @@ mostrarPantallaFiltro.addEventListener('click', () => {
     pantallaFiltroPokemon.style.display = 'block';
     pantallaCaramelos.style.display = 'none';
 });
-
-
-
-// // eslint-disable-next-line import/extensions
-// import POKEMON from './data/pokemon/pokemon.js';
-
-// // eslint-disable-next-line import/extensions
-// import { showPokemon, filtroTipoPokemon, /*filtroAlfabetico*/} from './data.js';
-
-// const contenedorPokemon = document.getElementById('muestrapokemon').innerHTML = showPokemon(POKEMON);
-
-// console.log(filtroTipoPokemon(POKEMON, 'Electric'));
-// console.log(filtroAlfabetico(POKEMON));
-
-
-
-
