@@ -33,13 +33,13 @@ seleccionar.addEventListener('change', (evento) => {
   const opcionSeleccionadaSelect = evento.target.value;
 
   divTodos.innerHTML = '';
-  divG.innerHTML = '';
-  divH.innerHTML = '';
-  divR.innerHTML = '';
-  divS.innerHTML = '';
+  // divG.innerHTML = '';
+  // divH.innerHTML = '';
+  // divR.innerHTML = '';
+  // divS.innerHTML = '';
 
   switch (opcionSeleccionadaSelect) {
-    case 'Todos':
+    case 'todos':
       divTodos.innerHTML = mostrarPersonajes(POTTER);
       break;
     case 'gryffindor':

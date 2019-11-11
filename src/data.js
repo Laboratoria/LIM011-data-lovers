@@ -5,7 +5,7 @@ export const ordenado = ((data) => data.sort((a, b) => {
     return 1;
   }
   return -1;
-}));
+});
 
 // eslint-disable-next-line arrow-body-style
 export const filtrado = (data, propiedad, valor) => {
