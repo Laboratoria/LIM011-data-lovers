@@ -1,25 +1,35 @@
 //  Lista que muestra los pokemones
+// export const showPokemon = (data) => {
+//   let pokemon = '';
+//   data.map(item => {
+//       pokemon += `
+//   <div id="${item.id} "name="pokemon" class="ficha-pokemon">
+//   <picture class="fondo-pokemon"><img src="${item.img}"/></picture>
+//     <p> ${item.name} ${item.num}</p>
+//     <p>Tipo: ${item.type.join('  /  ')}</p>
+//     <p>Debilidades: ${item.weaknesses.join('  /  ')}</p>
+// <details id="details" class="details">
+//   <summary id="summary" class="summary">SABER MÁS</summary>
+//   <span>Peso: ${item.weight}<br>
+//   Tamaño: ${item.height}<br>
+//   Caramelos para Evolucionar: ${item.candy_count}<br>
+//   Huevo: ${item.egg}<br></span>
+// </details>
+// </div>`;
+//   });
+//   // console.log(plantillaPokemon);
+//   return pokemon;
+// };
+
 export const showPokemon = (data) => {
-  let pokemon = '';
+  let pokemonList = [];
   data.map(item => {
-      pokemon += `
-  <div id="${item.id} "name="pokemon" class="ficha-pokemon">
-  <picture class="fondo-pokemon"><img src="${item.img}"/></picture>
-    <p> ${item.name} ${item.num}</p>
-    <p>Tipo: ${item.type.join('  /  ')}</p>
-    <p>Debilidades: ${item.weaknesses.join('  /  ')}</p>
-<details id="details" class="details">
-  <summary id="summary" class="summary">SABER MÁS</summary>
-  <span>Peso: ${item.weight}<br>
-  Tamaño: ${item.height}<br>
-  Caramelos para Evolucionar: ${item.candy_count}<br>
-  Huevo: ${item.egg}<br></span>
-</details>
-</div>`;
+      pokemonList.push({name:data.name , img: data.img});
   });
   // console.log(plantillaPokemon);
-  return pokemon;
+  return pokemonList;
 };
+
 
 //  Lista que muestra los pokemones(nombre y foto)
 export const showNamePicturePokemon = (data) => {

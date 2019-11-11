@@ -18,6 +18,10 @@ console.log(ordenNumerico(filtroTipoPokemon(POKEMON, 'Electric')));
 
 const botonDescubrir = document.getElementById('btn-calculate');
 const botonLimpiarCaramelos = document.getElementById('btn-limpiar-caramelos');
+const pantallaCaramelos = document.getElementById('pantallacaramelos');
+const botonMostrarCaramelos = document.getElementById('boton-pantalla-caramelos');
+const pantallaFiltroPokemon = document.getElementById('selector-filtro-wrap');
+const mostrarPantallaFiltro = document.getElementById('boton-pantalla-filtrotipo');
 
 botonDescubrir.addEventListener('click', () => {
     document.getElementById('caramelo-muestra-pokemon').innerHTML = showNamePicturePokemon(POKEMON);
@@ -29,15 +33,12 @@ botonLimpiarCaramelos.addEventListener('click', () => {
     pantallaCaramelos.style.display = 'none';
 });
 
-const pantallaCaramelos = document.getElementById('pantallacaramelos');
-const botonMostrarCaramelos = document.getElementById('boton-pantalla-caramelos');
+
 botonMostrarCaramelos.addEventListener('click', () => {
     pantallaCaramelos.style.display = 'block';
     pantallaFiltroPokemon.style.display = 'none';
 });
 
-const pantallaFiltroPokemon = document.getElementById('selector-filtro-wrap');
-const mostrarPantallaFiltro = document.getElementById('boton-pantalla-filtrotipo');
 
 mostrarPantallaFiltro.addEventListener('click', () => {
     pantallaFiltroPokemon.style.display = 'block';
