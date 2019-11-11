@@ -17,7 +17,6 @@ const pintaCaramelos = (dataPokemon) => {
         <p>Peso: ${pintar.weight}</p>
         <p>Tiempo de Aparición: <br>${pintar.spawn_time}</p>
         <br>
-        <br>
         </div>
         `;
   });
@@ -60,6 +59,18 @@ orden.addEventListener('change', (event) => {
   } else {
     resultado.innerHTML = pintado(ascendente(POKEMON).reverse());
   }
+});
+
+/* para buscar el nombre del pokemon */
+const buscarPokemon = (array, name) => {
+  return array.filter(pintar => pintar.name.toLowerCase().startsWith (name));
+  };
+  
+const formulario = document.getElementById('formulario');
+formulario.addEventListener('input', event =>{
+ pintado(buscarPokemon(POKEMON, event.target.value.toLowerCase()));
+ document.querySelector('#pintame').innerHTML = pintado(buscarPokemon(POKEMON, event.target.value.toLowerCase()));
+
 });
 
 /* para mostrar opcion Top10 por aparicion */

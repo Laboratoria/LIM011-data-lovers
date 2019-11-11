@@ -12,9 +12,9 @@ export const pintado = (dataPokemon) => {
         <p><b> ${pintar.name}</b></p>
         <p>Altura: ${pintar.height}</p>
         <p>Peso: ${pintar.weight}</p>
-        <p>Caramelos: ${pintar.candy_count}</p>
         <p>Tiempo de Aparición: <br>${pintar.spawn_chance}</p>
         <p>Debilidades:<br>${pintar.weaknesses}</p>
+        <br>
         </div>
         `;
   });
@@ -29,6 +29,7 @@ export const muestraPokemon = (dataPokemon) => {
         <img src ="${pintar.img}"/>
         <p><b> ${pintar.name}</b></p>
         <p>Frecuencia de Aparición: <br>${pintar.spawn_chance}</p>
+        <br>
         </div>
         `;
   });
@@ -67,6 +68,7 @@ export const porDebilidades = (arr, stringDeb) => {
         <img src ="${objWeak.img}"/>
         <p><b>${objWeak.num} ${objWeak.name}</b></p>
         <p>Debilidades:<br>${objWeak.weaknesses}</p>
+        <br>
         </div>`;
       }
     });

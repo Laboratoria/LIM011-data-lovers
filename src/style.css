@@ -24,32 +24,26 @@
     margin-top: 15%;
 }
 /* Imagen de Pagina 1 */
-/*.logo{
-    position: relative;
-    justify-content: flex-end;
-    margin-top: 16%;
-    text-align: left;
-    margin-left: 15%;
-    display: flex;
-}*/
 .logo { 
     flex-direction: row;
     position: relative;
-    align-content: flex-end;
     margin-top: 15%;
+       
 }
 /* Texto de Pagina 1 */
 .texto{
     position: relative;
     flex-direction: column;
-    margin-top: 25%;
+    margin-top: 23%;
     font-size: 18px;
+    margin-left: -120px;
+    margin-right: 150px;
 
 }
 /* Fondo de botones atrapalos ya, frecuencia de aparacion */
 .fondoBoton{
-    width: 150px;
-    height: 45px;
+    width: 600px;
+    height: 60px;
     border-radius: 15px;
     margin-top: 20px;
     margin-left: 18px;
@@ -59,6 +53,7 @@
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
     font-size: 15px;
+    
 }
 /* Fondo de Pagina 2 */
 .pagina2{
@@ -71,6 +66,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    justify-content: space-between;
       
 }
 .pagina2:before{
@@ -85,22 +81,24 @@
 .contenedor{
     position: relative;
     text-align: center;
-    margin: 15px 5px 5px;   
     margin-left: 20%;
     margin-right: -12%;
     margin-top: 50px;
-    width: 20%;
+    width: 18%;
     background-color: rgba(242, 247, 255, 1);
     font-family: 'Roboto Slab', serif;
     display: inline-flex;
     flex-direction: column;
+    justify-content: flex-end;
     border-radius:10px;
-  
+   
 }
 .contenedor img{
     margin: auto;
 }
-
+.contenedor p{
+    margin: 5px;
+}
 /* Fondo de botones de atras */
 .btnAtras{
     position: relative;
@@ -273,31 +271,123 @@
 /* Buscador de Pokemones */
 .formulario{
     position: absolute;
-    width: 235px;
+    width: 240px;
     height:25px;
     background-color:rgba(242, 247, 255, 1);
     font-family: Georgia;
     font-size: 18px;
     border-radius: 10px;  
-    margin-left: 400px;
-    margin-top: -32px;
-}
-.btnBuscar{
-    position:absolute;
-    width: 80px;
-    height: 30px;
-    font-family: 'Roboto Slab', serif;
-    font-size: 18px;
-    background:  rgba(253, 190, 52, 1);
-    border-radius: 10px;
-    margin-left: 310px;
+    margin-left: 350px;
     margin-top: -32px;
 }
 .hide{
     display: none;
 }
 /* Smartphones (landscape) */
-@media screen and (max-width:540px)  {
-    
+@media screen and (max-width: 734px)  {
+    .bienvenida{
+        background-size: cover;
+        flex-wrap: wrap;
+    }.bienvenida:before{
+        height: 50%; 
+        margin-top: 50%; 
+    }
+    .fondoBoton{
+        width: 120px;
+        margin-left: 11%;
+        font-size: 13px;
+    }
+    .texto{
+        font-size: 15px; 
+        margin-top: -30%;  
+        margin-left: 8%;
+        text-align: center;
+    }
+    .logo{
+        display: flex;
+        justify-content: center;
+        margin-top: -200px;
+    }
+    .logo img{
+        width: 80%;
+        height: 40%; 
      
+    }
+     .texto p{
+         align-items: center;
+         width: 300px;
+     }
+     .contenedor{
+         width: 33%;  
+         font-size: 12px;
+         margin-left: 50px;    
+     }
+     .contenedor img{
+         width: 100px;
+     }
+     .select1{
+         width: 100px;
+         height: 30px;
+         font-size: 15px;
+         margin-top: 45px;
+         margin-left: 123px;
+     }
+     .select{
+        height: 30px;
+        width: 100px;
+        font-size: 15px;
+         margin-top: 45px;
+         
+     }
+     .ordenar{
+        height: 30px;
+         width: 100px;
+         font-size: 15px;
+         margin-top: 45px;
+         margin-left: 235px;
+     }
+     .select2{
+         margin-left: 60px;
+         font-size: 15px;
+         width: 110px;
+         margin-top: 13px;
+
+     }
+     .formulario{
+         width: 145px;
+         margin-left: 190px;
+         margin-top: -19px;
+     }
+
+     .btnAtras{
+         width: 40px;
+         height: 20px;
+         font-size: 10px;
+     }
+     .pagina2{
+        align-content: flex-start;
+     }
+     .contenedor2{
+         width: 65%;
+         height: 8.5%;
+         line-height: 16px;
+         margin: 8px;
+         margin-right: 55px;
+          
+     }
+     .texto2{
+       
+         margin-top: -10px;
+         font-size: 20px;
+         position: relative;
+     }
+     .logo2{
+         
+         position: relative;
+        margin-left: 40px;
+      
+     }
+     .pagina3{
+         align-items: flex-end;
+     }
    }
