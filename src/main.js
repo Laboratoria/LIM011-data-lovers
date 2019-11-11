@@ -2,12 +2,17 @@
 import POKEMON from './data/pokemon/pokemon.js';
 
 // eslint-disable-next-line import/extensions
-import { showPokemon, showNamePicturePokemon, showNamePokemon, filtroTipoPokemon } from './data.js';
+import { showPokemon, showNamePicturePokemon, showNamePokemon, filtroTipoPokemon, filtroAlfabeticoAZ, filtroAlfabeticoZA, ordenNumerico  } from './data.js';
 
 const contenedorPokemon = document.getElementById('muestrapokemon').innerHTML = showPokemon(POKEMON);
 
 console.log(filtroTipoPokemon(POKEMON, 'Electric'));
+console.log(filtroAlfabeticoZA(POKEMON));
 
+console.log(ordenNumerico(filtroTipoPokemon(POKEMON, 'Electric')));
+
+// mostrar filtro ordenados AZ-ZA en consola con error pero funciona el filtro
+//console.log(showAlfabeto(filtroAlfabeticoZA(filtroTipoPokemon(POKEMON, 'Water'))));
 //console.log(showNamePicturePokemon(POKEMON));
 // Botones funcionalidad de pantallas
 
@@ -38,3 +43,4 @@ mostrarPantallaFiltro.addEventListener('click', () => {
     pantallaFiltroPokemon.style.display = 'block';
     pantallaCaramelos.style.display = 'none';
 });
+
