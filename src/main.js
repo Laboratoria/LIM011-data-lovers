@@ -1,3 +1,5 @@
+/* eslint object-curly-newline: ["error", { "multiline": true }] */
+/* eslint-env es6 */
 import POKEMON from './data/pokemon/pokemon.js';
 import { pintado, porTipo, porDebilidades, traerPokemonesPorCantidadDeCaramelos, ascendente, muestraPokemon, mostrarTop } from './data.js';
 
@@ -60,6 +62,18 @@ orden.addEventListener('change', (event) => {
   }
 });
 
+/* para buscar el nombre del pokemon */
+ const buscarPokemon = (array, name) => {
+   return array.filter(pintar => pintar.name.toLowerCase().startsWith (name));
+   };
+   
+ const formulario = document.getElementById('formulario');
+ formulario.addEventListener('input', event =>{
+  pintado(buscarPokemon(POKEMON, event.target.value.toLowerCase()));
+  document.querySelector('#pintame').innerHTML = pintado(buscarPokemon(POKEMON, event.target.value.toLowerCase()));
+
+ });
+
 /* para mostrar opcion Top10 por aparicion */
 document.querySelector('#topTen').innerHTML = muestraPokemon(mostrarTop(POKEMON));
 
@@ -91,8 +105,5 @@ atras2.addEventListener('click', () => {
   pagina3.classList.add('hide');
 });
 
-console.log(POKEMON);
-/* TRAEMOS TODO LO QUE ESTÁ EN LA DATA CON LA VARIABLE */ /* eslint-disable import/first */
 
-
-/* document.querySelector('#pintame').innerHTML = pintado(POKEMON); */
+/* eslint-disable import/first */

@@ -1,5 +1,5 @@
 
-
+/* Fondo de Pagina 1 */
 .bienvenida{
     background-image: url("http://getwallpapers.com/wallpaper/full/0/8/2/53557.jpg");
     width: 100%;
@@ -23,21 +23,30 @@
     opacity: 0.9;
     margin-top: 15%;
 }
-.logo{
+/* Imagen de Pagina 1 */
+/*.logo{
     position: relative;
-    justify-content: flex-start;
+    justify-content: flex-end;
     margin-top: 16%;
     text-align: left;
     margin-left: 15%;
+    display: flex;
+}*/
+.logo { 
+    flex-direction: row;
+    position: relative;
+    align-content: flex-end;
+    margin-top: 15%;
 }
+/* Texto de Pagina 1 */
 .texto{
     position: relative;
-    text-align: left;
+    flex-direction: column;
     margin-top: 25%;
-    margin-left: -10%;   
     font-size: 18px;
-}
 
+}
+/* Fondo de botones atrapalos ya, frecuencia de aparacion */
 .fondoBoton{
     width: 150px;
     height: 45px;
@@ -51,6 +60,7 @@
     font-weight: bold;
     font-size: 15px;
 }
+/* Fondo de Pagina 2 */
 .pagina2{
     background-image: url("http://getwallpapers.com/wallpaper/full/0/8/2/53557.jpg");
     width: 100%;
@@ -71,6 +81,7 @@
     position: absolute;
     opacity: 0.9;
 }
+/* Contenedor de pokemon para pintado, tipos, debilidades, caramelos */
 .contenedor{
     position: relative;
     text-align: center;
@@ -89,6 +100,8 @@
 .contenedor img{
     margin: auto;
 }
+
+/* Fondo de botones de atras */
 .btnAtras{
     position: relative;
     width: 100px;
@@ -101,6 +114,7 @@
     border-radius: 10px;
  
 }
+/* Menu Tipos de pokemon */
 .select{
     position: absolute;
     background-color: rgba(253, 190, 52, 1);
@@ -121,6 +135,7 @@
     display: inline-block;
     
 }
+/* Menu Caramelos de pokemon */
 .select1{
     position: absolute;
     background-color: rgba(253, 190, 52, 1);
@@ -142,6 +157,7 @@
     width: 130px;
     display: inline-block;
 }
+/* Menu Debilidades de pokemon */
  .select2{
     position: absolute;
     background-color:  rgba(242, 247, 255, 1);
@@ -154,6 +170,7 @@
     margin-top: 18px;
     margin-left: 850px;
 }
+/* Menu Ordenar de A-Z y Z-A */
 .ordenar{
     position: absolute;
     background-color: rgba(253, 190, 52, 1);
@@ -183,6 +200,7 @@
 .pintame{
     position: relative;
 }
+/* Fondo pagina 3 */
 .pagina3{
     background-image: url("http://getwallpapers.com/wallpaper/full/0/8/2/53557.jpg");
     position: relative;
@@ -203,15 +221,8 @@
     position: absolute;
     opacity: 0.9;
 }
-.btnBuscar{
-    position:absolute;
-    width: 80px;
-    height: 30px;
-    font-family: 'Roboto Slab', serif;
-    font-size: 18px;
-    background:  rgba(253, 190, 52, 1);
-    border-radius: 10px;
-}
+
+/* imagen pagina 3 */
 .logo2{
     position: absolute;
     justify-content: flex-start;
@@ -222,6 +233,7 @@
     width: 70%;
     margin-left: 25px;
 }
+/* texto pagina 3 */
 .texto2{
     font-family: 'Roboto Slab', serif;
     position: relative;
@@ -234,6 +246,7 @@
     justify-content: flex-start;
     align-content: flex-start;
 }
+/* contenedor top10 de pagina 3 */
 .contenedor2{
     position: relative;
     text-align: center;
@@ -251,47 +264,40 @@
 .contenedor2 img{
     margin: auto;
 }
+/* caja donde se muestra los pokemon top10 */
 .top{
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: flex-end;
 }
+/* Buscador de Pokemones */
 .formulario{
     position: absolute;
     width: 235px;
     height:25px;
-    background-color:rgba(242, 247, 255, 1);  
+    background-color:rgba(242, 247, 255, 1);
+    font-family: Georgia;
+    font-size: 18px;
+    border-radius: 10px;  
+    margin-left: 400px;
+    margin-top: -32px;
+}
+.btnBuscar{
+    position:absolute;
+    width: 80px;
+    height: 30px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    background:  rgba(253, 190, 52, 1);
+    border-radius: 10px;
+    margin-left: 310px;
+    margin-top: -32px;
 }
 .hide{
     display: none;
 }
 /* Smartphones (landscape) */
-@media only screen 
-and (min-width : 321px) {
-}
-/* Smartphones (portrait) */
-@media only screen 
-and (max-width : 320px) {
-}
-/* Ordenadores de sobremesa y portátiles */
-@media only screen 
-and (min-width : 1224px) {
-}
-/* Pantallas grandes */
-@media only screen 
-and (min-width : 1824px) {
-}
-/* iPhone 4 */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-}
-@media screen and (max-width:640px) {
-    /* reglas CSS */
-  }
-@media screen and (max-width:1024px) and (min-width:640px) {
-    /* reglas CSS */
-  }
-@media screen and (min-width:1024px) {
-    /* reglas CSS */
-  }
+@media screen and (max-width:540px)  {
+    
+     
+   }
