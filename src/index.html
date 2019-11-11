@@ -10,17 +10,44 @@
   <body>
     <header>
       <div id="barra-navegar">
-    <div id="resumen" class="resumen"><span>&#9776;</span></div>
-    <ul>
-      <li><img src="pokeball.png" alt="logo"></li>
-      <li id="pokebola"><b>POKEMON</b></li>
-      <li id="filtro"><b>FILTRO</b> </li>
-    </ul>
-  </div>
+        <div id="resumen" class="resumen"><span>&#9776;</span></div>
+          <ul>
+            <li><img src="pokeball.png" alt="logo"></li>
+            <li id="pokebola"><b>POKEMON</b></li>
+            <li id="filtro"><b>FILTRO</b> </li>
+            <li id="ordenar"><b>ORDENAR</b> </li>
+          </ul>
+      </div>
         <img class="logo" src="logo.png" alt=""><br>
-    </header>
+  </header>
+
+    <section id="menu-pokemon">
+
+      <div id="menu-pokebola">
+          <img src="pokeball.png" alt="top10"><br>
+          <label><b>POKEBOLA</b></label>
+      </div>
+      <div id="menu-filtro"> 
+          <img src="filtro.png" alt="top10"><br>
+          <label><b>FILTRO</b></label>
+      </div>
+      <div id="menu-top10">
+        <img src="top10.png" alt="top10"><br>
+        <label><b>TOP 10</b></label>
+      </div>
+      <div id="menu-evolucion">
+          <img src="filtro.png" alt="top10"><br>
+          <label><b>EVOLUCION</b></label>
+        </div>
+    </section>
+
+     <div id="ordenar-pokemon">
+        <button  id="AZ"><b>A - Z</b></button>
+        <button id="ZA"><b>Z - A</b></button>
+        <button id="asc"><b>1 - 151</b></button>
+      </div>
     
-    <div id="filtros-pokemon">         
+    <div id="filtros-pokemon">
           <select name="filtrar-tipo-pokemon" id="filtrar-tipo-pokemon">
             <option>TIPO</option>
             <option value="Water">Agua</option>
@@ -52,7 +79,6 @@
             <option value="Dragon">Dragon</option>
             <option value="Ghost">Fantasma</option>
             <option value="Psychic">Psíquico</option>
-            <option value="Normal">Normal</option>
             <option value="Fighting">Lucha</option>
             <option value="Poison">Veneno</option>
             <option value="Bug">Bicho</option>
@@ -68,8 +94,11 @@
           <option value="10 km">10 Km</option>
         </select>
     </div>
-  <section id="contenedor-pokemon">
+    <div id="aleatorio"></div>
+     <section id="contenedor-pokemon">
+       
   </section>
+
     <footer> karen y mishel production's</footer>
       <script type="module" src="main.js"></script>
   </body>
