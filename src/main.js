@@ -1,7 +1,7 @@
 /* eslint object-curly-newline: ["error", { "multiline": true }] */
 /* eslint-env es6 */
 import POKEMON from './data/pokemon/pokemon.js';
-import { pintado, porTipo, porDebilidades, traerPokemonesPorCantidadDeCaramelos, ascendente, muestraPokemon, mostrarTop } from './data.js';
+import { pintado, porTipo, porDebilidades, traerPokemonesPorCantidadDeCaramelos, ascendente, muestraPokemon, mostrarTop, buscarPokemon } from './data.js';
 
 /* Para mostrar el menu caramelos */
 const resultado = document.getElementById('resultado');
@@ -62,14 +62,12 @@ orden.addEventListener('change', (event) => {
 });
 
 /* para buscar el nombre del pokemon */
-const buscarPokemon = (array, name) => {
-  return array.filter(pintar => pintar.name.toLowerCase().startsWith (name));
-  };
-  
 const formulario = document.getElementById('formulario');
 formulario.addEventListener('input', event =>{
- pintado(buscarPokemon(POKEMON, event.target.value.toLowerCase()));
- document.querySelector('#pintame').innerHTML = pintado(buscarPokemon(POKEMON, event.target.value.toLowerCase()));
+  const pintame = document.getElementById('pintame');
+  pintame.classList.remove('hide');
+  pintado(buscarPokemon(POKEMON, event.target.value.toLowerCase()));
+  document.querySelector('#pintame').innerHTML = pintado(buscarPokemon(POKEMON, event.target.value.toLowerCase()));
 
 });
 

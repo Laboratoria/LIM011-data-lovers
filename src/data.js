@@ -101,3 +101,7 @@ export const mostrarTop = (arr) => {
   const arrTop = arr.slice(0, 10);
   return arrTop;
 };
+
+export const buscarPokemon = (array, name) => {
+  return array.filter(pintar => pintar.name.toLowerCase().startsWith (name));
+  };
