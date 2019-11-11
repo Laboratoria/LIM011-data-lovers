@@ -1,27 +1,31 @@
 import POTTER from './data/potter/potter.js';
-
-import { ordenado, filtrado } from './data.js';
-
+import { ordenado, filtrado, busqueda } from './data.js';
 
 const divTodos = document.getElementById('todos');
-const divG = document.getElementById('soloG');
-const divH = document.getElementById('soloH');
-const divR = document.getElementById('soloR');
-const divS = document.getElementById('soloS');
-
-
-const mostrarPersonajes = (dataPorCasa) => {
+const pintado = (dataPorCasa, p1, p2, p3) => {
   let templatePotter = '';
   dataPorCasa.forEach((extrae) => {
-    templatePotter += `<div id="imagenes" class="casas-card">
-              <img class="imagen" src= "${extrae.image}"/>
-              <p>${extrae.name}</p>
+    if (p3 !== '') {
+      templatePotter += `<div id="imagenes" class="casas-card">
+              <img class="imagen" src= "${extrae[p1]}"/>
+              <p>${extrae[p2]}</p>
+              <p>${extrae[p3]}</p>
             </div>`;
+    }
+    if (p3 === '') {
+      templatePotter += `<div id="imagenes" class="casas-card">
+        <img class="imagen" src= "${extrae[p1]}"/>
+        <p>${extrae[p2]}</p>
+        </div>`;
+    }
   });
   return templatePotter;
 };
 
+let datos = '';
 const seleccionar = document.querySelector('.filtrar-casas');
+divTodos.innerHTML = pintado(ordenado(POTTER), 'image', 'name', 'house');
+datos = POTTER;
 
 seleccionar.addEventListener('change', (evento) => {
   // borra el input de busqueda al cambiar de option en el select
@@ -30,113 +34,39 @@ seleccionar.addEventListener('change', (evento) => {
   const opcionSeleccionadaSelect = evento.target.value;
 
   divTodos.innerHTML = '';
-  // divG.innerHTML = '';
-  // divH.innerHTML = '';
-  // divR.innerHTML = '';
-  // divS.innerHTML = '';
-
   switch (opcionSeleccionadaSelect) {
     case 'todos':
-      divTodos.innerHTML = mostrarPersonajes(POTTER);
+      datos = POTTER;
+      divTodos.innerHTML = pintado((POTTER), 'image', 'name', 'house');
       break;
     case 'gryffindor':
-      divTodos.innerHTML = mostrarPersonajes(filtrado(POTTER, 'house', 'Gryffindor'));
+      datos = filtrado(POTTER, 'house', 'Gryffindor');
+      divTodos.innerHTML = pintado(datos, 'image', 'name', '');
       break;
     case 'hufflepuff':
-      divTodos.innerHTML = mostrarPersonajes(filtrado(POTTER, 'house', 'Hufflepuff'));
+      datos = filtrado(POTTER, 'house', 'Hufflepuff');
+      divTodos.innerHTML = pintado(datos, 'image', 'name', '');
       break;
     case 'ravenclaw':
-      divTodos.innerHTML = mostrarPersonajes(filtrado(POTTER, 'house', 'Ravenclaw'));
+      datos = filtrado(POTTER, 'house', 'Ravenclaw');
+      divTodos.innerHTML = pintado(datos, 'image', 'name', '');
       break;
     case 'slytherin':
-      divTodos.innerHTML = mostrarPersonajes(filtrado(POTTER, 'house', 'Slytherin'));
+      datos = filtrado(POTTER, 'house', 'Slytherin');
+      divTodos.innerHTML = pintado(datos, 'image', 'name', '');
       break;
     default:
   }
 });
-
-
-let dataSeleccionada = '';
-let divSeleccionado = '';
-
-const filtradoSeleccionado = () => {
-  const valorDeFiltrado = document.querySelector('.filtrar-casas').value;
-  divTodos.innerHTML = '';
-  // divG.innerHTML = '';
-  // divH.innerHTML = '';
-  // divR.innerHTML = '';
-  // divS.innerHTML = '';
-  switch (valorDeFiltrado) {
-    case 'todos':
-      document.querySelector('#todos').innerHTML = mostrarPersonajes(ordenado(POTTER), 'image', 'name', 'house', '');
-      dataSeleccionada = POTTER;
-      divSeleccionado = divTodos;
-      break;
-    case 'gryffindor':
-      dataSeleccionada = filtrado(POTTER, 'house', 'Gryffindor');
-      divSeleccionado = divTodos;
-      break;
-    case 'hufflepuff':
-      dataSeleccionada = filtrado(POTTER, 'house', 'Hufflepuff');
-      divSeleccionado = divTodos;
-      break;
-    case 'ravenclaw':
-      dataSeleccionada = filtrado(POTTER, 'house', 'Ravenclaw');
-      divSeleccionado = divTodos;
-      break;
-    case 'slytherin':
-      dataSeleccionada = filtrado(POTTER, 'house', 'Slytherin');
-      divSeleccionado = divTodos;
-      break;
-    default:
+// pintado la busqueda
+document.querySelector('#valorDeBusqueda').addEventListener('input', (event) => {
+  const nombreBuscado = event.target.value.toLowerCase();
+  if (datos === POTTER) {
+    divTodos.innerHTML = pintado((busqueda(datos, nombreBuscado)), 'image', 'name', 'house');
+  } else {
+    divTodos.innerHTML = pintado((busqueda(datos, nombreBuscado)), 'image', 'name', '');
   }
-};
-
-seleccionar.addEventListener('input', filtradoSeleccionado);
-filtradoSeleccionado();
-
-// const datita = [{ name: 'Luna Lovegood', house: 'Ravenclaw' }, { name: 'Luna Chang', house: 'Ravenclaw' }, { name: 'Hermonie Granger', house: 'Gryffindor' }];
-
-// const buscar = (data, textoB) => {
-//   let indicesCoincidencias = '';
-//   for (let i = 0; i < data.length; i += 1) {
-//     const dataNombres = data[i].name.toLowerCase();
-//     const longitud = textoB.length;
-//     const caracterEspacio = dataNombres.indexOf(' ');
-//     const nombre = dataNombres.slice(0, caracterEspacio);
-//     const apellido = dataNombres.slice(caracterEspacio + 1, dataNombres.length);
-//     if (nombre.slice(0, longitud) === textoB) {
-//       indicesCoincidencias= 'data[i].name';
-//     return indicesCoincidencias;
-//             }
-//   }
-// };
-// console.log(buscar(datita, 'Lun'))
-
-// const busqueda = () => {
-//   divSeleccionado.innerHTML = '';
-//   const textoBuscado = valorDeBusqueda.value.toLowerCase();
-//   for (let i = 0; i < dataSeleccionada.length; i += 1) {
-//     const dataSoloNombres = dataSeleccionada[i].name.toLowerCase();
-//     const longitudBusqueda = textoBuscado.length;
-//     const caracterEspacio = dataSoloNombres.indexOf(' ');
-//     const primerNombre = dataSoloNombres.slice(0, caracterEspacio);
-//     const segundoNombre = dataSoloNombres.slice(caracterEspacio + 1, dataSoloNombres.length);
-//     if (primerNombre.slice(0, longitudBusqueda) === textoBuscado) {
-//       divSeleccionado.innerHTML += `<div id="imagenes" class="casas-card">
-//           <img class="imagen" src= "${dataSeleccionada[i].image}"/>
-//           <p>${dataSeleccionada[i].name}</p>
-//           </div>`;
-//     } else if (segundoNombre.slice(0, longitudBusqueda) === textoBuscado) {
-//       divSeleccionado.innerHTML += `<div id="imagenes" class="casas-card">
-//           <img class="imagen" src= "${dataSeleccionada[i].image}"/>
-//           <p>${dataSeleccionada[i].name}</p>
-//           </div>`;
-//     }
-//   }
-//   if (divSeleccionado.innerHTML === '') {
-//     divSeleccionado.innerHTML += '<p>No se encontró ningún personaje</p>';
-//   }
-// };
-// valorDeBusqueda.addEventListener('keyup', busqueda);
-// busqueda()
+  if (divTodos.innerHTML === '') {
+    divTodos.innerHTML = '<h1>No se encontró ningún personaje</h1>';
+  }
+});
