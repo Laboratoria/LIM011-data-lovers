@@ -16,16 +16,6 @@ module.exports = {
   },
   rules: {
     "linebreak-style" : 0,
-    "arrow-body-style": 0
-  },
-  rules: {
-    "ecmaFeatures": {
-      "js": true
-  }
-  },
-  rules: {
-  "linebreak-style": 0,
-  "global-require": 0,
 
   },
 };
