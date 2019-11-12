@@ -46,11 +46,11 @@ export const ascendente = (datos) => {
 };
 
 export const mostrarTop = (arr) => {
-  arr.sort((p1, p2) => (p1.spawn_chance > p2.spawn_chance) ? -1 : 1);
+  arr.sort((p1, p2) => ((p1.spawn_chance > p2.spawn_chance) ? -1 : 1));
   const arrTop = arr.slice(0, 10);
   return arrTop;
 };
 
-export const buscarPokemon = (array, name) => {
-  return array.filter((pintar) => pintar.name.toLowerCase().startsWith(name));
-};
+export const buscarPokemon = (array, name) => array.filter(
+  (pintar) => pintar.name.toLowerCase().startsWith(name),
+);
