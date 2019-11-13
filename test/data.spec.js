@@ -11,7 +11,7 @@ const arrayEntrante = [
   { id: 5, num: '005', name: 'Charmeleon', type: ['Fire'], candy_count: 100, spawn_chance: 0.012, weaknesses: ['Water', 'Ground', 'Rock'] },
 ];
 
-const arraySaliente = [
+const arrayTipos = [
   { id: 1, num: '001', name: 'Bulbasaur', type: ['Grass', 'Poison'], candy_count: 25, spawn_chance: 0.69, weaknesses: ['Fire', 'Ice', 'Flying', 'Psychic'] },
   { id: 2, num: '002', name: 'Ivysaur', type: ['Grass', 'Poison'], candy_count: 100, spawn_chance: 0.042, weaknesses: ['Fire', 'Ice', 'Flying', 'Psychic'] },
   { id: 3, num: '003', name: 'Venusaur', type: ['Grass', 'Poison'], spawn_chance: 0.017, weaknesses: ['Fire', 'Ice', 'Flying', 'Psychic'] },
@@ -23,7 +23,7 @@ describe('filtrarPorTipo', () => {
   });
   describe('filtrarPorTipo', () => {
     it('debería retornar un array con los pokemones de tipo veneno', () => {
-      expect(filtrarPorTipo(arrayEntrante, 'Poison', 'type')).toEqual(arraySaliente);
+      expect(filtrarPorTipo(arrayEntrante, 'Poison', 'type')).toEqual(arrayTipos);
     });
   });
 });
