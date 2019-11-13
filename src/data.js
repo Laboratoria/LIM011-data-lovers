@@ -14,14 +14,16 @@ export const filtrado = (data, propiedad, valor) => {
 
 // busqueda
 export const busqueda = (data, input) => {
-  const bNombre = data.filter((obj) => obj.name.toLowerCase().startsWith(input, 0));
-  const bApellido = data.filter((obj) => obj.name.toLowerCase().startsWith(input, (obj.name.indexOf(' ') + 1)));
-  let buscar = '';
-  if (bApellido === bNombre) {
-    buscar = bNombre;
-  } else {
-    buscar = bNombre.concat(bApellido);
-  }
-  console.log(buscar);
-  return buscar;
+  const nuevoArray = [];
+  data.forEach((element) => {
+    if (element.name.toLowerCase().startsWith(input.toLowerCase(), 0)) {
+      nuevoArray.push(element);
+    } else if (element.name.toLowerCase().startsWith(input.toLowerCase(), (element.name.indexOf(' ') + 1))) {
+      nuevoArray.push(element);
+    }
+  });
+  // console.log(arrayData);
+  // const nuevo = bNombre.concat(bApellido);
+  console.log(nuevoArray);
+  return nuevoArray;
 };

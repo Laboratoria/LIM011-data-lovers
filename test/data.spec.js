@@ -1,4 +1,4 @@
-import { ordenado, filtrado } from '../src/data.js';
+import { ordenado, filtrado, busqueda } from '../src/data.js';
 
 describe('ordenado', () => {
   it('debería ser una función', () => {
@@ -6,9 +6,9 @@ describe('ordenado', () => {
   });
 
   it('debería ordenar los personajes alfabeticamente a los personajes', () => {
-    const input = [{ name: 'Harry Potter' }, { name: 'Draco Malfoy' }, { name: 'Hermonie Granger' }];
-    const output = [{ name: 'Draco Malfoy' }, { name: 'Harry Potter' }, { name: 'Hermonie Granger' }];
-    expect(ordenado(input)).toEqual(output);
+    const dataO = [{ name: 'Harry Potter' }, { name: 'Draco Malfoy' }, { name: 'Hermonie Granger' }];
+    const esperoO = [{ name: 'Draco Malfoy' }, { name: 'Harry Potter' }, { name: 'Hermonie Granger' }];
+    expect(ordenado(dataO)).toEqual(esperoO);
   });
 });
 
@@ -18,8 +18,26 @@ describe('filtrado', () => {
   });
 
   it('debería filtrar la data por el nombre de la casa Ravenclaw', () => {
-    const data = [{ name: 'Luna Lovegood', house: 'Ravenclaw' }, { name: 'Cho Chang', house: 'Ravenclaw' }, { name: 'Hermonie Granger', house: 'Gryffindor' }];
-    const espero = [{ name: 'Luna Lovegood', house: 'Ravenclaw' }, { name: 'Cho Chang', house: 'Ravenclaw' }];
-    expect(filtrado(data, ['house'], 'Ravenclaw')).toEqual(espero);
+    const dataF = [{ name: 'Luna Lovegood', house: 'Ravenclaw' }, { name: 'Cho Chang', house: 'Ravenclaw' }, { name: 'Hermonie Granger', house: 'Gryffindor' }];
+    const esperoF = [{ name: 'Luna Lovegood', house: 'Ravenclaw' }, { name: 'Cho Chang', house: 'Ravenclaw' }];
+    expect(filtrado(dataF, ['house'], 'Ravenclaw')).toEqual(esperoF);
+  });
+});
+
+describe('busqueda', () => {
+  it('debería ser una función', () => {
+    expect(typeof busqueda).toBe('function');
+  });
+
+  it('debería retornar los elementos que coincidan tanto en nombre o apellido con el input en mayuscula', () => {
+    const dataBM = [{ name: 'Vincent Crabbe', house: 'Slytherin' }, { name: 'Cho Chang', house: 'Ravenclaw' }, { name: 'Hermonie Granger', house: 'Gryffindor' }];
+    const esperoBM = [{ name: 'Vincent Crabbe', house: 'Slytherin' }, { name: 'Cho Chang', house: 'Ravenclaw' }];
+    expect(busqueda(dataBM, 'C')).toEqual(esperoBM);
+  });
+
+  it('debería retornar los elementos que coincidan tanto en nombre o apellido con el input en minuscula', () => {
+    const dataBm = [{ name: 'Vincent Crabbe', house: 'Slytherin' }, { name: 'Cho Chang', house: 'Ravenclaw' }, { name: 'Hermonie Granger', house: 'Gryffindor' }];
+    const esperoBm = [{ name: 'Vincent Crabbe', house: 'Slytherin' }, { name: 'Cho Chang', house: 'Ravenclaw' }];
+    expect(busqueda(dataBm, 'c')).toEqual(esperoBm);
   });
 });

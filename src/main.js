@@ -60,7 +60,7 @@ seleccionar.addEventListener('change', (evento) => {
 });
 // pintado la busqueda
 document.querySelector('#valorDeBusqueda').addEventListener('input', (event) => {
-  const nombreBuscado = event.target.value.toLowerCase();
+  const nombreBuscado = event.target.value;
   if (datos === POTTER) {
     divTodos.innerHTML = pintado((busqueda(datos, nombreBuscado)), 'image', 'name', 'house');
   } else {
