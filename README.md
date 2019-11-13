@@ -85,7 +85,7 @@ y de equipo.
 
 - [ ] Diseñar la aplicación pensando y entendiendo al usuario.
 - [ ] Crear prototipos para obtener _feedback_ e iterar.
-- [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).
+- [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).*
 - [ ] Planear y ejecutar _tests_ de usabilidad.
 
 ### HTML y CSS
@@ -118,12 +118,12 @@ y de equipo.
 ### Git y GitHub
 - [ ] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
 - [ ] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
-- [ ] Colaborar en Github (pull requests).
+- [ ] Colaborar en Github (pull requests).**
 
 ### Buenas prácticas de desarrollo
 - [ ] Organizar y dividir el código en módulos (Modularización).
-- [ ] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
-- [ ] Utilizar linter para seguir buenas prácticas (ESLINT).
+- [ ] Utilizar identificadores descriptivos (Nomenclatura | Semántica).*
+- [ ] Utilizar linter para seguir buenas prácticas (ESLINT).*
 
 ## 4. Consideraciones generales
 
