@@ -5,16 +5,7 @@ module.exports = {
   },
   extends: [
     'airbnb-base',
-    'plugin:meteor/recommended',
   ],
-  plugins: [
-    'meteor',
-    'import',
-  ],
-  settings: {
-    'import/resolver': 'meteor'
-  },
-  
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -24,5 +15,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    "linebreak-style" : 0,
+
   },
 };
