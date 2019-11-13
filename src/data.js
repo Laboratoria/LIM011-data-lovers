@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 // Ordenado por alfabeto, juntar con el inner.HTML
 
 export const ordenado = ((data) => data.sort((a, b) => {
@@ -5,30 +6,24 @@ export const ordenado = ((data) => data.sort((a, b) => {
     return 1;
   }
   return -1;
-});
+}));
 
 // eslint-disable-next-line arrow-body-style
 export const filtrado = (data, propiedad, valor) => {
-  return data.filter((a) => a[propiedad] === valor);
-  // esta es la manera de llamar a la propiedad en el objeto
+// esta es una manera de llamar a la propiedad en el objeto.
+  return data.filter((a) => (a[propiedad] === valor));
 };
 
-// eslint-disable-next-line arrow-body-style
-export const busqueda = (data, name, input) => {
-  return data.find((a) => a[name] === input);
+// busqueda
+export const busqueda = (data, input) => {
+  const bNombre = data.filter((obj) => obj.name.toLowerCase().startsWith(input, 0));
+  const bApellido = data.filter((obj) => obj.name.toLowerCase().startsWith(input, (obj.name.indexOf(' ') + 1)));
+  let buscar = '';
+  if (bNombre === bApellido) {
+    buscar = bNombre;
+  } else {
+    buscar = bNombre.concat(bApellido);
+  }
+  console.log(buscar);
+  return buscar;
 };
-
-// export const busqueda = (data, input) => {
-//   const mostrar = '';
-//   const nombres = data.name.toLowerCase();
-//   const espacio = nombres.indexOf(' ');
-//   const nombre = nombres.slice(0, espacio);
-//   const apellido = nombres.slice(espacio + 1, nombres.length);
-//   data.find((a) => {
-//     if (a[nombre] === input) {
-//       return mostrar;
-//     } else (a[apellido] === input) {
-//       return mostrar;
-//     }
-//   });
-// };
