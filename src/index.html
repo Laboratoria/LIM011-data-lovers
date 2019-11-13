@@ -5,10 +5,37 @@
     <title>Data Lovers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <header class="header">  
+      <div class="container">
+        <a href="#" class="logo"><img class= "img-logo" src="./img/logo.png" alt=""></a>   
+        <nav class="menu">
+          <ul>
+            <li><a href=""><img id= "icono-menu" src="./img/whitemenu.png"  alt=""></a></li>
+            <li><a href=""><img id= "witch" src="./img/witch.png"  alt=""></a></li>
+            <li><a href="" id='greeting'>Hola, usuarix!</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <main>
+      
+      <section class='data-characters'></section>
+      <section class="modal"></section>
+    </main>
+    <footer>
+      <ul>
+        <li><a href="">Omaira Palacios</a></li>
+        <li>Data-Lovers <p>Para Fans de Harry Potter y Wizard Unite</p></li>
+        <li><article><a href="">Lesly Muñoz</a> </article></li>
+      </ul>
+    </footer>  
     <script type="module" src="main.js"></script>
+    <script type="module" src="./data/potter/potter.js"></script>
   </body>
 </html>
