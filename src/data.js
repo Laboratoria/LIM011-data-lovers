@@ -24,8 +24,6 @@ export const busqueda = (data, input) => {
       nuevoArray.push(element);
     }
   });
-  // console.log(arrayData);
-  // const nuevo = bNombre.concat(bApellido);
   console.log(nuevoArray);
   return nuevoArray;
 };
