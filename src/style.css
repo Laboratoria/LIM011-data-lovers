@@ -1,18 +1,96 @@
+body {
+background-color: black;
+}
 .flex-container{
+	margin-top: 20px;
     display:flex;
     flex-wrap:wrap;
-    background-color: yellow;
+    
 }
 .flex-container > div {
+	background-color: black;
+	width: 180px;
+	margin: 20px;
+	line-height: 50px;
+	border-radius: 20px;
+} 
+
+.flex-container > div > h1{
+    background-color: red;
+    width: 30px;
+	margin: 10px;
+	border-radius: 100%;
+	text-align: center;
+	color: yellow;
+    line-height: 30px;
+    font-weight: bold;
+	font-size: 15px;
+	margin-right: auto;
+} 
+.flex-container > div > img{
+  transition: transform .2s; /* Animation */
+  margin: 5px;
+} 
+.flex-container > div > img:hover{
+	transform: scale(1.5);
+} 
+.flex-container > div > p{
     background-color: white;
     width: 150px;
-    margin: 20px;
+	margin: 2px;
+	border-radius: 40px;
     text-align: center;
-    line-height: 25px;
+    line-height: 20px;
     font-weight: bold;
     font-size: 15px;
 } 
+/*====LISTA DESPLEGABLE====*/
+
+#menuNav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	float: right;
+	font-size: 20px;
+  }
+  
+
+  .roleBtn,  .orderBtn {
+	background-color:white;
+	color: rgb(239, 184, 16);
+	display: block;
+	text-decoration: none;
+	padding: 12px 22px;
+	font-family: "LOL!";
+	width: 1.84cm;
+  }
+  
+  #desple {
+	display: none;
+  }
+  .menu-superior:hover #desple {
+	display: block;
+  }
+  
+  .menu-superior :hover {
+	color: black;
+	background-color:yellow;
+	animation: 0.5s ms 1;
+  }
+  
 /*====CABECERA====*/
+
+.fondo {
+	background-color: white;
+
+}
+
+.divbuscar {
+	text-align: left;
+}
+.divordenar {
+	text-align: right;
+}
 
 nav {
 	width: 100%;
@@ -26,14 +104,25 @@ nav > ul {
 	justify-content: center;
 }
 .menu-superior {
-	float: left;
+	float: center;
+	position: relative;
+	right: 150px;
+	background-color: red;
+	color: rgb(239, 184, 16);
+	display: block;
+	text-decoration: none;
+	padding: 12px 22px;
+	font-family: 'Chewy', cursive;
+	width: 3cm;
+	z-index: 999;
+	float: center;
 	list-style-type: none;
 	padding: 0 46px 0 0;
 }
 /*====FIN DE CABECERA====*/
 /*====ENLACES====*/
 a {
-	color:black;
+	color: black;
 	text-decoration: none;
 	font-size: 20px;
 	font-weight: 700;
@@ -41,7 +130,7 @@ a {
 	line-height: 18px;
 }
 a:hover {
-	color: #fff;
+	color: red;
 	text-decoration: underline;
 }
 /*====FIN DE ENLACES====*/
@@ -276,7 +365,3 @@ h3 {
 		width: 90%;
 	}
 }
-<<<<<<< HEAD
-/*====FIN DE MEDIA QUERIES SMARTPHONES PORTRAIT====*/
-=======
->>>>>>> fbb8db064af44e46a62c2e2027821c126e23af05
