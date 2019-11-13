@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>El mundo de Harry Potter</title>
@@ -11,96 +12,106 @@
 </head>
 
 <!-- BODY -->
+
 <body>
   <header>
-    <div class="menu-flotante"> 
-      <img src="imagenes/ww-g.png" class="logo">
+    <div class="menu-flotante">
+      <a href="#" id="menu-inicio"><img src="imagenes/ww-g.png" class="logo"></a>
       <input type="checkbox" id="menu-nav">
       <label for="menu-nav" class="icon-menu"></label>
       <nav class="menu">
-        <!-- <a href="#">Personajes</a>
-        <a href="#">Rol</a> -->
+        <a href="#" id="menu-personajes">PERSONAJES</a>
+        <a href="#" id="menu-rol">ROL</a>
         <a href="#" id="menu-casas">CASAS</a>
       </nav>
-    </div> 
+    </div>
   </header>
 
   <!-- CONTENIDO -->
   <main>
-    <section> <!-- section de filtros-->
-      <div id="nubes"> <!-- FONDO NUBES-->
-
-        <!-- Menu Casas -->
-        <div id="casas" class="menu-flotante">
-          <!-- class="ocultar"-->
-          <div id="filtros">
-            <div id="select">
-              <select class="filtrar-casas">
-                <option value="todos" selected>Todos</option>
-                <option value="gryffindor">Gryffindor</option>
-                <option value="hufflepuff">Hufflepuff</option>
-                <option value="ravenclaw">Ravenclaw</option>
-                <option value="slytherin">Slytherin</option>
-              </select>
-            </div>
-            
-            <div id="filtradoPorBusqueda">
-              <input type="search"  id="valorDeBusqueda" class="buscar" placeholder="Buscador">
-              <i class="icon-search"></i>
-            </div>
-          </div> <!-- fin del filtros-->
-          <div id="todos"></div>
-        </div> <!-- fin de menu Casas-->
-
-        <!-- Menu Rol -->
-      <div id="rol" class="menu-flotante ocultar">
-          <div id="filtrosR">
-            <div id="selectR">
-              <select class="filtrar-rol">
-                <option value="" hidden selected>Filtrar</option>
-                <option value="Alumno">Alumno</option>
-                <option value="Profesor">Profesor</option>
-              </select>
-            </div>
-            <div id="buscarR">
-              <input type="search" id="busqueda" class="buscar" placeholder="Buscador">
-              <i class="icon-search"></i>
-            </div>
-          </div> <!-- fin del filtros-->
-      </div>
-        <!-- fin del menu rol -->
-   
-        <!-- Menu Personajes  -->
-        <div id="personajes" class="menu-flotante ocultar">
-            <div id="filtrosP">
-              <div id="selectP">
-                <select class="filtrar-rol">
-                  <option value="" hidden selected>Género</option>
-                  <option value="Femenino">Femenino</option>
-                  <option value="Masculino">Masculino</option>
-                </select>
-              </div>
-              <div id="buscarP">
-                <input type="search" id="busquedaP" class="buscar" placeholder="Buscador">
-                <i class="icon-search"></i>
-              </div>
-            </div> <!-- fin del filtros-->
-        </div> <!-- fin del menu personajes-->
-      </div> <!-- fin de nubes background-->
-    </section> <!-- fin section de filtros-->
 
     <!-- INICIO -->
-    <section class="ocultar"> <!-- section de inicio -->
-      <div id="inicio"> <!-- FONDO HIPOGRIFO-->
-        <img src="images/logo-wz-w.png" /> <!--logo wizard-->
+  <section id="inicio-section">
+      <!-- section de inicio -->
+      <div id="inicio">
+        <!-- FONDO HIPOGRIFO-->
+        <img src="images/logo-wz-w.png" />
+        <!--logo wizard-->
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Sapiente illo rem, dicta quidem nisi quibusdam aut, nam reprehenderit beatae,
           velit cum? Id tempore quia in neque illo placeat blanditiis aut.</p>
-          <br>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/jEvCxCbe3HE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/jEvCxCbe3HE" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-    </section> <!-- fin del section de inicio-->
-  </main>
+  </section> <!-- fin del section de inicio-->
+
+  <!-- MENU -->
+  <section id="menus-section" class="ocultar">
+    <!-- section de filtros-->
+    <div id="nubes">
+      <!-- FONDO NUBES-->
+      <!-- Menu Casas -->
+      <div id="casas" class="menu-flotante ocultar">
+        <div class="filtros">
+          <div class="select">
+            <select class="filtrar-casas">
+              <option value="todos" selected>Todos</option>
+              <option value="gryffindor">Gryffindor</option>
+              <option value="hufflepuff">Hufflepuff</option>
+              <option value="ravenclaw">Ravenclaw</option>
+              <option value="slytherin">Slytherin</option>
+            </select>
+          </div>
+
+          <div class="filtradoPorBusqueda">
+            <input type="search" id="valorDeBusqueda" class="buscar" placeholder="Buscador">
+            <i class="icon-search"></i>
+          </div>
+        </div> <!-- fin del filtros-->
+        <div id="todos"></div>
+      </div> <!-- fin de menu Casas-->
+
+      <!-- Menu Rol -->
+      <div id="rol" class="menu-flotante ocultar">
+        <div class="filtros">
+          <div class="select">
+            <select class="filtrar-rol">
+              <option value="todos" selected>Todos</option>
+              <option value="alumno">Alumno</option>
+              <option value="profesor">Profesor</option>
+            </select>
+          </div>
+
+          <div class="filtradoPorBusqueda">
+            <input type="search" id="busqueda" class="buscar" placeholder="Buscador">
+            <i class="icon-search"></i>
+          </div>
+        </div> <!-- fin del filtros-->
+      </div>
+      <!-- fin del menu rol -->
+
+      <!-- Menu Personajes  -->
+      <div id="personajes" class="menu-flotante ocultar">
+        <div class="filtros">
+          <div class="select">
+            <select class="filtrar-rol">
+              <option value="todos" selected>Todos</option>
+              <option value="femenino">Femenino</option>
+              <option value="masculino">Masculino</option>
+            </select>
+          </div>
+
+          <div class="filtradoPorBusqueda">
+            <input type="search" id="busquedaP" class="buscar" placeholder="Buscador">
+            <i class="icon-search"></i>
+          </div>
+        </div> <!-- fin del filtros-->
+      </div> <!-- fin del menu personajes-->
+    </div> <!-- fin de nubes background-->
+  </section> <!-- fin section de filtros-->
+
+</main>
 
   <footer>
     <div id="footer">
@@ -118,4 +129,5 @@
   </footer>
   <script type="module" src="main.js"></script>
 </body>
+
 </html>
