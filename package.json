@@ -16,16 +16,18 @@
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
     "babel-jest": "^24.9.0",
     "htmlhint": "^0.11.0",
+    "jest": "^24.9.0",
     "opener": "^1.5.1",
     "serve": "^11.0.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.6.1",
-    "@typescript-eslint/parser": "^2.6.1",
     "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^22.19.0",
-    "jest": "^24.9.0"
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^1.7.0"
   }
 }

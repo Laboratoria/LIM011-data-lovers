@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import POKEMON from './data/pokemon/pokemon.js';
 
 import {
@@ -56,7 +57,7 @@ desple.addEventListener('click', (event) => {
   const pintarArregloFiltrado = generarTemplatePokemones(arregloFiltrado);
   pintarPokemonesEnPantalla(pintarArregloFiltrado, contenedorPokemons);
   console.log(pintarPokemonesEnPantalla);
-})
+});
 
 for (let i = 0; i < radioInput.length; i += 1) {
   radioInput[i].addEventListener('change', (event) => {
@@ -72,4 +73,3 @@ btnBuscarTop10.addEventListener('click', () => {
   const pintarArregloMuestraTop = generarTemplatePokemones(arregloMuestraTop);
   pintarPokemonesEnPantalla(pintarArregloMuestraTop, contenedorPokemons);
 });
-
