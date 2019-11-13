@@ -1,0 +1,551 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image:  linear-gradient(
+    rgba(206, 206, 206, 0.062),
+    rgba(0, 0, 0, 0.342)
+  ),url(./img/startbackground.jpg);
+  background-size: cover;
+}
+footer{
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  background: black;
+  color: #fff;
+  text-align: center;
+  border-top: #4b4848 solid 1px;
+}
+footer ul{
+  width: 100%;
+}
+footer li{
+  display: inline-block;
+}
+/*---------------------------------- Modal -------------------------------- */
+.img-modal-card {
+  width: 80px;
+  height: 100px;
+  border-radius: 50%;
+}
+.overlay {
+	background: rgba(12, 96, 134, 0.384);
+	position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+  visibility: hidden;
+  z-index: 2;
+}
+.overlay.active {
+	visibility: visible;
+}
+.popup {
+	background: #F8F8F8;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	border-radius: 3px;
+	font-family: 'Montserrat', sans-serif;
+	padding: 20px;
+	text-align: center;
+  width: 195px;
+  height: 310px;
+	transition: .3s ease all;
+	transform: scale(0.7);
+  opacity: 0;
+  z-index: 2;
+  position: absolute; 
+}
+.popup .btn-cerrar-popup {
+	font-size: 16px;
+	line-height: 16px;
+	display: block;
+	text-align: right;
+	transition: .3s ease all;
+  color: #BBBBBB;
+  z-index: 3;
+  position: relative;
+}
+.popup .btn-cerrar-popup:hover {
+	color: rgb(124, 15, 15);
+}
+.popup.active {	
+  transform: scale(1); opacity: 1; 
+}
+/* --------------------------------------------------MOBILE S---------------------------------------------------- */
+/* Menu de Navegación */
+.container {
+  width: 100%; 
+  position: relative;
+}
+header{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 12%;
+  background: url(./img/fondoestrellado.jpg);
+  background-size: cover;
+  color: black;
+  border-bottom: 1px whitesmoke solid;
+}
+#greeting{
+  color: white;
+  font-family: 'Yeon Sung', cursive;
+  font-size: 26px;
+  text-decoration: none;
+}
+.img-logo{
+  margin-top: 12px;
+  width: 245px;
+  height: 49px;
+  position: absolute;
+  margin-left: 42px;
+}
+#icono-menu{
+  margin-top: 12px;
+  width: 28%;
+  margin-left: 10px;
+}
+.menu ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  align-items: baseline;
+}
+.menu ul li{
+  width: 100px;
+  float: none;
+  display:inline-block;
+  margin-top: 10px;
+}
+.menu ul li:nth-child(1){
+float: left;
+}
+.menu ul li:nth-child(2){
+  float:  right;
+  display: none;
+  }
+.menu ul li:nth-child(3){
+  float: right;
+  width: 10%;
+  margin-top: 38px;
+  display: none;
+  }
+#witch{
+  margin-top: 5px;
+  width: 73%;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+/* Elementos del MAIN */
+.btn-general {
+  padding: 3px 19px;
+  margin: 8px 4px 0px 4px;
+  background: rgba(13, 13, 13, 1);
+  border-style: none;
+  border-radius: 25px;
+  color:white;
+  border: #BBBBBB solid 1px;
+  font-family: 'Yeon Sung', cursive;
+  font-size: 11px;
+}
+.btn-general:hover{
+  background: #fbfbfb;
+  color: #020013;
+  border: #020013 solid 2px;
+}
+.card-data {
+  display: flex;
+  flex-direction: column;
+  width: 77%;
+  flex-basis: auto;
+  margin: 7px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-repeat: no-repeat;
+  background: rgba(2, 0, 16, 0.68);
+  border: 1px whitesmoke solid;
+  border-radius: 4px;
+  font-family: 'Yeon Sung', cursive;
+}
+.card-description {
+  margin: 14px 10px 0px 10px;
+  justify-content: center;
+}
+.card-description h2{
+  text-align: center;
+  font-size: 14px;
+}
+.card-description h3{
+  text-align: center;
+  font-size: 12px;
+}
+.card-details {
+  width: 100%;
+  height: 60%;
+  justify-content: center; 
+}
+.data-characters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 67%;
+}
+.img-card {
+  margin-top: 13px;
+  width: 113px;
+  height: 140px;
+  border-radius: 50%;
+  border: #BBBBBB solid 1px;
+}
+main {
+  padding-top: 82px;
+  display: flex;
+  justify-content: center;
+}
+/* ----------------------------------------------MOBILE M-------------------------------------------------- */
+@media screen and (min-width: 375px)and (max-width:424px) {
+  /* Menu de Navegacion */
+  #icono-menu{
+    margin-left: 10px;
+  }
+  /* Elementos del MAIN */
+  .btn-general {
+    padding: 5px 22px;
+    margin: 7px 4px 0px 4px;
+  }
+  .card-data {
+    width: 42%;
+    flex-basis: auto;
+    margin: 7px 11px 5px 5px;
+    padding: 0px;
+    align-items: center;
+  }
+  .card-description {
+    align-items: center;
+    margin: 14px 0px 0px 0px;
+    width: 94%;
+  }
+  .data-characters {
+    width: 100%;
+  }
+  header {
+    height: 12%;
+  }
+  .img-card {
+    height: 140px;
+  }
+  .img-logo {
+    margin-top: 10px;
+    width: 262px;
+    height: 50px;
+    position: absolute;
+    margin-left: 60px;
+  }  
+  main {
+    padding-top: 79px;
+  }
+}
+@media screen and (min-width: 425px )and (max-width:767px) {
+  /* Menu de Navegación */
+  #icono-menu {
+    width: 40%;
+    margin-left: 12px; 
+  }
+  .img-logo{
+    margin-top: 11px;
+    margin-left: 82px;
+    width: 260px;
+    height: 52px;
+  }
+  header{
+    height: 13%;
+  }
+  /* Elementos del Main*/
+  .card-data {
+    width: 41%;
+    flex-basis: auto;
+    margin: 8px 20px 5px 8px;
+    padding: 2px;
+    align-items: center;
+  }
+  main {
+    padding-top: 83px;
+  }
+  .data-characters {
+    width: 90%;
+  }
+  .img-card {
+    width: 105px;
+    height: 135px;
+    border-radius: 50%;
+    flex-basis: auto;
+  }
+  .card-description {
+    align-items: center;
+    margin: 8px 0px 2px 0px;
+    width: 100%;
+  }
+  .btn-general {
+    padding: 5px 21px;
+    margin: 8px 4px 4px 4px;
+  }    
+}
+/* <-----------------------------------------------TABLET-------------------------------------------> */
+@media screen and (min-width: 768px )and (max-width:1023px) {
+  /* Menu de Navegación */
+  header{
+    height: 14%;
+  }
+  .img-logo{
+    width: 310px;
+    height: 51px;
+    margin-left: 228px;
+    margin-top: 18px;
+  }
+  #icono-menu{
+    width: 36%;
+    margin-left: 24px;
+    margin-top: 5px;
+  }
+  .menu ul li{
+    width: 100px;
+    float: none;
+    display:inline-block;
+  }
+  .menu ul li:nth-child(1){
+    margin-top: 23px;
+    float: left;
+  }
+  .menu ul li:nth-child(2){
+    margin-top: 8px;
+    float:  right;
+    margin-left: 6px;
+    margin-right: 45px;
+    display: block;
+    width: 80px;
+  }
+  .menu ul li:nth-child(3){
+    float: right;
+    width: 13%;
+    margin-top: 0px;
+    margin-left: 12px;
+    display: block;
+  }
+  #greeting{
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 32px;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  /* Elementos del MAIN */
+  .data-characters{
+    width: 96%;
+  }
+  .card-data{
+    width: 24%;
+    flex-basis: auto;
+    margin: 5px 16px 16px 6px;
+    padding: 0px;
+    align-items: center;
+  }
+  .img-card{
+    margin-top: 13px;
+    width: 120px;
+    height: 153px;
+    border-radius: 50%;
+    flex-basis: auto;
+  }
+  .card-description {
+    align-items: center;
+    margin: 15px 0px 0px 0px;
+    width: 100%;
+  }
+  .btn-general {
+    padding: 5px 30px;
+    margin: 8px 4px 0px 4px;
+  }
+  main {
+    margin-top: 50px;
+    }
+}
+@media screen and (min-width: 1024px)and (max-width:1439px) {
+  .card-data {
+    width: 20%;
+    flex-basis: auto;
+    margin: 8px 5px 17px 22px;
+    padding: 8px 10px 0px 10px;
+    align-items: center;
+  }
+  .btn-general {
+		padding: 8px 31px;
+		margin: 8px 3px 0px 3px;
+    }
+  .data-characters {
+    width: 96%;
+  }
+  header {
+    height: 17%;
+  }
+  #icono-menu{
+    width: 36%;
+    margin-left: 24px;
+    margin-top: 10px;
+    }
+  .img-card {
+    margin-top: 8px;
+    width: 137px;
+    height: 182px;
+    border-radius: 50%;
+    flex-basis: auto;
+    }
+  .img-logo{
+    height: 67px;
+    width: 380px;
+    margin-top: 16px;
+    margin-left: 337px;
+  }
+  .card-description {
+    justify-content: center;
+    margin: 20px 0px 0px 0px;
+    width: 100%;
+    }
+  #greeting{
+    display: block;
+    margin-top: 32px;
+    font-size: 22px;
+    font-weight: bold;
+  }    
+  .menu ul li:nth-child(1){
+    margin-top: 23px;
+    float: left;
+  }
+  .menu ul li:nth-child(2){
+    margin-top: 8px;
+    float:  right;
+    margin-left: 6px;
+    margin-right: 15px;
+    display: block;
+    width: 80px;
+  }
+  .menu ul li:nth-child(3){
+    float: right;
+    width: 13%;
+    margin-top: 0px;
+    margin-left: 12px;
+    display: block;
+  }
+  .btn-general {
+    padding: 7px 32px;
+    font-size: 13px;
+  }
+  .card-description h2{
+    font-size: 16px;
+  }
+  .card-description h3{
+    font-size: 14px;
+  }
+  main {
+    margin-left: 13px;
+    margin-top: 34px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* Menu de Navegación */
+  header{
+    height: 17%;
+    
+  }
+  #greeting {
+    font-size: 22px;
+  }
+  .img-logo{
+    margin-left: 0px;
+    margin-top: 17px;
+    width: 510px;
+    height: 90px;
+    position: absolute;
+    left: 33%;
+    }
+  .menu ul li{
+      width: 100px;
+      float: none;
+      display:inline-block;
+      margin-top: 20px;
+    }
+  .menu ul li:nth-child(1){
+    float: left;
+    }
+  .menu ul li:nth-child(2){
+      float:  right;
+      display: block;
+    }
+  .menu ul li:nth-child(3){
+      float: right;
+      width: 10%;
+      margin-top: 64px;
+      display: block;
+    }
+  /* Elementos del MAIN */
+  .data-characters{
+    width: 88%;
+  }
+  .card-data{
+    width: 14%;
+    flex-basis: auto;
+    margin: 5px 13px 22px 13px;
+    padding: 0px 10px 2px 10px;
+    align-items: center;
+    }
+  .card-description {
+    justify-content: center;
+    margin: 2px 0px 10px 0px;
+    width: 86%;
+  }
+  .img-card{
+    margin-top: 10px;
+    width: 130px;
+    height: 172px;
+    border-radius: 50%;
+    flex-basis: auto;
+  }
+  .card-details {
+    width: 80%;
+    height: auto;
+    margin-top: 7px;
+    justify-content: center;
+  }
+  .btn-general {
+    padding: 6px 26px;
+    margin: 8px 3px 5px 3px;
+    font-size: 14px;
+  }
+  .card-description h2{
+    text-align: center;
+    font-size: 17px;
+  }
+  .card-description h3{
+    text-align: center;
+    font-size: 14px;
+  }
+  #icono-menu{
+    margin-left: 20px;
+    margin-top: 15px;
+    height: 55%;
+    width: 55%;
+  }
+  main{
+    margin-top: 65px;
+  }
+}

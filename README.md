@@ -117,8 +117,13 @@ y de equipo.
 
 ### Git y GitHub
 - [ ] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
+<<<<<<< HEAD
 - [ ] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
 - [ ] Colaborar en Github (pull requests).**
+=======
+- [ ] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).*
+- [ ] Colaborar en Github (pull requests).
+>>>>>>> 712ce59c6ef742786f3e1eb28e31b36ea674665f
 
 ### Buenas prácticas de desarrollo
 - [ ] Organizar y dividir el código en módulos (Modularización).
