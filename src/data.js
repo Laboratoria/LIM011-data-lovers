@@ -46,7 +46,12 @@ export const showMainData = (listdataPotter) => {
     document.querySelector('.data-characters').appendChild(showTemplate(objDataPotter));
   });
 };
-export function filtrarHouse(dataPotter, houseSelected) {
-  const filterHouse = dataPotter.filter((data) => (data.house === houseSelected));
-  return filterHouse;
+export function filterHouse(dataPotter, houseSelected) {
+  const dataFilterHouse = dataPotter.filter((data) => (data.house === houseSelected));
+  return dataFilterHouse;
+}
+export function filterRole(dataPotter, roleSelected) {
+  const dataFilterRole = dataPotter.filter((data) => (
+    data.hogwartsStudent.toString() === roleSelected));
+  return dataFilterRole;
 }
