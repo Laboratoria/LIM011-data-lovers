@@ -55,7 +55,7 @@ datos = POTTER;
 // Evento del select CASAS
 seleccionar.addEventListener('change', (evento) => {
   // borra el input de busqueda al cambiar de option en el select
-  document.querySelector('#busquedaC').value = '';
+  document.querySelector('.buscar').value = '';
   const opcionSeleccionadaSelect = evento.target.value;
 
   divTodos.innerHTML = '';
@@ -114,7 +114,7 @@ divPersonajes.innerHTML = pintado(ordenado(POTTER), 'image', 'name', '');
 // Evento del select PERSONAJES
 seleccionarPersonajes.addEventListener('change', (evento) => {
   // borra el input de busqueda al cambiar de option en el select
-  document.querySelector('#busquedaP').value = '';
+  document.querySelector('.buscar').value = '';
   const opcionSeleccionadaPersonajes = evento.target.value;
 
   divPersonajes.innerHTML = '';
