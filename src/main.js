@@ -1,25 +1,27 @@
-// import POKEMON from './data/pokemon/pokemon.js'
-// import LoL from './data/lol/lol.js'
-import POTTER from "./data/potter/potter.js";
-// console.log(POTTER);
+// eslint-disable-next-line import/extensions
+import POTTER from './data/potter/potter.js';
+import {
+  filtroPorRoles,
+  filtroPorCasas, filtroPorGenero, buscador,
+// eslint-disable-next-line import/extensions
+} from './data.js';
 
-import { mostrarCaracteristicasPotter, filtroPorRoles, filtroPorCasas, filtroPorGenero } from "./data.js";
 
-
-const miArrImagenes = document.getElementById("arrPotter");
+const miArrImagenes = document.getElementById('arrPotter');
 const cajaRoles = document.querySelector('#roles');
 const cajaCasas = document.querySelector('#casas');
 const cajaGenero = document.querySelector('#genero');
+// const cajaOrden = document.querySelector('#orden');
 const btnBienvenida = document.querySelector('#btn-bienvenida');
 const portada = document.querySelector('#vista-uno');
 const headerView = document.querySelector('#nav');
 
 
-
-const pintarEnPantalla = (POTTER, cajaImagenes) => {
-  let string = "";
-  POTTER.forEach((obj)=> {
-    string += ` <div class="flip-card">
+const pintarEnPantalla = (data, cajaImagenes) => {
+  let guardaImagenes = '';
+  data.forEach((obj) => {
+    guardaImagenes += ` 
+    <div class="flip-card">
     <div class="flip-card-inner">
       <div class="container">
         <img class="mi-imagen" src="${obj.image}"/>
@@ -41,52 +43,62 @@ const pintarEnPantalla = (POTTER, cajaImagenes) => {
         </div>
       </div>
     </div>
-  </div>`
+  </div>`;
   });
-  cajaImagenes.innerHTML = string;
-}
+  // eslint-disable-next-line no-param-reassign
+  cajaImagenes.innerHTML = guardaImagenes;
+};
 pintarEnPantalla(POTTER, miArrImagenes);
 
 
 cajaRoles.addEventListener('click', (event) => {
   // console.log(event.target.id)
-  const rolCapturado =  event.target.id;
+  const rolCapturado = event.target.id;
   // console.log(filtroPorRoles(rolCapturado, POTTER));
   pintarEnPantalla(filtroPorRoles(rolCapturado, POTTER), miArrImagenes);
-})
+});
 
 cajaCasas.addEventListener('click', (event) => {
   const casaCapturada = event.target.id;
   pintarEnPantalla(filtroPorCasas(casaCapturada, POTTER), miArrImagenes);
-})
+});
 
 cajaGenero.addEventListener('click', (event) => {
   const generoCapturada = event.target.id;
+  console.log(event.target.id);
+
   pintarEnPantalla(filtroPorGenero(generoCapturada, POTTER), miArrImagenes);
-})
+});
+
+// cajaOrden.addEventListener('click', (event) => {
+//   const ordenCapturado = event.target.id
+// })
 
 btnBienvenida.addEventListener('click', () => {
- portada.classList.add('hide');
- headerView.classList.remove('hide');
- miArrImagenes.classList.remove('hide');
+  portada.classList.add('hide');
+  headerView.classList.remove('hide');
+  miArrImagenes.classList.remove('hide');
+});
 
-})
+// BUSCADOR
+const porNombre = document.querySelector('#buscarData');
+porNombre.addEventListener('input', (event) => {
+  const potterBuscado = buscador(POTTER, event.target.value.toLowerCase());
+  miArrImagenes.innerHTML = pintarEnPantalla(potterBuscado);
+});
+
 
 // const ocupacion = (POTTER => {
 //   let mostrando = '';
 //   POTTER.forEach(rol  =>{
-  
+
 //   })
 // })
 
 
 // const filtraPorOcupacion = POTTER.filter (ocupacion => {
-   
+
 // })
-
- 
-
-
 
 
 // for

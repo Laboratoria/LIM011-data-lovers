@@ -1,31 +1,47 @@
-/* Manejo de data */
+// export const mostrarCaracteristicasPotter = (POTTER) => POTTER;
 
-// esta es una función de ejemplo
+export const filtroPorRoles = (rol, POTTER) => POTTER.filter((e) => e[rol]);
+// FILTRO PARA CASAS
 
-// export const mostrarPersonajesPotter = (pintaImagen) => {
-//   return 'pintaImagen';
-// };
-
-export const mostrarCaracteristicasPotter = (POTTER) => {
-  return POTTER;
-};
-//FILTRO PARA ROLES
-export const filtroPorRoles = (rol, POTTER) => POTTER.filter(e => e[rol]);
-
-//FILTRO PARA CASAS
 
 export const filtroPorCasas = (casa, POTTER) => {
-  const filtraCasa = POTTER.filter(e => e.house === casa)
+  const filtraCasa = POTTER.filter((e) => e.house === casa);
+  console.log(casa);
+
   console.log(filtraCasa);
   return filtraCasa;
-}
-
+};
 export const filtroPorGenero = (genero, POTTER) => {
-  const filtraGenero = POTTER.filter(e => e.gender === genero)
+  const filtraGenero = POTTER.filter((e) => e.gender === genero);
+  console.log(filtraGenero);
   return filtraGenero;
-}
+};
+export const buscador = (POTTER, buscado) => {
+  POTTER.filter((buscando) => {
+    const encuentra = buscando.name.toLowerCase().startsWith(buscado);
+    console.log(encuentra);
+    return encuentra;
+  });
+};
 
-// esta funcion ejecuta para  el boton de desplazamiento de casa 
+// export const buscador = (POTTER, buscado) => {
+//   console.log(buscado);
+//   return POTTER.filter(obj => obj.name.toLowerCase().startsWith(buscado));
+
+// };
+
+// export const filtrOrden = (POTTER) => {
+//   POTTER.sort((a, b) => {
+//     if(a.yearOfBirth > b.yearOfBirth) {
+//       return 1;
+//     }
+//     if(a.yearOfBirth < b.yearOfBirth) {
+//       return -1;
+//     }
+//     return 0;
+//   })
+// }
+
 
 //  PRUEBAAAAA //
 // export const probando = (POTTER) => {
@@ -39,5 +55,3 @@ export const filtroPorGenero = (genero, POTTER) => {
 //   console.log(pruebita2);
 //   return pruebita2;
 // }
-
-
