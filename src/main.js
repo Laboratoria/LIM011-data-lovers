@@ -55,6 +55,7 @@ divTodosP.innerHTML = pintado(ordenado(POTTER), 'image', 'name', '');
 const seleccionarP = document.querySelector('.filtrar-personajes');
 // Evento del select CASAS
 seleccionarP.addEventListener('change', (evento) => {
+  document.querySelector('#busquedaP').value = '';
   const opcionSeleccionadaGenero = evento.target.value;
 
   divTodosP.innerHTML = '';
@@ -132,6 +133,7 @@ divTodosC.innerHTML = pintado(ordenado(POTTER), 'image', 'name', 'house');
 // Evento del select CASAS
 seleccionarC.addEventListener('change', (evento) => {
   // borra el input de busqueda al cambiar de option en el select
+  document.querySelector('#busquedaC').value = '';
   const opcionSeleccionadaCasa = evento.target.value;
 
   divTodosC.innerHTML = '';
@@ -171,4 +173,20 @@ document.querySelector('#busquedaC').addEventListener('input', (event) => {
   if (divTodosC.innerHTML === '') {
     divTodosC.innerHTML = '<h1>No se encontró ningún personaje</h1>';
   }
+});
+
+document.getElementById('menu-personajes').addEventListener('click', () => {
+  inicio.classList.add('ocultar');
+  menus.classList.remove('ocultar');
+  casas.classList.add('ocultar');
+  rol.classList.add('ocultar');
+  personajes.classList.remove('ocultar');
+});
+
+document.getElementById('menu-rol').addEventListener('click', () => {
+  inicio.classList.add('ocultar');
+  menus.classList.remove('ocultar');
+  rol.classList.remove('ocultar');
+  casas.classList.add('ocultar');
+  personajes.classList.add('ocultar');
 });
