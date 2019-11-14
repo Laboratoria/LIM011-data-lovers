@@ -1,6 +1,7 @@
 // importamos la función `example`
 /* eslint-disable object-curly-newline */
 
+// eslint-disable-next-line import/named
 import { filtrarPorTipo, porDebilidades, traerPokemonesPorCantidadDeCaramelos, ascendente, mostrarTop, buscarPokemon } from '../src/data';
 
 const arrayEntrante = [
@@ -110,7 +111,7 @@ describe('filtrarPorTipo', () => {
         { id: 5, num: '005', name: 'Charmeleon' },
       ];
       it('debería retornar un array con los nombres de los pokemones que empiezan con la letra C', () => {
-        expect(buscarPokemon(arrayParaBuscar, 'C', 'name')).toEqual(arrayBuscar);
+        expect(buscarPokemon(arrayParaBuscar, 'c')).toEqual(arrayBuscar);
       });
     });
   });
