@@ -111,7 +111,7 @@ describe('filtrarPorTipo', () => {
         { id: 5, num: '005', name: 'Charmeleon' },
       ];
       it('debería retornar un array con los nombres de los pokemones que empiezan con la letra C', () => {
-        expect(buscarPokemon(arrayParaBuscar, 'C')).toEqual(arrayRetorno);
+        expect(buscarPokemon(arrayParaBuscar, 'c').toEqual(arrayBuscar);
       });
     });
   });
