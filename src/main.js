@@ -1,13 +1,17 @@
+/* eslint-disable object-curly-newline */
 /* eslint-disable no-alert */
-import POTTER from './data/potter/potter.js';
-import { ordenado, filtrado, busqueda } from './data.js';
-// import { classDeclaration } from '@babel/types';
 
+import POTTER from './data/potter/potter.js';
+import { ordenado, filtrado, busqueda, filtraDiferente } from './data.js';
+
+// Variables globales
 const inicio = document.getElementById('inicio-section');
 const menus = document.getElementById('menus-section');
 const casas = document.getElementById('casas');
 const rol = document.getElementById('rol');
 const personajes = document.getElementById('personajes');
+let datos = '';
+datos = POTTER;
 
 // INICIO
 document.getElementById('menu-inicio').addEventListener('click', () => {
@@ -16,7 +20,6 @@ document.getElementById('menu-inicio').addEventListener('click', () => {
 });
 
 // template
-const divTodos = document.getElementById('todos');
 const pintado = (dataPorCasa, p1, p2, p3) => {
   let templatePotter = '';
   dataPorCasa.forEach((extrae) => {
@@ -37,7 +40,113 @@ const pintado = (dataPorCasa, p1, p2, p3) => {
   return templatePotter;
 };
 
-// eventos menu-casas
+// PERSONAJES
+document.getElementById('menu-personajes').addEventListener('click', () => {
+  inicio.classList.add('ocultar');
+  menus.classList.remove('ocultar');
+  casas.classList.add('ocultar');
+  rol.classList.add('ocultar');
+  personajes.classList.remove('ocultar');
+});
+
+const divTodosP = document.getElementById('todosP');
+divTodosP.innerHTML = pintado(ordenado(POTTER), 'image', 'name', '');
+
+// FILTROS PERSONAJES
+const seleccionarP = document.querySelector('.filtrar-personajes');
+// Evento del select CASAS
+seleccionarP.addEventListener('change', (evento) => {
+  document.querySelector('#busquedaP').value = '';
+  const opcionSeleccionadaGenero = evento.target.value;
+
+  divTodosP.innerHTML = '';
+  switch (opcionSeleccionadaGenero) {
+    case 'todos':
+      datos = POTTER;
+      divTodosP.innerHTML = pintado((POTTER), 'image', 'name', 'house');
+      break;
+    case 'femenino':
+      datos = filtrado(POTTER, 'gender', 'female');
+      divTodosP.innerHTML = pintado(datos, 'image', 'name', '');
+      break;
+    case 'masculino':
+      datos = filtrado(POTTER, 'gender', 'male');
+      divTodosP.innerHTML = pintado(datos, 'image', 'name', '');
+      break;
+    default:
+  }
+});
+
+// BUSCADOR PERSONAJES
+document.querySelector('#busquedaP').addEventListener('input', (event) => {
+  const nombreBuscadoP = event.target.value;
+  if (datos === POTTER) {
+    divTodosP.innerHTML = pintado((busqueda(datos, nombreBuscadoP)), 'image', 'name', '');
+  } else {
+    divTodosP.innerHTML = pintado((busqueda(datos, nombreBuscadoP)), 'image', 'name', '');
+  }
+  if (divTodosP.innerHTML === '') {
+    divTodosP.innerHTML = '<h1>No se encontró ningún personaje</h1>';
+  }
+});
+
+// MENU ROL
+document.getElementById('menu-rol').addEventListener('click', () => {
+  inicio.classList.add('ocultar');
+  menus.classList.remove('ocultar');
+  rol.classList.remove('ocultar');
+  casas.classList.add('ocultar');
+  personajes.classList.add('ocultar');
+});
+
+// pintado al elegir rol
+const divTodosR = document.getElementById('todosR');
+divTodosR.innerHTML = pintado(ordenado(POTTER), 'image', 'name', '');
+
+const seleccionarR = document.querySelector('.filtrar-rol');
+seleccionarR.addEventListener('change', (evento) => {
+  // borra el input de busqueda al cambiar de option en el select
+  document.querySelector('#busquedaR').value = '';
+  const opcionSeleccionadaCasa = evento.target.value;
+  divTodosR.innerHTML = '';
+  const datosNoProf = filtrado(filtrado(POTTER, 'hogwartsStaff', true), 'house', '');
+  const datosNoHogwarts = filtrado(filtrado(POTTER, 'hogwartsStaff', false), 'hogwartsStudent', false);
+
+  switch (opcionSeleccionadaCasa) {
+    case 'todos':
+      datos = POTTER;
+      divTodosR.innerHTML = pintado((POTTER), 'image', 'name', '');
+      break;
+    case 'alumno':
+      datos = filtrado(POTTER, 'hogwartsStudent', true);
+      divTodosR.innerHTML = pintado(datos, 'image', 'name', '');
+      break;
+    case 'profesor':
+      datos = filtraDiferente(filtrado(POTTER, 'hogwartsStaff', true), 'house', '');
+      divTodosR.innerHTML = pintado(datos, 'image', 'name', '');
+      break;
+    case 'otros':
+      datos = datosNoProf.concat(datosNoHogwarts);
+      divTodosR.innerHTML = pintado(datos, 'image', 'name', '');
+      break;
+    default:
+  }
+});
+
+// BUSCADOR ROL
+document.querySelector('#busquedaR').addEventListener('input', (event) => {
+  const nombreBuscadoR = event.target.value;
+  if (datos === POTTER) {
+    divTodosR.innerHTML = pintado((busqueda(datos, nombreBuscadoR)), 'image', 'name', '');
+  } else {
+    divTodosR.innerHTML = pintado((busqueda(datos, nombreBuscadoR)), 'image', 'name', '');
+  }
+  if (divTodosR.innerHTML === '') {
+    divTodosR.innerHTML = '<h1>No se encontró ningún personaje</h1>';
+  }
+});
+
+// CASAS
 document.getElementById('menu-casas').addEventListener('click', () => {
   inicio.classList.add('ocultar');
   menus.classList.remove('ocultar');
@@ -46,54 +155,55 @@ document.getElementById('menu-casas').addEventListener('click', () => {
   rol.classList.add('ocultar');
 });
 
+const divTodosC = document.getElementById('todosC');
+
 // FILTROS CASAS
-let datos = '';
-const seleccionar = document.querySelector('.filtrar-casas');
-divTodos.innerHTML = pintado(ordenado(POTTER), 'image', 'name', 'house');
-datos = POTTER;
 
+divTodosC.innerHTML = pintado(ordenado(POTTER), 'image', 'name', 'house');
+// datos = POTTER;
+const seleccionarC = document.querySelector('.filtrar-casas');
 // Evento del select CASAS
-seleccionar.addEventListener('change', (evento) => {
+seleccionarC.addEventListener('change', (evento) => {
   // borra el input de busqueda al cambiar de option en el select
-  document.querySelector('.buscar').value = '';
-  const opcionSeleccionadaSelect = evento.target.value;
+  document.querySelector('#busquedaC').value = '';
+  const opcionSeleccionadaCasa = evento.target.value;
 
-  divTodos.innerHTML = '';
-  switch (opcionSeleccionadaSelect) {
+  divTodosC.innerHTML = '';
+  switch (opcionSeleccionadaCasa) {
     case 'todos':
       datos = POTTER;
-      divTodos.innerHTML = pintado((POTTER), 'image', 'name', 'house');
+      divTodosC.innerHTML = pintado((POTTER), 'image', 'name', 'house');
       break;
     case 'gryffindor':
       datos = filtrado(POTTER, 'house', 'Gryffindor');
-      divTodos.innerHTML = pintado(datos, 'image', 'name', '');
+      divTodosC.innerHTML = pintado(datos, 'image', 'name', '');
       break;
     case 'hufflepuff':
       datos = filtrado(POTTER, 'house', 'Hufflepuff');
-      divTodos.innerHTML = pintado(datos, 'image', 'name', '');
+      divTodosC.innerHTML = pintado(datos, 'image', 'name', '');
       break;
     case 'ravenclaw':
       datos = filtrado(POTTER, 'house', 'Ravenclaw');
-      divTodos.innerHTML = pintado(datos, 'image', 'name', '');
+      divTodosC.innerHTML = pintado(datos, 'image', 'name', '');
       break;
     case 'slytherin':
       datos = filtrado(POTTER, 'house', 'Slytherin');
-      divTodos.innerHTML = pintado(datos, 'image', 'name', '');
+      divTodosC.innerHTML = pintado(datos, 'image', 'name', '');
       break;
     default:
   }
 });
 
-// pintado la busqueda casas
+// BUSCADOR CASAS
 document.querySelector('#busquedaC').addEventListener('input', (event) => {
-  const nombreBuscado = event.target.value;
+  const nombreBuscadoC = event.target.value;
   if (datos === POTTER) {
-    divTodos.innerHTML = pintado((busqueda(datos, nombreBuscado)), 'image', 'name', 'house');
+    divTodosC.innerHTML = pintado((busqueda(datos, nombreBuscadoC)), 'image', 'name', 'house');
   } else {
-    divTodos.innerHTML = pintado((busqueda(datos, nombreBuscado)), 'image', 'name', '');
+    divTodosC.innerHTML = pintado((busqueda(datos, nombreBuscadoC)), 'image', 'name', '');
   }
-  if (divTodos.innerHTML === '') {
-    divTodos.innerHTML = '<h1>No se encontró ningún personaje</h1>';
+  if (divTodosC.innerHTML === '') {
+    divTodosC.innerHTML = '<h1>No se encontró ningún personaje</h1>';
   }
 });
 
@@ -103,49 +213,6 @@ document.getElementById('menu-personajes').addEventListener('click', () => {
   casas.classList.add('ocultar');
   rol.classList.add('ocultar');
   personajes.classList.remove('ocultar');
-});
-
-// FILTROS PERSONAJES
-// let datos = '';
-const seleccionarPersonajes = document.querySelector('.filtrar-personajes');
-const divPersonajes = document.getElementById('divPersonajes');
-divPersonajes.innerHTML = pintado(ordenado(POTTER), 'image', 'name', '');
-// datos = POTTER;
-// Evento del select PERSONAJES
-seleccionarPersonajes.addEventListener('change', (evento) => {
-  // borra el input de busqueda al cambiar de option en el select
-  document.querySelector('.buscar').value = '';
-  const opcionSeleccionadaPersonajes = evento.target.value;
-
-  divPersonajes.innerHTML = '';
-  switch (opcionSeleccionadaPersonajes) {
-    case 'todos':
-      datos = POTTER;
-      divPersonajes.innerHTML = pintado((POTTER), 'image', 'name', '');
-      break;
-    case 'femenino':
-      datos = filtrado(POTTER, 'gender', 'female');
-      divPersonajes.innerHTML = pintado(datos, 'image', 'name', '');
-      break;
-    case 'masculino':
-      datos = filtrado(POTTER, 'gender', 'male');
-      divPersonajes.innerHTML = pintado(datos, 'image', 'name', '');
-      break;
-    default:
-  }
-});
-
-// pintado de búsqueda personajes
-document.querySelector('#busquedaP').addEventListener('input', (event) => {
-  const nombreBuscadoP = event.target.value;
-  if (datos === POTTER) {
-    divPersonajes.innerHTML = pintado((busqueda(datos, nombreBuscadoP)), 'image', 'name', '');
-  } else {
-    divPersonajes.innerHTML = pintado((busqueda(datos, nombreBuscadoP)), 'image', 'name', '');
-  }
-  if (divPersonajes.innerHTML === '') {
-    divPersonajes.innerHTML = '<h1>No se encontró ningún personaje</h1>';
-  }
 });
 
 document.getElementById('menu-rol').addEventListener('click', () => {
