@@ -1,39 +1,27 @@
-/* eslint-disable default-case */
-
+/* eslint-disable no-nested-ternary */
 // Función de Filtrado.
-export const filtrarPokemon = (datapoke, categoria, valor) => {
-  let newDataPoke = [];
-  newDataPoke = datapoke.filter((filt) => filt[categoria].includes(valor));
-  return newDataPoke;
-};
+export const filtrarPokemon = (datapoke, catr, valor) => (
+  datapoke.filter((filt) => filt[catr].includes(valor))
+);
 
-export const filtrarEgg = (datapoke, valor) => {
-  let newDataPoke = [];
-  newDataPoke = datapoke.filter((filt) => filt.egg === valor);
-  return newDataPoke;
-};
-
+export const filtrarEgg = (datapoke, valor) => (
+  datapoke.filter((filt) => filt.egg === valor)
+);
 // Función de Ordenado.
-export const ordenarPokemon = (datapoke, categoria, manera) => {
-  let newDataPoke = [];
-  if (manera === 'asc') {
-    newDataPoke = datapoke.sort((a, b) => (a[categoria] > b[categoria] ? 1 : -1));
-  }
-  if (manera === 'desc') {
-    newDataPoke = datapoke.sort((a, b) => (a[categoria] < b[categoria] ? 1 : -1));
-  }
-  return newDataPoke;
-};
+export const ordenarPokemon = (datapoke, catr) => (
+  datapoke.sort((a, b) => (a[catr] > b[catr] ? 1 : -1))
+);
 
+
+export const ordenarDescPokemon = (datapoke, catr) => (
+  datapoke.sort((a, b) => (a[catr] < b[catr] ? 1 : -1))
+);
 // Función TOP 10 con mas apariciones.
-export const top10 = (datapoke, num) => {
-  const arrayApariciones = datapoke.sort((a, b) => b.avg_spawns - a.avg_spawns);
-  const arrayTop10 = arrayApariciones.slice(0, num);
-  return arrayTop10;
-};
+export const top10 = (datapoke, num) => (
+  datapoke.sort((a, b) => b.avg_spawns - a.avg_spawns).slice(0, num)
+);
 
 // Función Buscar Pokemon.
-export const buscarPokemon = (datapoke, name) => {
-  const newDataPoke = datapoke.filter((filt) => filt.name.toLowerCase().startsWith(name));
-  return newDataPoke;
-};
+export const buscarPokemon = (datapoke, name) => (
+  datapoke.filter((filt) => filt.name.toLowerCase().startsWith(name))
+);

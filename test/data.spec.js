@@ -1,11 +1,11 @@
 /* eslint-disable object-curly-newline */
 /* eslint-disable jest/no-identical-title */
-import { filtrarPokemon, ordenarPokemon, top10, filtrarEgg, buscarPokemon } from '../src/data.js';
+import { filtrarPokemon, ordenarPokemon, top10, filtrarEgg, buscarPokemon, ordenarDescPokemon } from '../src/data.js';
 
 const testPokemon = [
   { id: '002', name: 'Bulbasaur', type: ['Grass', 'Poison'], egg: '2 km', weaknesses: ['Fire', 'Ice'] },
-  { id: '006', name: 'Charizard', type: ['Fire', 'Flying'], egg: '5 km', weaknesses: ['Water', 'Electric'] },
   { id: '008', name: 'Wartortle', type: ['Water'], egg: '10 km', weaknesses: ['Grass'] },
+  { id: '006', name: 'Charizard', type: ['Fire', 'Flying'], egg: '5 km', weaknesses: ['Water', 'Electric'] },
 ];
 
 const tipoPokemon = [{ id: '002', name: 'Bulbasaur', type: ['Grass', 'Poison'], egg: '2 km', weaknesses: ['Fire', 'Ice'] }];
@@ -64,15 +64,25 @@ describe('OrdenarPokemon', () => {
   });
 
   it('deberia ordenar los pokemon por nombre de la A-Z', () => {
-    expect(ordenarPokemon(testPokemon, 'name', 'asc')).toEqual(ascPokemon);
-  });
-
-  it('deberia ordenar los pokemon por nombre de la Z-A', () => {
-    expect(ordenarPokemon(testPokemon, 'name', 'desc')).toEqual(descPokemon);
+    expect(ordenarPokemon(testPokemon, 'name')).toEqual(ascPokemon);
   });
 
   it('deberia ordenar los pokemon por id de 001-151', () => {
-    expect(ordenarPokemon(testPokemon, 'id', 'asc')).toEqual(ascPokemon);
+    expect(ordenarPokemon(testPokemon, 'id')).toEqual(ascPokemon);
+  });
+});
+
+describe('OrdenarDescPokemon', () => {
+  it('deberia ser una funcion', () => {
+    expect(typeof ordenarDescPokemon).toBe('function');
+  });
+
+  it('deberia ordenar los pokemon por nombre de la Z-A', () => {
+    expect(ordenarDescPokemon(testPokemon, 'name')).toEqual(descPokemon);
+  });
+
+  it('deberia ordenar los pokemon por id de 151-001', () => {
+    expect(ordenarDescPokemon(testPokemon, 'id')).toEqual(descPokemon);
   });
 });
 

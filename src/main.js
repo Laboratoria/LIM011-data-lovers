@@ -7,7 +7,7 @@ import POKEMON from './data/pokemon/pokemon.js';
 
 // Importar datos de data.js
 import {
-  filtrarPokemon, ordenarPokemon, top10, filtrarEgg, buscarPokemon,
+  filtrarPokemon, ordenarPokemon, top10, filtrarEgg, buscarPokemon, ordenarDescPokemon,
 } from './data.js';
 
 // Agregar elementos a la clase hide para que esten ocultos
@@ -89,17 +89,17 @@ document.querySelector('#AZ').addEventListener('click', () => {
 
 document.querySelector('#ZA').addEventListener('click', () => {
   document.querySelector('#contenedor-pokemon').innerHTML = '';
-  datosPokemon(ordenarPokemon(POKEMON, 'name', 'desc'));
+  datosPokemon(ordenarDescPokemon(POKEMON, 'name'));
 });
 
 document.querySelector('#asc').addEventListener('click', () => {
   document.querySelector('#contenedor-pokemon').innerHTML = '';
-  datosPokemon(ordenarPokemon(POKEMON, 'id', 'asc'));
+  datosPokemon(ordenarPokemon(POKEMON, 'id'));
 });
 
 document.querySelector('#desc').addEventListener('click', () => {
   document.querySelector('#contenedor-pokemon').innerHTML = '';
-  datosPokemon(ordenarPokemon(POKEMON, 'id', 'desc'));
+  datosPokemon(ordenarDescPokemon(POKEMON, 'id'));
 });
 
 // FILTRO seccion donde estan los filtros.
@@ -158,6 +158,7 @@ document.querySelector('#menu-top10').addEventListener('click', () => {
       tarjetaTop10.appendChild(parrafoCaracteristicasPokemon);
       const contenedorPokemon = document.querySelector('#contenedor-pokemon');
       contenedorPokemon.appendChild(tarjetaTop10);
+      datosPokemon(filtrarPokemon(POKEMON, 'candy', poke.candy));
     });
   };
   return mostrarTop10(top10(POKEMON, 10));
