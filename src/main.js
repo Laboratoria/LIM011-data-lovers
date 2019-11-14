@@ -56,7 +56,7 @@ desple.addEventListener('click', (event) => {
   const arregloFiltrado = traerDataPokemon(filtrarPokemones((POKEMON), tPokemones));
   const pintarArregloFiltrado = generarTemplatePokemones(arregloFiltrado);
   pintarPokemonesEnPantalla(pintarArregloFiltrado, contenedorPokemons);
-  console.log(pintarPokemonesEnPantalla);
+  // console.log(pintarPokemonesEnPantalla);
 });
 
 for (let i = 0; i < radioInput.length; i += 1) {

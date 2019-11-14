@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 export const traerDataPokemon = (arr) => {
   const newArray = [];
   for (let i = 0; i < arr.length; i += 1) {
