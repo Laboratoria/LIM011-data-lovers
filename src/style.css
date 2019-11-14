@@ -157,7 +157,6 @@ p{
 }
 
 #tarjeta-top10{
-width: 20%;
 height: 200pt;
 margin-top: 5pt;
 margin: 5pt;
@@ -189,18 +188,26 @@ padding: 10pt;
 #menu-pokemon
 {
     display: flex;
+    position: relative;
     flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
-    width: 100%;
+    width: 70%;
     justify-content:space-around;
-    margin-top: 30px;
+    align-items: center;
+    margin:auto;
+    margin-top: 30pt;
+    padding: 5pt;
+    color: rgb(68, 105, 108);
 }
+
 
 #menu-pokemon img
 {
 width: 70%;
 height: 70%;
+border-bottom: rgb(6, 235, 75) 4pt solid;
+padding: 4pt;
 }
 
 #menu-pokemon div :hover
@@ -212,21 +219,22 @@ height: 110%;
 #filtros-pokemon, #ordenar-pokemon{
 text-align: center;
 justify-content: center;
-margin-top: 40px;
+margin-top: 40pt;
+margin: auto;
+width: 60%;
+font-family: 'Courier New', Courier, monospace;
 }
 
 
 #ordenar-pokemon button, #filtros-pokemon select{
-    margin: 0%;
-    border: none;
-    width: 10%;
     height: 40px;
-    font-size: 16px;
     background: rgb(181,254,167,0.4);
     border: rgb(36,204,170) solid 2pt;
     align-items: center;
     border-radius: 10pt;
     text-align-last:center;
+    padding-right: 5pt;
+    padding-left: 5pt;
 }
 
 #ordenar-pokemon button:focus, #filtros-pokemon select:focus{

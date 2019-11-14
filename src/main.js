@@ -7,7 +7,7 @@ import POKEMON from './data/pokemon/pokemon.js';
 
 // Importar datos de data.js
 import {
-  filtrartipopokemon, filtrarDebilidadPokemon, filtrarKmPokemon, ordAscPoke, ordDescPoke, top10,
+  filtrarPokemon, ordenarPokemon, top10, filtrarEgg, buscarPokemon,
 } from './data.js';
 
 // Agregar elementos a la clase hide para que esten ocultos
@@ -91,35 +91,40 @@ document.querySelector('#menu-pokebola').addEventListener('click', () => {
 document.querySelector('#filtrar-tipo-pokemon').addEventListener('change', () => {
   document.querySelector('#contenedor-pokemon').innerHTML = '';
   const seleccioneTipoPokemon = document.querySelector('#filtrar-tipo-pokemon').value;
-  datosPokemon(filtrartipopokemon(POKEMON, seleccioneTipoPokemon));
+  datosPokemon(filtrarPokemon(POKEMON, 'type', seleccioneTipoPokemon));
 });
 
 document.querySelector('#filtrar-debilidad-pokemon').addEventListener('change', () => {
   document.querySelector('#contenedor-pokemon').innerHTML = '';
   const seleccioneDebilidadPokemon = document.querySelector('#filtrar-debilidad-pokemon').value;
-  datosPokemon(filtrarDebilidadPokemon(POKEMON, seleccioneDebilidadPokemon));
+  datosPokemon(filtrarPokemon(POKEMON, 'weaknesses', seleccioneDebilidadPokemon));
 });
 
 document.querySelector('#filtrar-km-pokemon').addEventListener('change', () => {
   document.querySelector('#contenedor-pokemon').innerHTML = '';
   const seleccioneKmPokemon = document.querySelector('#filtrar-km-pokemon').value;
-  datosPokemon(filtrarKmPokemon(POKEMON, seleccioneKmPokemon));
+  datosPokemon(filtrarEgg(POKEMON, seleccioneKmPokemon));
 });
 
 // Creando las opciones de ordenado.
 document.querySelector('#AZ').addEventListener('click', () => {
   document.querySelector('#contenedor-pokemon').innerHTML = '';
-  datosPokemon(ordAscPoke(POKEMON, 'name'));
+  datosPokemon(ordenarPokemon(POKEMON, 'name', 'asc'));
 });
 
 document.querySelector('#ZA').addEventListener('click', () => {
   document.querySelector('#contenedor-pokemon').innerHTML = '';
-  datosPokemon(ordDescPoke(POKEMON, 'name'));
+  datosPokemon(ordenarPokemon(POKEMON, 'name', 'desc'));
 });
 
 document.querySelector('#asc').addEventListener('click', () => {
   document.querySelector('#contenedor-pokemon').innerHTML = '';
-  datosPokemon(ordAscPoke(POKEMON, 'id'));
+  datosPokemon(ordenarPokemon(POKEMON, 'id', 'asc'));
+});
+
+document.querySelector('#desc').addEventListener('click', () => {
+  document.querySelector('#contenedor-pokemon').innerHTML = '';
+  datosPokemon(ordenarPokemon(POKEMON, 'id', 'desc'));
 });
 
 document.querySelector('#menu-top10').addEventListener('click', () => {
@@ -153,8 +158,10 @@ document.querySelector('#menu-top10').addEventListener('click', () => {
       contenedorPokemon.appendChild(tarjetaTop10);
     });
   };
-  return mostrarTop10(top10(POKEMON));
+  return mostrarTop10(top10(POKEMON, 10));
 });
 
-// console.log(portipo(POKEMON, 'Water'));
-// mostrarTop10(top10(POKEMON));
+document.querySelector('#buscar-pokemon').addEventListener('input', () => {
+  document.querySelector('#contenedor-pokemon').innerHTML = '';
+  datosPokemon(buscarPokemon(POKEMON, document.querySelector('#buscar-pokemon').value));
+});
