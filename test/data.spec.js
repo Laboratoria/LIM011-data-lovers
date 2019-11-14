@@ -1,6 +1,6 @@
 /* eslint-disable object-curly-newline */
 /* eslint-disable jest/no-identical-title */
-import { filtrarPokemon, ordenarPokemon, top10, filtrarEgg } from '../src/data.js';
+import { filtrarPokemon, ordenarPokemon, top10, filtrarEgg, buscarPokemon } from '../src/data.js';
 
 const testPokemon = [
   { id: '002', name: 'Bulbasaur', type: ['Grass', 'Poison'], egg: '2 km', weaknesses: ['Fire', 'Ice'] },
@@ -83,5 +83,15 @@ describe('Top10', () => {
 
   it('deberia mostrar los dos pokemon con mas apariciones', () => {
     expect(top10(aparicionPokemon, 2)).toEqual(top2);
+  });
+});
+
+describe('BuscarPokemon', () => {
+  it('deberia ser una funcion', () => {
+    expect(typeof buscarPokemon).toBe('function');
+  });
+
+  it('deberia mostrar el pokemon que comience con C', () => {
+    expect(buscarPokemon(testPokemon, 'c')).toEqual(debilidadPokemon);
   });
 });

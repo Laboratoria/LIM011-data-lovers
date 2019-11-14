@@ -32,9 +32,9 @@ const datosPokemon = (datos) => {
     divNombrePokemon.appendChild(nombrePokemon);
     const imagenPokemon = document.createElement('img');
     imagenPokemon.setAttribute('src', poke.img);
-    tarjetaDatosPokemon.appendChild(divNumeroPokemon);
-    tarjetaDatosPokemon.appendChild(divNombrePokemon);
     tarjetaDatosPokemon.appendChild(imagenPokemon);
+    tarjetaDatosPokemon.appendChild(divNombrePokemon);
+    tarjetaDatosPokemon.appendChild(divNumeroPokemon);
 
     // Creando la vista atras del Pokemon(caracteristicas)
     const tarjetaCaracteristicasPokemon = document.createElement('div');
@@ -70,13 +70,7 @@ document.querySelector('#resumen').addEventListener('click', () => {
   document.querySelector('#barra-navegar').classList.toggle('active');
 });
 
-document.querySelector('#menu-filtro').addEventListener('click', () => {
-  document.querySelector('#filtros-pokemon').classList.remove('hide');
-  document.querySelector('#ordenar-pokemon').classList.add('hide');
-  document.querySelector('#contenedor-pokemon').innerHTML = '';
-  datosPokemon(POKEMON);
-});
-
+// POKEBOLA sección donde se muestra los 151 pokemon
 document.querySelector('#menu-pokebola').addEventListener('click', () => {
   document.querySelector('#contenedor-pokemon').innerHTML = '';
   document.querySelector('#filtros-pokemon').classList.add('hide');
@@ -87,26 +81,7 @@ document.querySelector('#menu-pokebola').addEventListener('click', () => {
   datosPokemon(POKEMON);
 });
 
-// Creando las opciones de filtrado
-document.querySelector('#filtrar-tipo-pokemon').addEventListener('change', () => {
-  document.querySelector('#contenedor-pokemon').innerHTML = '';
-  const seleccioneTipoPokemon = document.querySelector('#filtrar-tipo-pokemon').value;
-  datosPokemon(filtrarPokemon(POKEMON, 'type', seleccioneTipoPokemon));
-});
-
-document.querySelector('#filtrar-debilidad-pokemon').addEventListener('change', () => {
-  document.querySelector('#contenedor-pokemon').innerHTML = '';
-  const seleccioneDebilidadPokemon = document.querySelector('#filtrar-debilidad-pokemon').value;
-  datosPokemon(filtrarPokemon(POKEMON, 'weaknesses', seleccioneDebilidadPokemon));
-});
-
-document.querySelector('#filtrar-km-pokemon').addEventListener('change', () => {
-  document.querySelector('#contenedor-pokemon').innerHTML = '';
-  const seleccioneKmPokemon = document.querySelector('#filtrar-km-pokemon').value;
-  datosPokemon(filtrarEgg(POKEMON, seleccioneKmPokemon));
-});
-
-// Creando las opciones de ordenado.
+// ORDENAR sección donde estan las opciones de orden.
 document.querySelector('#AZ').addEventListener('click', () => {
   document.querySelector('#contenedor-pokemon').innerHTML = '';
   datosPokemon(ordenarPokemon(POKEMON, 'name', 'asc'));
@@ -127,6 +102,33 @@ document.querySelector('#desc').addEventListener('click', () => {
   datosPokemon(ordenarPokemon(POKEMON, 'id', 'desc'));
 });
 
+// FILTRO seccion donde estan los filtros.
+document.querySelector('#menu-filtro').addEventListener('click', () => {
+  document.querySelector('#contenedor-pokemon').innerHTML = '';
+  document.querySelector('#filtros-pokemon').classList.remove('hide');
+  document.querySelector('#ordenar-pokemon').classList.add('hide');
+  datosPokemon(POKEMON);
+});
+
+document.querySelector('#filtrar-tipo-pokemon').addEventListener('change', () => {
+  document.querySelector('#contenedor-pokemon').innerHTML = '';
+  const seleccioneTipoPokemon = document.querySelector('#filtrar-tipo-pokemon').value;
+  datosPokemon(filtrarPokemon(POKEMON, 'type', seleccioneTipoPokemon));
+});
+
+document.querySelector('#filtrar-debilidad-pokemon').addEventListener('change', () => {
+  document.querySelector('#contenedor-pokemon').innerHTML = '';
+  const seleccioneDebilidadPokemon = document.querySelector('#filtrar-debilidad-pokemon').value;
+  datosPokemon(filtrarPokemon(POKEMON, 'weaknesses', seleccioneDebilidadPokemon));
+});
+
+document.querySelector('#filtrar-km-pokemon').addEventListener('change', () => {
+  document.querySelector('#contenedor-pokemon').innerHTML = '';
+  const seleccioneKmPokemon = document.querySelector('#filtrar-km-pokemon').value;
+  datosPokemon(filtrarEgg(POKEMON, seleccioneKmPokemon));
+});
+
+// TOP 10 seccion donde se muestra los pokemon con mayor aparicion
 document.querySelector('#menu-top10').addEventListener('click', () => {
   document.querySelector('#contenedor-pokemon').innerHTML = '';
   document.querySelector('#filtros-pokemon').classList.add('hide');
@@ -161,6 +163,7 @@ document.querySelector('#menu-top10').addEventListener('click', () => {
   return mostrarTop10(top10(POKEMON, 10));
 });
 
+// BUSCADOR.
 document.querySelector('#buscar-pokemon').addEventListener('input', () => {
   document.querySelector('#contenedor-pokemon').innerHTML = '';
   datosPokemon(buscarPokemon(POKEMON, document.querySelector('#buscar-pokemon').value));
