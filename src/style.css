@@ -1,10 +1,15 @@
+*{
+	font-family: 'Josefin Sans', sans-serif;
+}
 .flex-container{
     display:flex;
-    flex-wrap:wrap;
-    background-color: yellow;
+	flex-wrap:wrap;
+	/* background-image: url() */
+    background-color: rgb(255, 255, 0); 
 }
 .flex-container > div {
-    background-color: white;
+	 background-color: white; 
+	background: none;
     width: 150px;
     margin: 20px;
     text-align: center;
@@ -35,13 +40,99 @@ nav {
 }
 nav > ul {
 	display: flex;
-	justify-content: center;
+	justify-content: left;
 }
 .menu-superior {
 	float: left;
 	list-style-type: none;
 	padding: 0 46px 0 0;
 }
+.content-select {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	display: inline-block;
+	width: 100%;
+	cursor: pointer;
+  	padding: 7px 10px;
+	height: 30px;
+  	outline: 0; 
+  	border: 0;
+	border-radius: 12;
+	background: green;
+	color: black;
+	font-size: 10px;
+	color: yellow;
+	font-family: 'Josefin Sans', sans-serif;
+	top: 0%;
+	font-size: 15px;
+	font-weight: bold;
+	border:0px solid  rgb(19, 19, 1);
+    border-radius: 12px;
+    position: relative ;
+    transition: all 0.25s ease;
+}
+/* .content-select select::-ms-expand {
+    display: none;
+} */
+.content-select{
+	max-width: 150px;
+	position: relative;
+}
+#buscar{
+	border-radius: 10px;
+	background: yellow;
+}
+#buscaPokemon{
+	background-color: black;
+	height: 25px; 
+	width: 130px;
+	font-size: 1em;
+	color: yellow;
+	font-family: 'Josefin Sans', sans-serif;
+	border-radius: 12px;
+	
+}
+/* .content-select select{
+	display: inline-block;
+	width: 100%;
+	cursor: pointer;
+  	padding: 7px 10px;
+  	height: 42px;
+  	outline: 0; 
+  	border: 0;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #7b7b7b;
+	font-size: 1em;
+	color: #999;
+	font-family: 
+	'Quicksand', sans-serif;
+	border:2px solid blueviolet;
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+} */
+ 
+.content-select select:hover{
+	background: #B1E8CD;
+}
+/* .content-select i{
+	position: absolute;
+	right: 20px;
+	top: calc(50% - 13px);
+	width: 16px;
+	height: 16px;
+	display: block;
+	border-left:4px solid red;
+	border-bottom:4px solid red;
+	transform: rotate(-45deg); /* Giramos el cuadrado */
+	/* transition: all 0.25s ease;
+}
+  */ 
+/* .content-select:hover i{
+	margin-top: 3px;
+}  */
 /*====FIN DE CABECERA====*/
 /*====ENLACES====*/
 a {

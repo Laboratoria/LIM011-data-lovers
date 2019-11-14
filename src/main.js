@@ -42,10 +42,10 @@ inputBuscaPokemon.addEventListener('click', () => {
   pintarPokemonesEnPantalla(pintarMuestraPokemon, contenedorPokemons);
 });
 
-const filtrarTipoDePokemones = document.getElementById('tipoPokemones');
-filtrarTipoDePokemones.addEventListener('change', () => {
-  const tPokemones = filtrarTipoDePokemones.value;
-  const arregloFiltrado = traerDataPokemon(filtrarPokemones((POKEMON), tPokemones));
+const desple = document.getElementById('tipoPokemones');
+desple.addEventListener('click', () => {
+  const tPokemones = desple.value;
+  const arregloFiltrado = traerDataPokemon(desple((POKEMON), tPokemones));
   const pintarArregloFiltrado = generarTemplatePokemones(arregloFiltrado);
   pintarPokemonesEnPantalla(pintarArregloFiltrado, contenedorPokemons);
 });
@@ -64,3 +64,9 @@ btnBuscarTop10.addEventListener('click', () => {
   const pintarArregloMuestraTop = generarTemplatePokemones(arregloMuestraTop);
   pintarPokemonesEnPantalla(pintarArregloMuestraTop, contenedorPokemons);
 });
+
+const pElement=document.createElement("p");
+const pElement1= `<p></p>`;
+
+//document.getElementById("example").appendChild(pElement);
+document.getElementById("example").innerHTML=pElement
