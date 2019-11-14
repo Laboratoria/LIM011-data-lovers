@@ -44,12 +44,6 @@ describe('filtrado', () => {
     const esperoFP = [{ name: 'Cho Chang', gender: 'female' }, { name: 'Hermonie Granger', gender: 'female' }];
     expect(filtrado(dataFP, ['gender'], 'female')).toEqual(esperoFP);
   });
-
-  it('debería filtrar la data por el género de los personajes', () => {
-    const dataFP = [{ name: 'Harry Potter', gender: 'male' }, { name: 'Cho Chang', gender: 'female' }, { name: 'Hermonie Granger', gender: 'female' }];
-    const esperoFP = [{ name: 'Cho Chang', gender: 'female' }, { name: 'Hermonie Granger', gender: 'female' }];
-    expect(filtrado(dataFP, ['gender'], 'female')).toEqual(esperoFP);
-  });
 });
 
 describe('busqueda', () => {

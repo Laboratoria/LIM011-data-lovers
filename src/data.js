@@ -14,6 +14,12 @@ export const filtrado = (data, propiedad, valor) => {
   return data.filter((a) => (a[propiedad] === valor));
 };
 
+// eslint-disable-next-line arrow-body-style
+export const filtraDiferente = (data, propiedad, valor) => {
+  // esta es una manera de llamar a la propiedad en el objeto.
+  return data.filter((a) => (a[propiedad] !== valor));
+};
+
 // busqueda
 export const busqueda = (data, input) => {
   const nuevoArray = [];
