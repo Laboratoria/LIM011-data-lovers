@@ -105,6 +105,3 @@ atras2.addEventListener('click', () => {
   bienvenida.classList.remove('hide');
   pagina3.classList.add('hide');
 });
-
-
-

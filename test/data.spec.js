@@ -1,6 +1,7 @@
 // importamos la función `example`
 /* eslint-disable object-curly-newline */
 
+// eslint-disable-next-line import/named
 import { filtrarPorTipo, porDebilidades, traerPokemonesPorCantidadDeCaramelos, ascendente, mostrarTop, buscarPokemon } from '../src/data';
 
 const arrayEntrante = [
