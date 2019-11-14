@@ -1,6 +1,6 @@
 /* eslint-disable import/extensions */
 /* eslint object-curly-newline: ["error", { "multiline": true }] */
-/* eslint-env es6 */
+
 import POKEMON from './data/pokemon/pokemon.js';
 import { filtrarPorTipo, porDebilidades, traerPokemonesPorCantidadDeCaramelos, ascendente, mostrarTop, buscarPokemon } from './data.js';
 
@@ -107,4 +107,4 @@ atras2.addEventListener('click', () => {
 });
 
 
-/* eslint-disable import/first */
+
