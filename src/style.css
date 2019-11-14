@@ -194,7 +194,7 @@ header label { /* esto es el icono de menu */
     color: #fff;
 }
 /* CUERPO DATA HP */
-#todos{ /*div de contenido de todos los personajes */
+.todos{ /*div de contenido de todos los personajes */
     justify-content: space-around;
     align-content: center;
     display: flex;
