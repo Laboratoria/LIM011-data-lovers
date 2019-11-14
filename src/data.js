@@ -50,8 +50,8 @@ export function filterHouse(dataPotter, houseSelected) {
   const dataFilterHouse = dataPotter.filter((data) => (data.house === houseSelected));
   return dataFilterHouse;
 }
-export function filterRol(dataPotter, rolSelected) {
-  const dataFilterRol = dataPotter.filter((data) => (
-    data.hogwartsStudent.toString() === rolSelected));
-  return dataFilterRol;
+export function filterRole(dataPotter, roleSelected) {
+  const dataFilterRole = dataPotter.filter((data) => (
+    data.hogwartsStudent.toString() === roleSelected));
+  return dataFilterRole;
 }

@@ -1,5 +1,5 @@
 import dataPotter from './data/potter/potter.js';
-import { showMainData, filterHouse, filterRol } from './data.js';
+import { showMainData, filterHouse, filterRole } from './data.js';
 
 showMainData(dataPotter);
 
@@ -14,10 +14,9 @@ selectElementHouse.addEventListener('change', (event) => {
 
 const selectElementRol = document.querySelector('.selectRol');
 selectElementRol.addEventListener('change', (event) => {
-  const rolSelected = event.target.value;
-  const dataPotterRol = filterRol(dataPotter, rolSelected);
-  console.log(rolSelected);
+  const roleSelected = event.target.value;
+  const dataPotterRole = filterRole(dataPotter, roleSelected);
   const dataCharacters = document.querySelector('.data-characters');
   dataCharacters.querySelectorAll('.card-data').forEach((child) => child.remove());
-  showMainData(dataPotterRol);
+  showMainData(dataPotterRole);
 });
