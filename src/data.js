@@ -1,4 +1,4 @@
-//function to get y show data using template
+// function to get y show data using template
 export const showTemplate = (objDataPotter) => {
   const template = document.createElement('article');
   template.className = 'card-data';
@@ -38,7 +38,6 @@ export const showTemplate = (objDataPotter) => {
       popup.classList.remove('active');
     });
   });
-
   return template;
 };
 // function to go through for each object
@@ -47,4 +46,7 @@ export const showMainData = (listdataPotter) => {
     document.querySelector('.data-characters').appendChild(showTemplate(objDataPotter));
   });
 };
-
+export function filtrarHouse(dataPotter, houseSelected) {
+  const filterHouse = dataPotter.filter((data) => (data.house === houseSelected));
+  return filterHouse;
+}
