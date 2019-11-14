@@ -32,11 +32,17 @@ describe('filtrado', () => {
   it('debería ser una función', () => {
     expect(typeof filtrado).toBe('function');
   });
-
+  // para filtro según casas
   it('debería filtrar la data por el nombre de la casa Ravenclaw', () => {
-    const dataF = [{ name: 'Luna Lovegood', house: 'Ravenclaw' }, { name: 'Cho Chang', house: 'Ravenclaw' }, { name: 'Hermonie Granger', house: 'Gryffindor' }];
-    const esperoF = [{ name: 'Luna Lovegood', house: 'Ravenclaw' }, { name: 'Cho Chang', house: 'Ravenclaw' }];
-    expect(filtrado(dataF, ['house'], 'Ravenclaw')).toEqual(esperoF);
+    const dataFC = [{ name: 'Luna Lovegood', house: 'Ravenclaw' }, { name: 'Cho Chang', house: 'Ravenclaw' }, { name: 'Hermonie Granger', house: 'Gryffindor' }];
+    const esperoFC = [{ name: 'Luna Lovegood', house: 'Ravenclaw' }, { name: 'Cho Chang', house: 'Ravenclaw' }];
+    expect(filtrado(dataFC, ['house'], 'Ravenclaw')).toEqual(esperoFC);
+  });
+  // para filtro según personajes
+  it('debería filtrar la data por el género de los personajes', () => {
+    const dataFP = [{ name: 'Harry Potter', gender: 'male' }, { name: 'Cho Chang', gender: 'female' }, { name: 'Hermonie Granger', gender: 'female' }];
+    const esperoFP = [{ name: 'Cho Chang', gender: 'female' }, { name: 'Hermonie Granger', gender: 'female' }];
+    expect(filtrado(dataFP, ['gender'], 'female')).toEqual(esperoFP);
   });
 });
 

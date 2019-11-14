@@ -41,8 +41,8 @@
           Sapiente illo rem, dicta quidem nisi quibusdam aut, nam reprehenderit beatae,
           velit cum? Id tempore quia in neque illo placeat blanditiis aut.</p>
         <br>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/jEvCxCbe3HE" frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/jEvCxCbe3HE" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
       </div>
   </section> <!-- fin del section de inicio-->
 
@@ -65,7 +65,7 @@
           </div>
 
           <div class="filtradoPorBusqueda">
-            <input type="search" id="valorDeBusqueda" class="buscar" placeholder="Buscador">
+            <input type="search" id="busquedaC" class="buscar" placeholder="Buscador">
             <i class="icon-search"></i>
           </div>
         </div> <!-- fin del filtros-->
@@ -84,18 +84,18 @@
           </div>
 
           <div class="filtradoPorBusqueda">
-            <input type="search" id="busqueda" class="buscar" placeholder="Buscador">
+            <input type="search" id="busquedaR" class="buscar" placeholder="Buscador">
             <i class="icon-search"></i>
           </div>
         </div> <!-- fin del filtros-->
-      </div>
-      <!-- fin del menu rol -->
+        <div id="divRol"></div>
+      </div><!-- fin del menu rol -->
 
       <!-- Menu Personajes  -->
       <div id="personajes" class="menu-flotante ocultar">
         <div class="filtros">
           <div class="select">
-            <select class="filtrar-rol">
+            <select class="filtrar-personajes">
               <option value="todos" selected>Todos</option>
               <option value="femenino">Femenino</option>
               <option value="masculino">Masculino</option>
@@ -107,6 +107,7 @@
             <i class="icon-search"></i>
           </div>
         </div> <!-- fin del filtros-->
+        <div id="divPersonajes"></div>
       </div> <!-- fin del menu personajes-->
     </div> <!-- fin de nubes background-->
   </section> <!-- fin section de filtros-->
