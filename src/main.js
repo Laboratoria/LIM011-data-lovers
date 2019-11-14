@@ -101,6 +101,33 @@ document.getElementById('menu-rol').addEventListener('click', () => {
 const divTodosR = document.getElementById('todosR');
 divTodosR.innerHTML = pintado(ordenado(POTTER), 'image', 'name', '');
 
+const seleccionarR = document.querySelector('.filtrar-rol');
+seleccionarR.addEventListener('change', (eventoR) => {
+  document.querySelector('#busquedaR').value = '';
+  const opcionSeleccionadaRol = eventoR.target.value;
+  divTodosR.innerHTML = '';
+
+  switch (opcionSeleccionadaRol) {
+    case 'todos':
+      datos = POTTER;
+      divTodosR.innerHTML = pintado((POTTER), 'image', 'name', 'house');
+      break;
+    case 'alumno':
+      datos = filtrado(POTTER, 'hogwartsStudent', true);
+      divTodosR.innerHTML = pintado(datos, 'image', 'name', '');
+      break;
+    case 'profesor':
+      datos = (filtrado(POTTER, 'hogwartsStaff', true) && filtrado(POTTER, 'house'));
+      divTodosR.innerHTML = pintado(datos, 'image', 'name', '');
+      break;
+    case 'otros':
+      datos = (filtrado(POTTER, 'hogwartsStaff', true) && filtrado(POTTER, 'house') && filtrado(POTTER, 'hogwartsStaff', false));
+      divTodosR.innerHTML = pintado(datos, 'image', 'name', '');
+      break;
+    default:
+  }
+});
+
 // BUSCADOR ROL
 document.querySelector('#busquedaR').addEventListener('input', (event) => {
   const nombreBuscadoR = event.target.value;
