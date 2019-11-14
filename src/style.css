@@ -8,13 +8,14 @@ background-color: black;
     
 }
 .flex-container > div {
-	background-image: url("./imagenes/fonpoke.jpg") ;
+
 	width: 180px;
 	margin: 20px;
 	line-height: 50px;
 	border-radius: 20px;
 	background-size: cover;
 	background-position: center;
+	box-shadow: 2px 2px 10px #666;
 } 
 
 .flex-container > div > h1{
@@ -77,7 +78,7 @@ background-color: black;
   
   .menu-superior :hover {
 	color: black;
-	background-color:yellow;
+	background-color: white;
 	animation: 0.5s ms 1;
   }
   
@@ -106,6 +107,13 @@ nav {
 nav > ul {
 	display: flex;
 	justify-content: center;
+}
+nav > li {
+	float: left;
+}
+.nav li ul {
+	display: none;
+	position: absolute;
 }
 .menu-superior {
 	float: center;
