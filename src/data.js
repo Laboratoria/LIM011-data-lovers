@@ -51,12 +51,6 @@ export const mostrarTop = (arr) => {
   return arrTop;
 };
 
-// export const buscarPokemon = (arr, name) => {
-//   const newArr = newArr.filter(pintar) => {
-//   pintar.name.toLoweCase().startsWith(name));
-//   return name;
-// };
-
 export const buscarPokemon = (array, name) => array.filter(
   (pintar) => pintar.name.toLowerCase().startsWith(name),
 );
