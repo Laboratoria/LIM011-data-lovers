@@ -7,12 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shojumaru|Sigmar+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="header">  
       <div class="container">
-        <a href="#" class="logo"><img class= "img-logo" src="./img/logo.png" alt=""></a>   
+        <a href="#" class="logo img-logo">WIZARDING OF HARRY POTTER</a>   
         <nav class="menu">
           <ul>
             <li><a href=""><img id= "icono-menu" src="./img/whitemenu.png"  alt=""></a></li>
@@ -24,7 +25,7 @@
     </header>
     <main>
       <section class="filters">
-        <select class="selectHouse">
+        <select class="selectHouse select">
           <option value="select">CASA</option>
           <option value="Gryffindor">Gryffindor</option>
           <option value="Ravenclaw">Ravenclaw</option>
@@ -32,19 +33,31 @@
           <option value="Hufflepuff">Hufflepuff</option>
           <option value="">Sin Casa</option>
         </select>
-        <select class="selectRole">
+        <select class="selectRole select">
           <option value="select">ROL</option>
           <option value="true">Estudiante</option>
           <option value="false">Profesor</option>
         </select>
-        <select class="selectGender">
+        <select class="selectGender select">
           <option value="select">GENERO</option>
           <option value="female">Femenino</option>
           <option value="male">Masculino</option>
         </select>
       </section>
+      <section class="btn-filters">
+        <button class="btn-general" id="btn-wand" type="button">VARITAS</button>
+        <button class="btn-general" id="btn-patronus" type="button">PATRONUS</button>
+      </section>
       <section class='data-characters'></section>
       <section class="modal"></section>
+      <section class='wands'>
+        <div>
+            <a class="btn-wands" id="btn-dragon" type="button"><img src="./img/dragon.png" alt=""></a>
+            <a class="btn-wands" id="btn-unircor" type="button"><img src="./img/dragon.png" alt="">unircorn</a>
+            <a class="btn-wands" id="btn-phonix" type="button"><img src="./img/dragon.png" alt="">phonix</a>
+        </div>
+        <div class='data-wands'></div>    
+      </section>
     </main>
     <footer>
       <ul>

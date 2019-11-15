@@ -49,22 +49,49 @@ export const showTemplate = (objDataPotter) => {
   });
   return template;
 };
-// function to go through for each object
+// function to go through for each object (Characters)
 export const showMainData = (listdataPotter) => {
   listdataPotter.forEach((objDataPotter) => {
     document.querySelector('.data-characters').appendChild(showTemplate(objDataPotter));
   });
 };
+// function to filter for house
 export function filterHouse(dataPotter, houseSelected) {
   const dataFilterHouse = dataPotter.filter((data) => (data.house === houseSelected));
   return dataFilterHouse;
 }
+// function to filter for Role
 export function filterRole(dataPotter, roleSelected) {
   const dataFilterRole = dataPotter.filter((data) => (
     data.hogwartsStudent.toString() === roleSelected));
   return dataFilterRole;
 }
+// function to filter for Gender
 export function filterGender(dataPotter, genderSelected) {
   const dataFilterGender = dataPotter.filter((data) => (data.gender === genderSelected));
   return dataFilterGender;
 }
+//---------------------------------------------------------------------
+//  function to go through for each object (Wands)
+
+export const showTemplateWands = (objDataPotter) => {
+  const template = document.createElement('article');
+  template.className = 'card-data-wands';
+  template.innerHTML = `
+    <div class='card-details'>
+      <h2 class='features' id='name'>${objDataPotter.name}</h2>
+    </div>
+    <div class='card-description'>
+      <p> Madera : ${objDataPotter.wand.wood} </p>
+      <p> Nucleo : ${objDataPotter.wand.core} </p>
+      <p> Tamaño : ${objDataPotter.wand.length} </p>
+    </div> `;
+
+  return template;
+};
+
+export const showWands = (listdataPotter) => {
+  listdataPotter.forEach((objDataPotter) => {
+    document.querySelector('.data-wands').appendChild(showTemplateWands(objDataPotter));
+  });
+};
