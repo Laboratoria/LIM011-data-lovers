@@ -17,8 +17,8 @@
             <img id=logo class="logo" src="img/logo.png" alt="logo">
             <img id=logo2 class="logo" src="img/logo2.png" alt="logo letra">
         </picture>
-        <input class="filtro" list="pokemon-name" id="selector-pokemon-name" placeholder="Nombre del Pokemón">
-        <datalist id="pokemon-name">
+        <input class="filtro" list="pokemon-name" id="selector-pokemon-name" placeholder="Nombre del Pokemón" value=''>
+        <!-- <datalist id="pokemon-name">
             <option value="Bulbasaur">
             <option value="Ivysaur">
             <option value="Venusaur">
@@ -33,10 +33,10 @@
             <option value="Butterfree">
             <option value="Weedle">
             <option value="Kakuna">
-        </datalist>
+        </datalist></input> -->
         <nav>
             <button class="buttonm" id="boton-pantalla-filtrotipo">Tipos de Pokemón</button>
-            <button class="buttonr" id="boton-pantalla-caramelos">Cantidad de caramelo</button>
+            <button class="buttonr" id="boton-pantalla-caramelos">Cantidad de caramelos</button>
         </nav>
 
     </header>
@@ -46,34 +46,37 @@
 
     <div class="selector-filtro-wrap" id="selector-filtro-wrap">
         <section class="selector-filtro" id="selector-filtro">
-            <input list="pokemon-type" class="buttonm" id="selector-pokemon-type" placeholder="Tipo de Pokemón" />
+            <!-- <input list="pokemon-type" class="buttonm" id="selector-pokemon-type" placeholder="Tipo de Pokemón"/> -->
 
-            <datalist id="pokemon-type">
-              <option value="Water">
-                <option value="Bug">
-                <option value="Dragon">
-                <option value="Electric">
-                <option value="Ghost">
-                <option value="Fire">
-                <option value="Ice">
-                <option value="Fighting">
-                <option value="Normal">
-                <option value="Grass">
-                <option value="Psychic">
-                <option value="Rock">
-                <option value="Ground">
-                <option value="Poison">
-                <option value="Flying">
-          </datalist>
+            <select class="poke-type-list" id="pokemon-type">
+              <option class="poke-type-list" value="Todos">Todos</option>
+                <option class="poke-type-list" value="Water">Agua</option>
+                <option class="poke-type-list" value="Bug">Insecto</option>
+                <option class="poke-type-list" value="Dragon">Dragon</option>
+                <option class="poke-type-list" value="Electric">Eléctrico</option>
+                <option class="poke-type-list" value="Ghost">Fantasma</option>
+                <option class="poke-type-list" value="Fire">Fuego</option>
+                <option class="poke-type-list" value="Ice">Hielo</option>
+                <option class="poke-type-list" value="Fighting">Pelea</option>
+                <option class="poke-type-list" value="Normal">Normal</option>
+                <option class="poke-type-list" value="Grass">Planta</option>
+                <option class="poke-type-list" value="Psychic">Psiquico</option>
+                <option class="poke-type-list" value="Rock">Roca</option>
+                <option class="poke-type-list" value="Ground">Tierra</option>
+                <option class="poke-type-list" value="Poison">Veneno</option>
+                <option class="poke-type-list" value="Flying">Volador</option>
+          </select>
             <label for="az">Ordenar por: </label>
             <img src="./img/az.png" id="az" alt="Orden Alfabetico">
             <img src="./img/za.png" id="za" alt="Orden Alfabetico">
             <img src="./img/n.png" id="n" alt="Orden Apor numero">
-
-            <!--muestra pokemon-->
-            <section class="lista-pokemon" id="muestrapokemon">
-            </section>
         </section>
+            <!--muestra 1 pokemon-->
+        <section id="tarjeta-pokemon" class="ficha-pokemon"></section>
+            <!--muestra lista de pokemon filtrados-->
+            <section class="lista-pokemon" id="muestralistapokemon">
+            </section>
+        
     </div>
 
     <!--Section Calcular Evolucion -->
