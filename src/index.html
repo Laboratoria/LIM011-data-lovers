@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 
-
 <head>
   <meta charset="UTF-8">
   <title>Data Lovers</title>
@@ -12,55 +11,38 @@
 </head>
 
 <body>
- <center><img src="./imagenes/pokemon-logo-png.png" height="20%" width="20%" ></center>
+  <center><img src="./imagenes/pokemon-logo-png.png" height="20%" width="20%"></center>
   <div class="menu">
     <input id="toggle" type="checkbox" />
     <label for="toggle" class="drop">
-      <svg width="36px" height="36px" viewBox="0 0 48 48">
+      <!-- <svg width="36px" height="36px" viewBox="0 0 48 48">
         <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"></path>
-      </svg>
+      </svg> -->
     </label>
-    <nav  id="nav">     
+    <nav id="nav">
       <ul>
         <li class="menu-superior"><a href="index.html">INICIO</a></li>
         <li class="menu-superior" id="botonBuscar"><a href="#botonBuscar">TOP 10 POKEMONS APARICIONES</a></li>
-        <li class="menu-superior"  ><a  id="tipoPokemones">TIPOS DE POKEMONES</a>
+        <li class="menu-superior"><a id="tipoPokemones">TIPOS DE POKEMONES</a>
           <ul id="desple">
-            <li class="roleBtn"><a id="Normal"  href="#">Normal</a></li>
+            <li class="roleBtn"><a id="Normal" href="#">Normal</a></li>
             <li class="roleBtn"><a id="Fighting" href="#">Lucha </a></li>
-            <li class="roleBtn"><a id="Flying"  href="#" >Volador</a></li>
-            <li class="roleBtn"><a id="Poison" href="#" >Veneno</a></li>
-            <li class="roleBtn"><a id="Ground" href="#" >Tierra</a></li>
-            <li class="roleBtn"><a id="Rock" href="#" >Roca</a></li>
-            <li class="roleBtn"><a id="Bug" href="#" >Bicho</a></li>
-            <li class="roleBtn"><a id="Ghost" href="#" >Fantasma</a></li>
-            <li class="roleBtn"><a id="Water" href="#" >Agua</a></li>
-            <li class="roleBtn"><a id="Grass" href="#" >Planta</a></li>
-            <li class="roleBtn"><a id="Electric" href="#" >Electrico</a></li>
-            <li class="roleBtn"><a id="Psychic" href="#" >Psíquico</a></li>
-            <li class="roleBtn"><a id="Ice" href="#" >Hielo</a></li>
-            <li class="roleBtn"><a id="Fire" href="#" >Fuego</a></li>
-            <li class="roleBtn"><a id="Dragon" href="#" >Dragón</a></li>
+            <li class="roleBtn"><a id="Flying" href="#">Volador</a></li>
+            <li class="roleBtn"><a id="Poison" href="#">Veneno</a></li>
+            <li class="roleBtn"><a id="Ground" href="#">Tierra</a></li>
+            <li class="roleBtn"><a id="Rock" href="#">Roca</a></li>
+            <li class="roleBtn"><a id="Bug" href="#">Bicho</a></li>
+            <li class="roleBtn"><a id="Ghost" href="#">Fantasma</a></li>
+            <li class="roleBtn"><a id="Water" href="#">Agua</a></li>
+            <li class="roleBtn"><a id="Grass" href="#">Planta</a></li>
+            <li class="roleBtn"><a id="Electric" href="#">Electrico</a></li>
+            <li class="roleBtn"><a id="Psychic" href="#">Psíquico</a></li>
+            <li class="roleBtn"><a id="Ice" href="#">Hielo</a></li>
+            <li class="roleBtn"><a id="Fire" href="#">Fuego</a></li>
+            <li class="roleBtn"><a id="Dragon" href="#">Dragón</a></li>
           </ul>
         </li>
         <li class="menu-superior" id="estadistica"><a href="#estadistica">ESTADISTICAS</a></li>
-        <!----<select name="tiposDePokemon" id="tipoPokemones">
-          <option value="">--Elija un tipo--</option>
-          <option value="Normal">Normal </option>
-          <option value="Fighting">Lucha </option>
-          <option value="Flying">Volador </option>
-          <option value="Poison">Veneno </option>
-          <option value="Ground">Tierra </option>
-          <option value="Rock">Roca </option>
-          <option value="Bug">Bicho </option>
-          <option value="Ghost">Fantasma </option>
-          <option value="Water">Agua </option>
-          <option value="Grass">Planta </option>
-          <option value="Electric">Electrico </option>
-          <option value="Psychic">Psíquico </option>
-          <option value="Ice">Hielo </option>
-          <option value="Dragon">Dragón </option>
-        </select>--->
       </ul>
     </nav>
   </div>
@@ -68,8 +50,8 @@
   <div class="fondo">
     <div class="divbuscar">
 
-      <input style="margin-left: 30px; margin-top: 20px;" type="text" id="buscar" value="" placeholder="Escribe nombre Pokemon"> <button
-        id="buscaPokemon">Buscar Pokemon</button>
+      <input style="margin-left: 30px; margin-top: 20px;" type="text" id="buscar" value=""
+        placeholder="Escribe nombre Pokemon"> <button id="buscaPokemon">Buscar Pokemon</button>
       <label id="selecciona-orden" class="divordenar" style="margin-left: 600px; margin-top: 20px;">
         <input type="radio" name="ordena" value="asc" id="orAsc"><a href="#">Ascendente</a>
         <input type="radio" name="ordena" value="desc" id="orDesc"><a href="#">Descendente</a>
@@ -78,8 +60,7 @@
     <br>
   </div>
   <div id="contenedor-pokemons" class="flex-container"></div>
-
   <script type="module" src="main.js"></script>
 </body>
-
 </html>
+
