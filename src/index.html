@@ -11,43 +11,61 @@
   </head>
   <body>
     <header class="header">  
-      <div class="container">
-        <!-- <a href="#" class="logo"><img class= "img-logo" alt=""></a>    -->
-        <h2 class="img-logo logo">ALOHOMORA</h2>
+      <div class="nav-container">
+        <a href="#" class="logo"><img class= "img-logo" src="./img/logo.png" alt=""></a>   
         <nav class="menu">
           <ul>
-            <li><a href=""><img id= "icono-menu" src="./img/whitemenu.png"  alt=""></a></li>
-            <li><a href=""><img id= "witch" src="./img/witch.png"  alt=""></a></li>
-            <li><a href="" id='greeting'>Hola, usuarix!</a></li>
+            <li><a href=""></a></li>
           </ul>
         </nav>
       </div>
     </header>
-    
     <main>
+      <!-- Section to filters -->
       <section class="filters">
-        <select class="selectHouse">
-            <option value="">CASA</option>
-            <option value="Gryffindor">Gryffindor</option>
-            <option value="Ravenclaw">Ravenclaw</option>
-            <option value="Slytherin">Slytherin</option>
-            <option value="Hufflepuff">Hufflepuff</option>
-          </select>
-          <select class="selectRol">
-              <option value="">ROL</option>
-              <option value="true">Estudiante</option>
-              <option value="false">Profesor</option>
-            </select>
-    </section>
-    <section class='data-characters'></section>
-    <section class="modal"></section>
-
+        <select class="selectHouse select">
+          <option value="select">CASA</option>
+          <option value="Gryffindor">Gryffindor</option>
+          <option value="Ravenclaw">Ravenclaw</option>
+          <option value="Slytherin">Slytherin</option>
+          <option value="Hufflepuff">Hufflepuff</option>
+          <option value="">No especificado</option>
+        </select>
+        <select class="selectRole select">
+          <option value="select">ROL</option>
+          <option value="true">Estudiante</option>
+          <option value="false">Profesor</option>
+          <option value="">No especificado</option>
+        </select>
+        <select class="selectGender select">
+          <option value="select">GENERO</option>
+          <option value="female">Femenino</option>
+          <option value="male">Masculino</option>
+        </select>
+      </section>
+      <section class="btn-filters">
+        <button class="btn-general" id="btn-wand" type="button">VARITAS</button>
+        <button class="btn-general" id="btn-patronus" type="button">PATRONUS</button>
+      </section>
+      <!-- Section to show general data -->
+      <section class="data-characters"></section>
+      <!-- Section to show modal -->
+      <section class="modal"></section>
+      <!-- Section to show wands -->
+      <section class='wands'>
+        <div>
+            <a class="btn-wands" id="btn-dragon" type="button"><img src="./img/dragon.png" alt="">dragon</a>
+            <a class="btn-wands" id="btn-unircorn" type="button"><img src="./img/dragon.png" alt="">unircorn</a>
+            <a class="btn-wands" id="btn-phonix" type="button"><img src="./img/dragon.png" alt="">phonix</a>
+        </div>
+        <div class='data-wands'></div>    
+      </section>
     </main>
     <footer>
       <ul>
         <li><a href="">Omaira Palacios</a></li>
         <li>Data-Lovers <p>Para Fans de Harry Potter y Wizard Unite</p></li>
-        <li><article><a href="">Lesly Muñoz</a> </article></li>
+        <li><a href="">Lesly Muñoz</a></li>
       </ul>
     </footer>  
     <script type="module" src="main.js"></script>
