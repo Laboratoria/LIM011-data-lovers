@@ -3,10 +3,12 @@
   padding: 0;
 }
 body {
-  background-image:  linear-gradient(
+  /* background-image:  linear-gradient(
     rgba(206, 206, 206, 0.062),
     rgba(0, 0, 0, 0.342)
   ),url(./img/startbackground.jpg);
+  background-size: cover; */
+  background: url(./img/header.png);
   background-size: cover;
 }
 footer{
@@ -89,9 +91,9 @@ header{
   left: 0;
   top: 0;
   right: 0;
-  height: 12%;
-  background: url(./img/startbackground.jpg);
-  background-size: cover;
+  height: 100%;
+  background: url(./img/header.png);
+  background-size: 100%;
   color: black;
   border-bottom: 1px whitesmoke solid;
 }
@@ -107,6 +109,10 @@ header{
   height: 49px;
   position: absolute;
   margin-left: 42px;
+  color: white;
+  font-family: 'Yeon Sung', cursive;
+  font-size: 36px;
+  text-decoration: none;
 }
 #icono-menu{
   margin-top: 12px;
