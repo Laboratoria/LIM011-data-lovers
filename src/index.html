@@ -12,54 +12,68 @@
 
 <body>
   <center><img src="./imagenes/pokemon-logo-png.png" height="20%" width="20%"></center>
-  <div class="menu">
-    <input id="toggle" type="checkbox" />
+  <header>
+  <nav id="nav">
+    <!-- <input id="toggle" type="checkbox" />
     <label for="toggle" class="drop">
-      <!-- <svg width="36px" height="36px" viewBox="0 0 48 48">
+      <svg width="36px" height="36px" viewBox="0 0 48 48">
         <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"></path>
-      </svg> -->
-    </label>
-    <nav id="nav">
-      <ul>
-        <li class="menu-superior"><a href="index.html">INICIO</a></li>
-        <li class="menu-superior" id="botonBuscar"><a href="#botonBuscar">TOP 10 POKEMONS APARICIONES</a></li>
-        <li class="menu-superior"><a id="tipoPokemones">TIPOS DE POKEMONES</a>
-          <ul id="desple">
-            <li class="roleBtn"><a id="Normal" href="#">Normal</a></li>
-            <li class="roleBtn"><a id="Fighting" href="#">Lucha </a></li>
-            <li class="roleBtn"><a id="Flying" href="#">Volador</a></li>
-            <li class="roleBtn"><a id="Poison" href="#">Veneno</a></li>
-            <li class="roleBtn"><a id="Ground" href="#">Tierra</a></li>
-            <li class="roleBtn"><a id="Rock" href="#">Roca</a></li>
-            <li class="roleBtn"><a id="Bug" href="#">Bicho</a></li>
-            <li class="roleBtn"><a id="Ghost" href="#">Fantasma</a></li>
-            <li class="roleBtn"><a id="Water" href="#">Agua</a></li>
-            <li class="roleBtn"><a id="Grass" href="#">Planta</a></li>
-            <li class="roleBtn"><a id="Electric" href="#">Electrico</a></li>
-            <li class="roleBtn"><a id="Psychic" href="#">Psíquico</a></li>
-            <li class="roleBtn"><a id="Ice" href="#">Hielo</a></li>
-            <li class="roleBtn"><a id="Fire" href="#">Fuego</a></li>
-            <li class="roleBtn"><a id="Dragon" href="#">Dragón</a></li>
+      </svg> 
+    </label> -->
+      <ul class="menu">
+        <li ><a href="index.html">INICIO</a></li>
+        <li id="botonBuscar"><a href="#botonBuscar">TOP 10 POKEMONS APARICIONES</a></li>
+        <li ><a id="tipoPokemones">TIPOS DE POKEMONES</a>
+          <ul id="desple" class="submenu">
+            <li><a id="Normal" href="#">Normal</a></li>
+            <li><a id="Fighting" href="#">Lucha </a></li>
+            <li><a id="Flying" href="#">Volador</a></li>
+            <li><a id="Poison" href="#">Veneno</a></li>
+            <li><a id="Ground" href="#">Tierra</a></li>
+            <li><a id="Rock" href="#">Roca</a></li>
+            <li><a id="Bug" href="#">Bicho</a></li>
+            <li><a id="Ghost" href="#">Fantasma</a></li>
+            <li><a id="Water" href="#">Agua</a></li>
+            <li><a id="Grass" href="#">Planta</a></li>
+            <li><a id="Electric" href="#">Electrico</a></li>
+            <li><a id="Psychic" href="#">Psíquico</a></li>
+            <li><a id="Ice" href="#">Hielo</a></li>
+            <li><a id="Fire" href="#">Fuego</a></li>
+            <li><a id="Dragon" href="#">Dragón</a></li>
           </ul>
         </li>
-        <li class="menu-superior" id="estadistica"><a href="#estadistica">ESTADISTICAS</a></li>
+        <li id="estadistica"><a href="#">ESTADISTICAS</a>
+          <ul  class="submenu">
+          <li><a id="estaTipo" href="#">E. Tipo de Pokemons</a></li>
+          </ul>
+        </li>
+        <li id="evolucion"><a href="#">EVOLUCION</a>
+          <ul  class="submenu">
+          <li><a id="candys" href="#"># Candys para evolucionar</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
+    <div class="fondo">
+        <div class="divbuscar">
+          <input style="margin-left: 30px; margin-top: 20px;" type="text" id="buscar" value=""
+            placeholder="Escribe nombre Pokemon" name="search"> <button id="buscaPokemon"><i class="fas fa-search"></i>Buscar</button>
+          <label id="selecciona-orden" class="divordenar" style="margin-left: 600px; margin-top: 20px;">
+            <input type="radio" name="ordena" value="asc" id="orAsc"><a href="#">Ascendente</a>
+            <input type="radio" name="ordena" value="desc" id="orDesc"><a href="#">Descendente</a>
+          </label>
+        </div>
+      </div>
+  </header>
+ 
+  <div ><a href="#miModal" id="contenedor-pokemons" class="flex-container" ></a></div>
+  <div id="miModal" class="modal">
+    <div class="modal-contenido">
+      <a href="#" >X</a>
+      <h2> POKEMON </h2>
+      <p>Caracteristicas...</p>
+    </div>  
   </div>
-
-  <div class="fondo">
-    <div class="divbuscar">
-
-      <input style="margin-left: 30px; margin-top: 20px;" type="text" id="buscar" value=""
-        placeholder="Escribe nombre Pokemon"> <button id="buscaPokemon">Buscar Pokemon</button>
-      <label id="selecciona-orden" class="divordenar" style="margin-left: 600px; margin-top: 20px;">
-        <input type="radio" name="ordena" value="asc" id="orAsc"><a href="#">Ascendente</a>
-        <input type="radio" name="ordena" value="desc" id="orDesc"><a href="#">Descendente</a>
-      </label>
-    </div>
-    <br>
-  </div>
-  <div id="contenedor-pokemons" class="flex-container"></div>
   <script type="module" src="main.js"></script>
 </body>
 </html>
