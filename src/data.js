@@ -21,18 +21,11 @@ export const ordenNumerico = (data) => {
   return nuevoArregloNumerico;
 };
 
+export const busquedaPokemonNombre = (data, nombre) => data.filter((item) => item.name.toLowerCase().startsWith(nombre));
+
+/*  Search function, only shows 1 pokemon if name written correctly and full
 // export const busquedaPokemonNombre = (data, nombre) => {
 //   // eslint-disable-next-line no-shadow
 //   const pokemonEncontrado = data.filter((data) => (data.name.toLowerCase() === nombre));
 //   return pokemonEncontrado;
-// };
-
-export const busquedaPokemonNombre = (data, nombre) => data.filter((item) => item.name.toLowerCase().startsWith(nombre));
-
-
-// In this function, need to turn the input value to .toLowerCase so it matches
-// export const filtroTipoPokemon2 = (data, tipo) => {
-//   // eslint-disable-next-line no-shadow
-//   const nuevoArreglo = data.filter((item) => (item.type.valueOf() == tipo));
-// console.log(nuevoArreglo);
-//   };
+// }; */
