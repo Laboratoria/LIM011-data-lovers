@@ -22,7 +22,7 @@ export const ordenNumerico= (data) =>{
 return nuevoArregloNumerico;
 };
 
-export const busquedaPokemon = (data, nombre) =>{
+export const busquedaPokemonNombre = (data, nombre) =>{
   const pokemonEncontrado = data.filter((data)=> (data.name.toLowerCase() === nombre));
   return pokemonEncontrado;
 };

@@ -2,7 +2,7 @@
 import POKEMON from './data/pokemon/pokemon.js';
 
 // eslint-disable-next-line import/extensions
-import { filtroTipoPokemon, filtroAlfabeticoAZ, filtroAlfabeticoZA, ordenNumerico, busquedaPokemon  } from './data.js';
+import { filtroTipoPokemon, filtroAlfabeticoAZ, filtroAlfabeticoZA, ordenNumerico, busquedaPokemonNombre  } from './data.js';
 //Plantilla Solo imagen y nombre
 const showPicturePokemon = (data) => {
     let plantillaPokemon = '';
@@ -58,7 +58,7 @@ const inputBusqueda = document.getElementById('busqueda-nombre-pokemon');
 const fichaPokemonBuscado=document.getElementById('tarjeta-pokemon-buscado');
 
 inputBusqueda.addEventListener('input', ()=>{
-    fichaPokemonBuscado.innerHTML=(showFichaPokemon(busquedaPokemon(POKEMON, inputBusqueda.value.toLowerCase())))
+    fichaPokemonBuscado.innerHTML=(showFichaPokemon(busquedaPokemonNombre(POKEMON, inputBusqueda.value.toLowerCase())))
     pageFiltro.style.display='block';
 });
 
