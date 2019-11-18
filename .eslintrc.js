@@ -12,13 +12,12 @@ module.exports = {
     SharedArrayBuffer: 'readonly',
     firebase: 'readonly',
   },
-  plugins: ["jest"],
+  plugins: ['jest'],
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
   rules: {
-    'no-param-reassign': 0,
     'linebreak-style': 0,
     'prefer-destructuring': 0,
     'import/extensions': 0,

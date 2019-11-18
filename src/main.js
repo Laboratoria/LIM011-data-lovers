@@ -8,8 +8,6 @@ import {
   buscarPokemon,
 } from './data.js';
 
-const contenedorPokemons = document.querySelector('#contenedor-pokemons');
-
 const radioInput = document.querySelectorAll('input[name=ordena]');
 
 const generarTemplatePokemones = (arr) => {
@@ -18,7 +16,7 @@ const generarTemplatePokemones = (arr) => {
     catalogoImagenes += `
     <div align="center">
     <img src = "${obj.imagen}"/>
-    <p> ${obj.identificador} ${obj.nombre}</p>
+    <h1> ${obj.identificador}</h1><p>  ${obj.nombre}</p>
     </div>
     `;
   });
@@ -27,27 +25,27 @@ const generarTemplatePokemones = (arr) => {
 
 const template = generarTemplatePokemones(traerDataPokemon(POKEMON));
 
-const pintarPokemonesEnPantalla = (plantilla, nodoDom) => {
-  nodoDom.innerHTML = '';
-  nodoDom.innerHTML = plantilla;
+const pintarPokemonesEnPantalla = (plantilla, id) => {
+  document.querySelector(id).innerHTML = '';
+  document.querySelector(id).innerHTML = plantilla;
 };
 
-pintarPokemonesEnPantalla(template, contenedorPokemons);
+pintarPokemonesEnPantalla(template, '#contenedor-pokemons');
 
 const inputBuscaPokemon = document.getElementById('buscaPokemon');
 inputBuscaPokemon.addEventListener('click', () => {
   const nombrePokemonBuscar = document.getElementById('buscar').value;
   const muestraPokemon = traerDataPokemon(buscarPokemon((POKEMON), nombrePokemonBuscar));
   const pintarMuestraPokemon = generarTemplatePokemones(muestraPokemon);
-  pintarPokemonesEnPantalla(pintarMuestraPokemon, contenedorPokemons);
+  pintarPokemonesEnPantalla(pintarMuestraPokemon, '#contenedor-pokemons');
 });
 
-const desple = document.getElementById('tipoPokemones');
-desple.addEventListener('click', () => {
-  const tPokemones = desple.value;
-  const arregloFiltrado = traerDataPokemon(desple((POKEMON), tPokemones));
+const desple = document.getElementById('desple');
+desple.addEventListener('click', (event) => {
+  const tPokemones = event.target.id;
+  const arregloFiltrado = traerDataPokemon(filtrarPokemones((POKEMON), tPokemones));
   const pintarArregloFiltrado = generarTemplatePokemones(arregloFiltrado);
-  pintarPokemonesEnPantalla(pintarArregloFiltrado, contenedorPokemons);
+  pintarPokemonesEnPantalla(pintarArregloFiltrado, '#contenedor-pokemons');
 });
 
 for (let i = 0; i < radioInput.length; i += 1) {
@@ -55,14 +53,14 @@ for (let i = 0; i < radioInput.length; i += 1) {
     const string = event.target.id;
     const arregloOrdenado = traerDataPokemon(ordenarAscOdescData((POKEMON), string));
     const pintarArregloOrdenado = generarTemplatePokemones(arregloOrdenado);
-    pintarPokemonesEnPantalla(pintarArregloOrdenado, contenedorPokemons);
+    pintarPokemonesEnPantalla(pintarArregloOrdenado, '#contenedor-pokemons');
   });
 }
 const btnBuscarTop10 = document.getElementById('botonBuscar');
 btnBuscarTop10.addEventListener('click', () => {
   const arregloMuestraTop = traerDataPokemon(mostrarTop(POKEMON));
   const pintarArregloMuestraTop = generarTemplatePokemones(arregloMuestraTop);
-  pintarPokemonesEnPantalla(pintarArregloMuestraTop, contenedorPokemons);
+  pintarPokemonesEnPantalla(pintarArregloMuestraTop, '#contenedor-pokemons');
 });
 
 const pElement=document.createElement("p");
