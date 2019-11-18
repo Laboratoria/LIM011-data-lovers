@@ -24,19 +24,36 @@ const pintado = (dataPorCasa, p1, p2, p3) => {
   dataPorCasa.forEach((extrae) => {
     if (p3 !== '') {
       templatePotter.push(`<div class="casas-card">
-              <img class="imagen" src= "${extrae[p1]}"/>
+              <img id= "${extrae[p2]}" class="imagen" src= "${extrae[p1]}"/>
               <p>${extrae[p2]}</p>
               <p>${extrae[p3]}</p>
             </div>`);
     }
     if (p3 === '') {
       templatePotter.push(`<div class="casas-card">
-        <img class="imagen" src= "${extrae[p1]}"/>
+        <img id= "${extrae[p2]}" class="imagen" src= "${extrae[p1]}"/>
         <p>${extrae[p2]}</p>
         </div>`);
     }
   });
   return templatePotter;
+};
+
+// Modal
+const pintadoModal = (extrae) => {
+  const personaje = filtrado(POTTER, 'name', extrae);
+  console.log(personaje);
+  let personajeSelect = '';
+  personajeSelect = `<div class="flex">
+      <div class="contenido-modal">
+      <span class="cerrar" id="cerrar">&times;</span>
+       <div class="izquierda">
+        <img src="${personaje[0].image}">
+        <p>${personaje[0].actor}</p>
+       </div>
+      </div>
+     </div>`;
+  return personajeSelect;
 };
 
 // PERSONAJES
@@ -94,18 +111,7 @@ document.querySelector('#busquedaP').addEventListener('input', (event) => {
 const imagenCard = document.querySelectorAll('.imagen');
 imagenCard.forEach((elem) => {
   elem.addEventListener('click', () => {
-    console.log('esta funcionando');
-    const templateModal = [];
-    templateModal.push(`<div class="flex">
-      <div class="contenido-modal">
-      <span class="cerrar" id="cerrar"></span>
-       <div class="izquierda">
-        <img src="${elem.image}">
-        <p>${elem.actor}</p>
-       </div>
-      </div>
-     </div>`);
-    document.querySelector('#modalP').innerHTML = templateModal;
+    document.querySelector('#modalP').innerHTML = pintadoModal(elem.getAttribute('id'));
   });
 });
 
