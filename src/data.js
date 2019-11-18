@@ -1,4 +1,3 @@
-
 // function to filter for house
 export function filterHouse(dataPotter, houseSelected) {
   const dataFilterHouse = dataPotter.filter((data) => (data.house === houseSelected));
