@@ -1,7 +1,8 @@
+/* eslint-disable object-curly-newline */
 /* eslint-disable no-alert */
+
 import POTTER from './data/potter/potter.js';
-import { ordenado, filtrado, busqueda } from './data.js';
-// import { classDeclaration } from '@babel/types';
+import { ordenado, filtrado, busqueda, filtraDiferente } from './data.js';
 
 // Variables globales
 const inicio = document.getElementById('inicio-section');
@@ -98,30 +99,34 @@ document.getElementById('menu-rol').addEventListener('click', () => {
   personajes.classList.add('ocultar');
 });
 
+// pintado al elegir rol
 const divTodosR = document.getElementById('todosR');
 divTodosR.innerHTML = pintado(ordenado(POTTER), 'image', 'name', '');
 
 const seleccionarR = document.querySelector('.filtrar-rol');
-seleccionarR.addEventListener('change', (eventoR) => {
+seleccionarR.addEventListener('change', (evento) => {
+  // borra el input de busqueda al cambiar de option en el select
   document.querySelector('#busquedaR').value = '';
-  const opcionSeleccionadaRol = eventoR.target.value;
+  const opcionSeleccionadaCasa = evento.target.value;
   divTodosR.innerHTML = '';
+  const datosNoProf = filtrado(filtrado(POTTER, 'hogwartsStaff', true), 'house', '');
+  const datosNoHogwarts = filtrado(filtrado(POTTER, 'hogwartsStaff', false), 'hogwartsStudent', false);
 
-  switch (opcionSeleccionadaRol) {
+  switch (opcionSeleccionadaCasa) {
     case 'todos':
       datos = POTTER;
-      divTodosR.innerHTML = pintado((POTTER), 'image', 'name', 'house');
+      divTodosR.innerHTML = pintado((POTTER), 'image', 'name', '');
       break;
     case 'alumno':
       datos = filtrado(POTTER, 'hogwartsStudent', true);
       divTodosR.innerHTML = pintado(datos, 'image', 'name', '');
       break;
     case 'profesor':
-      datos = (filtrado(POTTER, 'hogwartsStaff', true) && filtrado(POTTER, 'house'));
+      datos = filtraDiferente(filtrado(POTTER, 'hogwartsStaff', true), 'house', '');
       divTodosR.innerHTML = pintado(datos, 'image', 'name', '');
       break;
     case 'otros':
-      datos = (filtrado(POTTER, 'hogwartsStaff', true) && filtrado(POTTER, 'house') && filtrado(POTTER, 'hogwartsStaff', false));
+      datos = datosNoProf.concat(datosNoHogwarts);
       divTodosR.innerHTML = pintado(datos, 'image', 'name', '');
       break;
     default:
@@ -153,10 +158,10 @@ document.getElementById('menu-casas').addEventListener('click', () => {
 const divTodosC = document.getElementById('todosC');
 
 // FILTROS CASAS
-const seleccionarC = document.querySelector('.filtrar-casas');
+
 divTodosC.innerHTML = pintado(ordenado(POTTER), 'image', 'name', 'house');
 // datos = POTTER;
-
+const seleccionarC = document.querySelector('.filtrar-casas');
 // Evento del select CASAS
 seleccionarC.addEventListener('change', (evento) => {
   // borra el input de busqueda al cambiar de option en el select

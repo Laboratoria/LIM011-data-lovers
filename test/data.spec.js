@@ -14,7 +14,8 @@
 // });
 
 // importamos la función `example`
-import { ordenado, filtrado, busqueda } from '../src/data';
+// eslint-disable-next-line object-curly-newline
+import { ordenado, filtrado, busqueda, filtraDiferente } from '../src/data';
 
 describe('ordenado', () => {
   it('debería ser una función', () => {
@@ -44,12 +45,6 @@ describe('filtrado', () => {
     const esperoFP = [{ name: 'Cho Chang', gender: 'female' }, { name: 'Hermonie Granger', gender: 'female' }];
     expect(filtrado(dataFP, ['gender'], 'female')).toEqual(esperoFP);
   });
-
-  it('debería filtrar la data por el género de los personajes', () => {
-    const dataFP = [{ name: 'Harry Potter', gender: 'male' }, { name: 'Cho Chang', gender: 'female' }, { name: 'Hermonie Granger', gender: 'female' }];
-    const esperoFP = [{ name: 'Cho Chang', gender: 'female' }, { name: 'Hermonie Granger', gender: 'female' }];
-    expect(filtrado(dataFP, ['gender'], 'female')).toEqual(esperoFP);
-  });
 });
 
 describe('busqueda', () => {
@@ -67,5 +62,17 @@ describe('busqueda', () => {
     const dataBm = [{ name: 'Vincent Crabbe', house: 'Slytherin' }, { name: 'Cho Chang', house: 'Ravenclaw' }, { name: 'Hermonie Granger', house: 'Gryffindor' }];
     const esperoBm = [{ name: 'Vincent Crabbe', house: 'Slytherin' }, { name: 'Cho Chang', house: 'Ravenclaw' }];
     expect(busqueda(dataBm, 'c')).toEqual(esperoBm);
+  });
+});
+
+describe('filtraDiferente', () => {
+  it('debería ser una función', () => {
+    expect(typeof filtraDiferente).toBe('function');
+  });
+
+  it('debería retornar solo personajes que tienen casa', () => {
+    const dataFD = [{ name: 'Vincent Crabbe', house: 'Slytherin' }, { name: 'Cho Chang', house: 'Ravenclaw' }, { name: 'Argus Filch', house: '' }];
+    const esperoFD = [{ name: 'Vincent Crabbe', house: 'Slytherin' }, { name: 'Cho Chang', house: 'Ravenclaw' }];
+    expect(busqueda(dataFD, 'C')).toEqual(esperoFD);
   });
 });
