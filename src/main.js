@@ -1,16 +1,9 @@
-/**
- * import POKEMON from './data/pokemon/pokemon.js'
- * import LoL from './data/lol/lol.js'
- * import POTTER from './data/potter/potter.js'
- */
-
 import POTTER from './data/potter/potter.js';
+
 import {
   ascendente, genero, filterRole, filterRoleDos, houseUno,
 } from './data.js';
-// console.log(POTTER);
 
-// const contentCharacter = document.getElementById('contentCharacter');
 const contentCharacter = document.querySelector('#contentCharacter');
 const filterMenu = document.getElementById('filterMenu');
 const imageIcon = document.getElementById('imageIcon');
@@ -18,49 +11,111 @@ const selectAlfab = document.getElementById('selectAlfab');
 const gender = document.getElementById('gender');
 const role = document.getElementById('role');
 const house = document.getElementById('house');
-const modal = document.getElementById('modal');
-let flex = document.getElementById('flex');
-const openModal = document.getElementById('abrir');
-let close = document.getElementById('close');
 
 const showCharacters = (dataPotter) => {
-  let templatePotter = '';
-  // eslint-disable-next-line no-plusplus
-  for (let i = 0; i < dataPotter.length; i++) {
-    templatePotter += `
-    <div class=content id="content">
-    <div class=styleCharacter id="openModal">
-    <img id="abrir" class=imageCharacter src=${dataPotter[i].image}>
-    <div class=name>${dataPotter[i].name}</div>
-    </div>
-    <div>
-    </div>
-    </div>
-    `;
-  }
-  return templatePotter;
+  dataPotter.forEach((dato) => {
+    /*  TARJETA INICIO */
+    // Creando la vista de las tarjetas( nombre e imagen)
+    const content = document.createElement('div');
+    content.setAttribute('id', 'content');
+    content.setAttribute('class', 'content');
+
+    // PARA EL NOMBRE
+    // Crea el div de nombre, le asigna id name,
+    // jala el dato por name ingresa a nombrePersonaje en el div
+    const divNombrePersonaje = document.createElement('p');
+    divNombrePersonaje.setAttribute('class', 'name');
+    divNombrePersonaje.innerHTML = dato.name;
+
+    // PARA LA IMAGEN
+    const imagenPersonaje = document.createElement('img');
+    imagenPersonaje.setAttribute('src', dato.image);
+    imagenPersonaje.setAttribute('class', 'imagePersonaje');
+
+    /*  TARJETA MODAL */
+    content.addEventListener('click', () => {
+      const divModal = document.createElement('div');
+      divModal.setAttribute('id', 'modal');
+      divModal.setAttribute('class', 'modal');
+
+      const divFlex = document.createElement('div');
+      divFlex.setAttribute('id', 'flex');
+      divFlex.setAttribute('class', 'flex');
+      const divContenidoModal = document.createElement('div');
+      divContenidoModal.setAttribute('class', 'contenidoModal');
+      const divTitulo = document.createElement('div');
+      divTitulo.classList.add('modalHeader', 'flex');
+
+      // escritura titulo
+      const tituloCaracteristicas = document.createElement('h2');
+      tituloCaracteristicas.setAttribute('id', 'caracteristicasH2');
+      // const contenidoTitulo = document.createTextNode('HOLA titulo caracteristicas');
+      const contenidoTitulo = document.createTextNode(dato.name);
+      tituloCaracteristicas.appendChild(contenidoTitulo);
+
+      // EQUIS
+      const spanClose = document.createElement('span');
+      spanClose.setAttribute('id', 'close');
+      spanClose.setAttribute('class', 'close');
+      spanClose.innerHTML = 'X';
+
+
+      // div MODALBODY
+      const divModalBody = document.createElement('div');
+      divModalBody.setAttribute('class', 'modalBody');
+
+      //  escritura P
+      const parrafoCaracteristicas = document.createElement('p');
+      parrafoCaracteristicas.setAttribute('id', 'caracteristicasP');
+      // const contenidoCaracteristicas = document.createTextNode('HOLA parrafo caracteristicas');
+      // parrafoCaracteristicas.appendChild(contenidoCaracteristicas);
+
+      // llenando las caracterisiticas
+      const arrayCaracteristicas = [`Nombre: ${dato.name}`, `Especie: ${dato.species}`, `Genero: ${dato.gender}`, `Casa: ${dato.house}`, `Fecha de nacimiento: ${dato.dateOfBirth}`, `Ascendencia: ${dato.ancestry}`, `Color de ojos: ${dato.eyeColour}`, `Color de cabello: ${dato.hairColour}`, `Patronus: ${dato.patronus}`, `Actor: ${dato.actor}`];
+      for (let a = 0; a < arrayCaracteristicas.length; a += 1) {
+        const saltoLinea = document.createElement('br');
+        const caracteristica = document.createTextNode(arrayCaracteristicas[a]);
+        parrafoCaracteristicas.appendChild(saltoLinea);
+        parrafoCaracteristicas.appendChild(caracteristica);
+      }
+
+      // div MODALFOOTER
+      // const divModalFooter = document.createElement('div');
+      // divModalFooter.setAttribute('class', 'modalFooter');
+
+      spanClose.addEventListener('click', () => {
+        document.body.removeChild(divModal);
+      });
+
+      window.addEventListener('click', (event) => {
+        if (event.target === divFlex) {
+          divModal.style.display = 'none';
+        }
+      });
+
+      // anidando divs
+      divModalBody.appendChild(parrafoCaracteristicas);
+      divTitulo.appendChild(tituloCaracteristicas);
+      divTitulo.appendChild(spanClose);
+      divContenidoModal.appendChild(divTitulo);
+      divContenidoModal.appendChild(divModalBody);
+      divFlex.appendChild(divContenidoModal);
+      divModal.appendChild(divFlex);
+      content.appendChild(divModal);
+      document.body.appendChild(divModal);
+    });
+
+    /*  TARJETA MOSTRAR */
+    // LLAMAR VARIABLES AL CONTENT
+    content.appendChild(imagenPersonaje);
+    content.appendChild(divNombrePersonaje);
+
+    // MOSTRAR EN EL CONTENT HTML
+    contentCharacter.appendChild(content);
+  });
+  return contentCharacter;
 };
-contentCharacter.innerHTML = showCharacters(POTTER);
-
-// Modal
-// openModal.addEventListener('click', () => {
-//   modal.style.display = 'block';
-// });
-// close.addEventListener('click', () => {
-//   modal.style.display = 'none';
-// });
-// window.addEventListener('click', (event) => {
-//   if (event.target === flex) {
-//     modal.style.display = 'none';
-//   }
-// });
-// Fin Modal
-
-
-contentCharacter.addEventListener('click', (event) => {
-  // console.log(event.target.name);
-  abrirModal();
-});
+showCharacters(POTTER);
 
 // Barra Lateral
 let open = 0;
@@ -79,29 +134,45 @@ imageIcon.addEventListener('click', () => {
 // OrdenarAZ
 selectAlfab.addEventListener('change', (event) => {
   if (event.target.value === '0') {
-    contentCharacter.innerHTML = showCharacters(ascendente(POTTER));
+    // contentCharacter.innerHTML = showCharacters(ascendente(POTTER));
+    document.querySelector('#contentCharacter').innerHTML = '';
+    showCharacters(ascendente(POTTER));
   } else {
-    contentCharacter.innerHTML = showCharacters(ascendente(POTTER).reverse());
+    // contentCharacter.innerHTML = showCharacters(ascendente(POTTER).reverse());
+    document.querySelector('#contentCharacter').innerHTML = '';
+    showCharacters(ascendente(POTTER).reverse());
   }
 });
-
-gender.addEventListener('change', () => {
+// Filtrado por genero
+/* gender.addEventListener('change', () => {
   const filterGender = genero(POTTER, gender.value);
   contentCharacter.innerHTML = showCharacters(filterGender);
+}); */
+gender.addEventListener('change', () => {
+  document.querySelector('#contentCharacter').innerHTML = '';
+  showCharacters(genero(POTTER, gender.value));
 });
-
-
+// Filtrado estudiante profesor
 role.addEventListener('change', (event) => {
-  const student = filterRole(POTTER);
-  const staff = filterRoleDos(POTTER);
+  // const student = filterRole(POTTER);
+  //  const staff = filterRoleDos(POTTER);
   if (event.target.value === 'hogwartsStudent') {
-    contentCharacter.innerHTML = showCharacters(student);
+    // contentCharacter.innerHTML = showCharacters(student);
+    document.querySelector('#contentCharacter').innerHTML = '';
+    showCharacters(filterRole(POTTER));
   } else {
-    contentCharacter.innerHTML = showCharacters(staff);
+    // contentCharacter.innerHTML = showCharacters(staff);
+    document.querySelector('#contentCharacter').innerHTML = '';
+    showCharacters(filterRoleDos(POTTER));
   }
 });
-
-house.addEventListener('change', () => {
+// Filtrado por casas
+/* house.addEventListener('change', () => {
   const chooseHouse = houseUno(POTTER, house.value);
   contentCharacter.innerHTML = showCharacters(chooseHouse);
+});
+ Js */
+house.addEventListener('change', () => {
+  document.querySelector('#contentCharacter').innerHTML = '';
+  showCharacters(houseUno(POTTER, house.value));
 });
