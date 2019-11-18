@@ -3,7 +3,6 @@
 
 import POTTER from './data/potter/potter.js';
 import { ordenado, filtrado, busqueda, filtraDiferente } from './data.js';
-
 // Variables globales
 const inicio = document.getElementById('inicio-section');
 const menus = document.getElementById('menus-section');
@@ -21,20 +20,20 @@ document.getElementById('menu-inicio').addEventListener('click', () => {
 
 // template
 const pintado = (dataPorCasa, p1, p2, p3) => {
-  let templatePotter = '';
+  const templatePotter = [];
   dataPorCasa.forEach((extrae) => {
     if (p3 !== '') {
-      templatePotter += `<div id="imagenes" class="casas-card">
+      templatePotter.push(`<div class="casas-card">
               <img class="imagen" src= "${extrae[p1]}"/>
               <p>${extrae[p2]}</p>
               <p>${extrae[p3]}</p>
-            </div>`;
+            </div>`);
     }
     if (p3 === '') {
-      templatePotter += `<div id="imagenes" class="casas-card">
+      templatePotter.push(`<div class="casas-card">
         <img class="imagen" src= "${extrae[p1]}"/>
         <p>${extrae[p2]}</p>
-        </div>`;
+        </div>`);
     }
   });
   return templatePotter;
@@ -54,7 +53,8 @@ divTodosP.innerHTML = pintado(ordenado(POTTER), 'image', 'name', '');
 
 // FILTROS PERSONAJES
 const seleccionarP = document.querySelector('.filtrar-personajes');
-// Evento del select CASAS
+
+// Evento del select PERSONAJES
 seleccionarP.addEventListener('change', (evento) => {
   document.querySelector('#busquedaP').value = '';
   const opcionSeleccionadaGenero = evento.target.value;
@@ -89,6 +89,39 @@ document.querySelector('#busquedaP').addEventListener('input', (event) => {
     divTodosP.innerHTML = '<h1>No se encontró ningún personaje</h1>';
   }
 });
+
+// MODAL DE PERSONAJES
+const imagenCard = document.querySelectorAll('.imagen');
+imagenCard.forEach((elem) => {
+  elem.addEventListener('click', () => {
+    console.log('esta funcionando');
+    const templateModal = [];
+    templateModal.push(`<div class="flex">
+      <div class="contenido-modal">
+      <span class="cerrar" id="cerrar"></span>
+       <div class="izquierda">
+        <img src="${elem.image}">
+        <p>${elem.actor}</p>
+       </div>
+      </div>
+     </div>`);
+    document.querySelector('#modalP').innerHTML = templateModal;
+  });
+});
+
+console.log(Object.keys(POTTER));
+console.log(POTTER[11].wand);
+const varita = POTTER[11].wand.length;
+console.log(varita);
+console.log(pintado(datos, 'image', 'name', ''));
+
+console.log(POTTER[12].hogwartsStudent);
+console.log(POTTER[12].hogwartsStaff);
+console.log(POTTER[12].alive);
+if (POTTER[12].alive === true) {
+  console.log("vive");
+}
+
 
 // MENU ROL
 document.getElementById('menu-rol').addEventListener('click', () => {
