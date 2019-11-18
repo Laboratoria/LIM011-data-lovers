@@ -1,133 +1,140 @@
 * {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
- font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
- margin: 0;
- background: url(img/fondo.jpg) no-repeat center top fixed;
- width: 100%;
- height: 100%;
+    margin: 0;
+    background: url(img/fondo.jpg) no-repeat center top fixed;
+    width: 100%;
+    height: 100%;
 }
 
-
-/* #calculate-evolution,#resultados { display : none; } */
-
 .candies-fichas-pokemon {
- display: inline-block;
- border: 5px dotted blue;
- display: flex;
+    display: inline-block;
+    /* border: 5px dotted blue; */
+    display: flex;
 }
 
 .container-header {
- width: 100%;
- overflow: hidden;
- background: url(img/fondo1.jpg);
- padding: 10px 10px;
- display: flex;
- flex-direction: row;
- flex-wrap: wrap;
- justify-content: space-evenly;
+    width: 100%;
+    overflow: hidden;
+    background: url(img/fondo1.jpg);
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .selector-filtro {
- padding: 15px 15px;
- border: 4px solid yellow;
-}
+    padding: 15px 15px;
+    /* border: 4px dashed yellow; */
+} 
 
 .selector-filtro-wrap {
- display: none;
+    display: none;
+    /* border: 9px dashed green; */
+    padding: 15px 15px;
+    height: 100%
+    
 }
 
 .caramelo-pantalla {
- border: 4px solid red;
- display: none;
+    /* border: 4px solid red; */
+    display: none;
+    height:100%;
 }
 
 .singlepoke {
- width: 25%;
- height: 20%;
- align-items: center;
+    width: 25%;
+    align-items: center;
+    /* border:2px solid darkmagenta; */
 }
 
 .lista-pokemon {
- display: flex;
- flex-wrap: wrap;
- justify-content: space-evenly;
- align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    /* border: 4px solid red; */
 }
 
 .ficha-pokemon {
- height: 25%;
- width: 25%;
- /* flex-direction: row;
- flex-wrap: wrap; */
- margin: 1.5em;
- padding: 0.5em;
+    height: 25%;
+    width: 25%;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    margin: 1.5em;
+    padding: 0.5em;
 }
 
+
 ::placeholder {
- color: white
+    color: gray;
 }
 
 .footer {
- width: 100%;
- height: 30px;
- color: #fff;
- background: url(img/fondo1.jpg);
- font-weight: bold;
- font-size: 12px;
- text-align: center;
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    background: url(img/fondo1.jpg);
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
 }
 
 .filtro {
- border-radius: 50px;
- font-size: 14px;
- width: 300px;
+    border-radius: 50px;
+    font-size: 14px;
+    width: 300px;
 }
 
 .fondo-pokemon img {
- background: url(img/f.png);
- background-repeat: no-repeat;
+    background: url(img/f.png);
+    background-repeat: no-repeat;
 }
 
 div[name="pokemon"] p:first-of-type {
- color: #A6AAAE;
- font-style: normal;
- font-weight: bold;
- font-size: 36px;
- align-items: center;
+    color: rgb(71, 71, 71);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2em;
+    align-items: center;
 }
 
 p {
- color: #000000;
- font-style: normal;
- font-weight: normal;
- font-size: 12px;
- line-height: 28px;
- display: flex;
- align-items: center;
+    color: #000000;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
 }
 
-.buttonm {
- background: #5d327c;
- border-radius: 50px;
- display: inline-block;
- color: #fff;
- cursor: pointer;
- text-decoration: none;
- padding: 10px 10px;
- line-height: normal;
- font-size: 15px;
- -webkit-transition: all 500ms ease;
- -o-transition: all 500ms ease;
- transition: all 500ms ease;
+.buttonm, .poke-type-list {
+    background: #5d327c;
+    border-radius: 50px;
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px 10px;
+    line-height: normal;
+    font-size: .8em;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    border-style: none;
+    width: 10em;
+    
 }
 
 .buttonm ::placeholder {
- color: #fff;
+    color: #fff;
 }
 
 .buttonm:hover {
@@ -140,6 +147,7 @@ p {
  text-align: center;
  font-size: 20px;
  padding: 10px 10px;
+ border: 4px solid red;
 }
 
 .buttonr {
@@ -150,11 +158,12 @@ p {
  text-decoration: none;
  padding: 10px 10px;
  line-height: normal;
- font-size: 15px;
+ font-size: .8em;
  cursor: pointer;
  -webkit-transition: all 500ms ease;
  -o-transition: all 500ms ease;
  transition: all 500ms ease;
+ border-style: none;
 }
 
 .buttonr:hover {
@@ -183,6 +192,7 @@ p {
      margin-bottom: 10px
  }
  transform: scaleY(1);
+
 }
 
 .summary {
