@@ -11,9 +11,9 @@ import {
 const showPicturePokemon = (data) => {
   let plantillaPokemon = '';
   data.forEach((item) => {
-    plantillaPokemon += `
-    <div class ="singlepoke">
-        <div id="${item.id}"name="pokemon" class="ficha-pokemon">
+    plantillaPokemon += `    
+    <div class="singlepoke">    
+    <div id="${item.id}" name="pokemon" class="ficha-pokemon">
             <div class="fondo-pokemon"><img src="${item.img}"/></div>
             <p>${item.name} #${item.num}</p>
         </div>
@@ -26,7 +26,7 @@ const showFichaPokemon = (data) => {
   let plantillaPokemon = '';
   data.forEach((item) => {
     plantillaPokemon += `
-        <div id="${item.id} "name="pokemon" class="ficha-pokemon">
+        <div id="${item.id}" name="pokemon" class="ficha-pokemon">
             <div class="fondo-pokemon"><img src="${item.img}"/></div>
             <p> ${item.name} ${item.num}</p>
             <p>Tipo: ${item.type.join('  /  ')}</p>
@@ -64,17 +64,17 @@ const fichaPokemonBuscado = document.getElementById('tarjeta-pokemon-buscado');
 inputBusqueda.addEventListener('input', () => {
   if (inputBusqueda.value.toLowerCase() === '') {
     fichaPokemonBuscado.innerHTML = '';
-    return fichaPokemonBuscado;
+    // return fichaPokemonBuscado;
   }
   fichaPokemonBuscado.innerHTML = (showFichaPokemon(busquedaPokemonNombre(POKEMON, inputBusqueda.value.toLowerCase())));
   pageFiltro.style.display = 'block';
-  return fichaPokemonBuscado;
+  // return fichaPokemonBuscado;
 });
 
 seleccionTipoPokemon.addEventListener('click', () => {
   if (seleccionTipoPokemon.value === 'Todos') {
     listaFiltroTipo.innerHTML = showPicturePokemon(POKEMON);
-    return listaFiltroTipo;
+  return listaFiltroTipo;
   }
   listaFiltroTipo.innerHTML = showPicturePokemon(filtroTipoPokemon(POKEMON, seleccionTipoPokemon.value));
   return listaFiltroTipo;
@@ -101,9 +101,9 @@ botonOrdenAZ.addEventListener('click', () => {
 const botonOrdenZA = document.getElementById('za');
 botonOrdenZA.addEventListener('click', () => {
   if (seleccionTipoPokemon.value === 'Todos') {
-    listaFiltroTipo.innerHTML = showFichaPokemon(filtroAlfabeticoZA(POKEMON));
+    listaFiltroTipo.innerHTML = showPicturePokemon(filtroAlfabeticoZA(POKEMON));
   }
-  listaFiltroTipo.innerHTML = showFichaPokemon(filtroAlfabeticoZA(filtroTipoPokemon(POKEMON, seleccionTipoPokemon.value)));
+  listaFiltroTipo.innerHTML = showPicturePokemon(filtroAlfabeticoZA(filtroTipoPokemon(POKEMON, seleccionTipoPokemon.value)));
 });
 
 const botonOrdenNumerico = document.getElementById('n');
