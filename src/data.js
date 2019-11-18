@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 // Filtrado de pokemon por tipo
 export const filtroTipoPokemon = (data, tipo) => {
   // eslint-disable-next-line no-shadow
@@ -20,11 +21,13 @@ export const ordenNumerico = (data) => {
   return nuevoArregloNumerico;
 };
 
-export const busquedaPokemonNombre = (data, nombre) => {
-  // eslint-disable-next-line no-shadow
-  const pokemonEncontrado = data.filter((data) => (data.name.toLowerCase() === nombre));
-  return pokemonEncontrado;
-};
+// export const busquedaPokemonNombre = (data, nombre) => {
+//   // eslint-disable-next-line no-shadow
+//   const pokemonEncontrado = data.filter((data) => (data.name.toLowerCase() === nombre));
+//   return pokemonEncontrado;
+// };
+
+export const busquedaPokemonNombre = (data, nombre) => data.filter((item) => item.name.toLowerCase().startsWith(nombre));
 
 
 // In this function, need to turn the input value to .toLowerCase so it matches

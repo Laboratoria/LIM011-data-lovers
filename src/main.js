@@ -62,8 +62,13 @@ const inputBusqueda = document.getElementById('busqueda-nombre-pokemon');
 const fichaPokemonBuscado = document.getElementById('tarjeta-pokemon-buscado');
 
 inputBusqueda.addEventListener('input', () => {
+  if (inputBusqueda.value.toLowerCase() === '') {
+    fichaPokemonBuscado.innerHTML = '';
+    return fichaPokemonBuscado;
+  }
   fichaPokemonBuscado.innerHTML = (showFichaPokemon(busquedaPokemonNombre(POKEMON, inputBusqueda.value.toLowerCase())));
   pageFiltro.style.display = 'block';
+  return fichaPokemonBuscado;
 });
 
 seleccionTipoPokemon.addEventListener('click', () => {
