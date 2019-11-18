@@ -73,7 +73,7 @@ body {
 
 
 ::placeholder {
-    color: white
+    color: gray;
 }
 
 .footer {
@@ -147,6 +147,7 @@ p {
  text-align: center;
  font-size: 20px;
  padding: 10px 10px;
+ border: 4px solid red;
 }
 
 .buttonr {

@@ -1,6 +1,6 @@
 // Filtrado de pokemon por tipo
-export const filtroTipoPokemon = (data, tipo) => {
-  // eslint-disable-next-line no-shadow
+  export const filtroTipoPokemon = (data, tipo) => {
+    // eslint-disable-next-line no-shadow
   const nuevoArreglo = data.filter((item) => (item.type.indexOf(tipo) !== -1));
   return nuevoArreglo;
   };
@@ -23,7 +23,7 @@ return nuevoArregloNumerico;
 };
 
 export const busquedaPokemon = (data, nombre) =>{
-  const pokemonEncontrado = data.find((data)=> (data.name.toLowerCase() === nombre));
+  const pokemonEncontrado = data.filter((data)=> (data.name.toLowerCase() === nombre));
   return pokemonEncontrado;
 };
 

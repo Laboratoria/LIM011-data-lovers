@@ -17,7 +17,7 @@
             <img id=logo class="logo" src="img/logo.png" alt="logo">
             <img id=logo2 class="logo" src="img/logo2.png" alt="logo letra">
         </picture>
-        <input class="filtro" list="pokemon-name" id="selector-pokemon-name" placeholder="Nombre del Pokemón" value=''>
+        <input type="text" id="busqueda-nombre-pokemon" class="filtro"  placeholder="Nombre del Pokemón"/>
         <!-- <datalist id="pokemon-name">
             <option value="Bulbasaur">
             <option value="Ivysaur">
@@ -33,22 +33,19 @@
             <option value="Butterfree">
             <option value="Weedle">
             <option value="Kakuna">
-        </datalist></input> -->
+        </datalist> -->
         <nav>
             <button class="buttonm" id="boton-pantalla-filtrotipo">Tipos de Pokemón</button>
             <button class="buttonr" id="boton-pantalla-caramelos">Cantidad de caramelos</button>
         </nav>
-
     </header>
 
-    <!--Section body -->
-
-
+    <!--Section filtro -->
     <div class="selector-filtro-wrap" id="selector-filtro-wrap">
         <section class="selector-filtro" id="selector-filtro">
             <!-- <input list="pokemon-type" class="buttonm" id="selector-pokemon-type" placeholder="Tipo de Pokemón"/> -->
 
-            <select class="poke-type-list" id="pokemon-type">
+            <select id="pokemon-type" class="poke-type-list" >
               <option class="poke-type-list" value="Todos">Todos</option>
                 <option class="poke-type-list" value="Water">Agua</option>
                 <option class="poke-type-list" value="Bug">Insecto</option>
@@ -65,22 +62,24 @@
                 <option class="poke-type-list" value="Ground">Tierra</option>
                 <option class="poke-type-list" value="Poison">Veneno</option>
                 <option class="poke-type-list" value="Flying">Volador</option>
-          </select>
+            </select>
             <label for="az">Ordenar por: </label>
             <img src="./img/az.png" id="az" alt="Orden Alfabetico">
             <img src="./img/za.png" id="za" alt="Orden Alfabetico">
             <img src="./img/n.png" id="n" alt="Orden Apor numero">
         </section>
-            <!--muestra 1 pokemon-->
-        <section id="tarjeta-pokemon" class="ficha-pokemon"></section>
-            <!--muestra lista de pokemon filtrados-->
-            <section class="lista-pokemon" id="muestralistapokemon">
-            </section>
+        <!--muestra pokemon de la busqueda-->
+        <section id="tarjeta-pokemon-buscado" class="lista-pokemon">
+        </section>
+        <!--muestra lista de pokemon filtrados-->
+        <div class="lista-pokemon" id="muestra-lista-pokemon">
+        </div>
         
+    </section>
     </div>
 
     <!--Section Calcular Evolucion -->
-    <section class="caramelo-pantalla" id="pantallacaramelos">
+    <section id="pantalla-caramelos" class="caramelo-pantalla" >
         <article class="candies" id="calculate-evolution">
             <h3>Descubre cuanto le falta a tu pokemon para evolucionar</h3>
             <br>
