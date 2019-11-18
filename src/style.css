@@ -166,6 +166,15 @@ p {
  border-style: none;
 }
 
+.button-order{
+    background: none;
+    color: none;
+    border: none;
+    padding: 0;
+    cursor:pointer;
+    outline: none;
+}
+
 .buttonr:hover {
  background: #65140C;
  border-radius: 50px;
@@ -194,7 +203,6 @@ p {
  transform: scaleY(1);
 
 }
-
 .summary {
  color: #000000;
  font-size: 12px;

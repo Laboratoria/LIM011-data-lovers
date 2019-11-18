@@ -10,13 +10,13 @@ import {
 // Plantilla Solo imagen y nombre
 const showPicturePokemon = (data) => {
   let plantillaPokemon = '';
-  data.map((item) => {
+  data.forEach((item) => {
     plantillaPokemon += `
     <div class ="singlepoke">
         <div id="${item.id}"name="pokemon" class="ficha-pokemon">
-            <picture class="fondo-pokemon"><img src="${item.img}"/></picture>
+            <div class="fondo-pokemon"><img src="${item.img}"/></div>
             <p>${item.name} #${item.num}</p>
-        </div> 
+        </div>
     </div>`;
   });
   return plantillaPokemon;
@@ -24,10 +24,10 @@ const showPicturePokemon = (data) => {
 // Plantilla con saber más
 const showFichaPokemon = (data) => {
   let plantillaPokemon = '';
-  data.map((item) => {
+  data.forEach((item) => {
     plantillaPokemon += `
         <div id="${item.id} "name="pokemon" class="ficha-pokemon">
-            <picture class="fondo-pokemon"><img src="${item.img}"/></picture>
+            <div class="fondo-pokemon"><img src="${item.img}"/></div>
             <p> ${item.name} ${item.num}</p>
             <p>Tipo: ${item.type.join('  /  ')}</p>
             <p>Debilidades: ${item.weaknesses.join('  /  ')}</p>

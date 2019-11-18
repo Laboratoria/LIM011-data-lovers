@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>RockeDex</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css" />
 
@@ -13,10 +13,10 @@
 
 <body>
     <header class="container-header">
-        <picture>
+        <div>
             <img id=logo class="logo" src="img/logo.png" alt="logo">
             <img id=logo2 class="logo" src="img/logo2.png" alt="logo letra">
-        </picture>
+        </div>
         <input list="pokemon-name" type="text" id="busqueda-nombre-pokemon" class="filtro"  placeholder="Nombre del Pokemón">
         <datalist id="pokemon-name">
             <option value="Bulbasaur">
@@ -42,9 +42,9 @@
 
     <!--Section filtro -->
     <div class="selector-filtro-wrap" id="selector-filtro-wrap">
-        <section class="selector-filtro" id="selector-filtro">
+        <div class="selector-filtro" id="selector-filtro">
+            <!-- <label for="pokemon-type">Elige tipo de Pokemon:</label> -->
             <!-- <input list="pokemon-type" class="buttonm" id="selector-pokemon-type" placeholder="Tipo de Pokemón"/> -->
-
             <select id="pokemon-type" class="poke-type-list" >
               <option class="poke-type-list" value="Todos">Todos</option>
                 <option class="poke-type-list" value="Water">Agua</option>
@@ -64,22 +64,21 @@
                 <option class="poke-type-list" value="Flying">Volador</option>
             </select>
             <label for="az">Ordenar por: </label>
-            <img src="./img/az.png" id="az" alt="Orden Alfabetico">
-            <img src="./img/za.png" id="za" alt="Orden Alfabetico">
-            <img src="./img/n.png" id="n" alt="Orden Apor numero">
-        </section>
+            <button class="button-order" id="az"><img src="./img/az.png"  alt="Orden Alfabetico"></button>
+            <button class="button-order" id="za"><img src="./img/za.png"  alt="Orden Alfabetico"></button>
+            <button class="button-order" id="n"><img src="./img/n.png"  alt="Orden Apor numero"></button>
+        </div>
         <!--muestra pokemon de la busqueda-->
-        <section id="tarjeta-pokemon-buscado" class="lista-pokemon">
-        </section>
+        <div id="tarjeta-pokemon-buscado" class="lista-pokemon">
+                
+        </div>
         <!--muestra lista de pokemon filtrados-->
         <div class="lista-pokemon" id="muestra-lista-pokemon">
         </div>
-        
-    </section>
     </div>
 
     <!--Section Calcular Evolucion -->
-    <section id="pantalla-caramelos" class="caramelo-pantalla" >
+    <div id="pantalla-caramelos" class="caramelo-pantalla" >
         <article class="candies" id="calculate-evolution">
             <h3>Descubre cuanto le falta a tu pokemon para evolucionar</h3>
             <br>
@@ -91,14 +90,15 @@
                 <br>
                 <br>
                 <button id="btn-calculate" class="buttonr">Descubrir</button>
+            </form>
         </article>
         <!--Section Resultado Caramelos-->
-        <article class="candies-fichas-pokemon" id="resultados-caramelos">
+        <div class="candies-fichas-pokemon" id="resultados-caramelos">
             <section class="lista-pokemon" id="caramelo-muestra-pokemon">
             </section>
-        </article>
+        </div>
         <button id="btn-limpiar-caramelos" type="button" class="buttonr">Otra Vez</button>
-    </section>
+    </div>
 
     <!--Section footer-->
     <footer class="footer">
