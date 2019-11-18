@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable object-curly-newline */
 /* eslint-disable no-alert */
 
@@ -109,18 +110,18 @@ imagenCard.forEach((elem) => {
   });
 });
 
-console.log(Object.keys(POTTER));
-console.log(POTTER[11].wand);
-const varita = POTTER[11].wand.length;
-console.log(varita);
-console.log(pintado(datos, 'image', 'name', ''));
+// console.log(Object.keys(POTTER));
+// console.log(POTTER[11].wand);
+// const varita = POTTER[11].wand.length;
+// console.log(varita);
+// console.log(pintado(datos, 'image', 'name', ''));
 
-console.log(POTTER[12].hogwartsStudent);
-console.log(POTTER[12].hogwartsStaff);
-console.log(POTTER[12].alive);
-if (POTTER[12].alive === true) {
-  console.log("vive");
-}
+// console.log(POTTER[12].hogwartsStudent);
+// console.log(POTTER[12].hogwartsStaff);
+// console.log(POTTER[12].alive);
+// if (POTTER[12].alive === true) {
+//   console.log('vive');
+// }
 
 
 // MENU ROL
