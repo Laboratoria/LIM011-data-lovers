@@ -94,10 +94,15 @@ main {
   padding: 5px;
   border-radius: 25px;
 }
-.btn-wands img {
-  width: 5%;
-}
 /* main selectors of section wands*/
+.btn-wands img {
+  width: 80px;
+}
+.btn-filters-wands {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
 .data-wands {
   display: flex;
   flex-wrap: wrap;
