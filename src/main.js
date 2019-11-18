@@ -62,3 +62,9 @@ btnBuscarTop10.addEventListener('click', () => {
   const pintarArregloMuestraTop = generarTemplatePokemones(arregloMuestraTop);
   pintarPokemonesEnPantalla(pintarArregloMuestraTop, '#contenedor-pokemons');
 });
+
+const pElement=document.createElement("p");
+const pElement1= `<p></p>`;
+
+//document.getElementById("example").appendChild(pElement);
+document.getElementById("example").innerHTML=pElement

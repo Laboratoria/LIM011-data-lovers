@@ -15,16 +15,21 @@ export const ordenarAscOdescData = (arr, string) => {
   return arr;
 };
 
+// export const filtrarPokemones = (arr, tPokemones) => {
+//   const arregloFiltradoPokemones = [];
+//   for (let i = 0; i < arr.length; i += 1) {
+//     const tipoFiltrado = arr[i].type;
+//     for (let j = 0; j < tipoFiltrado.length; j += 1) {
+//       if (tipoFiltrado[j] === tPokemones) {
+//         arregloFiltradoPokemones.push(arr[i]);
+//       }
+//     }
+//   }
+//   return arregloFiltradoPokemones;
+// };
+
 export const filtrarPokemones = (arr, tPokemones) => {
-  const arregloFiltradoPokemones = [];
-  for (let i = 0; i < arr.length; i += 1) {
-    const tipoFiltrado = arr[i].type;
-    for (let j = 0; j < tipoFiltrado.length; j += 1) {
-      if (tipoFiltrado[j] === tPokemones) {
-        arregloFiltradoPokemones.push(arr[i]);
-      }
-    }
-  }
+  const arregloFiltradoPokemones = arr.filter((elemento)=>elemento.type===tPokemones);
   return arregloFiltradoPokemones;
 };
 
