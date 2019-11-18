@@ -17,48 +17,97 @@ document.querySelector('#filtros-pokemon').classList.add('hide');
 const datosPokemon = (datos) => {
   datos.forEach((poke) => {
     // Creando la vista adelante del Pokemon(numero, nombre e imagen)
-    const caja = document.createElement('div');
-    caja.setAttribute('id', 'caja');
-    const tarjetaPrincipalPokemon = document.createElement('div');
-    tarjetaPrincipalPokemon.setAttribute('id', 'tarjeta-principal-pokemon');
-    const tarjetaDatosPokemon = document.createElement('div');
-    tarjetaDatosPokemon.setAttribute('id', 'tarjeta-datos-pokemon');
-    const divNumeroPokemon = document.createElement('h4');
-    const numeroPokemon = document.createTextNode(poke.num);
-    divNumeroPokemon.appendChild(numeroPokemon);
-    const divNombrePokemon = document.createElement('div');
-    divNombrePokemon.setAttribute('id', 'nombre-Pokemon');
-    const nombrePokemon = document.createTextNode(poke.name);
-    divNombrePokemon.appendChild(nombrePokemon);
+    const tarjetaPokemon = document.createElement('div');
+    tarjetaPokemon.setAttribute('id', 'tarjeta-poke');
+    const numPoke = document.createElement('h4');
+    numPoke.innerHTML = poke.num;
+    const namePoke = document.createElement('div');
+    namePoke.setAttribute('id', 'nombre-Pokemon');
+    namePoke.innerHTML = poke.name;
     const imagenPokemon = document.createElement('img');
     imagenPokemon.setAttribute('src', poke.img);
-    tarjetaDatosPokemon.appendChild(imagenPokemon);
-    tarjetaDatosPokemon.appendChild(divNombrePokemon);
-    tarjetaDatosPokemon.appendChild(divNumeroPokemon);
+    tarjetaPokemon.appendChild(imagenPokemon);
+    tarjetaPokemon.appendChild(namePoke);
+    tarjetaPokemon.appendChild(numPoke);
+    const contenedorPokemon = document.querySelector('#contenedor-pokemon');
+    contenedorPokemon.appendChild(tarjetaPokemon);
 
-    // Creando la vista atras del Pokemon(caracteristicas)
-    const tarjetaCaracteristicasPokemon = document.createElement('div');
-    tarjetaCaracteristicasPokemon.setAttribute('id', 'tarjeta-caracteristicas-pokemon');
-    const etiquetaNombrePokemon = document.createElement('h2');
-    const nombrePokemonAtras = document.createTextNode(poke.name);
-    etiquetaNombrePokemon.appendChild(nombrePokemonAtras);
-    tarjetaCaracteristicasPokemon.appendChild(etiquetaNombrePokemon);
-    const parrafoCaracteristicasPokemon = document.createElement('p');
-    const arrayCaracteristicas = [`Tipo: ${poke.type}`, `Debilidades: ${poke.weaknesses}`, `Peso: ${poke.weight}`, `Tamaño: ${poke.height}`, `Km: ${poke.egg}`];
-    for (let a = 0; a < arrayCaracteristicas.length; a += 1) {
-      const saltoLinea = document.createElement('br');
-      const caracteristica = document.createTextNode(arrayCaracteristicas[a]);
-      parrafoCaracteristicasPokemon.appendChild(saltoLinea);
-      parrafoCaracteristicasPokemon.appendChild(caracteristica);
-    }
-    tarjetaCaracteristicasPokemon.appendChild(parrafoCaracteristicasPokemon);
+    tarjetaPokemon.addEventListener('click', () => {
+      const modalPoke = document.createElement('div');
+      modalPoke.classList.add('modal');
+      const flexPoke = document.createElement('div');
+      flexPoke.classList.add('flex');
+      // Creando la vista atras del Pokemon(caracteristicas)
+      const tarjetaModal = document.createElement('div');
+      tarjetaModal.setAttribute('id', 'tarjeta-modal');
+      const imgPoke = document.createElement('img');
+      imgPoke.setAttribute('src', poke.img);
+      imgPoke.classList.add('img-poke');
+      const namePokeModal = document.createElement('h2');
+      namePokeModal.innerHTML = poke.name;
+      const allPoke = document.createElement('div');
+      allPoke.appendChild(namePokeModal);
+      allPoke.classList.add('all-poke');
+      const arrayCaracteristicas = [`Tipo: ${poke.type}`, `Debilidades: ${poke.weaknesses}`, `Peso: ${poke.weight}`, `Tamaño: ${poke.height}`, `Km: ${poke.egg}`];
+      for (let a = 0; a < arrayCaracteristicas.length; a += 1) {
+        const saltoLinea = document.createElement('br');
+        const caracteristica = document.createTextNode(arrayCaracteristicas[a]);
+        allPoke.appendChild(saltoLinea);
+        allPoke.appendChild(caracteristica);
+      }
+
+      const btnEvoluciones = document.createElement('button');
+      btnEvoluciones.classList.add('btn-evoluciones');
+      btnEvoluciones.innerHTML = 'VER EVOLUCIONES';
+
+      btnEvoluciones.addEventListener('click', () => {
+        const evolucion = filtrarPokemon(POKEMON, 'candy', poke.candy);
+        if (poke.candy === 'None') {
+          const divEvolucion = document.createElement('div');
+          divEvolucion.classList.add('div-evolucion');
+          divEvolucion.innerHTML = 'No tiene evoluciones';
+          tarjetaModal.appendChild(divEvolucion);
+          btnEvoluciones.classList.add('hide');
+        } else {
+          for (let i = 0; i < evolucion.length; i += 1) {
+            const divEvolucion = document.createElement('div');
+            divEvolucion.classList.add('div-evolucion');
+            const imgEvolucion = document.createElement('img');
+            imgEvolucion.setAttribute('src', evolucion[i].img);
+            imgEvolucion.classList.add('img-evolucion');
+            const nameEvolucion = document.createElement('div');
+            nameEvolucion.innerHTML = evolucion[i].name;
+            tarjetaModal.appendChild(divEvolucion);
+            divEvolucion.appendChild(imgEvolucion);
+            divEvolucion.appendChild(nameEvolucion);
+            btnEvoluciones.classList.add('hide');
+          }
+        }
+      });
+
+      window.addEventListener('click', (close) => {
+        if (close.target === flexPoke) {
+          document.body.removeChild(modalPoke);
+        }
+      });
+
+      document.addEventListener('keyup', (event) => {
+        const key = event.key || event.keyCode;
+
+        if (key === 'Escape' || key === 'Esc' || key === 27) {
+          document.body.removeChild(modalPoke);
+        }
+      });
+
+      tarjetaModal.appendChild(imgPoke);
+      tarjetaModal.appendChild(allPoke);
+      tarjetaModal.appendChild(btnEvoluciones);
+      modalPoke.appendChild(flexPoke);
+      flexPoke.appendChild(tarjetaModal);
+      document.body.appendChild(modalPoke);
 
     // Creando div contenedores
-    tarjetaPrincipalPokemon.appendChild(tarjetaDatosPokemon);
-    tarjetaPrincipalPokemon.appendChild(tarjetaCaracteristicasPokemon);
-    caja.appendChild(tarjetaPrincipalPokemon);
-    const contenedorPokemon = document.querySelector('#contenedor-pokemon');
-    contenedorPokemon.appendChild(caja);
+    });
   });
   return datosPokemon;
 };
@@ -145,20 +194,19 @@ document.querySelector('#menu-top10').addEventListener('click', () => {
       divTopNombre.appendChild(nombrePokemon);
       const imagenPokemon = document.createElement('img');
       imagenPokemon.setAttribute('src', poke.img);
-      const parrafoCaracteristicasPokemon = document.createElement('div');
-      parrafoCaracteristicasPokemon.appendChild(divTopNombre);
+      const allPoke = document.createElement('div');
+      allPoke.appendChild(divTopNombre);
       const caracteristicasTop = [`Oportunidad de Aparicion: ${poke.spawn_chance}`, `Promedio de aparicion: ${poke.avg_spawns}`, `Hora de Aparicion: ${poke.spawn_time}`];
       for (let a = 0; a < caracteristicasTop.length; a += 1) {
         const saltoLinea = document.createElement('br');
         const caracteristica = document.createTextNode(caracteristicasTop[a]);
-        parrafoCaracteristicasPokemon.appendChild(saltoLinea);
-        parrafoCaracteristicasPokemon.appendChild(caracteristica);
+        allPoke.appendChild(saltoLinea);
+        allPoke.appendChild(caracteristica);
       }
       tarjetaTop10.appendChild(imagenPokemon);
-      tarjetaTop10.appendChild(parrafoCaracteristicasPokemon);
+      tarjetaTop10.appendChild(allPoke);
       const contenedorPokemon = document.querySelector('#contenedor-pokemon');
       contenedorPokemon.appendChild(tarjetaTop10);
-      datosPokemon(filtrarPokemon(POKEMON, 'candy', poke.candy));
     });
   };
   return mostrarTop10(top10(POKEMON, 10));
