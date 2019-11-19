@@ -120,3 +120,16 @@ selectElementGender.addEventListener('change', (event) => {
   dataCharacters.querySelectorAll('.card-data').forEach((child) => child.remove());
   showMainData(dataPotterGender);
 });
+
+const searchBox = document.querySelector('#searchBar');
+searchBox.addEventListener('keyup', (buscar) => {
+  const searcher = buscar.target.value;
+  const finded = search(dataPotter, searcher);
+  dataCharacters.querySelectorAll('.card-data').forEach((child) => child.remove());
+  showMainData(finded);
+})
+function search (dataPotter, searcher){
+  const text =searcher.toLowerCase();
+  const find = dataPotter.filter((dataSearch) => ( dataSearch.name.toLowerCase()).indexOf(text) !== -1);
+  return find;
+  };

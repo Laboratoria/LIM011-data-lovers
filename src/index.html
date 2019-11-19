@@ -13,40 +13,40 @@
     <header class="header">  
       <div class="nav-container">
         <a href="#" class="logo"><img class= "img-logo" src="./img/logo.png" alt=""></a>   
-        <nav class="menu">
-          <ul>
-            <li><a href=""></a></li>
-          </ul>
-        </nav>
+        <div class="menu">
+          <img class="icon-search" src="./img/busqueda (1).png">
+          <input id="searchBar" class="searchbar" type="text" placeholder="Buscar...">
+        </div>
       </div>
     </header>
     <main>
       <!-- Section to filters -->
       <section class="filters">
-        <select class="selectHouse select">
-          <option value="select">CASA</option>
-          <option value="Gryffindor">Gryffindor</option>
-          <option value="Ravenclaw">Ravenclaw</option>
-          <option value="Slytherin">Slytherin</option>
-          <option value="Hufflepuff">Hufflepuff</option>
-          <option value="">No especificado</option>
-        </select>
-        <select class="selectRole select">
-          <option value="select">ROL</option>
-          <option value="true">Estudiante</option>
-          <option value="false">Profesor</option>
-          <option value="">No especificado</option>
-        </select>
-        <select class="selectGender select">
-          <option value="select">GENERO</option>
-          <option value="female">Femenino</option>
-          <option value="male">Masculino</option>
-        </select>
+          <select class="selectHouse select">
+            <option value="select">CASA</option>
+            <option value="Gryffindor">Gryffindor</option>
+            <option value="Ravenclaw">Ravenclaw</option>
+            <option value="Slytherin">Slytherin</option>
+            <option value="Hufflepuff">Hufflepuff</option>
+            <option value="">No especificado</option>
+          </select>
+          <select class="selectRole select">
+            <option value="select">ROL</option>
+            <option value="true">Estudiante</option>
+            <option value="false">Profesor</option>
+            <option value="">No especificado</option>
+          </select>
+          <select class="selectGender select">
+            <option value="select">GENERO</option>
+            <option value="female">Femenino</option>
+            <option value="male">Masculino</option>
+          </select>
       </section>
-      <section class="btn-filters">
-        <button class="btn-general" id="btn-wand" type="button">VARITAS</button>
-        <button class="btn-general" id="btn-patronus" type="button">PATRONUS</button>
-      </section>
+        <section class="btn-filters">
+          <button class="btn-general" id="btn-wand" type="button">VARITAS</button>
+          <button class="btn-general" id="btn-patronus" type="button">PATRONUS</button>
+        </section>
+      </ul>
       <!-- Section to show general data -->
       <section class="data-characters"></section>
       <!-- Section to show modal -->
