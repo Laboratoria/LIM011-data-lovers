@@ -37,7 +37,7 @@ export const houseUno = (datos, houseName) => {
   return filterHouse;
 };
 
-export const search = (datos, searching) =>{
+export const search = (datos, searching) => {
   // eslint-disable-next-line arrow-parens
   return datos.filter(obj => obj.name.toLowerCase().startsWith(searching));
 };
