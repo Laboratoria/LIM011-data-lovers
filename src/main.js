@@ -1,4 +1,7 @@
-// eslint-disable-next-line import/extensions
+// import POKEMON from './data/pokemon/pokemon.js'
+// import LoL from './data/lol/lol.js'
+import POTTER from "./data/potter/potter.js";
+// console.log(POTTER);
 import POTTER from './data/potter/potter.js';
 import {
   filtroPorRoles,
@@ -14,6 +17,9 @@ const cajaGenero = document.querySelector('#genero');
 const btnBienvenida = document.querySelector('#btn-bienvenida');
 const portada = document.querySelector('#vista-uno');
 const headerView = document.querySelector('#nav');
+const ordenando = document.querySelector('#ordenar');
+// const cajaAscendente = document.querySelector('#ascendente');
+// const cajaDescendente = document.querySelector('#descendente');
 
 
 const generarTemplateString = (data) => {
@@ -46,35 +52,39 @@ const generarTemplateString = (data) => {
   });
   return templateString;
 };
-
-
 cajaImagenes.innerHTML = generarTemplateString(POTTER);
-
-
 cajaRoles.addEventListener('click', (event) => {
   const rolCapturado = event.target.id;
   cajaImagenes.innerHTML = generarTemplateString(filtroPorRoles(rolCapturado, POTTER));
 });
-
 cajaCasas.addEventListener('click', (event) => {
   const casaCapturada = event.target.id;
   cajaImagenes.innerHTML = generarTemplateString(filtroPorCasas(casaCapturada, POTTER));
 });
-
 cajaGenero.addEventListener('click', (event) => {
   const generoCapturada = event.target.id;
   cajaImagenes.innerHTML = generarTemplateString(filtroPorGenero(generoCapturada, POTTER));
 });
-
 // BUSCADOR
 const porNombre = document.getElementById('buscarData');
 porNombre.addEventListener('input', (event) => {
   cajaImagenes.innerHTML = generarTemplateString(buscador(POTTER, event.target.value));
 });
-
-
 btnBienvenida.addEventListener('click', () => {
   portada.classList.add('hide');
   headerView.classList.remove('hide');
+});
+
+ordenando.addEventListener('click', (event) => {
+  const ordenarCaptura = event.target.id;
+  console.log(event.target.id);
+  // miArrImagenes.innerHTML = generarTemplateString(ordenarAscendente(ordenarCaptura, POTTER));
+  if (event.target.id === 'a') {
+    cajaImagenes.innerHTML = generarTemplateString(ordenarAscendente(POTTER));
+  } else {
+    // eslint-disable-next-line max-len
+    cajaImagenes.innerHTML = generarTemplateString(ordenarAscendente(POTTER).reverse());
+  }
+});
   cajaImagenes.classList.remove('hide');
 });
