@@ -14,3 +14,9 @@ export function filterGender(dataPotter, genderSelected) {
   const dataFilterGender = dataPotter.filter((data) => (data.gender === genderSelected));
   return dataFilterGender;
 }
+export function search(dataPotter, searcher) {
+  const text = searcher.toLowerCase();
+  const finded = dataPotter.filter((dataSearch) => (
+    dataSearch.name.toLowerCase()).indexOf(text) !== -1);
+  return finded;
+}

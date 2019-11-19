@@ -1,5 +1,7 @@
 import dataPotter from './data/potter/potter.js';
-import { filterHouse, filterGender, filterRole } from './data.js';
+import {
+  filterHouse, filterGender, filterRole, search,
+} from './data.js';
 
 const dataCharacters = document.querySelector('.data-characters');
 const sectionFilters = document.querySelector('.filters');
@@ -128,9 +130,4 @@ searchBox.addEventListener('keyup', (buscar) => {
   const finded = search(dataPotter, searcher);
   dataCharacters.querySelectorAll('.card-data').forEach((child) => child.remove());
   showMainData(finded);
-})
-function search (dataPotter, searcher){
-  const text =searcher.toLowerCase();
-  const find = dataPotter.filter((dataSearch) => ( dataSearch.name.toLowerCase()).indexOf(text) !== -1);
-  return find;
-  };
+});
