@@ -1,6 +1,13 @@
 body {
 background-color: white;
 }
+
+.img {
+    display:block;
+    margin:auto;
+    width: 25%;
+}
+
 .flex-container{
     margin-top: 20px;
     display:flex;
@@ -49,6 +56,11 @@ background-color: white;
     font-weight: bold;
     font-size: 15px;
 } 
+p{
+    color: black;
+    font-family: 'Odibee Sans', cursive;
+    font-size: 25px;
+}
 /*====LISTA DESPLEGABLE====*/
 
 header{
@@ -68,7 +80,7 @@ header{
 .menu > li{
 	position: relative;
     display: inline-block;
-	left:12%;
+    left: 15%;
 }
 
 .menu > li > a{
@@ -76,7 +88,8 @@ header{
 	padding: 15px 20px;
     color: blue;
     background-color: white;
-	font-family: 'Open sans';
+    font-family: 'Odibee Sans', cursive;
+    font-size: 22px;
     text-decoration: none;
     border-radius: 10px;
     box-shadow: 1px 1px 5px black;
@@ -101,7 +114,7 @@ header{
 	display: block;
 	padding: 5px;
 	color: black;
-	font-family: 'Open sans';
+	font-family: 'Odibee Sans', cursive;
 	text-decoration: none;
 }
 
@@ -129,7 +142,7 @@ input[type=text] {
   /* MODAL POKEMON*/
   .modal-contenido{
     background-color:white;
-    width:300px;
+    width:500px;
     padding: 10px 20px;
     margin: 20% auto;
     position: relative;
@@ -147,7 +160,7 @@ input[type=text] {
     left:0;
     opacity:0;
     pointer-events:none;
-    transition: all 1s;
+    transition: all .5s;
   }
   #miModal:target{
     opacity:1;

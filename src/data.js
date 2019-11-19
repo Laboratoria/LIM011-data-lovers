@@ -39,13 +39,3 @@ export const buscarPokemon = (arr, nombrePokemonBuscar) => {
   arrBuscaPokemon.push(arr.find((elemento) => elemento.name === nombrePokemonBuscar));
   return arrBuscaPokemon;
 };
- export const filterBy = (data, condition) => { /* Función para filtrar los pokemones por tipos */
-  const filterbytype = data.filter(element => {
-    for (let i = 0; i < element.type.length; i++) {
-      if (element.type[i] === condition) {
-        return 1;
-      }
-    }
-  });
-  return filterbytype;
-};

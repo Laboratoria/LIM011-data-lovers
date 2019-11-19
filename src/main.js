@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import POKEMON from './data/pokemon/pokemon.js';
 
 import {
@@ -16,7 +17,7 @@ const generarTemplatePokemones = (arr) => {
     catalogoImagenes += `
     <div align="center">
     <img src = "${obj.imagen}"/>
-    <h1> ${obj.identificador}</h1><p>  ${obj.nombre}</p>
+    <h1>${obj.identificador}</h1><p>${obj.nombre}</p>
     </div>
     `;
   });
@@ -61,4 +62,9 @@ btnBuscarTop10.addEventListener('click', () => {
   const arregloMuestraTop = traerDataPokemon(mostrarTop(POKEMON));
   const pintarArregloMuestraTop = generarTemplatePokemones(arregloMuestraTop);
   pintarPokemonesEnPantalla(pintarArregloMuestraTop, '#contenedor-pokemons');
+});
+const modal = document.getElementById('miModal');
+modal.addEventListener('click', () => {
+  const arreglo = POKEMON[0];
+  console.log(arreglo);
 });
