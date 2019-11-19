@@ -176,11 +176,8 @@ house.addEventListener('change', () => {
   document.querySelector('#contentCharacter').innerHTML = '';
   showCharacters(houseUno(POTTER, house.value));
 });
-<<<<<<< HEAD
 
 // eslint-disable-next-line vars-on-top
 const str = 'casa world, welcome to the universe.';
 const n = str.startsWith('casa'); 
 console.log(n);
-=======
->>>>>>> 9cfd0e82ee20bc9c22412eed4e673750e10d5c04
