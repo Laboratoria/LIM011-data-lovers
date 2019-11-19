@@ -120,6 +120,7 @@ house.addEventListener('change', () => {
 
 const searchCharacter = document.getElementById('searchCharacter');
 searchCharacter.addEventListener('input', () => {
+  // eslint-disable-next-line no-restricted-globals
   const findCharacter = search(POTTER, event.target.value.toLowerCase());
   contentCharacter.innerHTML = showCharacters(findCharacter);
 });
