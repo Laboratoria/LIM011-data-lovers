@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>POTTER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css?family=Rokkitt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Prociono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <!-- title -->
+      <img src="img/logo.png" class="logoHeader">
+      <!-- fin title -->
+    </header>
+
+  <!-- Buscador -->
+  <div class="searchBox">
+    <input class="search" id="searchCharacter" type="text" placeholder="Buscar">
+    <a class="searchBtn" href="#"><i class="fas fa-search"></i></a>
+    <!-- <input class="search" id="searchCharacter" type="text" value="" placeholder="Buscar">
+    <i class="fas fa-search"></i> -->
+  </div>
+  <!-- Fin Buscador -->
+
+  <!-- Barra Lateral -->
+  <nav class="filterMenu hide" id="filterMenu">
+    <img src="img/logoEscudoHP.jpg" class="barraImagen">
+    <p class="title">Ordenalos!!</p>
+    <select id="selectAlfab" class="selectors">
+      <option disabled="" selected="">Ordenar Alfabeticamente</option>
+      <option value="0">A-Z</option>
+      <option value="1">Z-A</option>
+    </select>
+
+    <select id="gender" class="selectors">
+      <option disabled="" selected="">Genero</option>
+      <option value="male">Masculino</option>
+      <option value="female">Femenino</option>
+    </select>
+
+    <select name="" id="role" class="selectors">
+      <option disabled="" selected="">Roles</option>
+      <option value="hogwartsStudent">Estudiante</option>
+      <option value="hogwartsStaff">Profesor</option>
+    </select>
+
+    <select name="" id="house" class="selectors">
+      <option disabled="" selected="">Casas</option >
+      <option value="Gryffindor">Gryffindor</option >
+      <option value="Ravenclaw">Ravenclaw</option >
+      <option value="Slytherin">Slytherin</option >
+      <option value="Hufflepuff">Hufflepuff</option >
+    </select >
+
+    <button id='Refresh' class="botonReset">Refresh</button>
+  </nav>
+  <!-- Fin de la Barra Lateral -->
+
+  <!-- icono -->
+  <div id="icon" class="icon">
+    <div class="iconFilter">
+      <button class="menu" id="imageIcon">MENU</button>
+    </div>
+  </div>
+  <!-- Fin Icono -->
+
+    <!-- content Character -->
+    <div id="contentCharacter"> 
+    </div>
+    <!-- fin Character -->
+    <p>Hola mundo</p>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

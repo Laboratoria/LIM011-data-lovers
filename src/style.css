@@ -1,0 +1,236 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url("img/fonditos.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header{
+    width: 100%;
+    height: 120px;
+}
+
+.logoHeader{
+    display: flex;
+    text-align: center;
+    top: 10px;
+    margin: auto;
+    position: relative;
+}
+
+/* Contenedor transparente */
+#contentCharacter{
+    background: rgba(54, 88, 180, 0.411);
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 1%;
+    border-radius: 10px;
+    -webkit-box-shadow:25px 24px 24px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow:25px 24px 24px -9px rgba(0,0,0,0.75);
+    box-shadow: 25px, 24px 24px -9px rgba(0, 0, 0, 0.75);
+}
+
+/* Contenedor blanco del personaje */
+.content{
+    width: 200px;
+    height: 320px;
+    background-color: white;
+    margin: 10px 10px 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+  /* Estilo  NOMBRE*/
+.name{
+    font-family: 'Rokkitt', serif;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+  /* Estilo  IMAGEN*/
+.imagePersonaje{
+    box-shadow: 0 2px 2px rgb(0, 0, 0, 0.2);
+    width: 170px;
+    height: 240px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+  /* MODAL */
+.modal{
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.452);
+}
+
+.flex{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenidoModal{
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    width: 90%;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .4);
+    animation-name: modal;
+    animation-duration: 2s;
+    border-radius: 20px;
+}
+/*, .modalFooter*/
+.modalHeader{
+    padding: 8px -16px;
+    background: #34495e;/*
+    background:rgba(54, 88, 180, 0.411);*/
+    color: #f2f2f2;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+
+}
+
+@keyframes modal{
+    from{top: -330px; opacity: 0;}
+    to{top: 0; opacity: 1;}
+}
+
+.close{
+    color: #fefefe;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close:hover{
+    color: #7f8c8d;
+    cursor: pointer;
+}
+
+.modalBody{
+    padding: 20px 16px;
+}
+/*  */
+
+#caracteristicasP{
+    text-align: justify;
+}
+/*  
+#caracteristicasH2{
+    text-align: center;
+}*/
+
+/* FIN MODAL */
+
+/* imagen Barra, logo */
+.barraImagen{
+    width: 50%;
+    margin-left: 50px;
+    top: 5px;
+    position: relative;
+    padding: 5%;
+}
+
+.filterMenu{
+    width: 280px;
+    height: 100vh;
+    background-color: #151719 ;
+    float: left;
+    margin-left: -350px;
+    flex-flow: column wrap;
+    padding: 15px 10px;
+    transition: 0.5s;
+    box-shadow: 3px 12px 15px 0 rgba(0, 0, 0, 0.18);
+    /* position: fixed; */
+}
+
+.show{
+    margin-top: 0;
+    margin-left: 0;
+    width: 280px;
+    /* position: fixed; */
+}
+
+.menu {
+    font-family: Prociono, serif;
+    font-size: 20px;
+    color: whitesmoke;
+    background: rgba(21, 24, 25);
+    cursor: pointer;
+    width: 8%;
+    height: 50px; 
+    outline: none;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 10px 0;
+    text-align: center;
+    color: white;
+}
+
+.selectors {
+    width: 200px;
+    margin: 10px;
+    padding: 8px;
+    text-align-last: center;
+    margin-left: 40px;
+    border-radius: 10px;
+    border: 0.5px solid #d1d1d1;
+    outline: none;
+    cursor: pointer;
+}
+
+.botonReset {
+    width: 200px;
+    margin: 10px;
+    padding: 8px;
+    text-align-last: center;
+    margin-left: 40px;
+    border-radius: 10px;
+    border: 0.5px solid #d1d1d1;
+    outline: none;
+    cursor: pointer;
+    background-color: red;
+}
+.hide{
+    display: none;
+}
+
+@media only screen and (max-width: 1000px){
+    .logoHeader{
+        width: 80%;
+        text-align: center;
+        margin: auto;
+        position: relative;
+    }
+    .show {
+        margin-left: 0;
+        width: 250px;
+    /* position: fixed; */
+    }
+    .menu {
+        width: 78px;
+        height: 50px;
+    /* position: fixed; */
+    }
+}
