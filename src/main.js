@@ -5,7 +5,7 @@ import POTTER from "./data/potter/potter.js";
 import POTTER from './data/potter/potter.js';
 import {
   filtroPorRoles,
-  filtroPorCasas, filtroPorGenero, buscador,
+  filtroPorCasas, filtroPorGenero, buscador
 // eslint-disable-next-line import/extensions
 } from './data.js';
 
