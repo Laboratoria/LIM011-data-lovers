@@ -1,16 +1,9 @@
-/**
- * import POKEMON from './data/pokemon/pokemon.js'
- * import LoL from './data/lol/lol.js'
- * import POTTER from './data/potter/potter.js'
- */
 
 import POTTER from './data/potter/potter.js';
 import {
-  ascendente, genero, filterRole, filterRoleDos, houseUno,
+  ascendente, genero, filterRole, filterRoleDos, houseUno, search,
 } from './data.js';
-// console.log(POTTER);
 
-// const contentCharacter = document.getElementById('contentCharacter');
 const contentCharacter = document.querySelector('#contentCharacter');
 const filterMenu = document.getElementById('filterMenu');
 const imageIcon = document.getElementById('imageIcon');
@@ -19,16 +12,17 @@ const gender = document.getElementById('gender');
 const role = document.getElementById('role');
 const house = document.getElementById('house');
 const modal = document.getElementById('modal');
-let flex = document.getElementById('flex');
-const openModal = document.getElementById('abrir');
-let close = document.getElementById('close');
+const informacion = document.getElementById('informacion');
+// const flex = document.getElementById('flex');
+// const openModal = document.getElementById('abrir');
+const close = document.getElementById('close');
 
 const showCharacters = (dataPotter) => {
   let templatePotter = '';
   // eslint-disable-next-line no-plusplus
   for (let i = 0; i < dataPotter.length; i++) {
     templatePotter += `
-    <div class=content id="content">
+    <div class=content id="content" name="mostrar" ${dataPotter[i].name}>
     <div class=styleCharacter id="openModal">
     <img id="abrir" class=imageCharacter src=${dataPotter[i].image}>
     <div class=name>${dataPotter[i].name}</div>
@@ -43,23 +37,41 @@ const showCharacters = (dataPotter) => {
 contentCharacter.innerHTML = showCharacters(POTTER);
 
 // Modal
-// openModal.addEventListener('click', () => {
-//   modal.style.display = 'block';
-// });
-// close.addEventListener('click', () => {
-//   modal.style.display = 'none';
-// });
-// window.addEventListener('click', (event) => {
-//   if (event.target === flex) {
-//     modal.style.display = 'none';
+// const abrirModal = () => {
+//   // eslint-disable-next-line no-restricted-globals
+//   const eventPotter = event.target.parentElement.name;
+//   const newArray = POTTER.map((obj) => obj.name).indexOf(eventPotter);
+//   // eslint-disable-next-line no-restricted-globals
+//   if (event.target.parentElement.getAttribute('name') === 'mostrar') {
+//     modal.classList.remove('hide');
+//     informacion.innerHTML = `
+//     <div>
+//     <div>${POTTER[newArray].gender}</div>
+//     </div>
+//     `;
 //   }
-// });
+// };
 // Fin Modal
 
+// Cerrar Modal
+close.addEventListener('click', () => {
+  modal.classList.add('hide');
+});
 
 contentCharacter.addEventListener('click', (event) => {
-  // console.log(event.target.name);
-  abrirModal();
+  // eslint-disable-next-line no-restricted-globals
+  const eventPotter = event.target.name;
+  console.log(eventPotter);
+  const newArray = POTTER.map((obj) => obj.name).indexOf(eventPotter);
+  // eslint-disable-next-line no-restricted-globals
+  if (event.target.getAttribute('name') === 'mostrar') {
+    modal.classList.remove('hide');
+    informacion.innerHTML = `
+    <div>
+    <div>${POTTER[newArray].house}</div>
+    </div>
+    `;
+  }
 });
 
 // Barra Lateral
@@ -105,3 +117,14 @@ house.addEventListener('change', () => {
   const chooseHouse = houseUno(POTTER, house.value);
   contentCharacter.innerHTML = showCharacters(chooseHouse);
 });
+
+const searchCharacter = document.getElementById('searchCharacter');
+searchCharacter.addEventListener('input', () => {
+  const findCharacter = search(POTTER, event.target.value.toLowerCase());
+  contentCharacter.innerHTML = showCharacters(findCharacter);
+});
+
+// eslint-disable-next-line vars-on-top
+const str = 'casa world, welcome to the universe.';
+const n = str.startsWith('casa');
+console.log(n);

@@ -216,6 +216,19 @@ p{
     outline: none;
 }
 
+.search{
+    margin-left: 950px;
+    /* margin-top: 50px; */
+    width: 20%;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+}
+
+i{
+    color: white;
+}
+
 .hide{
     display: none;
 }
