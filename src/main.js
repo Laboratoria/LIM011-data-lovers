@@ -1,6 +1,5 @@
 /* eslint-disable object-curly-newline */
 /* eslint-disable no-alert */
-
 import POTTER from './data/potter/potter.js';
 import { ordenado, filtrado, busqueda, filtraDiferente } from './data.js';
 // Variables globales
@@ -9,6 +8,7 @@ const menus = document.getElementById('menus-section');
 const casas = document.getElementById('casas');
 const rol = document.getElementById('rol');
 const personajes = document.getElementById('personajes');
+const modal = document.getElementById('modalP');
 let datos = '';
 datos = POTTER;
 
@@ -20,20 +20,20 @@ document.getElementById('menu-inicio').addEventListener('click', () => {
 
 // template
 const pintado = (dataPorCasa, p1, p2, p3) => {
-  const templatePotter = [];
+  let templatePotter = '';
   dataPorCasa.forEach((extrae) => {
     if (p3 !== '') {
-      templatePotter.push(`<div class="casas-card">
+      templatePotter += `<div class="casas-card">
               <img id= "${extrae[p2]}" class="imagen" src= "${extrae[p1]}"/>
               <p>${extrae[p2]}</p>
               <p>${extrae[p3]}</p>
-            </div>`);
+            </div>`;
     }
     if (p3 === '') {
-      templatePotter.push(`<div class="casas-card">
+      templatePotter += `<div class="casas-card">
         <img id= "${extrae[p2]}" class="imagen" src= "${extrae[p1]}"/>
         <p>${extrae[p2]}</p>
-        </div>`);
+        </div>`;
     }
   });
   return templatePotter;
@@ -41,15 +41,60 @@ const pintado = (dataPorCasa, p1, p2, p3) => {
 
 // Modal
 const pintadoModal = (extrae) => {
-  const personaje = filtrado(POTTER, 'name', extrae);
-  console.log(personaje);
+  const personaje = filtrado(datos, 'name', extrae);
+  let { vivir, estudiante, staff, coma, patronus } = '';
+  if (personaje[0].house === '') {
+    coma = '';
+  } else {
+    coma = ', ';
+  }
+  if (personaje[0].alive === true) {
+    vivir = 'vivo';
+  } else {
+    vivir = 'muerto';
+  }
+  if (personaje[0].hogwartsStudent === true) {
+    estudiante = 'estudiante - ';
+  } else {
+    estudiante = '';
+  }
+  if (personaje[0].hogwartsStaff === true) {
+    staff = 'staff - ';
+  } else {
+    staff = '';
+  }
+  if (personaje[0].patronus === '') {
+    patronus = 'desconocido';
+  } else {
+    patronus = personaje[0].patronus;
+  }
   let personajeSelect = '';
   personajeSelect = `<div class="flex">
       <div class="contenido-modal">
-      <span class="cerrar" id="cerrar">&times;</span>
-       <div class="izquierda">
+      <span class="cerrar" id="cerrar">X</span>
+       <div class="foto">
         <img src="${personaje[0].image}">
         <p>${personaje[0].actor}</p>
+       </div>
+       <div class="nombre-persona">
+       <h1>${personaje[0].name}</h1>
+       </div>
+       <div class="datos">
+       <h2>${personaje[0].house}${coma}${estudiante}${staff}${vivir} </h2>
+       <p>Especie: ${personaje[0].species}</p>
+       <p>Género: ${personaje[0].gender}</p>
+       <p>Color de cabello: ${personaje[0].hairColour}</p>
+       <p>Color de Ojos: ${personaje[0].eyeColour}</p>
+       <div class="varita">
+       <h1>Varita</h1>
+       <p>Madera: ${personaje[0].wand.wood}</p>
+       <p>Núcleo: ${personaje[0].wand.core}</p>
+       <p>Longitud: ${personaje[0].wand.length}</p>
+       </div>
+       <div class="patronus">
+       <h1>Patronus</h1>
+       <p>${patronus}</p>
+       </div>
        </div>
       </div>
      </div>`;
@@ -68,6 +113,18 @@ document.getElementById('menu-personajes').addEventListener('click', () => {
 const divTodosP = document.getElementById('todosP');
 divTodosP.innerHTML = pintado(ordenado(POTTER), 'image', 'name', '');
 
+// MODAL DE PERSONAJES
+const funcionModal = () => document.querySelectorAll('.imagen').forEach((elem) => {
+  elem.addEventListener('click', () => {
+    document.querySelector('#modalP').innerHTML = pintadoModal(elem.getAttribute('id'));
+    // cerrar modal
+    document.getElementById('cerrar').addEventListener('click', () => {
+      modal.innerHTML = '';
+    });
+  });
+});
+funcionModal();
+
 // FILTROS PERSONAJES
 const seleccionarP = document.querySelector('.filtrar-personajes');
 
@@ -80,15 +137,17 @@ seleccionarP.addEventListener('change', (evento) => {
   switch (opcionSeleccionadaGenero) {
     case 'todos':
       datos = POTTER;
-      divTodosP.innerHTML = pintado((POTTER), 'image', 'name', 'house');
+      funcionModal();
       break;
     case 'femenino':
       datos = filtrado(POTTER, 'gender', 'female');
       divTodosP.innerHTML = pintado(datos, 'image', 'name', '');
+      funcionModal();
       break;
     case 'masculino':
       datos = filtrado(POTTER, 'gender', 'male');
       divTodosP.innerHTML = pintado(datos, 'image', 'name', '');
+      funcionModal();
       break;
     default:
   }
@@ -99,36 +158,14 @@ document.querySelector('#busquedaP').addEventListener('input', (event) => {
   const nombreBuscadoP = event.target.value;
   if (datos === POTTER) {
     divTodosP.innerHTML = pintado((busqueda(datos, nombreBuscadoP)), 'image', 'name', '');
+    funcionModal();
   } else {
-    divTodosP.innerHTML = pintado((busqueda(datos, nombreBuscadoP)), 'image', 'name', '');
+    funcionModal();
   }
   if (divTodosP.innerHTML === '') {
     divTodosP.innerHTML = '<h1>No se encontró ningún personaje</h1>';
   }
 });
-
-// MODAL DE PERSONAJES
-const imagenCard = document.querySelectorAll('.imagen');
-imagenCard.forEach((elem) => {
-  elem.addEventListener('click', () => {
-    document.querySelector('#modalP').innerHTML = pintadoModal(elem.getAttribute('id'));
-  });
-});
-
-console.log(Object.keys(POTTER));
-console.log(POTTER[11].wand);
-const varita = POTTER[11].wand.length;
-console.log(varita);
-console.log(pintado(datos, 'image', 'name', ''));
-
-console.log(POTTER[12].hogwartsStudent);
-console.log(POTTER[12].hogwartsStaff);
-console.log(POTTER[12].alive);
-if (POTTER[12].alive === true) {
-  console.log("vive");
-}
-
-
 // MENU ROL
 document.getElementById('menu-rol').addEventListener('click', () => {
   inicio.classList.add('ocultar');
