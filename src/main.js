@@ -1,3 +1,4 @@
+
 import POKEMON from './data/pokemon/pokemon.js';
 
 
@@ -98,7 +99,15 @@ btnBuscarTop10.addEventListener('click', () => {
   pintarPokemonesEnPantalla(pintarArregloMuestraTop, '#contenedor-pokemons');
 });
 
+const modal = document.getElementById('miModal');
+modal.addEventListener('click', () => {
+  const arreglo = POKEMON[0];
+  console.log(arreglo);
+});
+
+
 // const pElement = document.createElement("p");
 // const pElement1 = `<p></p>`;
 // // document.getElementById("example").appendChild(pElement);
 // document.getElementById("example").innerHTML = pElement
+

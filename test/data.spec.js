@@ -9,9 +9,12 @@
 //     // escribe aquí tu test
 //   });
 // });
-import
-{
+
+import {
   traerDataPokemon,
+  filtrarPokemones,
+  mostrarTop,
+  buscarPokemon,
   ordenarAscOdescData,
 } from '../src/data';
 
@@ -20,30 +23,72 @@ const input = [
     id: 1,
     name: 'Bulbasaur',
     img: 'http://www.serebii.net/pokemongo/pokemon/001.png',
+    type: ['Grass', 'Poison'],
+    spawn_chance: 0.69,
   },
   {
     id: 2,
     name: 'Ivysaur',
     img: 'http://www.serebii.net/pokemongo/pokemon/002.png',
+    type: ['Grass', 'Poison'],
+    spawn_chance: 0.042,
   },
   {
     id: 3,
     name: 'Venusaur',
     img: 'http://www.serebii.net/pokemongo/pokemon/003.png',
+    type: ['Grass', 'Poison'],
+    spawn_chance: 0.017,
+  },
+  {
+    id: 4,
+    name: 'Charmander',
+    img: 'http://www.serebii.net/pokemongo/pokemon/004.png',
+    type: ['Fire'],
+    spawn_chance: 0.253,
+  },
+];
   }];
-
 
 describe('traerDataPokemon', () => {
   it('debería ser una función', () => {
     expect(typeof traerDataPokemon).toBe('function');
   });
-
   it('Deberia traer la data de pokemones', () => {
-    const output = [{ identificador: 1, nombre: 'Bulbasaur', imagen: 'http://www.serebii.net/pokemongo/pokemon/001.png' }, { identificador: 2, nombre: 'Ivysaur', imagen: 'http://www.serebii.net/pokemongo/pokemon/002.png' }, { identificador: 3, nombre: 'Venusaur', imagen: 'http://www.serebii.net/pokemongo/pokemon/003.png' }];
+    const output = [{ identificador: 1, nombre: 'Bulbasaur', imagen: 'http://www.serebii.net/pokemongo/pokemon/001.png' }, { identificador: 2, nombre: 'Ivysaur', imagen: 'http://www.serebii.net/pokemongo/pokemon/002.png' }, { identificador: 3, nombre: 'Venusaur', imagen: 'http://www.serebii.net/pokemongo/pokemon/003.png' }, { identificador: 4, nombre: 'Charmander', imagen: 'http://www.serebii.net/pokemongo/pokemon/004.png' }];
     expect(traerDataPokemon(input)).toEqual(output);
   });
 });
-
+describe('filtrarPokemones', () => {
+  it('Deberia filtrar pokemones', () => {
+    const salida = [
+      {
+        id: 4,
+        name: 'Charmander',
+        img: 'http://www.serebii.net/pokemongo/pokemon/004.png',
+        type: ['Fire'],
+        spawn_chance: 0.253,
+      },
+    ];
+    const type = 'Fire';
+    expect(filtrarPokemones(input, type)).toEqual(salida);
+  });
+});
+describe('buscarPokemon', () => {
+  it('Deberia buscar pokemones', () => {
+    const buscar = [
+      {
+        id: 1,
+        name: 'Bulbasaur',
+        img: 'http://www.serebii.net/pokemongo/pokemon/001.png',
+        type: ['Grass', 'Poison'],
+        spawn_chance: 0.69,
+      },
+    ];
+    expect(buscarPokemon(input, 'Bulbasaur')).toEqual(buscar);
+  });
+});
+    
 describe('ordenarAscOdescData', () => {
   it('debería ser una función', () => {
     expect(typeof ordenarAscOdescData).toBe('function');
@@ -193,5 +238,6 @@ describe('mostrarTop', () => {
         }
       ];
     expect(ordenarAscOdescData(input)).toEqual(salida);
+
   });
 });
