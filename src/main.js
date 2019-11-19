@@ -127,5 +127,5 @@ searchCharacter.addEventListener('input', () => {
 
 // eslint-disable-next-line vars-on-top
 const str = 'casa world, welcome to the universe.';
-const n = str.startsWith('casa');
+const n = str.startsWith('casa'); 
 console.log(n);
