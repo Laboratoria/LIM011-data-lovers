@@ -1,3 +1,4 @@
+
 body {
 background-color: white;
 }
@@ -17,6 +18,14 @@ background-color: white;
 .flex-container > div {
     background-color: white;
     width: 180px;
+	flex-wrap:wrap;
+	/* background-image: url() */
+    background-color: rgb(255, 255, 0); 
+}
+.flex-container > div {
+	 background-color: white; 
+	background: none;
+    width: 150px;
     margin: 20px;
     line-height: 50px;
     border-radius: 20px;
@@ -72,7 +81,6 @@ header{
 	margin: 30px auto;
     background: #fff;
 }
-
 .nav ul{
 	list-style: none;
 }

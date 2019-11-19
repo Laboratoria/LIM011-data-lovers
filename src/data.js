@@ -28,6 +28,11 @@ export const filtrarPokemones = (arr, tPokemones) => {
   return arregloFiltradoPokemones;
 };
 
+// export const filtrarPokemones = (arr, tPokemones) => {
+//   const arregloFiltradoPokemones = arr.filter((elemento)=>elemento.type===tPokemones);
+//   return arregloFiltradoPokemones;
+// };
+
 export const mostrarTop = (arr) => {
   arr.sort((p1, p2) => ((p1.spawn_chance > p2.spawn_chance) ? -1 : 1));
   const arrTop = arr.slice(0, 10);
