@@ -1,6 +1,7 @@
 
 body {
 background-color: white;
+}
 .flex-container{
     margin-top: 20px;
     display:flex;
