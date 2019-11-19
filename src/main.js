@@ -3,23 +3,26 @@
 import POTTER from "./data/potter/potter.js";
 // console.log(POTTER);
 
-import { mostrarCaracteristicasPotter, filtroPorRoles, filtroPorCasas, filtroPorGenero } from "./data.js";
+import { filtroPorRoles, filtroPorCasas, filtroPorGenero, ordenarAscendente } from "./data.js";
 
 
-const miArrImagenes = document.getElementById("arrPotter");
+const miArrImagenes = document.getElementById('arrPotter');
 const cajaRoles = document.querySelector('#roles');
 const cajaCasas = document.querySelector('#casas');
 const cajaGenero = document.querySelector('#genero');
 const btnBienvenida = document.querySelector('#btn-bienvenida');
 const portada = document.querySelector('#vista-uno');
 const headerView = document.querySelector('#nav');
+const ordenando = document.querySelector('#ordenar');
+// const cajaAscendente = document.querySelector('#ascendente');
+// const cajaDescendente = document.querySelector('#descendente');
 
 
-
-const pintarEnPantalla = (POTTER, cajaImagenes) => {
-  let string = "";
-  POTTER.forEach((obj)=> {
-    string += ` <div class="flip-card">
+const generarTemplateString = (data) => {
+  let templateString = '';
+  data.forEach((obj) => {
+    templateString += ` 
+    <div class="flip-card">
     <div class="flip-card-inner">
       <div class="container">
         <img class="mi-imagen" src="${obj.image}"/>
@@ -41,63 +44,55 @@ const pintarEnPantalla = (POTTER, cajaImagenes) => {
         </div>
       </div>
     </div>
-  </div>`
+  </div>`;
   });
-  cajaImagenes.innerHTML = string;
-}
-pintarEnPantalla(POTTER, miArrImagenes);
+  return templateString;
+};
+
+miArrImagenes.innerHTML = generarTemplateString(POTTER);
 
 
 cajaRoles.addEventListener('click', (event) => {
   // console.log(event.target.id)
-  const rolCapturado =  event.target.id;
+  const rolCapturado = event.target.id;
   // console.log(filtroPorRoles(rolCapturado, POTTER));
-  pintarEnPantalla(filtroPorRoles(rolCapturado, POTTER), miArrImagenes);
-})
+  miArrImagenes.innerHTML = generarTemplateString(filtroPorRoles(rolCapturado, POTTER));
+});
 
 cajaCasas.addEventListener('click', (event) => {
   const casaCapturada = event.target.id;
-  pintarEnPantalla(filtroPorCasas(casaCapturada, POTTER), miArrImagenes);
-})
+  miArrImagenes.innerHTML = generarTemplateString(filtroPorCasas(casaCapturada, POTTER));
+});
 
 cajaGenero.addEventListener('click', (event) => {
   const generoCapturada = event.target.id;
-  pintarEnPantalla(filtroPorGenero(generoCapturada, POTTER), miArrImagenes);
-})
+  console.log(event.target.id);
+  
+  miArrImagenes.innerHTML = generarTemplateString(filtroPorGenero(generoCapturada, POTTER));
+});
 
 btnBienvenida.addEventListener('click', () => {
- portada.classList.add('hide');
- headerView.classList.remove('hide');
- miArrImagenes.classList.remove('hide');
+  portada.classList.add('hide');
+  headerView.classList.remove('hide');
+  miArrImagenes.classList.remove('hide');
+});
 
-})
+ordenando.addEventListener('click', (event) => {
+  const ordenarCaptura = event.target.id;
+  console.log(event.target.id);
+  // miArrImagenes.innerHTML = generarTemplateString(ordenarAscendente(ordenarCaptura, POTTER));
+  if (event.target.id === 'a') {
+    miArrImagenes.innerHTML = generarTemplateString(ordenarAscendente(POTTER));
+  } else {
+    // eslint-disable-next-line max-len
+    miArrImagenes.innerHTML = generarTemplateString(ordenarAscendente(POTTER).reverse());
+  }
+});
 
-// const ocupacion = (POTTER => {
-//   let mostrando = '';
-//   POTTER.forEach(rol  =>{
-  
-//   })
+ordenarAscendente(POTTER);
+console.log(POTTER);
+
+// cajaDescendente.addEventListener('click', (event) => {
+//   const descendenteCapturada = event.target.id;
+//   pintarEnPantalla(ordenarDescendente(descendenteCapturada,POTTER), miArrImagenes);
 // })
-
-
-// const filtraPorOcupacion = POTTER.filter (ocupacion => {
-   
-// })
-
- 
-
-
-
-
-// for
-// const miFunsión = (datitos) => {
-//   let = guardameee = '';
-//   for()
-
-// }
-
-/*
- * console.log(POKEMON);
- * console.log(LoL);
- * console.log(POTTER)
- */
