@@ -199,7 +199,7 @@ header{
     outline: none;
     cursor: pointer;
 }
-
+/*CSS
 .botonReset {
     width: 200px;
     margin: 10px;
@@ -211,7 +211,7 @@ header{
     outline: none;
     cursor: pointer;
     background-color: red;
-}
+}*/
 .hide{
     display: none;
 }
