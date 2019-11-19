@@ -388,6 +388,7 @@
          width: 145px;
          margin-left: 190px;
          margin-top: -19px;
+         font-size: 12px;
      }
 
      .btnAtras{
@@ -403,8 +404,8 @@
          height: 10%;
          line-height: 16px;
          margin: 8px;
-         margin-top: 15%x;
-         margin-left: 70px;
+         margin-top: 15%;
+         margin-left: 60px;
 
      }
      .texto2{
@@ -427,8 +428,9 @@
          margin-left: 5px             
      }
      .poke img{
-        margin-left: 10%;
-        margin-top: 1010%    
+        position: relative;
+        margin-top: 1015%;
+        margin-left: 5px; 
         
      }
     .pagina3{      

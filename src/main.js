@@ -26,14 +26,6 @@ const pintado = (dataPokemon) => {
   return misPokemones;
 };
 
-/* Para mostrar el menu caramelos */
-const selectCandy = document.getElementById('select-candy');
-selectCandy.addEventListener('change', () => {
-  const pintame = document.getElementById('pintame');
-  pintame.classList.add('hide');
-  document.querySelector('#resultado').innerHTML = pintado(traerPokemonesPorCantidadDeCaramelos(POKEMON, selectCandy.value));
-});
-
 /* para mostrar todos los pokemones */
 document.querySelector('#pintame').innerHTML = pintado(POKEMON);
 
@@ -51,6 +43,14 @@ selecte.addEventListener('change', () => {
   const pintame = document.getElementById('pintame');
   pintame.classList.add('hide');
   document.querySelector('#resultado').innerHTML = pintado(porDebilidades(POKEMON, selecte.value));
+});
+
+/* Para mostrar el menu caramelos */
+const selectCandy = document.getElementById('select-candy');
+selectCandy.addEventListener('change', () => {
+  const pintame = document.getElementById('pintame');
+  pintame.classList.add('hide');
+  document.querySelector('#resultado').innerHTML = pintado(traerPokemonesPorCantidadDeCaramelos(POKEMON, selectCandy.value));
 });
 
 /* para mostrar opcion ordenar de la A-Z y Z-A */
