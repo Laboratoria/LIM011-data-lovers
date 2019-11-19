@@ -30,6 +30,5 @@ export const busqueda = (data, input) => {
       nuevoArray.push(element);
     }
   });
-  console.log(nuevoArray);
   return nuevoArray;
 };
