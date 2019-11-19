@@ -11,12 +11,11 @@ export const filtroPorGenero = (genero, POTTER) => {
   return filtraGenero;
 };
 export const ordenarAscendente = (POTTER) => POTTER.sort((a, b) => {
-  if (a.name > b.name) {
+   if (a.name > b.name) {
     return 1;
-  }
-  return -1;
+  } 
+    return -1;
 });
-
 
 export const buscador = (data, buscame) => {
   console.log(buscame);
