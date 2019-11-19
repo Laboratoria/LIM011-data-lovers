@@ -200,6 +200,18 @@ header{
     cursor: pointer;
 }
 
+.botonReset {
+    width: 200px;
+    margin: 10px;
+    padding: 8px;
+    text-align-last: center;
+    margin-left: 40px;
+    border-radius: 10px;
+    border: 0.5px solid #d1d1d1;
+    outline: none;
+    cursor: pointer;
+    background-color: red;
+}
 .hide{
     display: none;
 }
