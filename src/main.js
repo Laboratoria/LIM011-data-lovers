@@ -1,6 +1,6 @@
 /* eslint-disable import/extensions */
 /* eslint object-curly-newline: ["error", { "multiline": true }] */
-/* eslint-env es6 */
+
 import POKEMON from './data/pokemon/pokemon.js';
 import { filtrarPorTipo, porDebilidades, traerPokemonesPorCantidadDeCaramelos, ascendente, mostrarTop, buscarPokemon } from './data.js';
 
@@ -9,8 +9,8 @@ const pintado = (dataPokemon) => {
   dataPokemon.forEach((pintar) => {
     misPokemones += `
         <div class = "contenedor">
-        <div class = "lado frente"></div>
-        <div class = "lado atras"></div>
+          <div class="lado frente"></div>
+          <div class="lado atras"></div>
         <img src ="${pintar.img}"/>
         <p><b> ${pintar.name}</b></p>
         <p>Tipo: ${pintar.type}</p>
@@ -25,14 +25,6 @@ const pintado = (dataPokemon) => {
   });
   return misPokemones;
 };
-
-/* Para mostrar el menu caramelos */
-const selectCandy = document.getElementById('select-candy');
-selectCandy.addEventListener('change', () => {
-  const pintame = document.getElementById('pintame');
-  pintame.classList.add('hide');
-  document.querySelector('#resultado').innerHTML = pintado(traerPokemonesPorCantidadDeCaramelos(POKEMON, selectCandy.value));
-});
 
 /* para mostrar todos los pokemones */
 document.querySelector('#pintame').innerHTML = pintado(POKEMON);
@@ -51,6 +43,14 @@ selecte.addEventListener('change', () => {
   const pintame = document.getElementById('pintame');
   pintame.classList.add('hide');
   document.querySelector('#resultado').innerHTML = pintado(porDebilidades(POKEMON, selecte.value));
+});
+
+/* Para mostrar el menu caramelos */
+const selectCandy = document.getElementById('select-candy');
+selectCandy.addEventListener('change', () => {
+  const pintame = document.getElementById('pintame');
+  pintame.classList.add('hide');
+  document.querySelector('#resultado').innerHTML = pintado(traerPokemonesPorCantidadDeCaramelos(POKEMON, selectCandy.value));
 });
 
 /* para mostrar opcion ordenar de la A-Z y Z-A */
@@ -107,6 +107,3 @@ atras2.addEventListener('click', () => {
   bienvenida.classList.remove('hide');
   pagina3.classList.add('hide');
 });
-
-
-/* eslint-disable import/first */
