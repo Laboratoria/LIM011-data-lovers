@@ -1,7 +1,6 @@
 *{
-    margin:0;
     padding: 0;
-    border: 0px;
+    margin: 0;
 }
 
 body{
@@ -9,17 +8,14 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
- 
 }
 
 header{
-    /* background: #151719; */
     width: 100%;
     height: 120px;
-   
 }
 
-.alignRight{
+.logoHeader{
     display: flex;
     text-align: center;
     top: 10px;
@@ -27,6 +23,7 @@ header{
     position: relative;
 }
 
+/* Contenedor transparente */
 #contentCharacter{
     background: rgba(54, 88, 180, 0.411);
     width: 80%;
@@ -41,68 +38,35 @@ header{
     box-shadow: 25px, 24px 24px -9px rgba(0, 0, 0, 0.75);
 }
 
+/* Contenedor blanco del personaje */
 .content{
-    width: 240px;
-    height: 270px;
-    perspective: 1000px;
-    display: inline-block;
-    align-content: center;
-    justify-content: space-around;
-    cursor: pointer;
-    margin: 10px 10px 10px 5px;
-    cursor: pointer; 
-}
-
-.imageCharacter{
-    box-shadow: 0 2px 2px rgb(0, 0, 0, 0.2);
-    border-radius: 5px;
-    border: 1px solid rgba(0,0,0,.125);
-    text-align: center;
-    cursor: pointer;
-    color: black;
     width: 200px;
-    margin-top: 20px;
-    height: 180px;
-}
-
-.styleCharacter{
+    height: 320px;
     background-color: white;
-    width: 100%;
-    height: 270px;
-    padding: 1%;
+    margin: 10px 10px 10px 5px;
     border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
 }
 
+  /* Estilo  NOMBRE*/
 .name{
     font-family: 'Rokkitt', serif;
     font-size: 20px;
-    /* padding: 5px;
-    margin: 5px 20px; */
-    border-radius: 5px;
     margin-top: 15px;
 }
 
-.imageHeight{
-    width: 50%;
-    display: flex;
-    text-align: center;
-    top: 5px;
-    margin: auto;
-    position: relative;
-    border-bottom:solid 1px grey;
-    padding: 5%;
+  /* Estilo  IMAGEN*/
+.imagePersonaje{
+    box-shadow: 0 2px 2px rgb(0, 0, 0, 0.2);
+    width: 170px;
+    height: 240px;
+    margin-top: 15px;
+    border-radius: 5px;
 }
 
-/* Modal */
-.flex{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+  /* MODAL */
 .modal{
-    display: none;
     position: fixed;
     z-index: 1;
     overflow: auto;
@@ -113,15 +77,36 @@ header{
     background: rgba(0, 0, 0, 0.452);
 }
 
+.flex{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .contenidoModal{
     position: relative;
     background-color: #fefefe;
     margin: auto;
-    width: 30%;
+    width: 90%;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, .4);
     animation-name: modal;
-    animation-duration: 1s;
+    animation-duration: 2s;
+    border-radius: 20px;
 }
+/*, .modalFooter*/
+.modalHeader{
+    padding: 8px -16px;
+    background: #34495e;/*
+    background:rgba(54, 88, 180, 0.411);*/
+    color: #f2f2f2;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+
+}
+
 @keyframes modal{
     from{top: -330px; opacity: 0;}
     to{top: 0; opacity: 1;}
@@ -135,22 +120,31 @@ header{
 
 .close:hover{
     color: #7f8c8d;
-    text-decoration: none;
     cursor: pointer;
-}
-
-.modalHeader, .modalFooter{
-    padding: 8px -16px;
-    background: #34495e;
-    color: #f2f2f2;
-}
-
-p{
-    text-align: justify;
 }
 
 .modalBody{
     padding: 20px 16px;
+}
+/*  */
+
+#caracteristicasP{
+    text-align: justify;
+}
+/*  
+#caracteristicasH2{
+    text-align: center;
+}*/
+
+/* FIN MODAL */
+
+/* imagen Barra, logo */
+.barraImagen{
+    width: 50%;
+    margin-left: 50px;
+    top: 5px;
+    position: relative;
+    padding: 5%;
 }
 
 .filterMenu{
@@ -173,12 +167,6 @@ p{
     /* position: fixed; */
 }
 
-/* .imageIcon{
-    width: 35px;
-    cursor: pointer;
-    opacity: 0.4;
-} */
-
 .menu {
     font-family: Prociono, serif;
     font-size: 20px;
@@ -191,11 +179,6 @@ p{
     border-radius: 5px;
     margin-left: 20px;
 }
-
-/* .iconFilter{
-    width: 80%;
-    height: 50px; 
-} */
 
 .title {
     font-size: 20px;
@@ -214,68 +197,40 @@ p{
     border-radius: 10px;
     border: 0.5px solid #d1d1d1;
     outline: none;
+    cursor: pointer;
 }
 
-.searchBox{
-    position: absolute;
-    top: 22%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    background: #000207;
-    height: 40px;
-    border-radius: 40px;
-    padding: 10px;
-}
-
-.searchBox:hover > .search {
-    width: 240px;
-    padding: 0 6px;
-}
-
-.searchBox:hover > .searchBtn {
-    background: rgb(2, 4, 107);
-}
-
-.searchBtn{
-    color: #fafbfc;
-    float: right;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #000207;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
-}
-
-.search{
-    border: none;
-    background: none;
+.botonReset {
+    width: 200px;
+    margin: 10px;
+    padding: 8px;
+    text-align-last: center;
+    margin-left: 40px;
+    border-radius: 10px;
+    border: 0.5px solid #d1d1d1;
     outline: none;
-    float: left;
-    padding: 0;
-    color: white;
-    font-size: 16px;
-    transition: 0.4s;
-    line-height: 40px;
-    width: 0px;
+    cursor: pointer;
+    background-color: red;
 }
-
 .hide{
     display: none;
 }
 
-@media only screen and (max-width: 1024px){
-    .alignRight{
+@media only screen and (max-width: 1000px){
+    .logoHeader{
         width: 80%;
         text-align: center;
         margin: auto;
         position: relative;
     }
-
     .show {
         margin-left: 0;
-        width: 500px;
+        width: 250px;
+    /* position: fixed; */
+    }
+    .menu {
+        width: 78px;
+        height: 50px;
+    /* position: fixed; */
     }
 }
