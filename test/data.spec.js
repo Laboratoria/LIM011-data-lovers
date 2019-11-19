@@ -1,4 +1,6 @@
-import { filterHouse, filterRole, filterGender } from '../src/data';
+import {
+  filterHouse, filterRole, filterGender, search, filterWandCore,
+} from '../src/data';
 
 const input = [{
   name: 'Minerva McGonagall',
@@ -110,6 +112,66 @@ describe('testear la función filterGender', () => {
   });
   it('debería filtrar Male', () => {
     expect(filterGender(input, 'male')).toStrictEqual([{
+      name: 'Cedric Diggory',
+      species: 'human',
+      gender: 'male',
+      house: 'Hufflepuff',
+      dateOfBirth: '',
+      yearOfBirth: 1977,
+      ancestry: '',
+      eyeColour: 'grey',
+      hairColour: 'brown',
+      wand: {
+        wood: 'ash',
+        core: 'unicorn hair',
+        length: 12.25,
+      },
+      patronus: '',
+      hogwartsStudent: true,
+      hogwartsStaff: false,
+      actor: 'Robert Pattinson',
+      alive: false,
+      image: 'http://hp-api.herokuapp.com/images/cedric.png',
+    }]);
+  });
+});
+
+describe('testear la función search', () => {
+  it('debería ser una función', () => {
+    expect(typeof search).toBe('function');
+  });
+  it('debería filtrar Cedric', () => {
+    expect(search(input, 'Cedric')).toEqual([{
+      name: 'Cedric Diggory',
+      species: 'human',
+      gender: 'male',
+      house: 'Hufflepuff',
+      dateOfBirth: '',
+      yearOfBirth: 1977,
+      ancestry: '',
+      eyeColour: 'grey',
+      hairColour: 'brown',
+      wand: {
+        wood: 'ash',
+        core: 'unicorn hair',
+        length: 12.25,
+      },
+      patronus: '',
+      hogwartsStudent: true,
+      hogwartsStaff: false,
+      actor: 'Robert Pattinson',
+      alive: false,
+      image: 'http://hp-api.herokuapp.com/images/cedric.png',
+    }]);
+  });
+});
+
+describe('testear la función filterWandCore', () => {
+  it('debería ser una función', () => {
+    expect(typeof filterWandCore).toBe('function');
+  });
+  it('debería filtrar Cedric', () => {
+    expect(filterWandCore(input, 'unicorn')).toEqual([{
       name: 'Cedric Diggory',
       species: 'human',
       gender: 'male',
