@@ -1,6 +1,6 @@
 /* eslint-disable import/extensions */
 /* eslint object-curly-newline: ["error", { "multiline": true }] */
-/* eslint-env es6 */
+
 import POKEMON from './data/pokemon/pokemon.js';
 import { filtrarPorTipo, porDebilidades, traerPokemonesPorCantidadDeCaramelos, ascendente, mostrarTop, buscarPokemon } from './data.js';
 
@@ -9,8 +9,8 @@ const pintado = (dataPokemon) => {
   dataPokemon.forEach((pintar) => {
     misPokemones += `
         <div class = "contenedor">
-        <div class = "lado frente"></div>
-        <div class = "lado atras"></div>
+          <div class="lado frente"></div>
+          <div class="lado atras"></div>
         <img src ="${pintar.img}"/>
         <p><b> ${pintar.name}</b></p>
         <p>Tipo: ${pintar.type}</p>
@@ -107,6 +107,3 @@ atras2.addEventListener('click', () => {
   bienvenida.classList.remove('hide');
   pagina3.classList.add('hide');
 });
-
-
-/* eslint-disable import/first */
