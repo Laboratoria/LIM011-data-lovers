@@ -74,7 +74,7 @@ inputBusqueda.addEventListener('input', () => {
 seleccionTipoPokemon.addEventListener('click', () => {
   if (seleccionTipoPokemon.value === 'Todos') {
     listaFiltroTipo.innerHTML = showPicturePokemon(POKEMON);
-  return listaFiltroTipo;
+    return listaFiltroTipo;
   }
   listaFiltroTipo.innerHTML = showPicturePokemon(filtroTipoPokemon(POKEMON, seleccionTipoPokemon.value));
   return listaFiltroTipo;
