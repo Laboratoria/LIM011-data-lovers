@@ -171,7 +171,7 @@ role.addEventListener('change', (event) => {
   const chooseHouse = houseUno(POTTER, house.value);
   contentCharacter.innerHTML = showCharacters(chooseHouse);
 });
- Js */
+ */
 house.addEventListener('change', () => {
   document.querySelector('#contentCharacter').innerHTML = '';
   showCharacters(houseUno(POTTER, house.value));

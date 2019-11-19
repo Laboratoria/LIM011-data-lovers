@@ -89,16 +89,22 @@ header{
     position: relative;
     background-color: #fefefe;
     margin: auto;
-    width: 30%;
+    width: 90%;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, .4);
     animation-name: modal;
-    animation-duration: 1s;
+    animation-duration: 2s;
+    border-radius: 20px;
 }
-
-.modalHeader, .modalFooter{
+/*, .modalFooter*/
+.modalHeader{
     padding: 8px -16px;
-    background: #34495e;
+    background: #34495e;/*
+    background:rgba(54, 88, 180, 0.411);*/
     color: #f2f2f2;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+
 }
 
 @keyframes modal{
@@ -114,20 +120,23 @@ header{
 
 .close:hover{
     color: #7f8c8d;
-    text-decoration: none;
     cursor: pointer;
 }
-
-
 
 .modalBody{
     padding: 20px 16px;
 }
 /*  */
-/* FIN MODAL */
+
 #caracteristicasP{
     text-align: justify;
 }
+/*  
+#caracteristicasH2{
+    text-align: center;
+}*/
+
+/* FIN MODAL */
 
 /* imagen Barra, logo */
 .barraImagen{

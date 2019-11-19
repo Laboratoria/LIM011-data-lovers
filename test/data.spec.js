@@ -67,8 +67,8 @@ describe('genero', () => {
       },
     ];
 
-    expect(genero(input, 'Femenino')).toEqual(outputFem);
-    expect(genero(input, '')).toEqual(outputMale);
+    expect(genero(input, 'female')).toEqual(outputFem);
+    expect(genero(input, 'male')).toEqual(outputMale);
   });
 });
 
@@ -94,11 +94,11 @@ describe('filterRole', () => {
     ];
     const output = [
       {
-        name: 'Ron Weasley',
+        name: 'Harry Potter',
         hogwartsStudent: true,
       },
       {
-        name: 'Draco Malfoy',
+        name: 'Hermione Granger',
         hogwartsStudent: true,
       },
     ];
@@ -196,6 +196,6 @@ describe('houseUno', () => {
     expect(houseUno(input, 'Gryffindor')).toEqual(outputGryf);
     expect(houseUno(input, 'Slytherin')).toEqual(outputSlyt);
     expect(houseUno(input, 'Hufflepuff')).toEqual(outputHuff);
-    expect(houseUno(input, '')).toEqual(outputRave);
+    expect(houseUno(input, 'Ravenclaw')).toEqual(outputRave);
   });
 });
