@@ -2,14 +2,18 @@
 // import LoL from './data/lol/lol.js'
 import POTTER from "./data/potter/potter.js";
 // console.log(POTTER);
+import POTTER from './data/potter/potter.js';
+import {
+  filtroPorRoles,
+  filtroPorCasas, filtroPorGenero, buscador,
+// eslint-disable-next-line import/extensions
+} from './data.js';
 
-import { filtroPorRoles, filtroPorCasas, filtroPorGenero, ordenarAscendente } from "./data.js";
-
-
-const miArrImagenes = document.getElementById('arrPotter');
+const cajaImagenes = document.getElementById('arrPotter');
 const cajaRoles = document.querySelector('#roles');
 const cajaCasas = document.querySelector('#casas');
 const cajaGenero = document.querySelector('#genero');
+// const cajaOrden = document.querySelector('#orden');
 const btnBienvenida = document.querySelector('#btn-bienvenida');
 const portada = document.querySelector('#vista-uno');
 const headerView = document.querySelector('#nav');
@@ -48,33 +52,27 @@ const generarTemplateString = (data) => {
   });
   return templateString;
 };
-
-miArrImagenes.innerHTML = generarTemplateString(POTTER);
-
-
+cajaImagenes.innerHTML = generarTemplateString(POTTER);
 cajaRoles.addEventListener('click', (event) => {
-  // console.log(event.target.id)
   const rolCapturado = event.target.id;
-  // console.log(filtroPorRoles(rolCapturado, POTTER));
-  miArrImagenes.innerHTML = generarTemplateString(filtroPorRoles(rolCapturado, POTTER));
+  cajaImagenes.innerHTML = generarTemplateString(filtroPorRoles(rolCapturado, POTTER));
 });
-
 cajaCasas.addEventListener('click', (event) => {
   const casaCapturada = event.target.id;
-  miArrImagenes.innerHTML = generarTemplateString(filtroPorCasas(casaCapturada, POTTER));
+  cajaImagenes.innerHTML = generarTemplateString(filtroPorCasas(casaCapturada, POTTER));
 });
-
 cajaGenero.addEventListener('click', (event) => {
   const generoCapturada = event.target.id;
-  console.log(event.target.id);
-  
-  miArrImagenes.innerHTML = generarTemplateString(filtroPorGenero(generoCapturada, POTTER));
+  cajaImagenes.innerHTML = generarTemplateString(filtroPorGenero(generoCapturada, POTTER));
 });
-
+// BUSCADOR
+const porNombre = document.getElementById('buscarData');
+porNombre.addEventListener('input', (event) => {
+  cajaImagenes.innerHTML = generarTemplateString(buscador(POTTER, event.target.value));
+});
 btnBienvenida.addEventListener('click', () => {
   portada.classList.add('hide');
   headerView.classList.remove('hide');
-  miArrImagenes.classList.remove('hide');
 });
 
 ordenando.addEventListener('click', (event) => {
@@ -82,17 +80,11 @@ ordenando.addEventListener('click', (event) => {
   console.log(event.target.id);
   // miArrImagenes.innerHTML = generarTemplateString(ordenarAscendente(ordenarCaptura, POTTER));
   if (event.target.id === 'a') {
-    miArrImagenes.innerHTML = generarTemplateString(ordenarAscendente(POTTER));
+    cajaImagenes.innerHTML = generarTemplateString(ordenarAscendente(POTTER));
   } else {
     // eslint-disable-next-line max-len
-    miArrImagenes.innerHTML = generarTemplateString(ordenarAscendente(POTTER).reverse());
+    cajaImagenes.innerHTML = generarTemplateString(ordenarAscendente(POTTER).reverse());
   }
 });
-
-ordenarAscendente(POTTER);
-console.log(POTTER);
-
-// cajaDescendente.addEventListener('click', (event) => {
-//   const descendenteCapturada = event.target.id;
-//   pintarEnPantalla(ordenarDescendente(descendenteCapturada,POTTER), miArrImagenes);
-// })
+  cajaImagenes.classList.remove('hide');
+});

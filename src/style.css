@@ -18,6 +18,10 @@ body {
 .hide {
   display: none;
 }
+/* Menu */
+nav {
+  display: flex;
+}
 nav img {
   display: inline-block;
   display: block;
@@ -25,33 +29,29 @@ nav img {
 
 header {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  background: linear-gradient(to right, #000000, #740001, #000000);
 }
 
 header nav {
-  background: linear-gradient(to right, #000000, #740001, #000000);
-  z-index: 1000;
-  /* max-width: 1000px; */
-  width: 100%;
-  margin: 20px auto;
-  justify-content: space-around;
-  height: 74px;
-}
-
-nav div {
-  margin-top: 25px;
-}
-
-nav {
   display: flex;
+  flex-wrap: wrap;
+  z-index: 1000;
+  width: 100%;
+  /* margin: 20px auto; */
+  justify-content: center;
+  align-items: center;
+  padding: 14px;
 }
-
+.search-box input {
+  margin: 10px 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
 nav > li {
   float:left;
   list-style: none;
+  margin: 10px 10px;
 }
-
 nav li a {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px #9fe6e9;
@@ -65,28 +65,31 @@ nav li a {
   -webkit-transition:all 500ms ease;
   -o-transition:all 500ms ease;
   transition: all 500ms ease;
-  margin-top: 18px;
 }
 
 nav li a img {
   margin-right: 10px;
 }
-
 nav li a:hover {
   background-color: #e08a3a;
-  border-radius: 50px;
+  /* border-radius: 50px; */
 }
 
-nav li ul {
+.btn-menu ul {
   display:none;
   position:absolute;
   min-width:140px;
   list-style: none;
+  z-index: 1;
 }
-
 nav li:hover > ul {
   display:block;
 }
+.btn-menu{}
+.btn-option a{
+    background-color: #223750;
+}
+/*Fin Menu */
 
 .name {
   color: rgb(228, 253, 252);
@@ -120,11 +123,13 @@ nav li:hover > ul {
 
 .flip-card {
   display: inline-block;
-  align-content: center;
-  justify-content: space-around;
-  margin: 60px 60px 60px 15px;
+  /* align-content: center; */
+  /* justify-content: space-around; */
+  margin: 20px 10px;
   border-radius: 10px;
-  width: 18%;
+  width: 20%;
+  min-width: 200px;
+  max-width: 250px;
   height: 250px;
   perspective: 1000px;
 }
@@ -166,8 +171,10 @@ nav li:hover > ul {
 }
 
 .box {
-  margin-top: 30px;
-  padding: 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .pantalla1 {
   width: 100%;
@@ -201,13 +208,14 @@ nav li:hover > ul {
 			opacity:0.5;
 			font-size: 29px;
 			text-align: center;
-      /* text-shadow: 0 0 10px #dd260d; */
-      text-shadow: 0 0 20px #33ca19, 2px -2px 3px #feec85, -4px -4px 5px #ffae34, 5px -10px 6px #ec760c, -5px -12px 8px #cd4606, 0 -15px 20px #973716, 2px -15px 20px #451b0e;
-   color: rgb(61, 3, 63);
+			/* text-shadow: 0 0 10px #dd260d; */
+			text-shadow: 0 0 20px #33ca19, 2px -2px 3px #feec85, -4px -4px 5px #ffae34, 5px -10px 6px #ec760c, -5px -12px 8px #cd4606, 0 -15px 20px #973716, 2px -15px 20px #451b0e;
+			color: rgb(61, 3, 63);
+			padding: 0 20px;
 		}
 .btn-bienvenida {
   background-color: transparent;
-  display: flex;
+  display: flex;  
   box-shadow: inset 0 0 0 2px #58036d;
   border-radius: 10px;
   width: 174px;
@@ -237,77 +245,10 @@ nav li:hover > ul {
   top: -24px;
 }
 
-@media screen and (max-width:764px) {
-  nav li a {
-    width: 100px;
+@media screen and (min-width:764px) {
 
-  }
-  a {
-    margin-left: 25px;
-  }
-
-  .name {
-    color: rgb(231, 222, 222);
-    width: 80%;
-    font-size: 12px;
-    outline: none;
-  }
-  .mi-imagen {
-    width: 84px;
-    height: 92px;
-    border-radius: 50%;
-    margin-top: 30px;
-  }
   .flip-card {
-    display: inline-block;
-    align-content: center;
-    justify-content: space-around;
-    margin: 60px 40px 30px 25px;
-    border-radius: 10px;
-    width: 28%;
-    height: 250px;
-    perspective: 1000px;
+  
+margin: 20px 25px;
   }
-
-  .flip-card-inner {
-    position: relative;
-    text-align: center;
-    width: 110%;
-    border-radius: 10px;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-  }
-
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-
-  .container,
-  .anverso {
-    position: absolute;
-    width: 100%;
-    backface-visibility: hidden;
-  }
-
-  .container {
-    color: white;
-    border-radius: 10px;
-  }
-
-  .anverso {
-    color: #eee;
-    transform: rotateY(180deg);
-    border-radius: 10px;
-    box-shadow: inset 0 0 0 5px #29253d;
-  }
-
-  .box {
-    margin-top: 30px;
-    padding: 8px;
-    font-size: 12px;
-  }
-  .flex{
-    display:flex;
-  }
-
 }
