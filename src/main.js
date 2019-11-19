@@ -112,7 +112,8 @@ document.querySelector('#busquedaP').addEventListener('input', (event) => {
 const imagenCard = document.querySelectorAll('.imagen');
 imagenCard.forEach((elem) => {
   elem.addEventListener('click', () => {
-    document.querySelector('#modalP').innerHTML = pintadoModal(elem.getAttribute('id'));
+   document.querySelector('#modalP').classList.remove('ocultar');
+      document.querySelector('#modalP').innerHTML = pintadoModal(elem.getAttribute('id'));
   });
 });
 
