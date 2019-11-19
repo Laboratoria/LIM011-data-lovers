@@ -1,11 +1,16 @@
 import dataPotter from './data/potter/potter.js';
-
 import { filterHouse, filterGender, filterRole } from './data.js';
 
 const dataCharacters = document.querySelector('.data-characters');
 const sectionFilters = document.querySelector('.filters');
-// function to get y show data using template
-const showTemplate = (objDataPotter) => {
+const selectElementHouse = document.querySelector('.selectHouse');
+const selectElementRole = document.querySelector('.selectRole');
+const selectElementGender = document.querySelector('.selectGender');
+const btnWand = document.querySelector('#btn-wand');
+const btnPatronus = document.querySelector('#btn-patronus');
+
+// function to get y show main data using template
+const showMainTemplate = (objDataPotter) => {
   const template = document.createElement('article');
   template.className = 'card-data';
   template.innerHTML = `
@@ -18,7 +23,7 @@ const showTemplate = (objDataPotter) => {
       <button class='btn-general features btn-knowmore' type='submit'>DESCUBRE MAS</button> 
     </div> `;
   const buttonElem = template.querySelector('button');
-  // event to get data and create modal using template
+  // event to create modal
   buttonElem.addEventListener('click', () => {
     const overlay = document.createElement('div');
     overlay.className = 'overlay';
@@ -34,7 +39,7 @@ const showTemplate = (objDataPotter) => {
         <h3 class='modal-features' id='dateofBirth'> Fecha de Nac. :${objDataPotter.dateOfBirth}</h3>
         <h3 class='modal-features' id='ancestry'> Origen : ${objDataPotter.ancestry}</h3>
         <h3 class='modal-features' id='patronus'> Patronus : ${objDataPotter.patronus}</h3>
-        <h3 class='modal-features' id='patronus'> Varita :
+        <h3 class='modal-features' id='wand'> Varita :
           <div> 
             <p> Madera : ${objDataPotter.wand.wood} </p>
             <p> Nucleo : ${objDataPotter.wand.core} </p>
@@ -55,8 +60,8 @@ const showTemplate = (objDataPotter) => {
   });
   return template;
 };
-//  function to go through for each object (Wands)
-export const showTemplateWands = (objDataPotter) => {
+// function to get y show wands data using template
+const showTemplateWands = (objDataPotter) => {
   const template = document.createElement('article');
   template.className = 'card-data-wands';
   template.innerHTML = `
@@ -64,40 +69,38 @@ export const showTemplateWands = (objDataPotter) => {
       <h2 class='features' id='name'>${objDataPotter.name}</h2>
     </div>
     <div class='card-description'>
-      <p> Madera : ${objDataPotter.wand.wood} </p>
-      <p> Nucleo : ${objDataPotter.wand.core} </p>
-      <p> Tamaño : ${objDataPotter.wand.length} </p>
-    </div> `;
+      <p id='wood'> Madera : ${objDataPotter.wand.wood} </p>
+      <p id='core'> Nucleo : ${objDataPotter.wand.core} </p>
+      <p id='length'> Tamaño : ${objDataPotter.wand.length} </p>
+    </div>`;
   return template;
 };
-// function to go through for each object (Characters)
+// function to go through for each object (characters)
 const showMainData = (data) => {
   data.forEach((objDataPotter) => {
-    document.querySelector('.data-characters').appendChild(showTemplate(objDataPotter));
+    document.querySelector('.data-characters').appendChild(showMainTemplate(objDataPotter));
   });
   return showMainData;
 };
 showMainData(dataPotter);
-
-export const showWands = (listdataPotter) => {
+// function to go through for each object (wands)
+const showWandsData = (listdataPotter) => {
   listdataPotter.forEach((objDataPotter) => {
     document.querySelector('.data-wands').appendChild(showTemplateWands(objDataPotter));
   });
+  return showWandsData;
 };
 // Event to call to section wands
-const btnPatronus = document.querySelector('#btn-patronus');
-const btnWand = document.querySelector('#btn-wand');
 btnWand.addEventListener('click', () => {
   dataCharacters.remove();
   sectionFilters.remove();
-  showWands(dataPotter);
+  showWandsData(dataPotter);
 });
 // Event to call to section patronus
 btnPatronus.addEventListener('click', () => {
   dataCharacters.remove();
 });
 // Event to call to function filterHouse
-const selectElementHouse = document.querySelector('.selectHouse');
 selectElementHouse.addEventListener('change', (event) => {
   const houseSelected = event.target.value;
   const dataPotterHouse = filterHouse(dataPotter, houseSelected);
@@ -105,7 +108,6 @@ selectElementHouse.addEventListener('change', (event) => {
   showMainData(dataPotterHouse);
 });
 // Event to call to function filterRole
-const selectElementRole = document.querySelector('.selectRole');
 selectElementRole.addEventListener('change', (event) => {
   const roleSelected = event.target.value;
   const dataPotterRole = filterRole(dataPotter, roleSelected);
@@ -113,7 +115,6 @@ selectElementRole.addEventListener('change', (event) => {
   showMainData(dataPotterRole);
 });
 // Event to call to function filterGender
-const selectElementGender = document.querySelector('.selectGender');
 selectElementGender.addEventListener('change', (event) => {
   const genderSelected = event.target.value;
   const dataPotterGender = filterGender(dataPotter, genderSelected);
