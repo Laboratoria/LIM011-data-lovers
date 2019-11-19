@@ -22,6 +22,61 @@ header {
   background-size: cover;
   color: black;
 }
+/* BUSCADOR */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchbar {
+    float: right;
+    background-color: rgb(121, 9, 11);
+    color: white;
+    padding: 6px 10px;
+    width: 120px;
+    border: none;
+    margin-top: 55px;
+    margin-right: 0px;
+    font-family: "Segoe UI Light","Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    border-bottom: white solid 2px;
+    transition: 0.3s;
+}
+
+.searchbar::placeholder {
+    color: white;
+    font-family: "Segoe UI Light","Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    /* transition: 0.2s; */
+}
+
+.searchbar:focus {
+    width: 400px;
+    font-family: "Segoe UI Light","Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    transition: 0.3s;
+    /* Stops the input box from inheriting the styling from the inputs on the request form */
+    border-bottom: white solid 2px;
+    outline: none;
+}
+
+.icon-search {
+    float: right;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    padding-right: 2px;
+    background-color: rgb(121, 9, 11);
+    border-bottom: white solid 2px;
+    margin-top: 55px;
+    margin-right: 160px;
+}
+
 /* main selectors*/
 .btn-general {
   padding: 3px 19px;
@@ -325,11 +380,13 @@ footer li {
     height: 17%;
   }
   .img-logo {
-    height: 67px;
-    width: 380px;
-    margin-top: 16px;
-    margin-left: 337px;
-  }
+    margin-left: 0px;
+    margin-top: 8px;
+    width: 500px;
+    height: 155px;
+    position: absolute;
+    left: 10%;
+    }
   /*main selectors */
   .btn-general {
 		padding: 8px 31px;
@@ -365,7 +422,7 @@ footer li {
     }
   main {
     margin-left: 13px;
-    margin-top: 34px;
+    margin-top: 85px;
     width: 100%;
   }
 }
