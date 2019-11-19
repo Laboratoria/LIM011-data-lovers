@@ -1,32 +1,34 @@
 // importamos la función `example`
-// eslint-disable-next-line no-unused-vars
-import {
-  filtroPorRoles,
-  filtroPorCasas, filtroPorGenero,
-} from '../src/data';
+import { filtroPorRoles } from '../src/data';
 
-const data = [
+const input = [
   {
     name: 'Harry Potter',
-    species: 'human',
     gender: 'male',
     house: 'Gryffindor',
-    dateOfBirth: '31-07-1980',
-    yearOfBirth: 1980,
-    ancestry: 'half-blood',
-    eyeColour: 'green',
-    hairColour: 'black',
-    wand: {
-      wood: 'holly',
-      core: 'phoenix feather',
-      length: 11,
-    },
-    patronus: 'stag',
     hogwartsStudent: true,
     hogwartsStaff: false,
-    actor: 'Daniel Radcliffe',
-    alive: true,
-    image: 'http://hp-api.herokuapp.com/images/harry.jpg',
+  },
+  {
+    name: 'Luna Lovegood',
+    gender: 'female',
+    house: 'Ravenclaw',
+    hogwartsStudent: true,
+    hogwartsStaff: false,
+  },
+  {
+    name: 'Severus Snape',
+    gender: 'male',
+    house: 'Slytherin',
+    hogwartsStudent: false,
+    hogwartsStaff: true,
+  },
+  {
+    name: 'Cedric Diggory',
+    gender: 'male',
+    house: 'Hufflepuff',
+    hogwartsStudent: true,
+    hogwartsStaff: false,
   },
   {
     name: 'Hermione Granger',
@@ -35,46 +37,55 @@ const data = [
     hogwartsStudent: true,
     hogwartsStaff: false,
   },
+];
+const outputStudent = [
   {
-    name: 'Ron Weasley',
-    species: 'human',
+    name: 'Harry Potter',
     gender: 'male',
     house: 'Gryffindor',
-    dateOfBirth: '01-03-1980',
-    yearOfBirth: 1980,
-    ancestry: 'pure-blood',
-    eyeColour: 'blue',
-    hairColour: 'red',
-    wand: {
-      wood: 'willow',
-      core: 'unicorn tail-hair',
-      length: 14,
-    },
-    patronus: 'Jack Russell terrier',
     hogwartsStudent: true,
     hogwartsStaff: false,
-    actor: 'Rupert Grint',
-    alive: true,
-    image: 'http://hp-api.herokuapp.com/images/ron.jpg',
+  },
+  {
+    name: 'Luna Lovegood',
+    gender: 'female',
+    house: 'Ravenclaw',
+    hogwartsStudent: true,
+    hogwartsStaff: false,
+  },
+  {
+    name: 'Cedric Diggory',
+    gender: 'male',
+    house: 'Hufflepuff',
+    hogwartsStudent: true,
+    hogwartsStaff: false,
+  },
+  {
+    name: 'Hermione Granger',
+    gender: 'female',
+    house: 'Gryffindor',
+    hogwartsStudent: true,
+    hogwartsStaff: false,
   },
 ];
-const resulM = [{
-  name: 'Hermione Granger',
-  gender: 'female',
-  house: 'Gryffindor',
-  hogwartsStudent: true,
-  hogwartsStaff: false,
-}];
+const outputStaff = [
+  {
+    name: 'Severus Snape',
+    gender: 'male',
+    house: 'Slytherin',
+    hogwartsStudent: false,
+    hogwartsStaff: true,
+  },
+];
 
-describe('example', () => {
+describe('filtroPorRoles', () => {
   it('debería ser una función', () => {
     expect(typeof filtroPorRoles).toBe('function');
   });
-
-  describe('example', () => {
-    // escribe aquí tu test
-    it('Deberia si el resul son todas M', () => {
-      expect(filtroPorGenero('female', data)).toEqual(resulM);
-    });
+  it('Debería retornar un array de objetos con la propiedad hogwartsStudent = true', () => {
+    expect(filtroPorRoles('hogwartsStudent', input)).toEqual(outputStudent);
+  });
+  it('Debería retornar un array de objetos con la propiedad hogwartsStaff = true', () => {
+    expect(filtroPorRoles('hogwartsStaff', input)).toEqual(outputStaff);
   });
 });

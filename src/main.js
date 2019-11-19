@@ -6,8 +6,7 @@ import {
 // eslint-disable-next-line import/extensions
 } from './data.js';
 
-
-const miArrImagenes = document.getElementById('arrPotter');
+const cajaImagenes = document.getElementById('arrPotter');
 const cajaRoles = document.querySelector('#roles');
 const cajaCasas = document.querySelector('#casas');
 const cajaGenero = document.querySelector('#genero');
@@ -17,10 +16,10 @@ const portada = document.querySelector('#vista-uno');
 const headerView = document.querySelector('#nav');
 
 
-const pintarEnPantalla = (data, cajaImagenes) => {
-  let guardaImagenes = '';
+const generarTemplateString = (data) => {
+  let templateString = '';
   data.forEach((obj) => {
-    guardaImagenes += ` 
+    templateString += ` 
     <div class="flip-card">
     <div class="flip-card-inner">
       <div class="container">
@@ -45,71 +44,37 @@ const pintarEnPantalla = (data, cajaImagenes) => {
     </div>
   </div>`;
   });
-  // eslint-disable-next-line no-param-reassign
-  cajaImagenes.innerHTML = guardaImagenes;
+  return templateString;
 };
-pintarEnPantalla(POTTER, miArrImagenes);
+
+
+cajaImagenes.innerHTML = generarTemplateString(POTTER);
 
 
 cajaRoles.addEventListener('click', (event) => {
-  // console.log(event.target.id)
   const rolCapturado = event.target.id;
-  // console.log(filtroPorRoles(rolCapturado, POTTER));
-  pintarEnPantalla(filtroPorRoles(rolCapturado, POTTER), miArrImagenes);
+  cajaImagenes.innerHTML = generarTemplateString(filtroPorRoles(rolCapturado, POTTER));
 });
 
 cajaCasas.addEventListener('click', (event) => {
   const casaCapturada = event.target.id;
-  pintarEnPantalla(filtroPorCasas(casaCapturada, POTTER), miArrImagenes);
+  cajaImagenes.innerHTML = generarTemplateString(filtroPorCasas(casaCapturada, POTTER));
 });
 
 cajaGenero.addEventListener('click', (event) => {
   const generoCapturada = event.target.id;
-  console.log(event.target.id);
-
-  pintarEnPantalla(filtroPorGenero(generoCapturada, POTTER), miArrImagenes);
+  cajaImagenes.innerHTML = generarTemplateString(filtroPorGenero(generoCapturada, POTTER));
 });
 
-// cajaOrden.addEventListener('click', (event) => {
-//   const ordenCapturado = event.target.id
-// })
+// BUSCADOR
+const porNombre = document.getElementById('buscarData');
+porNombre.addEventListener('input', (event) => {
+  cajaImagenes.innerHTML = generarTemplateString(buscador(POTTER, event.target.value));
+});
+
 
 btnBienvenida.addEventListener('click', () => {
   portada.classList.add('hide');
   headerView.classList.remove('hide');
-  miArrImagenes.classList.remove('hide');
+  cajaImagenes.classList.remove('hide');
 });
-
-// BUSCADOR
-const porNombre = document.querySelector('#buscarData');
-porNombre.addEventListener('input', (event) => {
-  const potterBuscado = buscador(POTTER, event.target.value.toLowerCase());
-  miArrImagenes.innerHTML = pintarEnPantalla(potterBuscado);
-});
-
-
-// const ocupacion = (POTTER => {
-//   let mostrando = '';
-//   POTTER.forEach(rol  =>{
-
-//   })
-// })
-
-
-// const filtraPorOcupacion = POTTER.filter (ocupacion => {
-
-// })
-
-
-// for
-// const miFunsión = (datitos) => {
-//   let = guardameee = '';
-//   for()
-
-// }
-
-/*
- * console.log(POKEMON);
- * console.log(LoL);
- * console.log(POTTER)
- */
