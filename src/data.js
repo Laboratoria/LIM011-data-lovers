@@ -1,5 +1,6 @@
 /* Se crea una variable PINTADO y nuestro parametro será dataPokemon
 para que el recorrido actúe sobre toda la base */
+/* eslint max-len: ["error", { "ignoreComments": true }] */
 
 export const filtrarPorTipo = (arr, condicion) => {
   const pkmFiltrados = [];
@@ -36,7 +37,7 @@ export const traerPokemonesPorCantidadDeCaramelos = (arr, candies) => {
 };
 
 export const ascendente = (datos) => {
-  const ordenar = datos.sort((a, b) => {
+  const ordenar = datos.sort((a, b) => { /* sort ordena elementos */
     if (a.name > b.name) {
       return 1;
     }
@@ -47,10 +48,10 @@ export const ascendente = (datos) => {
 
 export const mostrarTop = (arr) => {
   arr.sort((p1, p2) => ((p1.spawn_chance > p2.spawn_chance) ? -1 : 1));
-  const arrTop = arr.slice(0, 10);
+  const arrTop = arr.slice(0, 10); // slice retorna una copia del array de pokemones del 0 al 10
   return arrTop;
 };
 
-export const buscarPokemon = (array, name) => array.filter(
-  (pintar) => pintar.name.toLowerCase().startsWith(name),
-);
+export const buscarPokemon = (array, name) => array.filter( // filter crea un nuevo array con todos los elementos que cumplan la condición
+  (pintar) => pintar.name.toLowerCase().startsWith(name), // tolowercase devuelve en minusculas pintar.name
+); // startsWith indica si name inicia con los caracteres de otro string, regresando true o false según sea el caso
