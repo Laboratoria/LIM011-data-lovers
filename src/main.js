@@ -1,6 +1,6 @@
 import dataPotter from './data/potter/potter.js';
 import {
-  filterHouse, filterGender, filterRole, search,
+  filterHouse, filterGender, filterRole, filterWandCore, search,
 } from './data.js';
 
 const dataCharacters = document.querySelector('.data-characters');
@@ -8,8 +8,12 @@ const sectionFilters = document.querySelector('.filters');
 const selectElementHouse = document.querySelector('.selectHouse');
 const selectElementRole = document.querySelector('.selectRole');
 const selectElementGender = document.querySelector('.selectGender');
+const dataWands = document.querySelector('.data-wands');
 const btnWand = document.querySelector('#btn-wand');
 const btnPatronus = document.querySelector('#btn-patronus');
+const btnDragon = document.querySelector('#btn-dragon');
+const btnUnicorn = document.querySelector('#btn-unicorn');
+const btnPhoenix = document.querySelector('#btn-phoenix');
 
 // function to get y show main data using template
 const showMainTemplate = (objDataPotter) => {
@@ -98,10 +102,32 @@ btnWand.addEventListener('click', () => {
   sectionFilters.remove();
   showWandsData(dataPotter);
 });
+// Event to call to function filterWandCore (core: dragon)
+btnDragon.addEventListener('click', () => {
+  const core = 'dragon';
+  const dataWandDragon = filterWandCore(dataPotter, core);
+  dataWands.querySelectorAll('.card-data-wands').forEach((child) => child.remove());
+  showWandsData(dataWandDragon);
+});
+// Event to call to function filterWandCore (core: unicorn)
+btnUnicorn.addEventListener('click', () => {
+  const core = 'unicorn';
+  const dataWandUnicorn = filterWandCore(dataPotter, core);
+  dataWands.querySelectorAll('.card-data-wands').forEach((child) => child.remove());
+  showWandsData(dataWandUnicorn);
+});
+// Event to call to function filterWandCore (core: phoenix)
+btnPhoenix.addEventListener('click', () => {
+  const core = 'phoenix';
+  const dataWandPhoenix = filterWandCore(dataPotter, core);
+  dataWands.querySelectorAll('.card-data-wands').forEach((child) => child.remove());
+  showWandsData(dataWandPhoenix);
+});
 // Event to call to section patronus
 btnPatronus.addEventListener('click', () => {
   dataCharacters.remove();
 });
+
 // Event to call to function filterHouse
 selectElementHouse.addEventListener('change', (event) => {
   const houseSelected = event.target.value;
@@ -123,7 +149,7 @@ selectElementGender.addEventListener('change', (event) => {
   dataCharacters.querySelectorAll('.card-data').forEach((child) => child.remove());
   showMainData(dataPotterGender);
 });
-
+// Evento to call to function search
 const searchBox = document.querySelector('#searchBar');
 searchBox.addEventListener('keyup', (buscar) => {
   const searcher = buscar.target.value;

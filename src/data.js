@@ -20,3 +20,7 @@ export function search(dataPotter, searcher) {
     dataSearch.name.toLowerCase()).indexOf(text) !== -1);
   return finded;
 }
+export function filterWandCore(dataPotter, core) {
+  const dataWandDragon = dataPotter.filter((data) => ((data.wand.core).indexOf(core) !== -1));
+  return dataWandDragon;
+}
