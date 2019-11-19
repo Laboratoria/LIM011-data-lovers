@@ -9,6 +9,8 @@ const pintado = (dataPokemon) => {
   dataPokemon.forEach((pintar) => {
     misPokemones += `
         <div class = "contenedor">
+        <div class = "lado frente"></div>
+        <div class = "lado atras"></div>
         <img src ="${pintar.img}"/>
         <p><b> ${pintar.name}</b></p>
         <p>Tipo: ${pintar.type}</p>
