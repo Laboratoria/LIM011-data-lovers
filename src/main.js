@@ -1,7 +1,7 @@
 import POTTER from './data/potter/potter.js';
 
 import {
-  ascendente, genero, filterRole, filterRoleDos, houseUno,
+  ascendente, genero, filterRole, filterRoleDos, houseUno, search,
 } from './data.js';
 
 const contentCharacter = document.querySelector('#contentCharacter');
