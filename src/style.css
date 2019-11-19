@@ -2,18 +2,15 @@
 body {
 background-color: white;
 }
-
 .img {
     display:block;
     margin:auto;
     width: 25%;
 }
-
 .flex-container{
     margin-top: 20px;
     display:flex;
-    flex-wrap:wrap;
-    
+    flex-wrap:wrap;   
 }
 .flex-container > div {
     background-color: white;
