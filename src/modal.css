@@ -1,0 +1,422 @@
+
+/* MODAL */
+/* .fondo {
+    background-color: rgba(0,0,0,.6);
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    display: none;
+    opacity: 0;
+
+    size 256 × 359
+} */
+
+.contenido {
+    position: fixed;
+    background-color: rgba(0,0,0,0.9);
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido-modal {
+    background-image: url(images/paper.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 20%;
+    border-radius: 20px;
+    width: 300px;
+    height: 570px;
+    margin-top: 30px;
+    padding: 10px 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    cursor: default;
+    /* outline: 1px solid green; */
+}
+
+/* titulo */
+#nombre-persona{
+    display: flex;
+    flex-direction: row;
+    justify-content: center space-between;
+    /* outline: 1px solid green; */
+    width: 98%;
+    margin-bottom: 8px;
+}
+
+.nombre-persona{
+    /* outline: 1px solid green; */
+    width: 98%;
+    text-align: center;
+    margin-left: 18px;
+    font-family: "HARRYP__";
+    font-size: 30pt;
+    font-weight: 100;
+    color: rgb(30, 30, 30);
+    text-shadow: 1px 1px 1px rgba(59, 59, 59, 0.37);
+}
+.cerrar {
+    padding: 5px;
+    cursor: pointer;
+    color: black;
+    text-align: end;
+    font-size: 20px;
+    /* background-color: white;
+    border-radius: 100px; */
+}
+
+/* foto */
+#foto{
+    /* outline: 1px solid red; */
+    text-align: center;
+    margin-bottom: 5px;
+    width: 85%;
+}
+
+.foto{
+    display: inline-block;
+    width: 70%;
+    height: 280px;
+    box-shadow: 2px 3px 3px rgba(27, 27, 27, 0.8);
+    margin-bottom: 3px;
+    filter: grayscale(0%);
+    border-radius: 20px;
+}
+
+#foto p {
+    /* outline: 1px solid green; */
+    font-weight: 300;
+    font-style: italic;
+    font-size: 14px;
+    color: white;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.37);
+}
+
+/* datos */
+
+.datos{
+    /* outline: 1px solid white; */
+    padding: 5px;
+    width: 85%;
+    margin-bottom: 5px;
+    background-color: white;
+    opacity: 80%;
+    border-radius: 10px;
+}
+
+.datos h3{
+    color: #01151c;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.datos p{
+    color: #01151c;
+    text-align: start;
+    font-size: 14px;
+    padding-left: 10px;
+    font-weight: 300;
+}
+
+#datos-v-p{
+    /* outline: 1px solid blueviolet; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 98%;
+}
+
+.varita{
+    /* outline: 1px solid white; */
+    width: 45%;
+    background-color: white;
+    opacity: 80%;
+    border-radius: 9.5px 9.5px 10px 10px;
+    padding-bottom: 2px;
+}
+
+.varita h2{
+    background-color: #01151c;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 400;
+    color: white;
+}
+
+.varita p{
+    text-align: start;
+    font-size: 12px;
+    font-weight: 300;
+    margin-left: 10px;
+    color: #01151c;
+}
+
+.patronus{
+    /* outline: 1px solid white; */
+    width: 45%;
+    background-color: white;
+    opacity: 80%;
+    border-radius: 9.5px 9.5px 10px 10px;
+    color: white;
+    padding-bottom: 2px;
+}
+
+.patronus h2{
+    background-color: #01151c;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.patronus p{
+    font-size: 12px;
+    font-weight: 300;
+    color: #01151c;
+    text-align: center;
+}
+
+/* INICIO */
+#inicio{ /*div de vistas */
+    margin-top: 60px;
+    width: 100%;
+    height: 100%;
+    min-height: 800px;
+    /* fondo de hipogrifo */
+    background-image: url(images/hipo-e.png);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position-x: 70%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inicio img{
+    margin-top: 100px;
+    width: 60%;
+    height: 30%;
+}
+
+#inicio p {
+    margin-top: 20px;
+    padding: 5px;
+    width: 50%;
+    color: #fff;
+    text-align: justify;
+    font-weight: 300;
+    font-size: 14px;
+}
+.video{
+    width: 90%;
+    height: 215px;
+    margin-top: 10px;
+}
+
+@media (min-width:1024px){
+    #inicio img{
+        margin-top: 50px;
+        width: 20%;
+        height: 5%;
+    }
+    
+    #inicio p {
+        margin-top: 30px;
+        padding: 5px;
+        width: 30%;
+        color: #fff;
+        text-align: justify;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    .video{
+        width: 40%;
+        height: 315px;
+        margin-bottom: 50px;
+    }
+
+    /* MODAL */
+
+    
+    .contenido-modal {
+        background-image: url(images/paper.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: 20%;
+        border-radius: 20px;
+        width: 70%;
+        height: 80%;
+        margin-top: 30px;
+        padding: 10px 50px;
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        cursor: default;
+        outline: 1px solid green;
+    }
+    
+    /* titulo */
+    #nombre-persona{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-content: flex-end;
+        order: 3;
+        outline: 1px solid green;
+        width: 30%;
+        margin-bottom: 8px;
+    }
+    
+    .nombre-persona{
+        outline: 1px solid green;
+        width: 98%;
+        text-align: center;
+        margin-left: 18px;
+        font-family: "HARRYP__";
+        font-size: 30pt;
+        font-weight: 100;
+        color: rgb(30, 30, 30);
+        text-shadow: 1px 1px 1px rgba(59, 59, 59, 0.37);
+    }
+    .cerrar {
+        padding: 5px;
+        cursor: pointer;
+        color: black;
+        text-align: end;
+        font-size: 20px;
+        /* background-color: white;
+        border-radius: 100px; */
+    }
+    
+    /* foto */
+    #foto{
+        outline: 1px solid red;
+        text-align: center;
+        margin: 0px 80px 5px 5px;
+        width: 150%;
+        height: 90%;
+    }
+    
+    .foto{
+        display: inline-block;
+        width: 95%;
+        height: 95%;
+        box-shadow: 2px 3px 3px rgba(27, 27, 27, 0.8);
+        margin-bottom: 3px;
+        filter: grayscale(0%);
+        border-radius: 20px;
+    }
+    
+    #foto p {
+        outline: 1px solid green;
+        font-weight: 300;
+        font-style: italic;
+        font-size: 14px;
+        color: white;
+        text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.37);
+    }
+    
+    /* datos */
+    
+    .datos{
+        outline: 1px solid white;
+        padding: 5px;
+        width: 85%;
+        margin-bottom: 5px;
+        background-color: white;
+        opacity: 80%;
+        border-radius: 10px;
+    }
+    
+    .datos h3{
+        color: #01151c;
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    
+    .datos p{
+        color: #01151c;
+        text-align: start;
+        font-size: 14px;
+        padding-left: 10px;
+        font-weight: 300;
+    }
+    
+    #datos-v-p{
+        outline: 1px solid blueviolet;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 98%;
+    }
+    
+    .varita{
+        outline: 1px solid white;
+        width: 45%;
+        background-color: white;
+        opacity: 80%;
+        border-radius: 9.5px 9.5px 10px 10px;
+        padding-bottom: 2px;
+    }
+    
+    .varita h2{
+        background-color: #01151c;
+        border-radius: 100px;
+        text-align: center;
+        font-size: 17px;
+        font-weight: 400;
+        color: white;
+    }
+    
+    .varita p{
+        text-align: start;
+        font-size: 12px;
+        font-weight: 300;
+        margin-left: 10px;
+        color: #01151c;
+    }
+    
+    .patronus{
+        outline: 1px solid white;
+        width: 45%;
+        background-color: white;
+        opacity: 80%;
+        border-radius: 9.5px 9.5px 10px 10px;
+        color: white;
+        padding-bottom: 2px;
+    }
+    
+    .patronus h2{
+        background-color: #01151c;
+        border-radius: 100px;
+        text-align: center;
+        font-size: 17px;
+        font-weight: 400;
+    }
+    
+    .patronus p{
+        font-size: 12px;
+        font-weight: 300;
+        color: #01151c;
+        text-align: center;
+    }
+}
