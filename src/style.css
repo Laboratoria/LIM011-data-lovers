@@ -4,20 +4,22 @@
 }
 body {
   background-image: url(./img/background.jpg);
-  background-size: contain;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 /* --------------------------------------------------MOBILE S---------------------------------------------------- */
 /* header selectors*/
 .nav-container {
   width: 100%; 
-  position: relative;
+  position: absolute;
 }
 header {
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
-  height: 12%;
+  height: 85%;
   background:url(./img/background.jpg);
   background-size: cover;
   color: black;
@@ -28,12 +30,13 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  border: black;
 }
 
 .searchbar {
     float: right;
-    background-color: rgb(121, 9, 11);
-    color: white;
+    background-color: white;
+    color: black;
     padding: 6px 10px;
     width: 120px;
     border: none;
@@ -42,12 +45,12 @@ header {
     font-family: "Segoe UI Light","Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
     font-size: 1em;
     font-weight: bold;
-    border-bottom: white solid 2px;
-    transition: 0.3s;
+    border-bottom: black 2px;
+    
 }
 
 .searchbar::placeholder {
-    color: white;
+    color: black;
     font-family: "Segoe UI Light","Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
     font-size: 1em;
     font-weight: bold;
@@ -61,7 +64,7 @@ header {
     font-weight: bold;
     transition: 0.3s;
     /* Stops the input box from inheriting the styling from the inputs on the request form */
-    border-bottom: white solid 2px;
+    border-bottom: black 2px;
     outline: none;
 }
 
@@ -71,8 +74,8 @@ header {
     padding-top: 5px;
     padding-bottom: 4px;
     padding-right: 2px;
-    background-color: rgb(121, 9, 11);
-    border-bottom: white solid 2px;
+    background-color: white;
+    border-bottom: black solid 2px;
     margin-top: 55px;
     margin-right: 160px;
 }
@@ -142,6 +145,7 @@ header {
   border: 1px rgba(9, 19, 36, 0.61) solid;
 }
 main {
+
   padding-top: 82px;
   display:inline-block;
 }
@@ -195,8 +199,13 @@ main {
 }
 /* filters selectors */
 .btn-filters {
-  display: flex;
-  justify-content: center;
+  background-color: transparent;
+  border: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+  color: #fff;
+
+
 }
 /* footer selectors*/
 footer{
@@ -395,7 +404,7 @@ footer li {
 @media screen and (min-width: 1024px)and (max-width:1439px) {
   /* header selectors */
   header {
-    height: 17%;
+    height: 30%;
   }
   .img-logo {
     margin-left: 0px;
@@ -440,7 +449,7 @@ footer li {
     }
   main {
     margin-left: 13px;
-    margin-top: 85px;
+    margin-top: 150px;
     width: 100%;
   }
 }
@@ -503,4 +512,142 @@ footer li {
   main {
     margin-top: 85px;
   }
+}
+/* ----------------------------MENU NAV------------------------- */
+
+nav{
+  padding: 0;
+  margin-top: 140px;
+  list-style: none;
+  box-sizing: border-box;
+  border-radius: 50px;
+  background: #090320f6;
+  height: 50px;
+  width: 95%;
+}
+nav ul{
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 50px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white ;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+a.active,a:hover{
+  background: #3833866b;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+/* ----------------PANTALLA INICIO--------------- */
+.section-inicio {
+  padding-top: 0px;
+  display: block;
+  background-image: url(./img/mas.jpg);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.download {
+  width: 180px;
+  height: 30px;
+  background-color: #EEA730;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  border-radius: 8px;
+  padding-top: 10px;
+  padding-left: 15px;
+  font-weight: bold;
+  margin-left: 280px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.ancle {
+  color: #EEA730;
+}
+.ancle-1 {
+  color: white;
+  text-decoration: none;
+}
+.video-home {
+  width: 560px;
+  height: 315px;
+  margin-left: 70px;
+}
+.text-2{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40px;
+  margin-left: 100px;
+  padding-top: 70px;
+  color: #EEA730;
+}
+.text-3{
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+  width: 400px;
+  height: 200px;
+  padding-top: 50px;
+  color: white;
+  margin-left: 110px;
+  text-align: justify;
 }
