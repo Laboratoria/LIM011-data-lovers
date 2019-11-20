@@ -63,7 +63,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    position: absolute;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -111,22 +111,26 @@
     background-position: center;
     background-size: 165%;
 }
-.btnArriba{
+.a{
+    display: flex;
+    align-items: flex-end;
+}
+.btnArriba img{
     position: relative;
-    height: 40px;
-    width: 200px;
-    border-radius: 15px;
-    background:  rgba(253, 190, 52, 1);
-    font-family: 'Roboto Slab', serif;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-    text-decoration: none;
-    line-height: 35px;
-    cursor: pointer;
-    margin-left: 700px;
+    margin-left: 80%;
+    width: 15%;
+    height: 15%;
+    margin-top: -25%;
 
 }
+.btnUp img{
+    position: absolute;
+    width: 15%;
+    height: 8%;  
+    margin-top: -12%;
+    margin-left: 50%;
+}
+
 .contenedor:hover{
     transform: rotateY(180deg);
 }
@@ -149,7 +153,18 @@
     background:  rgba(242, 247, 255, 1);
     border-radius: 10px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
 }
+.btnAtras img{
+    position: relative;
+    width: 50%;
+    height: 98%;
+    display: inline-flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
 /* Menu Tipos de pokemon */
 .select, .select1, .ordenar, .select2{
     position: absolute;
@@ -202,11 +217,14 @@
 .resultado{
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
+    align-content: flex-end;
 }
 
 .pintame{
-    position: relative;    
+    position: relative; 
+    display: flex;   
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 /* Fondo pagina 3 */
 .pagina3{
@@ -272,23 +290,25 @@
     font-size: 18px;
     border-radius: 10px;  
     margin-left: 350px;
-    margin-top: -32px;
+    margin-top: -34px;
     background-image: url("https://i.pinimg.com/originals/ce/a3/16/cea316d0a61ede809aba53c76877cf3b.png");
     background-position: right;
     background-size: 10%;
     background-repeat: no-repeat;
 }
 footer{
-    width: 1575px;
+    position: relative;
+    width: auto;
     height: 100px;
     background: rgb(5, 5, 104);
     display: flex;
+    justify-content: center;
 }
 .btnApp{
-   height: 40px;
-   width: 350px;
-   border-radius: 15px;
-   background:  rgba(253, 190, 52, 1);
+    position: absolute;
+    width: 25%;
+    border-radius: 10px;
+    background:  rgba(253, 190, 52, 1);
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
     font-size: 20px;
@@ -296,7 +316,7 @@ footer{
     text-decoration: none;
     line-height: 35px;
     cursor: pointer;
-    margin-left: 580px;
+    vertical-align: center;
     margin-top: 30px;
 
 }
