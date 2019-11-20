@@ -1,6 +1,6 @@
 import dataPotter from './data/potter/potter.js';
 import {
-  filterHouse, filterGender, filterRole, filterWandCore, search,
+  filterHouse, filterGender, filterRole, filterWandCore, search, changeDataWand,
 } from './data.js';
 
 const dataCharacters = document.querySelector('.data-characters');
@@ -75,6 +75,7 @@ const showTemplateWands = (objDataPotter) => {
       <h2 class='features' id='name'>${objDataPotter.name}</h2>
     </div>
     <div class='card-description'>
+      <img class='img-modal-card' src='${objDataPotter.image}'/>
       <p id='wood'> Madera : ${objDataPotter.wand.wood} </p>
       <p id='core'> Nucleo : ${objDataPotter.wand.core} </p>
       <p id='length'> Tamaño : ${objDataPotter.wand.length} </p>
@@ -100,26 +101,34 @@ const showWandsData = (listdataPotter) => {
 btnWand.addEventListener('click', () => {
   dataCharacters.remove();
   sectionFilters.remove();
-  showWandsData(dataPotter);
+  const property = 'wand';
+  const newDataWands = changeDataWand(dataPotter, property);
+  showWandsData(newDataWands);
 });
 // Event to call to function filterWandCore (core: dragon)
 btnDragon.addEventListener('click', () => {
   const core = 'dragon';
-  const dataWandDragon = filterWandCore(dataPotter, core);
+  const property = 'wand';
+  const newDataWands = changeDataWand(dataPotter, property);
+  const dataWandDragon = filterWandCore(newDataWands, core);
   dataWands.querySelectorAll('.card-data-wands').forEach((child) => child.remove());
   showWandsData(dataWandDragon);
 });
 // Event to call to function filterWandCore (core: unicorn)
 btnUnicorn.addEventListener('click', () => {
   const core = 'unicorn';
-  const dataWandUnicorn = filterWandCore(dataPotter, core);
+  const property = 'wand';
+  const newDataWands = changeDataWand(dataPotter, property);
+  const dataWandUnicorn = filterWandCore(newDataWands, core);
   dataWands.querySelectorAll('.card-data-wands').forEach((child) => child.remove());
   showWandsData(dataWandUnicorn);
 });
 // Event to call to function filterWandCore (core: phoenix)
 btnPhoenix.addEventListener('click', () => {
   const core = 'phoenix';
-  const dataWandPhoenix = filterWandCore(dataPotter, core);
+  const property = 'wand';
+  const newDataWands = changeDataWand(dataPotter, property);
+  const dataWandPhoenix = filterWandCore(newDataWands, core);
   dataWands.querySelectorAll('.card-data-wands').forEach((child) => child.remove());
   showWandsData(dataWandPhoenix);
 });
