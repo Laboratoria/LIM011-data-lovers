@@ -26,7 +26,10 @@ export function filterWandCore(dataPotter, core) {
   const dataWandDragon = dataPotter.filter((data) => ((data.wand.core).indexOf(core) !== -1));
   return dataWandDragon;
 }
-
+export function filterPatronus(dataPotter) {
+  const dataPatronus = dataPotter.filter((data) => (data.patronus !== ''));
+  return dataPatronus;
+}
 export const changeDataWand = (data, propiedad) => {
   const wandsData = [];
   for (let i = 0; i < data.length; i += 1) {
