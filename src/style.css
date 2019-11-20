@@ -101,7 +101,6 @@ font-style: normal;
 	padding: 10px 5px 20px 5px;
 	margin: 35px 20px;
 	font-family: 'Rubik', sans-serif;
-	font-weight: ;
 	font-size: 14.3px;
 	color: rgb(28, 36, 88);
 	text-align: center;
@@ -170,7 +169,7 @@ footer .social a {
 }
 
 header {
-	padding-bottom: 10px;
+	padding-bottom: 15px;
     display: flex;
     flex-direction: row;
     flex-flow: wrap;
@@ -185,12 +184,29 @@ header .logo {
 
 .navigation-bar{
 	flex-direction: column;
-	padding-left: ;
-}
+	}
+
 nav {
 	position: relative;
 	margin: 18%;}
+
+.nav-style {
 	
+		width: 80%;
+		height: 40px;
+		font-size: 16px;
+		margin-bottom: 20px;
+		font-family: 'Rubik', sans-serif;
+		
+		
+		/* Flexbox */
+		display: flex;
+		justify-content:space-between;
+		align-items:center;
+		flex-direction:row;
+		flex-wrap:wrap;
+	}
+
 header nav {
 	width: 100%;
 }
