@@ -1,7 +1,7 @@
-/* eslint-disable object-curly-newline */
-/* eslint-disable no-alert */
 import POTTER from './data/potter/potter.js';
-import { ordenado, filtrado, busqueda, filtraDiferente } from './data.js';
+import {
+  ordenado, filtrado, busqueda, filtraDiferente,
+} from './data.js';
 // Variables globales
 const inicio = document.getElementById('inicio-section');
 const menus = document.getElementById('menus-section');
@@ -20,20 +20,20 @@ document.getElementById('menu-inicio').addEventListener('click', () => {
 
 // template
 const pintado = (dataPorCasa, p1, p2, p3) => {
-  let templatePotter = '';
+  const templatePotter = [];
   dataPorCasa.forEach((extrae) => {
     if (p3 !== '') {
-      templatePotter += `<div class="casas-card">
+      templatePotter.push(`<div class="casas-card">
               <img id= "${extrae[p2]}" class="imagen" src= "${extrae[p1]}"/>
               <p>${extrae[p2]}</p>
               <p>${extrae[p3]}</p>
-            </div>`;
+            </div>`);
     }
     if (p3 === '') {
-      templatePotter += `<div class="casas-card">
+      templatePotter.push(`<div class="casas-card">
         <img id= "${extrae[p2]}" class="imagen" src= "${extrae[p1]}"/>
         <p>${extrae[p2]}</p>
-        </div>`;
+        </div>`);
     }
   });
   return templatePotter;
@@ -42,7 +42,11 @@ const pintado = (dataPorCasa, p1, p2, p3) => {
 // Modal
 const pintadoModal = (extrae) => {
   const personaje = filtrado(datos, 'name', extrae);
-  let { vivir, estudiante, staff, coma, patronus } = '';
+  // son las variables que luego tomaran otros valores para el modal
+  let {
+    vivir, estudiante, staff, coma, patronus, grisesImagen, iconoLuto, varita,
+  } = '';
+
   if (personaje[0].house === '') {
     coma = '';
   } else {
@@ -50,8 +54,12 @@ const pintadoModal = (extrae) => {
   }
   if (personaje[0].alive === true) {
     vivir = 'vivo';
+    grisesImagen = '';
+    iconoLuto = '';
   } else {
     vivir = 'muerto';
+    grisesImagen = '<style> #imagenSelect{ filter: grayscale(100%);} </style>';
+    iconoLuto = '<img src="images/lazo.png">';
   }
   if (personaje[0].hogwartsStudent === true) {
     estudiante = 'estudiante - ';
@@ -64,16 +72,23 @@ const pintadoModal = (extrae) => {
     staff = '';
   }
   if (personaje[0].patronus === '') {
-    patronus = 'desconocido';
+    patronus = 'Desconocido';
   } else {
     patronus = personaje[0].patronus;
+  }
+  if (personaje[0].wand.wood === '' && personaje[0].wand.core === '' && personaje[0].wand.length === '') {
+    varita = 'Desconocida';
+  } else {
+    varita = `Madera: ${personaje[0].wand.wood}<br>Núcleo: ${personaje[0].wand.core}<br>Longitud: ${personaje[0].wand.length}`;
   }
   let personajeSelect = '';
   personajeSelect = `<div class="flex">
       <div class="contenido-modal">
       <span class="cerrar" id="cerrar">X</span>
        <div class="foto">
-        <img src="${personaje[0].image}">
+        <img id ="imagenSelect" src="${personaje[0].image}">
+        <div class="icono">${iconoLuto}</div>
+        ${grisesImagen};
         <p>${personaje[0].actor}</p>
        </div>
        <div class="nombre-persona">
@@ -87,9 +102,7 @@ const pintadoModal = (extrae) => {
        <p>Color de Ojos: ${personaje[0].eyeColour}</p>
        <div class="varita">
        <h1>Varita</h1>
-       <p>Madera: ${personaje[0].wand.wood}</p>
-       <p>Núcleo: ${personaje[0].wand.core}</p>
-       <p>Longitud: ${personaje[0].wand.length}</p>
+       <p>${varita}<p>
        </div>
        <div class="patronus">
        <h1>Patronus</h1>
@@ -100,20 +113,10 @@ const pintadoModal = (extrae) => {
      </div>`;
   return personajeSelect;
 };
-
-// PERSONAJES
-document.getElementById('menu-personajes').addEventListener('click', () => {
-  inicio.classList.add('ocultar');
-  menus.classList.remove('ocultar');
-  casas.classList.add('ocultar');
-  rol.classList.add('ocultar');
-  personajes.classList.remove('ocultar');
-});
-
 const divTodosP = document.getElementById('todosP');
 divTodosP.innerHTML = pintado(ordenado(POTTER), 'image', 'name', '');
 
-// MODAL DE PERSONAJES
+// Funcion del modal
 const funcionModal = () => document.querySelectorAll('.imagen').forEach((elem) => {
   elem.addEventListener('click', () => {
     document.querySelector('#modalP').innerHTML = pintadoModal(elem.getAttribute('id'));
@@ -125,33 +128,34 @@ const funcionModal = () => document.querySelectorAll('.imagen').forEach((elem) =
 });
 funcionModal();
 
-// FILTROS PERSONAJES
-const seleccionarP = document.querySelector('.filtrar-personajes');
+// PERSONAJES
+document.getElementById('menu-personajes').addEventListener('click', () => {
+  inicio.classList.add('ocultar');
+  menus.classList.remove('ocultar');
+  casas.classList.add('ocultar');
+  rol.classList.add('ocultar');
+  personajes.classList.remove('ocultar');
+  document.querySelector('.filtrar-personajes').reset();
+  divTodosP.innerHTML = pintado(ordenado(POTTER), 'image', 'name', '');
+  datos = POTTER;
+  funcionModal();
+});
 
-// Evento del select PERSONAJES
+let opcionSeleccionada = '';
+const seleccionarP = document.querySelector('.filtrar-personajes');
 seleccionarP.addEventListener('change', (evento) => {
   document.querySelector('#busquedaP').value = '';
-  const opcionSeleccionadaGenero = evento.target.value;
-
+  opcionSeleccionada = evento.target.value;
   divTodosP.innerHTML = '';
-  switch (opcionSeleccionadaGenero) {
-    case 'todos':
-      datos = POTTER;
-      funcionModal();
-      break;
-    case 'femenino':
-      datos = filtrado(POTTER, 'gender', 'female');
-      divTodosP.innerHTML = pintado(datos, 'image', 'name', '');
-      funcionModal();
-      break;
-    case 'masculino':
-      datos = filtrado(POTTER, 'gender', 'male');
-      divTodosP.innerHTML = pintado(datos, 'image', 'name', '');
-      funcionModal();
-      break;
-    default:
+  if (opcionSeleccionada === '') {
+    datos = POTTER;
+  } else {
+    datos = filtrado(POTTER, 'gender', opcionSeleccionada);
   }
+  divTodosP.innerHTML = pintado(datos, 'image', 'name', '');
+  funcionModal();
 });
+
 
 // BUSCADOR PERSONAJES
 document.querySelector('#busquedaP').addEventListener('input', (event) => {
@@ -160,12 +164,15 @@ document.querySelector('#busquedaP').addEventListener('input', (event) => {
     divTodosP.innerHTML = pintado((busqueda(datos, nombreBuscadoP)), 'image', 'name', '');
     funcionModal();
   } else {
+    divTodosP.innerHTML = pintado((busqueda(datos, nombreBuscadoP)), 'image', 'name', '');
     funcionModal();
   }
   if (divTodosP.innerHTML === '') {
     divTodosP.innerHTML = '<h1>No se encontró ningún personaje</h1>';
   }
 });
+
+const divTodosR = document.getElementById('todosR');
 // MENU ROL
 document.getElementById('menu-rol').addEventListener('click', () => {
   inicio.classList.add('ocultar');
@@ -173,11 +180,11 @@ document.getElementById('menu-rol').addEventListener('click', () => {
   rol.classList.remove('ocultar');
   casas.classList.add('ocultar');
   personajes.classList.add('ocultar');
+  document.querySelector('.filtrar-rol').reset();
+  // pintado al elegir rol
+  divTodosR.innerHTML = pintado(ordenado(POTTER), 'image', 'name', '');
+  datos = POTTER;
 });
-
-// pintado al elegir rol
-const divTodosR = document.getElementById('todosR');
-divTodosR.innerHTML = pintado(ordenado(POTTER), 'image', 'name', '');
 
 const seleccionarR = document.querySelector('.filtrar-rol');
 seleccionarR.addEventListener('change', (evento) => {
@@ -222,6 +229,7 @@ document.querySelector('#busquedaR').addEventListener('input', (event) => {
   }
 });
 
+const divTodosC = document.getElementById('todosC');
 // CASAS
 document.getElementById('menu-casas').addEventListener('click', () => {
   inicio.classList.add('ocultar');
@@ -229,45 +237,25 @@ document.getElementById('menu-casas').addEventListener('click', () => {
   casas.classList.remove('ocultar');
   personajes.classList.add('ocultar');
   rol.classList.add('ocultar');
+  document.querySelector('.filtrar-casas').reset();
+  divTodosC.innerHTML = pintado(ordenado(POTTER), 'image', 'name', 'house');
+  datos = POTTER;
 });
 
-const divTodosC = document.getElementById('todosC');
-
 // FILTROS CASAS
-
-divTodosC.innerHTML = pintado(ordenado(POTTER), 'image', 'name', 'house');
-// datos = POTTER;
 const seleccionarC = document.querySelector('.filtrar-casas');
-// Evento del select CASAS
 seleccionarC.addEventListener('change', (evento) => {
-  // borra el input de busqueda al cambiar de option en el select
   document.querySelector('#busquedaC').value = '';
-  const opcionSeleccionadaCasa = evento.target.value;
-
-  divTodosC.innerHTML = '';
-  switch (opcionSeleccionadaCasa) {
-    case 'todos':
-      datos = POTTER;
-      divTodosC.innerHTML = pintado((POTTER), 'image', 'name', 'house');
-      break;
-    case 'gryffindor':
-      datos = filtrado(POTTER, 'house', 'Gryffindor');
-      divTodosC.innerHTML = pintado(datos, 'image', 'name', '');
-      break;
-    case 'hufflepuff':
-      datos = filtrado(POTTER, 'house', 'Hufflepuff');
-      divTodosC.innerHTML = pintado(datos, 'image', 'name', '');
-      break;
-    case 'ravenclaw':
-      datos = filtrado(POTTER, 'house', 'Ravenclaw');
-      divTodosC.innerHTML = pintado(datos, 'image', 'name', '');
-      break;
-    case 'slytherin':
-      datos = filtrado(POTTER, 'house', 'Slytherin');
-      divTodosC.innerHTML = pintado(datos, 'image', 'name', '');
-      break;
-    default:
+  opcionSeleccionada = evento.target.value;
+  divTodosP.innerHTML = '';
+  if (opcionSeleccionada === '') {
+    datos = POTTER;
+    divTodosC.innerHTML = pintado(datos, 'image', 'name', 'house');
+  } else {
+    datos = filtrado(POTTER, 'house', opcionSeleccionada);
+    divTodosC.innerHTML = pintado(datos, 'image', 'name', '');
   }
+  funcionModal();
 });
 
 // BUSCADOR CASAS
@@ -281,20 +269,4 @@ document.querySelector('#busquedaC').addEventListener('input', (event) => {
   if (divTodosC.innerHTML === '') {
     divTodosC.innerHTML = '<h1>No se encontró ningún personaje</h1>';
   }
-});
-
-document.getElementById('menu-personajes').addEventListener('click', () => {
-  inicio.classList.add('ocultar');
-  menus.classList.remove('ocultar');
-  casas.classList.add('ocultar');
-  rol.classList.add('ocultar');
-  personajes.classList.remove('ocultar');
-});
-
-document.getElementById('menu-rol').addEventListener('click', () => {
-  inicio.classList.add('ocultar');
-  menus.classList.remove('ocultar');
-  rol.classList.remove('ocultar');
-  casas.classList.add('ocultar');
-  personajes.classList.add('ocultar');
 });

@@ -20,9 +20,9 @@
       <input type="checkbox" id="menu-nav">
       <label for="menu-nav" class="icon-menu"></label>
       <nav class="menu">
-        <a href="#" id="menu-personajes">PERSONAJES</a>
-        <a href="#" id="menu-rol">ROL</a>
-        <a href="#" id="menu-casas">CASAS</a>
+        <a href="#" id="menu-personajes" class="menu">PERSONAJES</a>
+        <a href="#" id="menu-rol" class="menu">ROL</a>
+        <a href="#" id="menu-casas" class="menu">CASAS</a>
       </nav>
     </div>
   </header>
@@ -55,13 +55,15 @@
       <div id="casas" class="menu-flotante ocultar">
         <div class="filtros">
           <div class="select">
+            <form class="filtrar-casas">
             <select class="filtrar-casas">
-              <option value="todos" selected>Todos</option>
-              <option value="gryffindor">Gryffindor</option>
-              <option value="hufflepuff">Hufflepuff</option>
-              <option value="ravenclaw">Ravenclaw</option>
-              <option value="slytherin">Slytherin</option>
+              <option value="" selected>Todos</option>
+              <option value="Gryffindor">Gryffindor</option>
+              <option value="Hufflepuff">Hufflepuff</option>
+              <option value="Ravenclaw">Ravenclaw</option>
+              <option value="Slytherin">Slytherin</option>
             </select>
+          </form>
           </div>
 
           <div class="filtradoPorBusqueda">
@@ -76,12 +78,14 @@
       <div id="rol" class="menu-flotante ocultar">
         <div class="filtros">
           <div class="select">
+            <form class="filtrar-rol">
             <select class="filtrar-rol">
               <option value="todos" selected>Todos</option>
               <option value="alumno">Alumno</option>
               <option value="profesor">Profesor</option>
               <option value="otros">Otros</option>
             </select>
+          </form>
           </div>
 
           <div class="filtradoPorBusqueda">
@@ -97,17 +101,21 @@
       <div id="personajes" class="menu-flotante ocultar">
         <div class="filtros">
           <div class="select">
+            <form class="filtrar-personajes">
             <select class="filtrar-personajes">
-              <option value="todos" selected>Todos</option>
-              <option value="femenino">Femenino</option>
-              <option value="masculino">Masculino</option>
+              <option value="" selected>Todos</option>
+              <option value="female">Femenino</option>
+              <option value="male">Masculino</option>
             </select>
+          </form>
           </div>
 
-          <div class="filtradoPorBusqueda">
+          <form class="filtradoPorBusqueda">
+            <div class="filtradoPorBusqueda">
             <input type="search" id="busquedaP" class="buscar" placeholder="Buscador">
             <i class="icon-search"></i>
           </div>
+        </form>
         </div> <!-- fin del filtros-->
         <div id="todosP" class="todos"></div>
         <div id="modalP" class="modal"></div>
