@@ -121,7 +121,7 @@ desple.addEventListener('click', (event) => {
 });
 
 for (let i = 0; i < radioInput.length; i += 1) {
-  radioInput[i].addEventListener('change', (event) => {
+radioInput[i].addEventListener('change', (event) => {
     const string = event.target.id;
     const arregloOrdenado = traerDataPokemon(ordenarAscOdescData((POKEMON), string));
     document.querySelector('#contenedor-pokemons').innerHTML='';
