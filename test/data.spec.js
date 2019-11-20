@@ -1,8 +1,10 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable import/named */
+/* eslint-disable linebreak-style */
 // importamos la función `example`
-import { example } from "../src/data";
+import { example } from '../src/data';
 
 describe('example', () => {
-
   it('debería ser una función', () => {
     expect(typeof example).toBe('function');
   });
