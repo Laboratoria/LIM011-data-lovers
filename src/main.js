@@ -1,13 +1,20 @@
 import dataPotter from './data/potter/potter.js';
-import { filterHouse, filterGender, filterRole } from './data.js';
+import {
+  filterHouse, filterGender, filterRole, filterWandCore, search, changeDataWand, filterPatronus,
+} from './data.js';
 
 const dataCharacters = document.querySelector('.data-characters');
 const sectionFilters = document.querySelector('.filters');
+const btnFiltersWand = document.querySelector('.btn-filters-wands');
 const selectElementHouse = document.querySelector('.selectHouse');
 const selectElementRole = document.querySelector('.selectRole');
 const selectElementGender = document.querySelector('.selectGender');
+const dataWands = document.querySelector('.data-wands');
 const btnWand = document.querySelector('#btn-wand');
 const btnPatronus = document.querySelector('#btn-patronus');
+const btnDragon = document.querySelector('#btn-dragon');
+const btnUnicorn = document.querySelector('#btn-unicorn');
+const btnPhoenix = document.querySelector('#btn-phoenix');
 
 // function to get y show main data using template
 const showMainTemplate = (objDataPotter) => {
@@ -69,9 +76,25 @@ const showTemplateWands = (objDataPotter) => {
       <h2 class='features' id='name'>${objDataPotter.name}</h2>
     </div>
     <div class='card-description'>
+      <img class='img-modal-card' src='${objDataPotter.image}'/>
       <p id='wood'> Madera : ${objDataPotter.wand.wood} </p>
       <p id='core'> Nucleo : ${objDataPotter.wand.core} </p>
       <p id='length'> Tamaño : ${objDataPotter.wand.length} </p>
+    </div>`;
+  return template;
+};
+
+// function to get y show patronus data using template
+const showTemplatePatronus = (objDataPotter) => {
+  const template = document.createElement('article');
+  template.className = 'card-data-patronus';
+  template.innerHTML = `
+    <div class='card-details'>
+      <h2 class='features' id='name'>${objDataPotter.name}</h2>
+    </div>
+    <div class='card-description'>
+      <img class='img-modal-card' src='${objDataPotter.image}'/>
+      <p id='wood'> Madera : ${objDataPotter.patronus} </p>
     </div>`;
   return template;
 };
@@ -90,16 +113,58 @@ const showWandsData = (listdataPotter) => {
   });
   return showWandsData;
 };
+// function to go through for each object (patronus)
+const showPatronusData = (listdataPotter) => {
+  listdataPotter.forEach((objDataPotter) => {
+    document.querySelector('.data-patronus').appendChild(showTemplatePatronus(objDataPotter));
+  });
+  return showPatronusData;
+};
 // Event to call to section wands
 btnWand.addEventListener('click', () => {
   dataCharacters.remove();
   sectionFilters.remove();
-  showWandsData(dataPotter);
+  const property = 'wand';
+  const newDataWands = changeDataWand(dataPotter, property);
+  showWandsData(newDataWands);
+});
+// Event to call to function filterWandCore (core: dragon)
+btnDragon.addEventListener('click', () => {
+  const core = 'dragon';
+  const property = 'wand';
+  const newDataWands = changeDataWand(dataPotter, property);
+  const dataWandDragon = filterWandCore(newDataWands, core);
+  dataWands.querySelectorAll('.card-data-wands').forEach((child) => child.remove());
+  showWandsData(dataWandDragon);
+});
+// Event to call to function filterWandCore (core: unicorn)
+btnUnicorn.addEventListener('click', () => {
+  const core = 'unicorn';
+  const property = 'wand';
+  const newDataWands = changeDataWand(dataPotter, property);
+  const dataWandUnicorn = filterWandCore(newDataWands, core);
+  dataWands.querySelectorAll('.card-data-wands').forEach((child) => child.remove());
+  showWandsData(dataWandUnicorn);
+});
+// Event to call to function filterWandCore (core: phoenix)
+btnPhoenix.addEventListener('click', () => {
+  const core = 'phoenix';
+  const property = 'wand';
+  const newDataWands = changeDataWand(dataPotter, property);
+  const dataWandPhoenix = filterWandCore(newDataWands, core);
+  dataWands.querySelectorAll('.card-data-wands').forEach((child) => child.remove());
+  showWandsData(dataWandPhoenix);
 });
 // Event to call to section patronus
 btnPatronus.addEventListener('click', () => {
   dataCharacters.remove();
+  sectionFilters.remove();
+  btnFiltersWand.remove();
+  const dataPatronus = filterPatronus(dataPotter);
+  dataWands.querySelectorAll('.card-data-wands').forEach((child) => child.remove());
+  showPatronusData(dataPatronus);
 });
+
 // Event to call to function filterHouse
 selectElementHouse.addEventListener('change', (event) => {
   const houseSelected = event.target.value;
@@ -121,18 +186,11 @@ selectElementGender.addEventListener('change', (event) => {
   dataCharacters.querySelectorAll('.card-data').forEach((child) => child.remove());
   showMainData(dataPotterGender);
 });
-
+// Evento to call to function search
 const searchBox = document.querySelector('#searchBar');
 searchBox.addEventListener('keyup', (buscar) => {
   const searcher = buscar.target.value;
   const finded = search(dataPotter, searcher);
   dataCharacters.querySelectorAll('.card-data').forEach((child) => child.remove());
   showMainData(finded);
-})
-function search (dataPotter, searcher){
-  const text =searcher.toLowerCase();
-  const find = dataPotter.filter((dataSearch) => ( dataSearch.name.toLowerCase()).indexOf(text) !== -1);
-  return find;
-  };
-
-//Show Inicio Screen 
+});
