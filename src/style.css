@@ -175,6 +175,24 @@ main {
   font-family: 'Yeon Sung', cursive;
   text-align: center;
 }
+/* main selectors of section patronus*/
+.data-patronus {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 97%;
+}
+.card-data-patronus {
+  width: 14%;
+  flex-basis: auto;
+  margin: 10px;
+  color: rgb(255, 255, 255);
+  background-repeat: no-repeat;
+  background: #000314f2;
+  border: 2px rgb(255, 240, 131) solid;
+  font-family: 'Yeon Sung', cursive;
+  text-align: center;
+}
 /* filters selectors */
 .btn-filters {
   display: flex;
