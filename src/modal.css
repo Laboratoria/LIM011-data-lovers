@@ -77,11 +77,22 @@
 }
 
 /* foto */
-#foto{
-    /* outline: 1px solid red; */
+#foto {
+    outline: 1px solid red;
     text-align: center;
     margin-bottom: 5px;
     width: 85%;
+    position: relative;
+}
+
+
+#foto .icono {
+    outline: 1px solid green;
+    position: absolute;
+    width: 40%;
+    height: 30%;
+    top: 8px;
+    right: 20px;
 }
 
 .foto{
@@ -262,9 +273,9 @@
         border-radius: 20px;
         width: 70%;
         height: 80%;
-        margin-top: 30px;
+        margin-top: 60px;
         padding: 10px 50px;
-        position: absolute;
+        position: relative;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -280,18 +291,24 @@
         justify-content: flex-end;
         align-content: flex-end;
         order: 3;
-        outline: 1px solid green;
-        width: 30%;
+        outline: 1px solid pink;
+        width: 50%;
+        height: 90%;
         margin-bottom: 8px;
+        position: absolute;
+        top: 5%;
+        right: 3%;
+        bottom: 0;
     }
     
     .nombre-persona{
-        outline: 1px solid green;
+        outline: 1px solid rgb(107, 0, 128);
         width: 98%;
         text-align: center;
+        padding-top: 5%;
         margin-left: 18px;
         font-family: "HARRYP__";
-        font-size: 30pt;
+        font-size: 37pt;
         font-weight: 100;
         color: rgb(30, 30, 30);
         text-shadow: 1px 1px 1px rgba(59, 59, 59, 0.37);
@@ -302,6 +319,10 @@
         color: black;
         text-align: end;
         font-size: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        outline: 1px solid green;
         /* background-color: white;
         border-radius: 100px; */
     }
@@ -310,9 +331,22 @@
     #foto{
         outline: 1px solid red;
         text-align: center;
-        margin: 0px 80px 5px 5px;
-        width: 150%;
+        margin: 0px 40px 5px 5px;
+        width: 38%;
         height: 90%;
+        position: absolute;
+        top: 30px;
+        right: 0;
+        bottom: 0;
+        left: 20px;
+    }
+
+    #foto .icono {
+        position: absolute;
+        width: 40%;
+        height: 30%;
+        top: 10px;
+        right: 10px;
     }
     
     .foto{
@@ -339,11 +373,16 @@
     .datos{
         outline: 1px solid white;
         padding: 5px;
-        width: 85%;
+        width: 45%;
+        height: 30%;
         margin-bottom: 5px;
         background-color: white;
         opacity: 80%;
         border-radius: 10px;
+        position: absolute;
+        top: 23%;
+        right: 5%;
+        /* bottom: 0; */
     }
     
     .datos h3{
@@ -357,7 +396,7 @@
         color: #01151c;
         text-align: start;
         font-size: 14px;
-        padding-left: 10px;
+        padding-left: 15%;
         font-weight: 300;
     }
     
@@ -366,12 +405,17 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        width: 98%;
+        width: 50%;
+        height: 30%;
+        position: absolute;
+        top: 60%;
+        right: 3%;
+        /* bottom: 0; */
     }
     
     .varita{
         outline: 1px solid white;
-        width: 45%;
+        width: 40%;
         background-color: white;
         opacity: 80%;
         border-radius: 9.5px 9.5px 10px 10px;
@@ -397,7 +441,7 @@
     
     .patronus{
         outline: 1px solid white;
-        width: 45%;
+        width: 40%;
         background-color: white;
         opacity: 80%;
         border-radius: 9.5px 9.5px 10px 10px;

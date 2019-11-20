@@ -20,20 +20,20 @@ document.getElementById('menu-inicio').addEventListener('click', () => {
 
 // template
 const pintado = (dataPorCasa, p1, p2, p3) => {
-  const templatePotter = [];
+  let templatePotter = '';
   dataPorCasa.forEach((extrae) => {
     if (p3 !== '') {
-      templatePotter.push(`<div class="casas-card">
+      templatePotter += `<div class="casas-card">
               <img id= "${extrae[p2]}" class="imagen" src= "${extrae[p1]}"/>
               <p class="name">${extrae[p2]}</p>
               <p>${extrae[p3]}</p>
-            </div>`);
+            </div>`;
     }
     if (p3 === '') {
-      templatePotter.push(`<div class="casas-card">
+      templatePotter += `<div class="casas-card">
         <img id= "${extrae[p2]}" class="imagen" src= "${extrae[p1]}"/>
-        <p>${extrae[p2]}</p>
-        </div>`);
+        <p class="name">${extrae[p2]}</p>
+        </div>`;
     }
   });
   return templatePotter;
@@ -53,13 +53,13 @@ const pintadoModal = (extrae) => {
     coma = ', ';
   }
   if (personaje[0].alive === true) {
-    vivir = 'vivo';
+    vivir = 'Vivo';
     grisesImagen = '';
     iconoLuto = '';
   } else {
-    vivir = 'muerto';
+    vivir = 'Muerto';
     grisesImagen = '<style> #imagenSelect{ filter: grayscale(100%);} </style>';
-    iconoLuto = '<img src="images/lazo.png">';
+    iconoLuto = '<img class="icono" src="images/lazo.png">';
   }
   if (personaje[0].hogwartsStudent === true) {
     estudiante = 'Estudiante - ';
@@ -84,15 +84,14 @@ const pintadoModal = (extrae) => {
   let personajeSelect = '';
   personajeSelect = `
       <div class="contenido-modal">
-      <span class="cerrar" id="cerrar">X</span>
-       <div class="foto">
-        <img id ="imagenSelect" src="${personaje[0].image}">
-        <div class="icono">${iconoLuto}</div>
-        ${grisesImagen};
-        <p>${personaje[0].actor}</p>
+      <div id="nombre-persona">
+       <h1 class="nombre-persona">${personaje[0].name}</h1>
+       <span id="cerrar" class="cerrar">&times;</span>
        </div>
        <div id="foto">
-        <img src="${personaje[0].image}" class="foto">
+        <img id="imagenSelect" class="foto" src="${personaje[0].image}">
+        <div class="icono">${iconoLuto}</div>
+        ${grisesImagen}
         <p>Actor/Actriz: ${personaje[0].actor}</p>
        </div>
        <div class="datos">
@@ -104,7 +103,7 @@ const pintadoModal = (extrae) => {
        </div>
        <div id="datos-v-p">
        <div class="varita">
-       <h1>Varita</h1>
+       <h2>Varita</h2>
        <p>${varita}<p>
        </div>
        <div class="patronus">

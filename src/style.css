@@ -25,7 +25,6 @@ header{
     background: #ffffff;
     width: 100%;
     height: 60px;
-
     position: fixed;
     top: 0;
     left: 0;
@@ -281,12 +280,19 @@ footer #footer{ /*div padre */
     .menu a{
         border: none;
         background: none;
-        color: #333;
+        color: #808080;
     }
     .menu a:hover{
         background: none;
         font-weight: bold;
+        color: #023f55;
     }
+
+    /* .menu a{
+        background: none;
+        font-weight: bold;
+        color: #023f55;
+    } */
 
     header label{
         display: none;
