@@ -44,13 +44,17 @@ const pintadoModal = (extrae) => {
   const personaje = filtrado(datos, 'name', extrae);
   // son las variables que luego tomaran otros valores para el modal
   let {
-    vivir, estudiante, staff, coma, patronus, grisesImagen, iconoLuto, varita,
+    vivir, estudiante, staff, coma, patronus, grisesImagen, iconoLuto, varita, cumpleaños,
   } = '';
-
   if (personaje[0].house === '') {
     coma = '';
   } else {
     coma = ', ';
+  }
+  if (personaje[0].dateOfBirth === '') {
+    cumpleaños = 'Desconocido';
+  } else {
+    cumpleaños = personaje[0].dateOfBirth;
   }
   if (personaje[0].alive === true) {
     vivir = 'Vivo';
