@@ -90,7 +90,7 @@ describe('filtrarPorTipo', () => {
     });
     describe('mostrarTop', () => {
       it('debería retornar un array con los pokemones con mayor frecuencia de aparición', () => {
-        expect(mostrarTop(arrayEntrante, '-1', 'spawn_chance')).toEqual(arrayAparicion);
+        expect(mostrarTop(arrayEntrante, '1', 'spawn_chance')).toEqual(arrayAparicion);
       });
     });
   });
