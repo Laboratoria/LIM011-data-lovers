@@ -1,3 +1,10 @@
+@import 'modal.css';
+
+@font-face{
+    font-family: "HARRYP__";
+  src: url("fuentes/HARRYP__.ttf");
+}
+
 .ocultar{
     display: none;
 }
@@ -76,6 +83,7 @@ header label { /* esto es el icono de menu */
 }
 
 
+
 /* CUERPO */
 
 #nubes{ /*div de vistas */
@@ -88,38 +96,6 @@ header label { /* esto es el icono de menu */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-}
-
-#inicio{ /*div de vistas */
-    margin-top: 60px;
-    width: 100%;
-    height: 100%;
-    min-height: 800px;
-    /* fondo de hipogrifo */
-    background-image: url(images/hipo-e.png);
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
-    background-position-x: 70%;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-}
-
-#inicio img{
-    margin-top: 100px;
-    width: 50%;
-    height: 30%;
-}
-
-#inicio p {
-    margin-top: 20px;
-    padding: 5px;
-    width: 50%;
-    color: #fff;
-    text-align: justify;
-    font-weight: 300;
 }
 
 .filtros{
@@ -203,25 +179,48 @@ header label { /* esto es el icono de menu */
 }
 
 .imagen { /*imagenes*/
+    display: inline-block;
     width: 100%;
+    height: 80%;
     box-shadow: 5px 5px 10px rgba(77, 77, 77, 0.3);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    /* border-radius: 20px; */
 }
-.casas-card{ /*div card de cada imagen */
-    background: rgba(24, 110, 121, 0.521);
+
+.casas-card { /*div card de cada imagen */
     margin: 5px;
+    margin-bottom: 10px;
     width: 40%;
     justify-content: center;
     align-content: center;
     text-align: center;
     flex-wrap: wrap;
+    padding-bottom: 15px;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-name: ghost;
+}
+@keyframes ghost {
+0%   {opacity: 0%;}
+100% {opacity: 100%;}
 }
 
 .casas-card p{ /*div card texto de cada imagen */
    color: #fff;
-   font-size: 15px;
+   font-size: 12px;
+   font-weight: 400;
+   margin-top: 5px;
+   margin-bottom: 5px;
 }
 
+.casas-card .name{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    background-color: #023f55;
+    border-radius: 10px;
+    padding: 5px 0px;
+}
 
 /* FOOTER */
 footer{
@@ -299,6 +298,7 @@ footer #footer{ /*div padre */
         justify-content: flex-end;
         flex-direction: row;
         align-content: flex-end;
+        margin-bottom: 20px;
     }
 
     .select{
@@ -313,16 +313,41 @@ footer #footer{ /*div padre */
     }
 
     .casas-card{ /*div card de cada imagen */
-        background: rgba(24, 110, 121, 0.521);
-        margin-top: 60px;
+        margin-top: 20px;
         width: 20%;
         justify-content: space-around;
         align-content: space-between;
         text-align: center;
+        padding-bottom: 2px;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+        animation-name: ghost;
+    }
+@keyframes ghost {
+    0%   {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+    .casas-card p{
+        color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        border-radius: 10px;
+        padding: 5px 0px;
+    }
+
+    .casas-card .name{
+        color: #fff;
+        font-size: 20px;
+        font-weight: 400;
+        background-color: #023f55;
+        border-radius: 10px;
+        padding: 5px 0px;
     }
 
     .imagen { /*imagenes*/
-        width: 80%;
+        display: inline-block;
+        width: 100%;
+        height: 75%;
         box-shadow: 5px 5px 10px rgba(77, 77, 77, 0.3);
         margin-bottom: 10px;
     }

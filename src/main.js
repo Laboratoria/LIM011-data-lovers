@@ -25,7 +25,7 @@ const pintado = (dataPorCasa, p1, p2, p3) => {
     if (p3 !== '') {
       templatePotter.push(`<div class="casas-card">
               <img id= "${extrae[p2]}" class="imagen" src= "${extrae[p1]}"/>
-              <p>${extrae[p2]}</p>
+              <p class="name">${extrae[p2]}</p>
               <p>${extrae[p3]}</p>
             </div>`);
     }
@@ -62,12 +62,12 @@ const pintadoModal = (extrae) => {
     iconoLuto = '<img src="images/lazo.png">';
   }
   if (personaje[0].hogwartsStudent === true) {
-    estudiante = 'estudiante - ';
+    estudiante = 'Estudiante - ';
   } else {
     estudiante = '';
   }
   if (personaje[0].hogwartsStaff === true) {
-    staff = 'staff - ';
+    staff = 'Staff - ';
   } else {
     staff = '';
   }
@@ -82,7 +82,7 @@ const pintadoModal = (extrae) => {
     varita = `Madera: ${personaje[0].wand.wood}<br>Núcleo: ${personaje[0].wand.core}<br>Longitud: ${personaje[0].wand.length}`;
   }
   let personajeSelect = '';
-  personajeSelect = `<div class="flex">
+  personajeSelect = `
       <div class="contenido-modal">
       <span class="cerrar" id="cerrar">X</span>
        <div class="foto">
@@ -91,25 +91,27 @@ const pintadoModal = (extrae) => {
         ${grisesImagen};
         <p>${personaje[0].actor}</p>
        </div>
-       <div class="nombre-persona">
-       <h1>${personaje[0].name}</h1>
+       <div id="foto">
+        <img src="${personaje[0].image}" class="foto">
+        <p>Actor/Actriz: ${personaje[0].actor}</p>
        </div>
        <div class="datos">
-       <h2>${personaje[0].house}${coma}${estudiante}${staff}${vivir} </h2>
+       <h3>${personaje[0].house}${coma}${estudiante}${staff}${vivir} </h3>
        <p>Especie: ${personaje[0].species}</p>
        <p>Género: ${personaje[0].gender}</p>
        <p>Color de cabello: ${personaje[0].hairColour}</p>
        <p>Color de Ojos: ${personaje[0].eyeColour}</p>
+       </div>
+       <div id="datos-v-p">
        <div class="varita">
        <h1>Varita</h1>
        <p>${varita}<p>
        </div>
        <div class="patronus">
-       <h1>Patronus</h1>
+       <h2>Patronus</h2>
        <p>${patronus}</p>
        </div>
        </div>
-      </div>
      </div>`;
   return personajeSelect;
 };
@@ -119,10 +121,12 @@ divTodosP.innerHTML = pintado(ordenado(POTTER), 'image', 'name', '');
 // Funcion del modal
 const funcionModal = () => document.querySelectorAll('.imagen').forEach((elem) => {
   elem.addEventListener('click', () => {
+    document.querySelector('#modalP').classList.remove('ocultar');
     document.querySelector('#modalP').innerHTML = pintadoModal(elem.getAttribute('id'));
     // cerrar modal
-    document.getElementById('cerrar').addEventListener('click', () => {
+    document.querySelector('.contenido').addEventListener('click', () => {
       modal.innerHTML = '';
+      document.querySelector('#modalP').classList.add('ocultar');
     });
   });
 });

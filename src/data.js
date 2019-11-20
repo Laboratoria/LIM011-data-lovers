@@ -1,3 +1,5 @@
+/* eslint-disable consistent-return */
+/* eslint-disable array-callback-return */
 /* eslint-disable no-console */
 // Ordenado por alfabeto, juntar con el inner.HTML
 
