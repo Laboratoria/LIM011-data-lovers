@@ -15,21 +15,21 @@ import {
 const radioInput = document.querySelectorAll('input[name=ordena]');
 
 // const modal = (obj) => {
-//   const divElement = document.createElement('div');
-//   divElement.classList.add('modalDialog');
-//   divElement.innerHTML =  `
-//   <div class="modal-contenido">
-//     <a href="#close" title="Close" class="close">X</a>
-//     <h2>${obj.name}</h2>
-//     <p>${obj.weight}</p>
-//     <div id="prevolucion"></div>
-//   </div> 
-//   `;
-//   return divElement;
+// const divElement = document.createElement('div');
+// divElement.classList.add('modalDialog');
+// divElement.innerHTML =  `
+// <div class="modal-contenido">
+// <a href="#close" title="Close" class="close">X</a>
+// <h2>${obj.name}</h2>
+// <p>${obj.weight}</p>
+// <div id="prevolucion"></div>
+// </div> 
+// `;
+// return divElement;
 // }
 
 const containerElements= (obj) => {
-  const divElement=document.createElement("div");
+  const divElement = document.createElement("div");
   divElement.innerHTML = `
   <img src = "${obj.imagen}"/>
   <h1>${obj.identificador}</h1><p>${obj.nombre}</p>
@@ -39,9 +39,20 @@ const containerElements= (obj) => {
     divElem.classList.add('modalDialog');
     divElem.innerHTML =  `
     <div>
-      <a href="#close" title="Close" class="close">X</a>
-      <h2>${obj.nombre}</h2>
-      <p>${obj.identificador}</p>
+      <a href = "#close" title = "Close" class = "close">X</a>
+      <h2>${obj.identificador} ${obj.nombre}</h2>
+      <p>Peso: ${obj.peso}  Altura: ${obj.altura}</p>
+      <p>Tipo: ${obj.tipo}</p>
+      <p>Caramelos: ${obj.caramelos}</p>
+      <p>Debilidades: ${obj.debilidades}</p>`
+      if (obj.multiplicador === 'null'){
+        ` <p>Multiplicador:No tiene </p>
+        `
+        } else {
+          ` <p>Multiplicador:${obj.multiplicador}</p>
+          `
+         }
+          `
       <div id="prevolucion"></div>
     </div> 
     `;
@@ -73,12 +84,12 @@ const generarTemplatePokemones = (arr) => {
 // };
 
 generarTemplatePokemones(traerDataPokemon(POKEMON));
-//const template = generarTemplatePokemones(traerDataPokemon(POKEMON))
+// const template = generarTemplatePokemones(traerDataPokemon(POKEMON))
 // const templateModal = generarTemplatePokemonesModal(traerDataPokemonModal(POKEMON));
 
 // const pintarPokemonesEnPantalla = (plantilla, id) => {
-//   document.querySelector(id).innerHTML = '';
-//   document.querySelector(id).innerHTML = plantilla;
+// document.querySelector(id).innerHTML = '';
+// document.querySelector(id).innerHTML = plantilla;
 // };
 
 // pintarPokemonesEnPantalla(template, '#contenedor-pokemons');

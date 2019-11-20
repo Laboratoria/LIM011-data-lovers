@@ -1,7 +1,8 @@
 export const traerDataPokemon = (arr) => {
   const newArray = [];
   for (let i = 0; i < arr.length; i += 1) {
-    newArray.push({ identificador: arr[i].id, nombre: arr[i].name, imagen: arr[i].img });
+      newArray.push({ identificador: arr[i].id, nombre: arr[i].name, imagen: arr[i].img, altura: arr[i].height,
+        peso: arr[i].weight, tipo: arr[i].type, caramelos: arr[i].candy_count, multiplicador: arr[i].multipliers, debilidades: arr[i].weaknesses });
   }
   return newArray;
 };
@@ -62,8 +63,8 @@ export const buscarPokemon = (arr, nombrePokemonBuscar) => {
 };
 
 // export const buscarPokemonId = (arr, idPokemonBuscar) => {
-//   const arrBuscaPokemon = [];
-//   arrBuscaPokemon.push(arr.find((elemento) => elemento.id === idPokemonBuscar));
-//   return arrBuscaPokemon;
+// const arrBuscaPokemon = [];
+// arrBuscaPokemon.push(arr.find((elemento) => elemento.id === idPokemonBuscar));
+// return arrBuscaPokemon;
 // };
 
