@@ -100,7 +100,7 @@ const pintadoModal = (extrae) => {
        </div>
        <div class="datos">
        <h3>${personaje[0].house}${coma}${estudiante}${staff}${vivir} </h3>
-       <p><span class= "icon-cake"> </span> ${cumpleaños}</p>
+       <p><span class= "icon-cake"></span> ${cumpleaños}</p>
        <p>Especie: ${personaje[0].species}</p>
        <p>Género: ${personaje[0].gender}</p>
        <p>Color de cabello: ${personaje[0].hairColour}</p>
