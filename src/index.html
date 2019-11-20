@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
   <body>
     <header class="header">  
@@ -18,8 +19,37 @@
           <input id="searchBar" class="searchbar" type="text" placeholder="Buscar...">
         </div>
       </div>
+      <nav>
+          <input type="checkbox" id="check">
+          <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+          </label>
+          <ul>
+            <li><a class="active"><button class="btn-filters" id="btnInicio" type="button">Inicio</button></a></li>
+            <li><a href="index.html">Personajes</a></li>
+            <li><a> <button class="btn-filters" id="btn-wand" type="button">VARITAS</button></a></li>
+            <li><a><button class="btn-filters" id="btn-patronus" type="button">PATRONUS</button></a></li>
+            <li><a href="#">Estadisticas</a></li>
+            <li><a href="https://discord.gg/v8vYsrk">Comunidad</a></li>
+          </ul>
+        </nav>
     </header>
     <main>
+      <!--Pantalla de Inicio-->
+      <section class="section-inicio"> 
+          <div class="inicio" id="section-inicio">
+            <div class="text-general">
+              <h2 class="text-2">¡Conoce más sobre Harry Potter: Wizards Unite!</h2>
+              <h3 class="text-3">El nuevo juego de Niantic basado en el universo mágico de Harry Potter ya está disponible desde finales de junio de 2019. 
+                Es por ello que hemos elaborado esta guía de informacion del juego para conocer más sobre el Mundo Mágico, las características de los personajes
+                y los datos principales que necesitas para empezar el juego.</h3>
+            </div>
+            <iframe class="video-home"  src="https://www.youtube.com/embed/watch?v=SbDWuSwCMSU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="download">
+              <a class="ancle-1" target="_blank" href="https://play.google.com/store/apps/details?id=com.nianticlabs.hpwu.prod&hl=es">DESCARGALO AQUÍ</a>
+            </div>
+          </div>
+        </section>
       <!-- Section to filters -->
       <section class="filters">
           <select class="selectHouse select">
@@ -42,11 +72,6 @@
             <option value="male">Masculino</option>
           </select>
       </section>
-        <section class="btn-filters">
-          <button class="btn-general" id="btn-wand" type="button">VARITAS</button>
-          <button class="btn-general" id="btn-patronus" type="button">PATRONUS</button>
-        </section>
-      </ul>
       <!-- Section to show general data -->
       <section class="data-characters"></section>
       <!-- Section to show modal -->
