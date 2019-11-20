@@ -20,20 +20,20 @@ document.getElementById('menu-inicio').addEventListener('click', () => {
 
 // template
 const pintado = (dataPorCasa, p1, p2, p3) => {
-  const templatePotter = [];
+  let templatePotter = '';
   dataPorCasa.forEach((extrae) => {
     if (p3 !== '') {
-      templatePotter.push(`<div class="casas-card">
+      templatePotter += `<div class="casas-card">
               <img id= "${extrae[p2]}" class="imagen" src= "${extrae[p1]}"/>
               <p class="name">${extrae[p2]}</p>
               <p>${extrae[p3]}</p>
-            </div>`);
+            </div>`;
     }
     if (p3 === '') {
-      templatePotter.push(`<div class="casas-card">
+      templatePotter += `<div class="casas-card">
         <img id= "${extrae[p2]}" class="imagen" src= "${extrae[p1]}"/>
         <p>${extrae[p2]}</p>
-        </div>`);
+        </div>`;
     }
   });
   return templatePotter;
@@ -44,13 +44,17 @@ const pintadoModal = (extrae) => {
   const personaje = filtrado(datos, 'name', extrae);
   // son las variables que luego tomaran otros valores para el modal
   let {
-    vivir, estudiante, staff, coma, patronus, grisesImagen, iconoLuto, varita,
+    vivir, estudiante, staff, coma, patronus, grisesImagen, iconoLuto, varita, cumpleaños,
   } = '';
-
   if (personaje[0].house === '') {
     coma = '';
   } else {
     coma = ', ';
+  }
+  if (personaje[0].dateOfBirth === '') {
+    cumpleaños = 'Desconocido';
+  } else {
+    cumpleaños = personaje[0].dateOfBirth;
   }
   if (personaje[0].alive === true) {
     vivir = 'vivo';
@@ -83,36 +87,36 @@ const pintadoModal = (extrae) => {
   }
   let personajeSelect = '';
   personajeSelect = `
-      <div class="contenido-modal">
-      <span class="cerrar" id="cerrar">X</span>
-       <div class="foto">
-        <img id ="imagenSelect" src="${personaje[0].image}">
-        <div class="icono">${iconoLuto}</div>
-        ${grisesImagen};
-        <p>${personaje[0].actor}</p>
-       </div>
-       <div id="foto">
-        <img src="${personaje[0].image}" class="foto">
-        <p>Actor/Actriz: ${personaje[0].actor}</p>
-       </div>
-       <div class="datos">
-       <h3>${personaje[0].house}${coma}${estudiante}${staff}${vivir} </h3>
-       <p>Especie: ${personaje[0].species}</p>
-       <p>Género: ${personaje[0].gender}</p>
-       <p>Color de cabello: ${personaje[0].hairColour}</p>
-       <p>Color de Ojos: ${personaje[0].eyeColour}</p>
-       </div>
-       <div id="datos-v-p">
-       <div class="varita">
-       <h1>Varita</h1>
-       <p>${varita}<p>
-       </div>
-       <div class="patronus">
-       <h2>Patronus</h2>
-       <p>${patronus}</p>
-       </div>
-       </div>
-     </div>`;
+  <div class="contenido-modal">
+  <div id="nombre-persona">
+   <h1 class="nombre-persona">${personaje[0].name}</h1>
+   <span id="cerrar" class="cerrar">&times;</span>
+   </div>
+   <div id="foto">
+    <img id="imagenSelect" class="foto" src="${personaje[0].image}">
+    <div class="icono">${iconoLuto}</div>
+    ${grisesImagen}
+    <p>Actor/Actriz: ${personaje[0].actor}</p>
+   </div>
+   <div class="datos">
+   <h3>${personaje[0].house}${coma}${estudiante}${staff}${vivir}</h3>
+   <p>${cumpleaños}</p>
+   <p>Especie: ${personaje[0].species}</p>
+   <p>Género: ${personaje[0].gender}</p>
+   <p>Color de cabello: ${personaje[0].hairColour}</p>
+   <p>Color de Ojos: ${personaje[0].eyeColour}</p>
+   </div>
+   <div id="datos-v-p">
+   <div class="varita">
+   <h2>Varita</h2>
+   <p>${varita}<p>
+   </div>
+   <div class="patronus">
+   <h2>Patronus</h2>
+   <p>${patronus}</p>
+   </div>
+   </div>
+ </div>`;
   return personajeSelect;
 };
 const divTodosP = document.getElementById('todosP');
