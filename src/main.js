@@ -23,6 +23,7 @@ const showPicturePokemon = (data) => {
   return plantillaPokemon;
 };
 
+// Plantilla buscador por nombre
 const opcion = (data) => {
   const datalistName= document.getElementById('pokemon-name')
   // debugger;
@@ -133,33 +134,24 @@ const nameCandyPokemon = document.getElementById('busqueda-nombre-pokemon-carame
 const candyCountUsuario = document.getElementById('candy-count');
 const botonDescubrir= document.getElementById('btn-calculate');
 botonDescubrir.addEventListener('click', () => {
-  console.log (nameCandyPokemon.value)
-  console.log (candyCountUsuario.value)
-
-  
-  // document.getElementById('caramelo-muestra-pokemon').innerHTML=nameCandyPokemon.value;
-}) 
-// return (nameCandyPokemon , candyCountUsuario)
-// const plantillaResultado = (data, candyCountUsuario) => {
-//   console.log (plantillaResultado(opcion(POKEMON.name),5));
-// }
-
-
-  // let respuestaCaramelos = 0;
-  // for (let i = 0; i < data.length; i++) {
-  //     if (candyCountUsuario < data[i].candy_Count) {
-  //       respuestaCaramelos = data[i].candy_count - candyCountUsuario ;
-
-  //         <div>
-  //         <h1>Tu pokemon  es :</h1>
-  //         <p>${nameCandyPokemon}</p>
-  //         <img class="img-res" src='${data[i].img}'>
-  //         <h1> Tienes ${candyCountUsuario} dulces, te faltan  ${respuestaCaramelos} para evolucionar a :</h1>                
-  //         <p>${data[i].pokemonEvolutionName}</p>
-  //         <img class="img-res" src='${data[i].pokemonEvolutionImg}'>
-  //         </div>`;
-          
-  //     }
-  //     }
-
+  event.preventDefault(); 
+  console.log(nameCandyPokemon.value)
+  console.log(candyCountUsuario.value)
+const plantillaResultado = (data,candyCountUsuario) => {
+  let faltaCaramelo = 0;
+  for (let i = 0; i < data.length; i++) {
+      if (nameCandyPokemon.value == data[i].name && candyCountUsuario < data[i].candy_count){
+        faltaCaramelos = data[i].candy_count - candyCountUsuario;
+        let faltaCaramelo =
+          `<div>
+          <h1>Tu pokemon  es :</h1>
+          <p>${nameCandyPokemon}</p>
+          <img src='${data[i].img}'>
+          <h1> Tienes ${candyCountUsuario} dulces, te faltan  ${respuestaCaramelos} para evolucionar a :</h1>                
+          <p>${data[i].next_evolution}</p>
+          <img src='${data[i].img}'+1>
+          </div>`;
+const final = document.getElementById('caramelo-muestra-pokemon').innerHTML(faltaCaramelo)
+}}}
+});
 
