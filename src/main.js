@@ -1,10 +1,11 @@
 import dataPotter from './data/potter/potter.js';
 import {
-  filterHouse, filterGender, filterRole, filterWandCore, search, changeDataWand,
+  filterHouse, filterGender, filterRole, filterWandCore, search, changeDataWand, filterPatronus,
 } from './data.js';
 
 const dataCharacters = document.querySelector('.data-characters');
 const sectionFilters = document.querySelector('.filters');
+const btnFiltersWand = document.querySelector('.btn-filters-wands');
 const selectElementHouse = document.querySelector('.selectHouse');
 const selectElementRole = document.querySelector('.selectRole');
 const selectElementGender = document.querySelector('.selectGender');
@@ -82,6 +83,21 @@ const showTemplateWands = (objDataPotter) => {
     </div>`;
   return template;
 };
+
+// function to get y show patronus data using template
+const showTemplatePatronus = (objDataPotter) => {
+  const template = document.createElement('article');
+  template.className = 'card-data-patronus';
+  template.innerHTML = `
+    <div class='card-details'>
+      <h2 class='features' id='name'>${objDataPotter.name}</h2>
+    </div>
+    <div class='card-description'>
+      <img class='img-modal-card' src='${objDataPotter.image}'/>
+      <p id='wood'> Madera : ${objDataPotter.patronus} </p>
+    </div>`;
+  return template;
+};
 // function to go through for each object (characters)
 const showMainData = (data) => {
   data.forEach((objDataPotter) => {
@@ -96,6 +112,13 @@ const showWandsData = (listdataPotter) => {
     document.querySelector('.data-wands').appendChild(showTemplateWands(objDataPotter));
   });
   return showWandsData;
+};
+// function to go through for each object (patronus)
+const showPatronusData = (listdataPotter) => {
+  listdataPotter.forEach((objDataPotter) => {
+    document.querySelector('.data-patronus').appendChild(showTemplatePatronus(objDataPotter));
+  });
+  return showPatronusData;
 };
 // Event to call to section wands
 btnWand.addEventListener('click', () => {
@@ -135,6 +158,11 @@ btnPhoenix.addEventListener('click', () => {
 // Event to call to section patronus
 btnPatronus.addEventListener('click', () => {
   dataCharacters.remove();
+  sectionFilters.remove();
+  btnFiltersWand.remove();
+  const dataPatronus = filterPatronus(dataPotter);
+  dataWands.querySelectorAll('.card-data-wands').forEach((child) => child.remove());
+  showPatronusData(dataPatronus);
 });
 
 // Event to call to function filterHouse
