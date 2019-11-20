@@ -308,7 +308,7 @@
         padding-top: 5%;
         margin-left: 18px;
         font-family: "HARRYP__";
-        font-size: 37pt;
+        font-size: 50pt;
         font-weight: 100;
         color: rgb(30, 30, 30);
         text-shadow: 1px 1px 1px rgba(59, 59, 59, 0.37);
@@ -322,7 +322,6 @@
         position: absolute;
         top: 0;
         right: 0;
-        outline: 1px solid green;
         /* background-color: white;
         border-radius: 100px; */
     }
@@ -375,7 +374,7 @@
         padding: 5px;
         width: 45%;
         height: 30%;
-        margin-bottom: 5px;
+        margin-bottom: 5%;
         background-color: white;
         opacity: 80%;
         border-radius: 10px;

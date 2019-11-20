@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'iconos';
-  src:  url('fonts/iconos.eot?6ol5r');
-  src:  url('fonts/iconos.eot?6ol5r#iefix') format('embedded-opentype'),
-    url('fonts/iconos.ttf?6ol5r') format('truetype'),
-    url('fonts/iconos.woff?6ol5r') format('woff'),
-    url('fonts/iconos.svg?6ol5r#iconos') format('svg');
+  src:  url('fonts/iconos.eot?iy6wla');
+  src:  url('fonts/iconos.eot?iy6wla#iefix') format('embedded-opentype'),
+    url('fonts/iconos.ttf?iy6wla') format('truetype'),
+    url('fonts/iconos.woff?iy6wla') format('woff'),
+    url('fonts/iconos.svg?iy6wla#iconos') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -13,7 +13,7 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'iconos' !important;
-  speak: none;
+  speak-as: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -30,6 +30,9 @@
 }
 .icon-chevron-down:before {
   content: "\e921";
+}
+.icon-cake:before {
+  content: "\e977";
 }
 .icon-menu:before {
   content: "\e9e0";
