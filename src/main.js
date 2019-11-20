@@ -32,7 +32,7 @@ const pintado = (dataPorCasa, p1, p2, p3) => {
     if (p3 === '') {
       templatePotter += `<div class="casas-card">
         <img id= "${extrae[p2]}" class="imagen" src= "${extrae[p1]}"/>
-        <p>${extrae[p2]}</p>
+        <p class="name">${extrae[p2]}</p>
         </div>`;
     }
   });
@@ -57,13 +57,13 @@ const pintadoModal = (extrae) => {
     cumpleaños = personaje[0].dateOfBirth;
   }
   if (personaje[0].alive === true) {
-    vivir = 'vivo';
+    vivir = 'Vivo';
     grisesImagen = '';
     iconoLuto = '';
   } else {
-    vivir = 'muerto';
+    vivir = 'Muerto';
     grisesImagen = '<style> #imagenSelect{ filter: grayscale(100%);} </style>';
-    iconoLuto = '<img src="images/lazo.png">';
+    iconoLuto = '<img class="icono" src="images/lazo.png">';
   }
   if (personaje[0].hogwartsStudent === true) {
     estudiante = 'Estudiante - ';
@@ -87,36 +87,35 @@ const pintadoModal = (extrae) => {
   }
   let personajeSelect = '';
   personajeSelect = `
-  <div class="contenido-modal">
-  <div id="nombre-persona">
-   <h1 class="nombre-persona">${personaje[0].name}</h1>
-   <span id="cerrar" class="cerrar">&times;</span>
-   </div>
-   <div id="foto">
-    <img id="imagenSelect" class="foto" src="${personaje[0].image}">
-    <div class="icono">${iconoLuto}</div>
-    ${grisesImagen}
-    <p>Actor/Actriz: ${personaje[0].actor}</p>
-   </div>
-   <div class="datos">
-   <h3>${personaje[0].house}${coma}${estudiante}${staff}${vivir}</h3>
-   <p>${cumpleaños}</p>
-   <p>Especie: ${personaje[0].species}</p>
-   <p>Género: ${personaje[0].gender}</p>
-   <p>Color de cabello: ${personaje[0].hairColour}</p>
-   <p>Color de Ojos: ${personaje[0].eyeColour}</p>
-   </div>
-   <div id="datos-v-p">
-   <div class="varita">
-   <h2>Varita</h2>
-   <p>${varita}<p>
-   </div>
-   <div class="patronus">
-   <h2>Patronus</h2>
-   <p>${patronus}</p>
-   </div>
-   </div>
- </div>`;
+      <div class="contenido-modal">
+      <div id="nombre-persona">
+       <h1 class="nombre-persona">${personaje[0].name}</h1>
+       <span id="cerrar" class="cerrar">&times;</span>
+       </div>
+       <div id="foto">
+        <img id="imagenSelect" class="foto" src="${personaje[0].image}">
+        <div class="icono">${iconoLuto}</div>
+        ${grisesImagen}
+        <p>Actor/Actriz: ${personaje[0].actor}</p>
+       </div>
+       <div class="datos">
+       <h3>${personaje[0].house}${coma}${estudiante}${staff}${vivir} </h3>
+       <p>Especie: ${personaje[0].species}</p>
+       <p>Género: ${personaje[0].gender}</p>
+       <p>Color de cabello: ${personaje[0].hairColour}</p>
+       <p>Color de Ojos: ${personaje[0].eyeColour}</p>
+       </div>
+       <div id="datos-v-p">
+       <div class="varita">
+       <h2>Varita</h2>
+       <p>${varita}<p>
+       </div>
+       <div class="patronus">
+       <h2>Patronus</h2>
+       <p>${patronus}</p>
+       </div>
+       </div>
+     </div>`;
   return personajeSelect;
 };
 const divTodosP = document.getElementById('todosP');
