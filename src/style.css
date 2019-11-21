@@ -42,11 +42,56 @@ header nav {
   align-items: center;
   padding: 14px;
 }
-.search-box input {
+/*BUSCADORRRRRRRRRRRR*/
+.search-box {
+  position: absolute;
+  top: 6.4%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  background: #d5796ca1;
+  height: 40px;
+  border-radius: 40px;
+  padding: 0px;
+}
+.search-box:hover > .search-texto {
+  width: 240px;
+  padding: 0 6px;
+}
+.search-box:hover > .search-btn {
+  background: white;
+
+}
+.search-btn {
+  color: #1b9c7c;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: salmon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  margin-top: 0px;
+}
+.search-texto {
+  border: none;
+  background: none;
+  outline: none;
+  float: right;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+}
+
+/* .search-box input {
   margin: 10px 10px;
   border-radius: 10px;
   padding: 10px;
-}
+} */
 nav > li {
   float:left;
   list-style: none;
@@ -85,7 +130,6 @@ nav li a:hover {
 nav li:hover > ul {
   display:block;
 }
-.btn-menu{}
 .btn-option a{
     background-color: #223750;
 }

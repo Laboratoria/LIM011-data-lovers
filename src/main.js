@@ -1,10 +1,7 @@
-// import POKEMON from './data/pokemon/pokemon.js'
-// import LoL from './data/lol/lol.js'
 import POTTER from './data/potter/potter.js';
-// console.log(POTTER);
 import {
   filtroPorRoles,
-  filtroPorCasas, filtroPorGenero, buscador, ordenarAscendente,
+  filtroPorCasas, filtroPorGenero, ordenarAscendente, buscador,
 // eslint-disable-next-line import/extensions
 } from './data.js';
 
@@ -77,11 +74,12 @@ btnBienvenida.addEventListener('click', () => {
 const porNombre = document.getElementById('buscarData');
 porNombre.addEventListener('input', (event) => {
   cajaImagenes.innerHTML = generarTemplateString(buscador(POTTER, event.target.value));
+  console.log(event.target.value);
 });
 
 ordenando.addEventListener('click', (event) => {
-  const ordenarCaptura = event.target.id;
-  console.log(event.target.id);
+  // event.target.id;
+  // console.log(event.target.id);
   // miArrImagenes.innerHTML = generarTemplateString(ordenarAscendente(ordenarCaptura, POER));
   if (event.target.id === 'a') {
     cajaImagenes.innerHTML = generarTemplateString(ordenarAscendente(POTTER));

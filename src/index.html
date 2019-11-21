@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sniglet&display=swap" rel="stylesheet">
   </head>
   <body> 
     <header>
      <nav class="nav hide" id="nav">
         <div class="search-box" id="botonbusca">
-            <input class="search-texto " id="buscarData" type="text" value="" placeholder="Buscar" >
+            <input class="search-texto " id="buscarData" type="text" value="" placeholder="Buscar">
+            <a class = "search-btn" href="#">
+              <i class="fas fa-search"></i>
+            </a>
           </div>
 
         <li class="btn-menu"><a><img src="../src/image/hogwarts.png" alt="icon-hogwarts"> Rol </a>
@@ -38,10 +45,12 @@
           <ul id="ordenar">
             <li><a id="a" href="#">Ascendente</a></li>
             <li><a id="b" href="#">Descendente</a></li>
+            </ul>
         </li>
       </nav>      
     <!-- <img src="../src/image/conste.jpg" alt="">     -->
   </header>
+  <main>
   <div class="pantalla1" id="vista-uno">
     <!-- <img src="../src/image/portadaaaaa.jpeg" alt=""> -->
     <div>Descubre el mundo mágico de Harry Potter </div>
@@ -49,29 +58,7 @@
     <button type="button" id ="btn-bienvenida" class="btn-bienvenida"><strong>Bienvenid@</strong></button>
   </div>
     <div id="arrPotter" class="imagenPersonajes hide"></div>
+  </main>
     <script type="module" src="main.js"></script>
   </body>
 </html>
-
-
-<!-- <header class="header">
-    <div class="titulo">
-      <h1>Harry Potter</h1>
-    </div>
-    <div class="navegacion">
-      <div class="boton-menu">
-        <a href="#"><img src="../src/image/menu.png" alt="burger-menu"></a>
-      </div>
-      <ul class="nav">
-        <li><a>Filtrar por características</a>
-        <ul class="menu">
-          <li><a href="#hogwarts">Hogwarts</a></li>
-          <li><a href="#house">House</a></li>
-          <li><a href="#wand">Wand</a></li>
-          <li><a href="#patronus">Patronus</a></li>
-        </ul>
-      </li>
-    </ul>
-    </div>
-  </header>
-  <div id="root"></div> -->
