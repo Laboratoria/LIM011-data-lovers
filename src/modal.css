@@ -1,18 +1,3 @@
-
-/* MODAL */
-/* .fondo {
-    background-color: rgba(0,0,0,.6);
-    position:fixed;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
-    display: none;
-    opacity: 0;
-
-    size 256 × 359
-} */
-
 .contenido {
     position: fixed;
     background-color: rgba(0,0,0,0.9);
@@ -27,11 +12,8 @@
 }
 
 .contenido-modal {
-    /* background-image: url(images/paper.png);
-    background-repeat: no-repeat;
+    background-image: url('images/paper.jpg');
     background-size: cover;
-    background-position-x: 20%; */
-    background-color: white;
     border-radius: 20px;
     width: 300px;
     height: 570px;
@@ -41,9 +23,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center space-around;
+    justify-content: center space-between;
     cursor: default;
-    /* outline: 1px solid green; */
 }
 
 /* titulo */
@@ -51,14 +32,12 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* outline: 1px solid green; */
     width: 98%;
     margin-top: 2px;
     margin-bottom: 5px;
 }
 
 .nombre-persona{
-    /* outline: 1px solid green; */
     width: 98%;
     text-align: center;
     margin-left: 18px;
@@ -74,13 +53,10 @@
     color: black;
     text-align: end;
     font-size: 20px;
-    /* background-color: white;
-    border-radius: 100px; */
 }
 
 /* foto */
 #foto {
-    /* outline: 1px solid red; */
     text-align: center;
     margin-bottom: 3px;
     width: 85%;
@@ -89,7 +65,6 @@
 
 
 #foto .icono {
-    /* outline: 1px solid green; */
     position: absolute;
     width: 40%;
     height: 30%;
@@ -100,7 +75,7 @@
 .foto{
     display: inline-block;
     width: 70%;
-    height: 280px;
+    height: 260px;
     box-shadow: 2px 3px 3px rgba(27, 27, 27, 0.8);
     margin-bottom: 1px;
     filter: grayscale(0%);
@@ -108,7 +83,6 @@
 }
 
 #foto p {
-    /* outline: 1px solid green; */
     font-weight: 300;
     font-style: italic;
     font-size: 14px;
@@ -119,12 +93,9 @@
 /* datos */
 
 .datos{
-    /* outline: 1px solid rgb(0, 0, 0); */
     padding: 2px;
     width: 85%;
     margin-bottom: 5px;
-    /* background-color: white; */
-    /* opacity: 80%; */
     border-radius: 10px;
 }
 
@@ -144,72 +115,50 @@
 .datos p{
     color: #292929;
     text-align: start;
-    font-size: 14px;
+    font-size: 13px;
     padding-left: 20%;
     font-weight: 400;
 }
 
 #datos-v-p{
-    /* outline: 1px solid blueviolet; */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 98%;
-    margin-top: 2% ;
+    margin-top: 5%;
 }
 
 .varita{
-    /* outline: 1px solid white; */
     width: 45%;
-    background-color: #125b75;
-    /* opacity: 80%; */
-    border-radius: 9.5px 9.5px 10px 10px;
     padding-bottom: 5px;
+    color: #383838;
 }
 
-.varita h2{
-    /* background-color: #01151c; */
-    border-radius: 100px;
+.varita h2, .patronus h2{
     padding: 2px;
     text-align: center;
     font-size: 17px;
     font-weight: 400;
     color: white;
+    background-color: #125b75;
+    border-radius: 9.5px 9.5px 10px 10px;
+    box-shadow: 1px 1px 5px rgba(27, 27, 27, 0.8);
 }
 
-.varita p{
+.varita p, .patronus p{
     text-align: start;
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 400;
     margin-left: 10px;
-    color: #ffffff;
+    margin-top: 2%;
 }
 
 .patronus{
-    /* outline: 1px solid white; */
     width: 45%;
-    background-color: #248fb6;
-    /* opacity: 80%; */
-    border-radius: 9.5px 9.5px 10px 10px;
-    color: white;
+    color: #383838;
     padding-bottom: 2px;
 }
 
-.patronus h2{
-    /* background-color: #01151c; */
-    border-radius: 100px;
-    text-align: center;
-    font-size: 17px;
-    font-weight: 400;
-}
-
-.patronus p{
-    font-size: 12px;
-    font-weight: 300;
-    color: #ffffff;
-    text-align: start;
-    margin-left: 10px;
-}
 
 /* INICIO */
 #inicio{ /*div de vistas */
@@ -251,6 +200,24 @@
 }
 
 @media (min-width:1024px){
+
+/* INICIO */
+
+    #inicio{ /*div de vistas */
+    margin-top: 60px;
+    width: 100%;
+    height: 100%;
+    min-height: 800px;
+    /* fondo de hipogrifo */
+    background-image: url(images/hipo-e.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    }
+
     #inicio img{
         margin-top: 50px;
         width: 20%;
@@ -274,17 +241,12 @@
     }
 
     /* MODAL */
-
     
     .contenido-modal {
-        /* background-image: url(images/paper.png); */
-        /* background-repeat: no-repeat;
-        background-size: cover;
-        background-position-x: 20%; */
         background-color: white;
         border-radius: 20px;
-        width: 70%;
-        height: 80%;
+        width: 60%;
+        height: 70%;
         margin-top: 60px;
         padding: 10px 50px;
         position: relative;
@@ -293,7 +255,6 @@
         align-items: center;
         justify-content: space-around;
         cursor: default;
-        outline: 1px solid green;
     }
     
     /* titulo */
@@ -303,10 +264,9 @@
         justify-content: flex-end;
         align-content: flex-end;
         order: 3;
-        outline: 1px solid pink;
         width: 50%;
-        height: 90%;
-        margin-bottom: 8px;
+        height: 80%;
+        margin-bottom: 5px;
         position: absolute;
         top: 5%;
         right: 3%;
@@ -314,10 +274,9 @@
     }
     
     .nombre-persona{
-        outline: 1px solid rgb(107, 0, 128);
         width: 98%;
         text-align: center;
-        padding-top: 5%;
+        padding-top: 3%;
         margin-left: 18px;
         font-family: "HARRYP__";
         font-size: 50pt;
@@ -325,56 +284,60 @@
         color: #023f55;
         text-shadow: 1px 1px 1px rgba(59, 59, 59, 0.37);
     }
+
     .cerrar {
-        padding: 5px;
         cursor: pointer;
-        color: black;
+        color: #464646;
+        padding: 0% 1.09%;
         text-align: end;
-        font-size: 20px;
+        font-size: 30px;
         position: absolute;
-        top: 0;
-        right: 0;
-        /* background-color: white;
-        border-radius: 100px; */
+        top: -3%;
+        right: -3%;
+        transition: 0.5s;
+    }
+
+    .cerrar:hover{
+        color: #023f55;
+        background: #023f558f;
+        border-radius: 200px 200px 200px 200px;
     }
     
     /* foto */
     #foto{
-        outline: 1px solid red;
         text-align: center;
         margin: 0px 40px 5px 5px;
-        width: 38%;
+        width: 35%;
         height: 90%;
         position: absolute;
         top: 30px;
         right: 0;
         bottom: 0;
-        left: 20px;
+        left: 7%;
     }
 
     #foto .icono {
         position: absolute;
         width: 40%;
         height: 30%;
-        top: 10px;
-        right: 10px;
+        top: 3%;
+        right: 5%;
     }
     
     .foto{
         display: inline-block;
-        width: 95%;
+        width: 90%;
         height: 95%;
-        box-shadow: 2px 3px 3px rgba(27, 27, 27, 0.8);
-        margin-bottom: 3px;
+        box-shadow: 2px 3px 10px rgba(27, 27, 27, 0.8);
+        margin-bottom: 5px;
         filter: grayscale(0%);
         border-radius: 20px;
     }
     
     #foto p {
-        outline: 1px solid green;
         font-weight: 300;
         font-style: italic;
-        font-size: 14px;
+        font-size: 18px;
         color: #252525;
         text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.37);
     }
@@ -382,105 +345,78 @@
     /* datos */
     
     .datos{
-        outline: 1px solid rgb(0, 0, 0);
         padding: 5px;
         width: 45%;
         height: 30%;
         margin-bottom: 5%;
         border-radius: 10px;
         position: absolute;
-        top: 25%;
-        right: 5%;
-        /* bottom: 0; */
+        top: 20%;
+        right: 7%;
     }
     .datos h2 {
         color: #005675;
         text-align: center;
-        font-size: 24px;
-        margin-bottom: 15px;
-        outline: 1px solid green;
-        text-align: center;
+        font-size: 30px;
+        margin-bottom: 20px;
+       text-align: center;
     }
     .bday {
         color: #8f8f8f;
         text-align: center;
-        font-size: 20px;
-        margin-bottom: 10px;
+        font-size: 25px;
+        margin-bottom: 15px;
         margin-top: 5px;
         text-align: start;
-        padding-left: 2px;
+        padding-left: 10px;
     }
     .datos p{
         text-align: start;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 400;
-        outline: 1px solid green;
         color: #292929;
-        padding-left: 2px;
+        padding-left: 10px;
         margin-bottom: 5px;
     }
     
     #datos-v-p{
-        outline: 1px solid blueviolet;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         width: 50%;
         height: 30%;
         position: absolute;
-        top: 60%;
-        right: 3%;
-        /* bottom: 0; */
+        top: 55%;
+        right: 5%;
     }
     
     .varita{
-        outline: 1px solid white;
         width: 40%;
-        background-color: white;
-        opacity: 80%;
+    }
+    
+    .varita h2, .patronus h2{
+        text-align: center;
+        font-size: 20px;
+        font-weight: 400;
+        padding: 3% 0%;
+        color: white;
+        background-color: #125b75;
         border-radius: 9.5px 9.5px 10px 10px;
         padding-bottom: 2px;
+        box-shadow: 2px 3px 10px rgba(27, 27, 27, 0.8);
     }
     
-    .varita h2{
-        background-color: #01151c;
-        border-radius: 100px;
-        text-align: center;
-        font-size: 17px;
-        font-weight: 400;
-        color: white;
-    }
-    
-    .varita p{
+    .varita p, .patronus p{
         text-align: start;
-        font-size: 12px;
-        font-weight: 300;
+        font-size: 20px;
+        padding-bottom: 8px;
+        font-weight: 400;
         margin-left: 10px;
-        color: #01151c;
+        color: #383838;
+        margin-top: 5%;
     }
     
     .patronus{
-        outline: 1px solid white;
         width: 40%;
-        background-color: white;
-        opacity: 80%;
-        border-radius: 9.5px 9.5px 10px 10px;
-        color: white;
-        padding-bottom: 2px;
-    }
-    
-    .patronus h2{
-        background-color: #01151c;
-        border-radius: 100px;
-        text-align: center;
-        font-size: 17px;
-        font-weight: 400;
-    }
-    
-    .patronus p{
-        font-size: 12px;
-        font-weight: 300;
-        color: #01151c;
-        text-align: center;
     }
 }

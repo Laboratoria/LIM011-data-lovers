@@ -8,6 +8,7 @@
 .ocultar{
     display: none;
 }
+
 *{
     margin: 0;
     padding: 0;
@@ -80,8 +81,6 @@ header label { /* esto es el icono de menu */
 #menu-nav:checked ~ .menu{
     transform: translateX(0%);
 }
-
-
 
 /* CUERPO */
 
@@ -199,6 +198,7 @@ header label { /* esto es el icono de menu */
     animation-iteration-count: 1;
     animation-name: ghost;
 }
+
 @keyframes ghost {
 0%   {opacity: 0%;}
 100% {opacity: 100%;}
@@ -287,12 +287,6 @@ footer #footer{ /*div padre */
         font-weight: bold;
         color: #023f55;
     }
-
-    /* .menu a{
-        background: none;
-        font-weight: bold;
-        color: #023f55;
-    } */
 
     header label{
         display: none;
