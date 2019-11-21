@@ -7,6 +7,7 @@ import POKEMON from './data/pokemon/pokemon.js';
 import {
   filtroTipoPokemon, filtroAlfabeticoAZ, filtroAlfabeticoZA, ordenNumerico, busquedaPokemonNombre,
 } from './data.js';
+import { blockStatement } from '@babel/types';
 
 // Plantilla Solo imagen y nombre
 const showPicturePokemon = (data) => {
@@ -25,14 +26,14 @@ const showPicturePokemon = (data) => {
 
 // Plantilla buscador por nombre
 const opcion = (data) => {
-  const datalistName= document.getElementById('pokemon-name')
+  const datalistName = document.getElementById('pokemon-name')
   // debugger;
-  for(let i = 0; i < data.length ; i += 1){
+  for (let i = 0; i < data.length; i += 1) {
     const option = document.createElement('option');
     option.innerHTML = data[i].name;
     datalistName.appendChild(option);
   }
-}; 
+};
 opcion(POKEMON);
 
 
@@ -89,7 +90,7 @@ inputBusqueda.addEventListener('input', () => {
 seleccionTipoPokemon.addEventListener('click', () => {
   if (seleccionTipoPokemon.value === 'Todos') {
     listaFiltroTipo.innerHTML = showPicturePokemon(POKEMON);
-  return listaFiltroTipo;
+    return listaFiltroTipo;
   }
   listaFiltroTipo.innerHTML = showPicturePokemon(filtroTipoPokemon(POKEMON, seleccionTipoPokemon.value));
   return listaFiltroTipo;
@@ -130,28 +131,61 @@ botonOrdenNumerico.addEventListener('click', () => {
 });
 
 //Plantilla para evolucion Pokemon
+
 const nameCandyPokemon = document.getElementById('busqueda-nombre-pokemon-caramelos');
 const candyCountUsuario = document.getElementById('candy-count');
-const botonDescubrir= document.getElementById('btn-calculate');
+const botonDescubrir = document.getElementById('btn-calculate');
 botonDescubrir.addEventListener('click', () => {
-  event.preventDefault(); 
-  console.log(nameCandyPokemon.value)
-  console.log(candyCountUsuario.value)
-const plantillaResultado = (data,candyCountUsuario) => {
-  let faltaCaramelo = 0;
-  for (let i = 0; i < data.length; i++) {
-      if (nameCandyPokemon.value == data[i].name && candyCountUsuario < data[i].candy_count){
-        faltaCaramelos = data[i].candy_count - candyCountUsuario;
-        let faltaCaramelo =
-          `<div>
-          <h1>Tu pokemon  es :</h1>
-          <p>${nameCandyPokemon}</p>
-          <img src='${data[i].img}'>
-          <h1> Tienes ${candyCountUsuario} dulces, te faltan  ${respuestaCaramelos} para evolucionar a :</h1>                
-          <p>${data[i].next_evolution}</p>
-          <img src='${data[i].img}'+1>
-          </div>`;
-const final = document.getElementById('caramelo-muestra-pokemon').innerHTML(faltaCaramelo)
-}}}
-});
+  event.preventDefault();
 
+  // Hallar caramelos 
+    let respuestaCarameloEvolucion;
+    for (let i = 0; i < POKEMON.length; i++) {
+      if(POKEMON[i].name === nameCandyPokemon.value){
+      if (POKEMON[i].candy_count === undefined){
+        let muestrarNaCaramelos = 
+        `<div>
+        <h1 class="letterCaramelos">Tu pokemon no puede evolucionar :</h1>
+        <img src= "${POKEMON[i].img}" class="img-pokemon-caramelos">
+        <p class="name-pokemon">${nameCandyPokemon.value}</p>
+        <h1 class="letterCaramelos"> Te sobra ${candyCountUsuario.value}  caramelos. </h1>  
+        </div>`;
+        document.getElementById('caramelo-muestra-pokemon').innerHTML = muestrarNaCaramelos
+        }
+
+      if (parseInt(candyCountUsuario.value) < POKEMON[i].candy_count){
+        let muestrarFaltaCaramelos = (POKEMON[i].candy_count - parseInt(candyCountUsuario.value));
+        const faltaCaramelos =
+        `<div>
+        <h1 class="letterCaramelos">Tu pokemon  es :</h1>
+        <img class="img-pokemon-caramelos" src= "${POKEMON[i].img}" > 
+        <p class="name-pokemon">${nameCandyPokemon.value}</p>
+        <h1 class="letterCaramelos"> Tienes ${candyCountUsuario.value} caramelos, te faltan  ${muestrarFaltaCaramelos} para evolucionar a :</h1>                
+        <img class="img-pokemon-caramelos" src= "${POKEMON[i+1].img}">
+        <p class="name-pokemon">${POKEMON[i].next_evolution[0].name}</p>
+        </div>`;
+      document.getElementById('caramelo-muestra-pokemon').innerHTML = faltaCaramelos
+    }
+
+      if (parseInt(candyCountUsuario.value) > POKEMON[i].candy_count){
+        let muestraSobraCaramelos = (parseInt(candyCountUsuario.value) - POKEMON[i].candy_count)
+        const sobraCaramelos =
+        `<div>
+        <h1 class="letterCaramelos">Tu pokemon  es :</h1>
+        <img class="img-pokemon-caramelos" src="${POKEMON[i].img}">
+        <p class="name-pokemon">${nameCandyPokemon.value}</p>
+        <h1 class="letterCaramelos"> Tienes ${candyCountUsuario.value} caramelos, ya podrías evolucionarlo a :</h1>                
+        <img class="img-pokemon-caramelos" src= "${POKEMON[i+1].img}">
+        <p class="name-pokemon">${POKEMON[i+1].name}</p>
+        <h1 class="letterCaramelos">Y aun así, te sobran  ${muestraSobraCaramelos} caramelos.<h1>
+        </div>`
+      document.getElementById('caramelo-muestra-pokemon').innerHTML = sobraCaramelos;}
+      
+      }}});
+
+      document.getElementById('btn-limpiar-caramelos').addEventListener('click',() =>{
+      document.getElementById('caramelo-muestra-pokemon').innerHTML = ''
+      document.getElementById('form').reset()}
+      );
+      
+      
