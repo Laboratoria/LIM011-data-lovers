@@ -41,7 +41,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center space-around;
     cursor: default;
     /* outline: 1px solid green; */
 }
@@ -50,10 +50,11 @@
 #nombre-persona{
     display: flex;
     flex-direction: row;
-    justify-content: center space-between;
+    justify-content: center;
     /* outline: 1px solid green; */
     width: 98%;
-    margin-bottom: 8px;
+    margin-top: 2px;
+    margin-bottom: 5px;
 }
 
 .nombre-persona{
@@ -64,7 +65,7 @@
     font-family: "HARRYP__";
     font-size: 30pt;
     font-weight: 100;
-    color: rgb(30, 30, 30);
+    color: #023f55;
     text-shadow: 1px 1px 1px rgba(59, 59, 59, 0.37);
 }
 .cerrar {
@@ -79,16 +80,16 @@
 
 /* foto */
 #foto {
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     width: 85%;
     position: relative;
 }
 
 
 #foto .icono {
-    outline: 1px solid green;
+    /* outline: 1px solid green; */
     position: absolute;
     width: 40%;
     height: 30%;
@@ -101,7 +102,7 @@
     width: 70%;
     height: 280px;
     box-shadow: 2px 3px 3px rgba(27, 27, 27, 0.8);
-    margin-bottom: 3px;
+    margin-bottom: 1px;
     filter: grayscale(0%);
     border-radius: 20px;
 }
@@ -111,35 +112,41 @@
     font-weight: 300;
     font-style: italic;
     font-size: 14px;
-    color: rgb(37, 37, 37);
+    color: #252525;
     text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.37);
 }
 
 /* datos */
 
 .datos{
-    /* outline: 1px solid white; */
-    padding: 5px;
+    /* outline: 1px solid rgb(0, 0, 0); */
+    padding: 2px;
     width: 85%;
     margin-bottom: 5px;
-    background-color: white;
-    opacity: 80%;
+    /* background-color: white; */
+    /* opacity: 80%; */
     border-radius: 10px;
 }
 
-.datos h3{
-    color: #01151c;
+.datos h2{
+    color: #005675;
+    text-align: center;
+    font-size: 15.5px;
+    margin-bottom: 3px;
+}
+
+.bday{
+    color: #8f8f8f;
     text-align: center;
     font-size: 16px;
     margin-bottom: 5px;
 }
-
 .datos p{
-    color: #01151c;
+    color: #292929;
     text-align: start;
     font-size: 14px;
-    padding-left: 10px;
-    font-weight: 300;
+    padding-left: 20%;
+    font-weight: 400;
 }
 
 #datos-v-p{
@@ -148,20 +155,22 @@
     flex-direction: row;
     justify-content: space-around;
     width: 98%;
+    margin-top: 2% ;
 }
 
 .varita{
     /* outline: 1px solid white; */
     width: 45%;
-    background-color: white;
-    opacity: 80%;
+    background-color: #125b75;
+    /* opacity: 80%; */
     border-radius: 9.5px 9.5px 10px 10px;
-    padding-bottom: 2px;
+    padding-bottom: 5px;
 }
 
 .varita h2{
-    background-color: #01151c;
+    /* background-color: #01151c; */
     border-radius: 100px;
+    padding: 2px;
     text-align: center;
     font-size: 17px;
     font-weight: 400;
@@ -173,21 +182,21 @@
     font-size: 12px;
     font-weight: 300;
     margin-left: 10px;
-    color: #01151c;
+    color: #ffffff;
 }
 
 .patronus{
     /* outline: 1px solid white; */
     width: 45%;
-    background-color: white;
-    opacity: 80%;
+    background-color: #248fb6;
+    /* opacity: 80%; */
     border-radius: 9.5px 9.5px 10px 10px;
     color: white;
     padding-bottom: 2px;
 }
 
 .patronus h2{
-    background-color: #01151c;
+    /* background-color: #01151c; */
     border-radius: 100px;
     text-align: center;
     font-size: 17px;
@@ -197,8 +206,9 @@
 .patronus p{
     font-size: 12px;
     font-weight: 300;
-    color: #01151c;
-    text-align: center;
+    color: #ffffff;
+    text-align: start;
+    margin-left: 10px;
 }
 
 /* INICIO */
@@ -312,7 +322,7 @@
         font-family: "HARRYP__";
         font-size: 50pt;
         font-weight: 100;
-        color: rgb(30, 30, 30);
+        color: #023f55;
         text-shadow: 1px 1px 1px rgba(59, 59, 59, 0.37);
     }
     .cerrar {
@@ -365,40 +375,49 @@
         font-weight: 300;
         font-style: italic;
         font-size: 14px;
-        color: white;
+        color: #252525;
         text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.37);
     }
     
     /* datos */
     
     .datos{
-        outline: 1px solid white;
+        outline: 1px solid rgb(0, 0, 0);
         padding: 5px;
         width: 45%;
         height: 30%;
         margin-bottom: 5%;
-        background-color: white;
-        opacity: 80%;
         border-radius: 10px;
         position: absolute;
-        top: 23%;
+        top: 25%;
         right: 5%;
         /* bottom: 0; */
     }
-    
-    .datos h3{
-        color: #01151c;
+    .datos h2 {
+        color: #005675;
         text-align: center;
-        font-size: 16px;
-        margin-bottom: 5px;
+        font-size: 24px;
+        margin-bottom: 15px;
+        outline: 1px solid green;
+        text-align: center;
     }
-    
-    .datos p{
-        color: #01151c;
+    .bday {
+        color: #8f8f8f;
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 10px;
+        margin-top: 5px;
         text-align: start;
-        font-size: 14px;
-        padding-left: 15%;
-        font-weight: 300;
+        padding-left: 2px;
+    }
+    .datos p{
+        text-align: start;
+        font-size: 18px;
+        font-weight: 400;
+        outline: 1px solid green;
+        color: #292929;
+        padding-left: 2px;
+        margin-bottom: 5px;
     }
     
     #datos-v-p{
