@@ -127,7 +127,7 @@
     position: absolute;
     width: 15%;
     height: 8%;  
-    margin-top: -12%;
+    margin-top: -10%;
     margin-left: 50%;
 }
 
@@ -435,11 +435,19 @@ footer{
     }
     .poke img{
         position: relative;
-        margin-top: 1015%;
+        margin-top: 1140%;
         margin-left: 5px;         
     }
     .pagina3{      
         flex-flow: column;
     }
-
+    .btnApp{
+        height: 45%;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .btnUp{
+        position: relative;
+    }
+    
    }

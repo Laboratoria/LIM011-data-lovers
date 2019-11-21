@@ -47,7 +47,7 @@ export const ascendente = (datos) => {
 };
 
 export const mostrarTop = (arr) => {
-  arr.sort((p1, p2) => ((p1.spawn_chance > p2.spawn_chance) ? 1 : -1));
+  arr.sort((p1, p2) => ((p2.spawn_chance > p1.spawn_chance) ? 1 : -1));
   const arrTop = arr.slice(0, 10); // slice retorna una copia del array de pokemones del 0 al 10
   return arrTop;
 };
