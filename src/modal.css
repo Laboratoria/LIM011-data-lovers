@@ -27,10 +27,11 @@
 }
 
 .contenido-modal {
-    background-image: url(images/paper.png);
+    /* background-image: url(images/paper.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: 20%;
+    background-position-x: 20%; */
+    background-color: white;
     border-radius: 20px;
     width: 300px;
     height: 570px;
@@ -110,7 +111,7 @@
     font-weight: 300;
     font-style: italic;
     font-size: 14px;
-    color: white;
+    color: rgb(37, 37, 37);
     text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.37);
 }
 
@@ -266,10 +267,11 @@
 
     
     .contenido-modal {
-        background-image: url(images/paper.png);
-        background-repeat: no-repeat;
+        /* background-image: url(images/paper.png); */
+        /* background-repeat: no-repeat;
         background-size: cover;
-        background-position-x: 20%;
+        background-position-x: 20%; */
+        background-color: white;
         border-radius: 20px;
         width: 70%;
         height: 80%;
