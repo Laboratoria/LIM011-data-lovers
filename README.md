@@ -150,9 +150,9 @@ son:
 ### Diseño de la Interfaz de Usuario
 
 #### Prototipo de baja fidelidad
-![image]()
-![image]()
-![image]()
+![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/prototipado1.jpeg)
+![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/prototipado2.jpeg)
+![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/prototipado3.jpeg)
 
 #### Prototipo de alta fidelidad
 Prototipo para Desktop
@@ -173,11 +173,13 @@ https://www.figma.com/file/KI1RbmIBszM3HQiwv6dolt/Pokemon-DataLovers?node-id=20%
 ### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
 Responsive para iphone:
-![image]()
+![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/pagina1celular.jpg)
+![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/pagina2celular.jpg)
+![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/pagina3celular.jpg)
 
 ### Pruebas unitarias
 
-![image]()
+![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/test.jpg)
 
 ## 6. Parte adicional-opcional (extensión)
 
