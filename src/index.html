@@ -5,10 +5,60 @@
     <title>Data Lovers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sniglet&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <div id="root"></div>
+  <body> 
+    <header>
+     <nav class="nav hide" id="nav">
+        <div class="search-box" id="botonbusca">
+            <input class="search-texto " id="buscarData" type="text" value="" placeholder="Buscar">
+            <a class = "search-btn" href="#">
+              <i class="fas fa-search"></i>
+            </a>
+          </div>
+
+        <li class="btn-menu"><a><img src="../src/image/hogwarts.png" alt="icon-hogwarts"> Rol </a>
+          <ul id="roles">
+            <li class="btn-option"><a id="hogwartsStudent" href="#"> Estudiante </a></li>
+            <li class="btn-option"><a id="hogwartsStaff" href="#"> Profesor </a></li>
+          </ul>
+        </li>
+        <li class="btn-menu"><a><img src="../src/image/house.png" alt="icon-house"> Casa</a>
+          <ul id = "casas">
+            <li class="btn-option"><a id="Gryffindor" href="#">Gryffindor</a></li>
+            <li class="btn-option"><a id="Slytherin" href="#">Slytherin</a></li>
+            <li class="btn-option"><a id="Hufflepuff" href="#">Hufflepuff</a></li>
+            <li class="btn-option"><a id="Ravenclaw" href="#">Ravenclaw</a></li>
+          </ul>
+        </li>
+        <li class="btn-menu"><a><img src="../src/image/gender.png" alt="icon-wand"> Género </a>
+          <ul id ="genero">
+            <li><a id="male" href="#">Masculino</a></li>
+            <li><a id="female" href="#">Femenino  </a></li>
+          </ul>
+        </li>
+        <li class= "btn-menu"> <a> Ordenar </a>
+          <ul id="ordenar">
+            <li><a id="a" href="#">Ascendente</a></li>
+            <li><a id="b" href="#">Descendente</a></li>
+            </ul>
+        </li>
+      </nav>      
+    <!-- <img src="../src/image/conste.jpg" alt="">     -->
+  </header>
+  <main>
+  <div class="pantalla1" id="vista-uno">
+    <!-- <img src="../src/image/portadaaaaa.jpeg" alt=""> -->
+    <div>Descubre el mundo mágico de Harry Potter </div>
+    <img class = "logo-potter" src="../src/image/hp.png" alt="logo-HarryPotter">
+    <button type="button" id ="btn-bienvenida" class="btn-bienvenida"><strong>Bienvenid@</strong></button>
+  </div>
+    <div id="arrPotter" class="imagenPersonajes hide"></div>
+  </main>
     <script type="module" src="main.js"></script>
   </body>
 </html>
