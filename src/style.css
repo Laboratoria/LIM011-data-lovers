@@ -1,4 +1,4 @@
-
+/* eslint-disable object-curly-newline */
 /* Fondo de Pagina 1 */
 .bienvenida{
     background-image: url("http://getwallpapers.com/wallpaper/full/0/8/2/53557.jpg");
@@ -335,7 +335,7 @@ footer{
     .fondoBoton{
         width: 120px;
         margin-left: 10%;
-        font-size: 13px;
+        font-size: 12px;
     }
     .texto{
         font-size: 15px; 
@@ -435,7 +435,7 @@ footer{
     }
     .poke img{
         position: relative;
-        margin-top: 1140%;
+        margin-top: 1180%;
         margin-left: 5px;         
     }
     .pagina3{      
@@ -444,10 +444,41 @@ footer{
     .btnApp{
         height: 45%;
         font-size: 12px;
-        line-height: 20px;
+        line-height: 20px;  
     }
     .btnUp{
         position: relative;
     }
-    
+
    }
+   /* IPad (landscape) */
+   @media only screen and (min-width :768px) and (max-width :1024px) {
+   
+    .bienvenida{
+        width: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        position: relative;
+        display: flex;  
+    }
+    .bienvenida:before{
+        margin-top: 20%;
+        height: 40%;
+    }
+    .fondoBoton{
+    width: 70%;
+    font-size: 12px;
+}
+    .logo img{
+        width: 400%;
+        margin-left: -400%;
+        margin-top: 80%;
+}
+    .texto{
+    margin-right: 60%;
+    margin-top: 240px;
+    font-size: 16px;
+ }
+
+}

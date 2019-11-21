@@ -1,4 +1,5 @@
 /* eslint-disable import/extensions */
+/* eslint-disable object-curly-newline */
 /* eslint object-curly-newline: ["error", { "multiline": true }] */
 
 import POKEMON from './data/pokemon/pokemon.js';

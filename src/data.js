@@ -37,21 +37,16 @@ export const traerPokemonesPorCantidadDeCaramelos = (arr, candies) => {
 };
 
 export const ascendente = (datos) => {
-  const ordenar = datos.sort((a, b) => { /* sort ordena elementos */
-    if (a.name > b.name) {
-      return 1;
-    }
-    return -1;
-  });
+  const ordenar = datos.sort((a, b) => ((a.name > b.name) ? 1 : -1));
   return ordenar;
 };
 
 export const mostrarTop = (arr) => {
-  arr.sort((p1, p2) => ((p2.spawn_chance > p1.spawn_chance) ? 1 : -1));
+  arr.sort((p1, p2) => ((p1.spawn_chance < p2.spawn_chance) ? 1 : -1));
   const arrTop = arr.slice(0, 10); // slice retorna una copia del array de pokemones del 0 al 10
   return arrTop;
 };
 
-export const buscarPokemon = (array, name) => array.filter( // filter crea un nuevo array con todos los elementos que cumplan la condición
-  (pintar) => pintar.name.toLowerCase().startsWith(name), // tolowercase devuelve en minusculas pintar.name
+export const buscarPokemon = (array, strg) => array.filter( // filter crea un nuevo array con todos los elementos que cumplan la condición
+  (pintar) => pintar.name.toLowerCase().startsWith(strg), // tolowercase devuelve en minusculas pintar.name
 ); // startsWith indica si name inicia con los caracteres de otro string, regresando true o false según sea el caso
