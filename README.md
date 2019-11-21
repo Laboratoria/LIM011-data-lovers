@@ -145,7 +145,7 @@ son:
 1. Que el usuario encuentre toda la informacion en un solo lugar, de forma clara y precisa.
 
 ### Historias de usuario
-![image]()
+![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/historias%20de%20usuario.jpeg)
 
 ### Diseño de la Interfaz de Usuario
 
