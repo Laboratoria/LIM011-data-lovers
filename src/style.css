@@ -169,14 +169,14 @@ footer .social a {
 }
 
 header {
-	padding-bottom: 15px;
-    display: flex;
+	display: flex;
     flex-direction: row;
     flex-flow: wrap;
 }
 
 header .logo {
-	margin: 20px;
+	margin-top: 20px;
+	margin-left: 30px;
 	display: flex;
     flex-direction: row;
     flex-flow: wrap;
@@ -184,6 +184,8 @@ header .logo {
 
 .navigation-bar{
 	flex-direction: column;
+	margin-top: 30px;
+	margin-bottom: 30px;
 	}
 
 nav {
@@ -192,10 +194,11 @@ nav {
 
 .nav-style {
 	
-		width: 80%;
+		width: 90%;
 		height: 40px;
 		font-size: 16px;
-		margin-bottom: 20px;
+		
+		margin-bottom: 10px;
 		font-family: 'Rubik', sans-serif;
 		
 		

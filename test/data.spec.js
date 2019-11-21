@@ -2,14 +2,36 @@
 /* eslint-disable import/named */
 /* eslint-disable linebreak-style */
 // importamos la función `example`
-import { example } from '../src/data';
+import {
+  idPokemon, orderFilter, typeFilter, weaknessFilter, topPokemon,
+} from '../src/data';
 
-describe('example', () => {
+describe('idPokemon', () => {
   it('debería ser una función', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof idPokemon).toBe('function');
   });
+});
 
-  describe('example', () => {
-    // escribe aquí tu test
+describe('orderFilter', () => {
+  it('debería ser una función', () => {
+    expect(typeof orderFilter).toBe('function');
+  });
+});
+
+describe('typeFilter', () => {
+  it('debería ser una función', () => {
+    expect(typeof typeFilter).toBe('function');
+  });
+});
+
+describe('weaknessFilter', () => {
+  it('debería ser una función', () => {
+    expect(typeof weaknessFilter).toBe('function');
+  });
+});
+
+describe('topPokemon', () => {
+  it('debería ser una función', () => {
+    expect(typeof topPokemon).toBe('function');
   });
 });

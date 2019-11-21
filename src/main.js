@@ -3,7 +3,6 @@
 import POKEMON from './data/pokemon/pokemon.js';
 import {
   idPokemon, orderFilter, typeFilter, weaknessFilter, topPokemon,
-// eslint-disable-next-line import/extensions
 } from './data.js';
 
 const pokeImages = document.getElementById('show-pokemon');
