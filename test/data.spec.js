@@ -1,5 +1,5 @@
 import {
-  filterHouse, filterRole, filterGender, search, filterWandCore, changeDataWand,
+  filterHouse, filterRole, filterGender, search, filterWandCore, changeDataWand, filterPatronus,
 } from '../src/data';
 
 const input = [{
@@ -156,11 +156,11 @@ const inputWands = [{
   alive: true,
   image: 'http://hp-api.herokuapp.com/images/hermione.jpeg',
 }];
-describe('testear la función filterHouse', () => {
-  it('debería ser una función', () => {
+describe('Test to filterHouse function', () => {
+  it('Should be a function', () => {
     expect(typeof filterHouse).toBe('function');
   });
-  it('debería filtrar Hufflepuff', () => {
+  it('Should filter only characters of Hufflepuff', () => {
     expect(filterHouse(input, 'Hufflepuff')).toStrictEqual([{
       name: 'Cedric Diggory',
       species: 'human',
@@ -186,11 +186,11 @@ describe('testear la función filterHouse', () => {
   });
 });
 
-describe('testear la función filterRole', () => {
-  it('debería ser una función', () => {
+describe('Test to filterRole function', () => {
+  it('Should be a function', () => {
     expect(typeof filterRole).toBe('function');
   });
-  it('debería filtrar Estudiante', () => {
+  it('Should filter only Students ', () => {
     expect(filterRole(input, 'true')).toStrictEqual([{
       name: 'Cedric Diggory',
       species: 'human',
@@ -216,11 +216,11 @@ describe('testear la función filterRole', () => {
   });
 });
 
-describe('testear la función filterGender', () => {
-  it('debería ser una función', () => {
+describe('Test to filterGender function', () => {
+  it('Should be a function', () => {
     expect(typeof filterGender).toBe('function');
   });
-  it('debería filtrar Male', () => {
+  it('Should filter only male characters', () => {
     expect(filterGender(input, 'male')).toStrictEqual([{
       name: 'Cedric Diggory',
       species: 'human',
@@ -246,11 +246,11 @@ describe('testear la función filterGender', () => {
   });
 });
 
-describe('testear la función search', () => {
-  it('debería ser una función', () => {
+describe('Test to function search', () => {
+  it('Should be a function', () => {
     expect(typeof search).toBe('function');
   });
-  it('debería filtrar Cedric', () => {
+  it('Should filter only Cedric', () => {
     expect(search(input, 'Cedric')).toEqual([{
       name: 'Cedric Diggory',
       species: 'human',
@@ -276,11 +276,11 @@ describe('testear la función search', () => {
   });
 });
 
-describe('testear la función filterWandCore', () => {
-  it('debería ser una función', () => {
+describe('Test to filterWandCore function', () => {
+  it('Should be a function', () => {
     expect(typeof filterWandCore).toBe('function');
   });
-  it('debería filtrar Cedric', () => {
+  it('Should filter only characters with unicorn wand', () => {
     expect(filterWandCore(input, 'unicorn')).toEqual([{
       name: 'Cedric Diggory',
       species: 'human',
@@ -306,11 +306,11 @@ describe('testear la función filterWandCore', () => {
   });
 });
 
-describe('testear la función changeDataWand', () => {
-  it('debería ser una función', () => {
+describe('Test to changeDataWand function', () => {
+  it('Should be a function', () => {
     expect(typeof changeDataWand).toBe('function');
   });
-  it('debería cambiar data de varitas', () => {
+  it('Should change empty properties', () => {
     expect(changeDataWand(inputWands, 'wand')).toEqual([{
       name: 'Minerva McGonagall',
       image: 'http://hp-api.herokuapp.com/images/mcgonagall.jpg',
@@ -355,6 +355,35 @@ describe('testear la función changeDataWand', () => {
         core: 'dragon heartstring',
         length: 'no especificado',
       },
+    }]);
+  });
+});
+describe('Test to filterPatronus function', () => {
+  it('should be a function', () => {
+    expect(typeof filterPatronus).toBe('function');
+  });
+  it('Should filter only characters with patronus', () => {
+    expect(filterPatronus(input)).toEqual([{
+      name: 'Minerva McGonagall',
+      species: 'human',
+      gender: 'female',
+      house: 'Gryffindor',
+      dateOfBirth: '04-10-1925',
+      yearOfBirth: 1925,
+      ancestry: '',
+      eyeColour: '',
+      hairColour: 'black',
+      wand: {
+        wood: '',
+        core: '',
+        length: '',
+      },
+      patronus: 'tabby cat',
+      hogwartsStudent: false,
+      hogwartsStaff: true,
+      actor: 'Dame Maggie Smith',
+      alive: true,
+      image: 'http://hp-api.herokuapp.com/images/mcgonagall.jpg',
     }]);
   });
 });
