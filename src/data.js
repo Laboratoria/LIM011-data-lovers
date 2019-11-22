@@ -2,7 +2,7 @@
 /* eslint-disable consistent-return */
 /* eslint-disable array-callback-return */
 
-// FUNCIÓN DE BOTÓN DE ORDEN POR ID
+// FUNCIÓN DE ORDEN POR ID
 export const idPokemon = (POKEMON, order) => {
   let pokemonOrder = [];
   if (order === 'show') {
@@ -12,7 +12,7 @@ export const idPokemon = (POKEMON, order) => {
 };
 
 // FUNCIÓN DE ORDEN ALFABÉTICO + CANTIDAD DE CARAMELOS
-export const orderFilter = (POKEMON, order) => {
+export const orderData = (POKEMON, order) => {
   let pokemonOrder = [];
   if (order === 'ascendant-az') {
     pokemonOrder = POKEMON.sort((a, b) => {
@@ -43,7 +43,7 @@ export const orderFilter = (POKEMON, order) => {
 // FUNCION DE FILTRO POR TIPOS
 export const typeFilter = (show, pokeType) => {
   const arrFilter = [];
-  show.filter((showOne) => {
+  show.forEach((showOne) => {
     if (showOne.type.indexOf(pokeType) !== -1) {
       arrFilter.push(showOne);
     }
@@ -63,16 +63,6 @@ export const weaknessFilter = (show, pokeWeakness) => {
 };
 
 // FUNCION DE TOP 10 DE FRECUENCIA DE APARICIÓN
-export const topFilter = (show, pokeTop) => {
-  const arrFilter = [];
-  show.filter((showThree) => {
-    if (showThree.spawn_chance.indexOf(pokeTop) !== -1) {
-      arrFilter.push(showThree);
-    }
-  });
-  return arrFilter;
-};
-
 export const topPokemon = (POKEMON, order) => {
   let pokemonTop = [];
   if (order === 'poke-top') {
