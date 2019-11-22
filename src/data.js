@@ -49,7 +49,7 @@ export const orderData = (POKEMON, order) => {
 // FUNCION DE FILTRO POR TIPOS
 export const typeFilter = (show, pokeType) => {
   const arrFilter = [];
-  show.filter((showOne) => {
+  show.forEach((showOne) => {
     if (showOne.type.indexOf(pokeType) !== -1) {
       arrFilter.push(showOne);
     }
