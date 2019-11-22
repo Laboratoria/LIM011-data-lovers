@@ -11,38 +11,27 @@
   </head>
   <body>
     <header>
-      <div id="barra-navegar">
-        <div id="resumen" class="resumen"><span>&#9776;</span></div>
-          <ul>
-            <li><img src="pokeball.png" alt="logo"></li>
-            <li id="pokebola"><b>POKEMON</b></li>
-            <li id="filtro"><b>FILTRO</b> </li>
-            <li id="ordenar"><b>ORDENAR</b> </li>
-          </ul>
-      </div>
         <img class="logo" src="logo.png" alt=""><br><br>
         <input type="text" id="buscar-pokemon" placeholder="Busca tu pokemon">
-  </header>
+    </header>
 
-    <section id="menu-pokemon">
-
-      <div id="menu-pokebola">
-          <img src="imagenes/pokeball.png" alt="top10"><br>
-          <label><b>Pokebola</b></label>
-      </div>
-      <div id="menu-filtro"> 
-          <img src="imagenes/filtro.png" alt="top10"><br>
-          <label><b>Filtro</b></label>
-      </div>
-      <div id="menu-top10">
-        <img src="imagenes/top10.png" alt="top10"><br>
-        <label><b>Top</b></label>
-      </div>
-     <!-- <div id="menu-evolucion">
-          <img src="filtro.png" alt="top10"><br>
-          <label><b>Evolución</b></label>
-        </div>-->
-    </section>
+    <div id="barra-navegar">
+      <div id="resumen" class="resumen"><span>&#9776;</span></div><br>
+        <ul>
+          <li id="menu-pokebola">
+            <img src="imagenes/pokeball.png" alt="top10"><br>
+            <label><b>Pokebola</b></label>
+          </li>
+          <li id="menu-filtro">
+            <img src="imagenes/filtro.png" alt="top10"><br>
+            <label><b>Filtro</b></label>
+          </li>
+          <li id="menu-top10">
+            <img src="imagenes/top10.png" alt="top10"><br>
+            <label><b>Top</b></label>
+          </li>
+        </ul>
+    </div>
 
      <div id="ordenar-pokemon">
         <button  id="AZ"><b>A - Z</b></button>
@@ -98,7 +87,7 @@
           <option value="10 km">10 Km</option>
         </select>
     </div>
-    <div id="aleatorio"></div>
+    <div id = "mensaje"><b></b></div>
      <section id="contenedor-pokemon">
        
   </section>

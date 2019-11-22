@@ -1,52 +1,15 @@
+/* Configuracion inicial */
 *{
     padding: 0;
     margin: 0;
 }
 
+/* Ocultar elementos*/
 .hide{
     display: none;
 }
 
-#barra-navegar{
-    position: fixed;
-    width: 200px;
-    height: 35%;
-    background:rgb(63, 188, 226,0.7);
-    justify-content: center;
-    text-align: center;
-    left: -200px;
-    transition: all 500ms linear;
-    top:20px;
-}
-
-#barra-navegar.active{
-    left: 0;
-}
-
-#barra-navegar ul li {
-    border-bottom: chartreuse 2px solid;
-    padding: 15px 10px;
-}
-
-#barra-navegar ul li:hover{
-    background: chartreuse;
-}
-
-#resumen span{
-    display: block;
-    width:  40px;
-    text-align: center;
-    font-size: 30px;
-    background: rgb(63, 188, 226,0.7);
-    border: rgb(63, 188, 226) solid 3px;
-}
-
-#resumen {
-    position:absolute;
-    left: 230px;
-    cursor: pointer;
-}
-
+/* Estilo al header */
 header{
     position: relative;
     text-align: center;
@@ -55,7 +18,6 @@ header{
     justify-content: center;
    }
    
-
 .logo
 {
     justify-content: center;
@@ -70,16 +32,92 @@ header input {
     opacity: 40%;
 }
 
-body{
-    
+ /* ESTILO AL CUERPO */
+body {
     background-image: url(imagenes/grassweb.jpg) ;
     background-size: cover; 
     background-attachment: fixed;
     background-position: center center;
-    }
+}
 
-#contenedor-pokemon
-{
+/* Menu de navegacion */
+#barra-navegar { 
+    margin: 1%;
+    display: block;
+    width: 100%;
+    justify-content:space-around;
+    align-items: center;
+    text-align: center;
+    transition: all 500ms linear;
+    top:50px;
+    font-size: 8pt;
+}        
+    
+#barra-navegar.active{
+    left: 0;
+}    
+    
+#barra-navegar ul li {
+    display: inline-block;
+    width: 33%;
+    height: 100%;
+    border:rgb(63, 188, 226,0.7) 1pt solid;
+}
+    
+#barra-navegar ul li:hover{
+    background: chartreuse;
+}
+    
+#resumen span{
+    width:  40px;
+    text-align: center;
+    font-size: 30px;
+    background: rgb(63, 188, 226,0.7);
+    border: rgb(63, 188, 226) solid 3px;
+    display: none;
+}
+    
+#resumen {
+    position:absolute;
+    left: 100%;
+    cursor: pointer;
+}
+
+/* Dar estilo a los select filtro, ordenar */
+#filtros-pokemon, #ordenar-pokemon{
+    text-align: center;
+    justify-content: center;
+    margin-top: 40pt;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+    
+#ordenar-pokemon button, #filtros-pokemon select{
+    height: 40px;
+    background: rgb(181,254,167,0.4);
+    border: rgb(36,204,170) solid 2pt;
+    align-items: center;
+    border-radius: 10pt;
+    text-align-last:center;
+    padding-right: 5pt;
+    padding-left: 5pt;
+}
+    
+#ordenar-pokemon button:focus, #filtros-pokemon select:focus{
+    background: linear-gradient(#A8DD9C,#24CCAA);
+    height: 60px;
+    border-radius: 10pt;
+    outline: none;
+}
+
+#mensaje {
+    text-align: center;
+    font-size: 20pt;
+    font-family: pokemonNegro;    
+}
+
+/* Estilo al contenedor de la informacion */
+#contenedor-pokemon {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -90,42 +128,7 @@ body{
     padding: 10px;   
 }
 
-.modal {
-    position: fixed;
-    z-index: 1;
-    overflow: auto;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(15, 154, 179, 0.9);
-}
-
-#tarjeta-modal {
-    position: relative;
-    margin: auto;
-    width: 30%;
-    animation-name: modal;
-    animation-duration: 1s;
-    text-align: center;
-    justify-content: space-between;
-
-}
-
-@keyframes modal{
-    from{left:0px; opacity: 0;}
-    to{left:0px; opacity: 1;}
-}
-
-.flex {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
+/* Informacion general del pokemon */
 #tarjeta-poke {
     transform-style: preserve-3d;
     box-shadow: 5px 5px 3px 2px rgba(0,0,0,0.3);
@@ -134,7 +137,6 @@ body{
     width: 20%;
     margin: 10pt;
     padding: 5pt;
-
 }
 
 #tarjeta-poke img {
@@ -169,11 +171,65 @@ h4{
     margin: auto;
 }
 
+/* Estilo al modal */
+.modal {
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 154, 179, 0.9);
+}
+
+.flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#tarjeta-modal {
+    position: relative;
+    margin: auto;
+    width: 30%;
+    animation-name: modal;
+    animation-duration: 2s;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.evolucion-total{
+    display: inline-flex;
+    width: 100%;
+    justify-content:space-around ;
+    align-items: center;
+   
+}
+
+.caramelos{
+ background-image: url(imagenes/caramelo.png);
+ width: 8%;
+ height: 45px;
+ background-size: cover; 
+ font-family: pokemonNegro;
+
+
+}
+
+@keyframes modal{
+    from{left:-500px; opacity: 0;}
+    to{left:0px; opacity: 1;}
+}
+
 #tarjeta-top10, #tarjeta-modal {
 height: 220pt;
 margin-top: 5pt;
 margin: 5pt;
-background:rgb(0, 0, 0,0.6);
+background:linear-gradient(#A8DD9C,#24CCAA);
 border-radius: 15pt;
 align-content: center;
 text-align: center;
@@ -182,23 +238,21 @@ width: 40%;
 height: 55%;
 }
 
-.img-evolucion{
-    position: relative;
-    width: 40%;
+#tarjeta-modal button{
+    height: 10%;
+    width: 90%;
+    animation: glow .5s infinite alternate;
+    background: none;
+    border: none;
+    color: orange;
+    cursor: pointer;
 }
 
-.div-evolucion{
-    position: relative;
-    width: 30%;
-    margin: 1%;
-    display: inline-block;
-    background: whitesmoke;
-    font-size: 9pt;
-    border-radius: 5pt;
-    border: orange 2pt solid;
-    
-}
-
+@keyframes glow{
+    to {
+        text-shadow: -1px -1px  orange;
+    }
+ }
 
 #tarjeta-top10 img, .img-poke{
     width: 20%;
@@ -216,84 +270,25 @@ height: 55%;
     font-size: 10pt;
     }
 
- #tarjeta-modal button{
-    height: 10%;
-    width: 90%;
-    animation: glow .5s infinite alternate;
-    background: none;
-    border: none;
-    color: orange;
-    cursor: pointer;
-    
- }
-
- @keyframes glow{
-    to {
-        text-shadow: -1px -1px  orange;
-    }
- }
-
-
-#menu-pokemon
-{
-    display: flex;
+/* Evoluciones */
+.img-evolucion{
     position: relative;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: center;
-    width: 70%;
-    justify-content:space-around;
-    align-items: center;
-    margin:auto;
-    margin-top: 10pt;
-    padding: 5pt;
-    color: rgb(68, 105, 108);
+    width: 40%;
 }
 
-
-#menu-pokemon img
-{
-width: 70%;
-height: 70%;
-border-bottom: rgb(6, 235, 75) 4pt solid;
-padding: 4pt;
+.div-evolucion{
+    position: relative;
+    width: 25%;
+    margin: 1%;
+    display: inline-block;
+    background: whitesmoke;
+    font-size: 9pt;
+    border-radius: 5pt;
+    border: linear-gradient(#A8DD9C,#24CCAA) 6pt solid;
+    
 }
 
-#menu-pokemon div :hover
-{
-width: 110%;
-height: 110%;
-}
-
-#filtros-pokemon, #ordenar-pokemon{
-text-align: center;
-justify-content: center;
-margin-top: 40pt;
-margin: auto;
-width: 60%;
-font-family: 'Courier New', Courier, monospace;
-}
-
-
-#ordenar-pokemon button, #filtros-pokemon select{
-    height: 40px;
-    background: rgb(181,254,167,0.4);
-    border: rgb(36,204,170) solid 2pt;
-    align-items: center;
-    border-radius: 10pt;
-    text-align-last:center;
-    padding-right: 5pt;
-    padding-left: 5pt;
-}
-
-#ordenar-pokemon button:focus, #filtros-pokemon select:focus{
-    background: linear-gradient(#A8DD9C,#24CCAA);
-    width: 15%;
-    height: 60px;
-    border-radius: 10pt;
-    outline: none;
-}
-
+/* Responsive pantallas menores a 670px */
 @media(max-width: 670px)
 {
     body
@@ -302,11 +297,31 @@ font-family: 'Courier New', Courier, monospace;
     }
    
     #tarjeta-poke{
-        width: 40%;
+        width: 47%;
+        margin-left: 20%;
     }
     
     #tarjeta-modal{
         height: 42%;
         width: 80%;
     }
+
+    .div-evolucion{
+        width: 29%;
     }
+    #barra-navegar{
+        width: 25%;
+        left: -26%;
+        position: fixed;
+        justify-content: center;
+    }
+     
+    #barra-navegar ul li{
+    display: block;
+    width: 100%;
+    padding: 4%;    }
+
+    #resumen span{
+        display: block;
+    }
+  }

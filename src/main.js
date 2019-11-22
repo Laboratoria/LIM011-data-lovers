@@ -1,22 +1,21 @@
 /* eslint-disable max-len */
-/* eslint-disable no-alert */
 /* eslint-disable no-console */
 
 // Importar datos de pokemon.js
 import POKEMON from './data/pokemon/pokemon.js';
 
-// Importar datos de data.js
+// IMPORTAR DATOS DEL DATA.JS
 import {
   filtrarPokemon, ordenarPokemon, top10, filtrarEgg, buscarPokemon, ordenarDescPokemon,
 } from './data.js';
 
-// Agregar elementos a la clase hide para que esten ocultos
+// OCULTAR ELEMENTOS
 document.querySelector('#filtros-pokemon').classList.add('hide');
 
-// Mostrar todos los pokemon
+// MOSTRAR LOS 151 POKEMON
 const datosPokemon = (datos) => {
   datos.forEach((poke) => {
-    // Creando la vista adelante del Pokemon(numero, nombre e imagen)
+    // CREANDO DATOS PRINCIPALES DEL POKEMON
     const tarjetaPokemon = document.createElement('div');
     tarjetaPokemon.setAttribute('id', 'tarjeta-poke');
     const numPoke = document.createElement('h4');
@@ -32,14 +31,16 @@ const datosPokemon = (datos) => {
     const contenedorPokemon = document.querySelector('#contenedor-pokemon');
     contenedorPokemon.appendChild(tarjetaPokemon);
 
+    // EVENTO CLICK PARA CADA POKEMON
     tarjetaPokemon.addEventListener('click', () => {
       const modalPoke = document.createElement('div');
       modalPoke.classList.add('modal');
       const flexPoke = document.createElement('div');
       flexPoke.classList.add('flex');
-      // Creando la vista atras del Pokemon(caracteristicas)
       const tarjetaModal = document.createElement('div');
       tarjetaModal.setAttribute('id', 'tarjeta-modal');
+
+      // CREANDO LAS CARACTERISTICAS DEL POKEMON
       const imgPoke = document.createElement('img');
       imgPoke.setAttribute('src', poke.img);
       imgPoke.classList.add('img-poke');
@@ -56,10 +57,12 @@ const datosPokemon = (datos) => {
         allPoke.appendChild(caracteristica);
       }
 
+      // CREANDO LAS EVOLUCIONES DE CADA POKEMON
       const btnEvoluciones = document.createElement('button');
       btnEvoluciones.classList.add('btn-evoluciones');
       btnEvoluciones.innerHTML = 'VER EVOLUCIONES';
-
+      const EvolucionTotal = document.createElement('div');
+      EvolucionTotal.classList.add('evolucion-total');
       btnEvoluciones.addEventListener('click', () => {
         const evolucion = filtrarPokemon(POKEMON, 'candy', poke.candy);
         if (poke.candy === 'None') {
@@ -77,36 +80,36 @@ const datosPokemon = (datos) => {
             imgEvolucion.classList.add('img-evolucion');
             const nameEvolucion = document.createElement('div');
             nameEvolucion.innerHTML = evolucion[i].name;
-            tarjetaModal.appendChild(divEvolucion);
+            const caramelos = document.createElement('div');
+            caramelos.classList.add('caramelos');
+            caramelos.innerHTML = evolucion[i].candy_count;
+            tarjetaModal.appendChild(EvolucionTotal);
             divEvolucion.appendChild(imgEvolucion);
             divEvolucion.appendChild(nameEvolucion);
+            EvolucionTotal.appendChild(divEvolucion);
+            EvolucionTotal.appendChild(caramelos);
+            if (i === evolucion.length - 1) {
+              EvolucionTotal.removeChild(caramelos);
+            }
             btnEvoluciones.classList.add('hide');
           }
         }
       });
 
+      // SALIR DEL MODAL
       window.addEventListener('click', (close) => {
         if (close.target === flexPoke) {
           document.body.removeChild(modalPoke);
         }
       });
 
-      document.addEventListener('keyup', (event) => {
-        const key = event.key || event.keyCode;
-
-        if (key === 'Escape' || key === 'Esc' || key === 27) {
-          document.body.removeChild(modalPoke);
-        }
-      });
-
+      // ASIGNANDO NODOS
       tarjetaModal.appendChild(imgPoke);
       tarjetaModal.appendChild(allPoke);
       tarjetaModal.appendChild(btnEvoluciones);
       modalPoke.appendChild(flexPoke);
       flexPoke.appendChild(tarjetaModal);
       document.body.appendChild(modalPoke);
-
-    // Creando div contenedores
     });
   });
   return datosPokemon;
@@ -122,6 +125,7 @@ document.querySelector('#resumen').addEventListener('click', () => {
 // POKEBOLA sección donde se muestra los 151 pokemon
 document.querySelector('#menu-pokebola').addEventListener('click', () => {
   document.querySelector('#contenedor-pokemon').innerHTML = '';
+  document.querySelector('#mensaje').innerHTML = '';
   document.querySelector('#filtros-pokemon').classList.add('hide');
   document.querySelector('#ordenar-pokemon').classList.remove('hide');
   document.querySelector('#filtrar-tipo-pokemon').selectedIndex = 0;
@@ -163,23 +167,27 @@ document.querySelector('#filtrar-tipo-pokemon').addEventListener('change', () =>
   document.querySelector('#contenedor-pokemon').innerHTML = '';
   const seleccioneTipoPokemon = document.querySelector('#filtrar-tipo-pokemon').value;
   datosPokemon(filtrarPokemon(POKEMON, 'type', seleccioneTipoPokemon));
+  document.querySelector('#mensaje').innerHTML = `Los pokemon tipo ${seleccioneTipoPokemon} son:`;
 });
 
 document.querySelector('#filtrar-debilidad-pokemon').addEventListener('change', () => {
   document.querySelector('#contenedor-pokemon').innerHTML = '';
   const seleccioneDebilidadPokemon = document.querySelector('#filtrar-debilidad-pokemon').value;
   datosPokemon(filtrarPokemon(POKEMON, 'weaknesses', seleccioneDebilidadPokemon));
+  document.querySelector('#mensaje').innerHTML = `Los pokemon con debilidad ${seleccioneDebilidadPokemon} son:`;
 });
 
 document.querySelector('#filtrar-km-pokemon').addEventListener('change', () => {
   document.querySelector('#contenedor-pokemon').innerHTML = '';
   const seleccioneKmPokemon = document.querySelector('#filtrar-km-pokemon').value;
   datosPokemon(filtrarEgg(POKEMON, seleccioneKmPokemon));
+  document.querySelector('#mensaje').innerHTML = `Los pokemon con distancia huevo de ${seleccioneKmPokemon} son:`;
 });
 
 // TOP 10 seccion donde se muestra los pokemon con mayor aparicion
 document.querySelector('#menu-top10').addEventListener('click', () => {
   document.querySelector('#contenedor-pokemon').innerHTML = '';
+  document.querySelector('#mensaje').innerHTML = '';
   document.querySelector('#filtros-pokemon').classList.add('hide');
   document.querySelector('#ordenar-pokemon').classList.add('hide');
   const mostrarTop10 = (datos) => {
@@ -212,7 +220,7 @@ document.querySelector('#menu-top10').addEventListener('click', () => {
   return mostrarTop10(top10(POKEMON, 10));
 });
 
-// BUSCADOR.
+// BUSCADOR se busca el pokemon por el nombre.
 document.querySelector('#buscar-pokemon').addEventListener('input', () => {
   document.querySelector('#contenedor-pokemon').innerHTML = '';
   datosPokemon(buscarPokemon(POKEMON, document.querySelector('#buscar-pokemon').value));

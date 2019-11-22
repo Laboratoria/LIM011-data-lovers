@@ -1,9 +1,8 @@
-# Data Lovers
+# Data Lovers - Pokipedia
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
+* [1. Resumen del proyecto](#1-resumen-del-proyecto)
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
 * [4. Consideraciones generales](#4-consideraciones-generales)
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
@@ -13,63 +12,9 @@
 
 ***
 
-## 1. Preámbulo
+## 1. Resumen del proyecto
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin precedentes.
-
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender, procesar y mostrar estos datos. Una manera
-simple de hacerlo es creando _interfaces_ y _visualizaciones_.
-
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir (a la derecha) una interfaz amigable y comprensible
-para el usuario.
-
-![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
-
-\* Puedes ver el detalle de la data en este [link](https://gist.github.com/lalogf/dd4aa3017a9f8aa8f90dfbca382c4dc9#file-student-json)
-y la interfaz construida en este [link](https://app.talento.laboratoria.la/profile/HFOoMpOreBU2psCcjjLg5O2EWEv2).
-
-## 2. Resumen del proyecto
-
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que tu usuario necesita.
-
-Como entregable final tendrás una página web que permita a los usuarios
-**visualizar, filtrar, ordenar, etc.**.
-
-Te proponemos una serie de datos de diferentes _temáticas_ para que los
-explores y decidas con cuál te interesa trabajar. Cada _set_ de datos viene con
-información básica sobre los datos y su estructura, y una lista de las
-necesidades de los usuarios que proviene de una investigación (_research_)
-hecha por el equipo de Laboratoria.
-
-Una vez que elijas, diseña tu proyecto intentando ofrecerle la mejor experiencia
-posible para ayudarle a satisfacer sus necesidades.
-
-### Estos son datos que te proponemos:
-
-* [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
-  y Johto, junto con sus respectivas estadísticas usadas en el juego
-  [Pokémon GO](http://pokemongolive.com).
-  * [Investigación con jugadores de Pokémon Go](/pokemon/README.md)
-
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-  * [Investigación con jugadores de LoL](/lol/README.md)
-
-* [Harry Potter](src/data/potter/potter.json):
-  Este set de datos muestra la lista de los personajes del mundo de
-  [Harry Potter: Wizards Unite](https://www.wizardingworld.com), junto con sus
-  respectivas características mencionadas en la serie de novelas de Harry Potter
-  escrita por la autora británica J.K.Rowling.
-  * [Investigación con jugadores de Harry Potter: Wizards Unite](/potter/README.md)
-
+En este proyecto se construyo una pagina web referente a POKEMON utilizando una data de 151 pokemon con sus respectivas estadisticas usadas en el juego POKEMON GO.
 
 ## 3. Objetivos de aprendizaje
 
@@ -139,32 +84,112 @@ son:
 
 ### Definición del producto
 
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
+El juego POKEMON GO fue lanzado en verano del 2016 y es jugado por millones de personas en todo el mundo y cada vez mas personas se suman a ello.
+
+Es por eso que en este proyecto se construyo una pagina web referente a los 151 pokemon con sus respectivas estadisticas para que el usuario pueda tener mayor conocimiento de ellos de una manera rapida y sencilla.
+
 
 ### Historias de usuario
 
-Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias
-de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que el usuario necesita hacer/ver. Las **Historias de Usuario** deben
-ser el resultado de tu proceso de entendimiento de tus usuarios.
+Durante el desarrollo del proyecto se realizo las siguientes historias de usuario: 
 
-Asegúrate de incluir la definición de terminado (_definition of done_) y los
-Criterios de Aceptación para cada una.
+1. Yo como usuario quiero ver el nombre, imagen y las características principales de todos los pokemones para elegir el más adecuado.
 
-En la medida de lo posible, termina de construir una historia de usuario antes
-de pasar a la siguiente (Cumple con Definición de Terminado + Criterios de
-Aceptación).
+    * DEFINICIÓN DE TERMINADO
+      - El código cumple con la guía de estilos guardada (Eslint).
+      - El código esta en el repositorio.
+      - La historia a sido testeada por lo menos en 3 usuarios.
+      - La historia a pasado por FeedBack de compañeras.
+      - La publicación en el GitHub-pages.
+
+    * CRITERIOS DE ACEPTACIÓN
+      - El usuario puede ver la lista de nombres e imágenes de todos los pokemones.
+      - El usuario puede seleccionar un pokemon y aparecen sus características (peso, tamaño,    tipo y debilidades).
+      - El usuario puede visualizar la información en desktop.
+      - El usuario puede visualizar la informacion en celular.
+
+2. Yo como usuario quiero filtrar los pokemon por su tipo y por debilidades para poder ver    quienes son los más fuertes.
+
+    * DEFINICIÓN DE TERMINADO
+      - El código cumple con la guía de estilos guardada (Eslint).
+      - El código esta en el repositorio.
+      - La historia a sido testeada por lo menos en 3 usuarios.
+      - La historia a pasado por FeedBack de compañeras.
+      - La publicación en el GitHub-pages. 
+
+    * CRITERIOS DE ACEPTACIÓN
+      - El usuario puede filtrar a los pokemon por su tipo(agua, fuego, veneno, etc).
+      - El usuario puede filtrar a los pokemon por sus debilidades (arena, roca, agua, etc).
+      - El usuario puede filtrar a los pokemon por sus Km Huevo (2km, 5km, 10km).
+      - El usuario puede eliminar el filtro y volver a mostrar los 151 pokemon.
+      - El usuario puede visualizar la informacion en desktop.
+      - El usuario puede visualizar la informacion en celular.
+
+3. Yo como usuario quiero ordenar los pokemon por id y nombre de forma ascendente y descendente. 
+
+    * DEFINICIÓN DE TERMINADO
+      - El código cumple con la guía de estilos guardada (Eslint).
+      - El código esta en el repositorio.
+      - La historia a sido testeada por lo menos en 3 usuarios.
+      - La historia a pasado por FeedBack de compañeras.
+      - La publicación en el GitHub-pages. 
+
+    * CRITERIOS DE ACEPTACIÓN
+      - El usuario puede ordenar por su nombre (A - Z) o (Z - A).
+      - El usuario puede ordenar por su id (1 - 151) o (151 - 1).
+      - El usuario puede visualizar la informacion en desktop.
+      - El usuario puede visualizar la informacion en celular.
+
+
+4. Yo como usuario quiero saber el top 10 de los pokemones que mas aparecen.
+
+    * DEFINICIÓN DE TERMINADO
+      - El código cumple con la guía de estilos guardada (Eslint).
+      - El código esta en el repositorio.
+      - La historia a sido testeada por lo menos en 3 usuarios.
+      - La historia a pasado por FeedBack de compañeras.
+      - La publicación en el GitHub-pages. 
+
+    * CRITERIOS DE ACEPTACIÓN
+      - El usuario ve la imagen, el nombre del pokemon y los indicadores de aparición.
+      - El usuario puede visualizar la información en desktop.
+      - El usuario puede visualizar la información en celular.
+
+5. Yo como usuario quiero ver los nombres e imágenes de las evoluciones de todos los pokemon.
+
+    * DEFINICIÓN DE TERMINADO
+      - El código cumple con la guía de estilos guardada (Eslint).
+      - El código esta en el repositorio.
+      - La historia a sido testeada por lo menos en 3 usuarios.
+      - La historia a pasado por FeedBack de compañeras.
+      - La publicación en el GitHub-pages. 
+
+    * CRITERIOS DE ACEPTACIÓN
+      - El usuario al hacer click en el botón de evoluciones, visualiza las evoluciones del pokemon junto a su  imagen correspondiente.
+      - El usuario puede visualizar la información en desktop.
+      - El usuario puede visualizar la información en celular.
+
+6. Yo como usuario quiero buscar el pokemon por su nombre y que aparezcan sus características.
+
+    *  DEFINICIÓN DE TERMINADO
+        - El código cumple con la guía de estilos guardada (Eslint).
+        - El código esta en el repositorio.
+        - La historia a sido testeada por lo menos en 3 usuarios.
+        - La historia a pasado por FeedBack de compañeras.
+        - La publicación en el GitHub-pages.
+        
+    *  CRITERIOS DE ACEPTACIÓN
+        - El usuario escribe el nombre del pokemon que esta buscando y aparece las características del pokemon.
+        - El usuario puede visualizar la información en desktop.
+        - El usuario puede visualizar la información en celular.
 
 ### Diseño de la Interfaz de Usuario
 
 #### Prototipo de baja fidelidad
 
-Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
-`README.md`.
+* Pantalla de inicio ![Inicio](img_readme/inicio.png "inicio")
+
+
 
 #### Prototipo de alta fidelidad
 

@@ -1,4 +1,4 @@
-/* eslint-disable no-nested-ternary */
+
 // Función de Filtrado.
 export const filtrarPokemon = (datapoke, catr, valor) => (
   datapoke.filter((filt) => filt[catr].includes(valor))
@@ -7,11 +7,11 @@ export const filtrarPokemon = (datapoke, catr, valor) => (
 export const filtrarEgg = (datapoke, valor) => (
   datapoke.filter((filt) => filt.egg === valor)
 );
+
 // Función de Ordenado.
 export const ordenarPokemon = (datapoke, catr) => (
   datapoke.sort((a, b) => (a[catr] > b[catr] ? 1 : -1))
 );
-
 
 export const ordenarDescPokemon = (datapoke, catr) => (
   datapoke.sort((a, b) => (a[catr] < b[catr] ? 1 : -1))
