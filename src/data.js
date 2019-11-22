@@ -16,6 +16,9 @@ export const orderData = (POKEMON, order) => {
   let pokemonOrder = [];
   if (order === 'ascendant-az') {
     pokemonOrder = POKEMON.sort((a, b) => {
+      if (a.name > b.name) {
+        return 1;
+      }
       if (a.name < b.name) {
         return -1;
       }
@@ -24,6 +27,9 @@ export const orderData = (POKEMON, order) => {
 
   if (order === 'descendant-za') {
     pokemonOrder = POKEMON.sort((a, b) => {
+      if (a.name < b.name) {
+        return 1;
+      }
       if (a.name > b.name) {
         return -1;
       }
