@@ -42,13 +42,13 @@ y de equipo.
 
 ### DOM
 
-- [X] Entender y reconocer los selectores del DOM (querySelector | querySelectorAll).
+- [ ] Entender y reconocer los selectores del DOM (querySelector | querySelectorAll).
 - [X] Manejar eventos del DOM. (addEventListener)
 - [X] Manipular dinámicamente el DOM. (createElement, appendchild, innerHTML, value)
 
 ### Javascript
 
-- [X] Manipular arrays (`filter` | `map` | `sort` | `reduce`).
+- [ ] Manipular arrays (`filter` | `map` | `sort` | `reduce`).
 - [X] Manipular objects (key | value).
 - [X] Entender el uso de condicionales (`if-else` | `switch`).
 - [X] Entender el uso de bucles (`for` | `forEach`).
