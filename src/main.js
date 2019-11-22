@@ -2,8 +2,7 @@
 // eslint-disable-next-line import/extensions
 import POKEMON from './data/pokemon/pokemon.js';
 import {
-  idPokemon, orderFilter, typeFilter, weaknessFilter, topPokemon,
-// eslint-disable-next-line import/extensions
+  idPokemon, orderData, typeFilter, weaknessFilter, topPokemon,
 } from './data.js';
 
 const pokeImages = document.getElementById('show-pokemon');
@@ -38,7 +37,7 @@ showAllPokemon.addEventListener('click', (event) => {
 // MOSTRAR ORDEN ALFABÉTICO Y CANTIDAD DE CARAMELOS
 const selectOrder = document.querySelector('#poke-order');
 selectOrder.addEventListener('change', () => {
-  pokemonContainer(orderFilter(POKEMON, selectOrder.value));
+  pokemonContainer(orderData(POKEMON, selectOrder.value));
 });
 
 // MOSTRAR FILTRO DE TIPOS
@@ -59,6 +58,6 @@ showTopPokemon.addEventListener('click', (event) => {
   pokemonContainer(topPokemon(POKEMON, event.target.id));
 });
 
-orderFilter(POKEMON, selectOrder);
+orderData(POKEMON, selectOrder);
 typeFilter(POKEMON, selectType);
 weaknessFilter(POKEMON, selectWeakness);

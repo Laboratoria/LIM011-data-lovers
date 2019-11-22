@@ -12,10 +12,13 @@ export const idPokemon = (POKEMON, order) => {
 };
 
 // FUNCIÓN DE ORDEN ALFABÉTICO + CANTIDAD DE CARAMELOS
-export const orderFilter = (POKEMON, order) => {
+export const orderData = (POKEMON, order) => {
   let pokemonOrder = [];
   if (order === 'ascendant-az') {
     pokemonOrder = POKEMON.sort((a, b) => {
+      if (a.name > b.name) {
+        return 1;
+      }
       if (a.name < b.name) {
         return -1;
       }
@@ -24,6 +27,9 @@ export const orderFilter = (POKEMON, order) => {
 
   if (order === 'descendant-za') {
     pokemonOrder = POKEMON.sort((a, b) => {
+      if (a.name < b.name) {
+        return 1;
+      }
       if (a.name > b.name) {
         return -1;
       }
@@ -63,16 +69,6 @@ export const weaknessFilter = (show, pokeWeakness) => {
 };
 
 // FUNCION DE TOP 10 DE FRECUENCIA DE APARICIÓN
-export const topFilter = (show, pokeTop) => {
-  const arrFilter = [];
-  show.filter((showThree) => {
-    if (showThree.spawn_chance.indexOf(pokeTop) !== -1) {
-      arrFilter.push(showThree);
-    }
-  });
-  return arrFilter;
-};
-
 export const topPokemon = (POKEMON, order) => {
   let pokemonTop = [];
   if (order === 'poke-top') {
