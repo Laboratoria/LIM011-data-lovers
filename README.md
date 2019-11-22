@@ -35,10 +35,8 @@ y la interfaz construida en este [link](https://app.talento.laboratoria.la/profi
 
 ## 2. Resumen del proyecto
 
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que tu usuario necesita.
+En este proyecto construimos una página web enfocado para los seguidores de Pokemon Go!, en la cual visualizaran información como: Tipos de pokemon, cantidad de caramelos que necesitan, debilidades y los top 10 por frecuencia de aparación, adecuandose a la necesidad del usuario.
 
-Como entregable final tendrás una página web que permita a los usuarios
 **visualizar, filtrar, ordenar, etc.**.
 
 Te proponemos una serie de datos de diferentes _temáticas_ para que los
@@ -137,12 +135,12 @@ son:
 
 ### Definición del producto
 #### Proceso de diseño
-1. Saber que informacion queremos encontrar como usuarias de pokemon go.
-2. Que sea de rápida comprensión y facil de encontrar.
-3. Que la informacion sea breve y concisa.
+1. Saber que información queremos encontrar como usuarias de pokemon go.
+2. Que sea de rápida comprensión y fácil de encontrar.
+3. Que la información sea breve y concisa.
 
 #### Que problemas resuelve
-1. Que el usuario encuentre toda la informacion en un solo lugar, de forma clara y precisa.
+1. Que el usuario encuentre toda la información en un solo lugar, de forma clara y precisa.
 
 ### Historias de usuario
 ![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/historias%20de%20usuario.jpeg)
@@ -150,9 +148,16 @@ son:
 ### Diseño de la Interfaz de Usuario
 
 #### Prototipo de baja fidelidad
+Prototipo para Desktop
+
 ![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/prototipado1.jpeg)
 ![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/prototipado2.jpeg)
 ![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/prototipado3.jpeg)
+
+Prototipo para Celular
+
+![image](https://github.com/NataliTC/LIM011-data-lovers/blob/pokemon-datalovers/src/img/prototipado%20celular.jpg)
+
 
 #### Prototipo de alta fidelidad
 Prototipo para Desktop
@@ -163,11 +168,11 @@ https://www.figma.com/file/KI1RbmIBszM3HQiwv6dolt/Pokemon-DataLovers?node-id=20%
 
 #### Testeos de usabilidad
 ##### Problemas de usabilidad detectados
-1. En la primera vista la observacion de los usuarios fue que las dos opciones (Atrapalos ya y Pokemon Top 10) tengan apariencia de boton, ya que nuestra propuesta solo contenia la palabra subrayada, por lo que no se comprendia que era un boton.
-2. Dentro de la opcion Pokemon top10, las usuarias comprendian que era un boton relacionado a los 10 mejores pokemones cuando en realidad lo que mostrabamos era los 10 pokemones de mayor frecuencia, por ende cambiamos el nombre del boton a Frecuencia de Aparicion.
-3. Al dar click en el boton atrapalos ya, nosotras proponiamos una segunda vista de la relacion de pokemones con sus caracteristicas y al lado izquierdo de la pantalla mostrábamos dos menú estáticos de tipos y de caramelos, a lo que las usuarias indicaron que sería mejor que esos menus sean desplegables.
-4. Las usuarias tambien nos indicaron que les gustaria que agregaramos una barra para buscar por nombre el pokemon de su preferencia.
-5. Que el boton de contactanos que se mostraba en el footer, sea un boton funcional, por ese motivo lo cambiamos a Descarga aqui tu app.
+1. En la primera vista la observación de los usuarios fue que las dos opciones (Atrápalos ya! y Pokemon Top 10) tengan apariencia de botón, ya que nuestra propuesta solo contenia la palabra subrayada, por lo que no se comprendía que era un botón.
+2. Dentro de la opción Pokemon top10, las usuarias comprendían que era un botón relacionado a los 10 mejores pokemones cuando en realidad lo que mostrabamos era los 10 pokemones de mayor frecuencia, por ende cambiamos el nombre del botón a Frecuencia de Aparición.
+3. Al dar click en el botón Atrápalos ya!, nosotras proponíamos una segunda vista de la relación de pokemones con sus características y al lado izquierdo de la pantalla mostrábamos dos menús estáticos de tipos y de caramelos, a lo que las usuarias indicaron que sería mejor que esos menús sean desplegables.
+4. Las usuarias también nos indicaron que les gustaria que agregaramos una barra para buscar por nombre el pokemon de su preferencia.
+5. Que el botón de contactanos que se mostraba en el footer, sea un botón funcional, por ese motivo lo cambiamos a Descarga aquí tu app.
 
 
 ### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
