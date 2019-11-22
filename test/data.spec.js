@@ -71,8 +71,8 @@ describe('filtraDiferente', () => {
   });
 
   it('debería retornar solo personajes que tienen casa', () => {
-    const dataFD = [{ name: 'Vincent Crabbe', house: 'Slytherin' }, { name: 'Cho Chang', house: 'Ravenclaw' }, { name: 'Argus Filch', house: '' }];
-    const esperoFD = [{ name: 'Vincent Crabbe', house: 'Slytherin' }, { name: 'Cho Chang', house: 'Ravenclaw' }];
-    expect(busqueda(dataFD, 'C')).toEqual(esperoFD);
+    const dataFD = [{ name: 'Vincent Crabbe', house: 'Slytherin' }, { name: 'Argus Filch', house: '' }];
+    const esperoFD = [{ name: 'Argus Filch', house: '' }];
+    expect(filtraDiferente(dataFD, 'house', 'Slytherin')).toEqual(esperoFD);
   });
 });

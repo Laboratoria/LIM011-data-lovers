@@ -269,7 +269,7 @@
         margin-bottom: 5px;
         position: absolute;
         top: 5%;
-        right: 3%;
+        right: 4%;
         bottom: 0;
     }
     
@@ -308,12 +308,12 @@
         text-align: center;
         margin: 0px 40px 5px 5px;
         width: 35%;
-        height: 90%;
+        height: 87%;
         position: absolute;
         top: 30px;
         right: 0;
         bottom: 0;
-        left: 7%;
+        left: 6%;
     }
 
     #foto .icono {
@@ -322,6 +322,7 @@
         height: 30%;
         top: 3%;
         right: 5%;
+        bottom: 5%;
     }
     
     .foto{
@@ -337,7 +338,8 @@
     #foto p {
         font-weight: 300;
         font-style: italic;
-        font-size: 18px;
+        font-size: 15px;
+        padding-bottom: 5px;
         color: #252525;
         text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.37);
     }
@@ -351,14 +353,14 @@
         margin-bottom: 5%;
         border-radius: 10px;
         position: absolute;
-        top: 20%;
+        top: 22%;
         right: 7%;
     }
     .datos h2 {
         color: #005675;
         text-align: center;
-        font-size: 30px;
-        margin-bottom: 20px;
+        font-size: 25px;
+        margin-bottom: 18px;
        text-align: center;
     }
     .bday {
@@ -372,7 +374,7 @@
     }
     .datos p{
         text-align: start;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 400;
         color: #292929;
         padding-left: 10px;
@@ -386,7 +388,7 @@
         width: 50%;
         height: 30%;
         position: absolute;
-        top: 55%;
+        top: 60%;
         right: 5%;
     }
     
@@ -408,7 +410,7 @@
     
     .varita p, .patronus p{
         text-align: start;
-        font-size: 20px;
+        font-size: 16px;
         padding-bottom: 8px;
         font-weight: 400;
         margin-left: 10px;
