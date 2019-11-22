@@ -54,8 +54,8 @@ y de equipo.
 - [X] Entender el uso de bucles (`for` | `forEach`).
 - [X] Entender la diferencia entre expression y statements.
 - [X] Utilizar funciones (parámetros | argumentos | valor de retorno).
-- [ ] Entender la diferencia entre tipos de datos atómicos y estructurados.
-- [ ] Utilizar ES Modules (`import` | `export`).
+- [X] Entender la diferencia entre tipos de datos atómicos y estructurados.
+- [X] Utilizar ES Modules (`import` | `export`).
 
 ### Pruebas Unitarias (_testing_)
 - [X] Testear funciones (funciones puras).
