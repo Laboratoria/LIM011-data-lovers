@@ -31,13 +31,13 @@ y de equipo.
 - [X] Diseñar la aplicación pensando y entendiendo al usuario.
 - [X] Crear prototipos para obtener _feedback_ e iterar.
 - [X] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).
-- [ ] Planear y ejecutar _tests_ de usabilidad.
+- [X] Planear y ejecutar _tests_ de usabilidad.
 
 ### HTML y CSS
 
 - [X] Entender y reconocer por qué es importante el HTML semántico.
 - [X] Identificar y entender tipos de selectores en CSS.
-- [ ] Entender como funciona `flexbox` en CSS.
+- [X] Entender como funciona `flexbox` en CSS.
 - [X] Construir tu aplicación respetando el diseño planeado (maquetación).
 
 ### DOM
@@ -48,25 +48,25 @@ y de equipo.
 
 ### Javascript
 
-- [ ] Manipular arrays (`filter` | `map` | `sort` | `reduce`).
-- [ ] Manipular objects (key | value).
+- [X] Manipular arrays (`filter` | `map` | `sort` | `reduce`).
+- [X] Manipular objects (key | value).
 - [X] Entender el uso de condicionales (`if-else` | `switch`).
 - [X] Entender el uso de bucles (`for` | `forEach`).
-- [ ] Entender la diferencia entre expression y statements.
+- [X] Entender la diferencia entre expression y statements.
 - [X] Utilizar funciones (parámetros | argumentos | valor de retorno).
 - [ ] Entender la diferencia entre tipos de datos atómicos y estructurados.
 - [ ] Utilizar ES Modules (`import` | `export`).
 
 ### Pruebas Unitarias (_testing_)
-- [ ] Testear funciones (funciones puras).
+- [X] Testear funciones (funciones puras).
 
 ### Git y GitHub
-- [ ] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
+- [X] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
 - [X] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
 - [ ] Colaborar en Github (pull requests).
 
 ### Buenas prácticas de desarrollo
-- [ ] Organizar y dividir el código en módulos (Modularización).
+- [X] Organizar y dividir el código en módulos (Modularización).
 - [X] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
 - [X] Utilizar linter para seguir buenas prácticas (ESLINT).
 
