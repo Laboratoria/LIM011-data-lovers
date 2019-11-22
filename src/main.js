@@ -47,7 +47,7 @@ selecte.addEventListener('change', () => {
 });
 
 /* Para mostrar el menu caramelos */
-const selectCandy = document.getElementById('select-candy');
+const selectCandy = document.querySelector('#select-candy');
 selectCandy.addEventListener('change', () => {
   const pintame = document.getElementById('pintame');
   pintame.classList.add('hide');
@@ -68,7 +68,7 @@ orden.addEventListener('change', (event) => {
 });
 
 /* para buscar el nombre del pokemon */
-const formulario = document.getElementById('formulario');
+const formulario = document.querySelector('#formulario');
 formulario.addEventListener('input', (event) => {
   const pintame = document.getElementById('pintame');
   const resultado = document.getElementById('resultado');

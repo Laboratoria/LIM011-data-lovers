@@ -41,12 +41,12 @@ export const ascendente = (datos) => {
   return ordenar;
 };
 
-export const mostrarTop = (arr) => {
-  arr.sort((p1, p2) => ((p1.spawn_chance < p2.spawn_chance) ? 1 : -1));
-  const arrTop = arr.slice(0, 10); // slice retorna una copia del array de pokemones del 0 al 10
+export const mostrarTop = (array) => {
+  array.sort((p1, p2) => ((p1.spawn_chance < p2.spawn_chance) ? 1 : -1));
+  const arrTop = array.slice(0, 10); // slice retorna una copia del array de pokemones del 0 al 10
   return arrTop;
 };
 
 export const buscarPokemon = (array, strg) => array.filter( // filter crea un nuevo array con todos los elementos que cumplan la condición
   (pintar) => pintar.name.toLowerCase().startsWith(strg), // tolowercase devuelve en minusculas pintar.name
-); // startsWith indica si name inicia con los caracteres de otro string, regresando true o false según sea el caso
+); // startsWith indica si name inicia con los caracteres que se agrega en strg, regresando true o false según sea el caso
