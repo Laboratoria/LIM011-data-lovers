@@ -31,32 +31,41 @@ const radioInput = document.querySelectorAll('input[name=ordena]');
 const containerElements= (obj) => {
   const divElement = document.createElement("div");
   divElement.innerHTML = `
-  <img src = "${obj.imagen}"/>
+  <img class="imagenPokemon" src = "${obj.imagen}"/>
   <h1>${obj.identificador}</h1><p>${obj.nombre}</p>
   `;
   divElement.addEventListener('click', () => {
     const divElem = document.createElement('div');
     divElem.classList.add('modalDialog');
-    divElem.innerHTML =  `
+    if(obj.multiplicador===null || obj.caramelos === undefined){
+    divElem.innerHTML = `
     <div>
       <a href = "#close" title = "Close" class = "close">X</a>
-      <h2>${obj.identificador} ${obj.nombre}</h2>
+      <h2>${obj.nombre.toUpperCase()}</h2>
+      <img class="imagenPokemon" src = "${obj.imagen}"/>
+      <p>Peso: ${obj.peso}  Altura: ${obj.altura} Tipo: ${obj.tipo}</p>
+      <p>Caramelos: No tiene asignada esta propiedad</p>
+      <p>Multiplicador: No tiene asignado un multiplicador</p>
+      <div id="prevolucion">
+        <p>Sig. evolucion: ${obj.siguiente_evolucion}</p>
+      </div>
+    </div> 
+    `} else { divElem.innerHTML = `
+    <div>
+      <a href = "#close" title = "Close" class = "close">X</a>
+      <h2>${obj.nombre.toUpperCase()}</h2>
+      <img class="imagenPokemon" src = "${obj.imagen}"/>
       <p>Peso: ${obj.peso}  Altura: ${obj.altura}</p>
       <p>Tipo: ${obj.tipo}</p>
       <p>Caramelos: ${obj.caramelos}</p>
-      <p>Debilidades: ${obj.debilidades}</p>`
-      if (obj.multiplicador === 'null'){
-        ` <p>Multiplicador:No tiene </p>
-        `
-        } else {
-          ` <p>Multiplicador:${obj.multiplicador}</p>
-          `
-         }
-          `
-      <div id="prevolucion"></div>
+      <p>Multiplicador: ${obj.multiplicador}</p>
+      <div id="prevolucion">
+      <p>Sig. evolucion: ${obj.siguiente_evolucion}</p></div>
     </div> 
-    `;
+    `
 
+    };
+   
     divElem.style.display = 'block';
     divElem.querySelector('.close').addEventListener('click', () => {
     divElem.style.display = 'none';

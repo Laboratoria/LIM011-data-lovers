@@ -12,16 +12,10 @@
 </head>
 
 <body>
-  <img src="./imagenes/pokemon-logo-png.png" class="img">
   <header>
-  <nav id="nav">
-    <!-- <input id="toggle" type="checkbox" />
-    <label for="toggle" class="drop">
-      <svg width="36px" height="36px" viewBox="0 0 48 48">
-        <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"></path>
-
-      </svg> 
-    </label> -->
+    <img src="./imagenes/pokemon-logo-png.png" class="logo">
+  </header>
+    <nav>
       <ul class="menu">
         <li ><a href="index.html">INICIO</a></li>
         <li id="botonBuscar"><a href="#botonBuscar">TOP 10 POKEMONS APARICIONES</a></li>
@@ -44,7 +38,7 @@
             <li><a id="Dragon" href="#">Dragón</a></li>
           </ul>
         </li>
-        <li id="estadistica"><a href="#">ESTADISTICAS</a>
+        <!-- <li id="estadistica"><a href="#">ESTADISTICAS</a>
           <ul  class="submenu">
           <li><a id="estaTipo" href="#">E. Tipo de Pokemons</a></li>
           </ul>
@@ -53,11 +47,10 @@
           <ul  class="submenu">
           <li><a id="candys" href="#"># Candys para evolucionar</a></li>
           </ul>
-        </li>
-
+        </li> -->
       </ul>
     </nav>
-    <div class="fondo">
+    <seccion class="fondo">
         <div class="divbuscar">
           <input style="margin-left: 30px; margin-top: 20px;" type="text" id="buscar" value=""
             placeholder="Escribe nombre Pokemon" name="search"> <button id="buscaPokemon"><i class="fas fa-search"></i>Buscar</button>
@@ -66,9 +59,8 @@
             <input type="radio" name="ordena" value="desc" id="orDesc"><a href="#">Descendente</a>
           </label>
         </div>
-      </div>
-  </header>
-  <div id="contenedor-pokemons" class="flex-container"></div>
+      </seccion>
+  <main><figure id="contenedor-pokemons" class="flex-container"></figure></main>
   <script type="module" src="main.js"></script>
 </body>
 </html>
