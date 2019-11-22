@@ -150,9 +150,16 @@ son:
 ### Diseño de la Interfaz de Usuario
 
 #### Prototipo de baja fidelidad
+Prototipo para Desktop
+
 ![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/prototipado1.jpeg)
 ![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/prototipado2.jpeg)
 ![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/prototipado3.jpeg)
+
+Prototipo para Celular
+
+![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/prototipado1.jpeg)
+
 
 #### Prototipo de alta fidelidad
 Prototipo para Desktop
