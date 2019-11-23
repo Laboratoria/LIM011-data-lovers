@@ -90,7 +90,7 @@ y de equipo.
 
 - [x] Entender y reconocer por qué es importante el HTML semántico.
 - [x] Identificar y entender tipos de selectores en CSS.
-- [x] Entender como funciona `flexbox` en CSS.
+- [ ] Entender como funciona `flexbox` en CSS.
 - [x] Construir tu aplicación respetando el diseño planeado (maquetación).
 
 ### DOM
@@ -105,7 +105,7 @@ y de equipo.
 - [x] Manipular objects (key | value).
 - [x] Entender el uso de condicionales (`if-else` | `switch`).
 - [x] Entender el uso de bucles (`for` | `forEach`).
-- [x] Entender la diferencia entre expression y statements.
+- [ ] Entender la diferencia entre expression y statements.
 - [x] Utilizar funciones (parámetros | argumentos | valor de retorno).
 - [ ] Entender la diferencia entre tipos de datos atómicos y estructurados.
 - [x] Utilizar ES Modules (`import` | `export`).
@@ -127,11 +127,7 @@ y de equipo.
 
 Link del proyecto desplegado en GitHub
 
-
 ## 5. Criterios de aceptación mínimos del proyecto
-
-Los criterios que deberás considerar para saber si has completado este proyecto
-son:
 
 ### Definición del producto
 #### Proceso de diseño
