@@ -148,6 +148,7 @@ De acuerdo a nuestros conocimientos en pokemon go,  nos pusimos a pensar ¿qué 
 
 ## 3. Ideacion
 Utilizando la herramienta crazy eights
+https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/Crazy-eights.jpg
 
 ## 4. Prototipado
 #### Prototipo de baja fidelidad
