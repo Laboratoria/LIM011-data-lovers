@@ -172,7 +172,7 @@ https://www.figma.com/file/KI1RbmIBszM3HQiwv6dolt/Pokemon-DataLovers?node-id=20%
 
 ## 5. User testing
 #### Testeos de usabilidad
-Se pidió a 6 usuarios (mujeres y 4 sabian sobre pokemones) que nos brindaran su opinion acerca de nuestro prototipado.
+Se pidió a 6 usuarios (mujeres y 4 de ellas sabian sobre pokemon) que nos brindaran su opinion acerca de nuestro prototipado.
 
 #### Problemas de usabilidad detectados
 1. En la primera vista la observación de los usuarios fue que las dos opciones (Atrápalos ya! y Pokemon Top 10) tengan apariencia de botón, ya que nuestra propuesta solo contenia la palabra subrayada, por lo que no se comprendía que era un botón.
