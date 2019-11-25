@@ -48,36 +48,6 @@ hecha por el equipo de Laboratoria.
 Una vez que elijas, diseña tu proyecto intentando ofrecerle la mejor experiencia
 posible para ayudarle a satisfacer sus necesidades.
 
-### Estos son datos que te proponemos:
-
-* [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
-  y Johto, junto con sus respectivas estadísticas usadas en el juego
-  [Pokémon GO](http://pokemongolive.com).
-  * [Investigación con jugadores de Pokémon Go](/pokemon/README.md)
-
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-  * [Investigación con jugadores de LoL](/lol/README.md)
-
-* [Harry Potter](src/data/potter/potter.json):
-  Este set de datos muestra la lista de los personajes del mundo de
-  [Harry Potter: Wizards Unite](https://www.wizardingworld.com), junto con sus
-  respectivas características mencionadas en la serie de novelas de Harry Potter
-  escrita por la autora británica J.K.Rowling.
-  * [Investigación con jugadores de Harry Potter: Wizards Unite](/potter/README.md)
-
-
-## 3. Objetivos de aprendizaje
-
-El objetivo principal de este proyecto es que, entendiendo las necesidades de
-tus usuarios, aprendas a diseñar y construir una interfaz web donde se pueda
-visualizar y manipular data.
-
-Revisa la lista y reflexiona sobre los objetivos que conseguiste en el
-proyecto anterior. Piensa en eso al decidir tu estrategia de trabajo individual
-y de equipo.
 
 ### UX
 
@@ -172,10 +142,10 @@ https://www.figma.com/file/KI1RbmIBszM3HQiwv6dolt/Pokemon-DataLovers?node-id=20%
 
 ## 5. User testing
 #### Testeos de usabilidad
-Se pidió a 6 usuarios (mujeres y 4 de ellas sabian sobre pokemon) que nos brindaran su opinion acerca de nuestro prototipado.
+Se pidió a 6 usuarias (4 de ellas sabian sobre pokemon) que nos brindaran su opinion acerca de nuestro prototipado.
 
 #### Problemas de usabilidad detectados
-1. En la primera vista la observación de los usuarios fue que las dos opciones (Atrápalos ya! y Pokemon Top 10) tengan apariencia de botón, ya que nuestra propuesta solo contenia la palabra subrayada, por lo que no se comprendía que era un botón.
+1. En la primera vista la observación de las usuarias fue que las dos opciones (Atrápalos ya! y Pokemon Top 10) tengan apariencia de botón, ya que nuestra propuesta solo contenia la palabra subrayada, por lo que no se comprendía que era un botón.
 2. Dentro de la opción Pokemon top10, las usuarias comprendían que era un botón relacionado a los 10 mejores pokemones cuando en realidad lo que mostrabamos era los 10 pokemones de mayor frecuencia, por ende cambiamos el nombre del botón a Frecuencia de Aparición.
 3. Al dar click en el botón Atrápalos ya!, nosotras proponíamos una segunda vista de la relación de pokemones con sus características y al lado izquierdo de la pantalla mostrábamos dos menús estáticos de tipos y de caramelos, a lo que las usuarias indicaron que sería mejor que esos menús sean desplegables.
 4. Las usuarias también nos indicaron que les gustaria que agregaramos una barra para buscar por nombre el pokemon de su preferencia.
