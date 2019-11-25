@@ -17,6 +17,5 @@ export const ordenarAscendente = (POTTER) => POTTER.sort((a, b) => {
 });
 
 export const buscador = (data, buscame) => {
-  console.log(buscame);
   return data.filter((obj) => obj.name.toLowerCase().startsWith(buscame));
 };
