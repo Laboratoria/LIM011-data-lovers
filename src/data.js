@@ -4,7 +4,6 @@
 
 // FUNCIÓN DE ORDEN POR ID
 export const idPokemon = (POKEMON, order) => {
-  let pokemonOrder = [];
   if (order === 'show') {
     pokemonOrder = POKEMON.sort((a, b) => (a.id - b.id));
   }
@@ -16,14 +15,19 @@ export const orderData = (POKEMON, order) => {
   let pokemonOrder = [];
   if (order === 'ascendant-az') {
     pokemonOrder = POKEMON.sort((a, b) => {
+      if (a.name > b.name) {
+        return 1;
+      }
       if (a.name < b.name) {
         return -1;
       }
     });
   }
-
   if (order === 'descendant-za') {
     pokemonOrder = POKEMON.sort((a, b) => {
+      if (a.name < b.name) {
+        return 1;
+      }
       if (a.name > b.name) {
         return -1;
       }
@@ -40,6 +44,7 @@ export const orderData = (POKEMON, order) => {
   return pokemonOrder;
 };
 
+//Holiiiiiiiiiiiiiii
 // FUNCION DE FILTRO POR TIPOS
 export const typeFilter = (show, pokeType) => {
   const arrFilter = [];

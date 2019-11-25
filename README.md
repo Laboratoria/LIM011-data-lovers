@@ -110,7 +110,7 @@ y de equipo.
 - [ ] Entender la diferencia entre expression y statements.
 - [ ] Utilizar funciones (parámetros | argumentos | valor de retorno).
 - [ ] Entender la diferencia entre tipos de datos atómicos y estructurados.
-- [ ] Utilizar ES Modules (`import` | `export`).
+- [ x ] Utilizar ES Modules (`import` | `export`).
 
 ### Pruebas Unitarias (_testing_)
 - [ ] Testear funciones (funciones puras).
@@ -187,6 +187,13 @@ Durante el reto deberás hacer _tests_ de usabilidad con distintos usuarios, y
 en base a los resultados, deberás iterar tus diseños. Cuéntanos
 qué problemas de usabilidad detectaste a través de los _tests_ y cómo los
 mejoraste en tu propuesta final.
+
+### Introspección de mis objetivos de aprendizaje
+
+* Sé lo que es, para qué sirve, su contexto y cómo se espera que funcione.
+* Lo hice en este proyecto y lo puedo explicar.
+* Lo puedo volver a hacer en otro contexto/proyecto diferente.
+* Qué propones para trabajar la siguiente semana.
 
 ### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
