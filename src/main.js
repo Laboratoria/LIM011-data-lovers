@@ -20,7 +20,7 @@ const ordenando = document.querySelector('#ordenar');
 const generarTemplateString = (data) => {
   let templateString = '';
   data.forEach((obj) => {
-    templateString += ` 
+    templateString += `
     <div class="flip-card">
     <div class="flip-card-inner">
       <div class="container">

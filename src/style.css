@@ -42,56 +42,11 @@ header nav {
   align-items: center;
   padding: 14px;
 }
-/*BUSCADORRRRRRRRRRRR*/
-.search-box {
-  position: absolute;
-  top: 6.4%;
-  left: 10%;
-  transform: translate(-50%, -50%);
-  background: #d5796ca1;
-  height: 40px;
-  border-radius: 40px;
-  padding: 0px;
-}
-.search-box:hover > .search-texto {
-  width: 240px;
-  padding: 0 6px;
-}
-.search-box:hover > .search-btn {
-  background: white;
-
-}
-.search-btn {
-  color: #1b9c7c;
-  float: right;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: salmon;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.4s;
-  margin-top: 0px;
-}
-.search-texto {
-  border: none;
-  background: none;
-  outline: none;
-  float: right;
-  padding: 0;
-  color: white;
-  font-size: 16px;
-  transition: 0.4s;
-  line-height: 40px;
-  width: 0px;
-}
-
-/* .search-box input {
+.search-box input {
   margin: 10px 10px;
   border-radius: 10px;
   padding: 10px;
-} */
+}
 nav > li {
   float:left;
   list-style: none;
@@ -119,6 +74,49 @@ nav li a:hover {
   background-color: #e08a3a;
   /* border-radius: 50px; */
 }
+/* .search-box {
+  position: absolute;
+  top: 6.4%;
+  left: 83%;
+  transform: translate(-50%, -50%);
+  background: #d5796ca1;
+  height: 40px;
+  border-radius: 40px;
+  padding: 0px;
+}
+.search-box:hover > .search-texto {
+  width: 200px;
+  padding: 0 6px;
+}
+.search-box:hover > .search-btn {
+  background: white;
+
+}
+.search-btn {
+  color: #1b9c7c;
+  float: left;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: salmon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  margin-top: 0px;
+}
+.search-texto {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+} */
 
 .btn-menu ul {
   display:none;
@@ -130,6 +128,7 @@ nav li a:hover {
 nav li:hover > ul {
   display:block;
 }
+.btn-menu{}
 .btn-option a{
     background-color: #223750;
 }
@@ -238,25 +237,25 @@ nav li:hover > ul {
  background-image: url(../src/image/portadaaaaa.jpeg);
 }
 .pantalla1>div
-		{
-			width: fit-content;
-			position: absolute;
-			margin: auto;
-			left: 0;
-			right: 0;
-			top: 167px;
-			/* bottom:25px; */
-			color:rgb(218, 231, 233);
-			/* background-color:#000; */
-			/* padding:2px 10px; */
-			opacity:0.5;
-			font-size: 29px;
-			text-align: center;
-			/* text-shadow: 0 0 10px #dd260d; */
-			text-shadow: 0 0 20px #33ca19, 2px -2px 3px #feec85, -4px -4px 5px #ffae34, 5px -10px 6px #ec760c, -5px -12px 8px #cd4606, 0 -15px 20px #973716, 2px -15px 20px #451b0e;
-			color: rgb(61, 3, 63);
-			padding: 0 20px;
-		}
+    {
+      width: fit-content;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 167px;
+      /* bottom:25px; */
+      color:rgb(218, 231, 233);
+      /* background-color:#000; */
+      /* padding:2px 10px; */
+      opacity:0.5;
+      font-size: 29px;
+      text-align: center;
+      /* text-shadow: 0 0 10px #dd260d; */
+      text-shadow: 0 0 20px #33ca19, 2px -2px 3px #feec85, -4px -4px 5px #ffae34, 5px -10px 6px #ec760c, -5px -12px 8px #cd4606, 0 -15px 20px #973716, 2px -15px 20px #451b0e;
+      color: rgb(61, 3, 63);
+      padding: 0 20px;
+    }
 .btn-bienvenida {
   background-color: transparent;
   display: flex;  
@@ -288,7 +287,11 @@ nav li:hover > ul {
   right: 0;
   top: -24px;
 }
-
+.footer {
+  display: flex;
+  color: #fff;
+  justify-content: center;
+}
 @media screen and (min-width:764px) {
 
   .flip-card {
