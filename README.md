@@ -81,10 +81,3 @@ Se reconoció que la interfaz ideada no era amigable y se realizó los cambios.
 ![Harry Potter](./src/image/respon2.jpg)
 
 * Prototipo de alta fidelidad:
-
-
-
-
-
-
-
