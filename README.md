@@ -187,7 +187,7 @@ Durante el desarrollo del proyecto se realizo las siguientes historias de usuari
 
 #### Prototipo de baja fidelidad
 
-* Pantalla de inicio ![Inicio](img_readme/inicio.png "inicio")
+* Pantalla de inicio ![Inicio](img/inicio.jpg)
 
 
 
