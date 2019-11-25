@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.6.2",
-    "@babel/plugin-transform-modules-commonjs": "^7.6.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.7.0",
     "babel-jest": "^24.9.0",
     "htmlhint": "^0.11.0",
     "jest": "^24.9.0",
@@ -21,8 +21,9 @@
     "serve": "^11.0.0"
   },
   "devDependencies": {
-    "eslint": "^6.5.1",
+    "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-import-resolver-babel-plugin-root-import": "^1.1.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^22.19.0"
   }

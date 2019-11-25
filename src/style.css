@@ -1,0 +1,484 @@
+/* eslint-disable object-curly-newline */
+/* Fondo de Pagina 1 */
+.bienvenida{
+    background-image: url("http://getwallpapers.com/wallpaper/full/0/8/2/53557.jpg");
+    width: 100%;
+    height: 770px ;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 100%;
+    position: relative;
+    margin: 0 auto;
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    
+}
+.bienvenida:before{
+    content:"";
+    width: 100%;
+    height: 50%;
+    background-color: rgba(242, 247, 255, 1);
+    background-position: center;
+    position: absolute;
+    opacity: 0.9;
+    margin-top: 15%;
+}
+/* Imagen de Pagina 1 */
+.logo { 
+    flex-direction: row;
+    position: relative;
+    margin-top: 15%;
+       
+}
+/* Texto de Pagina 1 */
+.texto{
+    position: relative;
+    flex-direction: column;
+    margin-top: 23%;
+    font-size: 18px;
+    margin-left: -120px;
+    margin-right: 150px;
+
+}
+/* Fondo de botones atrapalos ya, frecuencia de aparacion */
+.fondoBoton{
+    width: 600px;
+    height: 60px;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-left: 18px;
+    border: 5px solid rgba(11, 64, 156, 1);
+    border-bottom: 40px;
+    background:  rgba(253, 190, 52, 1);
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    
+}
+/* Fondo de Pagina 2 */
+.pagina2{
+    background-image: url("http://getwallpapers.com/wallpaper/full/0/8/2/53557.jpg");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+      
+}
+.pagina2:before, .pagina3:before{
+    content:"";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(16, 49, 107, 0.479);
+    position: absolute;
+    opacity: 0.9;
+}
+
+/* Contenedor de pokemon para pintado, tipos, debilidades, caramelos */
+.contenedor{
+    position: relative;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: -12%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 18%;
+    background-color: rgba(242, 247, 255, 1);
+    font-family: 'Roboto Slab', serif;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius:10px;
+    transform-style: preserve-3d;
+    transition: 2s;
+}
+.lado{
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+}
+.atras{
+    background-color: rgba(242, 247, 255, 1);
+    transform: rotateY(180deg);
+    border-radius: 10px;
+    background-image: url("https://i.pinimg.com/originals/8a/4a/72/8a4a7213b43f4ec4f99db406be655f9e.gif");
+    background-position: center;
+    background-size: 165%;
+}
+.a{
+    display: flex;
+    align-items: flex-end;
+}
+.btnArriba img{
+    position: relative;
+    margin-left: 80%;
+    width: 15%;
+    height: 15%;
+    margin-top: -25%;
+
+}
+.btnUp img{
+    position: absolute;
+    width: 15%;
+    height: 8%;  
+    margin-top: -10%;
+    margin-left: 50%;
+}
+
+.contenedor:hover{
+    transform: rotateY(180deg);
+}
+.contenedor img{
+    margin: auto;
+}
+
+.contenedor p{
+    margin: 5px;
+}
+/* Fondo de botones de atras */
+.btnAtras{
+    position: relative;
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 15px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    background:  rgba(242, 247, 255, 1);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+.btnAtras img{
+    position: relative;
+    width: 50%;
+    height: 98%;
+    display: inline-flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Menu Tipos de pokemon */
+.select, .select1, .ordenar, .select2{
+    position: absolute;
+    background-color: rgba(253, 190, 52, 1);
+    width: 150px;
+    height:50px;
+    font-size: 18px;
+    font-family: 'Roboto Slab', serif;
+    margin-top: 80px;
+    margin-left: 10px;
+    align-items: flex-start;
+    cursor: pointer; 
+    
+}
+.select option, .select1 option{
+    background-color:rgba(242, 247, 255, 1);
+    color: #333333;
+    text-decoration: none;
+    padding: 4px;
+    width: 130px;
+    display: inline-block;      
+}
+
+/* Menu Caramelos de pokemon */
+.select1{
+    margin-top: 190px;
+    margin-left: 10px;    
+}
+/* Menu Debilidades de pokemon */
+ .select2{
+    background-color:  rgba(242, 247, 255, 1);
+    width: 235px;
+    height:30px;
+    margin-top: 18px;
+    margin-left: 850px;
+}
+/* Menu Ordenar de A-Z y Z-A */
+.ordenar{
+    margin-top: 293px;
+    margin-left: 10px;
+}
+.ordenar option {
+    background-color:rgba(242, 247, 255, 1);
+    color: #333333;
+    text-decoration: none;
+    padding: 4px;
+    width: 130px;
+    display: inline-block;
+}
+.resultado{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+.pintame{
+    position: relative; 
+    display: flex;   
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+/* Fondo pagina 3 */
+.pagina3{
+    background-image: url("http://getwallpapers.com/wallpaper/full/0/8/2/53557.jpg");
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/* imagen pagina 3 */
+.logo2, .poke{
+    position: absolute;
+    margin-top: 8%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+.logo2 img{
+    width: 70%;
+    margin-left: 25px;
+}
+.poke img{
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 60%;
+    
+}
+/* texto pagina 3 */
+.texto2{
+    font-family: 'Roboto Slab', serif;
+    position: relative;
+    color: white;
+    font-size: 45px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: -1300px;
+    margin-left: 110px;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+/* caja donde se muestra los pokemon top10 */
+.top{
+   flex-wrap: wrap;
+   margin-left: 300px;
+   width: 100%;
+   cursor: pointer;
+  
+}
+/* Buscador de Pokemones */
+.formulario{
+    position: absolute;
+    width: 240px;
+    height:25px;
+    background-color:rgba(242, 247, 255, 1);
+    font-family: Georgia;
+    font-size: 18px;
+    border-radius: 10px;  
+    margin-left: 350px;
+    margin-top: -34px;
+    background-image: url("https://i.pinimg.com/originals/ce/a3/16/cea316d0a61ede809aba53c76877cf3b.png");
+    background-position: right;
+    background-size: 10%;
+    background-repeat: no-repeat;
+}
+footer{
+    position: relative;
+    width: auto;
+    height: 100px;
+    background: rgb(5, 5, 104);
+    display: flex;
+    justify-content: center;
+}
+.btnApp{
+    position: absolute;
+    width: 25%;
+    border-radius: 10px;
+    background:  rgba(253, 190, 52, 1);
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 35px;
+    cursor: pointer;
+    vertical-align: center;
+    margin-top: 30px;
+
+}
+.hide{
+    display: none;
+}
+/* Smartphones (landscape) */
+@media screen and (max-width: 734px)  {
+    .bienvenida{
+        background-size: cover;
+        flex-wrap: wrap;
+    }.bienvenida:before{
+        height: 50%; 
+        margin-top: 50%; 
+    }
+    .fondoBoton{
+        width: 120px;
+        margin-left: 10%;
+        font-size: 12px;
+    }
+    .texto{
+        font-size: 15px; 
+        margin-top: -30%;  
+        margin-left: 8%;
+        text-align: center;
+    }
+    .logo{
+        display: flex;
+        justify-content: center;
+        margin-top: -200px;
+    }
+    .logo img{
+        width: 80%;
+        height: 40%; 
+     
+    }
+     .texto p{
+         align-items: center;
+         width: 300px;
+
+    }
+     .contenedor img{
+           width: 100px;              
+    }
+     .select1{
+         width: 100px;
+         height: 30px;
+         font-size: 15px;
+         margin-top: 45px;
+         margin-left: 123px;
+    }
+     .select{
+        height: 30px;
+        width: 100px;
+        font-size: 15px;
+         margin-top: 45px;
+ 
+     }
+     .ordenar{
+        height: 30px;
+         width: 100px;
+         font-size: 15px;
+         margin-top: 45px;
+         margin-left: 235px;
+     }
+     .select2{
+         margin-left: 60px;
+         font-size: 15px;
+         width: 110px;
+         margin-top: 13px;
+
+     }
+     .formulario{
+         width: 145px;
+         margin-left: 190px;
+         margin-top: -19px;
+         font-size: 12px;
+     }
+
+     .btnAtras{
+         width: 40px;
+         height: 20px;
+         font-size: 10px;
+     }
+     .pagina2{
+        align-content: flex-start;
+     }
+     .contenedor{
+         display: flex;
+         justify-content: center;
+         width: 60%;
+         height: 10%;
+         line-height: 16px;
+         margin: 8px;
+         margin-top: 15%;
+         margin-left: 65px;
+
+     }
+     .texto2{
+       
+         margin-top: -10px;
+         font-size: 20px;
+         position: relative;
+     }
+     .logo2{
+         
+        position: relative;
+        margin-left: 40px;
+     }
+     .top{
+         width: 110%;
+         height: 10%;
+         line-height: 5px;
+         margin: 8px;
+         margin-left: 5px;
+    }
+    .poke img{
+        position: relative;
+        margin-top: 1180%;
+        margin-left: 5px;         
+    }
+    .pagina3{      
+        flex-flow: column;
+    }
+    .btnApp{
+        height: 45%;
+        font-size: 12px;
+        line-height: 20px;  
+    }
+    .btnUp{
+        position: relative;
+    }
+
+   }
+   /* IPad (landscape) */
+   @media only screen and (min-width :768px) and (max-width :1024px) {
+   
+    /* .bienvenida{
+        width: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        position: relative;
+        display: flex;  
+    }
+    .bienvenida:before{
+        margin-top: 20%;
+        height: 40%;
+    } */
+    .fondoBoton{
+    width: 70%;
+    font-size: 12px;
+}
+    .logo img{
+        width: 400%;
+        margin-left: -400%;
+        margin-top: 80%;
+}
+    .texto{
+    margin-right: 60%;
+    margin-top: 240px;
+    font-size: 16px;
+ }
+
+}
