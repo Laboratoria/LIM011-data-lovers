@@ -9,20 +9,22 @@ const pintado = (dataPokemon) => {
   let misPokemones = '';
   dataPokemon.forEach((pintar) => {
     misPokemones += `
-        <div class = "contenedor">
-          <div class="lado frente"></div>
-          <div class="lado atras"></div>
-        <img src ="${pintar.img}"/>
-        <p><b> ${pintar.name}</b></p>
-        <p>Tipo: ${pintar.type}</p>
-        <p><b>Necesitan ${pintar.candy_count} caramelos</b></p>
-        <p>Altura: ${pintar.height}</p>
-        <p>Peso: ${pintar.weight}</p>
-        <p>Tiempo de Aparición: <br>${pintar.spawn_chance}</p>
-        <p>Debilidades:<br>${pintar.weaknesses}</p>
-        <br>
-        </div>
-        `;
+      <div class = "contenedor">
+        <div class="lado frente"></div>
+        <div class="lado atras"></div>
+      <img src ="${pintar.img}"/>
+      <p>
+        <b> ${pintar.name}</b>
+      </p>
+      <p>Tipo: ${pintar.type}</p>
+      <p><b>Necesitan ${pintar.candy_count} caramelos</b></p>
+      <p>Altura: ${pintar.height}</p>
+      <p>Peso: ${pintar.weight}</p>
+      <p>Tiempo de Aparición: <br>${pintar.spawn_chance}</p>
+      <p>Debilidades:<br>${pintar.weaknesses}</p>
+      <br>
+      </div>
+    `;
   });
   return misPokemones;
 };
@@ -47,7 +49,7 @@ selecte.addEventListener('change', () => {
 });
 
 /* Para mostrar el menu caramelos */
-const selectCandy = document.getElementById('select-candy');
+const selectCandy = document.querySelector('#select-candy');
 selectCandy.addEventListener('change', () => {
   const pintame = document.getElementById('pintame');
   pintame.classList.add('hide');
@@ -68,7 +70,7 @@ orden.addEventListener('change', (event) => {
 });
 
 /* para buscar el nombre del pokemon */
-const formulario = document.getElementById('formulario');
+const formulario = document.querySelector('#formulario');
 formulario.addEventListener('input', (event) => {
   const pintame = document.getElementById('pintame');
   const resultado = document.getElementById('resultado');

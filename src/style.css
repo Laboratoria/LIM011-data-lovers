@@ -356,7 +356,6 @@ footer{
      .texto p{
          align-items: center;
          width: 300px;
-
     }
      .contenedor img{
            width: 100px;              
@@ -454,18 +453,6 @@ footer{
    /* IPad (landscape) */
    @media only screen and (min-width :768px) and (max-width :1024px) {
    
-    /* .bienvenida{
-        width: 100%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        position: relative;
-        display: flex;  
-    }
-    .bienvenida:before{
-        margin-top: 20%;
-        height: 40%;
-    } */
     .fondoBoton{
     width: 70%;
     font-size: 12px;
