@@ -142,7 +142,7 @@ Identificamos las necesidades de los usuarios, y confirmamos que tuvieramos toda
 
 ## 2. Sintesis y definicion
 ### Historias de usuario
-![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/historias%20de%20usuario.jpeg)
+![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/master/src/img/historias%20de%20usuario.jpeg)
 
 De acuerdo a nuestros conocimientos en pokemon go,  nos pusimos a pensar ¿qué información buscaría un  jugador que se está iniciando o tenga menos de un año jugando pokemon go? Nos ponemos en la posición del usuario y empezamos hacer un brainstorming apoyándonos de las historias de usuarios y decidimos mostrar los tipos de pokemon, sus debilidades, cantidad de caramelos que necesitan, un buscador y que se puedan ordenar alfabeticamente.
 
