@@ -454,7 +454,7 @@ footer{
    /* IPad (landscape) */
    @media only screen and (min-width :768px) and (max-width :1024px) {
    
-    .bienvenida{
+    /* .bienvenida{
         width: 100%;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -465,7 +465,7 @@ footer{
     .bienvenida:before{
         margin-top: 20%;
         height: 40%;
-    }
+    } */
     .fondoBoton{
     width: 70%;
     font-size: 12px;
