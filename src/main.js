@@ -16,6 +16,7 @@ const btnBienvenida = document.querySelector('#btn-bienvenida');
 const portada = document.querySelector('#vista-uno');
 const headerView = document.querySelector('#nav');
 const ordenando = document.querySelector('#ordenar');
+const btnNav = document.getElementById('btn-menuham');
 // const cajaAscendente = document.querySelector('#ascendente');
 // const cajaDescendente = document.querySelector('#descendente');
 
@@ -72,6 +73,7 @@ btnBienvenida.addEventListener('click', () => {
   portada.classList.add('hide');
   headerView.classList.remove('hide');
   cajaImagenes.classList.remove('hide');
+  btnNav.classList.add('hide');
 });
 // BUSCADOR
 const porNombre = document.getElementById('buscarData');
@@ -89,3 +91,8 @@ ordenando.addEventListener('click', (event) => {
     cajaImagenes.innerHTML = generarTemplateString(ordenarAscendente(POTTER).reverse());
   }
 });
+
+// btnNav.addEventListener('click', () => {
+//   headerView.classList.remove('hide');
+  
+// });

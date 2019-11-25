@@ -14,6 +14,11 @@ body {
     -o-background-size: cover;
 
 }
+/* Menu hamburguesa */
+ #btn-menuham {
+   display: none;
+ }
+ 
 
 .hide {
   display: none;
@@ -32,14 +37,29 @@ header {
   background: linear-gradient(to right, #000000, #740001, #000000);
 }
 
+/* Menu hamburguesa */
+header label {
+  display: none;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  border-right: 1px solid #fff;
+}
+
+header label:hover {
+  cursor: pointer;
+  background: rgba(247, 245, 245, 0.918);
+}
+/* Menu hamburguesa */
+
 header nav {
   display: flex;
   flex-wrap: wrap;
   z-index: 1000;
   width: 100%;
   /* margin: 20px auto; */
-  justify-content: center;
-  align-items: center;
+  justify-content: right; /*cambie la posición*/
+  align-items: right;
   padding: 14px;
 }
 .search-box input {
@@ -89,6 +109,23 @@ nav li:hover > ul {
 .btn-option a{
     background-color: #223750;
 }
+
+@media(max-width:768px) {
+  header label {
+      display: block;
+  }
+  .nav {
+    position: absolute;
+    background: linear-gradient(to right, #000000, #740001, #000000);
+    width: 80%;
+    flex-direction: column;
+    display: none;
+    /* margin-left: -70%; */
+  }
+
+  
+} 
+
 /*Fin Menu */
 
 .name {
