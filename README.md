@@ -54,16 +54,16 @@ Sexo y edad indistinta.
 Que el usuario encuentre  información que necesita, como tipos de pokemon (con sus características), cantidad de caramelos que necesitan, sus debilidades, los top 10 de mayor frecuencia de aparición, podrán ordenarlos de  forma alfabética, en un solo lugar, y que la información sea clara y precisa para poder coleccionar los pokemon de la region Kanto en el juego de pokemon go.
 
 ### Proceso de diseño
-### 1. Descubrimiento e investigacion
+### 1. Descubrimiento e investigación
 Identificamos las necesidades de los usuarios, y confirmamos que tuvieramos toda la informacion en la data que se nos entregó, tambien realizamos busquedas en la web para tener una idea de lo que ya existia en otras paginas (analisis de la competencia). 
 
-### 2. Sintesis y definicion
+### 2. Síntesis y definición
 #### Historias de usuario
 ![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/master/src/img/historias%20de%20usuario.jpeg)
 
 De acuerdo a nuestros conocimientos en pokemon go,  nos pusimos a pensar ¿qué información buscaría un  jugador que se está iniciando o tenga menos de un año jugando pokemon go? Nos ponemos en la posición del usuario y empezamos hacer un brainstorming apoyándonos de las historias de usuarios y decidimos mostrar los tipos de pokemon, sus debilidades, cantidad de caramelos que necesitan, un buscador y que se puedan ordenar alfabeticamente.
 
-### 3. Ideacion
+### 3. Ideación
 Utilizando la herramienta crazy eights
 ![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/Crazy-eights.jpg)
 
