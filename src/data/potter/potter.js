@@ -20,6 +20,7 @@ export default [
     actor: 'Daniel Radcliffe',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/harry.jpg',
+    houseImage: 'https://hpwu.online/wp-content/uploads/2019/07/Logo-casa-Gryffindor.png',
   },
   {
     name: 'Hermione Granger',
@@ -42,6 +43,7 @@ export default [
     actor: 'Emma Watson',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/hermione.jpeg',
+    houseImage: 'https://hpwu.online/wp-content/uploads/2019/07/Logo-casa-Gryffindor.png',
   },
   {
     name: 'Ron Weasley',
@@ -64,6 +66,7 @@ export default [
     actor: 'Rupert Grint',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/ron.jpg',
+    houseImage: 'https://hpwu.online/wp-content/uploads/2019/07/Logo-casa-Gryffindor.png',
   },
   {
     name: 'Draco Malfoy',
@@ -86,6 +89,7 @@ export default [
     actor: 'Tom Felton',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/draco.jpg',
+    houseImage: 'https://hpwu.online/wp-content/uploads/2019/07/Logo-casa-Slytherin.png',
   },
   {
     name: 'Minerva McGonagall',
@@ -108,6 +112,7 @@ export default [
     actor: 'Dame Maggie Smith',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/mcgonagall.jpg',
+    houseImage: 'https://hpwu.online/wp-content/uploads/2019/07/Logo-casa-Gryffindor.png',
   },
   {
     name: 'Cedric Diggory',
@@ -130,6 +135,7 @@ export default [
     actor: 'Robert Pattinson',
     alive: false,
     image: 'http://hp-api.herokuapp.com/images/cedric.png',
+    houseImage: 'https://hpwu.online/wp-content/uploads/2019/07/Logo-casa-Hufflepuff.png',
   },
   {
     name: 'Cho Chang',
@@ -152,6 +158,7 @@ export default [
     actor: 'Katie Leung',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/cho.jpg',
+    houseImage: 'https://hpwu.online/wp-content/uploads/2019/07/Logo-casa-Ravenclaw.png',
   },
   {
     name: 'Severus Snape',
@@ -174,6 +181,7 @@ export default [
     actor: 'Alan Rickman',
     alive: false,
     image: 'http://hp-api.herokuapp.com/images/snape.jpg',
+    houseImage: 'https://hpwu.online/wp-content/uploads/2019/07/Logo-casa-Slytherin.png',
   },
   {
     name: 'Rubeus Hagrid',
@@ -196,6 +204,7 @@ export default [
     actor: 'Robbie Coltrane',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/hagrid.png',
+    houseImage: 'https://hpwu.online/wp-content/uploads/2019/07/Logo-casa-Gryffindor.png',
   },
   {
     name: 'Neville Longbottom',
@@ -218,6 +227,7 @@ export default [
     actor: 'Matthew Lewis',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/neville.jpg',
+    houseImage: 'https://hpwu.online/wp-content/uploads/2019/07/Logo-casa-Gryffindor.png',
   },
   {
     name: 'Luna Lovegood',
@@ -240,6 +250,7 @@ export default [
     actor: 'Evanna Lynch',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/luna.jpg',
+    houseImage: 'https://hpwu.online/wp-content/uploads/2019/07/Logo-casa-Ravenclaw.png',
   },
   {
     name: 'Ginny Weasley',
@@ -262,6 +273,7 @@ export default [
     actor: 'Bonnie Wright',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/ginny.jpg',
+    houseImage: 'https://hpwu.online/wp-content/uploads/2019/07/Logo-casa-Gryffindor.png',
   },
   {
     name: 'Sirius Black',
@@ -284,6 +296,7 @@ export default [
     actor: 'Gary Oldman',
     alive: false,
     image: 'http://hp-api.herokuapp.com/images/sirius.JPG',
+    houseImage: 'https://hpwu.online/wp-content/uploads/2019/07/Logo-casa-Gryffindor.png',
   },
   {
     name: 'Remus Lupin',
@@ -306,6 +319,7 @@ export default [
     actor: 'David Thewlis',
     alive: false,
     image: 'http://hp-api.herokuapp.com/images/lupin.jpg',
+    houseImage: 'https://hpwu.online/wp-content/uploads/2019/07/Logo-casa-Gryffindor.png',
   },
   {
     name: 'Arthur Weasley',
@@ -328,6 +342,7 @@ export default [
     actor: 'Mark Williams',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/arthur.jpg',
+    houseImage: 'https://hpwu.online/wp-content/uploads/2019/07/Logo-casa-Gryffindor.png',
   },
   {
     name: 'Bellatrix Lestrange',
@@ -350,6 +365,7 @@ export default [
     actor: 'Helena Bonham Carter',
     alive: false,
     image: 'http://hp-api.herokuapp.com/images/bellatrix.jpg',
+    houseImage: 'https://hpwu.online/wp-content/uploads/2019/07/Logo-casa-Slytherin.png',
   },
   {
     name: 'Lord Voldemort',
@@ -372,6 +388,7 @@ export default [
     actor: 'Ralph Fiennes',
     alive: false,
     image: 'http://hp-api.herokuapp.com/images/voldemort.jpg',
+    houseImage: 'https://hpwu.online/wp-content/uploads/2019/07/Logo-casa-Slytherin.png',
   },
   {
     name: 'Horace Slughorn',
@@ -394,6 +411,7 @@ export default [
     actor: 'Jim Broadbent',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/slughorn.JPG',
+    houseImage: 'https://hpwu.online/wp-content/uploads/2019/07/Logo-casa-Slytherin.png',
   },
   {
     name: 'Kingsley Shacklebolt',
@@ -416,6 +434,7 @@ export default [
     actor: 'George Harris',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/kingsley.jpg',
+    houseImage: 'https://simg.nicepng.com/png/small/146-1467837_png-free-download-harry-potter-hogwarts-crest-design.png',
   },
   {
     name: 'Dolores Umbridge',
@@ -438,6 +457,7 @@ export default [
     actor: 'Imelda Staunton',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/umbridge.jpg',
+    houseImage: 'https://hpwu.online/wp-content/uploads/2019/07/Logo-casa-Slytherin.png',
   },
   {
     name: 'Lucius Malfoy',
@@ -460,6 +480,7 @@ export default [
     actor: 'Jason Isaacs',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/lucius.jpg',
+    houseImage: 'https://hpwu.online/wp-content/uploads/2019/07/Logo-casa-Slytherin.png',
   },
   {
     name: 'Vincent Crabbe',
@@ -482,6 +503,7 @@ export default [
     actor: 'Jamie Waylett',
     alive: false,
     image: 'http://hp-api.herokuapp.com/images/crabbe.jpg',
+    houseImage: 'https://hpwu.online/wp-content/uploads/2019/07/Logo-casa-Slytherin.png',
   },
   {
     name: 'Gregory Goyle',
@@ -504,6 +526,7 @@ export default [
     actor: 'Josh Herdman',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/goyle.jpg',
+    houseImage: 'https://hpwu.online/wp-content/uploads/2019/07/Logo-casa-Slytherin.png',
   },
   {
     name: 'Mrs Norris',
@@ -526,6 +549,7 @@ export default [
     actor: 'Maxime, Alanis and Tommy the cats',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/norris.JPG',
+    houseImage: 'https://simg.nicepng.com/png/small/146-1467837_png-free-download-harry-potter-hogwarts-crest-design.png',
   },
   {
     name: 'Argus Filch',
@@ -548,5 +572,6 @@ export default [
     actor: 'David Bradley',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/filch.jpg',
+    houseImage: 'https://simg.nicepng.com/png/small/146-1467837_png-free-download-harry-potter-hogwarts-crest-design.png',
   },
 ];

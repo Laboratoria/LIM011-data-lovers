@@ -1,5 +1,5 @@
 import {
-  ascendente, genero, filterRole, filterRoleDos, houseUno,
+  ascendente, genero, filterRole, filterRoleDos, houseUno, search,
 } from '../src/data.js';
 
 describe('ascendente', () => {
@@ -197,5 +197,38 @@ describe('houseUno', () => {
     expect(houseUno(input, 'Slytherin')).toEqual(outputSlyt);
     expect(houseUno(input, 'Hufflepuff')).toEqual(outputHuff);
     expect(houseUno(input, 'Ravenclaw')).toEqual(outputRave);
+  });
+});
+
+describe('search', () => {
+  it('deberia ser una funcion', () => {
+    expect(typeof search).toBe('function');
+  });
+
+  it('Busca los personajes mediante un string', () => {
+    const input1 = [
+      {
+        name: 'Harry Potter',
+      },
+      {
+        name: 'Hermione Granger',
+      },
+      {
+        name: 'Ron Weasley',
+      },
+      {
+        name: 'Draco Malfoy',
+      },
+      {
+        name: 'Minerva McGonagall',
+      },
+    ];
+    const imput2 = 'ha';
+    const outputBusca = [
+      {
+        name: 'Harry Potter',
+      },
+    ];
+    expect(search(input1, imput2)).toEqual(outputBusca);
   });
 });

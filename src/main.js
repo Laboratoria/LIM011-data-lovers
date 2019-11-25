@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 import POTTER from './data/potter/potter.js';
 
 import {
@@ -49,15 +50,14 @@ const showCharacters = (dataPotter) => {
       // escritura titulo
       const tituloCaracteristicas = document.createElement('h2');
       tituloCaracteristicas.setAttribute('id', 'caracteristicasH2');
-      // const contenidoTitulo = document.createTextNode('HOLA titulo caracteristicas');
       const contenidoTitulo = document.createTextNode(dato.name);
       tituloCaracteristicas.appendChild(contenidoTitulo);
 
-      // EQUIS
+      // Salir
       const spanClose = document.createElement('span');
       spanClose.setAttribute('id', 'close');
       spanClose.setAttribute('class', 'close');
-      spanClose.innerHTML = 'X';
+      spanClose.innerHTML = '&times;';
 
 
       // div MODALBODY
@@ -67,21 +67,30 @@ const showCharacters = (dataPotter) => {
       //  escritura P
       const parrafoCaracteristicas = document.createElement('p');
       parrafoCaracteristicas.setAttribute('id', 'caracteristicasP');
-      // const contenidoCaracteristicas = document.createTextNode('HOLA parrafo caracteristicas');
-      // parrafoCaracteristicas.appendChild(contenidoCaracteristicas);
 
       // llenando las caracterisiticas
-      const arrayCaracteristicas = [`Nombre: ${dato.name}`, `Especie: ${dato.species}`, `Genero: ${dato.gender}`, `Casa: ${dato.house}`, `Fecha de nacimiento: ${dato.dateOfBirth}`, `Ascendencia: ${dato.ancestry}`, `Color de ojos: ${dato.eyeColour}`, `Color de cabello: ${dato.hairColour}`, `Patronus: ${dato.patronus}`, `Actor: ${dato.actor}`];
-      for (let a = 0; a < arrayCaracteristicas.length; a += 1) {
+      const arrayCaracteristicas = [
+        `Casa: ${dato.house}`,
+        `Especie: ${dato.species}`,
+        `Genero: ${dato.gender}`,
+        `Fecha de nacimiento: ${dato.dateOfBirth}`,
+        `Ascendencia: ${dato.ancestry}`,
+        `Color de ojos: ${dato.eyeColour}`,
+        `Color de cabello: ${dato.hairColour}`,
+        `Patronus: ${dato.patronus}`,
+        `Actor: ${dato.actor}`,
+      ];
+
+      for (let a = 0; a < arrayCaracteristicas.length; a++) {
         const saltoLinea = document.createElement('br');
         const caracteristica = document.createTextNode(arrayCaracteristicas[a]);
         parrafoCaracteristicas.appendChild(saltoLinea);
         parrafoCaracteristicas.appendChild(caracteristica);
       }
 
-      // div MODALFOOTER
-      // const divModalFooter = document.createElement('div');
-      // divModalFooter.setAttribute('class', 'modalFooter');
+      const imagenCasa = document.createElement('img');
+      imagenCasa.setAttribute('src', dato.houseImage);
+      imagenCasa.setAttribute('class', 'imageCasa');
 
       spanClose.addEventListener('click', () => {
         document.body.removeChild(divModal);
@@ -94,6 +103,7 @@ const showCharacters = (dataPotter) => {
       });
 
       // anidando divs
+      divModalBody.appendChild(imagenCasa);
       divModalBody.appendChild(parrafoCaracteristicas);
       divTitulo.appendChild(tituloCaracteristicas);
       divTitulo.appendChild(spanClose);
@@ -134,50 +144,48 @@ imageIcon.addEventListener('click', () => {
 // OrdenarAZ
 selectAlfab.addEventListener('change', (event) => {
   if (event.target.value === '0') {
-    // contentCharacter.innerHTML = showCharacters(ascendente(POTTER));
     document.querySelector('#contentCharacter').innerHTML = '';
     showCharacters(ascendente(POTTER));
   } else {
-    // contentCharacter.innerHTML = showCharacters(ascendente(POTTER).reverse());
     document.querySelector('#contentCharacter').innerHTML = '';
     showCharacters(ascendente(POTTER).reverse());
   }
 });
-// Filtrado por genero
-/* gender.addEventListener('change', () => {
-  const filterGender = genero(POTTER, gender.value);
-  contentCharacter.innerHTML = showCharacters(filterGender);
-}); */
+
 gender.addEventListener('change', () => {
   document.querySelector('#contentCharacter').innerHTML = '';
   showCharacters(genero(POTTER, gender.value));
 });
+
 // Filtrado estudiante profesor
 role.addEventListener('change', (event) => {
-  // const student = filterRole(POTTER);
-  //  const staff = filterRoleDos(POTTER);
   if (event.target.value === 'hogwartsStudent') {
-    // contentCharacter.innerHTML = showCharacters(student);
     document.querySelector('#contentCharacter').innerHTML = '';
     showCharacters(filterRole(POTTER));
   } else {
-    // contentCharacter.innerHTML = showCharacters(staff);
     document.querySelector('#contentCharacter').innerHTML = '';
     showCharacters(filterRoleDos(POTTER));
   }
 });
 // Filtrado por casas
-/* house.addEventListener('change', () => {
-  const chooseHouse = houseUno(POTTER, house.value);
-  contentCharacter.innerHTML = showCharacters(chooseHouse);
-});
- */
 house.addEventListener('change', () => {
   document.querySelector('#contentCharacter').innerHTML = '';
   showCharacters(houseUno(POTTER, house.value));
 });
 
-// eslint-disable-next-line vars-on-top
-const str = 'casa world, welcome to the universe.';
-const n = str.startsWith('casa'); 
-console.log(n);
+// buscador
+const searchCharacter = document.getElementById('searchCharacter');
+searchCharacter.addEventListener('input', (event) => {
+  const findCharacter = search(POTTER, event.target.value.toLowerCase());
+  document.querySelector('#contentCharacter').innerHTML = '';
+  showCharacters(findCharacter);
+});
+
+// Boton refresh
+const botonRefresh = document.getElementById('refresh');
+
+const manejoReset = () => {
+  document.querySelector('#filtros').reset();
+};
+
+botonRefresh.addEventListener('click', manejoReset);
