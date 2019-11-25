@@ -50,24 +50,24 @@
 Página dirigida a jugadores que recien se inician en el juego de pokemon go y que desean coleccionar a todos los pokemon de la region Kanto.
 Sexo y edad indistinta.
 
-#### Que problema resuelve
+### Que problema resuelve
 Que el usuario encuentre  información que necesita, como tipos de pokemon (con sus características), cantidad de caramelos que necesitan, sus debilidades, los top 10 de mayor frecuencia de aparición, podrán ordenarlos de  forma alfabética, en un solo lugar, y que la información sea clara y precisa para poder coleccionar los pokemon de la region Kanto en el juego de pokemon go.
 
-#### Proceso de diseño
-#### 1. Descubrimiento e investigacion
+### Proceso de diseño
+### 1. Descubrimiento e investigacion
 Identificamos las necesidades de los usuarios, y confirmamos que tuvieramos toda la informacion en la data que se nos entregó, tambien realizamos busquedas en la web para tener una idea de lo que ya existia en otras paginas (analisis de la competencia). 
 
-#### 2. Sintesis y definicion
+### 2. Sintesis y definicion
 #### Historias de usuario
 ![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/master/src/img/historias%20de%20usuario.jpeg)
 
 De acuerdo a nuestros conocimientos en pokemon go,  nos pusimos a pensar ¿qué información buscaría un  jugador que se está iniciando o tenga menos de un año jugando pokemon go? Nos ponemos en la posición del usuario y empezamos hacer un brainstorming apoyándonos de las historias de usuarios y decidimos mostrar los tipos de pokemon, sus debilidades, cantidad de caramelos que necesitan, un buscador y que se puedan ordenar alfabeticamente.
 
-#### 3. Ideacion
+### 3. Ideacion
 Utilizando la herramienta crazy eights
 ![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/Crazy-eights.jpg)
 
-#### 4. Prototipado
+### 4. Prototipado
 #### Prototipo de baja fidelidad
 Prototipo para Desktop
 
@@ -87,7 +87,7 @@ Prototipo para Celular
 https://www.figma.com/file/KI1RbmIBszM3HQiwv6dolt/Pokemon-DataLovers?node-id=20%3A2
 
 
-#### 5. User testing
+### 5. User testing
 #### Testeos de usabilidad
 Se pidió a 6 usuarias (4 de ellas sabian sobre pokemon) que nos brindaran su opinion acerca de nuestro prototipado.
 
@@ -98,14 +98,14 @@ Se pidió a 6 usuarias (4 de ellas sabian sobre pokemon) que nos brindaran su op
 4. Las usuarias también nos indicaron que necesitarian una barra para buscar por nombre el pokemon de su preferencia.
 5. Que el botón de contactanos que se mostraba en el footer, sea un botón funcional, por ese motivo lo cambiamos a Descarga aquí tu app.
 
-#### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
+### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
 ![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/pagina1celular.jpg)
 ![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/pagina2celular.jpg)
 ![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/pagina3celular.jpg)
 
 Responsive para iphone
-#### Pruebas unitarias
+### Pruebas unitarias
 
 ![image](https://github.com/MelissaCcoyllo/LIM011-data-lovers/blob/pokemon-datalovers/src/img/test.jpg)
 
