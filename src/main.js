@@ -4,29 +4,15 @@ import POKEMON from './data/pokemon/pokemon.js';
 
 import {
   traerDataPokemon,
-  // traerDataPokemonModal,
   ordenarAscOdescData,
   filtrarPokemones,
   mostrarTop,
   buscarPokemon,
-  // buscarPokemonId
 } from './data.js';
+import pokemon from './data/pokemon/pokemon.js';
 
 const radioInput = document.querySelectorAll('input[name=ordena]');
 
-// const modal = (obj) => {
-// const divElement = document.createElement('div');
-// divElement.classList.add('modalDialog');
-// divElement.innerHTML =  `
-// <div class="modal-contenido">
-// <a href="#close" title="Close" class="close">X</a>
-// <h2>${obj.name}</h2>
-// <p>${obj.weight}</p>
-// <div id="prevolucion"></div>
-// </div> 
-// `;
-// return divElement;
-// }
 
 const containerElements= (obj) => {
   const divElement = document.createElement("div");
@@ -37,6 +23,7 @@ const containerElements= (obj) => {
   divElement.addEventListener('click', () => {
     const divElem = document.createElement('div');
     divElem.classList.add('modalDialog');
+    
     if(obj.multiplicador===null || obj.caramelos === undefined){
     divElem.innerHTML = `
     <div>
@@ -63,14 +50,20 @@ const containerElements= (obj) => {
       <p>Sig. evolucion: ${obj.siguiente_evolucion}</p></div>
     </div> 
     `
-
     };
-   
+    document.getElementById("contenedor-modal").appendChild(divElem);
     divElem.style.display = 'block';
     divElem.querySelector('.close').addEventListener('click', () => {
-    divElem.style.display = 'none';
+    //divElem.style.display = 'none';
+    divElem.classList.remove("modalDialog");
+    //divElement.style.display='none';
+    //document.querySelector(".abc").style.display = 'block';
+    //document.querySelector(".abc").style.display = 'block';
+    //generarTemplatePokemones(traerDataPokemon).style.display='block';
+    //divElement.appendChild(divElem).style.display='none';    
     });
-    divElement.appendChild(divElem);
+    
+  //divElement.appendChild(divElem);
   });
 
   return divElement;
@@ -82,45 +75,8 @@ const generarTemplatePokemones = (arr) => {
   });
 };
 
-// const generarTemplatePokemonesModal = (obj) => {
-//   `
-//     <div align="center">
-//     <img src = "${obj.imagen}"/>
-//     <h1> ${obj.identificador}</h1><p>  ${obj.nombre}</p>
-//     <p> ${obj.altura}</p><p> ${obj.peso}</p>
-//     </div>
-//     `;
-// };
 
 generarTemplatePokemones(traerDataPokemon(POKEMON));
-// const template = generarTemplatePokemones(traerDataPokemon(POKEMON))
-// const templateModal = generarTemplatePokemonesModal(traerDataPokemonModal(POKEMON));
-
-// const pintarPokemonesEnPantalla = (plantilla, id) => {
-// document.querySelector(id).innerHTML = '';
-// document.querySelector(id).innerHTML = plantilla;
-// };
-
-// pintarPokemonesEnPantalla(template, '#contenedor-pokemons');
-
-/*const clasePokemonModal = document.querySelectorAll('.pokemonModal');
-console.log(clasePokemonModal)
-for (let i = 0; i < clasePokemonModal.length; i += 1) {
-clasePokemonModal[i].addEventListener('click', (event) => {
-let idPokemonABuscar = clasePokemonModal[i].children[1].firstChild;
-console.log('id capturado', idPokemonABuscar);
-let cantidad=idPokemonABuscar.ty;
-console.log(cantidad);
-let posPokemonModal = parseInt(idPokemonABuscar);
-console.log('id posicion', posPokemonModal);*/
-// console.log(POKEMON[idPokemonABuscar])
-// const arrBuscaPokemon = [];
-// arrBuscaPokemon.push(POKEMON.find((POKEMON) => elemento.id === idPokemonABuscar));
-// console.log(arrBuscaPokemon)
-// const pokemonBuscadoPorId = traerDataPokemonModal(buscarPokemonId((POKEMON), idPokemonABuscar));
-// console.log('id de pokemon',pokemonBuscadoPorId)
-// const pintarPokemonBuscadoModal = generarTemplatePokemonesModal(pokemonBuscadoPorId);
-// pintarPokemonesEnPantallaModal(pintarPokemonBuscadoModal, '#miModal');
 
 
 const inputBuscaPokemon = document.getElementById('buscaPokemon');
