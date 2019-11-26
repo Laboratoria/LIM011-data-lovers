@@ -31,7 +31,6 @@ header {
   width: 100%;
   background: linear-gradient(to right, #000000, #740001, #000000);
 }
-
 header nav {
   display: flex;
   flex-wrap: wrap;
