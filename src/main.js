@@ -133,42 +133,40 @@ const candyCountUsuario = document.getElementById('candy-count');
 const botonDescubrir = document.getElementById('btn-calculate');
 
 
-
-const char = (data) =>{
-for ( let i=0, len = char.length; i<len; i++) {
-  if (data[i]['numero'] === undefined){
-    //Ya no evoluciona
-    document.getElementById('caramelo-muestra-pokemon').innerHTML =`
-    <div id="${data[i]['id']}" name="pokemon" class="ficha-pokemon">
+const showEvolucionCaramelos = (data) => {
+  for (let i = 0, len = showEvolucionCaramelos.length; i < len; i += 1) {
+    if (data[i].numero === undefined) {
+    // Ya no evoluciona
+      document.getElementById('caramelo-muestra-pokemon').innerHTML = `
+    <div id="${data[i].id}" name="pokemon" class="ficha-pokemon">
            <div class="fondo-pokemon">
-               <p>${data[i]['mensaje']}</p>
-               <img src="${data[i]['img']}"/></div>
+               <p>${data[i].mensaje}</p>
+               <img src="${data[i].img}"/></div>
           </div>`;
-  } else {
-    //Evoluciona
-    console.log(' :B');
-    document.getElementById('caramelo-muestra-pokemon').innerHTML =`
-    <div id="${data[i]['id']}" name="pokemon" class="ficha-pokemon">
+    } else {
+    // Evoluciona
+      document.getElementById('caramelo-muestra-pokemon').innerHTML = `
+    <div id="${data[i].id}" name="pokemon" class="ficha-pokemon">
            <div class="fondo-pokemon">
-               <p>${data[i]['mensaje']}</p>
-               <img src="${data[i]['img']}"/> <p>${data[i]['mensaje2']}</p>
-               <img src="${data[i]['imgEvo']}"/>
+               <p>${data[i].mensaje}</p>
+               <img src="${data[i].img}"/> <p>${data[i].mensaje2}</p>
+               <img src="${data[i].imgEvo}"/>
                </div>
           </div>`;
-  };
+    }
+  }
 };
-};
-console.log(char(caramelos(POKEMON, nameCandyPokemon.value, candyCountUsuario.value)));
+showEvolucionCaramelos(caramelos(POKEMON, nameCandyPokemon.value, candyCountUsuario.value));
 
 botonDescubrir.addEventListener('click', () => {
+  // eslint-disable-next-line no-restricted-globals
   event.preventDefault();
   document.getElementById('caramelo-muestra-pokemon').innerHTML = caramelos(POKEMON, nameCandyPokemon.value, candyCountUsuario.value);
-  console.log(caramelos(POKEMON, nameCandyPokemon.value, candyCountUsuario.value));
+});
 
-  });
+const botonLimpiarCaramelos = document.getElementById('btn-limpiar-caramelos');
 
-  const botonLimpiarCaramelos = document.getElementById('btn-limpiar-caramelos')
-  
-  botonLimpiarCaramelos.addEventListener('click',() =>{
-    document.getElementById('caramelo-muestra-pokemon').innerHTML = ''
-    document.getElementById('form').reset()})
+botonLimpiarCaramelos.addEventListener('click', () => {
+  document.getElementById('caramelo-muestra-pokemon').innerHTML = '';
+  document.getElementById('form').reset();
+});
