@@ -90,4 +90,4 @@ Tambien contaras con un boton **Reset** para que puedas volver a inicio.
 - [ ] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
 - [x] Utilizar linter para seguir buenas prácticas (ESLINT).
 
-
+----- end ----
