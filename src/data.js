@@ -5,10 +5,8 @@ export const filtroAlfabeticoAZ = (data) => data.sort((a, b) => a.name.localeCom
 export const filtroAlfabeticoZA = (data) => data.sort((a, b) => b.name.localeCompare(a.name));
 export const ordenNumerico = (data) => data.sort((a, b) => a.num.localeCompare(b.num));
 // eslint-disable-next-line no-prototype-builtins
-export const tieneEvolucion = (data) => data.filter((item) => (item.hasOwnProperty('next_evolution')));
 export const caramelos = (data, nombre, candyUsuario) => {
   let candy = 0;
-  // let arreglo = [];
   for (let i = 0; i < data.length; i++) {
     if (data[i].name === nombre) {
       // sobran caramelos
