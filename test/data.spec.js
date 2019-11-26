@@ -3,7 +3,7 @@
 /* eslint-disable import/named */
 // importamos la función `example`
 import {
-  filtroTipoPokemon, filtroAlfabeticoAZ, filtroAlfabeticoZA, ordenNumerico, busquedaPokemonNombre,
+  filtroTipoPokemon, filtroAlfabeticoAZ, filtroAlfabeticoZA, ordenNumerico, busquedaPokemonNombre, evolucionCaramelos,
 } from '../src/data';
 
 const data = [{
@@ -114,6 +114,7 @@ describe('filtroTipoPokemon', () => {
 const names = [{ name: 'Wartortle' }, { name: 'Blastoise' }, { name: 'Caterpie' }, { name: 'Metapod' }, { name: 'Butterfree' }];
 const namesAZ = [{ name: 'Blastoise' }, { name: 'Butterfree' }, { name: 'Caterpie' }, { name: 'Metapod' }, { name: 'Wartortle' }];
 const namesZA = [{ name: 'Wartortle' }, { name: 'Metapod' }, { name: 'Caterpie' }, { name: 'Butterfree' }, { name: 'Blastoise' }];
+
 describe('filtroAlfabeticoAZ', () => {
   it('debería ser una función', () => {
     expect(typeof filtroAlfabeticoAZ).toBe('function');
@@ -152,13 +153,47 @@ describe('busquedaPokemonNombre', () => {
     expect(busquedaPokemonNombre(data, 'wartortle')[0].name).toBe('wartortle');
   });
 });
-
-// data
-// describe('busquedaPokemonNombre', () => {
-//   it('debería ser una función', () => {
-//     expect(typeof busquedaPokemonNombre).toBe('function');
-//   });
-//   it('Deberia retornar el nombre del pokemon buscado', () => {
-//     expect(busquedaPokemonNombre(data, 'wartortle')[0].name).toBe('wartortle');
-//   });
 // });
+const resultado = [{
+  numero: 7,
+  mensaje: 'Te faltan 7 Caramelos para evolucionar a tu Caterpie...',
+  mensaje2: '... a un Metapod.',
+  img: 'http://www.serebii.net/pokemongo/pokemon/010.png',
+  name: 'Caterpie',
+  id: 10,
+  num: '010',
+  imgEvo: 'http://www.serebii.net/pokemongo/pokemon/011.png',
+}];
+const resultado2 = [{
+  numero: 8,
+  mensaje: '¡Puedes evolucionar tu Caterpie...',
+  mensaje2: '... a un Metapod!',
+  img: 'http://www.serebii.net/pokemongo/pokemon/010.png',
+  name: 'Caterpie',
+  id: 10,
+  num: '010',
+  imgEvo: 'http://www.serebii.net/pokemongo/pokemon/011.png',
+}];
+
+const resultado3 = [{
+  numero: undefined,
+  mensaje: 'Ya no puedes evolucionar tu Blastoise, te quedan 5 caramelos.',
+  img: 'http://www.serebii.net/pokemongo/pokemon/009.png',
+  name: 'Blastoise',
+  id: 9,
+}];
+// data
+describe('evolucionCaramelos', () => {
+  it('debería ser una función', () => {
+    expect(typeof evolucionCaramelos).toBe('function');
+  });
+  it('Deberia retornar arreglo de objeto concuerde con el nombre y retornar un objeto nuevo con un key "mensaje" con valor de "Te faltan..."', () => {
+    expect(evolucionCaramelos(data, 'Caterpie', 5)).toEqual(resultado);
+  });
+  it('Deberia retornar arreglo de objeto concuerde con el nombre y retornar un objeto nuevo con un key "mensaje" con valor de "Puedes evolucionar..."', () => {
+    expect(evolucionCaramelos(data, 'Caterpie', 20)).toEqual(resultado2);
+  });
+  it('Deberia retornar arreglo de objeto concuerde con el nombre y retornar un objeto nuevo con un key "mensaje" con valor de "Ya no..."', () => {
+    expect(evolucionCaramelos(data, 'Blastoise', 5)).toEqual(resultado3);
+  });
+});

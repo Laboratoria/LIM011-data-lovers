@@ -158,6 +158,8 @@ const showEvolucionCaramelos = (data) => {
 };
 showEvolucionCaramelos(evolucionCaramelos(POKEMON, nameCandyPokemon.value, candyCountUsuario.value));
 
+// console.log(evolucionCaramelos(POKEMON, nameCandyPokemon.value, candyCountUsuario.value));
+
 botonDescubrir.addEventListener('click', () => {
   // eslint-disable-next-line no-restricted-globals
   event.preventDefault();
