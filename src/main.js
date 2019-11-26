@@ -30,37 +30,42 @@ const containerElements= (obj) => {
       <a href = "#close" title = "Close" class = "close">X</a>
       <h2>${obj.nombre.toUpperCase()}</h2>
       <img class="imagenPokemon" src = "${obj.imagen}"/>
+      <seccion>
       <p>Peso: ${obj.peso}  Altura: ${obj.altura} Tipo: ${obj.tipo}</p>
       <p>Caramelos: No tiene asignada esta propiedad</p>
       <p>Multiplicador: No tiene asignado un multiplicador</p>
+      </seccion>
+      <seccion>
       <div id="prevolucion">
         <p>Sig. evolucion: ${obj.siguiente_evolucion}</p>
       </div>
+      </seccion>
     </div> 
     `} else { divElem.innerHTML = `
     <div>
       <a href = "#close" title = "Close" class = "close">X</a>
       <h2>${obj.nombre.toUpperCase()}</h2>
       <img class="imagenPokemon" src = "${obj.imagen}"/>
+      <seccion>
       <p>Peso: ${obj.peso}  Altura: ${obj.altura}</p>
       <p>Tipo: ${obj.tipo}</p>
       <p>Caramelos: ${obj.caramelos}</p>
       <p>Multiplicador: ${obj.multiplicador}</p>
+      </seccion>
+      <seccion>
       <div id="prevolucion">
-      <p>Sig. evolucion: ${obj.siguiente_evolucion}</p></div>
+      <p>Sig. evolucion: ${obj.siguiente_evolucion}</p>
+      </div>
+      </seccion>
     </div> 
     `
     };
+    
     document.getElementById("contenedor-modal").appendChild(divElem);
     divElem.style.display = 'block';
     divElem.querySelector('.close').addEventListener('click', () => {
-    //divElem.style.display = 'none';
     divElem.classList.remove("modalDialog");
-    //divElement.style.display='none';
-    //document.querySelector(".abc").style.display = 'block';
-    //document.querySelector(".abc").style.display = 'block';
-    //generarTemplatePokemones(traerDataPokemon).style.display='block';
-    //divElement.appendChild(divElem).style.display='none';    
+    document.querySelector('#contenedor-modal').innerHTML='';
     });
     
   //divElement.appendChild(divElem);
