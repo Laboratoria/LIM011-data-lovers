@@ -76,7 +76,6 @@ btnBienvenida.addEventListener('click', () => {
 const porNombre = document.getElementById('buscarData');
 porNombre.addEventListener('input', (event) => {
   cajaImagenes.innerHTML = generarTemplateString(buscador(POTTER, event.target.value));
-  console.log(event.target.value);
 });
 
 ordenando.addEventListener('click', (event) => {
@@ -89,8 +88,3 @@ ordenando.addEventListener('click', (event) => {
     cajaImagenes.innerHTML = generarTemplateString(ordenarAscendente(POTTER).reverse());
   }
 });
-
-// btnNav.addEventListener('click', () => {
-//   headerView.classList.remove('hide');
-  
-// });
