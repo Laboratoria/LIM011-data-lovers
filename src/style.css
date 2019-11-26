@@ -37,20 +37,6 @@ header {
   background: linear-gradient(to right, #000000, #740001, #000000);
 }
 
-/* Menu hamburguesa */
-header label {
-  display: none;
-  width: 30px;
-  height: 30px;
-  padding: 10px;
-  border-right: 1px solid #fff;
-}
-
-header label:hover {
-  cursor: pointer;
-  background: rgba(247, 245, 245, 0.918);
-}
-/* Menu hamburguesa */
 
 header nav {
   display: flex;
