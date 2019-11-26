@@ -34,14 +34,20 @@ Tambien contaras con un boton **Reset** para que puedas volver a inicio.
 
 ## Prototipo de baja Fidelidad
 
-![hola](img/1a.jpeg)
+![hola](img/1.jpeg)
+![hola](img/2.jpeg)
+![hola](img/4.jpeg)
+![hola](img/5.jpeg)
 
 ## Prototipo de alta Fidelidad
 
-![hola](img/1a.jpeg)
+![hola](img/figma1.PNG)
+![hola](img/figma2.PNG)
+![hola](img/figma4.PNG)
 
 ## Imagen final del proyecto
 ![hola](img/1F.PNG)
+![hola](img/4F.PNG)
 ![hola](img/2f.PNG)
 
 ## Objetivos de Aprendizaje
@@ -69,7 +75,7 @@ Tambien contaras con un boton **Reset** para que puedas volver a inicio.
 ### Javascript
 
 - [x] Manipular arrays (`filter` | `map` | `sort` | `reduce`).
-- [x] Manipular objects (key | value).
+- [ ] Manipular objects (key | value).
 - [x] Entender el uso de condicionales (`if-else` | `switch`).
 - [x] Entender el uso de bucles (`for` | `forEach`).
 - [ ] Entender la diferencia entre expression y statements.
