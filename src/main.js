@@ -3,8 +3,12 @@ import {
   filterHouse, filterGender, filterRole, filterWandCore, search, changeDataWand, filterPatronus,
 } from './data.js';
 
+const btnInicio = document.querySelector('#btn-home');
+const filtersWands = document.querySelector('.filters-wands');
+const sectionHome = document.querySelector('.section-home');
 const dataCharacters = document.querySelector('.data-characters');
-const sectionFilters = document.querySelector('.filters');
+const filtersCharacters = document.querySelector('.filters-characters');
+// const sectionWands = document.querySelector('.wands');
 const btnFiltersWand = document.querySelector('.btn-filters-wands');
 const selectElementHouse = document.querySelector('.selectHouse');
 const selectElementRole = document.querySelector('.selectRole');
@@ -15,6 +19,8 @@ const btnPatronus = document.querySelector('#btn-patronus');
 const btnDragon = document.querySelector('#btn-dragon');
 const btnUnicorn = document.querySelector('#btn-unicorn');
 const btnPhoenix = document.querySelector('#btn-phoenix');
+const btnCharacters = document.querySelector('#btn-characters');
+const sectionSearch = document.querySelector('.search');
 
 // function to get y show main data using template
 const showMainTemplate = (objDataPotter) => {
@@ -42,7 +48,7 @@ const showMainTemplate = (objDataPotter) => {
         <h2 class='features' id='name'>${objDataPotter.name}</h2>
         <h3 class='features' id='house'>~ ${objDataPotter.house} ~</h3>
       <section/>
-      <section class = "main-modal">
+      <section class = "main-modal"><
         <h3 class='modal-features' id='dateofBirth'> Fecha de Nac. :${objDataPotter.dateOfBirth}</h3>
         <h3 class='modal-features' id='ancestry'> Origen : ${objDataPotter.ancestry}</h3>
         <h3 class='modal-features' id='patronus'> Patronus : ${objDataPotter.patronus}</h3>
@@ -72,14 +78,21 @@ const showTemplateWands = (objDataPotter) => {
   const template = document.createElement('article');
   template.className = 'card-data-wands';
   template.innerHTML = `
-    <div class='card-details'>
-      <h2 class='features' id='name'>${objDataPotter.name}</h2>
+    <h4 class='card-name' id='name'>${objDataPotter.name}</h4>
+    <div class='img-wand-card' >
+      <img src='${objDataPotter.image}'/>
     </div>
-    <div class='card-description'>
-      <img class='img-modal-card' src='${objDataPotter.image}'/>
-      <p id='wood'> Madera : ${objDataPotter.wand.wood} </p>
-      <p id='core'> Nucleo : ${objDataPotter.wand.core} </p>
-      <p id='length'> Tamaño : ${objDataPotter.wand.length} </p>
+    <div class='card-description-wands'>
+      <div class='name-type'>
+        <p id='wood'><i class="fas fa-magic"></i>Madera:</p>
+        <p id='core'><i class="fas fa-atom"></i>Núcleo: </p>
+        <p id='length'><i class="fas fa-ruler-horizontal"></i>Tamaño:</p>
+      </div>
+      <div class='type-wand'>
+        <p>${objDataPotter.wand.wood}</p>
+        <p>${objDataPotter.wand.core}</p>
+        <p>${objDataPotter.wand.length}</p>
+      </div>
     </div>`;
   return template;
 };
@@ -94,7 +107,7 @@ const showTemplatePatronus = (objDataPotter) => {
     </div>
     <div class='card-description'>
       <img class='img-modal-card' src='${objDataPotter.image}'/>
-      <p id='wood'> Madera : ${objDataPotter.patronus} </p>
+      <p id='patronus'> Patronus: ${objDataPotter.patronus} </p>
     </div>`;
   return template;
 };
@@ -105,7 +118,6 @@ const showMainData = (data) => {
   });
   return showMainData;
 };
-showMainData(dataPotter);
 // function to go through for each object (wands)
 const showWandsData = (listdataPotter) => {
   listdataPotter.forEach((objDataPotter) => {
@@ -122,8 +134,11 @@ const showPatronusData = (listdataPotter) => {
 };
 // Event to call to section wands
 btnWand.addEventListener('click', () => {
-  dataCharacters.remove();
-  sectionFilters.remove();
+  sectionHome.classList.add('hide');
+  filtersWands.classList.remove('hide');
+  dataCharacters.classList.add('hide');
+  filtersCharacters.classList.add('hide');
+  btnFiltersWand.classList.remove('hide');
   const property = 'wand';
   const newDataWands = changeDataWand(dataPotter, property);
   showWandsData(newDataWands);
@@ -157,9 +172,10 @@ btnPhoenix.addEventListener('click', () => {
 });
 // Event to call to section patronus
 btnPatronus.addEventListener('click', () => {
-  dataCharacters.remove();
-  sectionFilters.remove();
-  btnFiltersWand.remove();
+  sectionHome.classList.add('hide');
+  dataCharacters.classList.add('hide');
+  filtersCharacters.classList.add('hide');
+  btnFiltersWand.classList.add('hide');
   const dataPatronus = filterPatronus(dataPotter);
   dataWands.querySelectorAll('.card-data-wands').forEach((child) => child.remove());
   showPatronusData(dataPatronus);
@@ -193,4 +209,15 @@ searchBox.addEventListener('keyup', (buscar) => {
   const finded = search(dataPotter, searcher);
   dataCharacters.querySelectorAll('.card-data').forEach((child) => child.remove());
   showMainData(finded);
+});
+// events to navegation menu
+btnInicio.addEventListener('click', () => {
+  document.location.reload(true);
+});
+btnCharacters.addEventListener('click', () => {
+  sectionHome.classList.add('hide');
+  filtersCharacters.classList.remove('hide');
+  sectionSearch.classList.remove('hide');
+  dataCharacters.classList.remove('hide');
+  showMainData(dataPotter);
 });
