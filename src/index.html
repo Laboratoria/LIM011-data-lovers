@@ -8,52 +8,52 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/9faabd4c76.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <header class="header">  
-      <div class="nav-container">
-        <a href="#" class="logo"><img class= "img-logo" src="./img/logo.png" alt=""></a>   
-        <div class="menu">
-          <img class="icon-search" src="./img/busqueda (1).png">
-          <input id="searchBar" class="searchbar" type="text" placeholder="Buscar...">
-        </div>
-      </div>
+    <header>  
       <nav>
-          <input type="checkbox" id="check">
-          <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-          </label>
-          <ul>
-            <li><a class="active"><button class="btn-filters" id="btnInicio" type="button">Inicio</button></a></li>
-            <li><a href="index.html">Personajes</a></li>
-            <li><a> <button class="btn-filters" id="btn-wand" type="button">VARITAS</button></a></li>
-            <li><a><button class="btn-filters" id="btn-patronus" type="button">PATRONUS</button></a></li>
-            <li><a href="#">Estadisticas</a></li>
-            <li><a href="https://discord.gg/v8vYsrk">Comunidad</a></li>
-          </ul>
+        <div class="logo">
+            <img class= "img-logo" src="./img/logomobile.png" alt="">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="icon-menu  fas fa-bars "></i>
+                <i><p class="text-menu">Menu</p></i>
+            </label>
+            <ul class="ul-menu">
+                <li><button class="btn-menu" id="btn-home" type="button">inicio</button></li>
+                <li><button class="btn-menu" id="btn-characters" type="button">personajes</button></li>
+                <li><button class="btn-menu" id="btn-wand" type="button">varitas</button></li>
+                <li><button class="btn-menu" id="btn-patronus" type="button">patronus</button></li>
+                <li><button class="btn-menu" id="btn-stadists" type="button">estadisticas</button></li>
+                <li><button class="btn-menu" id="btn-comunity" type="button"><a id="comunity" href="https://discord.gg/v8vYsrk">comunidad</a></button></li>
+            </ul>
+        </div>
+        <div class="search hide">
+          <input id="searchBar" class="searchbar" type="text" placeholder="Buscar...">
+          <i class="fab fa-searchengin icon-search"></i>
+        </div>
         </nav>
     </header>
     <main>
       <!--Pantalla de Inicio-->
-      <section class="section-inicio"> 
-          <div class="inicio" id="section-inicio">
+      <section class="section-home"> 
             <div class="text-general">
-              <h2 class="text-2">¡Conoce más sobre Harry Potter: Wizards Unite!</h2>
-              <h3 class="text-3">El nuevo juego de Niantic basado en el universo mágico de Harry Potter ya está disponible desde finales de junio de 2019. 
+              <h2 class="text-tittle">¡Conoce más sobre Harry Potter: Wizards Unite!</h2>
+              <h3 class="text-paragraph">El nuevo juego de Niantic basado en el universo mágico de Harry Potter ya está disponible desde finales de junio de 2019. 
                 Es por ello que hemos elaborado esta guía de informacion del juego para conocer más sobre el Mundo Mágico, las características de los personajes
                 y los datos principales que necesitas para empezar el juego.</h3>
             </div>
-            <iframe class="video-home"  src="https://www.youtube.com/embed/watch?v=SbDWuSwCMSU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <div class="download">
-              <a class="ancle-1" target="_blank" href="https://play.google.com/store/apps/details?id=com.nianticlabs.hpwu.prod&hl=es">DESCARGALO AQUÍ</a>
+            <iframe class="video-home" width="560" height="315" src="https://www.youtube.com/embed/rEEJ7NOe0hw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="link-download">
+              <a class="link-game" target="_blank" href="https://play.google.com/store/apps/details?id=com.nianticlabs.hpwu.prod&hl=es">DESCARGALO AQUÍ</a>
             </div>
-          </div>
         </section>
       <!-- Section to filters -->
-      <section class="filters">
+      <section class="filters-characters hide">
+          <p>Clasifica por:</p>
           <select class="selectHouse select">
-            <option value="select">CASA</option>
+            <option value="select">casa</option>
             <option value="Gryffindor">Gryffindor</option>
             <option value="Ravenclaw">Ravenclaw</option>
             <option value="Slytherin">Slytherin</option>
@@ -61,37 +61,54 @@
             <option value="">No especificado</option>
           </select>
           <select class="selectRole select">
-            <option value="select">ROL</option>
+            <option value="select">rol</option>
             <option value="true">Estudiante</option>
             <option value="false">Profesor</option>
             <option value="">No especificado</option>
           </select>
           <select class="selectGender select">
-            <option value="select">GENERO</option>
+            <option value="select">genero</option>
             <option value="female">Femenino</option>
             <option value="male">Masculino</option>
           </select>
+        </article>
       </section>
       <!-- Section to show general data -->
-      <section class="data-characters"></section>
+      <section class="data-characters hide"></section>
       <!-- Section to show modal -->
       <section class="modal"></section>
       <!-- Section to show wands -->
-      <section class="wands">
+      <section class="filters-wands hide">
         <div class="btn-filters-wands">
-            <button class="btn-wands" id="btn-dragon" type="button"><img src="./img/dragon.png" alt=""><p>dragon</p></button>
-            <button class="btn-wands" id="btn-unicorn" type="button"><img src="./img/unircorn.png" alt=""><p>unircorn</p></button>
-            <button class="btn-wands" id="btn-phoenix" type="button"><img src="./img/phoenix.png" alt=""><p>phoenix</p></button>
+          <button class="btn-wands" id="btn-dragon" type="button"></button>
+          <button class="btn-wands" id="btn-unicorn" type="button"></button>
+          <button class="btn-wands" id="btn-phoenix" type="button"></button>
         </div>
-        <div class="data-wands"></div> 
-        <div class="data-patronus"></div>   
+        <div class="text-wands">
+          <p>Dragón</p>
+          <p>Unircornio</p>
+          <p>Fénix</p>
+        </div> 
+        </div>
       </section>
+      <section class="data-wands"></section>
+      <section class="data-patronus"></section>
     </main>
     <footer>
-      <ul>
-        <li><a href="">Omaira Palacios</a></li>
-        <li>Data-Lovers <p>Para Fans de Harry Potter y Wizard Unite</p></li>
-        <li><a href="">Lesly Muñoz</a></li>
+      <ul class="ul-footer">
+        <li>Hecho con <i class="fas fa-heart"></i></li>
+        <li>Para Fans de Harry Potter y Wizard Unite</li>
+        <div class="team">
+          <li class="team-dev">
+            <a href="">Omaira Palacios S.</a>
+            <a href="">- Frontend Dev <i class="fab fa-github"></i> -</a>
+          </li>
+          <li class="team-ux">
+            <a href="">Lesly Muñoz A.</a>
+            <a href="">- UX Designer <i class="fab fa-github"></i> -</a>
+          </li>
+        </div> 
+        <li>Data-Lovers - Laboratoria Lim011</li>
       </ul>
     </footer>  
     <script type="module" src="main.js"></script>
