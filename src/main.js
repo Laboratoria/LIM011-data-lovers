@@ -2,11 +2,11 @@
 /* eslint-disable max-len */
 // eslint-disable-next-line import/extensions
 import POKEMON from './data/pokemon/pokemon.js';
-
 // eslint-disable-next-line import/extensions
 import {
-  filtroTipoPokemon, filtroAlfabeticoAZ, filtroAlfabeticoZA, ordenNumerico, busquedaPokemonNombre,
+  filtroTipoPokemon, filtroAlfabeticoAZ, filtroAlfabeticoZA, ordenNumerico, busquedaPokemonNombre, caramelos,
 } from './data.js';
+
 // Plantilla Solo imagen y nombre
 const showPicturePokemon = (data) => {
   let plantillaPokemon = '';
@@ -16,17 +16,30 @@ const showPicturePokemon = (data) => {
     <div id="${item.id}" name="pokemon" class="ficha-pokemon">
             <div class="fondo-pokemon"><img src="${item.img}"/></div>
             <p>${item.name} #${item.num}</p>
-        </div>
+            </div>
     </div>`;
   });
   return plantillaPokemon;
 };
+
+// Plantilla buscador por nombre, añade al datalist los nombres directo del pokemon.js
+const opcion = (data) => {
+  const datalistName = document.getElementById('pokemon-name');
+  // debugger;
+  for (let i = 0; i < data.length; i += 1) {
+    const option = document.createElement('option');
+    option.innerHTML = data[i].name;
+    datalistName.appendChild(option);
+  }
+};
+opcion(POKEMON);
+
 // Plantilla con saber más
 const showFichaPokemon = (data) => {
   let plantillaPokemon = '';
   data.forEach((item) => {
     plantillaPokemon += `
-        <div id="${item.id}" name="pokemon" class="ficha-pokemon">
+    <div id="${item.id}" name="pokemon" class="ficha-pokemon">
             <div class="fondo-pokemon"><img src="${item.img}"/></div>
             <p> ${item.name} ${item.num}</p>
             <p>Tipo: ${item.type.join('  /  ')}</p>
@@ -113,3 +126,96 @@ botonOrdenNumerico.addEventListener('click', () => {
   }
   listaFiltroTipo.innerHTML = showPicturePokemon(ordenNumerico(filtroTipoPokemon(POKEMON, seleccionTipoPokemon.value)));
 });
+
+// Plantilla para evolucion Pokemon
+const nameCandyPokemon = document.getElementById('busqueda-nombre-pokemon-caramelos');
+const candyCountUsuario = document.getElementById('candy-count');
+const botonDescubrir = document.getElementById('btn-calculate');
+
+
+
+const char = (data) =>{
+for ( let i=0, len = char.length; i<len; i++) {
+  if (data[i]['numero'] === undefined){
+    //Ya no evoluciona
+    document.getElementById('caramelo-muestra-pokemon').innerHTML =`
+    <div id="${data[i]['id']}" name="pokemon" class="ficha-pokemon">
+           <div class="fondo-pokemon">
+               <p>${data[i]['mensaje']}</p>
+               <img src="${data[i]['img']}"/></div>
+          </div>`;
+  } else {
+    //Evoluciona
+    console.log(' :B');
+    document.getElementById('caramelo-muestra-pokemon').innerHTML =`
+    <div id="${data[i]['id']}" name="pokemon" class="ficha-pokemon">
+           <div class="fondo-pokemon">
+               <p>${data[i]['mensaje']}</p>
+               <img src="${data[i]['img']}"/> <p>${data[i]['mensaje2']}</p>
+               <img src="${data[i]['imgEvo']}"/>
+               </div>
+          </div>`;
+  };
+};
+};
+console.log(char(caramelos(POKEMON, nameCandyPokemon.value, candyCountUsuario.value)));
+
+botonDescubrir.addEventListener('click', () => {
+  event.preventDefault();
+  document.getElementById('caramelo-muestra-pokemon').innerHTML = caramelos(POKEMON, nameCandyPokemon.value, candyCountUsuario.value);
+  console.log(caramelos(POKEMON, nameCandyPokemon.value, candyCountUsuario.value));
+
+  });
+
+  const botonLimpiarCaramelos = document.getElementById('btn-limpiar-caramelos')
+  
+  botonLimpiarCaramelos.addEventListener('click',() =>{
+    document.getElementById('caramelo-muestra-pokemon').innerHTML = ''
+    document.getElementById('form').reset()})
+
+  // tieneEvolucion(POKEMON);
+  // Hallar caramelos 
+    // for (let i = 0; i < POKEMON.length; i++) {
+    //   if(POKEMON[i].name === nameCandyPokemon.value){
+    //     if (POKEMON[i].candy_count === undefined){
+    //       let muestrarNaCaramelos = 
+    //       `<div>
+    //       <h1 class="letterCaramelos">Tu pokemon no puede evolucionar:</h1>
+    //       <img src= "${POKEMON[i].img}" class="img-pokemon-caramelos">
+    //       <p class="name-pokemon">${nameCandyPokemon.value}</p>
+    //       <h1 class="letterCaramelos"> Te sobra ${candyCountUsuario.value} caramelos. </h1>  
+    //       </div>`;
+    //       document.getElementById('caramelo-muestra-pokemon').innerHTML = muestrarNaCaramelos
+    //     }
+        
+    //     if (parseInt(candyCountUsuario.value) < POKEMON[i].candy_count){
+    //       let muestrarFaltaCaramelos = (POKEMON[i].candy_count - parseInt(candyCountUsuario.value));
+    //       const faltaCaramelos =
+    //       `<div>
+    //       <h1 class="letterCaramelos">Tu pokemon  es :</h1>
+    //       <img class="img-pokemon-caramelos" src= "${POKEMON[i].img}" > 
+    //       <p class="name-pokemon">${nameCandyPokemon.value}</p>
+    //       <h1 class="letterCaramelos"> Tienes ${candyCountUsuario.value} caramelos, te faltan  ${muestrarFaltaCaramelos} para evolucionar a :</h1>                
+    //       <img class="img-pokemon-caramelos" src= "${POKEMON[i+1].img}">
+    //       <p class="name-pokemon">${POKEMON[i].next_evolution[0].name}</p>
+    //       </div>`;
+    //       document.getElementById('caramelo-muestra-pokemon').innerHTML = faltaCaramelos
+    //   }
+
+    //   if (parseInt(candyCountUsuario.value) > POKEMON[i].candy_count){
+    //       let muestraSobraCaramelos = (parseInt(candyCountUsuario.value) - POKEMON[i].candy_count)
+    //       const sobraCaramelos =
+    //       `<div>
+    //       <h1 class="letterCaramelos">Tu pokemon  es :</h1>
+    //       <img class="img-pokemon-caramelos" src="${POKEMON[i].img}">
+    //       <p class="name-pokemon">${nameCandyPokemon.value}</p>
+    //       <h1 class="letterCaramelos"> Tienes ${candyCountUsuario.value} caramelos, ya podrías evolucionarlo a :</h1>                
+    //       <img class="img-pokemon-caramelos" src= "${POKEMON[i+1].img}">
+    //       <p class="name-pokemon">${POKEMON[i+1].name}</p>
+    //       <h1 class="letterCaramelos">Y aun así, te sobran  ${muestraSobraCaramelos} caramelos.<h1>
+    //       </div>`
+    //       document.getElementById('caramelo-muestra-pokemon').innerHTML = sobraCaramelos;}
+    //   }};
+      
+        
+        
