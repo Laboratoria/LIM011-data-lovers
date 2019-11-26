@@ -4,6 +4,7 @@
 
 // FUNCIÓN DE ORDEN POR ID
 export const idPokemon = (POKEMON, order) => {
+  let pokemonOrder = [];
   if (order === 'show') {
     pokemonOrder = POKEMON.sort((a, b) => (a.id - b.id));
   }
@@ -12,39 +13,33 @@ export const idPokemon = (POKEMON, order) => {
 
 // FUNCIÓN DE ORDEN ALFABÉTICO + CANTIDAD DE CARAMELOS
 export const orderData = (POKEMON, order) => {
-  let pokemonOrder = [];
   if (order === 'ascendant-az') {
-    pokemonOrder = POKEMON.sort((a, b) => {
+    return POKEMON.sort((a, b) => {
       if (a.name > b.name) {
         return 1;
-      }
-      if (a.name < b.name) {
+      } if (a.name < b.name) {
         return -1;
       }
     });
   }
   if (order === 'descendant-za') {
-    pokemonOrder = POKEMON.sort((a, b) => {
+    return POKEMON.sort((a, b) => {
       if (a.name < b.name) {
         return 1;
-      }
-      if (a.name > b.name) {
+      } if (a.name > b.name) {
         return -1;
       }
     });
   }
-
   if (order === 'more-candies') {
-    pokemonOrder = POKEMON.sort((a, b) => (b.candy_count - a.candy_count));
+    POKEMON.sort((a, b) => (b.candy_count - a.candy_count));
   }
-
   if (order === 'less-candies') {
-    pokemonOrder = POKEMON.sort((a, b) => (a.candy_count - b.candy_count));
+    POKEMON.sort((a, b) => (a.candy_count - b.candy_count));
   }
-  return pokemonOrder;
+  return POKEMON;
 };
 
-//Holiiiiiiiiiiiiiii
 // FUNCION DE FILTRO POR TIPOS
 export const typeFilter = (show, pokeType) => {
   const arrFilter = [];
