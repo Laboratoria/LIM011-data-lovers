@@ -5,7 +5,6 @@
 import {
   filtroTipoPokemon, filtroAlfabeticoAZ, filtroAlfabeticoZA, ordenNumerico, busquedaPokemonNombre,
 } from '../src/data';
-// Data has 5 elements
 
 const data = [{
   id: 8,
@@ -119,7 +118,6 @@ describe('filtroAlfabeticoAZ', () => {
   it('debería ser una función', () => {
     expect(typeof filtroAlfabeticoAZ).toBe('function');
   });
-
   it('Deberia retornar lista de Pokemones ordenados por nombre de A-Z', () => {
     expect(filtroAlfabeticoAZ(names)).toEqual(namesAZ);
   });
@@ -129,7 +127,6 @@ describe('filtroAlfabeticoZA', () => {
   it('debería ser una función', () => {
     expect(typeof filtroAlfabeticoZA).toBe('function');
   });
-
   it('Deberia retornar lista de Pokemones ordenados por nombre de Z-A', () => {
     expect(filtroAlfabeticoZA(names)).toEqual(namesZA);
   });
@@ -142,7 +139,6 @@ describe('ordenNumerico', () => {
   it('debería ser una función', () => {
     expect(typeof ordenNumerico).toBe('function');
   });
-
   it('Deberia retornar lista de Pokemones ordenados por num de mayor a menor', () => {
     expect(ordenNumerico(num)).toEqual(numOrdered);
   });
@@ -152,7 +148,6 @@ describe('busquedaPokemonNombre', () => {
   it('debería ser una función', () => {
     expect(typeof busquedaPokemonNombre).toBe('function');
   });
-
   it('Deberia retornar el nombre del pokemon buscado', () => {
     expect(busquedaPokemonNombre(data, 'wartortle')[0].name).toBe('wartortle');
   });
