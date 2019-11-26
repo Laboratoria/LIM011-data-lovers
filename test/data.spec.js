@@ -152,3 +152,13 @@ describe('busquedaPokemonNombre', () => {
     expect(busquedaPokemonNombre(data, 'wartortle')[0].name).toBe('wartortle');
   });
 });
+
+// data
+// describe('busquedaPokemonNombre', () => {
+//   it('debería ser una función', () => {
+//     expect(typeof busquedaPokemonNombre).toBe('function');
+//   });
+//   it('Deberia retornar el nombre del pokemon buscado', () => {
+//     expect(busquedaPokemonNombre(data, 'wartortle')[0].name).toBe('wartortle');
+//   });
+// });

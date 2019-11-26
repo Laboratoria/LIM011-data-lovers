@@ -4,7 +4,7 @@
 import POKEMON from './data/pokemon/pokemon.js';
 // eslint-disable-next-line import/extensions
 import {
-  filtroTipoPokemon, filtroAlfabeticoAZ, filtroAlfabeticoZA, ordenNumerico, busquedaPokemonNombre, caramelos,
+  filtroTipoPokemon, filtroAlfabeticoAZ, filtroAlfabeticoZA, ordenNumerico, busquedaPokemonNombre, evolucionCaramelos,
 } from './data.js';
 
 // Plantilla Solo imagen y nombre
@@ -156,12 +156,12 @@ const showEvolucionCaramelos = (data) => {
     }
   }
 };
-showEvolucionCaramelos(caramelos(POKEMON, nameCandyPokemon.value, candyCountUsuario.value));
+showEvolucionCaramelos(evolucionCaramelos(POKEMON, nameCandyPokemon.value, candyCountUsuario.value));
 
 botonDescubrir.addEventListener('click', () => {
   // eslint-disable-next-line no-restricted-globals
   event.preventDefault();
-  document.getElementById('caramelo-muestra-pokemon').innerHTML = caramelos(POKEMON, nameCandyPokemon.value, candyCountUsuario.value);
+  document.getElementById('caramelo-muestra-pokemon').innerHTML = evolucionCaramelos(POKEMON, nameCandyPokemon.value, candyCountUsuario.value);
 });
 
 const botonLimpiarCaramelos = document.getElementById('btn-limpiar-caramelos');
