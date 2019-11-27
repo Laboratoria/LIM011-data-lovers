@@ -11,6 +11,7 @@ export const traerDataPokemon = (arr) => {
         caramelos: arr[i].candy_count,
         multiplicador: arr[i].multipliers,
         debilidades: arr[i].weaknesses,
+        pre_evolucion: arr[i].prev_evolution,
         siguiente_evolucion: arr[i].next_evolution}); 
    }
   return newArray;

@@ -16,45 +16,56 @@ const radioInput = document.querySelectorAll('input[name=ordena]');
 
 const containerElements= (obj) => {
   const divElement = document.createElement("div");
+  const idPok=obj.identificador;
   divElement.innerHTML = `
   <img class="imagenPokemon" src = "${obj.imagen}"/>
   <h1>${obj.identificador}</h1><p>${obj.nombre}</p>
   `;
+  
   divElement.addEventListener('click', () => {
     const divElem = document.createElement('div');
     divElem.classList.add('modalDialog');
     
-    if(obj.multiplicador===null || obj.caramelos === undefined){
+    if(obj.multiplicador === null || obj.caramelos === undefined || obj.pre_evolucion === undefined || (idPok % 3===0) ){
     divElem.innerHTML = `
     <div>
       <a href = "#close" title = "Close" class = "close">X</a>
+      <seccion>
       <h2>${obj.nombre.toUpperCase()}</h2>
       <img class="imagenPokemon" src = "${obj.imagen}"/>
+      </seccion>
       <seccion>
       <p>Peso: ${obj.peso}  Altura: ${obj.altura} Tipo: ${obj.tipo}</p>
-      <p>Caramelos: No tiene asignada esta propiedad</p>
+      <p>Caramelos: No tiene asignado caramelos</p>
       <p>Multiplicador: No tiene asignado un multiplicador</p>
       </seccion>
       <seccion>
       <div id="prevolucion">
-        <p>Sig. evolucion: ${obj.siguiente_evolucion}</p>
+        <p>No tiene pre-evolucion </p>
+        <img class="imagenPokemon" src = "${POKEMON[idPok].img}"/> 
+        <img class="imagenPokemon" src = "${POKEMON[idPok + 1].img}"/> 
+        <p>Sig. evolucion: ${obj.siguiente_evolucion}</p> 
       </div>
       </seccion>
     </div> 
     `} else { divElem.innerHTML = `
     <div>
       <a href = "#close" title = "Close" class = "close">X</a>
+      <seccion>
       <h2>${obj.nombre.toUpperCase()}</h2>
       <img class="imagenPokemon" src = "${obj.imagen}"/>
+      </seccion>
       <seccion>
       <p>Peso: ${obj.peso}  Altura: ${obj.altura}</p>
       <p>Tipo: ${obj.tipo}</p>
       <p>Caramelos: ${obj.caramelos}</p>
       <p>Multiplicador: ${obj.multiplicador}</p>
       </seccion>
-      <seccion>
+      <seccion id="evolucionesPokemon">
       <div id="prevolucion">
-      <p>Sig. evolucion: ${obj.siguiente_evolucion}</p>
+      <img class="imagenPokemon" src = "${POKEMON[idPok-2].img}"/> 
+      <img class="imagenPokemon" src = "${POKEMON[idPok].img}"/>
+      
       </div>
       </seccion>
     </div> 
