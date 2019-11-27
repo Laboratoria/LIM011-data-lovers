@@ -104,7 +104,7 @@ const showFichaPokemonBusqueda = (data) => {
     plantillaPokemon += `
     <div id="${item.id}" name="pokemon" class="ficha-pokemon">
             <div class="fondo-pokemon"><img src="${item.img}"/></div>
-            <p> ${item.name} ${item.num}</p>
+            <p> ${item.name} #${item.num}</p>
             <details id="details" class="details">
               <summary id="summary" class="summary">SABER MÁS</summary>
               <span>Tipo: ${item.type.join('  /  ')}
@@ -141,12 +141,14 @@ botonMostrarPantallaCaramelos.addEventListener('click', () => {
   pageFiltro.style.display = 'none';
   pageEvolucionCaramelos.style.display = 'block';
   seleccionTipoPokemon.value = '';
+  
 });
 botonMostrarPantallaFiltro.addEventListener('click', () => {
   pageFiltro.style.display = 'block';
   pageEvolucionCaramelos.style.display = 'none';
   seleccionTipoPokemon.value = '';
   listaFiltroTipo.innerHTML = '';
+  
   document.getElementById('caramelo-muestra-pokemon').innerHTML = '';
   document.getElementById('form').reset();
 });
