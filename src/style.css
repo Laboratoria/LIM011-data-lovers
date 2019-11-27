@@ -48,7 +48,7 @@ body {
 
 .caramelo-pantalla {
     /* border: 4px solid red; */
-    /* display: none; */
+    display: none;
     height:100%;
 }
 

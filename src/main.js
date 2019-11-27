@@ -27,19 +27,19 @@ const botonLimpiarCaramelos = document.getElementById('btn-limpiar-caramelos');
 const muestraEvolucion = document.getElementById('caramelo-muestra-pokemon');
 
 // Plantilla Solo imagen y nombre
-const showPicturePokemon = (data) => {
-  let plantillaPokemon = '';
-  data.forEach((item) => {
-    plantillaPokemon += `    
-    <div class="singlepoke">    
-    <div id="${item.id}" name="pokemon" class="ficha-pokemon">
-            <div class="fondo-pokemon"><img src="${item.img}"/></div>
-            <p>${item.name} #${item.num}</p>
-            </div>
-    </div>`;
-  });
-  return plantillaPokemon;
-};
+// const showPicturePokemon = (data) => {
+//   let plantillaPokemon = '';
+//   data.forEach((item) => {
+//     plantillaPokemon += `
+//     <div class="singlepoke">
+//     <div id="${item.id}" name="pokemon" class="ficha-pokemon">
+//             <div class="fondo-pokemon"><img src="${item.img}"/></div>
+//             <p>${item.name} #${item.num}</p>
+//             </div>
+//     </div>`;
+//   });
+//   return plantillaPokemon;
+// };
 // Muestra lista de nombres de pokemon en el datalist
 const opcion = (data) => {
   const datalistName = document.getElementById('pokemon-name');
@@ -132,10 +132,10 @@ inputBusqueda.addEventListener('input', () => {
 seleccionTipoPokemon.addEventListener('click', () => {
   if (seleccionTipoPokemon.value === 'Todos') {
     listaFiltroTipo.innerHTML = showFichaPokemon(POKEMON);
-    return listaFiltroTipo;
-  }
-  listaFiltroTipo.innerHTML = showFichaPokemon(filtroTipoPokemon(POKEMON, seleccionTipoPokemon.value));
-  return listaFiltroTipo;
+    // return listaFiltroTipo;
+  } else {
+    listaFiltroTipo.innerHTML = showFichaPokemon(filtroTipoPokemon(POKEMON, seleccionTipoPokemon.value));
+  } return listaFiltroTipo;
 });
 botonMostrarPantallaCaramelos.addEventListener('click', () => {
   pageFiltro.style.display = 'none';
@@ -155,22 +155,25 @@ const botonOrdenAZ = document.getElementById('az');
 botonOrdenAZ.addEventListener('click', () => {
   if (seleccionTipoPokemon.value === 'Todos') {
     listaFiltroTipo.innerHTML = showFichaPokemon(filtroAlfabeticoAZ(POKEMON));
+  } else {
+    listaFiltroTipo.innerHTML = showFichaPokemon(filtroAlfabeticoAZ(filtroTipoPokemon(POKEMON, seleccionTipoPokemon.value)));
   }
-  listaFiltroTipo.innerHTML = showFichaPokemon(filtroAlfabeticoAZ(filtroTipoPokemon(POKEMON, seleccionTipoPokemon.value)));
 });
 const botonOrdenZA = document.getElementById('za');
 botonOrdenZA.addEventListener('click', () => {
   if (seleccionTipoPokemon.value === 'Todos') {
-    listaFiltroTipo.innerHTML = showPicturePokemon(filtroAlfabeticoZA(POKEMON));
+    listaFiltroTipo.innerHTML = showFichaPokemon(filtroAlfabeticoZA(POKEMON));
+  } else {
+    listaFiltroTipo.innerHTML = showFichaPokemon(filtroAlfabeticoZA(filtroTipoPokemon(POKEMON, seleccionTipoPokemon.value)));
   }
-  listaFiltroTipo.innerHTML = showPicturePokemon(filtroAlfabeticoZA(filtroTipoPokemon(POKEMON, seleccionTipoPokemon.value)));
 });
 const botonOrdenNumerico = document.getElementById('n');
 botonOrdenNumerico.addEventListener('click', () => {
   if (seleccionTipoPokemon.value === 'Todos') {
-    listaFiltroTipo.innerHTML = showPicturePokemon(ordenNumerico(POKEMON));
+    listaFiltroTipo.innerHTML = showFichaPokemon(ordenNumerico(POKEMON));
+  } else {
+    listaFiltroTipo.innerHTML = showFichaPokemon(ordenNumerico(filtroTipoPokemon(POKEMON, seleccionTipoPokemon.value)));
   }
-  listaFiltroTipo.innerHTML = showPicturePokemon(ordenNumerico(filtroTipoPokemon(POKEMON, seleccionTipoPokemon.value)));
 });
 
 botonDescubrir.addEventListener('click', () => {
