@@ -113,10 +113,10 @@ Organizando ideas: Evaluamos la posibilidad de que el usuario pudiera hacer Logi
 
 En esta etapa del trabajo tuvimos un espacio dentro del Bootcamp para compartir el trabajo entre nuestros squad, así tuvimos la oportunidad de recibir feedback del prototipo inicial, así como de ver la ideas de otras alumnas, de tal manera de mejorar la calidad de los trabajos e incorporar nuevas ideas.
 
-![web](https://github.com/rubialburqueque/LIM011-data-lovers/edit/pokerubilu/src/img/cel01.jpeg)
-![cel1](scr: src/img/cel01.jpeg)
-![cel2](scr: src/img/cel02.jpeg)
-![cel3](scr: src/img/cel03.jpeg)
+![prototipado1](web1.jpeg)
+![prototipado2](cel01.jpeg)
+![prototipado3](cel02.jpeg)
+![prototipado4](cel03.jpeg)
 
 Lo que aprendimos:
 
