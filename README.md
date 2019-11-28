@@ -104,8 +104,8 @@ y de equipo.
 ### Javascript
 
 - [ ] Manipular arrays (`filter` | `map` | `sort` | `reduce`).
-- [ ] Manipular objects (key | value).
-- [ ] Entender el uso de condicionales (`if-else` | `switch`).
+- [x] Manipular objects (key | value).
+- [x] Entender el uso de condicionales (`if-else` | `switch`).
 - [x] Entender el uso de bucles (`for` | `forEach`).
 - [ ] Entender la diferencia entre expression y statements.
 - [x] Utilizar funciones (parámetros | argumentos | valor de retorno).
@@ -113,12 +113,12 @@ y de equipo.
 - [x] Utilizar ES Modules (`import` | `export`).
 
 ### Pruebas Unitarias (_testing_)
-- [ ] Testear funciones (funciones puras).
+- [x] Testear funciones (funciones puras).
 
 ### Git y GitHub
 - [x] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
 - [x] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
-- [ ] Colaborar en Github (pull requests).
+- [x] Colaborar en Github (pull requests).
 
 ### Buenas prácticas de desarrollo
 - [x] Organizar y dividir el código en módulos (Modularización).
