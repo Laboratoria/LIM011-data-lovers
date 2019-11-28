@@ -205,7 +205,6 @@ Historia 4 (TOP 10) →→→→→→→→→ "Yo como jugador de Pokémon GO,
 #### Prototipo de baja fidelidad
 
 ![prototipo-baja-fidelidad](https://i.imgur.com/IfnbvE0.jpg)
-![prototipo-baja-fidelidad-responsive](https://i.imgur.com/OyOaOgM.jpg)
 ![prototipo-baja-fidelidad-responsive](https://i.imgur.com/hXTnlM0.jpg)
 ![prototipo-baja-fidelidad-responsive](https://i.imgur.com/qDs4U2O.jpg)
 
@@ -213,8 +212,9 @@ Historia 4 (TOP 10) →→→→→→→→→ "Yo como jugador de Pokémon GO,
 
 ![primer-prototipo-alta-fidelidad](https://i.imgur.com/2C9zaXK.jpg)
 ![primer-prototipo-alta-fidelidad-responsive](https://i.imgur.com/OyOaOgM.jpg)
-![segundo-prototipo-alta-fidelidad](https://imgur.com/i.ylupr5m.jpg)
-![segundo-prototipo-alta-fidelidad](https://imgur.com/i.JnECytS.jpg)
+![primer-prototipo-alta-fidelidad-responsive](https://i.imgur.com/HWroNKm.jpg)
+![segundo-prototipo-alta-fidelidad](https://i.imgur.com/ylupr5m.jpg)
+![segundo-prototipo-alta-fidelidad](https://i.imgur.com/JnECytS.jpg)
 ![segundo-prototipo-alta-fidelidad-responsive](https://i.imgur.com/YXnDEXX.jpg)
 
 
