@@ -204,19 +204,19 @@ Historia 4 (TOP 10) →→→→→→→→→ "Yo como jugador de Pokémon GO,
 
 #### Prototipo de baja fidelidad
 
-![prototipo-baja-fidelidad-1] (https://imgur.com/2C9zaXK)
-![prototipo-baja-fidelidad-2] (https://imgur.com/IfnbvE0)
-![prototipo-baja-fidelidad-responsive-1] (https://imgur.com/OyOaOgM)
-![prototipo-baja-fidelidad-responsive-2] (https://imgur.com/hXTnlM0)
-![prototipo-baja-fidelidad-responsive-3] (https://imgur.com/qDs4U2O)
+![prototipo-baja-fidelidad-1] (https://i.imgur.com/2C9zaXK.jpg)
+![prototipo-baja-fidelidad-2] (https://i.imgur.com/IfnbvE0.jpg)
+![prototipo-baja-fidelidad-responsive-1] (https://i.imgur.com/OyOaOgM.jpg)
+![prototipo-baja-fidelidad-responsive-2] (https://i.imgur.com/hXTnlM0.jpg)
+![prototipo-baja-fidelidad-responsive-3] (https://i.imgur.com/qDs4U2O.jpg)
 
 #### Prototipo de alta fidelidad
 
-![primer-prototipo-alta-fidelidad] (https://imgur.com/2C9zaXK)
-![primer-prototipo-alta-fidelidad-responsive] (https://imgur.com/OyOaOgM)
-![segundo-prototipo-alta-fidelidad-1] (https://imgur.com/ylupr5m)
-![segundo-prototipo-alta-fidelidad-2] (https://imgur.com/JnECytS)
-![segundo-prototipo-alta-fidelidad-responsive] (https://imgur.com/YXnDEXX)
+![primer-prototipo-alta-fidelidad] (https://i.imgur.com/2C9zaXK.jpg)
+![primer-prototipo-alta-fidelidad-responsive] (https://i.imgur.com/OyOaOgM.jpg)
+![segundo-prototipo-alta-fidelidad-1] (https://imgur.com/i.ylupr5m.jpg)
+![segundo-prototipo-alta-fidelidad-2] (https://imgur.com/i.JnECytS.jpg)
+![segundo-prototipo-alta-fidelidad-responsive] (https://i.imgur.com/YXnDEXX.jpg)
 
 
 #### Testeos de usabilidad
