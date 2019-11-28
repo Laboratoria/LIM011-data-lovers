@@ -6,10 +6,9 @@
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Definición del usuario](#3-Definición-del-usuario)
 * [4. Historia de usuario](#4-Historia-de-usuario)
-* [5. Prototipado](#Prototipado)
+* [5. Prototipado](#5Prototipado)
 * [6. Diseño final](#6-diseño-final)
-* [7. test unitario](#7-test-unitario)
-* [8. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
+* [7. Objetivos de aprendizaje](#7-objetivos-de-aprendizaje)
 
 ***
 
@@ -17,14 +16,14 @@
 
 El inicio de este trabajo se desarrolla en el contexto del Bootcamp de Laboratoria. Desafío Data Lovers.
 
-Cuándo: La duración para el desarrollo del proyecto fue de 3 semanas.
+Cuándo: La duración para el desarrollo del proyecto fue de 4 semanas.
 
 Problema/meta general: 
-Construir una página web para visualizar un conjunto (set) de datos que se adecúe a lo que descubramos que el usuario necesita: Un pokedex.
+Construir una página web  que pueda funcionar en modo responsive en distintas plataformas como celulares, donde las personas puedan visualizar un conjunto de datos que se adecúe a lo que descubramos que el usuario necesita: Un pokedex.
 
 El Pokédex en el mundo de Pokémon, es una enciclopedia portátil de alta tecnología que los Entrenadores Pokémon llevan consigo para registrar las fichas de todas las diversas especies Pokémon con las que se encuentran durante su viaje como entrenadores (Fuente: Wikipedia).
 
-Equipo: Este proyecto se basa en el trabajo en equipos conformados por duplas, una  de nosotras sin muy buen conocer el juego Pokemon Go, sin embargo nos decidimos por este proyecto, porque nos pareció poder comprender mejor quién iba a ser el usuario de nuestro futuro producto, lo cual nos pareció lo más relevante en ese momento.
+Equipo: Este proyecto se basa en el trabajo en equipos conformados por duplas, una  de nosotras sin conocer muy bien del juego Pokemon Go, sin embargo nos decidimos por este proyecto, porque teniamos acceso a personas que juganban activamente en la aplicación y f porque nos pareció poder comprender mejor quién iba a ser el usuario de nuestro futuro producto, lo cual nos pareció lo más relevante en ese momento.
 
 ## 2. Resumen del proyecto
 
@@ -32,7 +31,7 @@ Resultados y entregas:
 
 Un reporte con las conclusiones clave respecto al trabajo con los usuarios y los patrones de interacción.
 
-Una página web que permita visualizar la data, filtrarla, ordenarla y hacer algún cálculo agregado.
+Una página web que permita visualizar la data, filtrarla, ordenarla y hacer algún cálculo de evoluciones agregado.
 
 Status: Finalizado.
 
@@ -60,39 +59,43 @@ Un jugadores de Pokemon Go, que quiera conocer/informarse de los pokemones de la
 
 1. Enunciado: "Yo como usuario de la aplicación" (string 1)
 
-Quiero filtrar el listado de Pokemones por elemento, para que sea más fácil y rápido encontrar el pokemon que busco
+Quiero filtrar el listado de Pokemones por tipo, para que sea más fácil y rápido encontrar las caracteristicas, debilidades y fortalezas del pokemon que busco con respecto a los otros.
 
 Criterios de Aceptación:
 
-- [x] Quiero que el filtrado se muestre en una lista desplegable
-
-- [x] Quiero que en la búsqueda aparezca el nombre, número de pokedex y la foto del pokemon y sus debilidades.
-
-- [ ] Quiero que el listado esté relacionados al tipo de  pokemon
-
+- [x] Quiero que el filtrado se muestre en una lista desplegable y autocompletable.
+- [x] Quiero que en la búsqueda aparezca el nombre, número de pokedex, la foto del pokemon y sus debilidades.
 - [x] Quiero que la página sea visible en el móvil y en mi computador.
 
 2. Enunciado: "Yo como usuario de la aplicación" (string 2)
-
-Quiero saber la cantidad de caramelos faltantes para evolucionar por pokemón.
-
-Criterios de Aceptación:
-
-- [x] Quiero poder selecionar el pokemón y colocar la cantidad de caramelos que tengo para saber cuantos me faltan para evolucionarlos y completar mi pockedex.
-
-3. Enunciado: "Yo como usuario de la aplicación" (string 3)
 
 Quiero ordenar el listado de pokemones: Alfabéticamente (A-Z, y/o Z-A) y por número de ID (Menor a mayor). Para que sea más fácil y rápido encontrar el pokemon que busco.
 
 Criterios de Aceptación:
 
 - [x] Quiero elegir la opción de orden (AZ, ZA ó id ascendente)
-
 - [x] Quiero ordenar de la A a la Z
-
 - [x] Quiero ordenar de la Z a la A
-
 - [x] Quiero ordenar el id número de forma ascendente
+
+3. Enunciado: "Yo como usuario de la aplicación" (string 3)
+Quiero saber si mi pokemon puede evocionar, cuantos caramelos más de los que tengo necesita para hacerlo y completar mi pockedex.
+
+Criterios de Aceptación:
+
+- [x] Quiero que al buscar un pokemón se muestre en una lista desplegable y autocompletable.
+- [x] Quiero saber si el pokemon que selecione se puede evolucionar.
+- [x] Quiero saber la información del pokemon al cual podría evolucionar mi pokemon actual.
+- [x] Quiero que la aplicación me permita colocar el número de caramelos que tengo actualmente  y me devuelva la cantidad que me falta para evolucionarlo.
+
+4. Enunciado: "Yo como usuario de la aplicación" (string 4)
+Quiero filtrar del listado de Pokemones por nombre específico y saber todas sus caracteristicas.
+
+Criterios de Aceptación:
+
+- [x] Quiero encontrar las características de un solo pokemón en específico.
+- [x] Quiero que el filtrado se muestre en una lista desplegable y autocompletable.
+- [x] Quiero acceder a este filtro de manera rápida.
 
 
 ## 5. Prototipado
@@ -101,22 +104,24 @@ Criterios de Aceptación:
 El paso siguiente corresponde al prototipado de baja definición, aquí comenzamos ideando e iterando sobre cómo debería verse la aplicación, y qué elementos debería contener para llegar a nuestra meta.
 
 
-Workflow y Wireframes
-Primeras ideas: Luego de otorgado el desafío, comenzamos a idear la mejor forma de resolverlo, para eso hicimos los primeros bosquejos o wireframes del producto. Pensamos en poner un bóton desplegable para filtrar, y otro botón desplegable para ordenar. Además pensamos en añadir un buscador.
+Primeras ideas: Luego de otorgado el desafío, comenzamos a idear la mejor forma de resolverlo, para eso hicimos los primeros bosquejos del producto. Pensamos en poner un bóton desplegable para filtrar, y otros botones para ordenar. Además pensamos en añadir un buscador.
 
-
-
-Organizando ideas: Evaluamos la posibilidad de que el usuario pudiera hacer Login a la aplicación para ingresar a ella, pero esta idea la dejamos para una segunda etapa, en caso de quedar tiempo para ello. Y finalmente pensamos que al hacer click en la imagen del Pokemon se abriera una nueva página o modal para visualizar información detallada del Pokemon seleccionado.
+Organizando ideas: Evaluamos la posibilidad de que el usuario pudiera hacer Login a la aplicación para ingresar a ella, pero esta idea la dejamos para una segunda etapa, en caso de quedar tiempo para ello. Y finalmente pensamos que al hacer click en la imagen del Pokemon se abriera una pantalla desplegable para visualizar información detallada del Pokemon seleccionado.
 
 
 ### Primer testeo de usuario
 
-En esta etapa del trabajo tuvimos un espacio dentro del Bootcamp para compartir el trabajo entre las parejas de alumnas, así tuvimos la oportunidad de recibir feedback del prototipo inicial, así como de ver la ideas de otras alumnas, de tal manera de mejorar la calidad de los trabajos e incorporar nuevas ideas.
+En esta etapa del trabajo tuvimos un espacio dentro del Bootcamp para compartir el trabajo entre nuestros squad, así tuvimos la oportunidad de recibir feedback del prototipo inicial, así como de ver la ideas de otras alumnas, de tal manera de mejorar la calidad de los trabajos e incorporar nuevas ideas.
+
+![prototipado1](web1.jpeg)
+![prototipado2](cel01.jpeg)
+![prototipado3](cel02.jpeg)
+![prototipado4](cel03.jpeg)
 
 Lo que aprendimos:
 
-Centrarnos en lo más relevante de este desafío (filtrar, ordenar y manipular la data) para que nuestra aplicación sea un MVP (Producto Mínimo Viable), por esa razón y gracias al feedback inmediato de nuestras compañeras dejamos: el Login, la casilla de búsqueda, y la información detallada mediante Modal, como una tareas a futuro.
-De este modo, este insumo nos sirvió para modificar nuestro prototipo inicial (wireframe) y convertirlo en el prototipo de alta fidelidad,
+Centrarnos en lo más relevante de este desafío (filtrar, ordenar y manipular la data) para que nuestra aplicación sea un MVP (Producto Mínimo Viable), por esa razón y gracias al feedback inmediato de nuestras compañeras dejamos: el Login, la casilla de búsqueda, y la información detallada mediante botón de saber más, como una tareas a futuro.
+De este modo, este insumo nos sirvió para modificar nuestro prototipo inicial y convertirlo en el prototipo de alta fidelidad,
 
 ### Prototipado alta definición
 En esta etapa también decidimos incorporar la herramienta de Figma, esto fue un desafío personal, para aprender una nueva herramienta, así como una mejor presentación de la información.
@@ -128,52 +133,74 @@ https://www.figma.com/file/oyuj9pjJ5Dy3hzZsNgFPcF/Rockedex?node-id=0%3A1
 
 ## 6. Diseño Final
 Nombre
-Elegimos como nombre de nuestra aplicación web el del Pokemon original, añadiendo la región a la que pertenecen los Pokemon de este API: la región de Kanto, de tal manera que quede claro para el usuario a qué Pokemones pertenece.
-La tipografía elegida es Sans-serif que corresponde a un estilo moderno, debido a que la página que está orientada principalmente a un público jóven. 
+Elegimos como nombre de nuestra aplicación web: Rockedex, haciendo alusión al equipo Rocket para darle un espíritu más lúdico y diferente. La tipografía elegida es Sans-serif que corresponde a un estilo moderno, debido a que la página que está orientada principalmente a un público jóven. 
 Paleta de Colores
-Elegimos estos colores porque están todos asociados a Pokemon Go, de tal manera que el usuario al acceder a la página inmediatamente entienda que se trata de una aplicación asociada al juego.
-La meta del la aplicación web es crear un proceso rápido de resolución de búsqueda de un pokemon. La versión final esta disponible en versión demo.
+Elegimos estos colores porque están todos asociados a Pokemon Go, es especifico al equipo Rocket de tal manera que el usuario al acceder a la página inmediatamente entienda que se trata de una aplicación asociada al juego.
+La meta del la aplicación web es crear un proceso rápido de resolución de búsqueda de un pokemon. 
 
-Para realizar el diseño final, usamos el programa Zeplin para obtener los colores usados en nuestro prototipo:
-Nuestro diseño final fue sometido a un ultimo testeo para afinar detalles. Y gracias a eso decidimos incluir un "Menú stick" para que el usuario siempre tenga a su disposición el filtro y orden de los pokemones. Ademas añadimos un icono de flecha que hace más cómodo volver al inicio de la pagina.
+## 7. Objetivos de aprendizaje
 
-Pantalla inicio
+El objetivo principal de este proyecto es que, entendiendo las necesidades de tus usuarios, aprendas a diseñar y construir una interfaz web donde se pueda visualizar y manipular data.
 
-Filtro
+Revisa la lista y reflexiona sobre los objetivos que conseguiste en el proyecto anterior. Piensa en eso al decidir tu estrategia de trabajo individual y de equipo.
 
-Ordenar
-
-Estadísticas
-
-La experiencia del usuario esta basada en algunos pasos, donde cada pantalla aparece suficiente información para poder realizar un selección, búsqueda, ordenamiento de la información de los pokemon disponibles.
-
-## 7. Consideraciones técnicas
-
-
-
-## 8. Objetivos de aprendizaje
-
-El objetivo principal de este proyecto es que, entendiendo las necesidades de
-tus usuarios, aprendas a diseñar y construir una interfaz web donde se pueda
-visualizar y manipular data.
-
-Revisa la lista y reflexiona sobre los objetivos que conseguiste en el
-proyecto anterior. Piensa en eso al decidir tu estrategia de trabajo individual
-y de equipo.
-
+Vilmarys:
 ### UX
 
 - [x] Diseñar la aplicación pensando y entendiendo al usuario.
 - [x] Crear prototipos para obtener _feedback_ e iterar.
-- [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).
-- [ ] Planear y ejecutar _tests_ de usabilidad.
+- [x] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).
+- [x] Planear y ejecutar _tests_ de usabilidad.
 
 ### HTML y CSS
 
-- [ ] Entender y reconocer por qué es importante el HTML semántico.
 - [x] Identificar y entender tipos de selectores en CSS.
 - [ ] Entender como funciona `flexbox` en CSS.
-- [ ] Construir tu aplicación respetando el diseño planeado (maquetación).
+- [x] Construir tu aplicación respetando el diseño planeado (maquetación).
+
+### DOM
+
+- [x] Entender y reconocer los selectores del DOM (querySelector | querySelectorAll).
+- [x] Manejar eventos del DOM. (addEventListener)
+- [ ] Manipular dinámicamente el DOM. (createElement, appendchild, innerHTML, value)
+
+### Javascript
+
+- [x] Manipular arrays (`filter` | `map` | `sort` | `reduce`).
+- [x] Manipular objects (key | value).
+- [x] Entender el uso de condicionales (`if-else` | `switch`).
+- [x] Entender el uso de bucles (`for` | `forEach`).
+- [x] Entender la diferencia entre expression y statements.
+- [x] Utilizar funciones (parámetros | argumentos | valor de retorno).
+- [ ] Entender la diferencia entre tipos de datos atómicos y estructurados.
+- [x] Utilizar ES Modules (`import` | `export`).
+
+### Pruebas Unitarias (_testing_)
+- [x] Testear funciones (funciones puras).
+
+### Git y GitHub
+- [x] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
+- [x] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
+- [x] Colaborar en Github (pull requests).
+
+### Buenas prácticas de desarrollo
+- [x] Organizar y dividir el código en módulos (Modularización).
+- [ ] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
+- [x] Utilizar linter para seguir buenas prácticas (ESLINT).
+
+Rubí:
+### UX
+
+- [x] Diseñar la aplicación pensando y entendiendo al usuario.
+- [x] Crear prototipos para obtener _feedback_ e iterar.
+- [x] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).
+- [x] Planear y ejecutar _tests_ de usabilidad.
+
+### HTML y CSS
+
+- [x] Identificar y entender tipos de selectores en CSS.
+- [ ] Entender como funciona `flexbox` en CSS.
+- [x] Construir tu aplicación respetando el diseño planeado (maquetación).
 
 ### DOM
 
@@ -186,23 +213,21 @@ y de equipo.
 - [ ] Manipular arrays (`filter` | `map` | `sort` | `reduce`).
 - [ ] Manipular objects (key | value).
 - [ ] Entender el uso de condicionales (`if-else` | `switch`).
-- [ ] Entender el uso de bucles (`for` | `forEach`).
+- [x] Entender el uso de bucles (`for` | `forEach`).
 - [ ] Entender la diferencia entre expression y statements.
 - [x] Utilizar funciones (parámetros | argumentos | valor de retorno).
 - [ ] Entender la diferencia entre tipos de datos atómicos y estructurados.
-- [ ] Utilizar ES Modules (`import` | `export`).
+- [x] Utilizar ES Modules (`import` | `export`).
 
 ### Pruebas Unitarias (_testing_)
 - [ ] Testear funciones (funciones puras).
 
 ### Git y GitHub
-- [ ] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
-- [ ] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
-- [ ] Colaborar en Github (pull requests).
+- [x] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
+- [x] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
+- [x] Colaborar en Github (pull requests).
 
 ### Buenas prácticas de desarrollo
 - [ ] Organizar y dividir el código en módulos (Modularización).
-- [ ] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
-- [x] Utilizar linter para seguir buenas prácticas (ESLINT).
-
-
+- [x] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
+- [ ] Utilizar linter para seguir buenas prácticas (ESLINT).
