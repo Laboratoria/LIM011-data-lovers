@@ -98,7 +98,7 @@ y de equipo.
 - [ x ] Diseñar la aplicación pensando y entendiendo al usuario.
 - [ x ] Crear prototipos para obtener _feedback_ e iterar.
 - [ x ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).
-- [ x ] Planear y ejecutar _tests_ de usabilidad.
+- [  ] Planear y ejecutar _tests_ de usabilidad.
 
 ### HTML y CSS
 
@@ -119,9 +119,9 @@ y de equipo.
 - [ x ] Manipular objects (key | value).
 - [ x ] Entender el uso de condicionales (`if-else` | `switch`).
 - [ x ] Entender el uso de bucles (`for` | `forEach`).
-- [ x ] Entender la diferencia entre expression y statements.
+- [ ] Entender la diferencia entre expression y statements.
 - [ x ] Utilizar funciones (parámetros | argumentos | valor de retorno).
-- [ x ] Entender la diferencia entre tipos de datos atómicos y estructurados.
+- [  ] Entender la diferencia entre tipos de datos atómicos y estructurados.
 - [ x ] Utilizar ES Modules (`import` | `export`).
 
 ### Pruebas Unitarias (_testing_)
