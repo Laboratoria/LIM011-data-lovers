@@ -27,37 +27,28 @@ const pokemonContainer = (dataPOKEMON) => {
   pokeImages.innerHTML = pokeCards;
 };
 pokemonContainer(POKEMON);
-
 // BOTÓN PARA MOSTRAR TODOS LOS POKEMON EN ORDEN POR ID
 const showAllPokemon = document.querySelector('#show');
 showAllPokemon.addEventListener('click', (event) => {
   pokemonContainer(idPokemon(POKEMON, event.target.id));
 });
-
 // MOSTRAR ORDEN ALFABÉTICO Y CANTIDAD DE CARAMELOS
 const selectOrder = document.querySelector('#poke-order');
-selectOrder.addEventListener('change', () => {
-  pokemonContainer(orderData(POKEMON, selectOrder.value));
+selectOrder.addEventListener('change', (event) => {
+  pokemonContainer(orderData(POKEMON, event.target.value));
 });
-
 // MOSTRAR FILTRO DE TIPOS
 const selectType = document.querySelector('#poke-type');
 selectType.addEventListener('change', (event) => {
   pokemonContainer(typeFilter(POKEMON, event.target.value));
 });
-
 // MOSTRAR FILTRO DE DEBILIDADES
 const selectWeakness = document.querySelector('#poke-weakness');
 selectWeakness.addEventListener('change', (event) => {
   pokemonContainer(weaknessFilter(POKEMON, event.target.value));
 });
-
 // MOSTRAR FILTRO DE TOP 10 DE FRECUENCIA DE APARICIÓN
 const showTopPokemon = document.querySelector('#poke-top');
 showTopPokemon.addEventListener('click', (event) => {
   pokemonContainer(topPokemon(POKEMON, event.target.id));
 });
-
-orderData(POKEMON, selectOrder);
-typeFilter(POKEMON, selectType);
-weaknessFilter(POKEMON, selectWeakness);

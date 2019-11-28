@@ -1,56 +1,53 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable consistent-return */
 /* eslint-disable array-callback-return */
-
 // FUNCIÓN DE ORDEN POR ID
 export const idPokemon = (POKEMON, order) => {
-  let pokemonOrder = [];
   if (order === 'show') {
-    pokemonOrder = POKEMON.sort((a, b) => (a.id - b.id));
+    POKEMON.sort((a, b) => a.id - b.id);
   }
-  return pokemonOrder;
+  return POKEMON;
 };
-
 // FUNCIÓN DE ORDEN ALFABÉTICO + CANTIDAD DE CARAMELOS
 export const orderData = (POKEMON, order) => {
   if (order === 'ascendant-az') {
-    return POKEMON.sort((a, b) => {
+    POKEMON.sort((a, b) => {
       if (a.name > b.name) {
         return 1;
-      } if (a.name < b.name) {
+      }
+      if (a.name < b.name) {
         return -1;
       }
     });
   }
   if (order === 'descendant-za') {
-    return POKEMON.sort((a, b) => {
+    POKEMON.sort((a, b) => {
       if (a.name < b.name) {
         return 1;
-      } if (a.name > b.name) {
+      }
+      if (a.name > b.name) {
         return -1;
       }
     });
   }
   if (order === 'more-candies') {
-    POKEMON.sort((a, b) => (b.candy_count - a.candy_count));
+    POKEMON.sort((a, b) => b.candy_count - a.candy_count);
   }
   if (order === 'less-candies') {
-    POKEMON.sort((a, b) => (a.candy_count - b.candy_count));
+    POKEMON.sort((a, b) => a.candy_count - b.candy_count);
   }
   return POKEMON;
 };
-
 // FUNCION DE FILTRO POR TIPOS
 export const typeFilter = (show, pokeType) => {
   const arrFilter = [];
-  show.forEach((showOne) => {
+  show.filter((showOne) => {
     if (showOne.type.indexOf(pokeType) !== -1) {
       arrFilter.push(showOne);
     }
   });
   return arrFilter;
 };
-
 // FUNCION DE FILTRO POR DEBILIDADES
 export const weaknessFilter = (show, pokeWeakness) => {
   const arrFilter = [];
@@ -61,12 +58,10 @@ export const weaknessFilter = (show, pokeWeakness) => {
   });
   return arrFilter;
 };
-
 // FUNCION DE TOP 10 DE FRECUENCIA DE APARICIÓN
 export const topPokemon = (POKEMON, order) => {
-  let pokemonTop = [];
   if (order === 'poke-top') {
-    pokemonTop = POKEMON.sort((a, b) => (b.spawn_chance - a.spawn_chance));
+    POKEMON.sort((a, b) => b.spawn_chance - a.spawn_chance);
   }
-  return pokemonTop.slice(0, 10);
+  return POKEMON.slice(0, 10);
 };

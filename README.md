@@ -145,48 +145,88 @@ el problema (o problemas) que tiene tu usuario.
 
 ### Historias de usuario
 
-Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias
-de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que el usuario necesita hacer/ver. Las **Historias de Usuario** deben
-ser el resultado de tu proceso de entendimiento de tus usuarios.
+Historia 1 (VISTA GENERAL) →→→→ "Yo como jugador de Pokémon GO, quiero poder ver a todos los personajes de la región de Kanto al momento de entrar a la web."
 
-Asegúrate de incluir la definición de terminado (_definition of done_) y los
-Criterios de Aceptación para cada una.
+- Criterios de aceptación:
 
-En la medida de lo posible, termina de construir una historia de usuario antes
-de pasar a la siguiente (Cumple con Definición de Terminado + Criterios de
-Aceptación).
+. El usuario entra a la app y tiene una vista de todos los personajes.
+. El usuario puede ver todas las características generales de cada pokemon al darle click a la imagen.
+. El usuario puede regresar a esta vista de todos los personajes a través de un botón en las otras vistas,
+. El usuario puede usar la app desde cualquier dispositivo ya que esta es responsive.
+
+- Definición de terminado:
+
+. Crear una pantalla donde el usuario pueda tener una vista de todos los pokemon con su respectivo nombre e ID.
+. Al darle click a cada pokemon aparecerá un hover con sus características.
+. Se pasó el test unitario.
+
+Historia 2 (TIPOS+DEBILIDADES) → "Yo como jugador de Pokémon GO, me gustaría ver cada pokemon a través de un filtro de tipos y debilidades"
+
+- Criterios de aceptación:
+
+. El usuario usa el filtro de tipos y de debilidades mediante un desplegable que se encuentra en la parte superior de la pagina
+. Se efectúa un filtro y solo se muestran los pokemon del tipo seleccionado según su tipo o debilidad.
+
+- Definición de terminado:
+
+. Los botones tipos y debilidades filtran a los pokemon por su tipo y debilidad respectivamente.
+. Hay un botón para regresar a la pantalla principal con todos los pokemon.
+. se pasó el test unitario.
+
+Historia 3 (ORDEN) →→→→→→→ "Yo como jugador de Pokémon GO, quiero ver todos los pokemon y poder ordenarlos alfabéticamente o por número de caramelos".
+
+- Criterios de aceptación:
+
+. El usuario elige el botón ORDENAR y selecciona "De la A - Z", "De la Z - A", "+ a - menos caramelos" "- a + más caramelos".
+. Los pokemon del tipo seleccionado, se muestran en orden alfabético.
+. Todos los pokemon se muestran ordenados por la cantidad de caramelos.
+
+- Definición de terminado:
+
+. El botón ORDENAR da las opciones "De la A - Z", "De la Z - A", "+ a - menos caramelos" "- a + más caramelos".
+. Los pokemon se muestran según el orden elegido por el usuario.
+. Hay un botón para regresar a la pantalla principal con todos los pokemon.
+. Se pasó el test unitario.
+
+Historia 4 (TOP 10) →→→→→→→→→ "Yo como jugador de Pokémon GO, quiero ver información de los pokémon que están en los TOP 10 de frecuencia de aparición."
+
+- Criterios de aceptación:
+
+. El usuario elige el botón TOP 10 Aparición para poder ver los 10 pokemon principales de frecuencia de aparición.
+
+- Definición de terminado:
+
+. El botón TOP 10 Aparición muestra lod 10 pokemon principales de frecuencia de aparición.
+. Hay un botón para regresar a la pantalla principal con todos los pokemon.
+. Se pasó el test unitario.
 
 ### Diseño de la Interfaz de Usuario
 
 #### Prototipo de baja fidelidad
 
-Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
-`README.md`.
+![prototipo-baja-fidelidad-1] (https://imgur.com/2C9zaXK)
+![prototipo-baja-fidelidad-2] (https://imgur.com/IfnbvE0)
+![prototipo-baja-fidelidad-responsive-1] (https://imgur.com/OyOaOgM)
+![prototipo-baja-fidelidad-responsive-2] (https://imgur.com/hXTnlM0)
+![prototipo-baja-fidelidad-responsive-3] (https://imgur.com/qDs4U2O)
 
 #### Prototipo de alta fidelidad
 
-Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés -
-_User Interface_). Para eso debes aprender a utilizar alguna herramienta de
-diseño visual. Nosotros te recomendamos [Figma](https://www.figma.com/) que es
-una herramienta que funciona en el navegador y, además, puedes crear una cuenta
-gratis. Sin embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc. Recuerda utilizar la
-[identidad gráfica](https://drive.google.com/open?id=1eeWFqrWpy-OYOH4EHDckFGunyrm9iNeE)
-correspondiente a cada set de datos que elijas.
+![primer-prototipo-alta-fidelidad] (https://imgur.com/2C9zaXK)
+![primer-prototipo-alta-fidelidad-responsive] (https://imgur.com/OyOaOgM)
+![segundo-prototipo-alta-fidelidad-1] (https://imgur.com/ylupr5m)
+![segundo-prototipo-alta-fidelidad-2] (https://imgur.com/JnECytS)
+![segundo-prototipo-alta-fidelidad-responsive] (https://imgur.com/YXnDEXX)
 
-El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
-diseño debe seguir los fundamentos de _visual design_.
 
 #### Testeos de usabilidad
 
-Durante el reto deberás hacer _tests_ de usabilidad con distintos usuarios, y
-en base a los resultados, deberás iterar tus diseños. Cuéntanos
-qué problemas de usabilidad detectaste a través de los _tests_ y cómo los
-mejoraste en tu propuesta final.
+Realizamos tests con diferentes usuarios, tanto jugadores de pokemon, como los que no conocían mucho del tema.
+Iteramos nuestro diseños y por ello hicimos varios cambios, sobretodo en la información fundamental que los usuarios querían
+y también cambios en el diseño visual.
+
+Nos guiamos de los feedbacks de los usuarios y realizamos cambios en las características destacadas de los pokemon,
+y también realizamos cambios en el diseño visual, como el color, tamaños de las imagenes y textos.
 
 ### Introspección de mis objetivos de aprendizaje
 
