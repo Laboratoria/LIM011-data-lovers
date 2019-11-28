@@ -77,7 +77,7 @@ btnBienvenida.addEventListener('click', () => {
 // BUSCADOR
 const porNombre = document.getElementById('buscarData');
 porNombre.addEventListener('input', (event) => {
-  cajaImagenes.innerHTML = generarTemplateString(buscador(POTTER.event.target.value));
+  cajaImagenes.innerHTML = generarTemplateString(buscador(POTTER, event.target.value));
 });
 
 ordenando.addEventListener('click', (event) => {
