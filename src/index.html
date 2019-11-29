@@ -12,36 +12,37 @@
   <body>
     <header>
         <img class="logo" src="logo.png" alt=""><br><br>
-        <input type="text" id="buscar-pokemon" placeholder="Busca tu pokemon">
+        <input type="text" id="search-poke" placeholder="Busca tu pokemon">
     </header>
 
-    <div id="barra-navegar">
+    <div id="bar-nav">
       <div id="resumen" class="resumen"><span>&#9776;</span></div><br>
         <ul>
-          <li id="menu-pokebola">
+          <li id="menu-pokeball">
             <img src="imagenes/pokeball.png" alt="top10"><br>
             <label><b>Pokebola</b></label>
           </li>
-          <li id="menu-filtro">
+          <li id="menu-filter">
             <img src="imagenes/filtro.png" alt="top10"><br>
             <label><b>Filtro</b></label>
           </li>
-          <li id="menu-top10">
+          <li id="menu-top">
             <img src="imagenes/top10.png" alt="top10"><br>
             <label><b>Top</b></label>
           </li>
         </ul>
     </div>
-
-     <div id="ordenar-pokemon">
+    
+     <div class="sort-option">
         <button  id="AZ"><b>A - Z</b></button>
         <button id="ZA"><b>Z - A</b></button>
         <button id="asc"><b>1 - 151</b></button>
         <button id="desc"><b>151 - 1</b></button>
       </div>
     
-    <div id="filtros-pokemon">
-          <select name="filtrar-tipo-pokemon" id="filtrar-tipo-pokemon">
+    <form class = "menu-option">
+    <div class = "filter-option">
+          <select name="filter-type" id="filter-type">
             <option>TIPO</option>
             <option value="Water">Agua</option>
             <option value="Fire">Fuego</option>
@@ -60,7 +61,7 @@
             <option value="Flying">Volador</option>
           </select>
 
-          <select name="filtrar-debilidad-pokemon" id="filtrar-debilidad-pokemon">
+          <select name="filter-weak" id="filter-weak">
             <option>DEBILIDAD</option>
             <option value="Water">Agua</option>
             <option value="Fire">Fuego</option>
@@ -80,16 +81,34 @@
             <option value="Dark">Siniestro</option>
             <option value="Steel">Acero</option>
           </select>
-          <select name="filtrar-km-pokemon" id="filtrar-km-pokemon">
+          <select name="filt-km" id="filt-km">
           <option>KM</option>
           <option value="2 km">2 Km</option>
           <option value="5 km">5 Km</option>
           <option value="10 km">10 Km</option>
         </select>
+      </form>
     </div>
-    <div id = "mensaje"><b></b></div>
-     <section id="contenedor-pokemon">
-       
+    <div class = "message"><b></b></div>
+    <div class = "div-top">
+      
+      <input type="radio" name="radio-top" id="mas-vistos"><label for="mas-vistos">Más apariciones</label>
+      <input type="radio" name="radio-top" id="menos-vistos"><label for="menos-vistos">Menos apariciones</label> <br><br>
+      <div class = 'input-top'>
+      <input type="radio" name="radio-num" value = 1 id="r1"><label for="r1">1</label>
+      <input type="radio" name="radio-num" value = 2 id="r2"><label for="r2">2</label>
+      <input type="radio" name="radio-num" value = 3 id="r3"><label for="r3">3</label>
+      <input type="radio" name="radio-num" value = 4 id="r4"><label for="r4">4</label>
+      <input type="radio" name="radio-num" value = 5 id="r5"><label for="r5">5</label>
+      <input type="radio" name="radio-num" value = 6 id="r6"><label for="r6">6</label>
+      <input type="radio" name="radio-num" value = 7 id="r7"><label for="r7">7</label>
+      <input type="radio" name="radio-num" value = 8 id="r8"><label for="r8">8</label>
+      <input type="radio" name="radio-num" value = 9 id="r9"><label for="r9">9</label>
+      <input type="radio" name="radio-num" value = 10 id="r10"><label for="r10">10</label><br>
+      </div>
+    </div>
+    <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
+     <section class="container-poke">   
   </section>
 
     <footer> karen y mishel production's</footer>

@@ -15,8 +15,10 @@
     "@babel/core": "^7.6.2",
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
     "babel-jest": "^24.9.0",
+    "chart.js": "^2.9.3",
     "htmlhint": "^0.11.0",
     "jest": "^24.9.0",
+    "moment": "^2.24.0",
     "opener": "^1.5.1",
     "serve": "^11.0.0"
   },

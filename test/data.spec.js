@@ -1,6 +1,6 @@
 /* eslint-disable object-curly-newline */
 /* eslint-disable jest/no-identical-title */
-import { filtrarPokemon, ordenarPokemon, top10, filtrarEgg, buscarPokemon, ordenarDescPokemon } from '../src/data.js';
+import { filtData, sortData, topDesc, top, filtEgg, searchData, sortDataDesc } from '../src/data.js';
 
 const testPokemon = [
   { id: '002', name: 'Bulbasaur', type: ['Grass', 'Poison'], egg: '2 km', weaknesses: ['Fire', 'Ice'] },
@@ -30,78 +30,93 @@ const aparicionPokemon = [
   { name: 'Zubat', spawn_chance: 6.52, avg_spawns: 652, spawn_time: '12:28' },
 ];
 
-const top2 = [
+const mas = [
   { name: 'Weedle', spawn_chance: 7.12, avg_spawns: 712, spawn_time: '02:21' },
   { name: 'Zubat', spawn_chance: 6.52, avg_spawns: 652, spawn_time: '12:28' },
 ];
 
-describe('filtrarPokemon', () => {
+const menos = [
+  { name: 'Bulbasaur', spawn_chance: 0.69, avg_spawns: 69, spawn_time: '20:00' },
+  { name: 'Zubat', spawn_chance: 6.52, avg_spawns: 652, spawn_time: '12:28' },
+];
+
+describe('filtData', () => {
   it('debería ser una función', () => {
-    expect(typeof filtrarPokemon).toBe('function');
+    expect(typeof filtData).toBe('function');
   });
 
   it('deberia mostrar toda la informacion del pokemon de tipo Hierba', () => {
-    expect(filtrarPokemon(testPokemon, 'type', 'Grass')).toEqual(tipoPokemon);
+    expect(filtData(testPokemon, 'type', 'Grass')).toEqual(tipoPokemon);
   });
 
   it('deberia mostrar toda la informacion del pokemon que tiene debilidad agua', () => {
-    expect(filtrarPokemon(testPokemon, 'weaknesses', 'Water')).toEqual(debilidadPokemon);
+    expect(filtData(testPokemon, 'weaknesses', 'Water')).toEqual(debilidadPokemon);
   });
 });
 
-describe('filtrarEgg', () => {
+describe('filtEgg', () => {
   it('debería ser una función', () => {
-    expect(typeof filtrarEgg).toBe('function');
+    expect(typeof filtEgg).toBe('function');
   });
   it('deberia mostrar toda la informacion del pokemon cuyo huevo esta a 10 km', () => {
-    expect(filtrarEgg(testPokemon, '10 km')).toEqual(kmPokemon);
+    expect(filtEgg(testPokemon, '10 km')).toEqual(kmPokemon);
   });
 });
 
 describe('OrdenarPokemon', () => {
   it('deberia ser una funcion', () => {
-    expect(typeof ordenarPokemon).toBe('function');
+    expect(typeof sortData).toBe('function');
   });
 
   it('deberia ordenar los pokemon por nombre de la A-Z', () => {
-    expect(ordenarPokemon(testPokemon, 'name')).toEqual(ascPokemon);
+    expect(sortData(testPokemon, 'name')).toEqual(ascPokemon);
   });
 
   it('deberia ordenar los pokemon por id de 001-151', () => {
-    expect(ordenarPokemon(testPokemon, 'id')).toEqual(ascPokemon);
+    expect(sortData(testPokemon, 'id')).toEqual(ascPokemon);
   });
 });
 
 describe('OrdenarDescPokemon', () => {
   it('deberia ser una funcion', () => {
-    expect(typeof ordenarDescPokemon).toBe('function');
+    expect(typeof sortDataDesc).toBe('function');
   });
 
   it('deberia ordenar los pokemon por nombre de la Z-A', () => {
-    expect(ordenarDescPokemon(testPokemon, 'name')).toEqual(descPokemon);
+    expect(sortDataDesc(testPokemon, 'name')).toEqual(descPokemon);
   });
 
   it('deberia ordenar los pokemon por id de 151-001', () => {
-    expect(ordenarDescPokemon(testPokemon, 'id')).toEqual(descPokemon);
+    expect(sortDataDesc(testPokemon, 'id')).toEqual(descPokemon);
   });
 });
 
 describe('Top10', () => {
   it('deberia ser una funcion', () => {
-    expect(typeof top10).toBe('function');
+    expect(typeof topDesc).toBe('function');
   });
 
   it('deberia mostrar los dos pokemon con mas apariciones', () => {
-    expect(top10(aparicionPokemon, 2)).toEqual(top2);
+    expect(topDesc(aparicionPokemon, 2)).toEqual(mas);
+  });
+});
+
+describe('Top', () => {
+  it('deberia ser una funcion', () => {
+    expect(typeof top).toBe('function');
+  });
+
+  it('deberia mostrar los dos pokemon con menos apariciones', () => {
+    expect(top(aparicionPokemon, 2)).toEqual(menos);
   });
 });
 
 describe('BuscarPokemon', () => {
   it('deberia ser una funcion', () => {
-    expect(typeof buscarPokemon).toBe('function');
+    expect(typeof searchData).toBe('function');
   });
 
   it('deberia mostrar el pokemon que comience con C', () => {
-    expect(buscarPokemon(testPokemon, 'c')).toEqual(debilidadPokemon);
+    expect(searchData(testPokemon, 'c')).toEqual(debilidadPokemon);
   });
 });

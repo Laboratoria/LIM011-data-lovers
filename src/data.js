@@ -1,27 +1,33 @@
 
 // Función de Filtrado.
-export const filtrarPokemon = (datapoke, catr, valor) => (
+export const filtData = (datapoke, catr, valor) => (
   datapoke.filter((filt) => filt[catr].includes(valor))
 );
 
-export const filtrarEgg = (datapoke, valor) => (
+export const filtEgg = (datapoke, valor) => (
   datapoke.filter((filt) => filt.egg === valor)
 );
 
 // Función de Ordenado.
-export const ordenarPokemon = (datapoke, catr) => (
+export const sortData = (datapoke, catr) => (
   datapoke.sort((a, b) => (a[catr] > b[catr] ? 1 : -1))
 );
 
-export const ordenarDescPokemon = (datapoke, catr) => (
+export const sortDataDesc = (datapoke, catr) => (
   datapoke.sort((a, b) => (a[catr] < b[catr] ? 1 : -1))
 );
 // Función TOP 10 con mas apariciones.
-export const top10 = (datapoke, num) => (
+export const topDesc = (datapoke, num) => (
   datapoke.sort((a, b) => b.avg_spawns - a.avg_spawns).slice(0, num)
+);
+// Función TOP 10 con menos apariciones.
+export const top = (datapoke, num) => (
+  datapoke.sort((a, b) => a.avg_spawns - b.avg_spawns).slice(0, num)
 );
 
 // Función Buscar Pokemon.
-export const buscarPokemon = (datapoke, name) => (
+export const searchData = (datapoke, name) => (
   datapoke.filter((filt) => filt.name.toLowerCase().startsWith(name))
 );
+
+// Funcion evolucion
