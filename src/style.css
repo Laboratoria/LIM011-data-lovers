@@ -160,6 +160,11 @@ footer .social a {
 	padding-top:3px;
 }
 
+img[src*='#center'] {
+    display: block;
+    margin: auto;
+}
+
 @media screen and (max-width: 600px) {
 
 .pokemon-cards {
