@@ -89,13 +89,22 @@ el problema (o problemas) que tiene tu usuario.
 ![prototipo-baja-fidelidad-responsive](https://i.imgur.com/hXTnlM0.jpg#center)
 ![prototipo-baja-fidelidad-responsive](https://i.imgur.com/qDs4U2O.jpg#center)
 
+<p align="center"><img src="https://i.imgur.com/hXTnlM0.jpg" width="700" height="420"></p>
+<p align="center">Prototipo responsive de baja fidelidad #1<p align="center">
+
+<p align="center"><img src="https://i.imgur.com/qDs4U2O.jpg" width="700" height="613"></p>
+<p align="center">Prototipo responsive de baja fidelidad #2<p align="center">
+
+<p align="center"><img src="https://i.imgur.com/IfnbvE0.jpg" width="420" height="700"></p>
+<p align="center">Prototipo de baja fidelidad de las características del pokemon<p align="center">
+
 ### Prototipo de alta fidelidad
 
 <p align="center"><img src="https://i.imgur.com/2C9zaXK.jpg" width="700" height="420"></p>
-<p align="center">Primer prototipo de alta fidelidad<p align="center">
+<p align="center">Prototipo de alta fidelidad<p align="center">
 
 <p align="center"><img src="https://i.imgur.com/OyOaOgM.jpg" width="588" height="560"></p>
-<p align="center">Primer prototipo responsive de alta fidelidad #1<p align="center">
+<p align="center">Primer prototipo responsive de alta fidelidad<p align="center">
 
 <p align="center"><img src="https://i.imgur.com/ylupr5m.jpg" width="700" height="420"></p>
 <p align="center">Segundo prototipo de alta fidelidad #1<p align="center">
@@ -104,7 +113,7 @@ el problema (o problemas) que tiene tu usuario.
 <p align="center">Segundo prototipo de alta fidelidad #2<p align="center">
 
 <p align="center"><img src="https://i.imgur.com/HWroNKm.jpg" width="588" height="560"></p>
-<p align="center">Segundo prototipo responsive de alta fidelidad #2<p align="center">
+<p align="center">Segundo prototipo responsive de alta fidelidad<p align="center">
 
 
 ## 4. Testeos de usabilidad
