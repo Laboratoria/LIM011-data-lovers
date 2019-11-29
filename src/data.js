@@ -8,12 +8,16 @@ export const traerDataPokemon = (arr) => {
         altura: arr[i].height,
         peso: arr[i].weight,
         tipo: arr[i].type,
-        caramelos: arr[i].candy_count,
+        cant_caramelos: arr[i].candy_count,
+        caramelos: arr[i].candy,
         multiplicador: arr[i].multipliers,
         debilidades: arr[i].weaknesses,
         pre_evolucion: arr[i].prev_evolution,
-        siguiente_evolucion: arr[i].next_evolution}); 
+        siguiente_evolucion: arr[i].next_evolution,
+
+      });   
    }
+   //console.log(newArray[61].pre_evolucion[0].num);
   return newArray;
 };
 
@@ -61,6 +65,7 @@ export const filtrarPokemonesId = (arr, IdNextEvolution) => {
     }
   }
 }
+console.log(arrFiltradoPokemonesId.push(arr[0]))
   return arrFiltradoPokemonesId;
  };
 
@@ -77,9 +82,18 @@ export const buscarPokemon = (arr, nombrePokemonBuscar) => {
   return arrBuscaPokemon;
 };
 
-// export const buscarPokemonId = (arr, idPokemonBuscar) => {
-// const arrBuscaPokemon = [];
-// arrBuscaPokemon.push(arr.find((elemento) => elemento.id === idPokemonBuscar));
-// return arrBuscaPokemon;
-// };
+export const buscador = (arr, nombrePokemonBuscar) => {
+return arr.filter((obj) => obj.name.toLowerCase().startsWith(nombrePokemonBuscar));
+};
+
+export const filtrarPorCandy = (arr, varCaramelos) => {
+  const arrfiltraPokemonPorCandy = [];
+  for(let i=0; i<arr.length; i++){
+    if(arr[i].candy===varCaramelos){
+      arrfiltraPokemonPorCandy.push(arr[i].img)
+    }
+  }
+  return arrfiltraPokemonPorCandy;
+  
+};
 

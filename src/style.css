@@ -44,7 +44,7 @@ nav ul{
 
 .submenu{
 	position: absolute;
-	background-color: white;
+    background-color: white(240, 12, 12);
 	width: 81%;
     visibility: hidden;
     transition: opacity 1.5s;
@@ -65,22 +65,29 @@ nav ul{
 /*fin de lista desplegable*/
 /*Buscador*/
 input[type=text] {
-    width: 130px;
+    width: 110px;
     box-sizing: border-box;
     border: 2px solid #ccc;
-    border-radius: 4px;
+    border-radius: 20px;
     font-size: 16px;
     background-color: white;
     background-image: url('../src/imagenes/lupa.png');
     background-position: 10px 10px; 
     background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
+    padding: 12px 12px 12px 40px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
+    box-shadow: 1px 1px 5px black;
+    
   }
 input[type=text]:focus {
     width: 25%;
+    position: relative;
   }  
+
+#buscaPokemon {
+    box-shadow: 1px 1px 5px black;
+}
 /*Fin de Buscador*/
 
 .flex-container{
