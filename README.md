@@ -85,17 +85,13 @@ el problema (o problemas) que tiene tu usuario.
 
 ### Prototipo de baja fidelidad
 
-![prototipo-baja-fidelidad](https://i.imgur.com/IfnbvE0.jpg#center)
-![prototipo-baja-fidelidad-responsive](https://i.imgur.com/hXTnlM0.jpg#center)
-![prototipo-baja-fidelidad-responsive](https://i.imgur.com/qDs4U2O.jpg#center)
-
 <p align="center"><img src="https://i.imgur.com/hXTnlM0.jpg" width="700" height="420"></p>
 <p align="center">Prototipo responsive de baja fidelidad #1<p align="center">
 
 <p align="center"><img src="https://i.imgur.com/qDs4U2O.jpg" width="700" height="613"></p>
 <p align="center">Prototipo responsive de baja fidelidad #2<p align="center">
 
-<p align="center"><img src="https://i.imgur.com/IfnbvE0.jpg" width="420" height="700"></p>
+<p align="center"><img src="https://i.imgur.com/IfnbvE0.jpg" width="420" height="680"></p>
 <p align="center">Prototipo de baja fidelidad de las características del pokemon<p align="center">
 
 ### Prototipo de alta fidelidad
