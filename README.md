@@ -92,12 +92,19 @@ el problema (o problemas) que tiene tu usuario.
 ### Prototipo de alta fidelidad
 
 <p align="center"><img src="https://i.imgur.com/2C9zaXK.jpg" width="700" height="420"></p>
-<p align="center">This is a centered caption for the image<p align="center">
-![primer-prototipo-alta-fidelidad-responsive](https://i.imgur.com/OyOaOgM.jpg#center)
-![primer-prototipo-alta-fidelidad-responsive](https://i.imgur.com/HWroNKm.jpg#center)
-![segundo-prototipo-alta-fidelidad](https://i.imgur.com/ylupr5m.jpg#center)
-![segundo-prototipo-alta-fidelidad](https://i.imgur.com/JnECytS.jpg#center)
-![segundo-prototipo-alta-fidelidad-responsive](https://i.imgur.com/YXnDEXX.jpg#center)
+<p align="center">Primer prototipo de alta fidelidad<p align="center">
+
+<p align="center"><img src="https://i.imgur.com/OyOaOgM.jpg" width="588" height="560"></p>
+<p align="center">Primer prototipo responsive de alta fidelidad #1<p align="center">
+
+<p align="center"><img src="https://i.imgur.com/ylupr5m.jpg" width="700" height="420"></p>
+<p align="center">Segundo prototipo de alta fidelidad #1<p align="center">
+
+<p align="center"><img src="https://i.imgur.com/JnECytS.jpg" width="700" height="420"></p>
+<p align="center">Segundo prototipo de alta fidelidad #2<p align="center">
+
+<p align="center"><img src="https://i.imgur.com/HWroNKm.jpg" width="588" height="560"></p>
+<p align="center">Segundo prototipo responsive de alta fidelidad #2<p align="center">
 
 
 ## 4. Testeos de usabilidad
