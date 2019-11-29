@@ -57,7 +57,7 @@ Un jugadores de Pokemon Go, que quiera conocer/informarse de los pokemones de la
 
 ## 4. Historia de usuario
 
-1. Enunciado: "Yo como usuario de la aplicación" (string 1)
+1. Enunciado: "Yo como usuario de la aplicación" (spring 1)
 
 Quiero filtrar el listado de Pokemones por tipo, para que sea más fácil y rápido encontrar las caracteristicas, debilidades y fortalezas del pokemon que busco con respecto a los otros.
 
@@ -67,7 +67,7 @@ Criterios de Aceptación:
 - [x] Quiero que en la búsqueda aparezca el nombre, número de pokedex, la foto del pokemon y sus debilidades.
 - [x] Quiero que la página sea visible en el móvil y en mi computador.
 
-2. Enunciado: "Yo como usuario de la aplicación" (string 2)
+2. Enunciado: "Yo como usuario de la aplicación" (spring 2)
 
 Quiero ordenar el listado de pokemones: Alfabéticamente (A-Z, y/o Z-A) y por número de ID (Menor a mayor). Para que sea más fácil y rápido encontrar el pokemon que busco.
 
@@ -78,7 +78,7 @@ Criterios de Aceptación:
 - [x] Quiero ordenar de la Z a la A
 - [x] Quiero ordenar el id número de forma ascendente
 
-3. Enunciado: "Yo como usuario de la aplicación" (string 3)
+3. Enunciado: "Yo como usuario de la aplicación" (spring 3)
 Quiero saber si mi pokemon puede evocionar, cuantos caramelos más de los que tengo necesita para hacerlo y completar mi pockedex.
 
 Criterios de Aceptación:
@@ -88,7 +88,7 @@ Criterios de Aceptación:
 - [x] Quiero saber la información del pokemon al cual podría evolucionar mi pokemon actual.
 - [x] Quiero que la aplicación me permita colocar el número de caramelos que tengo actualmente  y me devuelva la cantidad que me falta para evolucionarlo.
 
-4. Enunciado: "Yo como usuario de la aplicación" (string 4)
+4. Enunciado: "Yo como usuario de la aplicación" (spring 4)
 Quiero filtrar del listado de Pokemones por nombre específico y saber todas sus caracteristicas.
 
 Criterios de Aceptación:
