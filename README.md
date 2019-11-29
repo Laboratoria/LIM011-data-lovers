@@ -91,7 +91,7 @@ el problema (o problemas) que tiene tu usuario.
 
 ### Prototipo de alta fidelidad
 
-<img src="https://i.imgur.com/2C9zaXK.jpg" width="700" height="500">
+<img src="https://i.imgur.com/2C9zaXK.jpg" width="700" height="300">
 ![primer-prototipo-alta-fidelidad-responsive](https://i.imgur.com/OyOaOgM.jpg#center)
 ![primer-prototipo-alta-fidelidad-responsive](https://i.imgur.com/HWroNKm.jpg#center)
 ![segundo-prototipo-alta-fidelidad](https://i.imgur.com/ylupr5m.jpg#center)
