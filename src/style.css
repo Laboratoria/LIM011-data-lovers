@@ -5,42 +5,151 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-body {
+html, body {
     margin: 0;
     padding: 0;
     background: url(img/fondo.jpg) no-repeat center top fixed;
+    background-size: cover;
     width: 100%;
+    height: 100%;
 }
 
 .pantalla {
+    padding-top: 6em;
     min-height: 95vh;
     flex-wrap: wrap; 
 
 }
 .candies-fichas-pokemon {
-    border: 5px dotted blue;
+    /* border: 5px dotted blue; */
     display: block;
 }
 
-.container-header {
+.header {
+    background-image: url(img/fondo1.jpg);
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
     width: 100%;
+    height: auto;
+    z-index: 3;
+    
+}      
+.header ul {
+    margin: 0;
+    padding: 0 0 1em 0;
+    list-style: none;
     overflow: hidden;
-    background: url(img/fondo1.jpg);
-    padding: 10px 10px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    float:right;
+    /* align-items: center; */
+
+}
+.header li {
+display: flex;
+padding: .5em;
+padding-top: 1em;
+align-items: center;
+justify-content: center;
+}
+.header .logo-container {
+display: block;
+float: left;
+font-size: 2em;
+padding: 10px 20px;
+align-content: center;
+padding-top: 1em;
+}
+      /* menu */
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
 }
 
-.selector-filtro {
-    padding: 15px 15px;
-    /* border: 4px dashed yellow; */
-} 
+/* menu icon */
+
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    /* float: right; */
+    padding: 2em 2em;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+
+    display: block;
+    height: .3em;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 1em;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+}
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background:#a292ad;
+    content: '';
+    display: block;
+    height: .4em;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 2rem;
+    border-radius: .5em;
+}
+
+.header .menu-icon .navicon:before {
+        top: .5em;
+}
+
+.header .menu-icon .navicon:after {
+        top: -1em;
+}
+/* menu btn */
+.header .menu-btn {
+        display: none;
+}
+.header .menu-btn:checked ~ .menu {
+max-height: 15em;
+align-items: center;
+        
+}
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+      /* 48em = 768px */
+@media (min-width: 55em) {
+    .header li {
+      float: left;
+    }
+    .header ul {
+      padding: 20px 30px 1em 0; 
+    }
+    .header .menu {
+        clear: none;
+        align-items: center;
+        max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+}
+
 
 .selector-filtro-wrap {
-    display: none;
-    /* border: 9px dashed green; */
+    display: flex;
+    border: 9px dashed green;
     padding: 15px 15px;
     height: 100%
     
@@ -51,7 +160,11 @@ body {
     display: none;
     height:100%;
 }
-
+h3{
+padding: 1em;
+font-size:1.5em;
+color:purple;
+}
 .singlepoke {
     width: 25%;
     align-items: center;
@@ -64,7 +177,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     flex-direction: row;
     /* border: 4px solid red; */
 }
@@ -78,12 +191,19 @@ body {
     padding: 1em;
 }
 
-
+/* estilo para botones*/
+.btn {
+    border-radius: 5em;
+    font-size: 1em;
+    width: 15em;
+    padding: .8em;
+    color: white;
+}
 .filtro {
     border-radius: 50px;
     font-size: 14px;
-    width: 300px;
-    padding-left: .5em;
+    width: 100%;
+    padding: 1em;
 }
 ::placeholder {
     color: gray;
@@ -126,21 +246,22 @@ div[name="pokemon"] p:first-of-type {
     align-items: center;
 } */
 
-.buttonm, .poke-type-list {
+.poke-type-list {
     background: #5d327c;
-    border-radius: 50px;
-    display: inline-block;
+    border-radius: 5em;
+    display: block;
     color: #fff;
     cursor: pointer;
     text-decoration: none;
-    padding: 10px 10px;
+    /* padding: 10px 10px; */
     line-height: normal;
     font-size: .8em;
     -webkit-transition: all 500ms ease;
     -o-transition: all 500ms ease;
     transition: all 500ms ease;
     border-style: none;
-    width: 10em;
+    /* width: 10em; */
+    
     
 }
 
