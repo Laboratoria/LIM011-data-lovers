@@ -1,4 +1,4 @@
-# Data Lovers
+# Data Lovers: POKEMON
 
 ## Índice
 
@@ -12,9 +12,9 @@
 
 ## 1. Definición del producto
 
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
+Decidimos escoger POKEMON porque es un tema con más usuarios a los que podemos acudir para obtener un mejor feedback. Además es un tema más dinámico en cuanto a diseño visual y también del gusto de ambas.
+
+Nuestra web app está dirigida para jugadores principiantes de POKEMON GO y que quieren la principal información de los 151 pokemon de la ciudad de Kanto.
 
 ## 2. Historias de usuario
 
@@ -67,7 +67,7 @@ el problema (o problemas) que tiene tu usuario.
 - Hay un botón para regresar a la pantalla principal con todos los pokemon.
 - Se pasó el test unitario.
 
-### Historia 4 (TOP 10)
+### Historia 4 (TOP 10 de Frecuencia de Aparición)
 
 "Yo como jugador de Pokémon GO, quiero ver información de los pokémon que están en los TOP 10 de frecuencia de aparición."
 
