@@ -19,7 +19,7 @@ header {
   background-size: contain;
   position: fixed;
   height: 12%;
-  background:#000;
+  background:#020203;
 }
 .logo {
   display: flex;
@@ -166,6 +166,14 @@ nav ul li {
   margin-left: 1px;
   font-style: normal;
 }
+.tittle-wand {
+  font-family: Georgia;
+  font-weight: lighter;
+  font-size:12px;
+  margin-bottom: 8px;
+  text-align: center;
+  text-transform: uppercase;
+}
 .video-home {
   margin-top: 56px;
   width: 100%;
@@ -196,23 +204,26 @@ nav ul li {
   flex-basis: auto;
   margin: 7px;
   text-align: center;
-  background-repeat: no-repeat;
-  background: #11374a78;
+  background: #082c4278;
   color: rgb(255, 255, 255);
   border: 1px rgb(255, 255, 255) solid;
-  font-family: "Segoe UI Light";
+  border-radius: 2px;
 }
 .card-description {
-  margin: 14px 10px 0px 10px;
+  margin: 19px 10px 0px 10px;
   justify-content: center;
 }
 .card-description h2 {
   text-align: center;
   font-size: 14px;
+  font-family: Georgia;
+  font-weight: lighter;
 }
 .card-description h3 {
   text-align: center;
   font-size: 12px;
+  font-family: Georgia;
+  font-weight: lighter;
 }
 .card-details {
   width: 100%;
@@ -250,8 +261,9 @@ nav ul li {
   padding: 5px;
   border-radius: 25px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 13px;
+  font-size: 11px;
   color: rgb(0, 0, 0);
+  text-transform: uppercase;
 }
 .img-card {
   margin-top: 13px;
@@ -262,7 +274,7 @@ nav ul li {
 }
 main {
   margin-top: 5px;
-  background: rgb(0, 0, 0);
+  background: rgb(10, 10, 10);
   padding-top: 44px;
   display:inline-block;
 }
@@ -291,24 +303,14 @@ main {
   background: url(./img/unicorn.png);
   background-size: cover;
 }
-.card-name {
-  height: 10%;
-  text-align: center;
-}
-.card-description-wands {
-  display: flex;
-  text-align: center;
-  font-size: 13px;
-}
 .card-data-wands {
+  display: flex;
   background: #11374a78;
   color: rgb(255, 255, 255);
   border: 1px rgb(255, 255, 255) solid;
-  width: 54%;
-  margin: 5px;
-  font-family: "Segoe UI Light";
-  font-weight: bold;
-
+  width: 77%;
+  margin: 6px;
+  border-radius: 2px;
 }
 .filters-wands {
   margin-top: 65px;
@@ -316,35 +318,51 @@ main {
   width: 100%;
   height: 100px;
 }
-.img-wand-card {
-  width: 100%;
+.img-core {
+  margin:3px 0px;
+  width: 25px;
+  height: 25px;
+}
+.img-wood {
+  width: 87px;
+  height: 12px;
+}
+.img-ruler {
+  width: 87px;
+  height: 16px;
+}
+.img-wand-characters {
+  width: 100px;
+  height: 140px;
+  margin: 6px 1px;
+  border-radius: 50%;
+  border: 1px #f3f3f3 solid;
+}
+.card-core {
+  display: flex;
+  flex-direction: column;
+}
+.card-name {
+  margin: 9px 0px 5px 0px;
+  padding: 0px 12px;
+  font-size: 12px;
+  font-family: Georgia;
+  font-weight: lighter;
+}
+.card-wand-header {
+  width: 56%;
   text-align: center;
 }
-.img-wand-card img {
-  width: 60%;
-  height: 150px;
-  border-radius: 50%;
-  border: 1px rgb(255, 255, 255) solid;
+.card-description-wands {
+  margin: 12px 0px 5px 0px;
+  text-align: left;
+  font-size: 11px;
 }
 .data-wands {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
-}
-.name-type p {
-  width: 100%;
-  font-size: 12px;
-}
-.name-type {
-  font-size: 12px;
-  width: 58%;
-  margin-bottom: 5px;
-}
-.name-type p i{
-  color:#bb7407;
-  margin-right: 4px;
-  font-size: 12px;
 }
 .text-wands {
   color:white;
@@ -356,27 +374,38 @@ main {
   width: 23%;
   font-size: 12px;
 }
-.type-wand {
-  text-align: left;
-  font-size: 11px;
-}
 /* main selectors of section patronus*/
 .data-patronus {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 97%;
+  margin-top:50px;
 }
 .card-data-patronus {
-  width: 14%;
-  flex-basis: auto;
-  margin: 10px;
-  color: rgb(255, 255, 255);
-  background-repeat: no-repeat;
-  background: #000314f2;
-  border: 2px rgb(255, 240, 131) solid;
-  font-family: 'Yeon Sung', cursive;
+  width: 180px;
+  height: 240px;
+  padding: 10px;
+  margin: 7px;
   text-align: center;
+  background: #082c4278;
+  color: rgb(255, 255, 255);
+  border: 1px rgb(255, 255, 255) solid;
+  border-radius: 2px;
+  transition: all 0.3s ease 0s;
+}
+.card-name-patronus {
+  text-align: center;
+  font-size: 14px;
+  font-family: Georgia;
+  font-weight: lighter;
+}
+.img-characters-patronus {
+  width: 100px;
+  height: 140px;
+  margin: 6px 1px;
+  border-radius: 50%;
+  border: 1px #f3f3f3 solid;
 }
 /* footer selectors*/
 footer{
@@ -411,6 +440,30 @@ footer li a {
   display: flex;
   flex-direction: column;
 }
+/*Patronus flip*/
+.back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.card-data-patronus:hover .card-inner{
+  transform: rotateY(180deg);
+}
+.card-inner {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.2s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
 /*---------------------------------- Modal -------------------------------- */
 .img-modal-card {
   width: 90px;

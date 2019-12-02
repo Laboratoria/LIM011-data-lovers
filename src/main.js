@@ -1,6 +1,8 @@
+/* eslint-disable import/named */
 import dataPotter from './data/potter/potter.js';
 import {
-  filterHouse, filterGender, filterRole, filterWandCore, search, changeDataWand, filterPatronus,
+  filterHouse, filterGender, filterRole, filterWandCore, search, filterPatronus,
+  newDataPotter,
 } from './data.js';
 
 const btnInicio = document.querySelector('#btn-home');
@@ -8,7 +10,6 @@ const filtersWands = document.querySelector('.filters-wands');
 const sectionHome = document.querySelector('.section-home');
 const dataCharacters = document.querySelector('.data-characters');
 const filtersCharacters = document.querySelector('.filters-characters');
-// const sectionWands = document.querySelector('.wands');
 const btnFiltersWand = document.querySelector('.btn-filters-wands');
 const selectElementHouse = document.querySelector('.selectHouse');
 const selectElementRole = document.querySelector('.selectRole');
@@ -35,9 +36,9 @@ const showMainTemplate = (objDataPotter) => {
       <h3 class='features' id='house'>~ ${objDataPotter.house} ~</h3>
       <button class='btn-general features btn-knowmore' type='submit'>DESCUBRE MAS</button> 
     </div> `;
-  const buttonElem = template.querySelector('button');
+  const btnShow = template.querySelector('button');
   // event to create modal
-  buttonElem.addEventListener('click', () => {
+  btnShow.addEventListener('click', () => {
     const overlay = document.createElement('div');
     overlay.className = 'overlay';
     const cardPotter = `
@@ -78,22 +79,29 @@ const showTemplateWands = (objDataPotter) => {
   const template = document.createElement('article');
   template.className = 'card-data-wands';
   template.innerHTML = `
+  <div class= 'card-wand-header'>
     <h4 class='card-name' id='name'>${objDataPotter.name}</h4>
-    <div class='img-wand-card' >
-      <img src='${objDataPotter.image}'/>
+    <img class='img-wand-characters' src='${objDataPotter.image}'/>
+  </div>
+  <div class='card-description-wands'>
+    <h4 class='tittle-wand'>Varita</h4>
+    <div class='card-wood'>
+      <p class='wood'>Madera:</p>
+      <p class='wood'>${objDataPotter.wood}</p>
+      <img class='img-wood' src='./img/wood.png'/>
     </div>
-    <div class='card-description-wands'>
-      <div class='name-type'>
-        <p id='wood'><i class="fas fa-magic"></i>Madera:</p>
-        <p id='core'><i class="fas fa-atom"></i>Núcleo: </p>
-        <p id='length'><i class="fas fa-ruler-horizontal"></i>Tamaño:</p>
-      </div>
-      <div class='type-wand'>
-        <p>${objDataPotter.wand.wood}</p>
-        <p>${objDataPotter.wand.core}</p>
-        <p>${objDataPotter.wand.length}</p>
-      </div>
-    </div>`;
+    <div class='card-lenght'>
+      <p class='length'>Tamaño:</p>
+      <p class='length'>${objDataPotter.length}''</p>
+      <img class='img-ruler' src='./img/ruler.png'/> 
+    </div>
+    <div class='card-core'>
+        <p class='core'>Núcleo:</p>
+        <p>${objDataPotter.core}</p>
+        <img class='img-core' src='${objDataPotter.imgCore}'/>
+    </div>
+  </div>
+    `;
   return template;
 };
 
@@ -102,13 +110,15 @@ const showTemplatePatronus = (objDataPotter) => {
   const template = document.createElement('article');
   template.className = 'card-data-patronus';
   template.innerHTML = `
-    <div class='card-details'>
-      <h2 class='features' id='name'>${objDataPotter.name}</h2>
-    </div>
-    <div class='card-description'>
-      <img class='img-modal-card' src='${objDataPotter.image}'/>
-      <p id='patronus'> Patronus: ${objDataPotter.patronus} </p>
-    </div>`;
+      <div class='card-header-patronus'>
+        <h2 class='card-name-patronus'>${objDataPotter.name}</h2>
+      </div>
+      <div class='card-description-patronus'>
+        <img class='img-characters-patronus' src='${objDataPotter.image}'/>
+        <p class='card-name-patronus'> Patronus: ${objDataPotter.patronus} </p>
+        <button class='btn-general btn-show-patronus' type='submit'>VER PATRONUS</button> 
+      </div>
+    `;
   return template;
 };
 // function to go through for each object (characters)
@@ -139,15 +149,15 @@ btnWand.addEventListener('click', () => {
   dataCharacters.classList.add('hide');
   filtersCharacters.classList.add('hide');
   btnFiltersWand.classList.remove('hide');
-  const property = 'wand';
-  const newDataWands = changeDataWand(dataPotter, property);
+  // const property = 'wand';
+  const newDataWands = newDataPotter(dataPotter);
   showWandsData(newDataWands);
 });
 // Event to call to function filterWandCore (core: dragon)
 btnDragon.addEventListener('click', () => {
   const core = 'dragon';
-  const property = 'wand';
-  const newDataWands = changeDataWand(dataPotter, property);
+  // const property = 'wand';
+  const newDataWands = newDataPotter(dataPotter);
   const dataWandDragon = filterWandCore(newDataWands, core);
   dataWands.querySelectorAll('.card-data-wands').forEach((child) => child.remove());
   showWandsData(dataWandDragon);
@@ -155,8 +165,8 @@ btnDragon.addEventListener('click', () => {
 // Event to call to function filterWandCore (core: unicorn)
 btnUnicorn.addEventListener('click', () => {
   const core = 'unicorn';
-  const property = 'wand';
-  const newDataWands = changeDataWand(dataPotter, property);
+  // const property = 'wand';
+  const newDataWands = newDataPotter(dataPotter);
   const dataWandUnicorn = filterWandCore(newDataWands, core);
   dataWands.querySelectorAll('.card-data-wands').forEach((child) => child.remove());
   showWandsData(dataWandUnicorn);
@@ -164,8 +174,8 @@ btnUnicorn.addEventListener('click', () => {
 // Event to call to function filterWandCore (core: phoenix)
 btnPhoenix.addEventListener('click', () => {
   const core = 'phoenix';
-  const property = 'wand';
-  const newDataWands = changeDataWand(dataPotter, property);
+  // const property = 'wand';
+  const newDataWands = newDataPotter(dataPotter);
   const dataWandPhoenix = filterWandCore(newDataWands, core);
   dataWands.querySelectorAll('.card-data-wands').forEach((child) => child.remove());
   showWandsData(dataWandPhoenix);
@@ -175,8 +185,9 @@ btnPatronus.addEventListener('click', () => {
   sectionHome.classList.add('hide');
   dataCharacters.classList.add('hide');
   filtersCharacters.classList.add('hide');
-  btnFiltersWand.classList.add('hide');
-  const dataPatronus = filterPatronus(dataPotter);
+  filtersWands.classList.add('hide');
+  const newDataPatronus = newDataPotter(dataPotter);
+  const dataPatronus = filterPatronus(newDataPatronus);
   dataWands.querySelectorAll('.card-data-wands').forEach((child) => child.remove());
   showPatronusData(dataPatronus);
 });

@@ -1,3 +1,5 @@
+import { wandsCore, patronus } from './data/potter/potter-extra.js';
+
 // function to filter for house
 export function filterHouse(dataPotter, houseSelected) {
   const dataFilterHouse = dataPotter.filter((data) => (data.house === houseSelected));
@@ -23,67 +25,178 @@ export function search(dataPotter, searcher) {
 }
 // function to filter wands for core
 export function filterWandCore(dataPotter, core) {
-  const dataWandDragon = dataPotter.filter((data) => ((data.wand.core).indexOf(core) !== -1));
+  const dataWandDragon = dataPotter.filter((data) => ((data.core).indexOf(core) !== -1));
   return dataWandDragon;
 }
 export function filterPatronus(dataPotter) {
   const dataPatronus = dataPotter.filter((data) => (data.patronus !== ''));
   return dataPatronus;
 }
-export const changeDataWand = (data, propiedad) => {
-  const wandsData = [];
-  for (let i = 0; i < data.length; i += 1) {
-    if (data[i][propiedad].wood === '' && data[i].wand.core === '' && data[i].wand.length === '') {
-      wandsData.push({
-        name: data[i].name,
-        image: data[i].image,
-        wand: {
-          wood: 'no especificado',
-          core: 'no especificado',
-          length: 'no especificado',
-        },
-      });
-    } else if (data[i].wand.core === '' && data[i].wand.length === '') {
-      wandsData.push({
-        name: data[i].name,
-        image: data[i].image,
-        wand: {
-          wood: data[i].wand.wood,
-          core: 'no especificado',
-          length: 'no especificado',
-        },
-      });
-    } else if (data[i].wand.length === '') {
-      wandsData.push({
-        name: data[i].name,
-        image: data[i].image,
-        wand: {
-          wood: data[i].wand.wood,
-          core: data[i].wand.core,
-          length: 'no especificado',
-        },
-      });
-    } else if (data[i].wand.core === '') {
-      wandsData.push({
-        name: data[i].name,
-        image: data[i].image,
-        wand: {
-          wood: data[i].wand.wood,
-          core: 'no especificado',
-          length: data[i].wand.length,
-        },
-      });
-    } else {
-      wandsData.push({
-        name: data[i].name,
-        image: data[i].image,
-        wand: {
-          wood: data[i].wand.wood,
-          core: data[i].wand.core,
-          length: data[i].wand.length,
-        },
-      });
-    }
+// export const changeDataWand = (data, propiedad) => {
+//   const wandsData = [];
+//   for (let i = 0; i < data.length; i += 1) {
+//     if (data[i][propiedad].wood === '' && data[i].wand.core === ''
+// && data[i].wand.length === '') {
+//       wandsData.push({
+//         name: data[i].name,
+//         image: data[i].image,
+//         wand: {
+//           wood: 'no especificado',
+//           core: 'no especificado',
+//           length: 'no especificado',
+//         },
+//       });
+//     } else if (data[i].wand.core === '' && data[i].wand.length === '') {
+//       wandsData.push({
+//         name: data[i].name,
+//         image: data[i].image,
+//         wand: {
+//           wood: data[i].wand.wood,
+//           core: 'no especificado',
+//           length: 'no especificado',
+//         },
+//       });
+//     } else if (data[i].wand.length === '') {
+//       wandsData.push({
+//         name: data[i].name,
+//         image: data[i].image,
+//         wand: {
+//           wood: data[i].wand.wood,
+//           core: data[i].wand.core,
+//           length: 'no especificado',
+//         },
+//       });
+//     } else if (data[i].wand.core === '') {
+//       wandsData.push({
+//         name: data[i].name,
+//         image: data[i].image,
+//         wand: {
+//           wood: data[i].wand.wood,
+//           core: 'no especificado',
+//           length: data[i].wand.length,
+//         },
+//       });
+//     } else {
+//       wandsData.push({
+//         name: data[i].name,
+//         image: data[i].image,
+//         wand: {
+//           wood: data[i].wand.wood,
+//           core: data[i].wand.core,
+//           length: data[i].wand.length,
+//         },
+//       });
+//     }
+//   }
+//   return wandsData;
+// };
+
+const addImageWand = (object) => {
+  let imgCore;
+  switch (object.wand.core) {
+    case 'unicorn tail-hair':
+      imgCore = wandsCore.unicorn;
+      break;
+    case 'unicorn hair':
+      imgCore = wandsCore.unicorn;
+      break;
+    case 'dragon heartstring':
+      imgCore = wandsCore.dragon;
+      break;
+    case 'phoenix feather':
+      imgCore = wandsCore.phoenix;
+      break;
+    default:
+      imgCore = wandsCore.empty;
   }
-  return wandsData;
+  return imgCore;
 };
+
+const addImagepatronus = (object) => {
+  let imgPatronus;
+  switch (object.patronus) {
+    case 'stag':
+      imgPatronus = patronus.harry;
+      break;
+    case 'otter':
+      imgPatronus = patronus.hermione;
+      break;
+    case 'Jack Russell terrier':
+      imgPatronus = patronus.ron;
+      break;
+    case 'tabby cat':
+      imgPatronus = patronus.minerva;
+      break;
+    case 'swan':
+      imgPatronus = patronus.cho;
+      break;
+    case 'doe':
+      imgPatronus = patronus.severus;
+      break;
+    case 'hare':
+      imgPatronus = patronus.luna;
+      break;
+    case 'horse':
+      imgPatronus = patronus.ginny;
+      break;
+    case 'wolf':
+      imgPatronus = patronus.remus;
+      break;
+    case 'weasel':
+      imgPatronus = patronus.arthur;
+      break;
+    case 'remus':
+      imgPatronus = patronus.sirius;
+      break;
+    case 'lynx':
+      imgPatronus = patronus.kingsley;
+      break;
+    case 'persian cat':
+      imgPatronus = patronus.dolores;
+      break;
+    default:
+      imgPatronus = patronus.empty;
+  }
+  return imgPatronus;
+};
+
+const changeWandWood = (object) => {
+  let newDataWand;
+  if (object.wand.wood === '') {
+    newDataWand = 'no especificado';
+  } else {
+    newDataWand = object.wand.wood;
+  }
+  return newDataWand;
+};
+const changeWandCore = (object) => {
+  let newDataWand;
+  if (object.wand.core === '') {
+    newDataWand = 'no especificado';
+  } else {
+    newDataWand = object.wand.core;
+  }
+  return newDataWand;
+};
+const changeWandLength = (object) => {
+  let newDataWand;
+  if (object.wand.length === '') {
+    newDataWand = 'no especificado';
+  } else {
+    newDataWand = object.wand.length;
+  }
+  return newDataWand;
+};
+export function newDataPotter(data) {
+  const newData = data.map((object) => ({
+    name: object.name,
+    image: object.image,
+    patronus: object.patronus,
+    wood: changeWandWood(object),
+    core: changeWandCore(object),
+    length: changeWandLength(object),
+    imgCore: addImageWand(object),
+    imgPatronus: addImagepatronus(object),
+  }));
+  return newData;
+}
