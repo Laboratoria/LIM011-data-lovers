@@ -12,26 +12,27 @@
 </head>
 
 <body>
-    <main class="pantalla">
-    <header class="container-header">
-        <div>
-            <img id="logo" class="logo" src="img/logo.png" alt="logo">
-            <img id="logo2" class="logo" src="img/logo2.png" alt="logo letra">
-        </div>
-        <input list="pokemon-name" type="text" id="busqueda-nombre-pokemon" class="filtro"  placeholder="Nombre del Pokemón">
-        <datalist id="pokemon-name"></datalist>
-        <nav>
-            <button class="buttonm" id="boton-pantalla-filtrotipo">Tipos de Pokemón</button>
-            <button class="buttonr" id="boton-pantalla-caramelos">Cantidad de caramelos</button>
-        </nav>
-    </header>
 
+
+    <header class="header">
+        <div class="logo-container">
+                <img id="logo" class="logo1" src="img/logo.png" alt="Logo Imagen">
+                <img id="logo2" class="logo2" src="img/logo2.png" alt="Logo Nombre App letra">
+        </div>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+            <li><input class="btn boton-m" id="busqueda-nombre-pokemon" list="pokemon-name" type="text"    placeholder="Nombre del Pokemón">
+            <datalist id="pokemon-name"></datalist></li>
+            <li><button class="btn button-m boton-nav" id="boton-pantalla-filtrotipo">Tipos de Pokemón</button></li>
+            <li><button class="btn" id="boton-pantalla-caramelos">Cantidad de caramelos</button></li>
+        </ul>
+</header>
+<main class="pantalla">
     <!--Section filtro -->
     <div class="selector-filtro-wrap" id="selector-filtro-wrap">
         <div class="selector-filtro" id="selector-filtro">
-            <!-- <label for="pokemon-type">Elige tipo de Pokemon:</label> -->
-            <!-- <input list="pokemon-type" class="buttonm" id="selector-pokemon-type" placeholder="Tipo de Pokemón"/> -->
-            <select id="pokemon-type" class="poke-type-list" >
+            <select class="btn poke-type-list" id="pokemon-type"  >
                 <option class="poke-type-list" value="Todos">Todos</option>
                 <option class="poke-type-list" value="Water">Agua</option>
                 <option class="poke-type-list" value="Bug">Insecto</option>
@@ -54,38 +55,38 @@
             <button class="button-order" id="za"><img src="./img/za.png"  alt="Orden Alfabetico"></button>
             <button class="button-order" id="n"><img src="./img/n.png"  alt="Orden Apor numero"></button>
         </div>
-        <!--muestra pokemon de la busqueda-->
-        <div id="tarjeta-pokemon-buscado" class="lista-pokemon">
-                
-        </div>
-        <!--muestra lista de pokemon filtrados-->
-        <div class="lista-pokemon" id="muestra-lista-pokemon">
-        </div>
     </div>
-
+        <!--muestra pokemon de la busqueda-->
+        <div class="lista-pokemon" id="tarjeta-pokemon-buscado" ></div>
+        <!--muestra lista de pokemon filtrados-->
+        <div class="lista-pokemon" id="muestra-lista-pokemon"></div>
+    
     <!--Section Calcular Evolucion -->
-    <div id="pantalla-caramelos" class="caramelo-pantalla" >
+    <div class="caramelo-pantalla" id="pantalla-caramelos">
         <article class="candies" id="calculate-evolution">
-            <h3>Descubre cuanto le falta a tu pokemon para evolucionar</h3>
+            <h3>Descubre cuantos Caramelos te faltan para evolucionar a tu Pokemon</h3>
             <br>
-            <form id="form">
+            <form class="form" id="form" >
+            <div>
                 <label for="name-pokemon">¿Cuál es tu pokemon?</label>
-                <input list="pokemon-name" type="text" id="busqueda-nombre-pokemon-caramelos" class="filtro"  placeholder="Nombre del Pokemón" required="required">
+                <input class="filtro btn" list="pokemon-name" type="text" id="busqueda-nombre-pokemon-caramelos"   placeholder="Nombre del Pokemón" required="required">
+            </div>
+            <div>
                 <label for="candy-count">¿Cuántos caramelos tienes?</label>
-                <input class="filtro" id="candy-count" type="number" placeholder="Numero de Caramelos " min="0" required="required" />
+                <input class="filtro btn" id="candy-count" type="number" placeholder="Numero de Caramelos " min="0" required="required" />
+            </div>
             </form>
                 <br>
-                </br>
-                <button id="btn-calculate" class="buttonr">Descubrir</button>
+                <button class="btn buttonr" id="btn-calculate" >Descubrir</button>
             </article>
         <!--Section Resultado Caramelos-->
         <div class="candies-fichas-pokemon" id="resultados-caramelos">
             <section class="lista-pokemon" id="caramelo-muestra-pokemon">
             </section>
-            <button id="btn-limpiar-caramelos" type="button" class="buttonr">Otra Vez</button>
+            <button class="btn buttonr" id="btn-limpiar-caramelos" type="button" >Otro Pokemon</button>
         </div>
     </div>
-    </main>
+</main>
     <!--Section footer-->
     <footer class="footer">
         <span>
@@ -93,7 +94,5 @@
         </span>
     </footer>
     <script type="module" src="main.js"></script>
-
 </body>
-
 </html>
