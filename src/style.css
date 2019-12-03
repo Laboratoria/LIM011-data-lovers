@@ -6,8 +6,8 @@
 }
 
 html, body {
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
     background: url(img/fondo.jpg) no-repeat center top fixed;
     background-size: cover;
     width: 100%;
@@ -18,13 +18,7 @@ html, body {
     padding-top: 6em;
     min-height: 95vh;
     flex-wrap: wrap; 
-
 }
-.candies-fichas-pokemon {
-    /* border: 5px dotted blue; */
-    display: block;
-}
-
 .header {
     background-image: url(img/fondo1.jpg);
     box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
@@ -33,7 +27,7 @@ html, body {
     height: auto;
     z-index: 3;
     
-}      
+}
 .header ul {
     margin: 0;
     padding: 0 0 1em 0;
@@ -41,7 +35,6 @@ html, body {
     overflow: hidden;
     float:right;
     /* align-items: center; */
-
 }
 .header li {
 display: flex;
@@ -64,9 +57,7 @@ padding-top: 1em;
     max-height: 0;
     transition: max-height .2s ease-out;
 }
-
 /* menu icon */
-
 .header .menu-icon {
     cursor: pointer;
     display: inline-block;
@@ -77,7 +68,6 @@ padding-top: 1em;
 }
 
 .header .menu-icon .navicon {
-
     display: block;
     height: .3em;
     position: relative;
@@ -98,11 +88,9 @@ padding-top: 1em;
     width: 2rem;
     border-radius: .5em;
 }
-
 .header .menu-icon .navicon:before {
         top: .5em;
 }
-
 .header .menu-icon .navicon:after {
         top: -1em;
 }
@@ -128,13 +116,13 @@ align-items: center;
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
 }
-      /* 48em = 768px */
+/* responsive */
 @media (min-width: 55em) {
     .header li {
       float: left;
     }
     .header ul {
-      padding: 20px 30px 1em 0; 
+      padding: 1em 1.5em 1em 0; 
     }
     .header .menu {
         clear: none;
@@ -142,14 +130,46 @@ align-items: center;
         max-height: none;
     }
     .header .menu-icon {
-      display: none;
+        display: none;
     }
 }
+/* Estilo botones e inputs*/
+.btn {
+    border-radius: 5em;
+    font-size: 1em;
+    width: 15em;
+    padding: .8em;
+    color: white;
+}
+.btn .input{
+    max-width: 15em;
+    background: red;
+}
+.form .label{
+    display:inline;
+    margin: 0 0 1em 0;
+    clear: both;
 
+}
+::placeholder {
+    color: gray;
+    
+}
+
+/* .filtro {
+    border-radius: 50px;
+    font-size: 14px;
+    width: 100%;
+    padding: 1em;
+} */
+.candies-fichas-pokemon {
+    /* border: 5px dotted blue; */
+    display: block;
+}
 
 .selector-filtro-wrap {
     display: flex;
-    border: 9px dashed green;
+    /* border: 9px dashed green; */
     padding: 15px 15px;
     height: 100%
     
@@ -191,24 +211,7 @@ color:purple;
     padding: 1em;
 }
 
-/* estilo para botones*/
-.btn {
-    border-radius: 5em;
-    font-size: 1em;
-    width: 15em;
-    padding: .8em;
-    color: white;
-}
-.filtro {
-    border-radius: 50px;
-    font-size: 14px;
-    width: 100%;
-    padding: 1em;
-}
-::placeholder {
-    color: gray;
-    
-}
+
 
 .footer {
     align-self: flex-end;

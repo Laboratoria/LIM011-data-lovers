@@ -187,3 +187,5 @@ botonLimpiarCaramelos.addEventListener('click', () => {
   document.getElementById('caramelo-muestra-pokemon').innerHTML = '';
   document.getElementById('form').reset();
 });
+console.log(filtroAlfabeticoAZ(POKEMON).reverse());
+console.log(typeof filtroAlfabeticoAZ);

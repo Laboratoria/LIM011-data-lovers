@@ -12,8 +12,6 @@
 </head>
 
 <body>
-
-
     <header class="header">
         <div class="logo-container">
                 <img id="logo" class="logo1" src="img/logo.png" alt="Logo Imagen">
@@ -22,10 +20,10 @@
             <input class="menu-btn" type="checkbox" id="menu-btn" />
             <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
         <ul class="menu">
-            <li><input class="btn boton-m" id="busqueda-nombre-pokemon" list="pokemon-name" type="text"    placeholder="Nombre del Pokemón">
+            <li><input class="btn estilo-btn-morado" id="busqueda-nombre-pokemon" list="pokemon-name" type="text"    placeholder="Nombre del Pokemón">
             <datalist id="pokemon-name"></datalist></li>
-            <li><button class="btn button-m boton-nav" id="boton-pantalla-filtrotipo">Tipos de Pokemón</button></li>
-            <li><button class="btn" id="boton-pantalla-caramelos">Cantidad de caramelos</button></li>
+            <li><button class="btn estilo-btn-morado" id="boton-pantalla-filtrotipo">Tipos de Pokemón</button></li>
+            <li><button class="btn estilo-btn-rojo" id="boton-pantalla-caramelos">Cantidad de caramelos</button></li>
         </ul>
 </header>
 <main class="pantalla">
@@ -68,22 +66,22 @@
             <br>
             <form class="form" id="form" >
             <div>
-                <label for="name-pokemon">¿Cuál es tu pokemon?</label>
-                <input class="filtro btn" list="pokemon-name" type="text" id="busqueda-nombre-pokemon-caramelos"   placeholder="Nombre del Pokemón" required="required">
+                <label for="name-pokemon" class="label">¿Cuál es tu pokemon?</label>
+                <input class="btn input" list="pokemon-name" type="text" id="busqueda-nombre-pokemon-caramelos"   placeholder="Nombre del Pokemón" required="required">
             </div>
             <div>
-                <label for="candy-count">¿Cuántos caramelos tienes?</label>
-                <input class="filtro btn" id="candy-count" type="number" placeholder="Numero de Caramelos " min="0" required="required" />
+                <label for="candy-count" class="label">¿Cuántos caramelos tienes?</label>
+                <input class="btn input" id="candy-count" type="number" placeholder="Numero de Caramelos " min="0" required="required" />
             </div>
             </form>
                 <br>
-                <button class="btn buttonr" id="btn-calculate" >Descubrir</button>
+                <button class="btn estilo-btn-rojo" id="btn-calculate" >Descubrir</button>
             </article>
         <!--Section Resultado Caramelos-->
         <div class="candies-fichas-pokemon" id="resultados-caramelos">
             <section class="lista-pokemon" id="caramelo-muestra-pokemon">
             </section>
-            <button class="btn buttonr" id="btn-limpiar-caramelos" type="button" >Otro Pokemon</button>
+            <button class="btn estilo-btn-rojo" id="btn-limpiar-caramelos" type="button" >Otro Pokemon</button>
         </div>
     </div>
 </main>
