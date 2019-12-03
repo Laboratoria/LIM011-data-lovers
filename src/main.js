@@ -8,6 +8,9 @@ import {
 const btnInicio = document.querySelector('#btn-home');
 const filtersWands = document.querySelector('.filters-wands');
 const sectionHome = document.querySelector('.section-home');
+const textPatronus = document.querySelector('.text-patronus');
+const tittlePatronus = document.querySelector('.title-patronus');
+// const sectionPatronus = document.querySelector('data-patronus');
 const dataCharacters = document.querySelector('.data-characters');
 const filtersCharacters = document.querySelector('.filters-characters');
 const btnFiltersWand = document.querySelector('.btn-filters-wands');
@@ -42,14 +45,14 @@ const showMainTemplate = (objDataPotter) => {
     const overlay = document.createElement('div');
     overlay.className = 'overlay';
     const cardPotter = `
-      <div class="popup" id="popup">
-      <section class = "header-modal">
-        <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+      <div class='popup' id='popup'>
+      <section class = 'header-modal'>
+        <a href='#' id='btn-cerrar-popup' class='btn-cerrar-popup'><i class='fas fa-times'></i></a>
         <img class='img-modal-card' src='${objDataPotter.image}'/>
         <h2 class='features' id='name'>${objDataPotter.name}</h2>
         <h3 class='features' id='house'>~ ${objDataPotter.house} ~</h3>
       <section/>
-      <section class = "main-modal"><
+      <section class = 'main-modal'><
         <h3 class='modal-features' id='dateofBirth'> Fecha de Nac. :${objDataPotter.dateOfBirth}</h3>
         <h3 class='modal-features' id='ancestry'> Origen : ${objDataPotter.ancestry}</h3>
         <h3 class='modal-features' id='patronus'> Patronus : ${objDataPotter.patronus}</h3>
@@ -115,10 +118,35 @@ const showTemplatePatronus = (objDataPotter) => {
       </div>
       <div class='card-description-patronus'>
         <img class='img-characters-patronus' src='${objDataPotter.image}'/>
-        <p class='card-name-patronus'> Patronus: ${objDataPotter.patronus} </p>
-        <button class='btn-general btn-show-patronus' type='submit'>VER PATRONUS</button> 
+        <p class='card-name-patronus'> Patronus: </p>
+        <p class='card-name-patronus'>${objDataPotter.patronus} </p>
+        <button class='btn-general btn-show-patronus' type='submit'>MOSTRAR MÁS</button> 
       </div>
     `;
+  const btnShow = template.querySelector('button');
+  btnShow.addEventListener('click', () => {
+    const overlayPatronus = document.createElement('div');
+    overlayPatronus.className = 'overlay-patronus';
+    const cardPotterPatronus = `
+    <div class='popup-patronus'>
+    <section class = 'header-modal'>
+      <a href='#' id='btn-cerrar-popup' class='btn-cerrar-popup'><i class='fas fa-times'></i></a>
+      <h3 class='modal-features'> Patronus : ${objDataPotter.patronus}</h3>
+      <img class='img-characters-patronus' src='${objDataPotter.imgPatronus}'/>
+      <h3 class='modal-features'> Descripcion</h3>
+      <p>${objDataPotter.descriptionPatronus} </p>
+    <section/>`;
+    overlayPatronus.innerHTML = cardPotterPatronus;
+    document.querySelector('.modal-patronus').appendChild(overlayPatronus);
+    const popupPatronus = overlayPatronus.querySelector('.popup-patronus');
+    overlayPatronus.classList.add('active');
+    popupPatronus.classList.add('active');
+    const closePopup = overlayPatronus.querySelector('.btn-cerrar-popup');
+    closePopup.addEventListener('click', () => {
+      overlayPatronus.classList.remove('active');
+      popupPatronus.classList.remove('active');
+    });
+  });
   return template;
 };
 // function to go through for each object (characters)
@@ -186,6 +214,8 @@ btnPatronus.addEventListener('click', () => {
   dataCharacters.classList.add('hide');
   filtersCharacters.classList.add('hide');
   filtersWands.classList.add('hide');
+  tittlePatronus.classList.remove('hide');
+  textPatronus.classList.remove('hide');
   const newDataPatronus = newDataPotter(dataPotter);
   const dataPatronus = filterPatronus(newDataPatronus);
   dataWands.querySelectorAll('.card-data-wands').forEach((child) => child.remove());

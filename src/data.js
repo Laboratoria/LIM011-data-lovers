@@ -1,4 +1,4 @@
-import { wandsCore, patronus } from './data/potter/potter-extra.js';
+import { wandsCore, patronus, descriptionPatronus } from './data/potter/potter-extra.js';
 
 // function to filter for house
 export function filterHouse(dataPotter, houseSelected) {
@@ -29,7 +29,7 @@ export function filterWandCore(dataPotter, core) {
   return dataWandDragon;
 }
 export function filterPatronus(dataPotter) {
-  const dataPatronus = dataPotter.filter((data) => (data.patronus !== ''));
+  const dataPatronus = dataPotter.filter((data) => (data.patronus !== '' && data.name !== 'Sirius Black'));
   return dataPatronus;
 }
 // export const changeDataWand = (data, propiedad) => {
@@ -112,7 +112,7 @@ const addImageWand = (object) => {
   return imgCore;
 };
 
-const addImagepatronus = (object) => {
+const addImagePatronus = (object) => {
   let imgPatronus;
   switch (object.patronus) {
     case 'stag':
@@ -159,7 +159,50 @@ const addImagepatronus = (object) => {
   }
   return imgPatronus;
 };
-
+const addDescriptionPatronus = (object) => {
+  let imgPatronus;
+  switch (object.patronus) {
+    case 'stag':
+      imgPatronus = descriptionPatronus.harry;
+      break;
+    case 'otter':
+      imgPatronus = descriptionPatronus.hermione;
+      break;
+    case 'Jack Russell terrier':
+      imgPatronus = descriptionPatronus.ron;
+      break;
+    case 'tabby cat':
+      imgPatronus = descriptionPatronus.minerva;
+      break;
+    case 'swan':
+      imgPatronus = descriptionPatronus.cho;
+      break;
+    case 'doe':
+      imgPatronus = descriptionPatronus.severus;
+      break;
+    case 'hare':
+      imgPatronus = descriptionPatronus.luna;
+      break;
+    case 'horse':
+      imgPatronus = descriptionPatronus.ginny;
+      break;
+    case 'wolf':
+      imgPatronus = descriptionPatronus.remus;
+      break;
+    case 'weasel':
+      imgPatronus = descriptionPatronus.arthur;
+      break;
+    case 'lynx':
+      imgPatronus = descriptionPatronus.kingsley;
+      break;
+    case 'persian cat':
+      imgPatronus = descriptionPatronus.dolores;
+      break;
+    default:
+      imgPatronus = descriptionPatronus.empty;
+  }
+  return imgPatronus;
+};
 const changeWandWood = (object) => {
   let newDataWand;
   if (object.wand.wood === '') {
@@ -196,7 +239,8 @@ export function newDataPotter(data) {
     core: changeWandCore(object),
     length: changeWandLength(object),
     imgCore: addImageWand(object),
-    imgPatronus: addImagepatronus(object),
+    imgPatronus: addImagePatronus(object),
+    descriptionPatronus: addDescriptionPatronus(object),
   }));
   return newData;
 }

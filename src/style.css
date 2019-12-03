@@ -48,27 +48,33 @@ header {
   margin: 8px 0px;
   margin-left: 62%;
 }
-#check {
-  display: none;
-}
 nav ul li {
   margin: 5px;
 }
 .ul-menu {
   position: absolute;
   top: 0;
-  height: 286px;
+  height: 320px;
   left: -100%;
   text-align: center;
   transition: all .5s;
-  width: 72%;
+  width: 80%;
   margin-right: 20px;
   background: #ffffff;
 }
 #btn-home {
   margin-top: 20px;
 }
+#check {
+  display: none;
+}
+#check-menu {
+  display: none;
+}
 #check:checked ~ .ul-menu{
+  left: 0;
+}
+#check-menu:checked ~ .ul-menu{
   left: 0;
 }
 .btn-menu {
@@ -379,12 +385,12 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 97%;
+  width: 100%;
   margin-top:50px;
 }
 .card-data-patronus {
-  width: 180px;
-  height: 240px;
+  width: 155px;
+  height: 225px;
   padding: 10px;
   margin: 7px;
   text-align: center;
@@ -401,11 +407,15 @@ main {
   font-weight: lighter;
 }
 .img-characters-patronus {
-  width: 100px;
-  height: 140px;
+  width: 96px;
+  height: 125px;
   margin: 6px 1px;
   border-radius: 50%;
   border: 1px #f3f3f3 solid;
+}
+.text-patronus {
+  width: 300px;
+  height: 160px;
 }
 /* footer selectors*/
 footer{
@@ -464,7 +474,7 @@ footer li a {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-/*---------------------------------- Modal -------------------------------- */
+/*---------------------------------- Modal Characters -------------------------------- */
 .img-modal-card {
   width: 90px;
   height: 120px;
@@ -515,5 +525,58 @@ footer li a {
 	color: rgb(124, 15, 15);
 }
 .popup.active {	
+  transform: scale(1); opacity: 1; 
+}
+/*---------------------------------- Modal Patronus-------------------------------- */
+.img-modal-card {
+  width: 90px;
+  height: 120px;
+  border-radius: 50%;
+}
+.overlay-patronus {
+	background: rgba(12, 96, 134, 0.384);
+	position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+  visibility: hidden;
+  z-index: 2;
+}
+.overlay-patronus.active {
+	visibility: visible;
+}
+.popup-patronus {
+	background: #F8F8F8;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	border-radius: 3px;
+	font-family: 'Montserrat', sans-serif;
+	padding: 20px;
+	text-align: center;
+  width: 250px;
+  height: 410px;
+	transition: .3s ease all;
+	transform: scale(0.7);
+  opacity: 0;
+  z-index: 2;
+  position: absolute; 
+}
+.popup-patronus .btn-cerrar-popup {
+	font-size: 16px;
+	line-height: 16px;
+	display: block;
+	text-align: right;
+	transition: .3s ease all;
+  color: #BBBBBB;
+  z-index: 3;
+  position: relative;
+}
+.popup-patronus .btn-cerrar-popup:hover {
+	color: rgb(124, 15, 15);
+}
+.popup-patronus.active {	
   transform: scale(1); opacity: 1; 
 }
