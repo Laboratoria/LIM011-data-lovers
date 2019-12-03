@@ -129,12 +129,15 @@ h1{
 .imagenPokemon{
     transition: transform .2s; /* Animation */
     margin: 5px;
-    display:block;
-    margin:auto;
+    display: block;
 } 
+
 .imagenPokemon:hover{     /*Agranda el dibujo al pasar encima de el*/
     transform: scale(1.5);
 } 
+#evoluciones{
+    display: inline-block;
+}
 
 p{
     color: black;
