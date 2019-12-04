@@ -223,11 +223,11 @@ Rubí:
 - [ ] Testear funciones (funciones puras).
 
 ### Git y GitHub
-- [x] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
-- [x] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
+- [ ] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
+- [ ] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
 - [x] Colaborar en Github (pull requests).
 
 ### Buenas prácticas de desarrollo
 - [ ] Organizar y dividir el código en módulos (Modularización).
 - [x] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
-- [ ] Utilizar linter para seguir buenas prácticas (ESLINT).
+- [X] Utilizar linter para seguir buenas prácticas (ESLINT).
