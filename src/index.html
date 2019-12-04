@@ -1,14 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <title>Data Lovers</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Data Lovers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Calistoga|Odibee+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <img src="./imagenes/pokemon-logo-png.png" class="logo">
+  </header>
+    <nav>
+      <ul class="menu">
+        <li ><a href="index.html">INICIO</a></li>
+        <li id="botonBuscar"><a href="#botonBuscar">TOP 10 POKEMONS APARICIONES</a></li>
+        <li ><a id="tipoPokemones">TIPOS DE POKEMONES</a>
+          <ul id="desple" class="submenu">
+            <li><a id="Normal" href="#">Normal</a></li>
+            <li><a id="Fighting" href="#">Lucha </a></li>
+            <li><a id="Flying" href="#">Volador</a></li>
+            <li><a id="Poison" href="#">Veneno</a></li>
+            <li><a id="Ground" href="#">Tierra</a></li>
+            <li><a id="Rock" href="#">Roca</a></li>
+            <li><a id="Bug" href="#">Bicho</a></li>
+            <li><a id="Ghost" href="#">Fantasma</a></li>
+            <li><a id="Water" href="#">Agua</a></li>
+            <li><a id="Grass" href="#">Planta</a></li>
+            <li><a id="Electric" href="#">Electrico</a></li>
+            <li><a id="Psychic" href="#">Psíquico</a></li>
+            <li><a id="Ice" href="#">Hielo</a></li>
+            <li><a id="Fire" href="#">Fuego</a></li>
+            <li><a id="Dragon" href="#">Dragón</a></li>
+          </ul>
+        </li>
+        <!-- <li id="estadistica"><a href="#">ESTADISTICAS</a>
+          <ul  class="submenu">
+          <li><a id="estaTipo" href="#">E. Tipo de Pokemons</a></li>
+          </ul>
+        </li>
+        <li id="evolucion"><a href="#">EVOLUCION</a>
+          <ul  class="submenu">
+          <li><a id="candys" href="#"># Candys para evolucionar</a></li>
+          </ul>
+        </li> -->
+      </ul>
+    </nav>
+    <seccion class="fondo">
+        <div class="divbuscar">
+          <input style="margin-left: 30px; margin-top: 20px;" type="text" id="buscar" value=""
+            placeholder="Escribe nombre Pokemon" name="search"> <button id="buscaPokemon" ><i class="fas fa-search"></i>Buscar</button>
+          <label id="selecciona-orden" class="divordenar" style="margin-top: 20px;">
+            <input type="radio" name="ordena" value="asc" id="orAsc"><a href="#">Ascendente</a>
+            <input type="radio" name="ordena" value="desc" id="orDesc"><a href="#">Descendente</a>
+          </label>
+        </div>
+      </seccion>
+  <main id="abc"><figure id="contenedor-pokemons" class="flex-container" ></figure></main>
+  <seccion id="contenedor-modal">
+  </seccion>
+  <script type="module" src="main.js"></script>
+</body>
 </html>
+
