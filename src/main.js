@@ -14,7 +14,7 @@ import {
 const radioInput = document.querySelectorAll('input[name=ordena]');
 
 const containerElements = (obj) => {
-  const divElement = document.createElement("div");
+  const divElement = document.createElement('div');
   divElement.innerHTML = `
   <img class="imagenPokemon" src = "${obj.imagen}"/>
   <h1>${obj.identificador}</h1><p>${obj.nombre}</p>
@@ -25,23 +25,23 @@ const containerElements = (obj) => {
     divElem.innerHTML = `
     <div>
       <a href = "#close" title = "Close" class = "close">X</a>
-      <seccion>
+      <seccion class="nomImagen">
       <h2>${obj.nombre.toUpperCase()}</h2>
       <img class ="imagenPokemon" src = "${obj.imagen}"/>
       </seccion>
-      <seccion>
+      <seccion class="descripcion">
+      <h2 class="centrarTitulo">Descripción</h2>
       <p>Peso: ${obj.peso}  Altura: ${obj.altura} Tipo: ${obj.tipo}</p>
       <p>Caramelos: ${obj.cant_caramelos}</p> 
       <p>Multiplicador: ${obj.multiplicador}</p>
       </seccion>
       <seccion class="evolucion">
+      <h2 class="centrarTitulo">Evoluciones</h2>
       <figure id="evoluciones">
       </figure></seccion>
     </div> 
     `;
-    
     document.getElementById("contenedor-modal").appendChild(divElem);
-
     const arregloCaramelos = filtrarPorCandy((POKEMON), obj.caramelos);
     if(obj.caramelos !== 'None'){
       for (let i = 0; i < arregloCaramelos.length; i += 1) {
@@ -51,19 +51,6 @@ const containerElements = (obj) => {
         document.querySelector("#contenedor-modal").appendChild(divElem);
       }
     };
-
-    // const arregloCaramelos = filtrarPorCandy((POKEMON), obj.caramelos);
-    // if(obj.caramelos !== 'None'){
-    //   for (let i = 0; i < arregloCaramelos.length; i += 1) {
-    //     const seccionPokemonEv=document.createElement('seccion');
-    //     seccionPokemonEv.setAttribute('id', 'evoluciones');
-    //     document.getElementById('evoluciones').innerHTML += ` 
-    //     <img class ="imagenPokemon" src ="${arregloCaramelos[i]}"/>
-    //     `;
-    //     document.querySelector("#contenedor-modal").appendChild(divElem);
-    //   }
-    // };
-
     divElem.style.display = 'block';
     divElem.querySelector('.close').addEventListener('click', () => {
     divElem.classList.remove("modalDialog");
@@ -72,7 +59,6 @@ const containerElements = (obj) => {
   });
   return divElement;
 }
-
 const generarTemplatePokemones = (arr) => {
   arr.forEach((obj) => {
     document.querySelector('#contenedor-pokemons').appendChild(containerElements(obj));
@@ -97,7 +83,7 @@ for (let i = 0; i < radioInput.length; i += 1) {
   radioInput[i].addEventListener('change', (event) => {
     const string = event.target.id;
     const arregloOrdenado = traerDataPokemon(ordenarAscOdescData((POKEMON), string));
-    document.querySelector('#contenedor-pokemons').innerHTML='';
+    document.querySelector('#contenedor-pokemons').innerHTML = '';
     generarTemplatePokemones(arregloOrdenado);
   });
 }

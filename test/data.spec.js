@@ -85,7 +85,7 @@ describe('buscarPokemon', () => {
     ];
     expect(buscarPokemon(input, 'Bulbasaur')).toEqual(buscar);
   });
-});   
+});
 describe('ordenarAscOdescData', () => {
   it('debería ser una función', () => {
     expect(typeof ordenarAscOdescData).toBe('function');

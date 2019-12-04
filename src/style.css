@@ -1,209 +1,302 @@
 
 body {
-background-color: white;
-}
-header{
-	width: 100%;
-}
-.logo {
-    display:block;
-    margin:auto;
-    width: 25%;
-}
-/*====LISTA DESPLEGABLE====*/
-
-nav ul{
-	list-style: none;
-}
-
-.menu > li{
-	position: relative;
-    display: inline-block;
-    left: 25%;
-    margin-right: 15px;
-}
-
-.menu > li > a{
-	display: block;
-	padding: 15px 20px;
-    color: blue;
     background-color: white;
-    font-family: 'Odibee Sans', cursive;
-    font-size: 22px;
-    text-decoration: none;
-    border-radius: 10px;
-    box-shadow: 1px 1px 5px black;
-}
-
-.menu li a:hover{
-	background-color: yellow;
-	transition: all .3s;
-}
-
-/* Submenu*/
-
-.submenu{
-	position: absolute;
-    background-color: white(240, 12, 12);
-	width: 81%;
-    visibility: hidden;
-    transition: opacity 1.5s;
-}
-
-.submenu li a{
-	display: block;
-	padding: 5px;
-	color: black;
-	font-family: 'Odibee Sans', cursive;
-	text-decoration: none;
-}
-
-.menu li:hover .submenu{
-	visibility: visible;
-	opacity: 1;
-}
-/*fin de lista desplegable*/
-/*Buscador*/
-input[type=text] {
-    width: 110px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 20px;
-    font-size: 16px;
-    background-color: white;
-    background-image: url('../src/imagenes/lupa.png');
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    padding: 12px 12px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-    box-shadow: 1px 1px 5px black;
+    }
+    header{
+        width: 100%;
+    }
+    .logo {
+        display:block;
+        margin:auto;
+        width: 25%;
+    }
+    .flex-container{
     
-  }
-input[type=text]:focus {
-    width: 25%;
-    position: relative;
-  }  
+        display:flex;
+        flex-wrap:wrap;   
+    }
+    .menu_bar {
+        display:none;
+    }
+     
+    /*====LISTA DESPLEGABLE====*/
+    nav ul{
+        list-style: none;
+    }
+    
+    .menu > li{
+        position: relative;
+        display: inline-block;
+        left: 25%;
+        margin-right: 15px;
+    }
+    
+    .menu > li > a{
+        display: block;
+        padding: 15px 20px;
+        color: blue;
+        background-color: white;
+        font-family: 'Odibee Sans', cursive;
+        font-size: 22px;
+        text-decoration: none;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px black;
+    }
+    
+    .menu li a:hover{
+        background-color: yellow;
+        transition: all .3s;
+    }
+    
+    /* Submenu*/
+    
+    .submenu{
+        position: absolute;
+        background-color: white(240, 12, 12);
+        width: 81%;
+        visibility: hidden;
+        transition: opacity 1.5s;
+    }
+    
+    .submenu li a{
+        display: block;
+        padding: 5px;
+        color: black;
+        font-family: 'Odibee Sans', cursive;
+        text-decoration: none;
+    }
+    
+    .menu li:hover .submenu{
+        visibility: visible;
+        opacity: 1;
+    }
+    /*fin de lista desplegable*/
+    /*Buscador*/
+    input[type=text] {
+        width: 110px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 20px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('../src/imagenes/lupa.png');
+        background-position: 10px 10px; 
+        background-repeat: no-repeat;
+        padding: 12px 12px 12px 40px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+        box-shadow: 1px 1px 5px black;
+        
+      }
+    input[type=text]:focus {
+        width: 25%;
+        position: relative;
+      }  
+    
+    #buscaPokemon {
+        box-shadow: 1px 1px 5px black;
+    }
+    /*Fin de Buscador*/
+    
+    .flex-container > div {
+        background-color: white;
+        width: 180px;
+        flex-wrap:wrap;
+        /* background-image: url() */
+        background-color: rgb(255, 255, 0); 
+    }
+    .flex-container > div {
+         background-color: white; 
+        background: none;
+        width: 150px;
+        margin: 20px;
+        line-height: 50px;
+        border-radius: 20px;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 2px 2px 10px black;
+    } 
+    
+    h1{
+        background-color: red;
+        width: 30px;
+        margin: 10px;
+        border-radius: 100%;
+        text-align: center;
+        color: yellow;
+        line-height: 30px;
+        font-weight: bold;
+        font-size: 15px;
+        margin-right: auto;
+    } 
+    .imagenPokemon{
+        transition: transform .2s; /* Animation */
+        margin: 5px;
+        display: block;
+    } 
+    
+    .imagenPokemon:hover{     /*Agranda el dibujo al pasar encima de el*/
+        transform: scale(1.5);
+    } 
+    #evoluciones{
+        display: inline-block;
+    }
+    
+    p{
+        color: black;
+        font-family: 'Odibee Sans', cursive;
+        width: 130px;
+        margin: 2px;
+        border-radius: 40px;
+        text-align: center;
+        line-height: 20px;
+        font-weight: bold;
+        font-size: 20px;
+        display:block;
+        margin:auto;
+    }
+    
+    h2{
+        color: black;
+        font-family: 'Odibee Sans', cursive;
+        margin: 2px;
+    }
 
-#buscaPokemon {
-    box-shadow: 1px 1px 5px black;
-}
-/*Fin de Buscador*/
-
-.flex-container{
-    margin-top: 20px;
-    display:flex;
-    flex-wrap:wrap;   
-}
-.flex-container > div {
-    background-color: white;
-    width: 180px;
-	flex-wrap:wrap;
-	/* background-image: url() */
-    background-color: rgb(255, 255, 0); 
-}
-.flex-container > div {
-	 background-color: white; 
-	background: none;
-    width: 150px;
-    margin: 20px;
-    line-height: 50px;
-    border-radius: 20px;
-    background-size: cover;
-    background-position: center;
-    box-shadow: 2px 2px 10px black;
-} 
-
-h1{
-    background-color: red;
-    width: 30px;
-    margin: 10px;
-    border-radius: 100%;
-    text-align: center;
-    color: yellow;
-    line-height: 30px;
-    font-weight: bold;
-    font-size: 15px;
-    margin-right: auto;
-} 
-.imagenPokemon{
-    transition: transform .2s; /* Animation */
-    margin: 5px;
-    display: block;
-} 
-
-.imagenPokemon:hover{     /*Agranda el dibujo al pasar encima de el*/
-    transform: scale(1.5);
-} 
-#evoluciones{
-    display: inline-block;
-}
-
-p{
-    color: black;
-    font-family: 'Odibee Sans', cursive;
-    width: 130px;
-    margin: 2px;
-    border-radius: 40px;
-    text-align: center;
-    line-height: 20px;
-    font-weight: bold;
-    font-size: 20px;
-    display:block;
-    margin:auto;
-}
-
-h2{
-    color: black;
-    font-family: 'Odibee Sans', cursive;
-    margin: 2px;
-}
-  /* MODAL POKEMON*/
-.modalDialog {
-	position: fixed;
-	font-family: Arial, Helvetica, sans-serif;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: rgba(0,0,0,0.8);
-	z-index: 99999;
-	display:none;
-	-webkit-transition: opacity 400ms ease-in;
-	-moz-transition: opacity 400ms ease-in;
-	transition: opacity 400ms ease-in;
-	pointer-events: auto;
-}
-.modalDialog > div {
-	width: 400px;
-	position: relative;
-	margin: 10% auto;
-	padding: 5px 20px 13px 20px;
-	border-radius: 10px;
-	background: #fff;
-	background: -moz-linear-gradient(#fff, #999);
-	background: -webkit-linear-gradient(#fff, #999);
-	background: -o-linear-gradient(#fff, #999);
-  -webkit-transition: opacity 400ms ease-in;
--moz-transition: opacity 400ms ease-in;
-transition: opacity 400ms ease-in;
-}
-.close {
-	background: #606061;
-	color: #FFFFFF;
-	line-height: 25px;
-	position: absolute;
-	right: -12px;
-	text-align: center;
-	top: -10px;
-	width: 24px;
-	text-decoration: none;
-	font-weight: bold;
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 12px;
-	border-radius: 12px;
-	-moz-box-shadow: 1px 1px 3px #000;
-	-webkit-box-shadow: 1px 1px 3px #000;
-	box-shadow: 1px 1px 3px #000;
-}
-.close:hover { background: #00d9ff; }
+    .centrarTitulo{
+        text-align: center;
+    }
+      /* MODAL POKEMON*/
+    .modalDialog {
+        position: fixed;
+        font-family: Arial, Helvetica, sans-serif;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.8);
+        z-index: 99999;
+        -webkit-transition: opacity 400ms ease-in;
+        -moz-transition: opacity 400ms ease-in;
+        transition: opacity 400ms ease-in;
+        pointer-events: auto;
+    }
+    .modalDialog > div {
+        width: 500px;
+        height: 350px;
+        position: relative;
+        margin: 10% auto;
+        padding: 5px 20px 13px 20px;
+        border-radius: 10px;
+        background: #fff;
+        background: -moz-linear-gradient(#fff, #999);
+        background: -webkit-linear-gradient(#fff, #999);
+        background: -o-linear-gradient(#fff, #999);
+      -webkit-transition: opacity 400ms ease-in;
+        -moz-transition: opacity 400ms ease-in;
+        transition: opacity 400ms ease-in;
+        
+    }
+    .close {
+        background: #606061;
+        color: #FFFFFF;
+        line-height: 25px;
+        position: absolute;
+        right: -12px;
+        text-align: center;
+        top: -10px;
+        width: 24px;
+        text-decoration: none;
+        font-weight: bold;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        border-radius: 12px;
+        -moz-box-shadow: 1px 1px 3px #000;
+        -webkit-box-shadow: 1px 1px 3px #000;
+        box-shadow: 1px 1px 3px #000;
+    }
+    .close:hover {
+         background: #00d9ff;
+         }
+    .seccionleft{
+        width: 300px;
+        height: 200px;
+    }
+    .seccionleft >h2 {
+       position: relative;
+    }
+    .seccionrigth {
+        float: right;
+        width: 200px;
+        height: 200px;
+        background-color: green;
+    }
+      /* === FIN MODAL POKEMON== */
+    
+    /* === BOTON HAMBURGUESA == */
+    @media screen and (max-width:800px ) {
+        .logo {
+            display: none;
+        }
+        header nav {
+            width:80%;
+            height:100%;
+            left:-100%;
+            margin:0;
+            position: fixed;
+        }
+     
+        header nav ul li {
+            display:block;
+            float:none;
+            border-bottom:1px solid rgba(255,255,255, .3);
+        }
+     
+        .menu_bar {
+            display:block;
+            width:100%;
+            background:#ccc;
+        }
+     
+        .menu_bar .bt-menu {
+            display:block;
+            padding:20px;
+            background:#024959;
+            color:#fff;
+            text-decoration:none;
+            font-weight: bold;
+            font-size:25px;
+            -webkit-box-sizing:border-box;
+            -moz-box-sizing:border-box;
+            box-sizing:border-box;
+        }
+     
+        .menu_bar span {
+            float: right;
+            font-size: 40px;
+        }
+    }
+    /* ==== Secciones de evoluciones ===== */
+    .nomImagen{
+        border: 1px solid black;
+        width: 240px;
+        height: 180px;
+        float: left;
+    }
+    .descripcion {
+        width: 240px;
+        height: 180px;
+        float: left;
+        border: 1px solid black;
+    }
+    .evolucion{
+        width: 480px;
+        float: left;
+        border: border: 1px solid black;;
+    }
+    #evoluciones {
+        margin-top: 0px;
+        display:flex;
+        border: 1px solid black;
+        justify-content: center;
+    
+    

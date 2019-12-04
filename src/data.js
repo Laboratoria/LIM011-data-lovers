@@ -41,16 +41,16 @@ export const ordenarAscOdescData = (arr, string) => {
 // };
 
 export const filtrarPokemones = (arr, tPokemones) => {
-const arregloFiltradoPokemones = [];
-for (let i = 0; i < arr.length; i += 1) {
-const tipoFiltrado = arr[i].type;
-for (let j = 0; j < tipoFiltrado.length; j += 1){
-if (tipoFiltrado[j] === tPokemones) {
-arregloFiltradoPokemones.push(arr[i]);
-}
-}
-}
-return arregloFiltradoPokemones;
+  const arregloFiltradoPokemones = [];
+  for (let i = 0; i < arr.length; i += 1) {
+    const tipoFiltrado = arr[i].type;
+    for (let j = 0; j < tipoFiltrado.length; j += 1){
+      if (tipoFiltrado[j] === tPokemones) {
+        arregloFiltradoPokemones.push(arr[i]);
+      }
+    }
+  }
+  return arregloFiltradoPokemones;
 };
 
 export const mostrarTop = (arr) => {
@@ -66,7 +66,8 @@ export const buscarPokemon = (arr, nombrePokemonBuscar) => {
 };
 
 export const buscadorPrimerasLetrasNombre = (arr, nombrePokemonBuscar) => {
-  return arr.filter((obj) => obj.name.toLowerCase().startsWith(nombrePokemonBuscar));
+  const nombrePokemon = arr.filter((obj) => obj.name.toLowerCase().startsWith(nombrePokemonBuscar));
+  return nombrePokemon
 };
 
 export const filtrarPorCandy = (arr, varCaramelos) => {
