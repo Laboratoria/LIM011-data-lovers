@@ -18,7 +18,7 @@ header {
   width: 100%;
   background-size: contain;
   position: fixed;
-  height: 12%;
+  height: 13%;
   background:#020203;
 }
 .logo {
@@ -36,6 +36,7 @@ header {
   font-size: 24px;
   left: 76%;
   position: absolute;
+  z-index: 1;
 }
 .icon-menu {
   color: rgb(255, 255, 255);
@@ -48,19 +49,28 @@ header {
   margin: 8px 0px;
   margin-left: 62%;
 }
+.checkbtn-menu{
+  margin-left: 87%; 
+}
+.checkbtn-menu i{
+  padding: 10px; 
+  color:#dcdcdc;
+}
 nav ul li {
-  margin: 5px;
+  margin: 6px;
 }
 .ul-menu {
   position: absolute;
   top: 0;
-  height: 320px;
   left: -100%;
   text-align: center;
   transition: all .5s;
-  width: 80%;
+  width: 320px;
+  height: 320px;
   margin-right: 20px;
-  background: #ffffff;
+  background:#3f0000;
+  background-size: cover;
+  z-index: 2;
 }
 #btn-home {
   margin-top: 20px;
@@ -78,19 +88,15 @@ nav ul li {
   left: 0;
 }
 .btn-menu {
-  width: 108px;
-  height: 25px;
-  background: #230028;
-  color: white;
+  width: 170px;
+  height: 40px;
+  background: #dcdcdc;
+  color: black;
   outline: none;
   border: 1px solid black;
   text-transform: uppercase;
-  margin:1px;
+  margin:3px;
   font-family: "Segoe UI Light";
-}
-#comunity {
-  color: white;
-  text-decoration: none;
 }
 .search {
   justify-content: center;
@@ -117,7 +123,7 @@ nav ul li {
 }
 /* home selectors */
 .section-home {
-  margin: 28px 5px 10px 8px;
+  margin: 37px 5px 10px 8px;
   background-image: url(./img/mas.jpg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -172,16 +178,9 @@ nav ul li {
   margin-left: 1px;
   font-style: normal;
 }
-.tittle-wand {
-  font-family: Georgia;
-  font-weight: lighter;
-  font-size:12px;
-  margin-bottom: 8px;
-  text-align: center;
-  text-transform: uppercase;
-}
+
 .video-home {
-  margin-top: 56px;
+  margin-top: 65px;
   width: 100%;
   height: 155px;
 }
@@ -241,7 +240,7 @@ nav ul li {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  background: black;
+  background: rgb(10, 10, 10);
 }
 .filters-characters {
   margin-top: 65px;
@@ -279,13 +278,12 @@ nav ul li {
   border: 1px #f3f3f3 solid;
 }
 main {
-  margin-top: 5px;
   background: rgb(10, 10, 10);
   padding-top: 44px;
-  display:inline-block;
 }
 /* main selectors of section wands*/
 .btn-filters-wands {
+  margin-top: 10px;
   display: flex;
   width: 100%;
   justify-content: center;
@@ -319,15 +317,15 @@ main {
   border-radius: 2px;
 }
 .filters-wands {
-  margin-top: 65px;
-  margin-bottom: 13px;
+  margin-top: 45px;
+  margin-bottom: 215px;
   width: 100%;
   height: 100px;
 }
 .img-core {
-  margin:3px 0px;
-  width: 25px;
-  height: 25px;
+  margin: 5px 0px;
+  width: 30px;
+  height: 30px;
 }
 .img-wood {
   width: 87px;
@@ -386,7 +384,7 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  margin-top:50px;
+  margin-top: 43px;
 }
 .card-data-patronus {
   width: 155px;
@@ -414,8 +412,27 @@ main {
   border: 1px #f3f3f3 solid;
 }
 .text-patronus {
-  width: 300px;
-  height: 160px;
+  font-family: "Segoe UI Light";
+  color: #fff;
+  font-size: 13px;
+  margin: 1px 15px;
+  text-align: justify;
+}
+.text-paragraph-wand {
+  font-family: "Segoe UI Light";
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  padding:0px 26px;
+}
+.tittle-patronus, .subtittle-patronus, .tittle-wands {
+  font-family: "Segoe UI Light";
+  color: #ce8303;
+  font-size: 16px;
+  margin: 17px 15px;
+  justify-content: center;
+  text-align: center;
+
 }
 /* footer selectors*/
 footer{
@@ -476,9 +493,9 @@ footer li a {
 
 /*---------------------------------- Modal Characters -------------------------------- */
 .img-modal-card {
-  width: 90px;
-  height: 120px;
-  border-radius: 50%;
+  width: 70px;
+  height: 80px;
+  border-radius: 1%;
 }
 .overlay {
 	background: rgba(12, 96, 134, 0.384);
@@ -503,12 +520,14 @@ footer li a {
 	font-family: 'Montserrat', sans-serif;
 	padding: 20px;
 	text-align: center;
-  width: 250px;
-  height: 410px;
+  width: 200px;
+  height: 280px;
+  font-size: 11px;
 	transition: .3s ease all;
 	transform: scale(0.7);
   opacity: 0;
   z-index: 2;
+  
   position: absolute; 
 }
 .popup .btn-cerrar-popup {
@@ -528,11 +547,6 @@ footer li a {
   transform: scale(1); opacity: 1; 
 }
 /*---------------------------------- Modal Patronus-------------------------------- */
-.img-modal-card {
-  width: 90px;
-  height: 120px;
-  border-radius: 50%;
-}
 .overlay-patronus {
 	background: rgba(12, 96, 134, 0.384);
 	position: fixed;

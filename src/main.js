@@ -9,8 +9,8 @@ const btnInicio = document.querySelector('#btn-home');
 const filtersWands = document.querySelector('.filters-wands');
 const sectionHome = document.querySelector('.section-home');
 const textPatronus = document.querySelector('.text-patronus');
-const tittlePatronus = document.querySelector('.title-patronus');
-// const sectionPatronus = document.querySelector('data-patronus');
+const tittlePatronus = document.querySelector('.tittle-patronus');
+const subtittlePatronus = document.querySelector('.subtittle-patronus');
 const dataCharacters = document.querySelector('.data-characters');
 const filtersCharacters = document.querySelector('.filters-characters');
 const btnFiltersWand = document.querySelector('.btn-filters-wands');
@@ -52,15 +52,15 @@ const showMainTemplate = (objDataPotter) => {
         <h2 class='features' id='name'>${objDataPotter.name}</h2>
         <h3 class='features' id='house'>~ ${objDataPotter.house} ~</h3>
       <section/>
-      <section class = 'main-modal'><
+      <section class = 'main-modal'>
         <h3 class='modal-features' id='dateofBirth'> Fecha de Nac. :${objDataPotter.dateOfBirth}</h3>
         <h3 class='modal-features' id='ancestry'> Origen : ${objDataPotter.ancestry}</h3>
         <h3 class='modal-features' id='patronus'> Patronus : ${objDataPotter.patronus}</h3>
         <h3 class='modal-features' id='wand'> Varita :
           <div> 
-            <p> Madera : ${objDataPotter.wand.wood} </p>
-            <p> Nucleo : ${objDataPotter.wand.core} </p>
-            <p> Tamaño : ${objDataPotter.wand.length} </p>
+            <p> Madera : ${objDataPotter.wood} </p>
+            <p> Nucleo : ${objDataPotter.core} </p>
+            <p> Tamaño : ${objDataPotter.length} </p>
           </div>
         </h3>
       <section/>`;
@@ -215,6 +215,7 @@ btnPatronus.addEventListener('click', () => {
   filtersCharacters.classList.add('hide');
   filtersWands.classList.add('hide');
   tittlePatronus.classList.remove('hide');
+  subtittlePatronus.classList.remove('hide');
   textPatronus.classList.remove('hide');
   const newDataPatronus = newDataPotter(dataPotter);
   const dataPatronus = filterPatronus(newDataPatronus);
@@ -260,5 +261,6 @@ btnCharacters.addEventListener('click', () => {
   filtersCharacters.classList.remove('hide');
   sectionSearch.classList.remove('hide');
   dataCharacters.classList.remove('hide');
-  showMainData(dataPotter);
+  const newData = newDataPotter(dataPotter);
+  showMainData(newData);
 });

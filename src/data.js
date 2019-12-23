@@ -234,6 +234,9 @@ export function newDataPotter(data) {
   const newData = data.map((object) => ({
     name: object.name,
     image: object.image,
+    house: object.house,
+    dateOfBirth: object.dateOfBirth,
+    ancestry: object.ancestry,
     patronus: object.patronus,
     wood: changeWandWood(object),
     core: changeWandCore(object),

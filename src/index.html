@@ -21,15 +21,13 @@
             </label>
             <ul class="ul-menu">
                 <input type="checkbox" id="check-menu">
-                <label for="check" class="checkbtn">
-                    <i class='fas fa-times'></i>
+                <label for="check" class="checkbtn-menu">
+                    <i class="fas fa-times"></i>
                 </label>
                 <li><button class="btn-menu" id="btn-home" type="button">inicio</button></li>
                 <li><button class="btn-menu" id="btn-characters" type="button">personajes</button></li>
                 <li><button class="btn-menu" id="btn-wand" type="button">varitas</button></li>
                 <li><button class="btn-menu" id="btn-patronus" type="button">patronus</button></li>
-                <li><button class="btn-menu" id="btn-stadists" type="button">estadisticas</button></li>
-                <li><button class="btn-menu" id="btn-comunity" type="button"><a id="comunity" href="https://discord.gg/v8vYsrk">comunidad</a></button></li>
             </ul>
         </div>
         <div class="search hide">
@@ -39,49 +37,53 @@
         </nav>
     </header>
     <main>
-      <!--Pantalla de Inicio-->
       <section class="section-home"> 
-            <div class="text-general">
-              <h2 class="text-tittle">¡Conoce más sobre Harry Potter: Wizards Unite!</h2>
-              <h3 class="text-paragraph">El nuevo juego de Niantic basado en el universo mágico de Harry Potter ya está disponible desde finales de junio de 2019. 
-                Es por ello que hemos elaborado esta guía de informacion del juego para conocer más sobre el Mundo Mágico, las características de los personajes
-                y los datos principales que necesitas para empezar el juego.</h3>
-            </div>
-            <iframe class="video-home" width="560" height="315" src="https://www.youtube.com/embed/rEEJ7NOe0hw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <div class="link-download">
-              <a class="link-game" target="_blank" href="https://play.google.com/store/apps/details?id=com.nianticlabs.hpwu.prod&hl=es">DESCARGALO AQUÍ</a>
-            </div>
+        <div class="text-general">
+          <h2 class="text-tittle">¡Conoce más sobre Harry Potter: Wizards Unite!</h2>
+          <h3 class="text-paragraph">El nuevo juego de Niantic basado en el universo mágico de Harry Potter ya está disponible desde finales de junio de 2019. 
+            Es por ello que hemos elaborado esta guía de informacion del juego para conocer más sobre el Mundo Mágico, las características de los personajes
+            y los datos principales que necesitas para empezar el juego.</h3>
+        </div>
+        <iframe class="video-home" width="560" height="315" src="https://www.youtube.com/embed/rEEJ7NOe0hw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="link-download">
+          <a class="link-game" target="_blank" href="https://play.google.com/store/apps/details?id=com.nianticlabs.hpwu.prod&hl=es">DESCARGALO AQUÍ</a>
+        </div>
         </section>
-      <!-- Section to filters -->
       <section class="filters-characters hide">
-          <p>Clasifica por:</p>
+        <p>Clasifica por:</p>
+        <p>Casa:</p>
           <select class="selectHouse select">
-            <option value="select">casa</option>
+            <option value="">Selecciona..</option>
             <option value="Gryffindor">Gryffindor</option>
             <option value="Ravenclaw">Ravenclaw</option>
             <option value="Slytherin">Slytherin</option>
             <option value="Hufflepuff">Hufflepuff</option>
             <option value="">No especificado</option>
           </select>
-          <select class="selectRole select">
-            <option value="select">rol</option>
-            <option value="true">Estudiante</option>
-            <option value="false">Profesor</option>
-            <option value="">No especificado</option>
-          </select>
-          <select class="selectGender select">
-            <option value="select">genero</option>
-            <option value="female">Femenino</option>
-            <option value="male">Masculino</option>
-          </select>
-        </article>
+        <p>Rol:</p>
+        <select class="selectRole select">
+          <option value="">Selecciona..</option>
+          <option value="true">Estudiante</option>
+          <option value="false">Profesor</option>
+          <option value="">No especificado</option>
+        </select>
+        <p>Género:</p>
+        <select class="selectGender select">
+          <option value="">Selecciona..</option>
+          <option value="female">Femenino</option>
+          <option value="male">Masculino</option>
+        </select>
       </section>
-      <!-- Section to show general data -->
       <section class="data-characters hide"></section>
-      <!-- Section to show modal -->
       <section class="modal"></section>
-      <!-- Section to show wands -->
       <section class="filters-wands hide">
+        <h3 class="tittle-wands">Varitas y sus Tipos</h3>
+        <p class="text-paragraph-wand">Una varita es el objeto a través del cual una bruja o mago canaliza su magia.
+          Está hecha de madera y tiene una sustancia mágica en su centro. Las varitas hechas por Ollivander tienen 
+          núcleos de plumas de fénix, cabello de cola de unicornio o fibra de corazón de dragón, y son de diferentes
+          maderas, longitudes y flexibilidades.</p>
+        <h3 class="tittle-wands">Personajes y sus Varitas</h3>
+        <p class="text-paragraph-wand">Clasificalos por el Núcleo de su varita:</p>
         <div class="btn-filters-wands">
           <button class="btn-wands" id="btn-dragon" type="button"></button>
           <button class="btn-wands" id="btn-unicorn" type="button"></button>
@@ -92,13 +94,16 @@
           <p>Unircornio</p>
           <p>Fénix</p>
         </div> 
-        </div>
       </section>
       <section class="data-wands"></section>
       <section class="data-patronus">
-        <h3 class='title-patronus hide'>¿Qué es un patronus?</h3>
-        <p class='text-patronus hide'>El Patronus es una forma de magia avanzada con la que incluso los magos más calificados pueden luchar.Es "una especie de antidementor, un guardián que actúa como un escudo entre usted y el dementor ". También es una especie de fuerza positiva, una proyección de las mismas cosas de las que se alimenta el Dementor: esperanza, felicidad, el deseo de sobrevivir, pero no puede sentir desesperación, como los humanos reales, por lo que los Dementores no pueden lastimarlo.</p>
-      </section>
+        <h3 class="tittle-patronus hide">¿Qué es un patronus?</h3>
+        <p class="text-patronus hide">El Patronus es una forma de magia avanzada con la que incluso los magos más calificados pueden luchar.
+          Es "una especie de antidementor, un guardián que actúa como un escudo entre usted y el dementor ", es una especie de fuerza 
+          positiva, una proyección de las mismas cosas de las que se alimenta el Dementor: esperanza, felicidad, el deseo de sobrevivir,
+          pero no puede sentir desesperación, como los humanos reales, por lo que los Dementores no pueden lastimarlo.</p>
+        <h3 class="subtittle-patronus hide">Patronus de tus personajes Favoritos</h3>
+        </section>
       <section class="modal-patronus"></section>
     </main>
     <footer>
