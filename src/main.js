@@ -45,25 +45,34 @@ const showMainTemplate = (objDataPotter) => {
     const overlay = document.createElement('div');
     overlay.className = 'overlay';
     const cardPotter = `
-      <div class='popup' id='popup'>
-      <section class = 'header-modal'>
-        <a href='#' id='btn-cerrar-popup' class='btn-cerrar-popup'><i class='fas fa-times'></i></a>
-        <img class='img-modal-card' src='${objDataPotter.image}'/>
-        <h2 class='features' id='name'>${objDataPotter.name}</h2>
-        <h3 class='features' id='house'>~ ${objDataPotter.house} ~</h3>
-      <section/>
-      <section class = 'main-modal'>
-        <h3 class='modal-features' id='dateofBirth'> Fecha de Nac. :${objDataPotter.dateOfBirth}</h3>
-        <h3 class='modal-features' id='ancestry'> Origen : ${objDataPotter.ancestry}</h3>
-        <h3 class='modal-features' id='patronus'> Patronus : ${objDataPotter.patronus}</h3>
-        <h3 class='modal-features' id='wand'> Varita :
-          <div> 
-            <p> Madera : ${objDataPotter.wood} </p>
-            <p> Nucleo : ${objDataPotter.core} </p>
-            <p> Tamaño : ${objDataPotter.length} </p>
-          </div>
-        </h3>
-      <section/>`;
+    <div class='popup' id='popup'>
+    <article class='header-modal'>
+      <a href='#' id='btn-cerrar-popup' class='btn-cerrar-popup'><i class='fas fa-times'></i></a>
+      <h2 class='features' id='name'>${objDataPotter.name}</h2>
+      <h3 class='features' id='house'>~ ${objDataPotter.house} ~</h3> 
+      <img class='img-modal-card' src='${objDataPotter.image}'/>
+    </article>
+    <article class='main-modal'>
+      <div class='description-modal'>
+        <div class="description-text">
+          <h3> Fecha de Nac :</h3>
+          <h3> Origen :</h3>
+          <h3> Patronus :</h3>
+        </div>
+        <div class='description-text'>
+          <h3 class='text-p'>${objDataPotter.dateOfBirth}</h3>
+          <h3 class='text-p'>${objDataPotter.ancestry}</h3>
+          <h3 class='text-p'>${objDataPotter.patronus}</h3>
+        </div>
+      </div>
+      <div>
+        <h3> Varita</h3>
+        <p> Madera : ${objDataPotter.wood} </p>
+        <p> Nucleo : ${objDataPotter.core} </p>
+        <p> Tamaño : ${objDataPotter.length} </p>
+      </div>
+    </article>
+  </div>`;
     overlay.innerHTML = cardPotter;
     document.querySelector('.modal').appendChild(overlay);
     const popup = overlay.querySelector('.popup');

@@ -25,7 +25,7 @@ header {
   display: flex;
 }
 .img-logo {
-  margin: 10px 5px 9px 7px;
+  margin: 16px 6px 10px 10px;
   width: 76px;
   height: 52px;
 } 
@@ -40,14 +40,14 @@ header {
 }
 .icon-menu {
   color: rgb(255, 255, 255);
-  font-size: 20px;
+  font-size: 22px;
   background: transparent;
   height: 10px;
-  margin-left: 5px;
+  margin-left: 4px;
 }
 .checkbtn {
-  margin: 8px 0px;
-  margin-left: 62%;
+  margin-top: 14px;
+  margin-left: 60%;
 }
 .checkbtn-menu{
   margin-left: 87%; 
@@ -64,16 +64,13 @@ nav ul li {
   top: 0;
   left: -100%;
   text-align: center;
-  transition: all .5s;
+  transition: all 0.7s;
   width: 320px;
-  height: 320px;
+  height: 296px;
   margin-right: 20px;
-  background:#3f0000;
+  background:#7E0000;
   background-size: cover;
   z-index: 2;
-}
-#btn-home {
-  margin-top: 20px;
 }
 #check {
   display: none;
@@ -90,12 +87,12 @@ nav ul li {
 .btn-menu {
   width: 170px;
   height: 40px;
-  background: #dcdcdc;
+  background:#f3f3f3;
   color: black;
   outline: none;
-  border: 1px solid black;
+  border: 1px solid #1b1b1b;
   text-transform: uppercase;
-  margin:3px;
+  margin:4px;
   font-family: "Segoe UI Light";
 }
 .search {
@@ -123,66 +120,63 @@ nav ul li {
 }
 /* home selectors */
 .section-home {
-  margin: 37px 5px 10px 8px;
-  background-image: url(./img/mas.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 95%;
-  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  margin: 40px 10px 10px 10px;
 }
 .link-download {
+  display: flex;
   width: 100%;
-  height: 22px;
-  margin-top: 10px;
-  margin-bottom: 1px;
-  text-align: center;
   justify-content: center;
+  margin-top: 10px;
 }
 .link-game {
   font-family: 'Roboto', sans-serif;
   font-size: 10px;
   font-weight: bold;
   border-radius: 8px;
-  width: 80px;
+  text-align: center;
+  width: 40%;
   color: rgb(255, 255, 255);
   text-decoration: none;
   padding: 10px;
   background-color:#ce8303;
 }
+.text-home {
+  background-image: linear-gradient(#00000042, #000000) ,url(./img/mas.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+}
 .text-tittle {
   font-family: "Segoe UI Light";
-  font-size: 16px;
-  margin-right: 100px;
-  margin-left: 20px;
-  padding-top: 22px;
-  color: #ce8303;
-  font-size: 16px;
+  padding: 24px 22px 0px 20px;
+  color: #ffa100;
+  font-size: 20px;
 }
 .text-paragraph {
   font-family: "Segoe UI Light";
-  font-size: 13px;
+  font-size: 14px;
   font-weight: lighter;
-  width: 265px;
-  height: 100px;
-  padding-top: 20px;
+  height: 80%;
+  text-align: center;
   color: white;
-  margin-left: 20px;
+  padding: 18px 15px;
   text-align: justify;
+
 }
 .text-menu {
   color:#fff;
   font-family: "Segoe UI Light";
   font-weight: lighter;
   font-size: 10px;
-  text-align: center;
-  margin-left: 1px;
   font-style: normal;
 }
 
 .video-home {
-  margin-top: 65px;
   width: 100%;
-  height: 155px;
+  height: 170px;
+  margin-top: 10px;
 }
 /* main selectors*/
 .btn-general {
@@ -224,7 +218,7 @@ nav ul li {
   font-family: Georgia;
   font-weight: lighter;
 }
-.card-description h3 {
+.card-description h3, .text-p {
   text-align: center;
   font-size: 12px;
   font-family: Georgia;
@@ -265,7 +259,7 @@ nav ul li {
   margin:2px 0px 2px 10px;
   padding: 5px;
   border-radius: 25px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: "Segoe UI Light";
   font-size: 11px;
   color: rgb(0, 0, 0);
   text-transform: uppercase;
@@ -278,8 +272,8 @@ nav ul li {
   border: 1px #f3f3f3 solid;
 }
 main {
-  background: rgb(10, 10, 10);
-  padding-top: 44px;
+  background: #f3f3f3;
+  padding-top: 54px;
 }
 /* main selectors of section wands*/
 .btn-filters-wands {
@@ -350,17 +344,18 @@ main {
   margin: 9px 0px 5px 0px;
   padding: 0px 12px;
   font-size: 12px;
-  font-family: Georgia;
+  font-family: "Segoe UI Light";
   font-weight: lighter;
 }
 .card-wand-header {
   width: 56%;
   text-align: center;
 }
-.card-description-wands {
+.card-description-wands, .description-text {
   margin: 12px 0px 5px 0px;
   text-align: left;
   font-size: 11px;
+  font-family: "Segoe UI Light";
 }
 .data-wands {
   display: flex;
@@ -384,7 +379,6 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  margin-top: 43px;
 }
 .card-data-patronus {
   width: 155px;
@@ -432,19 +426,17 @@ main {
   margin: 17px 15px;
   justify-content: center;
   text-align: center;
-
 }
 /* footer selectors*/
 footer{
   display: flex;
   width: 100%;
-  height: 82px;
-  background:#3f0000;
+  height: auto;
+  background:#7E0000;
   color: #fff;
   text-align: center;
   font-family: "Segoe UI Light";
-  font-size: 10px;
-  padding-bottom: 11px;
+  font-size: 12px;
 }
 footer ul {
   width: 100%;
@@ -483,8 +475,8 @@ footer li a {
   transform: rotateY(180deg);
 }
 .card-inner {
-  width: 100%;
-  height: 100%;
+  width:100%;
+  height:100%;
   text-align: center;
   transition: transform 0.2s;
   transform-style: preserve-3d;
@@ -492,10 +484,26 @@ footer li a {
 }
 
 /*---------------------------------- Modal Characters -------------------------------- */
+.header-modal {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  background: #ffd481;
+  }
+.description-modal {
+  display: flex;
+  justify-content: space-around;
+}
+.main-modal {
+  background: #ffd481;
+  padding-bottom: 10px;
+}
 .img-modal-card {
-  width: 70px;
-  height: 80px;
-  border-radius: 1%;
+  width:110px;
+  height:130px;
+  border-radius:50%;
+  align-self: center;
+  margin: 5px;
 }
 .overlay {
 	background: rgba(12, 96, 134, 0.384);
@@ -518,16 +526,15 @@ footer li a {
 	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
 	border-radius: 3px;
 	font-family: 'Montserrat', sans-serif;
-	padding: 20px;
+	padding: 10px;
 	text-align: center;
-  width: 200px;
-  height: 280px;
+  width: 195px;
+  height: 320px;
   font-size: 11px;
 	transition: .3s ease all;
 	transform: scale(0.7);
   opacity: 0;
   z-index: 2;
-  
   position: absolute; 
 }
 .popup .btn-cerrar-popup {
@@ -536,15 +543,17 @@ footer li a {
 	display: block;
 	text-align: right;
 	transition: .3s ease all;
-  color: #BBBBBB;
+  color: rgb(95, 95, 95);
   z-index: 3;
+  margin: 3px;
   position: relative;
 }
 .popup .btn-cerrar-popup:hover {
 	color: rgb(124, 15, 15);
 }
 .popup.active {	
-  transform: scale(1); opacity: 1; 
+  transform: scale(1); 
+  opacity: 1; 
 }
 /*---------------------------------- Modal Patronus-------------------------------- */
 .overlay-patronus {
@@ -565,9 +574,10 @@ footer li a {
 }
 .popup-patronus {
 	background: #F8F8F8;
-	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 0px 5px 0px rgba(25,71,95,0.88);
 	border-radius: 3px;
-	font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
 	padding: 20px;
 	text-align: center;
   width: 250px;
