@@ -1,7 +1,11 @@
-/* eslint-disable import/named */
 import dataPotter from './data/potter/potter.js';
 import {
-  filterHouse, filterGender, filterRole, filterWandCore, search, filterPatronus,
+  filterHouse,
+  filterGender,
+  filterRole,
+  filterWandCore,
+  search,
+  filterPatronus,
   newDataPotter,
 } from './data.js';
 
@@ -11,7 +15,7 @@ const sectionHome = document.querySelector('.section-home');
 const textPatronus = document.querySelector('.text-patronus');
 const tittlePatronus = document.querySelector('.tittle-patronus');
 const subtittlePatronus = document.querySelector('.subtittle-patronus');
-const dataCharacters = document.querySelector('.data-characters');
+const dataCharacters = document.querySelector('.main-data');
 const filtersCharacters = document.querySelector('.filters-characters');
 const btnFiltersWand = document.querySelector('.btn-filters-wands');
 const selectElementHouse = document.querySelector('.selectHouse');
@@ -66,10 +70,10 @@ const showMainTemplate = (objDataPotter) => {
         </div>
       </div>
       <div>
-        <h3> Varita</h3>
-        <p> Madera : ${objDataPotter.wood} </p>
-        <p> Nucleo : ${objDataPotter.core} </p>
-        <p> Tamaño : ${objDataPotter.length} </p>
+        <h3>Varita</h3>
+        <p> Madera : ${objDataPotter.wood}</p>
+        <p> Nucleo : ${objDataPotter.core}</p>
+        <p> Tamaño : ${objDataPotter.length}</p>
       </div>
     </article>
   </div>`;
@@ -161,7 +165,7 @@ const showTemplatePatronus = (objDataPotter) => {
 // function to go through for each object (characters)
 const showMainData = (data) => {
   data.forEach((objDataPotter) => {
-    document.querySelector('.data-characters').appendChild(showMainTemplate(objDataPotter));
+    document.querySelector('.main-data').appendChild(showMainTemplate(objDataPotter));
   });
   return showMainData;
 };
@@ -186,14 +190,12 @@ btnWand.addEventListener('click', () => {
   dataCharacters.classList.add('hide');
   filtersCharacters.classList.add('hide');
   btnFiltersWand.classList.remove('hide');
-  // const property = 'wand';
   const newDataWands = newDataPotter(dataPotter);
   showWandsData(newDataWands);
 });
 // Event to call to function filterWandCore (core: dragon)
 btnDragon.addEventListener('click', () => {
   const core = 'dragon';
-  // const property = 'wand';
   const newDataWands = newDataPotter(dataPotter);
   const dataWandDragon = filterWandCore(newDataWands, core);
   dataWands.querySelectorAll('.card-data-wands').forEach((child) => child.remove());
@@ -202,7 +204,6 @@ btnDragon.addEventListener('click', () => {
 // Event to call to function filterWandCore (core: unicorn)
 btnUnicorn.addEventListener('click', () => {
   const core = 'unicorn';
-  // const property = 'wand';
   const newDataWands = newDataPotter(dataPotter);
   const dataWandUnicorn = filterWandCore(newDataWands, core);
   dataWands.querySelectorAll('.card-data-wands').forEach((child) => child.remove());
@@ -211,7 +212,6 @@ btnUnicorn.addEventListener('click', () => {
 // Event to call to function filterWandCore (core: phoenix)
 btnPhoenix.addEventListener('click', () => {
   const core = 'phoenix';
-  // const property = 'wand';
   const newDataWands = newDataPotter(dataPotter);
   const dataWandPhoenix = filterWandCore(newDataWands, core);
   dataWands.querySelectorAll('.card-data-wands').forEach((child) => child.remove());
@@ -261,15 +261,17 @@ searchBox.addEventListener('keyup', (buscar) => {
   dataCharacters.querySelectorAll('.card-data').forEach((child) => child.remove());
   showMainData(finded);
 });
+// events to show characters
+btnCharacters.addEventListener('click', () => {
+  sectionHome.classList.toggle('section-home');
+  sectionHome.classList.add('hide');
+  dataCharacters.classList.add('data-characters');
+  filtersCharacters.classList.remove('hide');
+  sectionSearch.classList.remove('hide');
+  const newData = newDataPotter(dataPotter);
+  showMainData(newData);
+});
 // events to navegation menu
 btnInicio.addEventListener('click', () => {
   document.location.reload(true);
-});
-btnCharacters.addEventListener('click', () => {
-  sectionHome.classList.add('hide');
-  filtersCharacters.classList.remove('hide');
-  sectionSearch.classList.remove('hide');
-  dataCharacters.classList.remove('hide');
-  const newData = newDataPotter(dataPotter);
-  showMainData(newData);
 });

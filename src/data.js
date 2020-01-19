@@ -1,4 +1,8 @@
-import { wandsCore, patronus, descriptionPatronus } from './data/potter/potter-extra.js';
+import {
+  wandsCore,
+  patronus,
+  descriptionPatronus,
+} from './data/potter/potter-extra.js';
 
 // function to filter for house
 export function filterHouse(dataPotter, houseSelected) {
@@ -32,64 +36,6 @@ export function filterPatronus(dataPotter) {
   const dataPatronus = dataPotter.filter((data) => (data.patronus !== '' && data.name !== 'Sirius Black'));
   return dataPatronus;
 }
-// export const changeDataWand = (data, propiedad) => {
-//   const wandsData = [];
-//   for (let i = 0; i < data.length; i += 1) {
-//     if (data[i][propiedad].wood === '' && data[i].wand.core === ''
-// && data[i].wand.length === '') {
-//       wandsData.push({
-//         name: data[i].name,
-//         image: data[i].image,
-//         wand: {
-//           wood: 'no especificado',
-//           core: 'no especificado',
-//           length: 'no especificado',
-//         },
-//       });
-//     } else if (data[i].wand.core === '' && data[i].wand.length === '') {
-//       wandsData.push({
-//         name: data[i].name,
-//         image: data[i].image,
-//         wand: {
-//           wood: data[i].wand.wood,
-//           core: 'no especificado',
-//           length: 'no especificado',
-//         },
-//       });
-//     } else if (data[i].wand.length === '') {
-//       wandsData.push({
-//         name: data[i].name,
-//         image: data[i].image,
-//         wand: {
-//           wood: data[i].wand.wood,
-//           core: data[i].wand.core,
-//           length: 'no especificado',
-//         },
-//       });
-//     } else if (data[i].wand.core === '') {
-//       wandsData.push({
-//         name: data[i].name,
-//         image: data[i].image,
-//         wand: {
-//           wood: data[i].wand.wood,
-//           core: 'no especificado',
-//           length: data[i].wand.length,
-//         },
-//       });
-//     } else {
-//       wandsData.push({
-//         name: data[i].name,
-//         image: data[i].image,
-//         wand: {
-//           wood: data[i].wand.wood,
-//           core: data[i].wand.core,
-//           length: data[i].wand.length,
-//         },
-//       });
-//     }
-//   }
-//   return wandsData;
-// };
 
 const addImageWand = (object) => {
   let imgCore;

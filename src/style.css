@@ -19,7 +19,7 @@ header {
   background-size: contain;
   position: fixed;
   height: 13%;
-  background:#020203;
+  background: rgb(20, 20, 20);
 }
 .logo {
   display: flex;
@@ -53,22 +53,20 @@ header {
   margin-left: 87%; 
 }
 .checkbtn-menu i{
-  padding: 10px; 
+  padding: 15px; 
   color:#dcdcdc;
 }
 nav ul li {
-  margin: 6px;
+  border-bottom: solid #f3f3f3 1px;
 }
 .ul-menu {
   position: absolute;
   top: 0;
   left: -100%;
-  text-align: center;
   transition: all 0.7s;
-  width: 320px;
-  height: 296px;
-  margin-right: 20px;
-  background:#7E0000;
+  width: 100%;
+  height: 550px;
+  background:rgb(20, 20, 20);
   background-size: cover;
   z-index: 2;
 }
@@ -85,14 +83,13 @@ nav ul li {
   left: 0;
 }
 .btn-menu {
-  width: 170px;
-  height: 40px;
-  background:#f3f3f3;
-  color: black;
-  outline: none;
-  border: 1px solid #1b1b1b;
+  width: 100%;
+  height: 50px;
+  background:transparent;
+  border-style: none;
+  color: #ffffff;
+  font-size: 16px;
   text-transform: uppercase;
-  margin:4px;
   font-family: "Segoe UI Light";
 }
 .search {
@@ -234,11 +231,11 @@ nav ul li {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  padding-top: 10px;
   background: rgb(10, 10, 10);
 }
 .filters-characters {
   margin-top: 65px;
-  margin-bottom: 13px;
   width: 100%;
   flex-direction: column;
   color: #fff;
