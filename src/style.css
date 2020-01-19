@@ -357,7 +357,7 @@ main {
 .card-description-wands, .description-text {
   margin: 12px 0px 5px 0px;
   text-align: left;
-  font-size: 14px;
+  font-size: 15px;
   font-family: "Segoe UI Light";
 }
 .data-wands {
@@ -382,6 +382,8 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background:rgb(19, 17, 16);
+  padding-top: 8px;
   width: 100%;
 }
 .card-data-patronus {
@@ -390,7 +392,7 @@ main {
   padding: 10px;
   margin: 7px;
   text-align: center;
-  background: #082c4278;
+  background: rgb(6, 33, 56);
   color: rgb(255, 255, 255);
   border: 1px rgb(255, 255, 255) solid;
   border-radius: 2px;
@@ -409,13 +411,14 @@ main {
   border-radius: 50%;
   border: 1px #f3f3f3 solid;
 }
-.text-patronus {
-  font-family: "Segoe UI Light";
-  color: #fff;
-  font-size: 13px;
-  margin: 1px 15px;
+.main-data-patronus {
+  margin-top: 45px;
+  background:rgb(19, 17, 16);
   text-align: justify;
+  color: #f3f3f3;
+  padding: 5px 15px;
 }
+
 .text-paragraph-wand {
   font-family: "Segoe UI Light";
   color: #fff;
@@ -566,6 +569,22 @@ footer li a {
   opacity: 1; 
 }
 /*---------------------------------- Modal Patronus-------------------------------- */
+.header-modal-patronus {
+  height: 98%;
+  margin: 5px;
+  flex-direction: column;
+  justify-items: center;
+  font-family: "Segoe UI Light";
+  color: #f3f3f3;
+  background: rgb(6, 33, 56);
+  font-size: 16px;
+  }
+
+.header-modal-patronus p{
+  text-align: justify;
+  padding: 15px;
+}
+
 .overlay-patronus {
 	background: rgba(12, 96, 134, 0.384);
 	position: fixed;
@@ -586,12 +605,11 @@ footer li a {
 	background: #F8F8F8;
 	box-shadow: 0px 0px 5px 0px rgba(25,71,95,0.88);
 	border-radius: 3px;
-  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
-	padding: 20px;
+	padding: 8px;
 	text-align: center;
   width: 250px;
-  height: 410px;
+  height: 400px;
 	transition: .3s ease all;
 	transform: scale(0.7);
   opacity: 0;
@@ -602,9 +620,10 @@ footer li a {
 	font-size: 16px;
 	line-height: 16px;
 	display: block;
-	text-align: right;
+  text-align: right;
+  padding: 10px;
 	transition: .3s ease all;
-  color: #BBBBBB;
+  color: #f3f3f3;
   z-index: 3;
   position: relative;
 }

@@ -14,7 +14,6 @@ const filtersWands = document.querySelector('.filters-wands');
 const sectionHome = document.querySelector('.section-home');
 const textPatronus = document.querySelector('.text-patronus');
 const tittlePatronus = document.querySelector('.tittle-patronus');
-const subtittlePatronus = document.querySelector('.subtittle-patronus');
 const dataCharacters = document.querySelector('.main-data');
 const filtersCharacters = document.querySelector('.filters-characters');
 const btnFiltersWand = document.querySelector('.btn-filters-wands');
@@ -142,7 +141,7 @@ const showTemplatePatronus = (objDataPotter) => {
     overlayPatronus.className = 'overlay-patronus';
     const cardPotterPatronus = `
     <div class='popup-patronus'>
-    <section class = 'header-modal'>
+    <section class = 'header-modal-patronus'>
       <a href='#' id='btn-cerrar-popup' class='btn-cerrar-popup'><i class='fas fa-times'></i></a>
       <h3 class='modal-features'> Patronus : ${objDataPotter.patronus}</h3>
       <img class='img-characters-patronus' src='${objDataPotter.imgPatronus}'/>
@@ -224,7 +223,6 @@ btnPatronus.addEventListener('click', () => {
   filtersCharacters.classList.add('hide');
   filtersWands.classList.add('hide');
   tittlePatronus.classList.remove('hide');
-  subtittlePatronus.classList.remove('hide');
   textPatronus.classList.remove('hide');
   const newDataPatronus = newDataPotter(dataPotter);
   const dataPatronus = filterPatronus(newDataPatronus);
