@@ -185,9 +185,9 @@ const showPatronusData = (listdataPotter) => {
 };
 // Event to call to section wands
 btnWand.addEventListener('click', () => {
+  sectionHome.classList.toggle('section-home');
   sectionHome.classList.add('hide');
   filtersWands.classList.remove('hide');
-  dataCharacters.classList.add('hide');
   filtersCharacters.classList.add('hide');
   btnFiltersWand.classList.remove('hide');
   const newDataWands = newDataPotter(dataPotter);
@@ -219,8 +219,8 @@ btnPhoenix.addEventListener('click', () => {
 });
 // Event to call to section patronus
 btnPatronus.addEventListener('click', () => {
+  sectionHome.classList.toggle('section-home');
   sectionHome.classList.add('hide');
-  dataCharacters.classList.add('hide');
   filtersCharacters.classList.add('hide');
   filtersWands.classList.add('hide');
   tittlePatronus.classList.remove('hide');
@@ -271,7 +271,7 @@ btnCharacters.addEventListener('click', () => {
   const newData = newDataPotter(dataPotter);
   showMainData(newData);
 });
-// events to navegation menu
+// events for menu
 btnInicio.addEventListener('click', () => {
   document.location.reload(true);
 });

@@ -70,6 +70,12 @@ nav ul li {
   background-size: cover;
   z-index: 2;
 }
+
+.left {
+  position: absolute;
+  left: 100%;
+}
+
 #check {
   display: none;
 }
@@ -177,7 +183,7 @@ nav ul li {
 }
 /* main selectors*/
 .btn-general {
-  padding: 3px 19px;
+  padding: 4px 18px;
   margin: 8px 4px 0px 4px;
   background: rgb(229, 234, 243);
   border-style: none;
@@ -185,7 +191,7 @@ nav ul li {
   color:black;
   border: 1px rgba(255, 255, 255, 0.81) solid;
   font-family: "Segoe UI Light";
-  font-size: 11px;
+  font-size: 12px;
   font-weight: bolder;
 }
 .btn-general:hover {
@@ -200,7 +206,7 @@ nav ul li {
   flex-basis: auto;
   margin: 7px;
   text-align: center;
-  background: #082c4278;
+  background: rgb(6, 33, 56);
   color: rgb(255, 255, 255);
   border: 1px rgb(255, 255, 255) solid;
   border-radius: 2px;
@@ -211,13 +217,12 @@ nav ul li {
 }
 .card-description h2 {
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   font-family: Georgia;
-  font-weight: lighter;
 }
 .card-description h3, .text-p {
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   font-family: Georgia;
   font-weight: lighter;
 }
@@ -232,7 +237,7 @@ nav ul li {
   justify-content: center;
   width: 100%;
   padding-top: 10px;
-  background: rgb(10, 10, 10);
+  background: rgb(19, 17, 16);
 }
 .filters-characters {
   margin-top: 65px;
@@ -274,7 +279,7 @@ main {
 }
 /* main selectors of section wands*/
 .btn-filters-wands {
-  margin-top: 10px;
+  margin: 8px 0px;
   display: flex;
   width: 100%;
   justify-content: center;
@@ -300,18 +305,19 @@ main {
 }
 .card-data-wands {
   display: flex;
-  background: #11374a78;
+  background: rgb(6, 33, 56);
   color: rgb(255, 255, 255);
   border: 1px rgb(255, 255, 255) solid;
-  width: 77%;
-  margin: 6px;
+  width: 94%;
+  margin: 4px;
   border-radius: 2px;
 }
 .filters-wands {
   margin-top: 45px;
-  margin-bottom: 215px;
+  padding-bottom: 10px;
   width: 100%;
-  height: 100px;
+  height: 100%;
+  background: rgb(20, 20, 20);
 }
 .img-core {
   margin: 5px 0px;
@@ -340,7 +346,7 @@ main {
 .card-name {
   margin: 9px 0px 5px 0px;
   padding: 0px 12px;
-  font-size: 12px;
+  font-size: 18px;
   font-family: "Segoe UI Light";
   font-weight: lighter;
 }
@@ -351,7 +357,7 @@ main {
 .card-description-wands, .description-text {
   margin: 12px 0px 5px 0px;
   text-align: left;
-  font-size: 11px;
+  font-size: 14px;
   font-family: "Segoe UI Light";
 }
 .data-wands {
@@ -359,6 +365,7 @@ main {
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
+  background: #f3f3f3;
 }
 .text-wands {
   color:white;
@@ -368,7 +375,7 @@ main {
 }
 .text-wands p {
   width: 23%;
-  font-size: 12px;
+  font-size: 14px;
 }
 /* main selectors of section patronus*/
 .data-patronus {
@@ -412,15 +419,16 @@ main {
 .text-paragraph-wand {
   font-family: "Segoe UI Light";
   color: #fff;
-  font-size: 13px;
-  text-align: center;
+  font-size: 14px;
+  text-align: justify;
   padding:0px 26px;
 }
 .tittle-patronus, .subtittle-patronus, .tittle-wands {
   font-family: "Segoe UI Light";
   color: #ce8303;
-  font-size: 16px;
-  margin: 17px 15px;
+  font-size: 18px;
+  padding-top: 8px;
+  margin: 4px;
   justify-content: center;
   text-align: center;
 }
@@ -485,20 +493,25 @@ footer li a {
   display: flex;
   flex-direction: column;
   justify-items: center;
-  background: #ffd481;
+  color: #f3f3f3;
+  background: rgb(6, 33, 56);
   }
 .description-modal {
   display: flex;
   justify-content: space-around;
 }
 .main-modal {
-  background: #ffd481;
+  background: rgb(6, 33, 56);
   padding-bottom: 10px;
+  font-size: 16px;
+  color: #f3f3f3;
+  font-family: "Segoe UI Light";
 }
 .img-modal-card {
   width:110px;
   height:130px;
   border-radius:50%;
+  border: #f3f3f3 solid 1px;
   align-self: center;
   margin: 5px;
 }
@@ -525,8 +538,8 @@ footer li a {
 	font-family: 'Montserrat', sans-serif;
 	padding: 10px;
 	text-align: center;
-  width: 195px;
-  height: 320px;
+  width: 205px;
+  height: 370px;
   font-size: 11px;
 	transition: .3s ease all;
 	transform: scale(0.7);
@@ -540,9 +553,9 @@ footer li a {
 	display: block;
 	text-align: right;
 	transition: .3s ease all;
-  color: rgb(95, 95, 95);
+  color: #F8F8F8;
   z-index: 3;
-  margin: 3px;
+  margin: 6px;
   position: relative;
 }
 .popup .btn-cerrar-popup:hover {
