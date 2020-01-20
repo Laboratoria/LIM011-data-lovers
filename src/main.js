@@ -95,7 +95,7 @@ const DataforWand = (dato) => {
             <label> Núcleo :${dato.core}
             <div class="imagenes-nucleo"><img src=${dato.nucleo}></div>
             <label> Longitud: ${dato.length}
-            <div class="icono-longitud"><img src=img/longitud.png></div>
+            <div class="icono-longitud"><img src=img/longitud.PNG></div>
             
             </div>
             `;
@@ -112,11 +112,13 @@ const DataforPatronus = (dataPotter) => {
     <img class="img-patronus" src='${dataPotter.image}'/>
     <h1 id="letter1" >${dataPotter.name}</h1>
     <h1 id="letter1" >-${dataPotter.patronus}-</h1>
+    <img class="img-patronus" src='${dataPotter.imagepatronus}'/>
+    <h1 id="letter1" >-${dataPotter.description}-</h1>
     <button class="boton">VER PATRONUS</button> 
   </div> `;
   template.querySelector('.boton').addEventListener('click', (event) => {
     event.preventDefault();
-    console.log(dataPotter.name);
+    console.log(dataPotter.name, dataPotter.patronus);
   });
   return template;
 };
