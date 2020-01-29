@@ -189,3 +189,6 @@ botonLimpiarCaramelos.addEventListener('click', () => {
 });
 console.log(filtroAlfabeticoAZ(POKEMON).reverse());
 console.log(typeof filtroAlfabeticoAZ);
+=======
+});    
+

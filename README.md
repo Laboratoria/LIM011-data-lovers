@@ -58,7 +58,6 @@ Un jugadores de Pokemon Go, que quiera conocer/informarse de los pokemones de la
 ## 4. Historia de usuario
 
 1. Enunciado: "Yo como usuario de la aplicación" (spring 1)
-
 Quiero filtrar el listado de Pokemones por tipo, para que sea más fácil y rápido encontrar las caracteristicas, debilidades y fortalezas del pokemon que busco con respecto a los otros.
 
 Criterios de Aceptación:
@@ -67,8 +66,8 @@ Criterios de Aceptación:
 - [x] Quiero que en la búsqueda aparezca el nombre, número de pokedex, la foto del pokemon y sus debilidades.
 - [x] Quiero que la página sea visible en el móvil y en mi computador.
 
-2. Enunciado: "Yo como usuario de la aplicación" (spring 2)
 
+2. Enunciado: "Yo como usuario de la aplicación" (spring 2)
 Quiero ordenar el listado de pokemones: Alfabéticamente (A-Z, y/o Z-A) y por número de ID (Menor a mayor). Para que sea más fácil y rápido encontrar el pokemon que busco.
 
 Criterios de Aceptación:
@@ -77,6 +76,7 @@ Criterios de Aceptación:
 - [x] Quiero ordenar de la A a la Z
 - [x] Quiero ordenar de la Z a la A
 - [x] Quiero ordenar el id número de forma ascendente
+
 
 3. Enunciado: "Yo como usuario de la aplicación" (spring 3)
 Quiero saber si mi pokemon puede evocionar, cuantos caramelos más de los que tengo necesita para hacerlo y completar mi pockedex.
@@ -155,14 +155,15 @@ Vilmarys:
 ### HTML y CSS
 
 - [x] Identificar y entender tipos de selectores en CSS.
-- [ ] Entender como funciona `flexbox` en CSS.
+- [x] Entender como funciona `flexbox` en CSS.
 - [x] Construir tu aplicación respetando el diseño planeado (maquetación).
 
 ### DOM
 
 - [x] Entender y reconocer los selectores del DOM (querySelector | querySelectorAll).
 - [x] Manejar eventos del DOM. (addEventListener)
-- [ ] Manipular dinámicamente el DOM. (createElement, appendchild, innerHTML, value)
+- [x] Manipular dinámicamente el DOM. (createElement, appendchild, innerHTML, value)
+
 
 ### Javascript
 
@@ -172,11 +173,12 @@ Vilmarys:
 - [x] Entender el uso de bucles (`for` | `forEach`).
 - [x] Entender la diferencia entre expression y statements.
 - [x] Utilizar funciones (parámetros | argumentos | valor de retorno).
-- [ ] Entender la diferencia entre tipos de datos atómicos y estructurados.
+- [x] Entender la diferencia entre tipos de datos atómicos y estructurados.
 - [x] Utilizar ES Modules (`import` | `export`).
 
 ### Pruebas Unitarias (_testing_)
-- [x] Testear funciones (funciones puras).
+- [ ] Testear funciones (funciones puras).
+
 
 ### Git y GitHub
 - [x] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
@@ -185,7 +187,7 @@ Vilmarys:
 
 ### Buenas prácticas de desarrollo
 - [x] Organizar y dividir el código en módulos (Modularización).
-- [ ] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
+- [x] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
 - [x] Utilizar linter para seguir buenas prácticas (ESLINT).
 
 Rubí:
@@ -203,7 +205,6 @@ Rubí:
 - [x] Construir tu aplicación respetando el diseño planeado (maquetación).
 
 ### DOM
-
 - [ ] Entender y reconocer los selectores del DOM (querySelector | querySelectorAll).
 - [x] Manejar eventos del DOM. (addEventListener)
 - [ ] Manipular dinámicamente el DOM. (createElement, appendchild, innerHTML, value)
@@ -223,11 +224,12 @@ Rubí:
 - [ ] Testear funciones (funciones puras).
 
 ### Git y GitHub
-- [x] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
-- [x] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
+- [ ] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
+- [ ] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
 - [x] Colaborar en Github (pull requests).
 
 ### Buenas prácticas de desarrollo
 - [ ] Organizar y dividir el código en módulos (Modularización).
 - [x] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
-- [ ] Utilizar linter para seguir buenas prácticas (ESLINT).
+- [X] Utilizar linter para seguir buenas prácticas (ESLINT).
+

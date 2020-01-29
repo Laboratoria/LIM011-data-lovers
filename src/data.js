@@ -4,10 +4,8 @@
 export const filtroTipoPokemon = (data, tipo) => data.filter((item) => (item.type.indexOf(tipo) !== -1));
 export const busquedaPokemonNombre = (data, nombre) => data.filter((item) => item.name.toLowerCase().startsWith(nombre));
 export const filtroAlfabeticoAZ = (data) => data.sort((a, b) => a.name.localeCompare(b.name));
-// filtroAlfabeticoAZ(POKEMON).reverse()  llamar funcion que da array de objetos para que funcione el reverse
 export const filtroAlfabeticoZA = (data) => data.sort((a, b) => b.name.localeCompare(a.name));
 export const ordenNumerico = (data) => data.sort((a, b) => a.num.localeCompare(b.num));
-
 export const evolucionCaramelos = (data, nombre, candyUsuario) => {
   let candy = 0;
   let arreglo = [];
