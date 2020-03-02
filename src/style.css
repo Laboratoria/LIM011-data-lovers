@@ -112,7 +112,9 @@ input[id="4"]:checked ~ .slide{
 input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
   background: #fff;
 }
-
+p.letter-modal{
+  color: #fff;
+}
 
 @keyframes autoplay{
   33%{
@@ -433,6 +435,49 @@ div .imagenes-casa img {
   border-style: solid;
   border-color: #796B07;
 }
+/*::::::::::::::: Modal para  Patronus::::::::::. */
+.overlay-patronus {
+	background: rgba(12, 96, 134, 0.384);
+	position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+  visibility: hidden;
+  z-index: 2;
+}
+.overlay-patronus.active {
+	visibility: visible;
+}
+.popup-patronus {
+	background:black;
+	padding: 20px;
+	text-align: center;
+  width: 250px;
+  height: 410px;
+  opacity: 0;
+  z-index: 2; 
+}
+.popup-patronus .btn-cerrar-popup {
+	font-size: 16px;
+	line-height: 16px;
+	display: block;
+	text-align: right;
+	transition: .3s ease all;
+  color: #BBBBBB;
+  z-index: 3;
+  position: relative;
+}
+.popup-patronus.active {	
+  transform: scale(1); opacity: 1; 
+}
+letter-modal {
+color: white;
+}
+
 @media screen and  (max-width:768px) {
   
   #btn-bars{

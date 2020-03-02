@@ -112,13 +112,32 @@ const DataforPatronus = (dataPotter) => {
     <img class="img-patronus" src='${dataPotter.image}'/>
     <h1 id="letter1" >${dataPotter.name}</h1>
     <h1 id="letter1" >-${dataPotter.patronus}-</h1>
-    <img class="img-patronus" src='${dataPotter.imagepatronus}'/>
-    <h1 id="letter1" >-${dataPotter.description}-</h1>
     <button class="boton">VER PATRONUS</button> 
   </div> `;
-  template.querySelector('.boton').addEventListener('click', (event) => {
+  template.querySelector('button').addEventListener('click', (event) => {
     event.preventDefault();
     console.log(dataPotter.name, dataPotter.patronus);
+    const overlayPatronus = document.createElement('div');
+    overlayPatronus.className = 'overlay-patronus';
+    const cardPotterPatronus = `
+    <div class='popup-patronus'>
+    <section class = 'header-modal'>
+      <a href='#' id='btn-cerrar-popup' class='btn-cerrar-popup'><i class='fas fa-times'></i></a>
+      <h3 class='modal-features'> Patronus : ${dataPotter.patronus}</h3>
+      <img class='img-characters-patronus' src='${dataPotter.imagepatronus}'/>
+      <h3 class='modal-features'> Descripcion</h3>
+      <p class='letter-modal'>${dataPotter.description} </p>
+    <section/>`;
+    overlayPatronus.innerHTML = cardPotterPatronus;
+    document.querySelector('.modal-patronus').appendChild(overlayPatronus);
+    const popupPatronus = overlayPatronus.querySelector('.popup-patronus');
+    overlayPatronus.classList.add('active');
+    popupPatronus.classList.add('active');
+    const closePopup = overlayPatronus.querySelector('.btn-cerrar-popup');
+    closePopup.addEventListener('click', () => {
+      overlayPatronus.classList.remove('active');
+      popupPatronus.classList.remove('active');
+    });
   });
   return template;
 };
