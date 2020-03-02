@@ -1,14 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <title>Data Lovers</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Data Lovers</title>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Supermercado+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body >
+  <header>
+
+    <input type="checkbox" id="btn-menu" />
+    <label class="fa fa-bars site-nav--icon" for="btn-menu" id="btn-bars"></label>
+    <div class="logo">
+      <img src="img/logo.png">
+    </div>
+    <nav>
+      <ul>
+        <li> <a href="#" id="menu-home"><i class="fa fa-home site-nav--icon"></i> Home  </a> </li>
+        <li> <a href="#" id="personajes"><i class="fa fa-users site-nav--icon"></i> Characters </a> </li>
+        <li> <a href="#" id="varitas"> <i class="fa fa-magic site-nav--icon"></i> Wands </a> </li>
+        <li> <a href="#" id="patronus"> <i class="fab fa-studiovinari"></i> Patronus </a> </li>
+      </ul>
+    </nav>
+
+  </header>
+
+<section id="home-video"> 
+    <video id="video" autoplay muted loop>
+     <source src="img/videofondo.mp4" />
+    </video>
+    
+</section>
+  <main>
+   
+
+
+    <section id="input-box">
+      <select id="rol" class="ocultar">
+        <option>Select Rol</option>
+        <option value="Student">Student</option>
+        <option value="Staff">Staff</option>
+      </select>
+
+      <select id="house" class="ocultar">
+        <option value="Gry">select House</option>
+        <option value="Gryffindor">Gryffindor</option>
+        <option value="Slytherin">Slytherin</option>
+        <option value="Ravenclaw">Ravenclaw</option>
+        <option value="Hufflepuff">Hufflepuff</option>
+      </select>
+
+      <select id="core" class="ocultar">
+        <option value="core">Select Core</option>
+        <option value="phoenix feather">phoenix feather</option>
+        <option value="dragon heartstring">dragon heartstring</option>
+        <option value="unicorn tail-hair">unicorn tail-hair</option>
+      </select>
+      <section id="input-searches" class="ocultar">
+        <input id="input-search" class="search flex ocultar" type="search" value="" placeholder="Search Character">
+      </section>
+    </section>
+
+    <section id="paint-template">
+
+    </section>
     <script type="module" src="main.js"></script>
-  </body>
+    <section class="modal-patronus"></section>
+  </main>
+  <footer>
+    <li>PARA LOS FANÁTICOS DE WIZARD UNITE-HARRY POTTER
+      <p>Data-Lovers-LABORATORIA :Lizbeth & Vanesa</p>
+    </li>
+  </footer>
+
+</body>
+
 </html>

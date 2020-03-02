@@ -1,0 +1,578 @@
+/* CSS DE LA CABECERA ORDENADORES */
+img{
+  max-width: 100%;
+}
+
+.container-all{
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.slide{
+  display: flex;
+  transform: translate3d(0, 0, 0);
+  transition: all 600ms;
+  animation-name: autoplay;
+  animation-duration: 6.5s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.item-slide{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-grow: 0;
+  max-width: 100%;
+}
+
+.pagination{
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.pagination-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid white;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 10px;
+  text-align: center;
+  transition: all 300ms;
+}
+
+.pagination-item:hover{
+  transform: scale(2);
+}
+
+.pagination-item img{
+  display: inline-block;
+  max-width: none;
+  height: 100%;
+  transform: scale(1);
+  opacity: 0;
+  transition: all 300ms;
+}
+
+.pagination-item:hover img{
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+input[id="1"]:checked ~ .slide{
+  animation: none;
+  transform: translate3d(0, 0, 0);
+}
+
+input[id="1"]:checked ~ .pagination .pagination-item[for="1"]{
+  background: #fff;
+}
+
+input[id="2"]:checked ~ .slide{
+  animation: none;
+  transform: translate3d(calc(-100% * 1), 0, 0);
+}
+
+input[id="2"]:checked ~ .pagination .pagination-item[for="2"]{
+  background: #fff;
+}
+
+
+input[id="3"]:checked ~ .slide{
+  animation: none;
+  transform: translate3d(calc(-100% * 2), 0, 0);
+}
+
+input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
+  background: #fff;
+}
+input[id="4"]:checked ~ .slide{
+  animation: none;
+  transform: translate3d(calc(-100% * 3), 0, 0);
+}
+
+input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
+  background: #fff;
+}
+p.letter-modal{
+  color: #fff;
+}
+
+@keyframes autoplay{
+  33%{
+      transform: translate3d(calc(-100% * 0), 0, 0);
+  }
+  
+  66%{
+      transform: translate3d(calc(-100% * 1), 0, 0);
+  }
+  86%{
+    transform: translate3d(calc(-100% * 2), 0, 0);
+}
+  100%{
+      transform: translate3d(calc(-100% * 3), 0, 0);
+  }
+}
+
+
+header {
+  position: fixed; /* fijar */
+  width: 98%; 
+  z-index: 10;
+}
+header nav{
+  width: 100%;
+  background-image: url(img/nav.jpg);
+  overflow: auto;
+  border-color: #796B07;
+  border-radius: 9px; 
+  border-style: solid;
+}
+body{
+  background-image: url(img/fondo.gif);
+}
+main {
+  padding-top: 8rem;
+}
+label {
+  display: block;
+}
+select {
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  border-radius: 30px;
+  border-color:#796B07 ;
+  border-style: solid;
+}
+/*pie de pagina */
+footer{
+  background: rgb(58, 51, 2, 0.63);
+  text-align:  center;
+  font-size: 18px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top:25px;
+  color:rgba(181, 190, 149, 0.719) ;
+
+}
+.logo img{
+  position: absolute;
+    margin-top: 15px;
+    margin-left: 10px;
+    height: 35px;
+    width: 180px;
+}
+#btn-menu{
+  
+    display: none;
+}
+
+#btn-bars{
+  display: none;
+  width: 60px;
+  padding: 10px;
+  color:#796B07;
+  font-size: 30px;
+  transition: all 500ms ease;
+}
+
+nav ul{
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+nav li a {
+  width: 190px;
+  font-size: 25px;
+  font-family: 'Supermercado One', cursive;
+  text-decoration: none;/* quitar el subrayado*/
+  color: #fff;
+  display:block;
+  text-align: center;
+  padding: 20px 50px;
+  
+  
+}
+nav li a:hover{
+  background:#796B07 ;
+  transition: 0.5s;
+  text-transform: uppercase;   
+}
+#menu-home{
+  margin-left: 60px;
+}
+#personajes {
+  margin-left: 0px;
+  height: 29px;
+  padding-right: 53px;
+}
+
+#varitas {
+  margin-left: 0px;
+}
+/* estilos para los selectores */
+ #input-box{
+   display:flex;
+   justify-content: center;
+ }
+ #input-box select  {
+  width: 15%;
+  padding: 12px 20px;
+  margin: 15px 100px;
+  color: rgb(215, 226, 68);
+  background-color: rgb(46, 9, 9);
+  border: 3px solid rgb(118, 126, 13);
+  border-radius: 4px;
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Supermercado One', cursive;
+ 
+}
+/* seccion de buscador */
+#input-searches{
+  display:flex;
+  justify-content: center;
+}
+.search {
+  width: 80%;
+  height: 42px;
+  padding: 10px 40px;
+  margin: 10px;
+  border-radius: 50px;
+  background: #f6f4f4 url(img/icon-web/search-icon.svg) no-repeat;
+  outline:none;
+  resize: none;
+  font-weight: bold;
+  font-family: 'Supermercado One', cursive;
+  font-size: 20px;
+  border-color:#796B07 ;
+}
+
+#paint-template {
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  margin-left: 100px;
+  margin-right: 80px;
+}
+
+/* seccion de main */
+.front h2 {
+  font-family: 'Supermercado One', cursive;
+  color: rgb(248, 245, 88);
+  font-size: 24px;
+  text-shadow: -2px -2px 0px #201e1e, 2px -2px 0px #000000, -2px 2px 0px #000000, 2px 2px 0px #000000;
+}
+
+.box-wands {
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(248, 245, 88);
+  font-size: 20px;
+  text-shadow: -2px -2px 0px #201e1e, 2px -2px 0px #000000, -2px 2px 0px #000000, 2px 2px 0px #000000;
+  background-image: url(img/fondovarita.jpg); 
+  margin: 15px;
+  padding: 20px;
+  text-align:center;
+  border-radius: 9px;
+  border-style: solid;
+  border-color:#796B07 ;
+}
+
+div .imagenes img {
+  width: 200px;
+  height: 230px;
+  border-radius: 9px;
+  border-style: solid;
+  border-color: #796B07;
+}
+div .imagelogo img {
+  width: 200px;
+  height: 100px;
+
+}
+
+div .icono-madera img {
+  width: 100px;
+  height: 30px;
+  border-radius: 9px;
+  border-style: solid;
+  border-color: #796B07;
+}
+div .icono-personajes img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #796B07;
+}
+div .icono-longitud img {
+  width: 200px;
+  height: 30px; 
+}
+
+div .imagenes-nucleo img {
+  border-radius: 50%;
+}
+
+div .imagenes-casa img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #796B07;
+}
+
+/* Cards */
+.template-holder-character{
+  perspective: 600px;
+}
+
+.template-holder-character,
+.card {
+  margin: 2px;
+}
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform .3s linear;
+}
+
+.card .front,
+.card .back {
+  margin: 15px;
+  padding: 20px;
+  backface-visibility: hidden;
+}
+
+.card .front {
+  background-image: url(img/fondovarita.jpg); 
+  color:#dfc161  ;
+  margin: 15px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 9px;
+  border-style: solid;
+  border-color: #796B07;
+}
+.card .back {
+  background-image: url(img/3.jpg);;
+  color:#ddda14 ;
+  margin: 1px;
+  padding: 30px;
+  text-align: left;
+  font-size: 18px;
+  font-family: 'Love Ya Like A Sister', cursive;
+  border-radius: 9px;
+  border-style: solid;
+  border-color:  #796B07;
+
+}
+.card .back {
+  position: absolute;
+  top: 0;
+  transform: rotateY(180deg);
+}
+
+.template-holder-character:hover .card {
+  transform: rotateY(180deg);
+}
+.ocultar {
+  display:none;
+}
+.mostrar {
+  display:block;
+}
+
+.card-patronus {
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(248, 245, 88);
+  text-shadow: -2px -2px 0px #201e1e, 2px -2px 0px #000000, -2px 2px 0px #000000, 2px 2px 0px #000000;
+  margin: 15px;
+  padding: 20px;
+  text-align:center;
+  border-radius: 20%;
+  border-style: solid;
+  border-color:#796B07 ;
+  background-image: url(https://img.buzzfeed.com/buzzfeed-static/static/2016-09/22/8/asset/buzzfeed-prod-fastlane02/anigif_sub-buzz-30802-1474547084-2.gif); 
+}
+.template-container-patronus{
+  display: flex;
+  justify-content: center;
+}
+.template-patronus #letter1{
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.img-patronus {
+  width: 110px;
+  height: 150px;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #796B07;
+}
+/*::::::::::::::: Modal para  Patronus::::::::::. */
+.overlay-patronus {
+	background: rgba(12, 96, 134, 0.384);
+	position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+  visibility: hidden;
+  z-index: 2;
+}
+.overlay-patronus.active {
+	visibility: visible;
+}
+.popup-patronus {
+	background:black;
+	padding: 20px;
+	text-align: center;
+  width: 250px;
+  height: 410px;
+  opacity: 0;
+  z-index: 2; 
+}
+.popup-patronus .btn-cerrar-popup {
+	font-size: 16px;
+	line-height: 16px;
+	display: block;
+	text-align: right;
+	transition: .3s ease all;
+  color: #BBBBBB;
+  z-index: 3;
+  position: relative;
+}
+.popup-patronus.active {	
+  transform: scale(1); opacity: 1; 
+}
+letter-modal {
+color: white;
+}
+
+@media screen and  (max-width:768px) {
+  
+  #btn-bars{
+		display:block;
+  }
+  .logo img{
+    position: absolute;
+      margin-top: 0px;
+      margin-left: 10px;
+      height: 35px;
+      width: 180px;
+  }
+  nav{
+		position:absolute;
+		background:#0e0f0f;
+    width:80%;
+    margin-top:-100%;
+    transition:all 0.6s;
+    right: 0px;
+	}
+  nav ul{
+    flex-direction:column;
+    border-top: 2px solid #fffa;
+  }
+#menu-home{
+  margin-left: 0px;
+}
+  #btn-menu:checked ~ nav{
+		margin:0;
+  }
+  nav li a {
+ 
+    padding: 20px 40px;
+    
+  }
+ /* CSS DE SELECT PARA TABLET */
+  #input-box{
+    display:flex;
+    justify-content: center;
+  }
+  #input-box select  {
+   width: 100%;
+   margin: 2px 5px;
+   color: rgb(215, 226, 68);
+   background-color: rgb(46, 9, 9);
+   border: 3px solid rgb(118, 126, 13);
+   border-radius: 4px;
+   font-size: 8px;
+   font-family: 'Supermercado One', cursive;
+  
+ }
+}
+@media screen and (min-width: 768px )and (max-width:1024px){
+
+  /* CSS CABECERA TABLET */
+  #btn-bars{
+		display:block;
+  }
+  nav{
+		position:absolute;
+		background:#0e0f0f;
+    width:60%;
+    padding: 70px;
+ 
+    margin-top:-100%;
+		transition:all 0.6s;
+	}
+  nav ul{
+    flex-direction:column;
+    border-top: 2px solid #fffa;
+  }
+
+  nav li a {
+ 
+    padding: 20px 170px;
+    
+    
+  }
+  /* CSS DE SELECT PARA TABLET */
+  #input-box{
+    display:flex;
+    justify-content: center;
+  }
+  #input-box select  {
+   width: 60%;
+   margin: 20px 40px;
+   color: rgb(215, 226, 68);
+   background-color: rgb(46, 9, 9);
+   border: 3px solid rgb(118, 126, 13);
+   border-radius: 4px;
+   text-align: center;
+   font-size: 20px;
+   font-family: 'Supermercado One', cursive;
+  
+ }
+};
+
+
